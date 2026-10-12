@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>云啾啾 · 双向三动作预览</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#102c2c;color:#edf4e9}*{box-sizing:border-box}body{max-width:1500px;margin:0 auto;padding:24px}h1{font-size:25px;margin:0 0 8px}p{line-height:1.65;color:#c0d6cd}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 0;position:sticky;top:0;background:#102c2cf2;z-index:2}button,select{font:inherit;color:#edf4e9;background:#24564e;border:1px solid #69977d;border-radius:8px;padding:8px 12px;cursor:pointer}button[aria-pressed=true]{background:#d5b877;color:#193a30}a{color:#e9ce91}.grid{display:grid;grid-template-columns:repeat(3,minmax(250px,1fr));gap:18px}.card{background:#163b36;border:1px solid #407460;border-radius:12px;overflow:hidden}.card h2{font-size:18px;margin:14px 14px 5px}.meta{font-size:13px;margin:0 14px 12px}.stage{aspect-ratio:1;position:relative;background-color:#d3ddd4;background-image:linear-gradient(45deg,#f0f0e7 25%,transparent 25%),linear-gradient(-45deg,#f0f0e7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f0f0e7 75%),linear-gradient(-45deg,transparent 75%,#f0f0e7 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}.stage img{width:100%;height:100%;object-fit:contain;display:block}.missing{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#852432;background:#eee9e2d9;font-weight:700}.missing[hidden]{display:none}.anchor{pointer-events:none;position:absolute;left:50%;top:91.9921875%;width:20px;height:20px;transform:translate(-50%,-50%)}.anchor:before,.anchor:after{content:"";position:absolute;background:#cd364e;box-shadow:0 0 1px #fff}.anchor:before{width:20px;height:1px;top:10px}.anchor:after{height:20px;width:1px;left:10px}.anchor[hidden]{display:none}.controls{padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center}.controls input{width:100%;accent-color:#dfc485}.readout{padding:0 14px 12px;font-variant-numeric:tabular-nums;font-size:13px;color:#cce0d5}.warning{padding:10px 14px;background:#734222;color:#fff3d8;border-radius:8px}.legend{font-size:13px}.contact{margin:0 14px 14px;display:inline-block;font-size:13px}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(240px,1fr))}}@media(max-width:600px){body{padding:14px}.grid{grid-template-columns:1fr}.toolbar{position:static}}
+</style>
+<h1>云啾啾 · 受击 / 普攻 / 施法</h1>
+<p>E：斜前朝右下。W：独立绘制的斜背朝左上。播放保留约定的每一帧与时长；缺帧显示“缺失”，不会用邻帧补位。</p>
+<div id="status" class="warning"></div>
+<div class="toolbar">
+  <button id="play" aria-pressed="false">播放全部</button>
+  <button id="normal" aria-pressed="true">正常 1×</button>
+  <button id="slow" aria-pressed="false">慢放 0.25×</button>
+  <button id="reset">全部回到第 1 帧</button>
+  <label><input id="anchors" type="checkbox"> 显示固定脚点</label>
+</div>
+<p class="legend">使用每组左右按钮或滑块逐帧；逐帧操作会暂停全部播放。透明背景以棋盘格展示。正常速度受浏览器刷新率限制，不补帧、不插值；建议在 120Hz 屏幕审查 30ms 时序。</p>
+<main class="grid" id="groups"></main>
+<p class="legend">技术文件齐全不代表美术、动作连续性或客户端接入通过。生成来源与 SHA 见 <a href="../manifest.json">manifest.json</a>，技术检查见 <a href="../validation.json">validation.json</a>。</p>
+<script id="manifest" type="application/json">__MANIFEST_JSON__</script>
+<script>
+"use strict";
+const manifest=JSON.parse(document.getElementById("manifest").textContent);
+const labels={hit:"受击",attack:"普攻",cast:"施法"};
+let playing=false,speed=1,lastTime=null;
+const players=[];
+const decodedImages=[];
+const readyFrames=[];
+const play=document.getElementById("play");
+play.disabled=true;
+play.textContent="载入全部图片…";
+document.getElementById("status").textContent=`已记录 ${manifest.availableFrames} / ${manifest.expectedFrames} 帧。技术状态：${manifest.technicalStatus}。美术、六组动态及客户端验收另记。`;
+function setPlaying(value){playing=value;lastTime=null;play.textContent=value?"暂停全部":"播放全部";play.setAttribute("aria-pressed",String(value));}
+function render(player){
+  const index=Math.min(player.group.expectedFrames-1,Math.floor(player.elapsed/player.group.durationMs));
+  if(index===player.renderedIndex)return;
+  player.renderedIndex=index;
+  const frame=player.frames.get(index+1);
+  player.range.value=index;
+  player.missing.hidden=Boolean(frame);
+  player.img.hidden=!frame;
+  player.img.style.visibility=frame?"visible":"hidden";
+  if(frame){player.img.src="../"+frame.file;player.img.alt=`${labels[frame.action]} ${frame.direction} 第${frame.frame}帧`;}
+  else{player.img.removeAttribute("src");player.missing.textContent=`第 ${index+1} 帧缺失\n未生成占位角色`;}
+  player.readout.textContent=`第 ${index+1} / ${player.group.expectedFrames} 帧 · ${index*player.group.durationMs}–${(index+1)*player.group.durationMs}ms · ${frame?"视觉状态："+frame.visualStatus:"缺帧"}`;
+}
+function step(player,amount){setPlaying(false);const index=(Math.floor(player.elapsed/player.group.durationMs)+amount+player.group.expectedFrames)%player.group.expectedFrames;player.elapsed=index*player.group.durationMs;render(player);}
+for(const group of manifest.groups){
+  const card=document.createElement("section");card.className="card";
+  const title=document.createElement("h2");title.textContent=`${labels[group.action]} · ${group.direction}`;
+  const meta=document.createElement("p");meta.className="meta";meta.textContent=`${group.availableFrames}/${group.expectedFrames} 帧 · 每帧 ${group.durationMs}ms · 原速总长 ${group.expectedTotalMs}ms`;
+  const stage=document.createElement("div");stage.className="stage";
+  const img=document.createElement("img");img.draggable=false;
+  const missing=document.createElement("div");missing.className="missing";
+  const anchor=document.createElement("div");anchor.className="anchor";anchor.hidden=true;
+  stage.append(img,missing,anchor);
+  const controls=document.createElement("div");controls.className="controls";
+  const prev=document.createElement("button");prev.textContent="‹";prev.title="上一帧";
+  const next=document.createElement("button");next.textContent="›";next.title="下一帧";
+  const range=document.createElement("input");range.type="range";range.min=0;range.max=group.expectedFrames-1;range.step=1;range.value=0;range.setAttribute("aria-label",`${labels[group.action]} ${group.direction} 帧序`);
+  controls.append(prev,range,next);
+  const readout=document.createElement("div");readout.className="readout";
+  const contact=document.createElement("a");contact.className="contact";contact.href="../"+group.contactSheet;contact.textContent="查看该组全帧总览";
+  card.append(title,meta,stage,controls,readout,contact);document.getElementById("groups").append(card);
+  const frames=new Map(manifest.frames.filter(f=>f.action===group.action&&f.direction===group.direction).map(f=>[f.frame,f]));
+  const player={group,frames,img,missing,range,readout,anchor,elapsed:0,renderedIndex:-1};
+  players.push(player);prev.onclick=()=>step(player,-1);next.onclick=()=>step(player,1);
+  range.oninput=()=>{setPlaying(false);player.elapsed=Number(range.value)*group.durationMs;render(player);};
+  img.onerror=()=>{missing.hidden=false;missing.textContent="图片文件读取失败";img.style.visibility="hidden";};
+  for(const frame of frames.values()){const preload=new Image();preload.src="../"+frame.file;decodedImages.push(preload);readyFrames.push(preload.decode());}
+  render(player);
+}
+Promise.all(readyFrames).then(()=>{play.disabled=false;play.textContent="播放全部";play.dataset.loaded=String(decodedImages.length);}).catch(()=>{play.textContent="图片载入失败，请检查文件";});
+play.onclick=()=>setPlaying(!playing);
+document.getElementById("normal").onclick=()=>{speed=1;document.getElementById("normal").setAttribute("aria-pressed","true");document.getElementById("slow").setAttribute("aria-pressed","false");};
+document.getElementById("slow").onclick=()=>{speed=.25;document.getElementById("normal").setAttribute("aria-pressed","false");document.getElementById("slow").setAttribute("aria-pressed","true");};
+document.getElementById("reset").onclick=()=>{lastTime=null;for(const player of players){player.elapsed=0;render(player);}};
+document.getElementById("anchors").onchange=e=>{for(const player of players)player.anchor.hidden=!e.target.checked;};
+document.addEventListener("visibilitychange",()=>{lastTime=null;});
+function tick(timestamp){
+  if(playing&&lastTime!==null&&!document.hidden){const delta=timestamp-lastTime;for(const player of players){player.elapsed=(player.elapsed+delta*speed)%player.group.expectedTotalMs;render(player);}}
+  lastTime=timestamp;requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+</script>
+</html>

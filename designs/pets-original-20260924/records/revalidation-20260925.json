@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-25T07:32:52.905978+00:00",
+  "status": "passed",
+  "task": "Verify the existing completed original 14-pet package after the user resumed from the earlier 0/28, 0/56 snapshot.",
+  "newImagesGeneratedInThisRun": 0,
+  "nativeSourceCount": 28,
+  "transparentOutputCount": 56,
+  "overviewCount": 3,
+  "validationCommand": "python designs/pets-original-20260924/validate_pack.py --require-complete",
+  "validationExitCode": 0,
+  "pending": [],
+  "errors": [],
+  "independentReadOnlyAudit": {
+    "sourcesReceiptsPrompts": 28,
+    "sourceToolOriginalArchiveAndReceiptHashes": "all matched",
+    "derivedOutputManifestAndSourceHashes": "all matched",
+    "rejectedCandidateFilesCompared": 109,
+    "exactRejectedCandidateSourceReuse": 0,
+    "exactHorizontalMirrorPairs": 0,
+    "rosterOrderConfigAndManifest": "matched",
+    "actualModelAndQuality": "null for every source; host-managed and unconfirmed"
+  },
+  "currentVisualInspection": {
+    "reviewer": "assistant",
+    "inspectedFiles": [
+      "previews/EW-roster.png",
+      "previews/portrait-roster.png",
+      "../team-ui-v2/team-ui-v2.png"
+    ],
+    "inspectionMethod": "Existing PNGs read via System.Drawing into in-memory JPEG previews because normal view_image failed with helper_unknown_error; original files unchanged.",
+    "directions": "All 14 E views show the front facing lower right; all 14 W views show back structures facing upper left.",
+    "identity": "Current silhouettes and props match the original roster; the supernatural slots use new creature or character identities.",
+    "portraits": "All 14 are head/face crops, not reduced full-body thumbnails.",
+    "style": "Rounded bright hand-painted chibi treatment consistent with the approved project reference.",
+    "scope": "Overview-level fresh visual review, supplemented by the preserved per-pet native-image reviews; not new pixel-level inspection of every source."
+  },
+  "metadataNote": "The build-generated portraitStatus remains exported-pending-final-visual-review. Final portrait review is separately recorded as passed for every pet in records/final-visual-review.json and was rechecked in the current portrait overview. This generator status is not a missing export.",
+  "userApproved": false,
+  "clientIntegrated": false,
+  "animation": false,
+  "evidence": [
+    {
+      "file": "asset-config.json",
+      "sha256": "47722038c9bc84b8078bda4ec47b08fdccbe2c140d041316959229b9439d4c87"
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "d7aff59104f88cc0b6c64a2cecb8ef3b0b156fd058aeff85eae16c946e91f1d3"
+    },
+    {
+      "file": "records/technical-validation.json",
+      "sha256": "03d3de48cf2a65d99deee201b4c54ddf0895e95f786c17d4af2043f3088d4f6e"
+    },
+    {
+      "file": "records/final-visual-review.json",
+      "sha256": "2e7f146f9d7845455b31d88d0bd4156c7a707a3667e6194236259e83eb55430d"
+    },
+    {
+      "file": "records/originality-review.json",
+      "sha256": "e34b36840574fc090063d7a14efb19618cde5ac54dd9939271117999a4b99031"
+    },
+    {
+      "file": "records/provenance-audit-20260924.json",
+      "sha256": "f9b98bda947bbda43a40c17ba13f179be8fb17b5302d9e050a01760c7ce1fb53"
+    },
+    {
+      "file": "previews/EW-roster.png",
+      "sha256": "6ec8fb5ca424e8c62a1f5f5b040b7e52fcf03842cc343d91903336396ff027e6"
+    },
+    {
+      "file": "previews/portrait-roster.png",
+      "sha256": "e27d621883800b03043d0119b574dc86f5d103864956cbe41a7eca2343537f3c"
+    }
+  ]
+}

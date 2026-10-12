@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-10-12T09:46:39.261070+00:00",
+  "purpose": "Portable complete current metadata only; not history/ancestry or an image backup",
+  "deployment_repository_prefix": "docs/migration-current-20261012",
+  "private_metadata_copy_count": 40,
+  "existing_repository_mapping_count": 2657,
+  "protected_original_count": 6516,
+  "authorized_absent_screenshot_count": 186,
+  "production_restored_count": 3654,
+  "production_restored_bytes": 2062165014,
+  "worker_receipt_count": 15,
+  "external_pixel_alias_count": 160,
+  "mapping_issues": [],
+  "ready_for_root_review": true,
+  "ready_for_publication": false,
+  "limitations": [
+    "Copied source documents retain their original old-machine absolute paths; use source-to-portable-mapping.jsonl to resolve them.",
+    "Freeze approval records previous producer stopping/source proofs. The old full-capture attempt was aborted; no aborted capture is represented as a successful current snapshot.",
+    "Image/source pixel mappings retain the previously pinned SHA and are not rehashed here. The fresh current snapshot builder must hash all remaining working bytes.",
+    "Historical Git OIDs in receipts are provenance only and do not require old commits to remain reachable.",
+    "Root must deploy this folder to the stated docs prefix before final inventory, and add the new final snapshot/source proof afterwards as its own portable evidence."
+  ]
+}

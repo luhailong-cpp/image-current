@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "file": "ui/10-xuanchaogui/portrait_512.png",
+  "sha256": "8d3f2efde77f915396ccddcb21779ba0522307d4dd451227b9fd8442d7a04712",
+  "width": 512,
+  "height": 512,
+  "mode": "RGBA",
+  "derivedFrom": [
+    {
+      "file": "source/10-xuanchaogui-E.png",
+      "sha256": "fbd52b40f56eb6f541316fd0ae8ff723d88e791eb19ce770df4b5e874d7ef4bc",
+      "generationRecord": "source/10-xuanchaogui-E.png.generation.json"
+    }
+  ],
+  "operation": "manually-reviewed-face-crop-centered-without-upscale",
+  "processor": "build_pack.py",
+  "processorVersion": 2,
+  "processorSha256": "033de1559c8c0c6a5791f6a169ef89deaa9aa228e40b432ba286f5920adb21ee",
+  "sourceCrop": [
+    640,
+    485,
+    1165,
+    950
+  ],
+  "cropReviewed": true,
+  "scale": 0.9752380952380952,
+  "upscaled": false,
+  "alphaExtraction": "remove-edge-connected-magenta-only",
+  "magentaEdgeDecontamination": {
+    "enabled": true,
+    "applied": true,
+    "method": "bounded-edge-matte-unmix-with-nearest-clean-interior-colour",
+    "radius": 2,
+    "interiorInset": 3,
+    "searchRadius": 6,
+    "matteRgb": [
+      250.0,
+      3.0,
+      251.0
+    ],
+    "magentaExcessMinimum": 3,
+    "mixtureFractionRange": [
+      0.01,
+      0.95
+    ],
+    "fitRmsMaximum": 24,
+    "foregroundBrightnessRange": [
+      0.05,
+      1.35
+    ],
+    "candidatePixels": 4432,
+    "modifiedPixels": 4244,
+    "alphaModifiedPixels": 4244,
+    "protectedRedDominantPixels": 537,
+    "maxObservedRms": 23.7943,
+    "nativeRgbaUntouched": true,
+    "note": "Only opted-in originally opaque edge-connected-magenta extraction; original source is unchanged. Red-dominant knot colours and all interior pixels are excluded."
+  },
+  "reviewedMagentaPocketCleanup": {
+    "enabled": true,
+    "applied": true,
+    "method": "reviewed-bounded-key-colour-alpha-only-clear",
+    "sourceSha256": "fbd52b40f56eb6f541316fd0ae8ff723d88e791eb19ce770df4b5e874d7ef4bc",
+    "coordinateSpace": "native-source-top-left-pixels-half-open-box",
+    "selector": {
+      "minimumRedBlue": 60,
+      "minimumMagentaExcess": 20,
+      "maximumRedBlueRatio": 1.65
+    },
+    "regions": [
+      {
+        "reviewedSourceBox": [
+          189,
+          516,
+          211,
+          541
+        ],
+        "reason": "Visually verified enclosed magenta background gap under red knot, between left gold tassel and celadon shell; clear alpha only.",
+        "removedPixels": 69,
+        "removedSourceBbox": [
+          195,
+          523,
+          204,
+          536
+        ]
+      }
+    ],
+    "removedPixels": 69,
+    "rgbModifiedPixels": 0,
+    "nativeSourceUnchanged": true,
+    "note": "Only explicitly reviewed enclosed background gaps are affected; no global pink removal."
+  },
+  "smallComponentCleanup": {
+    "removed": [],
+    "removedPixels": 0,
+    "alphaThreshold": 16,
+    "maxArea": 16,
+    "maxWidthHeight": 8
+  },
+  "remoteAlphaOneCleanup": {
+    "removedPixels": 0,
+    "alphaValue": 1,
+    "preserveBox": [
+      67,
+      182,
+      1186,
+      1080
+    ],
+    "padding": 8,
+    "method": "clear only 1/255 alpha outside the >=2-alpha envelope plus 8px; preserve near-contour antialias"
+  }
+}

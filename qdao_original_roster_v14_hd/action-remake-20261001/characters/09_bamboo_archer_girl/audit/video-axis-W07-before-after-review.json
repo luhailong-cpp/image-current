@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "finish_south",
+  "reviewedAtUtc": "2026-10-05T03:40:57.315Z",
+  "character": "09_bamboo_archer_girl",
+  "action": "run",
+  "direction": "W",
+  "frame": 7,
+  "status": "local_static_repair_accepted",
+  "before": {
+    "file": "runtime/run/W/07.png",
+    "sha256": "15c48325c4f94141ee50b0336ab1ed1b369ca256b030486fbd6e3da3985ed69e",
+    "generationRecordSha256": "999c6b94e2e2a64c5ed2ee1052b5dac7442227354649426a83a53f21c263cd1d",
+    "snapshot": "audit/video-axis-revision-before.json",
+    "snapshotMatches": true,
+    "actualOriginalViewed": true
+  },
+  "beforeEvidence": "独立查看W05/06/07/08/09当前1024原图：W05膝下回收，06已放出，07却又把摆动小腿和靴折回膝后，08再次放出。该异常为摆动小腿方向倒退，不以固定裤口判断换腿，也不以鞋底可见判外翻。",
+  "change": "仅在W07原图基础上AI重绘抬起摆动腿的膝下小腿和靴，使其向屏左前方放出，鞋尖朝左、鞋底离地。",
+  "after": {
+    "file": "runtime/run/W/07.png",
+    "sha256": "9d769412b9a9da590f03cdd700353393df974d497b8315d7aeb2d70838cc9828",
+    "generationRecordSha256": "0a63133e6d406d9c43025ba9b1e33ec9aa7020b124a6a050cf5f74b7c59e3e26",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "request": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\provenance\\run-W\\run-W-07-repair-20261005T033415814863Z.request.json",
+    "receipt": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\provenance\\run-W\\run-W-07-repair-20261005T033415814863Z.receipt.json",
+    "selectionMatches": true,
+    "nativeFile": "C:\\Users\\luyua\\.codex\\generated_images\\01a100ff-8597-7ab3-ac28-4d441c03fb85\\exec-18e0314a-1383-4dab-ab40-ac5d9c30e49b.png",
+    "actualExportViewed": true
+  },
+  "visualChecks": {
+    "forwardSwing": "原先朝屏右倒折的小腿已顺接固定膝附近向下/前伸，侧面鞋尖朝屏左，与06和08同属已放出阶段；消除明显的收—放—收—放。",
+    "ankle": "小腿、踝与靴筒连接自然，鞋掌保持西向侧视，不呈孤立横向外拧。",
+    "supportLeg": "屏右后伸支撑腿、靴和前掌位置在原图对照中保持，未把它重画为另一支撑阶段。",
+    "handsAndBow": "右空手拳仍在腰前摆动位置，肩肘袖口、左手握长竹弓及完整弓弦保持原构图。",
+    "identityAndCanvas": "头脸、发饰、长马尾、箭筒、上身服饰和整体画布尺度在视觉对照中保持；不是像素级局部不变保证。"
+  },
+  "repairTool": "existing tools/repair_frame_generator.js with builtin image_gen",
+  "spec": "provenance/run-W/video-axis-W07-forward-swing.spec.json",
+  "timing": {
+    "frameMs": 75,
+    "cycleMs": 1200,
+    "changed": false
+  },
+  "noMechanicalImageEdit": true,
+  "scope": "未改paired/global审核、预览或其他runtime槽。最终库存与预览核验交ROOT。",
+  "limitations": [
+    "本条接受局部静态修复和相邻帧摆动方向，不等同客户端或整圈动态验收。",
+    "AI局部编辑可能产生微小笔触差异，未宣称编辑范围外逐像素完全相同。"
+  ],
+  "cleanup": "原生成图位于宿主generated_images，当前成品和来源记录已落盘；后续由ROOT按最终引用核实结果统一清理。"
+}

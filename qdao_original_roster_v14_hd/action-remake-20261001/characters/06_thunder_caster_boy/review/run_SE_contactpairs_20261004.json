@@ -1,0 +1,484 @@
+{
+  "scope": "run/SE only",
+  "reviewedAt": "2026-10-04T20:11:51.952109+00:00",
+  "latestHumanRequirement": "直脚着地两帧，再旁边点两帧，再旁边点两帧，再旁边点俩帧，依次类推",
+  "timing": {
+    "frameMs": 75,
+    "pairMs": 150,
+    "cycleMs": 1200
+  },
+  "pairMap": [
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        14,
+        15
+      ],
+      "position": "前端初落地",
+      "observation": "前伸鞋跟及前掌均放平；另一腿弯曲摆动"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        0,
+        1
+      ],
+      "position": "前侧承重",
+      "observation": "鞋在前侧承重，膝微弯，足位较初接收近身体"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        2,
+        3
+      ],
+      "position": "身体经过",
+      "observation": "髋部经过支撑脚，支撑腿向身后发展，另一膝前摆"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        4,
+        5
+      ],
+      "position": "后侧蹬离",
+      "observation": "原蜷后腿重画成后侧支撑，前掌接触，左腿前摆明确离地"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        6,
+        7
+      ],
+      "position": "前端初落地",
+      "observation": "06/07前伸平掌与支撑点保留；末轮局部收头匹配08/09体量，消除07头肩尺度跳变"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        8,
+        9
+      ],
+      "position": "前侧承重",
+      "observation": "保持低身承重，踝鞋局部后收，平掌承受重量"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        10,
+        11
+      ],
+      "position": "身体经过",
+      "observation": "足位回到髋下，11纠正原右脚支撑/左脚悬空错误"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        12,
+        13
+      ],
+      "position": "后侧蹬离",
+      "observation": "前景左腿实际后收至身后、鞋跟渐升，另一腿保持离地"
+    }
+  ],
+  "changedFrames": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "retainedFrames": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "travel": "画面右下SE；脚位沿跑向前端到髋下再到后侧，不以外撇代替位置变化",
+  "reference": "实际查看09_bamboo_archer_girl runtime/run/SE/02.png和10.png，只取同向脚轴/接地；保留06身份及持物",
+  "reviewMethod": [
+    "实际逐张查看16帧，包括全部新原生输出",
+    "完整联系图静态检查",
+    "1254原生→1024全画布Lanczos、透明、SHA、16原生来源互异检查"
+  ],
+  "technicalIssues": [],
+  "staticIndividualFrameReviewCompleted": true,
+  "wholeCycleVisualApproved": false,
+  "clientIntegrated": false,
+  "modelNote": "内置宿主管理入口；目标GPT Image2.5Sunburst/max；实际model/quality参数及返回未披露，null未确认",
+  "frames": [
+    {
+      "frame": 0,
+      "file": "runtime/run/SE/00.png",
+      "sha256": "71480c276a2dbec37241425b7dab88ec07859430e9b30bb055e84a9967ef98cf",
+      "nativeSource": {
+        "file": "work/run_SE_00_v2.png",
+        "sha256": "0efd2f9371798deb4775e863d73079f918d9babb7251088fc740cf58cf00ad93",
+        "generationRecord": "work/run_SE_00_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/00.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        0,
+        1
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "候选：头身与留白已恢复，右杖左符两手完整；交叉髋腿归属及摆臂幅度待与相邻帧连续核验。",
+      "changedThisRound": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 1,
+      "file": "runtime/run/SE/01.png",
+      "sha256": "593124477e41ee6520271e6020b05ea4979e8ddb1a0d16ae83931d138f2ff77e",
+      "nativeSource": {
+        "file": "work/run_SE_01_v4.png",
+        "sha256": "5deea826ef5c2519edaeb9b158f377a03f6b6ab1f24487115abc15ab0bd53511",
+        "generationRecord": "work/run_SE_01_v4.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/01.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        0,
+        1
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "东南局部修正候选；原生高清、真实参考、实际型号和质量未确认，待视觉复核",
+      "changedThisRound": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 2,
+      "file": "runtime/run/SE/02.png",
+      "sha256": "566ba42861123e2b08e236936f08581d6bcbdc464059c2b1596a95bc066d76ad",
+      "nativeSource": {
+        "file": "work/run_SE_02_v5.png",
+        "sha256": "ec4d3f8f9b823112943a1083885865ea08b82fdd82e2ed3b047426702e13877b",
+        "generationRecord": "work/run_SE_02_v5.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/02.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        2,
+        3
+      ],
+      "positionPhase": "身体经过",
+      "observation": "AI局部缩小过大的头，原躯干/脚向/支撑动作保留；与00头尺寸对比改善，动态待验",
+      "changedThisRound": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 3,
+      "file": "runtime/run/SE/03.png",
+      "sha256": "0b9cacbf2eda8c3f041f5962820e9fe3dbefab17b13f6c92e8fab26b3f289257",
+      "nativeSource": {
+        "file": "work/run_SE_03_v5.png",
+        "sha256": "4ecda8dbe8bbbcefe8e68f6b8f6b5a401f87afe820f29dca9772d730541d8f16",
+        "generationRecord": "work/run_SE_03_v5.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/03.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        2,
+        3
+      ],
+      "positionPhase": "身体经过",
+      "observation": "实际查看头部大小已收敛至00参考；AI局部编辑保留身体/手/腿姿态，动态待验",
+      "changedThisRound": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 4,
+      "file": "runtime/run/SE/04.png",
+      "sha256": "789c8730d353b9fb28b2810764903ea47c5eba7c5a2a1c6e3be2f6666c999b4c",
+      "nativeSource": {
+        "file": "work/run_SE_04_contactpair_v1.png",
+        "sha256": "1349022a6680ee3016176a51a4588a628e0b61411fd410cc63e89401cbbcd2fd",
+        "generationRecord": "work/run_SE_04_contactpair_v1.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/04.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        4,
+        5
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "已实际看：右后支撑腿从蜷起改为伸到身体后侧，前掌承重鞋跟略升；左前腿保持摆动。单帧通过待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 5,
+      "file": "runtime/run/SE/05.png",
+      "sha256": "f3e17a08f5b86600f0acc6ed6edfdc5a05176c38f2554e07466a2418f8d7af63",
+      "nativeSource": {
+        "file": "work/run_SE_05_contactpair_v2.png",
+        "sha256": "fffc00b7719f1d1a78a7793ef1e751b20fb167cada8f9ef3aa87eea7f5a419da",
+        "generationRecord": "work/run_SE_05_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/05.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        4,
+        5
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "已实际看：右后前掌支撑保留，左前摆动脚整体从踝膝提高，足底明确离地；两腿职责清晰，待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 6,
+      "file": "runtime/run/SE/06.png",
+      "sha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+      "nativeSource": {
+        "file": "work/run_SE_06_camerafinal_v2.png",
+        "sha256": "0fda6ba91eb18e26177b2bd1eba171fd347d15a99156c9e61373fe3aa7bf045d",
+        "generationRecord": "work/run_SE_06_camerafinal_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/06.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        6,
+        7
+      ],
+      "positionPhase": "前端初落地",
+      "observation": "实际06–09同画幅对照：局部收头后头肩体量接近08/09，保持本帧初接左脚、双手持物和鞋掌朝SE，支撑位置及整体相机保留。未程序缩放或整图移位。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 7,
+      "file": "runtime/run/SE/07.png",
+      "sha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+      "nativeSource": {
+        "file": "work/run_SE_07_camerafinal_v2.png",
+        "sha256": "877885ae31cc415af7deb50b8b2ef110f953fc2d79f4846dd4871db6dac709fe",
+        "generationRecord": "work/run_SE_07_camerafinal_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/07.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        6,
+        7
+      ],
+      "positionPhase": "前端初落地",
+      "observation": "实际06–09同画幅对照：局部收头后头肩体量接近08/09，保持本帧初接左脚、双手持物和鞋掌朝SE，支撑位置及整体相机保留。未程序缩放或整图移位。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 8,
+      "file": "runtime/run/SE/08.png",
+      "sha256": "870dd73f940030b4a21a20603759115854164f7981e011562b8698d5b8c875cf",
+      "nativeSource": {
+        "file": "work/run_SE_08_contactpair_v2.png",
+        "sha256": "d50840d0e5793032584db998b06a91a14b7e6c0d60e7dc5c24eadfac2ee6d9f7",
+        "generationRecord": "work/run_SE_08_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/08.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        8,
+        9
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "已实际看：左支撑踝鞋向髋下局部收回，保持原上身尺寸/位置，脚跟前掌平放，早承重位置区别于初落地和中段；待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 9,
+      "file": "runtime/run/SE/09.png",
+      "sha256": "153a3b3f2953bf902c87ed754f79e3fc8e562341c8e99272540966f879ecf708",
+      "nativeSource": {
+        "file": "work/run_SE_09_contactpair_v2.png",
+        "sha256": "128fdde8045a3725e6ec6f5cae7cf8b280d884d8caa4a3249d4f210d64d15cc2",
+        "generationRecord": "work/run_SE_09_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/09.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        8,
+        9
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "已实际看：左支撑踝鞋向髋下局部收回，保持原上身尺寸/位置，脚跟前掌平放，早承重位置区别于初落地和中段；待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 10,
+      "file": "runtime/run/SE/10.png",
+      "sha256": "0e5cb498e9d34efc4bfcc4fb21f225d0b28e2769a5cc5409a8c619c798b5077d",
+      "nativeSource": {
+        "file": "work/run_SE_10_contactpair_v1.png",
+        "sha256": "c38e549d3c54167d1acc2bb680ad417f47beb99bbbdc069d77195f84b1322002",
+        "generationRecord": "work/run_SE_10_contactpair_v1.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/10.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        10,
+        11
+      ],
+      "positionPhase": "身体经过",
+      "observation": "已实际看：左脚中段支撑，脚位收回身体下方、脚掌放平；右腿弯曲离地摆动，11原错误右支撑已纠正。相机与上身保持，待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 11,
+      "file": "runtime/run/SE/11.png",
+      "sha256": "40128b4e31d86dc4ac8ba76d6fb4b42446d7cce22d68e88ccb8491880c64fefe",
+      "nativeSource": {
+        "file": "work/run_SE_11_contactpair_v1.png",
+        "sha256": "968f045ceab9492c9981a77b51bd2791c78720ccfd82c414faa738cea04efec0",
+        "generationRecord": "work/run_SE_11_contactpair_v1.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/11.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        10,
+        11
+      ],
+      "positionPhase": "身体经过",
+      "observation": "已实际看：左脚中段支撑，脚位收回身体下方、脚掌放平；右腿弯曲离地摆动，11原错误右支撑已纠正。相机与上身保持，待动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 12,
+      "file": "runtime/run/SE/12.png",
+      "sha256": "cc87336f83beefcc05d16bbc78a36ae1511a77ed184ad7afb7298ecd76e5cb29",
+      "nativeSource": {
+        "file": "work/run_SE_12_contactpair_v2.png",
+        "sha256": "23a11b6f3cb55cf876fa73e535151cefd6379a9487bde1889159ca4ccaf63920",
+        "generationRecord": "work/run_SE_12_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/12.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        12,
+        13
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "已实际看：前景左支撑腿膝踝鞋实际后收，12初抬跟、13后侧前掌蹬离，保持另一右腿离地；不再前踢露底，原画幅上身保持。待整圈动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 13,
+      "file": "runtime/run/SE/13.png",
+      "sha256": "8ac4504cb8e09770a9ccb0de608264ad52c720e44aab8104f4f5f60bf280bf59",
+      "nativeSource": {
+        "file": "work/run_SE_13_contactpair_v2.png",
+        "sha256": "da71a7494feb92d00a75e355862398d922ac66f7910af3ca06298a419bf09d15",
+        "generationRecord": "work/run_SE_13_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/13.png.generation.json",
+      "supportLeg": "左脚",
+      "pairFrames": [
+        12,
+        13
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "已实际看：前景左支撑腿膝踝鞋实际后收，12初抬跟、13后侧前掌蹬离，保持另一右腿离地；不再前踢露底，原画幅上身保持。待整圈动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 14,
+      "file": "runtime/run/SE/14.png",
+      "sha256": "c9e768c48e963dfc58c989fbafeb4cf844689bd4510d8ce72891ddd50f697a8d",
+      "nativeSource": {
+        "file": "work/run_SE_14_contactpair_v2.png",
+        "sha256": "f450e2a9eeae010c656d930d492f0a58fadf01fabd8c5ccf6a76d0310c058376",
+        "generationRecord": "work/run_SE_14_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/14.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        14,
+        15
+      ],
+      "positionPhase": "前端初落地",
+      "observation": "已实际看：仅下腿脚掌局部编辑，人物上半身与原生画幅保持，前脚跟/掌放平、露底消除；属于初落地位置段。待整圈动态复核。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 15,
+      "file": "runtime/run/SE/15.png",
+      "sha256": "6b8a820d3374a8ddd12c6cb4863418c0673ca36606c2507f6331f3055f4aea5d",
+      "nativeSource": {
+        "file": "work/run_SE_15_contactpair_v2.png",
+        "sha256": "24f9ed39779d9d2f7e98d9384126402dbbb1d59a6d0c94d8154a1e0167de80cf",
+        "generationRecord": "work/run_SE_15_contactpair_v2.png.generation.json"
+      },
+      "generationRecord": "runtime/run/SE/15.png.generation.json",
+      "supportLeg": "右脚",
+      "pairFrames": [
+        14,
+        15
+      ],
+      "positionPhase": "前端初落地",
+      "observation": "已实际看：右脚第二初落地帧脚跟前掌放平，翘尖/大露底消除，原上身画幅保持；待整圈动态。",
+      "changedThisRound": true,
+      "actualModel": null,
+      "actualQuality": null
+    }
+  ],
+  "cameraCorrectionFrames": [
+    6,
+    7
+  ],
+  "resolvedIndependentFindings": [
+    {
+      "id": "SE07-08-scale-watch",
+      "resolution": "06/07内置AI局部收头，第二稿同画幅对照08/09已消除原膨大；腿脚支撑点保留，静态通过，整圈待主窗口复核",
+      "resolvedBy": [
+        {
+          "file": "runtime/run/SE/06.png",
+          "sha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+          "nativeSource": {
+            "file": "work/run_SE_06_camerafinal_v2.png",
+            "sha256": "0fda6ba91eb18e26177b2bd1eba171fd347d15a99156c9e61373fe3aa7bf045d",
+            "generationRecord": "work/run_SE_06_camerafinal_v2.png.generation.json"
+          }
+        },
+        {
+          "file": "runtime/run/SE/07.png",
+          "sha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+          "nativeSource": {
+            "file": "work/run_SE_07_camerafinal_v2.png",
+            "sha256": "877885ae31cc415af7deb50b8b2ef110f953fc2d79f4846dd4871db6dac709fe",
+            "generationRecord": "work/run_SE_07_camerafinal_v2.png.generation.json"
+          }
+        }
+      ]
+    }
+  ]
+}

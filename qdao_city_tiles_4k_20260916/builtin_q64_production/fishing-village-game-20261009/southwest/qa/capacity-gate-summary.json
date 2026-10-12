@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T06:36:21.568184+00:00",
+  "zone": "southwest",
+  "status": "read_only_gate_work_complete_new_art_waits_for_root_capacity_layout_release",
+  "gate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-gate-20261010.json",
+    "sha256": "fcb0af12c95cf35963ef82ac304093e876d8078651a9866203eb758fe30f56ae"
+  },
+  "gateActive": true,
+  "scopeTarget4kCount": 49,
+  "generatedNativeCount": 126,
+  "currentSelectedNativeSlotCount": 80,
+  "missingNativeCoreSlotCount": 704,
+  "fullyCovered4kCount": 3,
+  "internalPassed4kCount": 2,
+  "externalPassed4kCount": 0,
+  "formalAcceptedCount": 0,
+  "remainingFormal4kCount": 49,
+  "remainingInternal4kCount": 47,
+  "inFlightStatus": "No active imagegen; prepared requests remain uninvoked. All agents completed gate-only QA.",
+  "newImagegenCallsThisGateWork": 0,
+  "capacity5000Validated": false,
+  "worldSize": null,
+  "worldSizeOrBuildingScaleChanged": false,
+  "allSpatialBoxesAreArtRasterPixels": true,
+  "milestone": {
+    "tiles": [
+      "r09_c04",
+      "r09_c05",
+      "r10_c04",
+      "r10_c05"
+    ],
+    "target": "Complete contiguous 2x2 with all shared boundaries and central junction, then remaining full zone.",
+    "current": "3 of 4 tiles have 16 slots; r10c05 is 12/16. Only upper pair passes internal QA. No complete 2x2 acceptance."
+  },
+  "tiles": [
+    {
+      "tile": "r09_c04",
+      "generatedCoreSlotCount": 16,
+      "missingPatches": []
+    },
+    {
+      "tile": "r09_c05",
+      "generatedCoreSlotCount": 16,
+      "missingPatches": []
+    },
+    {
+      "tile": "r09_c06",
+      "generatedCoreSlotCount": 15,
+      "missingPatches": [
+        "p04_04"
+      ]
+    },
+    {
+      "tile": "r09_c07",
+      "generatedCoreSlotCount": 5,
+      "missingPatches": [
+        "p02_02",
+        "p02_03",
+        "p02_04",
+        "p03_01",
+        "p03_02",
+        "p03_03",
+        "p03_04",
+        "p04_01",
+        "p04_02",
+        "p04_03",
+        "p04_04"
+      ]
+    },
+    {
+      "tile": "r10_c04",
+      "generatedCoreSlotCount": 16,
+      "missingPatches": []
+    },
+    {
+      "tile": "r10_c05",
+      "generatedCoreSlotCount": 12,
+      "missingPatches": [
+        "p04_01",
+        "p04_02",
+        "p04_03",
+        "p04_04"
+      ]
+    }
+  ],
+  "nativeIntegrity": {
+    "images": 126,
+    "prompts": 126,
+    "receipts": 126,
+    "referenceLinks": 542,
+    "existingReferenceHashMatches": 416,
+    "missingReferenceLinks": 126,
+    "uniqueMissingReferences": [
+      {
+        "path": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+        "expectedSha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2"
+      }
+    ],
+    "all126NativeImageHashesAndSizesValid": true,
+    "note": "Missing historical style file is not a corrupt native output. Actual model and quality are still null; no retroactive rewrite."
+  },
+  "replay": {
+    "baseNativeImages": 32,
+    "acceptedInternalNativeRepairs": 5,
+    "arrayComparisons": 36,
+    "mismatchedPixelsOrSourceIDs": 0,
+    "scope": "r09c04/r09c05 stable internal contexts/cores and joint context/cores",
+    "missingHistoricalHelper": "D:/work/image/tianyong_festival_hd_20260910/seam_helpers.py",
+    "savedPathReplayWorks": true,
+    "byteIdenticalSnapshotAvailable": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/donghai_lantern/r09_c15/assembly-contract-v1/snapshots/3c9fb69c334985b7-seam_helpers.py"
+  },
+  "roadAndBuildingRisks": [
+    {
+      "id": "stairs",
+      "tile": "r10_c04",
+      "rasterBoxApprox": [
+        12900,
+        36450,
+        16360,
+        39680
+      ],
+      "risk": "Six visible layout tread/landing noses interpreted as eight each side with incompatible pitch, up to about414px same-index mismatch. Ten main patch positions require whole-flight geometric reconstruction after release. Narrow seam patching is structurally insufficient. Do not infer physical elevations or capacity."
+    },
+    {
+      "id": "market-foot",
+      "tile": "r09_c06",
+      "rasterBox": [
+        23400,
+        35983,
+        23630,
+        36143
+      ],
+      "risk": "Added thick pale sleeve expands a wooden foot into pavement; remove without altering original market footprint after release."
+    },
+    {
+      "id": "incomplete-bottom-stall",
+      "tile": "r10_c05",
+      "risk": "Bottom four slots absent; entire umbrella, rabbit/mooncake stall, tree foot and full road clearance cannot be certified. Visible umbrella contour differs roughly200px left/130px up from blurry guide; tree canopy is not collision area."
+    },
+    {
+      "id": "boundary-materials",
+      "tiles": [
+        "r09_c04",
+        "r09_c05",
+        "r10_c04",
+        "r10_c05"
+      ],
+      "risk": "Double wood rail at upper-pair seam, stone/shadow at west north/south seam, wood post at east north/south seam remain visible material cuts; not formal-accepted."
+    },
+    {
+      "id": "road-texture-scale",
+      "tile": "r10_c05",
+      "risk": "Paving size/direction varies by patch. It cannot be used as an actor-size or world-unit ruler."
+    },
+    {
+      "id": "missing-data",
+      "risk": "No confirmed actor collider/footprint, navigation mask or world units; visual open space alone cannot validate5000 players."
+    }
+  ],
+  "detailedAudits": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-c04-c05-source-replay.json",
+      "sha256": "2d2e5c6b6456ca18f87a902988ee5aadf89e95b14670999d82bec9bbcc07c9d6"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-r10c04-geometry-risk.json",
+      "sha256": "ca6069ad4563d44eda817b06e177942cc46ecab2acf431b177e60fe8b21d9be9"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-r10c05-audit.json",
+      "sha256": "daa2a39ad1f2713b9bca30ad88881df6dea47e96eb714730d498a1f2ef8979e1"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-r09c07-source-audit.json",
+      "sha256": "e26306aff60cc1ad607712ec45d7152756784ca4d817e0f6f5322696f9538022"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-r09c06-visual-audit.json",
+      "sha256": "41727d37b382bb9b68965101802d7a22eed16ed5bbcb687dbe134d84ccbbe037"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/capacity-gate-2x2-root-visual-audit.json",
+      "sha256": "49607601d06db764511abf74e10ea403ac133f68b0d68a5ea8d5d1ad9996825e"
+    }
+  ],
+  "incident": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/donghai_lantern/r09_c15/assembly-contract-v1/snapshots/__pycache__/3c9fb69c334985b7-seam_helpers.cpython-312.pyc",
+    "description": "Python import created a bytecode cache outside qa while reading a byte-identical surviving helper snapshot. Cleanup was attempted once, automatic approval rejected the delete as blocked by policy, no bypass attempted. The helper source was not modified.",
+    "cleanupStatus": "blocked_by_automatic_approval",
+    "futureInvocation": "Use python -B or PYTHONDONTWRITEBYTECODE=1 for the saved assembler."
+  },
+  "recoveryOrderAfterRootRelease": [
+    "Resolve confirmed primary style image/index dependency with exact historical hash where possible; preserve old provenance.",
+    "Finish missing four r10c05 slots and rebuild entire r10c04 failed stair flight and its fixed contacts, without changing world scale.",
+    "Repair and inspect all shared boundaries of initial2x2, including joint rail and central-post material seams; recrop final cores with full pixel provenance.",
+    "Finish and repair r09c06/r09c07 then continue remaining49-tile scope."
+  ],
+  "noArtworkDeleted": true,
+  "noSharedContractOrGitWrites": true
+}

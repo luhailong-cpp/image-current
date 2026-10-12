@@ -1,0 +1,98 @@
+{
+  "id": "p03_04",
+  "candidate": {
+    "path": "C:\\Users\\luyua\\.codex\\generated_images\\01a12076-0b9d-76b2-949d-c4cf520a83be\\exec-4662da19-e01e-49df-905c-5d99032bef29.png",
+    "sha256": "5500067cc3402a562dca17c3c08917a75170c50081aa0b866099016153762227",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "guide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\guides\\p03_04.layout-only.png",
+    "sha256": "f366b991c1db0a0b6a76638cc9c565738ca3aaf2e49fd1e9a87482dcefaa04f2",
+    "sourceBox": [
+      370.0807800292969,
+      899.1120300292969,
+      394.0754699707031,
+      923.1067199707031
+    ]
+  },
+  "contextWorldBox": [
+    19341,
+    46989,
+    20595,
+    48243
+  ],
+  "verdict": "reject_macro_crop_and_invented_objects",
+  "formalAccepted": false,
+  "findings": [
+    {
+      "priority": "P1",
+      "kind": "invented_object",
+      "candidateNativeBox": [
+        580,
+        780,
+        1254,
+        1254
+      ],
+      "text": "Image presents a complete small roof corner, including a free left upturned eave, broad teal roof fan, red post and wall. Guide calls for a much more tightly cropped large gold/orange ridge fragment continuing beyond right and bottom."
+    },
+    {
+      "priority": "P1",
+      "kind": "incorrect_footprint",
+      "candidateFreeEaveTipNativeApprox": [
+        600,
+        1030
+      ],
+      "text": "The self-contained left eave tip is not supported by this source window. Broad gold mass/trim should continue into the bottom/right crop, not expose a complete roof-and-column silhouette."
+    },
+    {
+      "priority": "P2",
+      "kind": "invented_grout",
+      "candidateNativePolylineApprox": [
+        [
+          60,
+          500
+        ],
+        [
+          260,
+          610
+        ]
+      ],
+      "text": "Added transverse cut across cream diagonal border is absent as a distinct source joint. Remove the invented strong seam."
+    }
+  ],
+  "sourceObjectLandmarks": {
+    "firstWarmObjectPixelsNativeApprox": [
+      760,
+      560
+    ],
+    "brightGoldCenterNativeApprox": [
+      950,
+      660
+    ],
+    "leftBoundaryNativeApprox": [
+      [
+        760,
+        600
+      ],
+      [
+        730,
+        850
+      ],
+      [
+        690,
+        1000
+      ]
+    ],
+    "bottomCreamGoldEntryNativeXRangeApprox": [
+      380,
+      800
+    ],
+    "coordinateUncertaintyNativePixels": 52.2615629984,
+    "note": "These are coarse footprint anchors, not a contour mask or sufficient evidence for a spherical finial."
+  },
+  "correctionPrompt": "Preserve the exact large-scale footprint and crop of the approved original layout guide. This window contains only a tightly cropped, large gold-orange roof-ridge fragment and broad gold/cream trim entering from the right and bottom. Keep the gold highlight around native (950,660), the substantial warm mass along the right-lower area, and the left contour around x760 at y600, x730 at y850 and x690 at y1000. Do not reframe it into a complete roof corner; do not add a free left upturned eave end, a teal tiled roof fan, a red column/wall, or a complete spherical ornament. Keep the original gray stone, cream diagonal border and muted blue-gray ground unchanged in macro placement. Do not introduce a transverse grout cut into the cream border. Render detail within the original footprint; original guide controls all silhouettes.",
+  "materialNote": "Ground material is relatively quiet; rejection is macro geometry and object occupancy, not a reason to add texture."
+}

@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-10-10T06:27:35.753968+00:00",
+  "tile": "r03_c02",
+  "status": "complete-4k-candidate-internal-not-passed-capacity-gate-held",
+  "internalAccepted": false,
+  "externalAccepted": false,
+  "formalAccepted": false,
+  "capacity5000Validated": false,
+  "inFlight": false,
+  "generationHeld": true,
+  "holdSource": "../../capacity-layout-gate-20261010.json",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\tiles\\r03_c02.candidate.png",
+    "sha256": "7187ba008de070936c53988fbe9cb29410aea9023f312bf00cab4902878a4a5a",
+    "size": [
+      4096,
+      4096
+    ],
+    "globalCoreBox": [
+      4096,
+      8192,
+      8192,
+      12288
+    ],
+    "nativePixelsVerified": 16777216,
+    "pixelMismatch": 0
+  },
+  "contextCandidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\tiles\\r03_c02.with-root-bridge-context.png",
+    "sha256": "7bb800c998e9d61b3115979967176e394fde1a2ed7d2203e7823f0a486b100f4",
+    "note": "Root-approved external roof bridge v01 included only as context; root owns final cross-tile integration."
+  },
+  "production": {
+    "basePatches": 16,
+    "requiredInternalBridges": [
+      "native/r03_c02_s01_c03_c04_bridge_v01.png",
+      "native/r03_c02_s03_c02_c03_bridge_v01.png"
+    ],
+    "baseS03C02": "v01 must be used only with required centered lamp bridge; v01 original seam rejection preserved in QA. v02 rejected.",
+    "selectedRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\selected.json"
+  },
+  "visualCoverage": {
+    "whole4kViewed": true,
+    "internalFullLengthNativeSeamSegmentsViewed": 24,
+    "internalNativeIntersectionsViewed": 9,
+    "internalCropsManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\final-native-crops.json",
+    "eastFullHeightSegmentsViewed": 4,
+    "eastIntersectionCropsPending": [
+      "east-full-height-gate.intersection1.100pct.png",
+      "east-full-height-gate.intersection2.100pct.png",
+      "east-full-height-gate.intersection3.100pct.png"
+    ],
+    "eastDedicatedIntersectionAcceptance": "pending; full-height segment inspection alone does not grant external acceptance",
+    "northSouthWestExternalEdges": "not accepted; adjacent completed tiles unavailable or outside this review"
+  },
+  "findings": [
+    {
+      "id": "G1",
+      "class": "geometry",
+      "blockingInternal": true,
+      "globalApproximateBox": [
+        4990,
+        9230,
+        5050,
+        9290
+      ],
+      "description": "Final row1/row2-col1/col2 intersection retains a visible upward notch/step in the diagonal wooden rail top edge near its right endpoint; pairwise north QA did not remove it in actual two-dimensional assembly.",
+      "evidence": [
+        "qa/final-intersection-1-1.100pct.png",
+        "qa/final-h1-segment1.100pct.png"
+      ],
+      "futureRepair": "After root releases gate, use native object-centered repair including complete rail endpoint and all adjoining post/beam boundaries; no new artwork requested during gate."
+    },
+    {
+      "id": "M1",
+      "class": "material-review",
+      "blockingInternal": "pending-root-review",
+      "globalApproximateBox": [
+        4970,
+        8192,
+        5080,
+        8450
+      ],
+      "description": "Straight visible wood source-value boundary in upper beam near gold joint plaque, without displaced silhouette.",
+      "evidence": [
+        "qa/final-v1-segment1.100pct.png"
+      ]
+    },
+    {
+      "id": "M2",
+      "class": "material-review",
+      "blockingInternal": "pending-root-review",
+      "globalApproximateBox": [
+        6510,
+        10170,
+        7040,
+        10340
+      ],
+      "description": "Source-value/detail transition across dark window and adjoining left edge of cream-panel timber post at row2/row3 join. Lantern ribs and contour remain continuous.",
+      "evidence": [
+        "qa/final-h2-segment3.100pct.png",
+        "qa/final-intersection-2-3.100pct.png"
+      ]
+    },
+    {
+      "id": "E1",
+      "class": "external-material",
+      "blockingExternal": true,
+      "globalApproximateBox": [
+        8150,
+        9250,
+        8310,
+        9500
+      ],
+      "description": "Root previously identified conspicuous dark eave wood value patch above right lamp. Full-height real230 DP still shows material change while lamp, door and column geometry remain connected.",
+      "evidence": [
+        "qa/east-full-height-gate.segment2.100pct.png"
+      ]
+    },
+    {
+      "id": "E2",
+      "class": "external-material",
+      "blockingExternal": "pending-root-review",
+      "globalApproximateBox": [
+        8090,
+        11300,
+        8270,
+        11800
+      ],
+      "description": "Green folded textile/rolls join geometrically, but native weave brightness/pattern phase changes across source boundary.",
+      "evidence": [
+        "qa/east-full-height-gate.segment4.100pct.png"
+      ]
+    }
+  ],
+  "nonblockingObserved": [
+    "Root-approved narrow roof barrel column stays complete and connected; historical rejection and root override preserved.",
+    "Centered lamp bridge repairs the previously severed gold cap, rib, tassel and display rail; left/right/north interfaces checked before 4K and final center intersections inspected.",
+    "Other viewed native seams retain coherent wood edges, cloth folds, stone joints and close crop scale. Minor natural brush variation is not an automatic rejection."
+  ],
+  "eastDiagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\east-full-height-gate.json",
+    "beltSha256": "2d2d22f914d7a419e6f93c9cc4cf7af1d7ee0e6f002e1b195971918ba55a52e8",
+    "pairPixelsNativeVerified": 33554432,
+    "pixelMismatch": 0,
+    "method": "True230 full-height minimum-error hardcut from current repaired east core and original native halos; approved root roof bridge core forced with115halo DP; diagnostic only."
+  },
+  "capacityRisks": [
+    {
+      "area": "roof/facade mass",
+      "approximateGlobalBox": [
+        4096,
+        8192,
+        8192,
+        11264
+      ],
+      "risk": "Most upper three rows are building/roof/door artwork; conservative navigation should exclude roof, facade, pillars and overhang projection until collision/occlusion convention is confirmed."
+    },
+    {
+      "area": "southwest merchandise stand",
+      "approximateGlobalBox": [
+        4096,
+        10600,
+        6360,
+        12288
+      ],
+      "risk": "Large cloth display and supports occupy foreground and hide ground; must not count tabletop or under-shelf shadow as free player area."
+    },
+    {
+      "area": "southeast merchandise stand",
+      "approximateGlobalBox": [
+        6820,
+        11600,
+        8192,
+        12288
+      ],
+      "risk": "Second display intrudes into the visible stone gap; its right and bottom continuation falls outside tile, so local empty pixels do not establish route width/exit capacity."
+    },
+    {
+      "area": "stone passage between shop and displays",
+      "approximateGlobalBox": [
+        6200,
+        11150,
+        8192,
+        12288
+      ],
+      "risk": "Visible paving is a bent access gap fragmented by pedestal and display corners. Determine conservative walkable polygon, character collision scale and neighboring connections before claiming player capacity. No5000-player count inferred from image resolution."
+    }
+  ],
+  "sourceReplayLimitations": {
+    "missingHistoricalReferenceFiles": {
+      "D:/work/image/designs/mail-ui-v1/01-mail-event.png": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2"
+    },
+    "originalReferenceRecordsChanged": false,
+    "currentFullReferenceAvailability": "incomplete; native pixel equality proof does not repair missing historical style reference",
+    "readOnlyLookup": "rg by exact basename in D:/work/image returned no match for01-mail-event.png"
+  },
+  "remainingWorkAfterRootRelease": [
+    "Resolve G1 native rail geometry.",
+    "Root adjudicate internal material findings and repair if required.",
+    "Complete dedicated east crossing intersections and external material fixes.",
+    "Validate conservative navigable footprint and shared-world scale before more area generation."
+  ],
+  "noNewArtworkAfterGate": true,
+  "sharedIndexModified": false
+}

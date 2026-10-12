@@ -1,0 +1,22 @@
+{
+  "tile": "r14_c14",
+  "status": "reported_to_parent_before_generation",
+  "preparedVersion": "p01_01_v20261010T140949_d00008bf",
+  "generatedNativeCountAtCheck": 0,
+  "recordedAtUtc": "2026-10-10T14:17:04Z",
+  "cornerBoxInFirst1254Patch": [0, 0, 230, 230],
+  "cornerMeanAbsoluteChannelDifference": 42.74042218021424,
+  "northSource": {
+    "file": "../r13_c14/candidate/r13_c14-context-4326-f0484a5c8621a2c8804d.png",
+    "sha256": "7ecdf4b3e4552cb78ccff8245cfa076655d246beb764f55a6f0d34339ff96bf2",
+    "sourceCrop": [0, 4096, 1254, 4326]
+  },
+  "westSource": {
+    "file": "../r14_c13/candidate/r14_c13-context-4326-adae1ee1a52acb231d63.png",
+    "sha256": "d1b43ee3e1cbb63697e71b8a2f4fb1bef60d11c88c7c37d00b13b18fd061ff6e",
+    "sourceCrop": [4096, 0, 4326, 1254]
+  },
+  "finding": "North and west anchors assign different stone joints and red paper to the same shared corner. Top precedence leaves an abrupt content switch at y230 in the left strip. A new r14_c14 patch cannot simultaneously preserve both contradictory corner sources.",
+  "requiredNextDecision": "Parent to establish one authoritative continuous junction repair/source before child expands this conflict. Do not blur the mismatch or regard successful assembly as geometric acceptance.",
+  "formalAccepted": false
+}

@@ -1,0 +1,272 @@
+{
+  "scope": "independent QA of p03_04 proposal and two row3 shared patch edges",
+  "formalAccepted": false,
+  "noGeneration": true,
+  "noCandidateProgressMutation": true,
+  "evidence": {
+    "sources": [
+      {
+        "id": "p03_01",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_01.png",
+        "sha256": "e5aa3279fcf2fdd594f58a2052e9c7f9c98b9d2c91961b7bfab4595507f32a77",
+        "nativeSize": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "id": "p03_02",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_02.png",
+        "sha256": "83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc",
+        "nativeSize": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "id": "p03_03",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_03.png",
+        "sha256": "1956e9dbfacffb2f16998beec9fcd6b305ea99b6a7a104bc71ff57a3420b0b01",
+        "nativeSize": [
+          1254,
+          1254
+        ]
+      }
+    ],
+    "overlaps": [
+      {
+        "left": "p03_01",
+        "right": "p03_02",
+        "sharedWorldX": 17408,
+        "worldYRange": [
+          46989,
+          48243
+        ],
+        "leftNativeX": 1139,
+        "rightNativeX": 115,
+        "leftDarkRuns": [
+          [
+            84,
+            87,
+            87
+          ],
+          [
+            1081,
+            1084,
+            1083
+          ]
+        ],
+        "rightDarkRuns": [
+          [
+            99,
+            100,
+            100
+          ],
+          [
+            483,
+            484,
+            483
+          ],
+          [
+            963,
+            964,
+            964
+          ]
+        ],
+        "note": "Hardcut is QA only, not quilting proposal; same-world overlap has no resizing."
+      },
+      {
+        "left": "p03_02",
+        "right": "p03_03",
+        "sharedWorldX": 18432,
+        "worldYRange": [
+          46989,
+          48243
+        ],
+        "leftNativeX": 1139,
+        "rightNativeX": 115,
+        "leftDarkRuns": [
+          [
+            311,
+            311,
+            311
+          ],
+          [
+            313,
+            316,
+            314
+          ],
+          [
+            568,
+            570,
+            568
+          ],
+          [
+            787,
+            790,
+            788
+          ],
+          [
+            1059,
+            1061,
+            1060
+          ]
+        ],
+        "rightDarkRuns": [
+          [
+            260,
+            262,
+            261
+          ],
+          [
+            1083,
+            1086,
+            1085
+          ]
+        ],
+        "note": "Hardcut is QA only, not quilting proposal; same-world overlap has no resizing."
+      }
+    ],
+    "sourceResampling": false,
+    "finalArt": false
+  },
+  "p0304Report": "p03_04-independent-qa.json",
+  "sharedEdges": [
+    {
+      "worldX": 17408,
+      "status": "fail_geometry",
+      "left": "p03_01",
+      "right": "p03_02",
+      "findings": [
+        {
+          "id": "top-horizontal",
+          "leftWorldY": 47076,
+          "rightWorldY": 47089,
+          "gapPixels": 13
+        },
+        {
+          "id": "lower-horizontal",
+          "leftWorldY": 48072,
+          "rightWorldY": 47953,
+          "gapPixels": 119
+        },
+        {
+          "id": "middle-horizontal-terminates",
+          "leftWorldY": null,
+          "rightWorldY": 47472,
+          "action": "Resolve the source-consistent weak subdivision across the vertical frame; current hard line has no matching left continuation."
+        }
+      ]
+    },
+    {
+      "worldX": 18432,
+      "status": "fail_geometry",
+      "left": "p03_02",
+      "right": "p03_03",
+      "findings": [
+        {
+          "id": "descending-main",
+          "leftWorldY": 47303,
+          "rightWorldY": 47250,
+          "gapPixels": 53
+        },
+        {
+          "id": "ascending-rim",
+          "leftWorldY": 48049,
+          "rightWorldY": 48074,
+          "gapPixels": 25
+        },
+        {
+          "id": "Y-upper-missing",
+          "leftWorldY": 47557,
+          "rightWorldY": null
+        },
+        {
+          "id": "Y-lower-missing",
+          "leftWorldY": 47777,
+          "rightWorldY": null
+        }
+      ]
+    }
+  ],
+  "YCorrection": {
+    "previousOmission": "Earlier row3 narrative omitted Y branches inside p03_03. Earlier Ymain line endpoint also stopped before D3; corrected now.",
+    "verdict": "retain_as_faint_structural_subdivision",
+    "confidence": "medium_due_to_coarse_source",
+    "evidence": "Y-source-coordinates.png",
+    "reason": "Faint horizontal stem branches into two coherent sloping edges; upper edge meets descending D3 and lower edge meets ascending SErim. This connectivity is stronger evidence than a random interior tonal patch.",
+    "sourceNodes": {
+      "Y": [
+        350,
+        911.5
+      ],
+      "upperTOnD3": [
+        356,
+        907.1
+      ],
+      "lowerTOnSErim": [
+        357.8,
+        917.2
+      ]
+    },
+    "p0303Native": {
+      "Y": [
+        -25,
+        647
+      ],
+      "upperBranch": [
+        [
+          0,
+          629
+        ],
+        [
+          288,
+          417
+        ]
+      ],
+      "lowerBranch": [
+        [
+          0,
+          666
+        ],
+        [
+          382,
+          945
+        ]
+      ]
+    },
+    "worldTNodes": {
+      "upper": [
+        18605,
+        47406
+      ],
+      "lower": [
+        18699,
+        47934
+      ]
+    },
+    "sourceEstimatedAtSharedCoreBoundary": {
+      "worldX": 18432,
+      "upperWorldY": 47533,
+      "lowerWorldY": 47739
+    },
+    "instruction": "Render shallow and weak, terminate at the existing oblique lines as T joins. Do not continue through the T. Actual neighboring generated lines need exact visual alignment; source uncertainty is not permission for a 24px or 38px inter-image gap.",
+    "updatedFiles": [
+      "../topology-followup/r12-macro-topology.json",
+      "../topology-followup/patch-endpoints.json",
+      "../topology-followup/patch-endpoints.txt",
+      "../topology-followup/r12-topology-overlay.png",
+      "../topology-followup/r12-topology-world-map.png"
+    ]
+  },
+  "material": {
+    "status": "quiet_material_improved_but_not_whole_tile_accepted",
+    "note": "All three row3 natives have broad pale planes and much less fine woven texture. Geometry failures remain independently open."
+  },
+  "previewPolicy": {
+    "cropsNative1to1": true,
+    "hardcutsAreQaOnly": true,
+    "sourceCoordinatePreviewsResizedNearest": true,
+    "notFinalArt": true
+  }
+}

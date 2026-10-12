@@ -1,0 +1,224 @@
+/* Local-only channel UI. All component selectors are isolated with ch-. */
+.ch-view{height:100%;min-height:0;min-width:0;display:flex;flex-direction:column;color:var(--ink);font-family:var(--sans)}
+.ch-view button,.ch-view textarea,.ch-view input,.ch-dialog button{font-family:var(--sans)}
+.ch-icon{width:24px;height:24px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.ch-toolbar{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:0 4px 14px;border-bottom:1px solid var(--line)}
+.ch-channel-tabs{display:flex;align-items:center;gap:18px}
+.ch-channel-tab{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-width:136px;min-height:54px;border:1px solid #c6b38a;border-radius:11px;background:#f7f0ded9;color:#75654a;font-size:27px;letter-spacing:3px;padding:4px 22px}
+.ch-channel-tab.ch-selected{background:#e0e9d2;border-color:#8aa071;color:#345c3f;box-shadow:inset 0 0 0 2px #f5f2d6}
+.ch-tab-mark{font-size:13px;color:#9a7d40}
+.ch-unread{display:grid;place-items:center;border-radius:14px;background:#ad543b;color:#fff1cc;min-width:26px;height:26px;font-size:16px;letter-spacing:0;padding:0 5px}
+.ch-channel-hint{font:26px var(--serif);letter-spacing:3px;color:#85724f}
+.ch-log-wrap{position:relative;flex:1;min-height:0;display:flex;overflow:hidden}
+.ch-message-log{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:24px 38px 6px 18px;scrollbar-width:thin;scrollbar-color:#b9a278 #e9e0cd;scroll-padding:15px}
+.ch-message{display:flex;align-items:flex-start;gap:18px;margin:0 0 23px;min-width:0}
+.ch-avatar{width:82px;height:82px;position:relative;isolation:isolate;overflow:hidden;border:1px solid #b69f64;border-radius:50%;background:#e9dfc5;flex-shrink:0;display:inline-block;padding:0}
+.ch-avatar:after{content:"";position:absolute;inset:0;background:url("assets/portrait_frame.png") center/100% 100% no-repeat;pointer-events:none}
+.ch-avatar img{position:absolute;width:200%;height:200%;left:-50%;top:-7%;max-width:none;object-fit:contain}
+.ch-message-main{min-width:0;max-width:80%;display:flex;flex-direction:column;align-items:flex-start}
+.ch-message-meta{display:flex;align-items:center;gap:13px;flex-wrap:wrap;min-height:36px;padding:0 4px 7px;font-size:21px;color:#6f7955}
+.ch-person-name{font-weight:600;font-size:27px;color:#3d6542;padding:0;border:0;background:transparent;min-height:36px;white-space:nowrap}
+.ch-level{color:#75694f;font-size:20px;white-space:nowrap}
+.ch-identity{font-size:18px;border:1px solid #a8b38b;border-radius:5px;color:#657848;background:#ebeedb;padding:1px 8px;white-space:nowrap;line-height:1.5}
+.ch-message-meta time{font-size:19px;color:#8b7b5d;margin-left:7px;font-variant-numeric:tabular-nums}
+.ch-bubble{position:relative;display:flex;flex-direction:column;gap:11px;padding:13px 23px 14px;background:#fff8e9;border:1px solid #c6b58a;border-radius:0 17px 17px 17px;box-shadow:inset 0 1px #fffdf5,0 3px 0 #b8a47814;max-width:100%;font-size:27px;line-height:1.65;color:#43513b}
+.ch-bubble p{white-space:pre-wrap;overflow-wrap:anywhere}
+.ch-self{flex-direction:row-reverse}
+.ch-self .ch-message-main{align-items:flex-end}
+.ch-self .ch-message-meta{flex-direction:row-reverse}
+.ch-self .ch-message-meta time{margin-left:0;margin-right:7px}
+.ch-self .ch-bubble{border-radius:17px 0 17px 17px;background:#e4ecd6;border-color:#97ac7a;box-shadow:inset 0 1px #f6f8e9,0 3px 0 #769f7012}
+.ch-delivery{display:block;font-size:17px;color:#6c7756;padding:6px 3px 0}
+.ch-share-card{display:flex;align-items:center;gap:15px;min-width:330px;max-width:100%;padding:9px 15px 9px 8px;border:1px solid #bdaa75;border-radius:10px;background:#ece9d3;color:#54663c;text-align:left}
+.ch-share-card>img{width:62px;height:62px;object-fit:contain;flex-shrink:0}
+.ch-share-card>span:not(.ch-card-chevron){min-width:0}
+.ch-share-card strong{font-size:24px;font-weight:600;display:block}
+.ch-share-card small{font-size:18px;color:#84714c;display:block;margin-top:2px}
+.ch-card-chevron{font:40px var(--serif);margin-left:auto;color:#9b854e;padding-left:15px}
+.ch-new-button{position:absolute;right:32px;bottom:15px;display:flex;align-items:center;gap:9px;min-height:48px;padding:7px 21px;border:1px solid #a68e57;border-radius:25px;background:#fcf4df;color:#496944;box-shadow:0 5px 12px #64582a22;font-size:22px;z-index:2}
+.ch-composer{position:relative;flex-shrink:0;margin:0;padding:12px 8px 1px;border-top:1px solid var(--line)}
+.ch-composer-top{display:flex;align-items:center;gap:25px;min-height:43px;margin-bottom:8px}
+.ch-compose-label{font:700 26px var(--serif);letter-spacing:2px;color:#5e6949}
+.ch-compose-tools{display:flex;gap:18px;align-items:center;margin-left:7px}
+.ch-tool{background:transparent;border:0;color:#7a6e4f;display:flex;align-items:center;gap:9px;min-height:44px;padding:4px 8px;font-size:22px}
+.ch-counter{margin-left:auto;font-size:20px;font-variant-numeric:tabular-nums;color:#8b7d60}
+.ch-too-long{color:#a44432}
+.ch-compose-row{display:flex;gap:19px;align-items:flex-end}
+.ch-compose-row textarea{display:block;flex:1;min-width:0;height:85px;min-height:85px;max-height:85px;padding:12px 18px;border:1px solid #bba87b;border-radius:11px;background:#fff8e9;color:#3c553b;resize:none;font-size:26px;line-height:1.55}
+.ch-compose-row textarea::placeholder{color:#8e8268}
+.ch-button{display:flex;align-items:center;justify-content:center;gap:12px;min-width:160px;height:63px;padding:0 26px 4px;border:0;background:url("assets/button_secondary.png") center/100% 100% no-repeat;color:#645436;font-size:27px;letter-spacing:2px;white-space:nowrap}
+.ch-button.ch-primary{background-image:url("assets/button_primary.png");color:#fff2ce;text-shadow:0 1px #234a30}
+.ch-button:disabled{filter:saturate(.1) brightness(.85);opacity:.7}
+.ch-send{height:71px;min-width:190px;margin-bottom:1px;font-size:30px}
+.ch-send .ch-icon{width:29px;height:29px}
+.ch-composer-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#8a7e62;font-size:17px;line-height:1.5;padding-top:7px}
+.ch-picker{position:absolute;right:205px;bottom:calc(100% - 50px);z-index:4;max-width:calc(100% - 20px);min-width:430px;padding:20px;border:1px solid #b59b63;border-radius:13px;background:#fbf2df;box-shadow:0 8px 30px #3c4c2730}
+.ch-picker strong{display:block;font:700 27px var(--serif);color:#4a6541;margin-bottom:15px}
+.ch-picker>div{display:flex;gap:9px;flex-wrap:wrap}
+.ch-picker button{background:#ecebd6;border:1px solid #b9b187;min-height:47px;padding:5px 13px;border-radius:7px;color:#5b6a43;font-size:21px}
+.ch-picker p{font-size:17px;color:#857557;margin-top:13px}
+.ch-empty{min-height:280px;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;color:#857457;text-align:center}
+.ch-empty>img{width:90px;height:90px;opacity:.75;margin-bottom:5px}
+.ch-empty h3{font:700 32px var(--serif);color:#5d7048;letter-spacing:3px}
+.ch-empty p{font-size:23px;line-height:1.7}
+.ch-empty .ch-button{margin-top:14px;font-size:24px;min-width:240px}
+.ch-rumor-notice{flex-shrink:0;display:flex;align-items:center;gap:18px;padding:0 7px 17px;border-bottom:1px solid var(--line)}
+.ch-rumor-notice>img{width:57px;height:57px;object-fit:contain}
+.ch-rumor-notice h2{font:700 34px var(--serif);letter-spacing:4px;color:#4b6440}
+.ch-rumor-notice p{font-size:22px;color:#7d6d4d;margin-top:4px}
+.ch-readonly{display:flex;align-items:center;gap:9px;margin-left:auto;color:#8a7b59;font-size:22px;letter-spacing:2px;border:1px solid #cbbb93;padding:7px 16px;border-radius:25px;background:#ede6d4}
+.ch-rumor-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:15px 4px;flex-shrink:0}
+.ch-rumor-filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.ch-filter{min-height:49px;padding:5px 24px;border:1px solid #c5b68c;border-radius:9px;background:#f9f1de;color:#7a6849;font-size:23px;white-space:nowrap}
+.ch-filter.ch-selected{background:#e4ead4;color:#365b3d;border-color:#93a576;box-shadow:inset 0 -3px #6e8b58;font-weight:600}
+.ch-rumor-search{height:48px;display:flex;align-items:center;gap:9px;border:1px solid #c5b38c;border-radius:9px;background:#fff8e8;padding:0 13px;color:#8b7956;width:310px;flex-shrink:0}
+.ch-rumor-search input{width:100%;min-width:0;border:0;background:transparent;font-size:22px;color:#46553d;height:40px}
+.ch-rumor-search input::placeholder{color:#8c7f61}
+.ch-rumor-list{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:2px 11px 5px 4px;scrollbar-width:thin;scrollbar-color:#b5a074 #e8dfca}
+.ch-rumor-card{position:relative;display:flex;align-items:flex-start;gap:24px;padding:22px 26px 18px;margin-bottom:15px;border:1px solid #c8b78c;border-radius:14px;background:#fcf5e5;box-shadow:inset 0 1px #fffdf5,0 3px 0 #a5916612;overflow:hidden}
+.ch-rumor-card:after{content:"";pointer-events:none;position:absolute;right:-11px;bottom:-29px;width:120px;height:100px;background:url("assets/round_badge_compass.png") center/contain no-repeat;opacity:.05;transform:rotate(-20deg)}
+.ch-rumor-medallion{width:81px;height:81px;flex-shrink:0;align-self:center;border:1px solid #c9b889;border-radius:50%;background:#eee8d4;display:grid;place-items:center;box-shadow:inset 0 0 0 4px #f9f0dc}
+.ch-rumor-medallion img{width:71px;height:71px;object-fit:contain}
+.ch-rumor-main{flex:1;min-width:0;position:relative;z-index:1}
+.ch-rumor-top{display:flex;align-items:center;gap:15px;margin-bottom:9px}
+.ch-rumor-seal{font-size:20px;line-height:1.4;letter-spacing:3px;border:1px solid #b8a3b2;border-radius:5px;padding:2px 8px 2px 10px;color:#785b7c;background:#eee3ed;white-space:nowrap}
+.ch-rumor-top h3{font:700 28px var(--serif);letter-spacing:3px;color:#526441}
+.ch-rumor-top time{margin-left:auto;font-size:21px;color:#8c7b5c;font-variant-numeric:tabular-nums}
+.ch-rumor-main>p{font-size:27px;line-height:1.65;color:#566046}
+.ch-location{display:inline-flex;align-items:center;gap:5px;vertical-align:baseline;background:transparent;border:0;border-bottom:1px solid #8a9a66;padding:0 3px;color:#637c48;font-size:inherit;line-height:1.5;min-height:44px}
+.ch-rumor-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-top:10px}
+.ch-event-state{display:flex;align-items:center;gap:8px;font-size:21px;color:#98723e}
+.ch-event-state b{font-weight:500;font-variant-numeric:tabular-nums}
+.ch-event-state .ch-icon{width:22px;height:22px}
+.ch-ended{background:#f1eddf}
+.ch-ended .ch-rumor-medallion{filter:saturate(.45)}
+.ch-ended .ch-event-state{color:#8b8270}
+.ch-text-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;color:#66804c;font-size:21px;min-height:44px;background:transparent;border:0;padding:4px 8px;white-space:nowrap}
+.ch-rumor-footer{display:flex;align-items:center;gap:24px;padding:11px 5px 0;border-top:1px solid var(--line);flex-shrink:0;font-size:21px;color:#867656}
+.ch-channel-clock{display:flex;align-items:center;gap:10px}
+.ch-channel-clock time{font-variant-numeric:tabular-nums}
+.ch-results-count{margin-left:auto;font-size:19px;color:#958361}
+.ch-rumor-footer .ch-text-button{padding-right:0}
+.ch-dialog{color:var(--ink);border:2px solid #b5985c;border-radius:18px;background:#f7eedb;padding:27px 40px 32px;width:min(760px,calc(100vw - 36px));max-height:88dvh;overflow:auto;box-shadow:0 20px 80px #173a2c5c;font-family:var(--sans)}
+.ch-dialog::backdrop{background:#173d2ba8;backdrop-filter:blur(3px)}
+.ch-dialog-close{position:absolute;right:10px;top:10px;width:46px;height:46px;display:grid;place-items:center;background:#efe6cf;border:1px solid #bda873;border-radius:50%;color:#5d724b}
+.ch-dialog-emblem{display:flex;justify-content:center;margin:0 0 10px}
+.ch-dialog-emblem img{width:80px;height:80px;object-fit:contain}
+.ch-dialog h2{font:700 35px var(--serif);letter-spacing:3px;text-align:center;color:#436440;margin-bottom:25px}
+.ch-dialog h3{font-size:30px;margin:0 0 5px;color:#3f6440}
+.ch-dialog p{font-size:22px;line-height:1.75}
+.ch-dialog .ch-dialog-copy{margin:15px 0}
+.ch-dialog .ch-dialog-note{font-size:16px;color:#8a7958;margin:24px 0 17px;text-align:center}
+.ch-dialog-done{margin:0 auto;min-width:200px;height:56px;font-size:24px}
+.ch-profile-hero{display:flex;align-items:center;gap:24px;justify-content:center}
+.ch-profile-hero .ch-avatar{width:116px;height:116px}
+.ch-profile-hero p{margin-bottom:7px}
+.ch-item-detail{display:flex;align-items:center;gap:25px;padding:15px 0}
+.ch-item-detail>img{width:132px;height:132px;object-fit:contain}
+.ch-item-detail p{margin-top:12px}
+.ch-coordinate-detail{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px;background:#e8ecd6;border:1px solid #bdc199;border-radius:12px;color:#617748;font-size:25px;margin:20px 0}
+.ch-rumor-dialog-meta{display:flex;align-items:center;gap:15px;justify-content:center;font-size:20px;color:#857655}
+.ch-dialog-state{display:flex;align-items:center;gap:10px;margin-top:15px;color:#957444;font-size:21px}
+@media(max-width:900px){
+.ch-view{height:clamp(530px,calc(100dvh - 260px),720px);min-height:0}
+.ch-icon{width:19px;height:19px}
+.ch-toolbar{padding:0 0 10px;gap:0;display:block}
+.ch-channel-tabs{gap:7px;justify-content:space-between}
+.ch-channel-tab{min-width:0;flex:1;min-height:44px;padding:3px 9px;gap:4px;border-radius:8px;font-size:17px;letter-spacing:1px}
+.ch-tab-mark{font-size:9px}
+.ch-unread{font-size:11px;min-width:17px;height:17px;padding:0 4px}
+.ch-channel-hint{font-size:14px;letter-spacing:2px;text-align:right;margin-top:8px}
+.ch-message-log{padding:16px 4px 1px 0;scroll-padding:10px}
+.ch-message{gap:9px;margin-bottom:20px}
+.ch-avatar{width:44px;height:44px}
+.ch-message-main{max-width:calc(100% - 53px)}
+.ch-message-meta{gap:5px;min-height:26px;padding:0 1px 5px;font-size:12px}
+.ch-person-name{font-size:16px;min-height:24px}
+.ch-level{font-size:12px}
+.ch-identity{font-size:10px;padding:0 4px;border-radius:4px}
+.ch-message-meta time{font-size:11px;margin-left:0}
+.ch-self .ch-message-meta time{margin-right:0}
+.ch-bubble{font-size:16px;line-height:1.65;padding:9px 11px;border-radius:0 11px 11px 11px;gap:8px}
+.ch-self .ch-bubble{border-radius:11px 0 11px 11px}
+.ch-delivery{font-size:11px;padding-top:4px}
+.ch-share-card{min-width:0;width:100%;gap:7px;padding:6px;border-radius:8px}
+.ch-share-card>img{width:40px;height:40px}
+.ch-share-card strong{font-size:14px;font-weight:500}
+.ch-share-card small{font-size:11px}
+.ch-card-chevron{font-size:25px;padding-left:0}
+.ch-new-button{right:10px;bottom:10px;padding:5px 13px;min-height:44px;font-size:14px;gap:5px}
+.ch-composer{padding:7px 0 0}
+.ch-composer-top{gap:7px;min-height:40px;margin-bottom:3px}
+.ch-compose-label{font-size:17px;letter-spacing:0;white-space:nowrap}
+.ch-compose-tools{gap:3px;margin-left:0}
+.ch-tool{font-size:13px;gap:4px;padding:4px 6px;min-height:44px}
+.ch-counter{font-size:12px}
+.ch-compose-row{gap:7px;align-items:flex-end}
+.ch-compose-row textarea{height:75px;min-height:75px;max-height:75px;padding:8px 10px;border-radius:8px;font-size:16px;line-height:1.6}
+.ch-button{height:46px;min-width:90px;gap:4px;padding:0 13px 3px;font-size:18px;letter-spacing:1px}
+.ch-send{min-width:67px;height:47px;font-size:18px;padding:0 10px 3px}
+.ch-send .ch-icon{display:none}
+.ch-composer-footer{font-size:10px;gap:5px;padding-top:6px}
+.ch-picker{right:0;bottom:calc(100% - 25px);min-width:0;width:100%;max-width:100%;padding:15px;border-radius:10px}
+.ch-picker strong{font-size:21px;margin-bottom:10px}
+.ch-picker>div{gap:8px}
+.ch-picker button{font-size:15px;min-height:44px;padding:5px 10px}
+.ch-picker p{font-size:12px;margin-top:11px}
+.ch-empty{min-height:210px;gap:11px;padding:15px}
+.ch-empty>img{width:65px;height:65px}
+.ch-empty h3{font-size:24px;letter-spacing:1px}
+.ch-empty p{font-size:15px}
+.ch-empty .ch-button{font-size:18px;min-width:180px;margin-top:8px}
+.ch-rumor-notice{gap:10px;padding:0 1px 11px}
+.ch-rumor-notice>img{width:35px;height:35px}
+.ch-rumor-notice h2{font-size:24px;letter-spacing:2px}
+.ch-rumor-notice p{font-size:12px;margin-top:3px}
+.ch-readonly{font-size:11px;letter-spacing:0;gap:3px;padding:4px 7px;border-radius:15px}
+.ch-readonly .ch-icon{width:14px;height:14px}
+.ch-rumor-toolbar{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:10px 0}
+.ch-rumor-filters{gap:5px;flex-wrap:nowrap}
+.ch-filter{flex:1;min-width:0;min-height:44px;padding:4px 6px;border-radius:7px;font-size:13px}
+.ch-rumor-search{width:100%;height:43px;padding:0 10px;gap:7px;border-radius:8px}
+.ch-rumor-search input{font-size:15px;height:37px}
+.ch-rumor-list{padding:1px 4px 4px 0}
+.ch-rumor-card{gap:10px;padding:13px 12px 9px;margin-bottom:11px;border-radius:10px}
+.ch-rumor-medallion{width:43px;height:43px;box-shadow:inset 0 0 0 2px #f9f0dc;align-self:flex-start;margin-top:3px}
+.ch-rumor-medallion img{width:37px;height:37px}
+.ch-rumor-top{gap:6px;margin-bottom:7px;flex-wrap:wrap}
+.ch-rumor-seal{font-size:12px;padding:1px 4px 1px 5px;letter-spacing:1px;border-radius:4px}
+.ch-rumor-top h3{font-size:19px;letter-spacing:1px}
+.ch-rumor-top time{font-size:11px;letter-spacing:0}
+.ch-rumor-main>p{font-size:16px;line-height:1.75}
+.ch-location{display:inline;padding:0 1px;min-height:0;line-height:1.8}
+.ch-location .ch-icon{width:15px;height:15px;margin-right:2px}
+.ch-rumor-bottom{gap:8px;padding-top:5px;align-items:center;flex-wrap:wrap}
+.ch-event-state{font-size:12px;gap:4px}
+.ch-event-state .ch-icon{width:15px;height:15px}
+.ch-text-button{font-size:13px;min-height:44px;padding:3px 4px;gap:3px}
+.ch-rumor-footer{font-size:12px;gap:7px;padding:7px 0 0;flex-wrap:wrap}
+.ch-channel-clock{gap:5px;white-space:nowrap}
+.ch-channel-clock .ch-icon{width:15px;height:15px}
+.ch-results-count{font-size:11px;margin-left:auto}
+.ch-rumor-footer .ch-text-button{font-size:13px}
+.ch-dialog{padding:23px 20px 25px;width:calc(100vw - 24px);border-radius:13px;max-height:90dvh}
+.ch-dialog h2{font-size:27px;letter-spacing:2px;margin-bottom:20px}
+.ch-dialog h3{font-size:23px;margin-bottom:4px}
+.ch-dialog p{font-size:16px;line-height:1.75}
+.ch-dialog-emblem{margin-bottom:8px}
+.ch-dialog-emblem img{width:59px;height:59px}
+.ch-dialog-close{width:44px;height:44px;right:7px;top:7px}
+.ch-dialog .ch-dialog-note{font-size:12px;margin:20px 0 16px}
+.ch-dialog-done{height:47px;min-width:170px;font-size:20px}
+.ch-profile-hero{gap:17px}
+.ch-profile-hero .ch-avatar{width:85px;height:85px}
+.ch-profile-hero p{margin-bottom:5px}
+.ch-item-detail{gap:16px;padding:10px 0}
+.ch-item-detail>img{width:90px;height:90px}
+.ch-item-detail p{margin-top:9px}
+.ch-coordinate-detail{font-size:17px;padding:13px 10px;gap:5px;margin:17px 0;border-radius:8px}
+.ch-rumor-dialog-meta{font-size:14px;gap:10px}
+.ch-dialog-state{font-size:15px;gap:7px;margin-top:12px}
+}
+@media(prefers-reduced-motion:reduce){.ch-view *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* The wide game canvas keeps several rumor entries visible together. */
+@media(min-width:901px){.ch-rumor-notice>div{display:flex;align-items:baseline;gap:23px}.ch-rumor-notice{padding-bottom:13px}.ch-rumor-notice p{margin-top:0}.ch-rumor-card{padding:12px 25px 8px;margin-bottom:11px}.ch-rumor-top{margin-bottom:3px}.ch-rumor-main>p{line-height:1.5}.ch-rumor-bottom{padding-top:0}.ch-rumor-medallion{width:73px;height:73px}.ch-rumor-medallion img{width:63px;height:63px}}

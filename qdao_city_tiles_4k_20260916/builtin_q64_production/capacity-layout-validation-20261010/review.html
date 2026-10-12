@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>三张地图 · 5000 人静态占位检查</title>
+  <style>
+    :root{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:#183d38;background:#eef3ef;line-height:1.5;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button,select{min-height:38px;border:1px solid #b8c8bf;border-radius:7px;background:#fff;color:#183d38;padding:6px 11px}button{cursor:pointer}button:hover{background:#e5f1e9}button:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid #188d6f;outline-offset:3px}button.primary{background:#176852;color:white;border-color:#176852}
+    header{padding:18px 24px 14px;border-bottom:1px solid #ccd9cf;background:#fffef8}h1{font-size:22px;margin:0 0 5px;font-weight:700}header p{margin:0;font-size:13px;color:#516c63}.shell{max-width:1680px;margin:auto;padding:16px 20px 24px}.controls{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 18px;padding:14px;background:#fff;border:1px solid #d3dfd5;border-radius:10px}.field{display:flex;flex-direction:column;gap:4px;font-size:12px;color:#516c63}.field select{color:#183d38;font-size:14px}.checks{display:flex;flex-wrap:wrap;gap:12px;align-self:center;font-size:13px}.checks label{display:flex;align-items:center;gap:5px}.checks input{accent-color:#176852;width:16px;height:16px}.view-buttons{display:flex;gap:7px;margin-left:auto;align-self:center}.metrics{display:grid;grid-template-columns:repeat(5,minmax(130px,1fr));gap:10px;margin:12px 0}.metric{padding:12px 14px;border:1px solid #d3dfd5;border-radius:9px;background:#fff}.metric .label{font-size:12px;color:#597067}.metric .value{display:block;font-size:22px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}.metric small{font-size:11px;color:#6d7b74}.metric.status{background:#ecf5f0}.metric.status.short{background:#fff1e7;border-color:#ddb294;color:#874421}.metric.status.neutral{background:#edf0f4;border-color:#cad1da;color:#465867}.stage-wrap{position:relative;background:#142a27;border:1px solid #b9cbc1;border-radius:10px;overflow:hidden}.stage{display:block;width:100%;height:clamp(420px,calc(100vh - 355px),900px);cursor:grab;touch-action:none}.stage.dragging{cursor:grabbing}.stage-caption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;padding:9px 13px;background:#e4ece6;font-size:12px;color:#37564a}.zoom-badge{position:absolute;right:13px;top:12px;color:white;background:#102c27df;border:1px solid #5d8172;border-radius:6px;padding:4px 9px;font-size:12px;pointer-events:none}.empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;color:#d7eee2;pointer-events:none;font-size:15px}.empty[hidden]{display:none}.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:#fff}.legend .ground::before{background:#30d799}.legend .players::before{background:#ffdb65}.legend .anchors::before{background:#5ed8ff}.notice{padding:11px 13px;margin:12px 0 0;border-left:4px solid #c49144;background:#fffaec;color:#725528;font-size:13px}.error{padding:11px 13px;margin:12px 0;background:#fff0e9;border:1px solid #deb7a2;color:#8f3521;border-radius:7px}.error[hidden]{display:none}details{margin-top:12px;background:#fff;border:1px solid #d3dfd5;border-radius:8px;padding:10px 14px;font-size:13px}summary{cursor:pointer;font-weight:600}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.detail-grid h2{font-size:14px;margin:12px 0 6px}.detail-grid p{margin:4px 0;color:#597067}.detail-grid ul{margin:6px 0;padding-left:20px}.detail-grid li{margin:5px 0}footer{font-size:11px;color:#718078;padding:12px 2px 0;overflow-wrap:anywhere}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:850px){.metrics{grid-template-columns:repeat(2,minmax(130px,1fr))}.metric:first-child{grid-column:1/-1}.view-buttons{margin-left:0}.stage{height:65vh;min-height:390px}.detail-grid{grid-template-columns:1fr}.shell{padding:12px}header{padding:16px}.metric .value{font-size:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>三张地图 · 5000 人静态占位检查</h1>
+    <p>历史宽松排布实验：5～6 单位间距不是游戏容量的硬性要求，不可据此认定需要扩图。<a href="route-review.html">查看连续留路与较合理人物比例的新复核</a>。</p>
+  </header>
+  <main class="shell">
+    <div id="error" class="error" role="alert" hidden></div>
+    <section class="controls" aria-label="检查选项">
+      <label class="field">地图<select id="map" aria-label="地图"></select></label>
+      <label class="field">主城试验边长<select id="size" aria-label="主城世界边长"><option>600</option><option selected>700</option><option>800</option><option>900</option><option>1000</option><option>1100</option></select></label>
+      <label class="field">站位间距（世界单位）<select id="spacing" aria-label="站位间距"><option value="5" selected>5 × 5</option><option value="6">6 × 6</option></select></label>
+      <label class="field">人物显示<select id="actors" aria-label="人物显示"><option value="points">站位点</option><option value="sprites">真实角色</option></select></label>
+      <div class="checks">
+        <label><input id="ground" type="checkbox" checked>保守可见地面</label>
+        <label><input id="anchors" type="checkbox" checked>入口锚点</label>
+        <label><input id="doors" type="checkbox">门框样本</label>
+        <label><input id="names" type="checkbox">样本姓名</label>
+      </div>
+      <div class="view-buttons"><button id="fit" type="button">全图适应窗口</button><button id="zoom4" type="button" class="primary">局部放大 ×4</button></div>
+    </section>
+    <section class="metrics" aria-label="当前试验结果" aria-live="polite">
+      <div class="metric status neutral" id="statusCard"><span class="label">固定目标 5000 人 · 实际绘制</span><strong class="value" id="placed">等待数据</strong><small id="statusText">不会补造不足的站位点</small></div>
+      <div class="metric"><span class="label">当前地图世界尺寸</span><strong class="value" id="worldSize">—</strong><small id="ratio">村、岛面积各为主城 75%</small></div>
+      <div class="metric"><span class="label">保守可见地面占全图</span><strong class="value" id="walkable">—</strong><small>未代表真实导航面积</small></div>
+      <div class="metric"><span class="label">预留后可用站位</span><strong class="value" id="usable">—</strong><small id="reserve">预留 20% · 按传入结果显示</small></div>
+      <div class="metric"><span class="label">图像地面连通分量</span><strong class="value" id="components">—</strong><small id="largest">最大分量比例：—</small></div>
+    </section>
+    <section class="stage-wrap" aria-label="地图交互预览">
+      <canvas id="canvas" class="stage" tabindex="0" aria-label="地图预览；滚轮缩放，按住鼠标拖动；全图和局部放大按钮也可操作"></canvas>
+      <div class="zoom-badge" id="zoomLabel">×1.00</div>
+      <div class="empty" id="empty">正在读取同目录 results.js …</div>
+      <div class="stage-caption"><div class="legend"><span class="ground">绿色：保守地面</span><span class="players">金色点：人物脚点</span><span class="anchors">蓝色：入口锚点</span></div><span>×1 适应窗口 · 滚轮缩放 · 拖拽平移 · 点击锚点</span></div>
+    </section>
+    <p class="notice"><strong>验收范围：</strong>这是人工可见地面上的静态排布。即使放下 5000 个脚点，也不代表人物和姓名互不遮挡、门洞与道路可通行，或客户端能同时运行 5000 人。真实角色按世界比例显示，不会为了塞进地图缩小人物。</p>
+    <details open>
+      <summary>当前地图的限制与读数</summary>
+      <div class="detail-grid">
+        <section><h2>本次排布</h2><p id="scenarioDetails">等待试验数据。</p><p id="actorDetails">角色世界画框约 9.846。切换“真实角色”并局部放大，可检查与建筑、道路的相对大小。</p><p id="selection">点击入口锚点查看名称与图像连通分量。</p></section>
+        <section><h2>人工标注的不确定区域</h2><ul id="uncertainties"><li>等待标注数据。</li></ul></section>
+      </div>
+    </details>
+    <footer id="source">本地 QA 工具 · 所有图片从 results.js 嵌入字节读取 · 不访问外网</footer>
+  </main>
+  <script src="results.js"></script>
+  <!-- app-script-start -->
+  <script>
+  (() => {
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const ui = Object.fromEntries(['map','size','spacing','actors','ground','anchors','doors','names','fit','zoom4','placed','worldSize','ratio','walkable','usable','reserve','components','largest','statusCard','statusText','scenarioDetails','actorDetails','selection','uncertainties','source','error','empty','zoomLabel'].map(id => [id,$(id)]));
+    const canvas = $('canvas'), ctx = canvas.getContext('2d', {alpha:false});
+    const input = window.CAPACITY_REVIEW;
+    const state = {map:null,scenario:null,zoom:1,panX:0,panY:0,width:1,height:1,dpr:1,drag:null,queued:false};
+    const images = new Map(), overlays = new Map();
+    let actorImages = [];
+    const finite = n => n!==null&&n!==undefined&&n!==''&&Number.isFinite(Number(n));
+    const number = (n,digits=0) => finite(n) ? Number(n).toLocaleString('zh-CN',{maximumFractionDigits:digits}) : '—';
+    const percentage = n => finite(n) ? (Number(n)*100).toFixed(2)+'%' : '—';
+    function error(message) { ui.error.textContent=message; ui.error.hidden=!message; }
+    function dimensions() { const a=state.map?.annotation; return {w:Number(a?.annotationWidth)||1254,h:Number(a?.annotationHeight)||1254}; }
+    function camera() { const {w,h}=dimensions();const scale=Math.min(state.width/w,state.height/h)*state.zoom;return {scale,x:(state.width-w*scale)/2+state.panX,y:(state.height-h*scale)/2+state.panY}; }
+    function loadImage(url) {
+      if(typeof url!=='string'||!url.startsWith('data:image/')) return null;
+      if(images.has(url)) return images.get(url);
+      const im=new Image(); images.set(url,im);
+      im.addEventListener('load',requestDraw);
+      im.addEventListener('error',()=>{error('有嵌入图片无法解码。该图片未显示，站位数据不会被补造。');requestDraw();});
+      im.src=url; return im;
+    }
+    function polygon(context,points) {
+      if(!Array.isArray(points)||points.length<3) return;
+      context.beginPath(); context.moveTo(Number(points[0][0]),Number(points[0][1]));
+      for(let i=1;i<points.length;i++)context.lineTo(Number(points[i][0]),Number(points[i][1]));
+      context.closePath();context.fill();
+    }
+    function overlayFor(map) {
+      if(overlays.has(map.id))return overlays.get(map.id);
+      const a=map.annotation,off=document.createElement('canvas');off.width=a.annotationWidth||1254;off.height=a.annotationHeight||1254;
+      const c=off.getContext('2d');c.fillStyle='#20ed9f';
+      for(const p of a.walkablePolygons||[])polygon(c,p.points);
+      c.globalCompositeOperation='destination-out';
+      for(const p of a.obstaclePolygons||[])polygon(c,p.points);
+      overlays.set(map.id,off);return off;
+    }
+    function positions() { return (state.scenario?.positions||[]).filter(p=>Array.isArray(p)&&p.length>=2&&finite(p[0])&&finite(p[1])).slice(0,5000); }
+    function refresh() {
+      if(!input||!Array.isArray(input.maps)||!input.maps.length)return;
+      state.map=input.maps.find(m=>m.id===ui.map.value)||input.maps[0];
+      const scenarios=state.map.analysis?.scenarios||[];
+      state.scenario=scenarios.find(s=>Number(s.mainWorldSide)===Number(ui.size.value)&&Number(s.spacing)===Number(ui.spacing.value))||null;
+      const a=state.map.annotation,analysis=state.map.analysis||{},s=state.scenario;
+      const width=Number(s?.worldSide);
+      const pts=positions(),placed=pts.length;
+      ui.placed.textContent=s?number(placed)+' / 5000':'此组合无数据';
+      ui.statusCard.className='metric status '+(!s?'neutral':placed<5000?'short':'');
+      ui.statusText.textContent=!s?'不推算或补造缺失组合':placed<5000?'仍缺 '+number(5000-placed)+' 个站位':'5000 个脚点已显示；不是容量验收';
+      ui.worldSize.textContent=finite(width)?number(width,2)+' × '+number(width,2):'—';
+      const sideRatio=finite(width)?width/Number(ui.size.value):NaN;
+      ui.ratio.textContent=finite(sideRatio)?'主城试验边长 '+ui.size.value+' · 当前面积比 '+percentage(sideRatio*sideRatio):'村、岛面积各为主城 75%';
+      ui.walkable.textContent=percentage(analysis.walkableFraction);
+      ui.usable.textContent=s?number(s.usableAfterReserve):'—';
+      ui.reserve.textContent=s?'预留 '+percentage(s.reservedFraction)+' · 原始站位 '+number(s.slotCount):'预留后站位待计算';
+      ui.components.textContent=number(analysis.componentCount);
+      ui.largest.textContent='最大分量比例：'+percentage(analysis.largestComponentFraction);
+      ui.scenarioDetails.textContent=s?'间距 '+number(s.spacing)+' 世界单位；标注可走面积 '+number(s.areaWorld,1)+' 世界平方单位；最大连通分量内站位 '+number(s.largestComponentSlots)+'。显示点数来自实际 positions 数组，最多绘制目标 5000 人。':'该地图在此尺寸与间距下没有预计算结果；画面只显示地图和标注。';
+      const frame=Number(input.actors?.[0]?.frameWorldHeight)||9.846;
+      ui.actorDetails.textContent=finite(width)?'角色画框 '+number(frame,3)+' 世界单位，在当前原图中约 '+number(frame/width*(a.annotationWidth||1254),2)+' 像素；缩放只改变观看倍率。样本姓名用约 1.25 世界单位字高示意，未复现真实客户端 TMP 排版。':'角色按输入的世界画框与脚点比例显示。';
+      ui.uncertainties.replaceChildren();
+      const uncertain=a.uncertainAreas||[];
+      for(const item of uncertain){const li=document.createElement('li');li.textContent=typeof item==='string'?item:(item.issue||item.description||item.note||item.label||JSON.stringify(item));ui.uncertainties.append(li);}
+      if(!uncertain.length){const li=document.createElement('li');li.textContent='未提供不确定区域列表；这不表示标注已完成验收。';ui.uncertainties.append(li);}
+      const mismatch=s&&finite(s.placedCount)&&Number(s.placedCount)!==placed;
+      error(mismatch?'数据核对提醒：声明的 placedCount 为 '+number(s.placedCount)+'，有效坐标实际可绘制 '+number(placed)+'；本页采用实际坐标数。':!a.imageUrl?'本地图未提供嵌入图片，不能显示原图。':'');
+      if(a.imageUrl)loadImage(a.imageUrl);
+      ui.selection.textContent='点击入口锚点查看名称与图像连通分量。';
+      requestDraw();
+    }
+    function requestDraw(){if(state.queued)return;state.queued=true;requestAnimationFrame(()=>{state.queued=false;draw();});}
+    function draw(){
+      ctx.setTransform(state.dpr,0,0,state.dpr,0,0);ctx.fillStyle='#142a27';ctx.fillRect(0,0,state.width,state.height);
+      if(!state.map)return;
+      const a=state.map.annotation,{w,h}=dimensions(),c=camera();
+      ctx.save();ctx.translate(c.x,c.y);ctx.scale(c.scale,c.scale);
+      const base=loadImage(a.imageUrl);
+      const loaded=base&&base.complete&&base.naturalWidth>0;
+      ui.empty.hidden=!!loaded;
+      if(!loaded)ui.empty.textContent=base?'正在解码当前地图…':'当前地图缺少有效嵌入图片。';
+      if(loaded)ctx.drawImage(base,0,0,w,h);else{ctx.fillStyle='#233c35';ctx.fillRect(0,0,w,h);}
+      if(ui.ground.checked){ctx.save();ctx.globalAlpha=.28;ctx.drawImage(overlayFor(state.map),0,0);ctx.restore();}
+      const s=state.scenario,pts=positions().sort((a,b)=>Number(a[1])-Number(b[1])),worldSide=Number(s?.worldSide);
+      const showSprites=ui.actors.value==='sprites';
+      let hasSprite=false;
+      if(s&&worldSide>0){
+        const left=-c.x/c.scale-35,top=-c.y/c.scale-35,right=(state.width-c.x)/c.scale+35,bottom=(state.height-c.y)/c.scale+35;
+        for(let i=0;i<pts.length;i++){
+          const x=Number(pts[i][0]),y=Number(pts[i][1]);if(x<left||x>right||y<top||y>bottom)continue;
+          const actor=input.actors?.[i%Math.max(1,input.actors.length)],sprite=actorImages[i%Math.max(1,actorImages.length)];
+          if(showSprites&&actor&&sprite?.complete&&sprite.naturalWidth>0){
+            const frame=(Number(actor.frameWorldHeight)||9.846)/worldSide*w;
+            const pivot=Array.isArray(actor.pivot)?actor.pivot:[.5,.92];
+            ctx.drawImage(sprite,x-frame*Number(pivot[0]),y-frame*Number(pivot[1]),frame,frame);hasSprite=true;
+          }else{ctx.fillStyle=showSprites?'#ff966e':'#ffe06b';ctx.beginPath();ctx.arc(x,y,Math.max(.9,1.55/c.scale),0,Math.PI*2);ctx.fill();}
+          if(ui.names.checked){
+            const size=1.25/worldSide*w;ctx.font=size+'px "Microsoft YaHei",sans-serif';ctx.textAlign='center';ctx.textBaseline='top';
+            const label=actor?.label||'道友';const tw=ctx.measureText(label).width;ctx.fillStyle='rgba(0,20,14,.75)';ctx.fillRect(x-tw/2-.3,y+size*.55,tw+.6,size*1.35);ctx.fillStyle='#efffe6';ctx.fillText(label,x,y+size*.6);
+          }
+        }
+      }
+      if(showSprites&&pts.length&&actorImages.length===0)error('未提供真实角色图片，橙色点仅表示脚点，不能作为真实角色比例检查。');
+      if(ui.anchors.checked){
+        const anchors=state.map.analysis?.anchors||a.anchors||[];
+        for(const p of anchors){if(!Array.isArray(p.point))continue;const [x,y]=p.point;ctx.fillStyle='#5ed8ff';ctx.strokeStyle='#073a4b';ctx.lineWidth=1.3/c.scale;ctx.beginPath();ctx.arc(x,y,4.5/c.scale,0,Math.PI*2);ctx.fill();ctx.stroke();if(state.zoom>=3){ctx.font=(11/c.scale)+'px "Microsoft YaHei",sans-serif';ctx.textAlign='left';ctx.textBaseline='bottom';ctx.lineWidth=3/c.scale;ctx.strokeStyle='#093021';ctx.strokeText(p.label||p.id,x+6/c.scale,y-5/c.scale);ctx.fillStyle='white';ctx.fillText(p.label||p.id,x+6/c.scale,y-5/c.scale);}}
+      }
+      if(ui.doors.checked){ctx.strokeStyle='#f6b8ff';ctx.lineWidth=2/c.scale;for(const d of a.doorSamples||[]){if(!Array.isArray(d.box))continue;const [l,t,r,b]=d.box;ctx.strokeRect(l,t,r-l,b-t);ctx.font=(11/c.scale)+'px sans-serif';ctx.fillStyle='#ffe7ff';ctx.textAlign='left';ctx.textBaseline='bottom';ctx.fillText(d.id,l,t-3/c.scale);}}
+      ctx.restore();ui.zoomLabel.textContent='×'+state.zoom.toFixed(2)+(showSprites&&!hasSprite&&pts.length?' · 角色尚未显示':'');
+    }
+    function resize(){const r=canvas.getBoundingClientRect();state.width=Math.max(1,r.width);state.height=Math.max(1,r.height);state.dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.round(state.width*state.dpr);canvas.height=Math.round(state.height*state.dpr);requestDraw();}
+    function reset(zoom=1){state.zoom=zoom;state.panX=state.panY=0;requestDraw();}
+    canvas.addEventListener('wheel',e=>{e.preventDefault();const r=canvas.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;const before=camera(),wx=(px-before.x)/before.scale,wy=(py-before.y)/before.scale;state.zoom=Math.max(.5,Math.min(12,state.zoom*Math.exp(-e.deltaY*.0015)));const after=camera();state.panX+=px-(after.x+wx*after.scale);state.panY+=py-(after.y+wy*after.scale);requestDraw();},{passive:false});
+    canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;state.drag={id:e.pointerId,x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false};canvas.setPointerCapture(e.pointerId);canvas.classList.add('dragging');});
+    canvas.addEventListener('pointermove',e=>{const d=state.drag;if(!d||d.id!==e.pointerId)return;state.panX+=e.clientX-d.x;state.panY+=e.clientY-d.y;d.x=e.clientX;d.y=e.clientY;d.moved=d.moved||Math.hypot(e.clientX-d.startX,e.clientY-d.startY)>4;requestDraw();});
+    function endPointer(e){const d=state.drag;if(!d||d.id!==e.pointerId)return;state.drag=null;canvas.classList.remove('dragging');if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);if(!d.moved&&state.map&&ui.anchors.checked){const r=canvas.getBoundingClientRect(),c=camera(),px=e.clientX-r.left,py=e.clientY-r.top;const anchors=state.map.analysis?.anchors||state.map.annotation.anchors||[];let found=null,best=14;for(const p of anchors){if(!Array.isArray(p.point))continue;const dist=Math.hypot(c.x+p.point[0]*c.scale-px,c.y+p.point[1]*c.scale-py);if(dist<best){found=p;best=dist;}}if(found)ui.selection.textContent=(found.label||found.id)+'；图像连通分量 '+(found.component??'未提供')+'。入口锚点不是门洞通行验收。';}}
+    canvas.addEventListener('pointerup',endPointer);canvas.addEventListener('pointercancel',()=>{state.drag=null;canvas.classList.remove('dragging');});
+    canvas.addEventListener('keydown',e=>{const keys={ArrowLeft:[45,0],ArrowRight:[-45,0],ArrowUp:[0,45],ArrowDown:[0,-45]};if(keys[e.key]){e.preventDefault();state.panX+=keys[e.key][0];state.panY+=keys[e.key][1];requestDraw();}else if(e.key==='0'){reset();}else if(e.key==='4'){reset(4);}});
+    ui.fit.addEventListener('click',()=>reset());ui.zoom4.addEventListener('click',()=>reset(4));
+    ui.map.addEventListener('change',()=>{reset();refresh();});ui.size.addEventListener('change',refresh);ui.spacing.addEventListener('change',refresh);
+    for(const id of ['actors','ground','anchors','doors','names'])ui[id].addEventListener('change',requestDraw);
+    if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(canvas);else window.addEventListener('resize',resize);
+    resize();
+    if(!input||!Array.isArray(input.maps)||input.maps.length===0){error('尚未找到有效 window.CAPACITY_REVIEW 数据。请先生成同目录 results.js，再刷新本页。');ui.empty.textContent='等待 results.js：本页不会生成或猜测站位数据。';return;}
+    for(const map of input.maps){const option=document.createElement('option');option.value=map.id;option.textContent=map.label||map.id;ui.map.append(option);}
+    actorImages=(input.actors||[]).map(actor=>loadImage(actor.imageUrl));
+    ui.source.textContent='数据时间：'+(input.generatedAt||'未提供')+' · '+(input.method||'人工可见地面静态排布')+' · 图片与角色均来自本地 results.js 嵌入字节，无外网请求';
+    refresh();
+  })();
+  </script>
+  <!-- app-script-end -->
+</body>
+</html>

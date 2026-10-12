@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "southern_extension",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r06_c12.candidate-v4.png",
+    "sha256": "dd60ea7c60f273011f1722f4caa8f2b549a95bb7dcfadb8249577044d6888e9c"
+  },
+  "status": "failed_one_blocking_curb_geometry_defect",
+  "formalAccepted": false,
+  "independentlyViewedAt1to1": [
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/core_p42.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/core_p43.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/core_p44.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/v_p41_p42.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/v_p42_p43.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/v_p43_p44.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/h_p31_p41.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/h_p32_p42.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/h_p33_p43.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/h_p34_p44.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/junction_r3_c2.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/junction_r3_c3.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/south-r07_c12-segment1.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/south-r07_c12-segment2.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/south-r07_c12-segment3.native-1to1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/south-r07_c12-segment4.native-1to1.png"
+  ],
+  "unchangedEvidence": {
+    "baseline": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r06_c12.candidate-v2.png",
+    "comparison": "RGB core byte equality, 16 exact1024core crops",
+    "equalToBaseline": [
+      "p11",
+      "p12",
+      "p13",
+      "p14",
+      "p21",
+      "p22",
+      "p23",
+      "p24",
+      "p31",
+      "p32",
+      "p33",
+      "p34",
+      "p41",
+      "p42",
+      "p43"
+    ],
+    "changed": [
+      "p44"
+    ],
+    "reuse": "Root-authorized reuse of earlier v2 checks for unchanged areas; the bottom transition was independently re-examined and not assumed passing."
+  },
+  "blockingFindings": [
+    {
+      "id": "curb-dogleg-p42-p43",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/v_p42_p43.native-1to1.png",
+      "approximateTileBox": [
+        2050,
+        3842,
+        2150,
+        3972
+      ],
+      "approximateWorldBox": [
+        47106,
+        24322,
+        47206,
+        24452
+      ],
+      "description": "Thin stone-to-timber edge makes a one-block-depth dogleg near p42/p43 join. Left edge runs up-right, next right-hand curb block protrudes down into timber by about70-90 native pixels before returning to the diagonal. This is a visible silhouette mismatch, not only stone texture.",
+      "requiredAction": "Native bridge edit from current v4 pixels, preserving both thin-edge end anchors and all four exterior bands."
+    }
+  ],
+  "otherInspectedResults": {
+    "threeBottomCores": "Pass except the recorded curb dogleg between42/43",
+    "thirdToFourthRowFourHorizontalEdges": "No blocking geometric mismatch observed",
+    "otherBottomVerticalEdges": "p41/p42 andp43/p44 main geometry continuous",
+    "twoBottomJunctions": "Main geometry continuous",
+    "southFourSegments": "Main geometry continuous at all four native1024x256 segments; mild wood grain strength change in segment4 is nonblocking"
+  },
+  "southQAProvenance": {
+    "northSource": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r06_c12.candidate-v4.png",
+    "southSource": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r07_c12.candidate-v1.png",
+    "operation": "Exact north crop[0,3968,4096,4096] at[0,0] plus south crop[0,0,4096,128] at[0,128], then four1024x256 integer crops. No resample, blend or paint.",
+    "fullStrip": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12-v4/south-r07_c12-full4096.native-1to1.png"
+  },
+  "repairAuthorizedByRoot": true,
+  "sourceSelectionProgressModified": false
+}

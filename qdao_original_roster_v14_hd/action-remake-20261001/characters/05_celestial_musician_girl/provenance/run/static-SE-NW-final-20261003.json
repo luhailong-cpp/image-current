@@ -1,0 +1,953 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "finish_se_nw",
+  "reviewedAt": "2026-10-03T20:21:01.475915+00:00",
+  "scope": "run SE/NW 32 current selected native frames",
+  "selectionManifest": "provenance/run/selection-SE-NW.json",
+  "selectionManifestSha256": "826fb6aae2f63e5564e1a8cda883259918ce8ec04a1bbec7ae0ab3fab09f7694",
+  "staticConclusion": "当前32槽逐张实看，手持、可见髋膝踝与靴尖方向静态检查完成；没有剩余明确需重画的静态外八/换腿项。",
+  "toeDirectionCorrection": {
+    "SE14": "v2 -> v4; v3 rejected for swapped phase",
+    "SE15": "v2 -> v3",
+    "SE16": "v2 -> v3",
+    "NW": "retain current16, shoe yaw follows knee/ankle; not inferred from screen position"
+  },
+  "independentEvidence": [
+    "provenance/run/NW04-06-independent-review-20261003.json"
+  ],
+  "requiredStaticRedraw": [],
+  "formalVisualPassed": 0,
+  "dynamicReview": "parent_review_required",
+  "clientReview": "not_available",
+  "transformPolicy": "native images unchanged; no bbox fit, no foot-bottom alignment, no global move used to fake grounding",
+  "rows": [
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 1,
+      "file": "staging/run/SE/01-v2.native.png",
+      "generationRecord": "provenance/run/SE01-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2右近脚低位接触、左远脚高抬，琴手正确；完整动态及首尾过渡待审。",
+      "sha256": "3c6396aa0937ab4f89305454211a26a47fa92a1fa493144b84cc811665b7653d",
+      "generationRecordSha256": "9e67e3632a749c780b22bd8f3b4982bb5f05712170f6e65abf809259e464a3db",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "contact",
+      "observedSupport": "near_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT低靴为较正面透视缩短，鞋头沿脚背前向，远LEFT高折；未见明确横向外旋，保留。"
+      },
+      "anatomicalEvidence": "右近靴画面左低，鞋底近水平，左远脚高回收",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 2,
+      "file": "staging/run/SE/02-v2.native.png",
+      "generationRecord": "provenance/run/SE02-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2右近脚稳定低位支撑，屈膝与重心压低明确，琴和袖随肩下降；动态待审。",
+      "sha256": "6c8ef7de8e1c606c7d5189f6a2fe12b5f166ddd97d2245d3e740f8be10e2c182",
+      "generationRecordSha256": "93a147ba5465542f9254536dd795aedebe4e134dc3aa306ed61b5ffcad4ca407",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "compression",
+      "observedSupport": "near_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT屈膝压重，鞋面与踝链连续，低鞋前端透视略偏左但没有独立扭踝外八；保留。"
+      },
+      "anatomicalEvidence": "右近靴保持低位，支撑膝屈、脸肩下降，左远脚向后折",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 3,
+      "file": "staging/run/SE/03-v2.native.png",
+      "generationRecord": "provenance/run/SE03-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2右近脚低支撑、远左脚高且膝收近身体，替代宽跨步旧稿；与04连接待动态。",
+      "sha256": "d0e0d69964505b7645e255d9c48a99e25f5ae9523bd0b5bb0e7defaaf1e854ed",
+      "generationRecordSha256": "9308fe776d58fa9449cae83ea38077ebe3ed1a97ca6b02e432afba1280011a22",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "stance_recovery",
+      "observedSupport": "near_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT低支撑鞋为前向缩短，远LEFT回收靴鞋头随胫骨；保留。"
+      },
+      "anatomicalEvidence": "支撑右膝开始伸展，左脚收近躯干高于支撑鞋",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 4,
+      "file": "staging/run/SE/04-v1.native.png",
+      "generationRecord": "provenance/run/SE04-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "e972c3851949c3e1df034f894148f265994df6642cb791a712c8b996e3d2e00e",
+      "generationRecordSha256": "4e1c3023c695a7afe254b3f368bb9c23e86a78895e07bc57f285ddcb0c53b064",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "passing",
+      "observedSupport": "near_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT承重靴接近正前，远LEFT高前鞋露底来自翘尖，膝踝同向；保留。"
+      },
+      "anatomicalEvidence": "右鞋低支撑、左膝高于右膝且前抬",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 5,
+      "file": "staging/run/SE/05-v2.native.png",
+      "generationRecord": "provenance/run/SE05-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2近右支撑脚后跟提起、脚尖低，远左脚前摆；比v1支撑明确。",
+      "sha256": "f2251713a217b2490804ed895f13b246fd1259e3671d0291451ac82df8dc95d0",
+      "generationRecordSha256": "f46ba7233e1f9ded7f7c7d02074cfcd30f3bf93281574aa342138a0cb2c42f4a",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "heel_rise",
+      "observedSupport": "near_RIGHT_forefoot",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT后靴抬跟，趾端向下前，远LEFT前鞋朝SE；无明确横向分叉，保留。"
+      },
+      "anatomicalEvidence": "画面左右近鞋后跟抬高、脚尖低，左前鞋悬起",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 6,
+      "file": "staging/run/SE/06-v2.native.png",
+      "generationRecord": "provenance/run/SE06-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2近右后脚伸踝脚尖低，远左前靴展开，后蹬轮廓清晰；同比例动态未审。",
+      "sha256": "f2d18ede6d29f9495cc5633bdd4f7b0067c999ceaca89b5a924aa9f193d97b0b",
+      "generationRecordSha256": "ea8b141d1db722b16d836c24da2a2121517966060baff5323ad7636ed45ba209",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "toe_off",
+      "observedSupport": "near_RIGHT_toeoff",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT后蹬靴趾下跟高，远LEFT前鞋朝SE，鞋底显露来自前摆背屈；保留。"
+      },
+      "anatomicalEvidence": "右后腿展开脚尖向下，左腿前伸，明显后蹬",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 7,
+      "file": "staging/run/SE/07-v3.native.png",
+      "generationRecord": "provenance/run/SE07-v3.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v3双膝屈曲、后脚高折、前鞋底离支撑高度，有短暂腾空轮廓；v2前鞋过低不选。 完整动态未通过。",
+      "sha256": "c9172282379e889186eeea3136248d79d52d49b45f299150cc4c8141637b67ed",
+      "generationRecordSha256": "7da1fc3f7b1fe4cffae5bc9645c19667c58eb350ef4cb1efa6a5071b0edd2695",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "flight",
+      "observedSupport": "none",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "双空，近RIGHT后折靴随胫骨回收，远LEFT前鞋朝右前，未见独立扭踝外旋；保留。"
+      },
+      "anatomicalEvidence": "双膝屈、后跟高折、前鞋底抬起，低于鞋下无素材",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 8,
+      "file": "staging/run/SE/08-v2.native.png",
+      "generationRecord": "provenance/run/SE08-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2远左前靴下降、鞋尖抬起鞋跟低，近右脚高折；按实图属下降/初接触边界，不假定完全离地。 完整动态未通过。",
+      "sha256": "1b27309ebd85b5c8e85da8f0313f5c66a02d001356e15cd46524dbde18259a07",
+      "generationRecordSha256": "e7bfa24345a518f2a7b86a955cc6aa65529f847dddf7ca143d2ebfcf0444b6cd",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "descent_initial_contact_boundary",
+      "observedSupport": "far_LEFT_pending",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远LEFT前低鞋鞋头右前，近RIGHT后靴回收，两鞋方向随对应胫骨，保留。"
+      },
+      "anatomicalEvidence": "左远前鞋下降且鞋尖稍抬，右后脚仍高",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 9,
+      "file": "staging/run/SE/09-v3.native.png",
+      "generationRecord": "provenance/run/SE09-v3.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v3远左脚在画面右低位近水平，近右脚在左高回收；异侧落地明确。 完整动态未通过。",
+      "sha256": "8f7bbcb6dbf4692e24af4d3fb1aa6b79d228b24837cee7ef6ce63deb9527626b",
+      "generationRecordSha256": "7a82500abf37656b3b1c9b63b5baab50d82353bd02117c4d8d913045dd2dc3be",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "contact",
+      "observedSupport": "far_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远LEFT低支撑靴朝右前，近RIGHT后折靴朝下前，无明显外八；保留。"
+      },
+      "anatomicalEvidence": "左远靴画面右低位近水平，右近脚画面左高回收",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 10,
+      "file": "staging/run/SE/10-v2.native.png",
+      "generationRecord": "provenance/run/SE10-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2维持画面右远左靴低支撑，支撑膝屈/上体下降，近右脚高回收；承重候选。 完整动态未通过。",
+      "sha256": "d8ef9858152761454779431d72f0d43b9146d5085277529677a9c298ddb27987",
+      "generationRecordSha256": "809b194124d417b44b456c178a920d910357c53aedc305ecaaaddaf01f208294",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "compression",
+      "observedSupport": "far_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远LEFT低靴鞋头右前、屈膝承重，近RIGHT高折；保留。"
+      },
+      "anatomicalEvidence": "左远靴持续低支撑、膝屈、上体下降，右脚高折",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 11,
+      "file": "staging/run/SE/11-v2.native.png",
+      "generationRecord": "provenance/run/SE11-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2远左脚持续低承重，近右脚收近身体由后向前过渡；比v1无临时换侧。 完整动态未通过。",
+      "sha256": "572aa3f7463b39e39599191820d268c0e852cd4ee9c5ebc3a35261f337fabf8c",
+      "generationRecordSha256": "89f167c9c733053e1624fe7f03d70577c054f716b0d5d1260224cedf10d0dc69",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "stance_recovery",
+      "observedSupport": "far_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远LEFT低支撑靴朝右前，近RIGHT回收靴略伸出，膝踝链连续；保留。"
+      },
+      "anatomicalEvidence": "远左脚仍低承重，近右脚收近身体向前经过",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 12,
+      "file": "staging/run/SE/12-v1.native.png",
+      "generationRecord": "provenance/run/SE12-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "ddece256a11ba78d3aa3995961bc0200f26ec5cac609036725379d1b51b5da9b",
+      "generationRecordSha256": "c6f0bc0e2c4f748299b741f9c34573c96e4f9f8d4cb1baa9bb188a6c04077fc5",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "passing",
+      "observedSupport": "far_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT高前鞋为短靴正面缩短，远LEFT低支撑靴右前，不把翘尖露底判外八；保留。"
+      },
+      "anatomicalEvidence": "左远靴低，右近膝高抬且脚从左前摆",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 13,
+      "file": "staging/run/SE/13-v2.native.png",
+      "generationRecord": "provenance/run/SE13-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2远左脚向后伸、脚尖低跟抬，近右膝高；比v1提跟明确，动态待审。",
+      "sha256": "67206b8fbde5e98ccee138916506d49d9cba3daaf2673733c575a211b105eed3",
+      "generationRecordSha256": "47fffaf4754d53d01956edd101c92b1a7666d2fcbfe5129dd818955995f11744",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "heel_rise",
+      "observedSupport": "far_LEFT_forefoot",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近RIGHT高前鞋为较正面缩短，鞋跟到鞋头没有14旧版那样大幅横拧，远LEFT开始抬跟；保留。"
+      },
+      "anatomicalEvidence": "右侧左远鞋向后、跟起脚尖低，近右膝高",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 14,
+      "file": "staging/run/SE/14-v4.native.png",
+      "generationRecord": "provenance/run/SE14-v4.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v4定点修近RIGHT前靴：鞋头改朝画面下偏右，靴帮—鞋面轴与膝踝前摆一致，原外指左下已去除；近右膝仍抬、远LEFT趾端低蹬离。v3换腿拒选，v4保留相位，整圈动态待根复核。",
+      "sha256": "4afa0bdb2f4860df7ba6d63a0314fe090e3fbfeeb267b3234fafa0dabee80910",
+      "generationRecordSha256": "8735d1e17e52b74e474fd96191cbee1a1f4d4d589426fae88bfe70cd22514dc3",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "toe_off",
+      "observedSupport": "far_LEFT_toeoff",
+      "footDirection": {
+        "decision": "corrected",
+        "toeOutObserved": false,
+        "evidence": "v4近RIGHT高前靴已从左外撇改为下偏右，靴面与膝踝前摆同向；远LEFT脚尖低蹬离，未换腿。"
+      },
+      "anatomicalEvidence": "近RIGHT前膝高，靴尖下偏右，远LEFT后靴趾端低、跟高，蹬离相位保持。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 15,
+      "file": "staging/run/SE/15-v3.native.png",
+      "generationRecord": "provenance/run/SE15-v3.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v3近RIGHT前靴鞋面转向下偏右，消除外指左下；近膝高抬、远LEFT后折，双脚仍空中。靴底比v2略低，腾空间隙较短但未贴地，禁止全图平移补接地，动态需与07对照。",
+      "sha256": "f60d2e0e33474abe79f627f6ae6e4dbac8c32e932d4f2ef36bf577831f517a5f",
+      "generationRecordSha256": "9be2d0c14a8dfd0471796f2204502ebbabb217fd9d82f5a529c2afc1a8528d16",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "flight",
+      "observedSupport": "none",
+      "footDirection": {
+        "decision": "corrected",
+        "toeOutObserved": false,
+        "evidence": "v3近RIGHT高前靴转为下偏右，保留双膝高屈/远LEFT后折短暂腾空；两鞋方向随前后腿，无旧版向左横拧。"
+      },
+      "anatomicalEvidence": "两膝高屈、近RIGHT鞋头转正，远LEFT后折，短暂双空；新靴子脚尖较旧版低，腾空间隙缩短。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "frame": 16,
+      "file": "staging/run/SE/16-v3.native.png",
+      "generationRecord": "provenance/run/SE16-v3.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v3近RIGHT下降靴鞋尖转向下偏右，原左向外撇已改；近右仍为画面左低前腿，远LEFT高折未交换。靴底薄边、前足接近接触高度，实际为下降/接触边界；保持相位，16→01整圈时序待根动态。",
+      "sha256": "808c5846b0e41c8f7ab35551e956b1fc949b40651aebf5f324e20e37969b4d10",
+      "generationRecordSha256": "36fe62788ea62e4efaea1fadc24f3f462eff4e647fdca2100ce8f8790956f343",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "descent_contact_boundary",
+      "observedSupport": "near_RIGHT_pending",
+      "footDirection": {
+        "decision": "corrected",
+        "toeOutObserved": false,
+        "evidence": "v3近RIGHT下降靴转下偏右，靴底薄边与下降腿同向；远LEFT仍高折，腿序未换。"
+      },
+      "anatomicalEvidence": "近RIGHT前低靴下降、鞋尖下偏右，远LEFT后鞋高折；前足接近接触高度。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 1,
+      "file": "staging/run/NW/01-v2.native.png",
+      "generationRecord": "provenance/run/NW01-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2近侧低靴侧面水平、另一靴高折，与16→02可接触/缓冲；具体起伏动态待审。",
+      "sha256": "681192a6d8e806b46fb5c0f931a211df3228e2bbeec4a25e97a788b0a7d9d594",
+      "generationRecordSha256": "480af1302a7e63a9bb088aa00806ca577ebdc018d6b472533ca300c1ca87d806",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "contact_candidate",
+      "observedSupport": "near_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT前景裤腿低位承重，远RIGHT裤腿在后方高折，低鞋朝NW/画面左。"
+      },
+      "anatomicalEvidence": "近LEFT前景裤腿低位承重，远RIGHT裤腿在后方高折，低鞋朝NW/画面左。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 2,
+      "file": "staging/run/NW/02-v1.native.png",
+      "generationRecord": "provenance/run/NW02-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "f2fdce95253238ba9baa4095c5b160216c757463128b55b939b149ee754b469c",
+      "generationRecordSha256": "7c6f1452b2accf018d27f5e44ccf527299856fc04ef0145265610fae40676b28",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "compression_candidate",
+      "observedSupport": "near_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT膝压缩、低靴平掌，远RIGHT后跟仍高；鞋轴随胫骨没有独立外旋。"
+      },
+      "anatomicalEvidence": "近LEFT膝压缩、低靴平掌，远RIGHT后跟仍高；鞋轴随胫骨没有独立外旋。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 3,
+      "file": "staging/run/NW/03-v2.native.png",
+      "generationRecord": "provenance/run/NW03-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2低位支撑靴侧面水平、另一靴高折；支持与摆动分离。摆动腿仍回收阶段，后续04需经过。",
+      "sha256": "502416c8be8ccc68243d4b6ab0a2bd77cad3c25b7411172f4f11b6ed59297d1f",
+      "generationRecordSha256": "82d99e874532e22b1e41f15b9bf0c444de3f80298e1469af77376dd5719e6469",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "stance_recovery",
+      "observedSupport": "near_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT低靴承重恢复，远RIGHT脚跟回收到身后；高折露底是俯仰，不判外八。"
+      },
+      "anatomicalEvidence": "近LEFT低靴承重恢复，远RIGHT脚跟回收到身后；高折露底是俯仰，不判外八。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 4,
+      "file": "staging/run/NW/04-v2.native.png",
+      "generationRecord": "provenance/run/NW04-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2高摆动脚朝前、低支撑脚侧面着地，经过最清楚；v3仍回收姿势不选。受裙摆遮挡，支撑侧须完整周期复核。",
+      "sha256": "3c635a3a9e19e3ce96fcf43b3f5615070c76089954f255f6eb022cc0c333a860",
+      "generationRecordSha256": "40098bd02530fedd5dcee24539b0c2ef388f153c4f2a443cc58cafbe4d41c249",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "passing_candidate",
+      "observedSupport": "near_LEFT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "低位大裤腿/大靴为近LEFT；左前小摆腿被袖与裙摆遮住为远RIGHT，鞋尖左向。与12区别主要在前后遮挡及远摆腿更小。"
+      },
+      "anatomicalEvidence": "低位大裤腿/大靴为近LEFT；左前小摆腿被袖与裙摆遮住为远RIGHT，鞋尖左向。与12区别主要在前后遮挡及远摆腿更小。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 5,
+      "file": "staging/run/NW/05-v2.native.png",
+      "generationRecord": "provenance/run/NW05-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2支撑低鞋跟起、鞋尖低，前小鞋高位；替代原大面积露底支撑，动态待审。",
+      "sha256": "e48b4360ca071cd2e996fce6a2d0b95cd584171df0cd1334901b0f8e887f98c0",
+      "generationRecordSha256": "f9e2c7e7d543885f4659b2029e17dcec07bc12b8410573b23a7c7a1a0c6b5cf9",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "heel_rise",
+      "observedSupport": "near_LEFT_forefoot",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT后大靴抬跟、趾端低，远RIGHT较小前鞋上提；两足沿同一NW矢状平面。"
+      },
+      "anatomicalEvidence": "近LEFT后大靴抬跟、趾端低，远RIGHT较小前鞋上提；两足沿同一NW矢状平面。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 6,
+      "file": "staging/run/NW/06-v2.native.png",
+      "generationRecord": "provenance/run/NW06-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2后腿伸展、后靴伸踝脚尖低，前腿收抬，后蹬轮廓较清楚；全圈左右支撑和比例仍待动态。",
+      "sha256": "fe92631711fa82b5608bff65abf75e5714de57b752507a8039908772a993d66a",
+      "generationRecordSha256": "e24ea57540edc6079f2185b0ef2c4f8f80c8ef5c17b25686ee085a47f31e3c31",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "toe_off",
+      "observedSupport": "near_LEFT_toeoff",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT后大腿伸踝最后蹬地，远RIGHT前小腿前摆；后脚尖向下是蹬地俯仰，无横向外八。"
+      },
+      "anatomicalEvidence": "近LEFT后大腿伸踝最后蹬地，远RIGHT前小腿前摆；后脚尖向下是蹬地俯仰，无横向外八。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 7,
+      "file": "staging/run/NW/07-v1.native.png",
+      "generationRecord": "provenance/run/NW07-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "68a57aaf41d301611ff72fe61827c6d1b20f7d2c0c51964ef6f06ef4356d6769",
+      "generationRecordSha256": "edcf1ae4642e19026824172343931fddc3f8c99fbfdd1230f07b20d6c677dd82",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "flight",
+      "observedSupport": "none",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "双脚腾空；近LEFT后鞋大且露底，远RIGHT前鞋较小。"
+      },
+      "anatomicalEvidence": "双脚腾空；近LEFT后鞋大且露底，远RIGHT前鞋较小。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 8,
+      "file": "staging/run/NW/08-v2.native.png",
+      "generationRecord": "provenance/run/NW08-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2前方远鞋下降并呈侧面/薄底边，近侧后鞋高折露底；原v1低大鞋露底问题已改善，侧归属与09动态待核。",
+      "sha256": "5f03e77c3355d03da48a45965b592b3b82c4ae4aa8a1f97b20b99ffcdf7bffba",
+      "generationRecordSha256": "29b059c5ef4ed5e85475990b314c93072f75f73500c8422ca159e44d39aa84bc",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "descent_candidate",
+      "observedSupport": "far_RIGHT_pending",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远RIGHT前小鞋下降转薄底侧面；近LEFT后大靴高折，近侧大裤腿在前景。"
+      },
+      "anatomicalEvidence": "远RIGHT前小鞋下降转薄底侧面；近LEFT后大靴高折，近侧大裤腿在前景。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 9,
+      "file": "staging/run/NW/09-v2.native.png",
+      "generationRecord": "provenance/run/NW09-v2.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "v2前方小鞋接近平直承重，后方大靴高折、前景裤腿遮挡远腿，脚底朝向较清楚；与01是否完全异侧仍须沿髋膝动态追踪，非正式通过。",
+      "sha256": "0370e1b4eb87eb659c1cd66f402cf5e1766069a7129507ceaf5cc1cb1c8c64ba",
+      "generationRecordSha256": "918ea240ef76aa3b5dbec77f2ac85a541c81e58b19a5cb52343e016c5334d867",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "contact_candidate",
+      "observedSupport": "far_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远RIGHT低腿部分被前景近LEFT大腿遮挡、前小鞋近水平；近LEFT高折靴大且露底。不是01近腿承重的重复。"
+      },
+      "anatomicalEvidence": "远RIGHT低腿部分被前景近LEFT大腿遮挡、前小鞋近水平；近LEFT高折靴大且露底。不是01近腿承重的重复。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 10,
+      "file": "staging/run/NW/10-v1.native.png",
+      "generationRecord": "provenance/run/NW10-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "远低鞋与近高折鞋分明，保持背侧视角、左上琴位；动态待审。",
+      "sha256": "73c86a6b19e02afe3b2351ab6317f9ca0bdc89e7e853d84fe9038f29a238313d",
+      "generationRecordSha256": "98f8e9766fd18c731c618a90f40b230a302c042b358276cdb447f986888d7675",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "compression_candidate",
+      "observedSupport": "far_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "低位远RIGHT小腿从近LEFT大回收裤腿后露出，近LEFT高折靴遮在低腿前；支撑靴在身体下。"
+      },
+      "anatomicalEvidence": "低位远RIGHT小腿从近LEFT大回收裤腿后露出，近LEFT高折靴遮在低腿前；支撑靴在身体下。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 11,
+      "file": "staging/run/NW/11-v1.native.png",
+      "generationRecord": "provenance/run/NW11-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "8113dde6d18342330a0110cd5e9d14f8aa29cbc534c3657cb7e29fcb2cd7d377",
+      "generationRecordSha256": "bac36e382d16d03d2f3ef92c48e6395e6df195e226aa691c1839a2ccd50ec044",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "passing_candidate",
+      "observedSupport": "far_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT大腿已前提，位于画面左前；远RIGHT低支撑裤腿在其后。支撑靴因相对身体后移而落在中右，未见无故换腿。"
+      },
+      "anatomicalEvidence": "近LEFT大腿已前提，位于画面左前；远RIGHT低支撑裤腿在其后。支撑靴因相对身体后移而落在中右，未见无故换腿。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 12,
+      "file": "staging/run/NW/12-v1.native.png",
+      "generationRecord": "provenance/run/NW12-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "0f2288c2caad46b768640e4ebd7c46888b1818629bc9849377cde6f032d24917",
+      "generationRecordSha256": "b5f995cd9fa2efa664f826f601a20636854ebd6e8f8b8e86f8f252807ce16577",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "passing_candidate",
+      "observedSupport": "far_RIGHT",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT左前裤腿大且在前景，远RIGHT裤腿低位在后；与04的小远摆腿/大近支撑腿深度顺序相反。"
+      },
+      "anatomicalEvidence": "近LEFT左前裤腿大且在前景，远RIGHT裤腿低位在后；与04的小远摆腿/大近支撑腿深度顺序相反。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 13,
+      "file": "staging/run/NW/13-v1.native.png",
+      "generationRecord": "provenance/run/NW13-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "已实看候选，完整动态及跨帧比例复核未通过。",
+      "sha256": "54af5a2707502f061f0c690762251b7095ad091d8e5316cc97fddc5acd02ecd3",
+      "generationRecordSha256": "2614c51819023fd60936d291bd321dc5463ed08e8736f29e46e475e2967377a8",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "heel_rise_candidate",
+      "observedSupport": "far_RIGHT_forefoot",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT前膝上抬、前鞋头朝画面左；远RIGHT后靴跟高趾低。鞋轴与膝踝一致，左下位置不是外撇。"
+      },
+      "anatomicalEvidence": "近LEFT前膝上抬、前鞋头朝画面左；远RIGHT后靴跟高趾低。鞋轴与膝踝一致，左下位置不是外撇。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 14,
+      "file": "staging/run/NW/14-v1.native.png",
+      "generationRecord": "provenance/run/NW14-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "后脚伸踝、鞋尖低且后跟高，前脚抬起展开；整体相位区别13，待动态。",
+      "sha256": "dde2734434fd6802ab53804a6d48bbdc05ad45690cd27a1a32afa4761bef8c95",
+      "generationRecordSha256": "d067ae9212095f14daa42c75c905a5ea7876e4f338a71db3d294113317ee278c",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "toe_off_candidate",
+      "observedSupport": "far_RIGHT_toeoff",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "远RIGHT后腿继续伸踝蹬离；近LEFT前鞋头左向，膝踝同向，未见鞋掌横拧。"
+      },
+      "anatomicalEvidence": "远RIGHT后腿继续伸踝蹬离；近LEFT前鞋头左向，膝踝同向，未见鞋掌横拧。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 15,
+      "file": "staging/run/NW/15-v1.native.png",
+      "generationRecord": "provenance/run/NW15-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "前后膝收、双脚离地姿势可辨，保持左上琴位；腾空高度待动态。",
+      "sha256": "edf69e143a4959a128b24a0eb40abd75f7f3e2c4c7a3b95d414ad67d116f53ad",
+      "generationRecordSha256": "db9ae7b9313de180af9226302542a1ef1462949404e3be3103e01ed6c308b060",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "flight",
+      "observedSupport": "none",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT前伸、远RIGHT后折，双脚短暂腾空；前鞋头左向/底边可见属于翘尖，不是横向外八。"
+      },
+      "anatomicalEvidence": "近LEFT前伸、远RIGHT后折，双脚短暂腾空；前鞋头左向/底边可见属于翘尖，不是横向外八。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "frame": 16,
+      "file": "staging/run/NW/16-v1.native.png",
+      "generationRecord": "provenance/run/NW16-v1.generation.json",
+      "reviewStatus": "candidate",
+      "notes": "前靴下降、后跟高折，落地前展开可辨；待01衔接和全圈动态。",
+      "sha256": "08e77f539bcc2b5684be33244bd1da8960e5090a1fe5ab5760ae1ad53bce7d41",
+      "generationRecordSha256": "551eb85b51d813a1bac6601dc759476676f9d55f0ae38f05eae8e7a29688a367",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "staticReview": "reviewed_no_required_static_redraw",
+      "observedPhase": "descent",
+      "observedSupport": "near_LEFT_pending",
+      "footDirection": {
+        "decision": "keep",
+        "toeOutObserved": false,
+        "evidence": "近LEFT前腿下降，鞋头左向且与膝踝前伸方向一致；远RIGHT后靴高折，衔接01近左接触。"
+      },
+      "anatomicalEvidence": "近LEFT前腿下降，鞋头左向且与膝踝前伸方向一致；远RIGHT后靴高折，衔接01近左接触。",
+      "handTopology": "LEFT hand upper qin; RIGHT hand lower strings; NW far right hand naturally occluded",
+      "actualModel": null,
+      "actualQuality": null,
+      "formalVisualPassed": false
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "checkedAtUtc": "2026-10-10T05:39:22.668Z",
+  "status": "partial_existing_pixels_QA_only; shared edge has visible defects; not accepted",
+  "reviewed": [
+    "2048x1024 transparent QA preview",
+    "all four native 600x1024 shared-edge sections",
+    "all three native 600x400 row-crossing crops"
+  ],
+  "geometrySummary": "The full c03/c04 shared boundary has existing sources. Major roof-tile, roof-trim, door-ornament, door-sill and step contours generally continue. No missing strip or large step-height mismatch was identified in these crops. Visible tonal and rectangular artifacts prevent a clean edge pass; this is not a proof of pixel-perfect geometric continuity.",
+  "findings": [
+    {
+      "priority": "must-review-before-acceptance",
+      "label": "门楣下方矩形拼贴色块",
+      "globalApproxBox": [
+        12288,
+        34816,
+        12408,
+        34931
+      ],
+      "assemblyApproxBox": [
+        4096,
+        2048,
+        4216,
+        2163
+      ],
+      "source": "r09_c04_s03_01_v01",
+      "evidence": "capacity-shared-edge-cross-y2048-600x400.png",
+      "finding": "共享边右侧、门楣阴影下出现约120x115的深色矩形，右边与下边都呈硬直角。它已存在于源片核心，机械拼接原样暴露；不能用接边完成掩盖。"
+    },
+    {
+      "priority": "visible-tone-risk",
+      "label": "屋瓦与横梁纵向色差",
+      "globalApproxBox": [
+        12270,
+        33792,
+        12310,
+        34816
+      ],
+      "evidence": "capacity-shared-edge-section-2-600x1024.png",
+      "finding": "在全局x=12288附近，部分蓝瓦、红檐与橙色门楣可见纵向深浅或色温切换。轮廓总体连贯，亮边仍需要100%独立复核。"
+    },
+    {
+      "priority": "minor-tone-risk",
+      "label": "门板横向分块色差",
+      "globalApproxBox": [
+        12288,
+        35770,
+        12588,
+        35910
+      ],
+      "evidence": "capacity-shared-edge-cross-y3072-600x400.png",
+      "finding": "c04第3/4行交界附近门板与右侧竖木条有轻微矩形/横向色阶；没有见到缺口，仍是原生片之间的纹理和光照差。"
+    },
+    {
+      "priority": "coverage-only",
+      "label": "石阶轮廓",
+      "globalApproxBox": [
+        11988,
+        36100,
+        12588,
+        36864
+      ],
+      "evidence": "capacity-shared-edge-section-4-600x1024.png",
+      "finding": "石阶前缘与踏面边线在本次共享边片中持续连通，保留轻微材质色差；本结论只覆盖600像素宽检查带。"
+    }
+  ],
+  "coverage": {
+    "leftActualC03V04": true,
+    "rightSelected13NativeCores": true,
+    "missingRightSlots": [
+      "s03_04",
+      "s04_03",
+      "s04_04"
+    ],
+    "c04CompleteSourceEdges": [
+      "north",
+      "west"
+    ],
+    "c04East": "Only upper 2048 pixels have cores; lower half is missing.",
+    "c04South": "Only left 2048 pixels have cores; right half is missing.",
+    "sharedEdge": "All 4096 pixels of height are covered on both sides.",
+    "noCapacityOrWalkabilityValidation": true
+  },
+  "referenceStatus": {
+    "mechanicalRequiredInputFilesMissing": [],
+    "historicalStyleReferenceMissing": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "currentGlobalImageConfigMissing": "D:/work/image/config/image-generation.json",
+    "layoutReferencePresent": true,
+    "detailStyleReferencePresent": true,
+    "historicalReferenceHashMismatches": 0,
+    "impact": "Existing selected pixels and their generation records are sufficient for this mechanical replay. Missing style/config inputs require separate restoration or authoritative revalidation before future generation, which remains on hold."
+  },
+  "validation": {
+    "fullResolutionDimensions": [
+      8192,
+      4096
+    ],
+    "opaquePixelsVerified": 30408704,
+    "transparentPixelsVerified": 3145728,
+    "allPixelsVerified": 33554432,
+    "nativeSources": 31,
+    "mismatchedPixels": 0,
+    "sourceIds": "c03 original 1..18; c04 19..34 row-major, excluding missing 30/33/34; transparent 0",
+    "previewDimensions": [
+      2048,
+      1024
+    ],
+    "previewMode": "RGBA",
+    "previewAlphaValues": [
+      0,
+      255
+    ],
+    "previewTransparentPixels": 196608,
+    "previewOpaquePixels": 1900544,
+    "previewResampling": "BOX 4:1; QA only, not production",
+    "record": "capacity-partial-assembly-report.json"
+  },
+  "recommendation": "保持capacity gate。可用该局部拼接进行建筑/道路尺度审阅；当前缺片、共享边矩形色块及局部色差尚未解决，不能报告第二块完整或两块接边通过。"
+}

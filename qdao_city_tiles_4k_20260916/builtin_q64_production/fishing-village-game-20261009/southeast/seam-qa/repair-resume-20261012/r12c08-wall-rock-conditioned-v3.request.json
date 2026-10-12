@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "preparedAtUtc": "2026-10-12T08:14:26.018205-04:00",
+  "status": "prepared_for_actual_builtin_v3",
+  "generationSubmitted": false,
+  "builtinOnly": true,
+  "paidApiAllowed": false,
+  "authority": {
+    "file": "D:\\work\\image\\docs\\MAP_PRODUCTION_RESUME_20261012.json",
+    "sha256": "6b169e04fd4228ac9482819f4e23a224c36f24d6161c2c159c50ac7ed9035203"
+  },
+  "toolInput": {
+    "prompt": "Edit this single supplied image with TWO very localized corrections on the left side of the visible broken vertical seam. Return exactly the same opaque 1254x1254 frame, camera and native pixel scale. The existing RIGHT HALF OF THE SEAM and BOTTOM ROCKS are locked boundary conditions, not material to redraw.\n\nThe seam is exactly x618, and the bottom seam is exactly y830. Repair region is only x350..617,y280..829. ALL pixels x618..1253, ALL pixels y830..1253, and ALL other pixels outside that repair region must remain in their original positions and look unchanged.\n\nMASONRY CORRECTION: The left large coping block has an over-deep front face. At x617 its lower edge ends around y600 while the fixed right continuation ends around y535. SHORTEN AND RECONSTRUCT THE LEFT BLOCK FRONT FACE UPWARD so that its lower face edge joins the existing right course at x618,y535 without a vertical step. Also join the next course's top joint and existing green crevice outline to the fixed right wall. Keep the fixed RIGHT stone block exactly as supplied. Do not deepen or move the right block to match the wrong left side. Do not rebuild the whole wall. Preserve top-face perspective and block scale; make a believable single continuous rounded stone course.\n\nROCK CORRECTION: At y830 near x503..617 there is a rectangular notch from the wrong upper foreground rock outline meeting the selected bottom rock. Reconstruct only the upper rock and plant outlines within x430..617,y670..829 to meet the existing exact rock outlines at y830. Keep the bottom rock exactly as supplied. Remove the rectangular corner and truncated plant tips by drawing a natural continuous upper outline to the fixed lower edge.\n\nKeep all WOOD, the approved timber adapter and rails, all distant paving, light, colors, plants and rocks outside the repair region unchanged. No added posts or rails. No blur, rescaling, crop, global recolor, haze or feathering. Preserve the first image's crisp rounded painterly Q-style daylight game art. Do not fix this by changing the right or bottom reference geometry. No text, UI, labels or watermark.",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\seam-qa\\repair-resume-20261012\\r12c08-wall-rock-conditioned-v2-guide-native1254.png"
+    ],
+    "transparent_background": false
+  },
+  "referenceRoles": [
+    "sole edit target and geometry authority: exact native assembled guide; right x618+ and bottom y830+ locked"
+  ],
+  "globalBox": [
+    32150,
+    45250,
+    33404,
+    46504
+  ],
+  "expectedDimensions": [
+    1254,
+    1254
+  ],
+  "editRegions": [
+    {
+      "id": "G4",
+      "worldBox": [
+        32500,
+        45530,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        350,
+        280,
+        618,
+        830
+      ],
+      "editPurpose": "Repair left p14 masonry courses, crevice plants and rock edges to match fixed c09 right core at x32768."
+    },
+    {
+      "id": "G5",
+      "worldBox": [
+        32580,
+        45920,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        430,
+        670,
+        618,
+        830
+      ],
+      "editPurpose": "Repair upper p14 rock silhouettes to match fixed p24 below y46080; lower source is immutable."
+    }
+  ],
+  "protectedRailBoxGlobal": [
+    32470,
+    45066,
+    32800,
+    45491
+  ],
+  "outputPolicy": "Save generated raw output under this versioned stem with generation receipt. Reject changed scale or framing; never resize it. Root owner must review output and exact native adoption boundaries before selection.",
+  "subagentGenerationPermission": "No generation call by preparing agent until root later authorizes built-in generation.",
+  "formalAccepted": false,
+  "promotedToSelected": false
+}

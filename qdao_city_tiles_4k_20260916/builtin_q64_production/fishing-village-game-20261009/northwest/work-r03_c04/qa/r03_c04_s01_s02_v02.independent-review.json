@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s01_s02_v02",
+  "reviewedAt": "2026-10-09T22:55:12.052643+00:00",
+  "decision": "reject-visible-stone-joint-discontinuities",
+  "usableForSelection": false,
+  "repairRequested": true,
+  "formalAccepted": false,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s02_v02.png",
+      "sha256": "abf5eccdf9c34a8d88d9df0a6759c6f4f8ea42cebd9cf2e5cb13931cfda29cdc"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s01_s02_v02.native-overlap-edit-target.png",
+      "sha256": "43047a8668f008aa60592d72541ff67b373c25c06971ee604acb1866ad1ef96c"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\assemble_r03_c03.py",
+      "sha256": "32d65a023e4f17ee91d77e10e97fd0d931ef981baa025e9c5d93c4d4c5fbe9e8"
+    }
+  ],
+  "editTargetLeft230VerifiedExactWestCrop": true,
+  "visualViews": {
+    "originals": [
+      "v02 actual native",
+      "west native",
+      "v02 actual edit target"
+    ],
+    "fullHardCut": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v02.seam100pct.png",
+    "overlapComparison": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v02.west-vs-new-overlap100pct.png",
+    "scale": "100%; no image resampling"
+  },
+  "hardcutDiagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v02.hardcut-diagnostic.json",
+    "sha256": "5dc6bcd04a0b449565d56c0d9ba453c88b68780f42caff0d9ca18f95a36db136",
+    "method": "unmodified append_hard/minimum_vertical_seam, real230px overlap, sum-squared RGB; no feather or resample",
+    "fullLengthChecked": 1254,
+    "overlapMAEForContextOnly": 13.19161176987264,
+    "pathRange": [
+      1,
+      187
+    ],
+    "decisionIsVisualGeometryNotMAE": true
+  },
+  "findings": [
+    {
+      "severity": "reject",
+      "kind": "upper broken diagonal joint",
+      "incomingNativeRegionApproximate": [
+        75,
+        175,
+        115,
+        220
+      ],
+      "globalRegionApproximate": [
+        13272,
+        8252,
+        13312,
+        8297
+      ]
+    },
+    {
+      "severity": "reject",
+      "kind": "narrow long slab sliver and paired edges",
+      "incomingNativeRegionApproximate": [
+        90,
+        300,
+        190,
+        400
+      ],
+      "globalRegionApproximate": [
+        13287,
+        8377,
+        13387,
+        8477
+      ]
+    },
+    {
+      "severity": "reject",
+      "kind": "middle severed and shifted mortar ends",
+      "incomingNativeRegionApproximate": [
+        30,
+        550,
+        75,
+        625
+      ],
+      "globalRegionApproximate": [
+        13227,
+        8627,
+        13272,
+        8702
+      ]
+    },
+    {
+      "severity": "reject",
+      "kind": "lower long narrow slab sliver",
+      "incomingNativeRegionApproximate": [
+        85,
+        860,
+        165,
+        970
+      ],
+      "globalRegionApproximate": [
+        13282,
+        8937,
+        13362,
+        9047
+      ]
+    },
+    {
+      "severity": "reject",
+      "kind": "bottom small corner notch",
+      "incomingNativeRegionApproximate": [
+        5,
+        1145,
+        60,
+        1190
+      ],
+      "globalRegionApproximate": [
+        13202,
+        9222,
+        13257,
+        9267
+      ]
+    }
+  ],
+  "geometryAssessment": {
+    "topAnchorImproved": true,
+    "topGuideAnchorApproximate": [
+      115,
+      0
+    ],
+    "topV02AnchorApproximate": [
+      122,
+      0
+    ],
+    "downstreamGuideAnchorsApproximate": [
+      [
+        105,
+        176
+      ],
+      [
+        85,
+        359
+      ],
+      [
+        69,
+        550
+      ]
+    ],
+    "downstreamV02AnchorsApproximate": [
+      [
+        130,
+        192
+      ],
+      [
+        123,
+        385
+      ],
+      [
+        106,
+        575
+      ]
+    ],
+    "finding": "Top phase alignment alone is insufficient. Downstream intersections shift in bothx andy, causing visibly incompatible diagonal joint networks. Uniform image translation would not correct all junctions and would move the lamp."
+  },
+  "acceptableElements": [
+    "Lamp bracket, finial and post placement/framing remain essentially compatible with the previous candidate.",
+    "Broad material and Q-style rendering remain compatible."
+  ],
+  "editAdvice": [
+    "Preserve lamp geometry and position only; floor cannot be accepted on current hardcut.",
+    "Use the exact full-height left230px anchor strip and maintain all existing joint coordinates throughy0..1254, not merely the first top node.",
+    "Extend both mortar families from each exact endpoint into the new floor, retaining slab proportions and variable old grid phase.",
+    "Avoid retaining conflicting old floor geometry as a preservation requirement.",
+    "Recheck complete adaptive seam and both ends after any edit; no feathering or cut change can certify the current broken topology."
+  ]
+}

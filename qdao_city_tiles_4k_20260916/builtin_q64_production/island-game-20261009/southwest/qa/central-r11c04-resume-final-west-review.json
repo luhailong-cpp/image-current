@@ -1,0 +1,68 @@
+{
+  "createdAtUtc": "2026-10-12T21:17:58.985Z",
+  "reviewer": "finish_court/WEST independent visual review",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/qa/central-goldfascia-lower-v07-r11_c04-candidate-4096.png",
+    "sha256": "0f688a516d0f990c83f5e8ab2e4d10a54039387a76f10178d7274b4f3cd12299"
+  },
+  "method": "Opened original-size QA crops, no artwork mutation. 8 internal composite images contain 24 seam panels; 4 west and 4 original north neighbor panels, 12 repair-boundary panels, 4 north-reselection boundary panels, 4 revised north paired panels.",
+  "internal": {
+    "status": "needs-repair",
+    "geometry": "No additional line break or displaced structural edge seen across 24 panels; v06/v07 gold fascia and support boundaries continuous.",
+    "finding": {
+      "id": "pond-right-blur",
+      "panel": "central-goldfascia-lower-v07-r11_c04-horizontal-column4-native100.png",
+      "location": "third panel, right approximately x600..1024; global bbox approximate",
+      "globalBox": [
+        15960,
+        43782,
+        16384,
+        44282
+      ],
+      "description": "Large right-side lotus leaves and stems remain noticeably blurred versus crisp water and leaves immediately to the left. Sharpness discontinuity is material, not accepted as natural brush variation.",
+      "action": "Root informed; repair right pond source before internal acceptance."
+    }
+  },
+  "repairPerimeters": {
+    "centralGoldfasciaLowerV07": "All 4 boundary views checked; gold beam highlight, underside, blue caps, lantern mount and diagonal brace remain continuous.",
+    "centralGoldedgeLeftjoinV06": "All 4 boundary views checked; no visible displaced geometry at the gold-scroll/beam connection.",
+    "centralPondCrispV01": "All 4 boundary views checked; water, lotus leaves and rear flowers within repaired area are sharp. Does not cover the unresolved farther-right blurry area."
+  },
+  "neighbors": {
+    "west": {
+      "neighbor": "r11_c03",
+      "status": "visual-pass",
+      "panels": 4,
+      "description": "Roof courses, eave, wall timbers and door-frame lines continue across boundary; small paint texture variation accepted."
+    },
+    "northOriginal": {
+      "neighbor": "r10_c04",
+      "status": "fail",
+      "description": "Roof cap/black-groove spur at c2 panel x approximately280..370 at boundary y300; smaller c3 left-edge groove discontinuity."
+    },
+    "northReselection": {
+      "prefix": "central-north-roof-reselect-v01",
+      "status": "visual-pass-for-trial",
+      "pairedPanels": 4,
+      "roiBoundaryPanels": 4,
+      "description": "c2 spur and c3 small groove mismatch removed. Existing source-halo reselection leaves roof courses continuous; four ROI perimeter crops show no new substantial line break. Fine blue brush texture changes remain acceptable.",
+      "selectionMaskSha256": "bc25bb6717c41c754f01e93d1897cae988bea1c9684acefb8891c6e77545714b",
+      "candidateHashes": {
+        "r10_c04": "576429802200fe40bd49a486fedfea9832803d33069802af10ee93d42d0ad661",
+        "r11_c04": "c84069ce8f2e5728a2048c01461a331a6d04f36f4687119ff888e45e55b3639d"
+      },
+      "note": "Visual recommendation only; root owns adoption and final pixel validation."
+    },
+    "east": {
+      "status": "pending",
+      "reason": "Neighbor pair not provided in this review."
+    },
+    "south": {
+      "status": "pending",
+      "reason": "Neighbor pair not provided in this review."
+    }
+  },
+  "formalAccepted": false,
+  "mainArtworkModified": false,
+  "mainProgressModified": false
+}

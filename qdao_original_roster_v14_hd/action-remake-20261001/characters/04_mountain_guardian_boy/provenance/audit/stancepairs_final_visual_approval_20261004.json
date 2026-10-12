@@ -1,0 +1,1538 @@
+{
+  "character": "04_mountain_guardian_boy",
+  "reviewer": "04山岳守卫专属根窗口，结合角色内分工制作与独立复核",
+  "reviewedAt": "2026-10-04T20:50:35.472527+00:00",
+  "scope": "当前196张离线素材人工视觉核准。跑步八向每支撑脚连续8帧，每2张真实独立姿态推进一个相对位置段，16×75ms=1200ms。战斗68张E/W保留原时序。客户端未接入。",
+  "automaticallyApproved": false,
+  "offlineSequenceReview": "completed_with_notes",
+  "methods": [
+    "实际查看八向最终16帧连图、六组战斗连图及新生成关键原生单帧，逐方向识别解剖支撑脚和摆动脚。",
+    "根与独立复核定位提前换腿问题；SE13–16退回重画后再次实际查看，不按提示词或SHA唯一认定动作。",
+    "浏览器正常75ms/帧、256px画布、0.25倍慢放、暂停和逐帧核对，首尾相位由完整连图与播放器共同复核。",
+    "汇总仅已手动判定通过并绑定当前SHA的6份根视觉记录；哈希技术检查不会生成美术判断。"
+  ],
+  "observations": {
+    "run": "除W为左脚先支撑外，其余七向01–08均右脚支撑，09–16异侧；每半段分为初承重、身体经过、后支撑、接地后蹬四个两帧位置段。膝踝与鞋掌沿行进轴，保留摆动腿正常露底。",
+    "hands": "解剖右手持法杖、左臂持圆盾保持，肩肘随姿态运动；不以镜像更换手持归属。",
+    "hit": "E/W各6，后仰缓冲恢复，240ms。",
+    "attack": "E/W各12，蓄势出手收招，360ms，06为建议接触帧。",
+    "cast": "E/W各16，聚势释放收势，720ms，10为建议释放帧。",
+    "grounding": "同一支撑脚从承重到后蹬保持接触的姿态连续；没有用逐帧平移或最低alpha贴地。屏幕足位仍有透视、人体重心和独立绘制造成的小幅变化，不宣称世界坐标锁脚。",
+    "limits": "衣褶与金属细纹有独立绘制的小变化；本次为离线素材验收，世界位移、移速、停步、转向、碰撞和事件触发尚未客户端验证。",
+    "model": "目标GPT Image2.5 Sunburst/max；内置无型号/质量选择器，实际提交及返回均未确认。"
+  },
+  "sourceReviews": [
+    {
+      "path": "provenance/audit/stancepairs_root_N_NE_combat_review_20261004.json",
+      "sha256": "0729e428c699ce73134409d5961686cb6ee673925788b6297b3e5ec2781ca20a"
+    },
+    {
+      "path": "provenance/audit/stancepairs_root_S_review_20261004.json",
+      "sha256": "14ffb831d1d001548b30d8b0301a83afc6f8db057a2870b4bac16c27313968e8"
+    },
+    {
+      "path": "provenance/audit/stancepairs_root_NW_review_20261004.json",
+      "sha256": "c7b7778597d6ac7e3788d8f7acbd6709a23bc967e23a74d6938e7ff7b4cfac48"
+    },
+    {
+      "path": "provenance/audit/stancepairs_root_E_W_review_20261004.json",
+      "sha256": "0d1e8498d1547b9e239a04642dc6597a6deb1d9f0ec713de955c943e54a20f23"
+    },
+    {
+      "path": "provenance/audit/stancepairs_root_SE_review_20261004.json",
+      "sha256": "11b7e83c7f7f47baad0962f7e2fbd507efa2ad3009a09b027159de84a5bcd7a6"
+    },
+    {
+      "path": "provenance/audit/stancepairs_root_SW_review_20261004.json",
+      "sha256": "44fc7120f1aa8851cda4b1aa208bba9d169a28b51207900daa4b9c57640c6cb6"
+    }
+  ],
+  "changedSinceBaseline": {
+    "count": 92,
+    "byRunDirection": {
+      "N": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "NE": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "E": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "SE": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "S": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "SW": [
+        1,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16
+      ],
+      "W": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "NW": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "unchanged": 104
+  },
+  "entries": [
+    {
+      "file": "frames/attack/E/frame_01.png",
+      "sha256": "6fa0b33c448a6965340e5c086ac67366efd7d137cfed8bdaab264a2ca5f45c43",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_02.png",
+      "sha256": "cebd507d111774b1ecb2a29b82acde3de8579baa499c199c453fac9a9afd3206",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_03.png",
+      "sha256": "da7f69a4cbc6c11842893f4d6acf2536adc027489c7dc8ed5e9cbab91b9c1298",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_04.png",
+      "sha256": "6e84ea53d071156a52e3051e4a320be3c579c3c63e52d73dc1446c760ab391c1",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_05.png",
+      "sha256": "3f033f87e487aeb12b0ad29378d344b5f14452d613f992b8281a6658b3f1df2b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_06.png",
+      "sha256": "b5d5519e71c7b9a9d556b60f21326c2ba2526c888beb0ddf4eb335387b926550",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_07.png",
+      "sha256": "3271e8d10eadc774329421a1d4978a8f219b7165bf6d636c765ee1dfa3288a7a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_08.png",
+      "sha256": "cdb7986f3e3012e38b3f6821d63e0b9a0cb623691a036469a18742dd65b8078b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_09.png",
+      "sha256": "bb5b2c5a314563ee0f9dfb11d91302af6b46750410cc2b192261689bc83a3141",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_10.png",
+      "sha256": "1a74b218f63eda5870684cf349433e9ea58d820a7f2271feb947ab54eae5902d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_11.png",
+      "sha256": "60ee307d072d26bbb3416863d5217c732a19a24484570b70bfadfd0bb3a58b5b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/E/frame_12.png",
+      "sha256": "3c485eb4802220d88b8cdadbdc1cad02224ec3267d272f371784a40f6c62e6ec",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_01.png",
+      "sha256": "4e864532494f4a9f1b1cdca0052a9fb112583f248fc547fe9353d503933ee620",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_02.png",
+      "sha256": "752934ef7300cfca289bedd60d774378d996954cbe3120497df1974bafad4673",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_03.png",
+      "sha256": "a614719a1d569b32d462c50484806da5cfdbcb806434b5696ba6486313ed5dcd",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_04.png",
+      "sha256": "57d2b133062a5f5825c20631caa305f32a460ae43b0134c41d39fd3b64f39991",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_05.png",
+      "sha256": "d85765325120c300100d6282b97b7a5b1d0d2ae3a9e4428ff9082c372c4b9147",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_06.png",
+      "sha256": "4d72c4bcc2f4ceed87ce41c70fe752eb928f9e1042d3bccfb489b1401e85b557",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_07.png",
+      "sha256": "65530b543572abe508b1c37a9c2be6912f1842c7966b601de44776876b6ef5b9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_08.png",
+      "sha256": "cf129127d96bbddc4c475dab8353646ca0d571418552660c83bfae3314cf7be6",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_09.png",
+      "sha256": "7bbe68b82724a7a13dc6bcf449a7ac795ce798aecc59052c3d67fe32bdc5c4c9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_10.png",
+      "sha256": "36108442a4c6a4237cd55f335b54635541180c792f800f2272b3e2bbbde81770",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_11.png",
+      "sha256": "f35aeb8ee87ef3df074fdefaf36130385a6d6427c51a7f73ed4ac164c451b1cd",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/attack/W/frame_12.png",
+      "sha256": "f98e5bc61ca4d17637c1892192688424bb0156160e1569af58543d8f4c46cbb1",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "蓄势、06接触到收招完整，膝踝与脚掌方向一致。"
+    },
+    {
+      "file": "frames/cast/E/frame_01.png",
+      "sha256": "7f21b0c902bc6d14aff89e02c13a81147281ea360c6347f860b05da0c53fafa6",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_02.png",
+      "sha256": "7d7a78f98e5c000365b30909e16df898841539f0937406c9dfa08642bbe7c182",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_03.png",
+      "sha256": "64afe9c6f083ec4846b9c33028ca3f0e6adea6c8a7a6261b222ea4305be584fc",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_04.png",
+      "sha256": "84c2b73f5a03fcc4d7b889a68bb4291e5a357289d44a354a673e3d436cf9747f",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_05.png",
+      "sha256": "748d6b21496be6545b13cb9268502b9812acc6b2bafdac12bc38653f9d95f95a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_06.png",
+      "sha256": "7612f92d7cffb7de42a17e580baaa65e6f83a8328f89a22ab1f2bb588c513151",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_07.png",
+      "sha256": "352f04699d02655df1384b69e2e3a05a79f423d8c1a3fba9bc90b08e7c2a3e44",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_08.png",
+      "sha256": "e55c8d9d05cf5c0a5f6e811c4b9a05c1a5feb3d2396a17cff0bac1932a51debc",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_09.png",
+      "sha256": "89beb273602c26c26a82753379fc0fa1e65f4ae820c2594cc595babff75f2dec",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_10.png",
+      "sha256": "5a833cf3a28910d2c4446625a03cd04f2f20efdcf2e1f42cd3efe5cdac127289",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_11.png",
+      "sha256": "3099289b5d4497bdd369e7d11e0eabf73cd90dea83f5ccb163370050e220cf9c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_12.png",
+      "sha256": "903d3536372612a92f06026ca809ccb4636be293fa2c5e7a3a8b49e48ebff04c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_13.png",
+      "sha256": "b6aad8bf14f99b7a28c4cf713ffd81cf15721243e9a6b5c600ea0d2fa0a5187b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_14.png",
+      "sha256": "a9e56f57dca4cc66f1aea665e4300b6ae0e227a789ac20c1b82910d5b6422fc3",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_15.png",
+      "sha256": "ab24d39c470130d840b0a3f83d8c94aa226648853ac4740b00938835a656e1c5",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/E/frame_16.png",
+      "sha256": "80b939a16dc4f200e4e9e3f03a70d22b1ff3fd230755909426ef73ac102368d4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_01.png",
+      "sha256": "ac011c0db2320a23e5eead239bed63831f7749a83324c40b0bd366010bbf16d8",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_02.png",
+      "sha256": "f8e4dca0d7523d39c0c2f2a36841176f2e6347fa266a6d669bcee46dfc86b927",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_03.png",
+      "sha256": "3bb48d134f7aa565c8c5c4a5c486012fdba9c7226b053cf6ef78f900d122f6d0",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_04.png",
+      "sha256": "76a7058fe22d489fc8a84d68453f364640f07d25f93ecf50ab8c11271892b23b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_05.png",
+      "sha256": "a478de495d3564a2a59f72a77b9271e5294cb9fae341e5aefce4298d76b811d3",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_06.png",
+      "sha256": "aa255ff8234ec7e0fce76cfd4fff2213233f55400055f76290475b44d4ab418f",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_07.png",
+      "sha256": "b8bd91d1eab50a85bbea029b11805296d755a827a3fd4c9254a5df7493e64a4a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_08.png",
+      "sha256": "ba0731ff09f9d1f19fcd05164b54d3ed516ce0a188410c5793ed780dd3183bcd",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_09.png",
+      "sha256": "9f34545e05419bb8e1fb8483dac8ad6c23b97317c9eebe28e91222163b293880",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_10.png",
+      "sha256": "eaf7e704793bf2ba42312a302f4a0095cb7137077ac4bdbe1ddffd497b595124",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_11.png",
+      "sha256": "6ce4a072c720e60b646b01b47e1ea184fa72abde8f80d5c3bbdd289bc3557038",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_12.png",
+      "sha256": "edfa38c7610b650eb7295d381b0f7c066600310a668e8f70e59d8f97e24747f0",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_13.png",
+      "sha256": "d4f8a334629265dbeac9f287f33b9dcafdb9e98a0bff5921822d7fda5f7217bd",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_14.png",
+      "sha256": "e92c9bc292c6607200680e3dcabad4d5cc172dec371c77a39a70ee6870d71c72",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_15.png",
+      "sha256": "58fa2eff0b08e8303c2fac542989342d3c3b10ee8956819811d380031b0f5f5c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/cast/W/frame_16.png",
+      "sha256": "7923ee6cf88e4f6b94f04610383ff964acf2f772f09712d39b50ad1b7be4a40d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "聚势、10释放到收势完整；杖盾持手正确。"
+    },
+    {
+      "file": "frames/hit/E/frame_01.png",
+      "sha256": "0e600c1050559305e28e2d0bf393b8739488382d484059af8c7698e7d55ba275",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/E/frame_02.png",
+      "sha256": "656c856290a2ce41a82a2abe02e9e3ac4e8de165009726af02a22bf73c4233e7",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/E/frame_03.png",
+      "sha256": "272204657c7439d886b5b14ae0dab0e3d1b19738042e42c64414fdfaf0a57e0a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/E/frame_04.png",
+      "sha256": "e0a51bdaa5b548c4508beb4f2d9b876780acf356013b1d225eb9472b15e27b63",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/E/frame_05.png",
+      "sha256": "de555cc55f0de1c420f1a64f1ee829d36b90484c5e9934d3926211a671c00932",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/E/frame_06.png",
+      "sha256": "e3057b6dd3a28cedc0d2056e3c2c916ee2116e250f7992b672c159f6c59dd786",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_01.png",
+      "sha256": "8135b27ad25089b20c81a7e69b7155f22728582c790cf77101b613c2ecd4d53e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_02.png",
+      "sha256": "1b1c513b46fcf0e58c6b35613e64ddc9825d843cf049633c2b4d5b2ce1e0e613",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_03.png",
+      "sha256": "336623219992306b74a46672c6beffceb1fcaa84feb02bfce4eb5a6e2f6f156c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_04.png",
+      "sha256": "6c70a4462d45abc3bc224ca7040fb956cf37f5fb3a87fb324ff8c877aa128600",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_05.png",
+      "sha256": "714c9c39cf41b49611f2fbfccb4178838f5bda9b2ba4e8529a42348e6fc6d9f0",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/hit/W/frame_06.png",
+      "sha256": "3cf2a85eb36eb70f78443d6ec879c31d11ded75618906b8db1e6ab8d7e1687c9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "后仰、缓冲到恢复，杖盾持手正确；同当前连图复核。"
+    },
+    {
+      "file": "frames/run/E/frame_01.png",
+      "sha256": "b99270b6d15c59343e97ffb97c5e78915783e1033d4458b61713209d698e115c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E01：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_02.png",
+      "sha256": "a0d7bb9102637b377f5949f43e0992226d021f7d5132d29d399084b647635ac9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E02：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_03.png",
+      "sha256": "2b99f86c21e716a2232f159729605fabe62acc73ebe9c771907d40d0454f29fe",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E03：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_04.png",
+      "sha256": "938682b7405c998421380eea870b0877bcfe8f5ff3f35a0f68b8be2b2c8d80e8",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E04：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_05.png",
+      "sha256": "15af3ffc80dbc0a1e34f47295697549689475fd353613970365d5f2c07daf300",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E05：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_06.png",
+      "sha256": "057cb541e4dd944f22847484e6a5587cf6fe6b8ac3478a289075bd8147bbd83c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E06：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_07.png",
+      "sha256": "44d42f15408d0eae47915d4b1efff8c062b42ea7219f89345419fa2811b59fd9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E07：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_08.png",
+      "sha256": "2aa2a2007e5605111985d137a7b00279b109763da4c06b81dcbceed7946858d9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E08：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_09.png",
+      "sha256": "00d058842f2f0a704717958648f233163134a981911b48222b87e71287371f4b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E09：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_10.png",
+      "sha256": "57e0279d93946e0660d6db00d7dbf0e253718e98b16ac5eace089c9746069de5",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E10：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_11.png",
+      "sha256": "bd20c0d15e8850432421e22fe07756e18be58de972ea05f8375633a11fafd2bb",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E11：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_12.png",
+      "sha256": "aa02fa40d3ff55695fa989b8560815174953956a1c070650f567b5f1e1a36607",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E12：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_13.png",
+      "sha256": "0afc00d91e71d1426ba1d3e77f4c88fee9d7b01b268d420694555c36a08c766c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E13：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_14.png",
+      "sha256": "349a4e245f52e9cf78145434e03cbf2f9e70926cbc4c0eb07852f203f50de55d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E14：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_15.png",
+      "sha256": "a74275a99d048e2627e8890caa088f37fc231d5a4d646026b23da9588483c9c7",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E15：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/E/frame_16.png",
+      "sha256": "953d4dbc0285b8b34a455e6eb0a4f2893d454fdaa36238a41ae457e351c3b1af",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "E16：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿右方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/N/frame_01.png",
+      "sha256": "45206d9a6a581590381f41f9d08e2bece084025e1f33cba1a74873bcf4744d6a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 01：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_02.png",
+      "sha256": "bf783e292ff942d77f6d2594009c84228e9989c20c501ec589ba4a4fcb7122d5",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 02：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_03.png",
+      "sha256": "9a274aaf79a46376f55fa9114339dd33fb8cdea89c91b88544567bbf70104d96",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 03：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_04.png",
+      "sha256": "a6cd0e06eb69f6dbc11dd7a1c33afe2c36bd851e9b48b6bf1ead3b58c303d0c2",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 04：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_05.png",
+      "sha256": "e6a975d1210f74e91abec2353a6038ca362985b08fea835b6a1815a1f58b306c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 05：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_06.png",
+      "sha256": "eff7d40f5f0bf5e531ce1ee6514d9c79dcd2cb7cac4e1a8075f05348f455f062",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 06：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_07.png",
+      "sha256": "4664217a4405ce1a85e54012a6fcecbda750ef85e81aa2ee57e4dc10c16bbcbb",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 07：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_08.png",
+      "sha256": "81cf41403b2d076e8f9649908e538ea0ca20090541aefd725a9106ecf263af20",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 08：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_09.png",
+      "sha256": "dc7c213c4f6ebe8a184f00f99c555430b01c1895f3f2df7470aabc3e36fc989d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 09：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_10.png",
+      "sha256": "7434a2dd4a8291d66dd2faa20180d0e7cacd75018482cf9178356423d1c0257d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 10：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_11.png",
+      "sha256": "3f1a5efed7cd140c23c6dee7198d7954a4b05d91a2ef50d56fe3f26068adf05d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 11：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_12.png",
+      "sha256": "f9f57c74845ce7e181297b2ce4574f63ebd97877bb301e4b496d70c6976719d4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 12：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_13.png",
+      "sha256": "29ccc79185243e0743870866ac5788d6384e077a8d2576cb54e8360746141d2d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 13：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_14.png",
+      "sha256": "618527f740e9956aac48470ce1c35f01d3a632cb50806c60f378cdb02792d05e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 14：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_15.png",
+      "sha256": "e47650a548e09ca4340145c069b993fd8b97dd4a8115660edf5b901b97f97b4d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 15：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/N/frame_16.png",
+      "sha256": "b8deb8e73c3c8867fd1b30ed3280bf0ea42e8fb29869976fb65d5e5d54073aec",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "N 16：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_01.png",
+      "sha256": "841b5649c123ac175a7df3589c68cd4f6bbcc45f99a387f52ac9100fde521f13",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 01：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_02.png",
+      "sha256": "e3d19d5282b422155aa9d0d180ebb54b55a4411dbe09e754f5675dbb613efdb6",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 02：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_03.png",
+      "sha256": "7e0c588e51e2cabab23c1d077652eb4cd92fca0b0d487385c29d99237d04b4e0",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 03：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_04.png",
+      "sha256": "52b072f8d1693c49988a7145b3d1a6dfee4dd3e3d13f25425844b06e3d43b254",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 04：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_05.png",
+      "sha256": "68b7112e5ef3285987eff3bd0c075a2fd1b705ba0aae617306447fd413ae0d7b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 05：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_06.png",
+      "sha256": "225f1e6b363177cf64f8cd86d461a79151bea19179eaa334a2a28b06b90eea26",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 06：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_07.png",
+      "sha256": "a96f5e744625bfc523b6c81fae98a7f2d5b556c7e8ffac12055eced0cee9730b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 07：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_08.png",
+      "sha256": "6d41bb23635413d00affadf6bbeaab3d2d9fbec0b86ead4fabfc9d54c5172a86",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 08：解剖右脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_09.png",
+      "sha256": "1ca73223e5e4de521655f346816aac50774cd524480e7158874c641930937cc9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 09：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_10.png",
+      "sha256": "059594ac691ffb44d5869b14f007906361802cb148b996916a4cfee18b8eb0d4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 10：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_11.png",
+      "sha256": "740617148b7d57292112265576a851c631cb6d909bb183dfec65f9cfdc54e427",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 11：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_12.png",
+      "sha256": "fa52796070e370338c7d49a6d9b2fdddb0ff56080a25c00f3edf74afae726fbf",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 12：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_13.png",
+      "sha256": "30d066fadd11d3632ff57e3fe6359e1417239b1649541a9ab5ab701677c90996",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 13：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_14.png",
+      "sha256": "80e0902f80ed8c4cc07c4b83f8bea4720ff498336bbb6a20d3972619a212e239",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 14：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_15.png",
+      "sha256": "5b358e19f0006ab755d1cff4514d966a813b7fe8294dd36baabcc4262e345da6",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 15：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NE/frame_16.png",
+      "sha256": "716f31716420d74b43c9f0606594083c0a3d4fafd90e0cec939fa849c18b6c41",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NE 16：解剖左脚持续承重；背向鞋跟/远侧鞋尖可辨，无明显侧向外撇；同组连图观察独立膝踝及手臂相位。"
+    },
+    {
+      "file": "frames/run/NW/frame_01.png",
+      "sha256": "7fe047c77cda8acde0e1c72fd55183e4ea4331f84708d4d2a19bf1483b676ba8",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW01：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_02.png",
+      "sha256": "65bd5c251290c5b2d565b192a80085d759ad6a8b1c8d2527145ada1e46c144cc",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW02：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_03.png",
+      "sha256": "fcb4d0253d8c1a7838a65d2abf187c42aeb88de16ea0c32b2cb46715a951fe2c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW03：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_04.png",
+      "sha256": "f46be3fd6493b082ef066b7c05248c80f374eeaa2faf32f1d4e2626bd2f364b4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW04：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_05.png",
+      "sha256": "fa173aab4e6c0c57a96ba3494b5c0783a02b0cef6f3237a4feeff61bec37e5bf",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW05：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_06.png",
+      "sha256": "d8ae77ad3c90bc900a20e13208209cbd920d1ff6c6a50680a8f74fdbf2f1e82b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW06：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_07.png",
+      "sha256": "4bc387b7a737dd101784767e5a9412d871cd587b53db683b6f92537a8c1f4143",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW07：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_08.png",
+      "sha256": "48ba83112498d4191038a77a6a32a996eb16a792d0920f9eb0657909dbc24d18",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW08：解剖右/杖侧/屏右持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_09.png",
+      "sha256": "402aa761a4473c9c9dfecc025e698ef8c79fdf6cccae5444e51757e9a3f2984a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW09：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_10.png",
+      "sha256": "5b15330b4e0473e850643b2caff7a7b0afeedd5af4e643e9271ff697d0a2972b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW10：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_11.png",
+      "sha256": "151d152255fae6f889b47048fa2eb768b84912ac4048c5190f0bcbbcebb05304",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW11：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_12.png",
+      "sha256": "5874513af06d9a18772982ec9e61712b6af1b1a8eb6fb7f8784cdb90f26ae552",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW12：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_13.png",
+      "sha256": "3cbcf5a2a78d1b36bb5d06216606732bf81fa43f37b692bf0c9ec490f1021841",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW13：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_14.png",
+      "sha256": "fb876d49240c5dcc6cd854a787ec535001f9f30d6fad2305fd192049ccc74f60",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW14：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_15.png",
+      "sha256": "518d997d7ac493d292114ea573520ea40c477cc62a5f23474ab3b81e71e97c33",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW15：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/NW/frame_16.png",
+      "sha256": "f8d771b18a97960b0adbcd3662836bd25e330ca954f25d6de6dc7b51bb809874",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "NW16：解剖左/盾侧/屏左持续支撑；鞋跟近、鞋尖沿左上行进轴，摆动腿可辨。13–16新原生及全16帧连图实际复核通过。"
+    },
+    {
+      "file": "frames/run/S/frame_01.png",
+      "sha256": "ed5cb4b64eba643c94950d404f362dd10082519ff6b9ecc599de519752c76075",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 01：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_02.png",
+      "sha256": "03bb9c87be4772b87d75fc8565838dc883167909fa2516cfeb408bc0646b0c6e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 02：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_03.png",
+      "sha256": "a5e09a06d403458173fc507f974064d7546850e8d676d5fd219b991287e3b444",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 03：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_04.png",
+      "sha256": "813f7d38c2f6505b1fbdfd7812ba7b07c92f10879ea0de3839fd916fdbacdcfb",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 04：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_05.png",
+      "sha256": "321f5e4a79f011b966c1651a4c422d596ecda98fe13266b0a1c3c137200c163e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 05：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_06.png",
+      "sha256": "d1fdfa137f16977e4d71fa0a2a1f9a0edce7ed41e583244c7ee42ad79ac205a4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 06：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_07.png",
+      "sha256": "047fc7c8044df592b75dcab42a3deda36aa86de421389539ce0a7af6c3f4bfb1",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 07：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_08.png",
+      "sha256": "cf7f97ac1013a72e00c273384f7f6eb18a0c4dcffe19665c4869cdb9b4a398e4",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 08：解剖右/画面左脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_09.png",
+      "sha256": "4d6bec8514ad966ca5d887913c8d1998a53272ff039f82036cc6d45aa3c7be7d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 09：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_10.png",
+      "sha256": "777ef661b0c4d0cd2dd4cbb5a2f71dc8450d6a9f57c819df6e1f98fc94d4dda1",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 10：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_11.png",
+      "sha256": "7c2cb6ed36021334c3de312445c99a264f6a4dc94c1219ad8a89120a19babc2e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 11：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_12.png",
+      "sha256": "333a452b9c8a9ec7de722d56c135597a0fa590201adf7c1cba03b7eff2235732",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 12：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_13.png",
+      "sha256": "1d5124e9bd90c975012794272023c8a7d9562ef67164043d086e23c469583de2",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 13：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_14.png",
+      "sha256": "5714aa86eccbcdd3cfbe7eb71ca541d1ded5fe89e14bf483f8426bd8042b7213",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 14：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_15.png",
+      "sha256": "3c90fa9499fa66f093073a3fe63e0035f1193c9e3a026a9db038837cdbd01aba",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 15：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/S/frame_16.png",
+      "sha256": "6e1a334b8e0425ad04bf0c966da32fd69edc938101ee3f0fd17296707b7f6831",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "S 16：解剖左/画面右脚保持支撑，另一腿摆动；鞋尖沿南向而非左右外撇。逐图连图和支撑段原图复核；13–16屏幕接地点有透视与绘制小幅变化。"
+    },
+    {
+      "file": "frames/run/SE/frame_01.png",
+      "sha256": "b7292a1c1527f89abf2c58680a24e4fdfa2e80c07880300a9a9cc346b679137c",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE01：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_02.png",
+      "sha256": "ef79055d2dfdb4532ed1a70e92aac057560b74472c4a0644d0fb72ca364f3129",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE02：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_03.png",
+      "sha256": "fd7e3e74bbabf68028562c7dc981084ae1d3c1b00133878c6175051c75bb796b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE03：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_04.png",
+      "sha256": "c12576f34cabf3291c2535fe18f2fcfdb4ae2911d68bd47a23a145e584d9a288",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE04：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_05.png",
+      "sha256": "fb20987a17b950aea2f333b9b2b9606a3051ef9dc07b948508fa983897360cec",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE05：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_06.png",
+      "sha256": "e119cc642ac03360a05971ae2a260b62cd3b86ff7a95046ab9f75155e3a7e20b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE06：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_07.png",
+      "sha256": "ab016a52a948ee92bd2c8ed969df906e0fbf8081b702b408989386f01788ceea",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE07：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_08.png",
+      "sha256": "ec41e709afe74e299b8e0ac9da51697f3a2db576221a81369e90323ee865e105",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE08：解剖右/杖侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_09.png",
+      "sha256": "21a0c80ec3ac170bdb377f90f098de6964c544fbb59e2ab7795ba6eecba51a89",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE09：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_10.png",
+      "sha256": "234bc93d0535b372562afda9d1bc3dddfaa067c6be4e6209b2566697c6087178",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE10：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_11.png",
+      "sha256": "077bc0f7238718ee43f8abad44d47daf3169f0c103dcf7f9178144a7246765c1",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE11：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_12.png",
+      "sha256": "ccab9adabba1f0a447382c7092557081bdcb5c91b333336afe5961b33a51724d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE12：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_13.png",
+      "sha256": "ed798c985fa79718755556d65c231c4c2e472f5ec065ad98737bda69dde5c307",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE13：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_14.png",
+      "sha256": "2328ac4153bb18b2aee306805759d459fe13607b2e96a8a875049b9c0f9e251a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE14：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_15.png",
+      "sha256": "0bc9643a44beb726391b35cd4ced2bfcd6151847bd7938db46229ff4ea44d55b",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE15：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SE/frame_16.png",
+      "sha256": "7e0d6ed2128dc5aaf4b73b1018bc81b2bc255780c6bdb3d74e6c9f68ec800866",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SE16：解剖左/盾侧脚连续支撑；13–16先前反换腿的候选已退回，当前左脚保留屏右接地、右腿前摆。全组连图和15原图查看通过，鞋轴向右下、非横向八字外撇。"
+    },
+    {
+      "file": "frames/run/SW/frame_01.png",
+      "sha256": "356042586ebfc37dabb53156c4cbf0b7663f3faf7b7f068fc0ed9d184227859e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW01：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_02.png",
+      "sha256": "abab89c75c98e7384286d664c50ab1b685fd82678f66e0a201fc2aebe1e38bbb",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW02：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_03.png",
+      "sha256": "67ba4759678fa4943b77f984758fb8465645f7f99c68c222b5869e53fb460dea",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW03：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_04.png",
+      "sha256": "844f3e2b245c45a242a426c36600006fee87a5e3686a7cd72bec1d9b06b122be",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW04：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_05.png",
+      "sha256": "538efd2a02bed0ade791dda91b0ad2d9fa09f9f2776d71f20883eea27d476714",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW05：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_06.png",
+      "sha256": "d3ac26e67554ce5dfb214ba724f4d399c74da955c6f561d506002eb7877ce16d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW06：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_07.png",
+      "sha256": "7522d7f731ee8ddf487d8b64ea3f550c3c555311522d8948185453adf53f8672",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW07：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_08.png",
+      "sha256": "5fb61a7a042f1df6dc4d03155e293d9039626f87bb830537bee72f11eac06e5f",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW08：解剖右/屏左脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_09.png",
+      "sha256": "96e32aa77ac4fd02bb67993cd088697400167921052323d4e9c20610fa2a0e2a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW09：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_10.png",
+      "sha256": "e3e4f8722b3d05c599b18d589e0ac0b0c6eeb624ab466d5607162df6263b7255",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW10：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_11.png",
+      "sha256": "cccefb62c87ce7e9eb787ac645c536a9844ec47407e414ce4c46c1583c38c740",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW11：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_12.png",
+      "sha256": "76172ed1c0ec92fe73b3b8131d78d35259a375a3aa66a86b5c02f2c35c72a791",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW12：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_13.png",
+      "sha256": "97eca7670f240979e2b5cceb3d16e1e9793773408981883658ecb7697dbd6d01",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW13：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_14.png",
+      "sha256": "16d9c08a14c4761bf9310d213660d8747f80669e4aacc44efb56a626dfb2024e",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW14：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_15.png",
+      "sha256": "da3669ae21618a0f42591d6b8c060fe1cf3c8811d402d0ebac648320b7bde03f",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW15：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/SW/frame_16.png",
+      "sha256": "3c7280dcfeb5278d921f8334a63c9510a6285396bb1138f73fd4ed2c5dc093ed",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "SW16：解剖左/屏右脚维持支撑，另一腿前摆；两帧一段沿西南行進透视推进，无明显鞋掌横向外翻，杖盾手部归属连续。全16帧最终连图已实际核验。"
+    },
+    {
+      "file": "frames/run/W/frame_01.png",
+      "sha256": "a16d0d7b6bfa0c875bd596d28931c617029d0c4354c3f0170cd22917b5af51c9",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W01：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_02.png",
+      "sha256": "ca04d33bcc8e856903e14d9763312174b3fe3071758b6c9cc75d4ddf77c6e910",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W02：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_03.png",
+      "sha256": "9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W03：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_04.png",
+      "sha256": "593af3c5cd77550123cb9778cb1aa4b0748b668d1f131075c6e7e53d583fb47d",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W04：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_05.png",
+      "sha256": "684206b7efc11775af91b24f835d75cce627c677fc3b6db0f9ff847955d6fb5a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W05：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_06.png",
+      "sha256": "b904f544102a9c3182857547e9cb1b74e812854a6f527bcf45d2dd4f55652b3a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W06：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_07.png",
+      "sha256": "a2468831f8280228ebccbaa0ed776f3b2e5fd60665cc6f1f818e7e76b5c70812",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W07：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_08.png",
+      "sha256": "5cda74036c56ee30453013660e144df9bf3531a92144fbb3f8d167c42459b6d5",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W08：解剖左脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_09.png",
+      "sha256": "212d548887131b7e13809a0ee7917c9f33afa7e2907d440e7de64ff59052a6f5",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W09：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_10.png",
+      "sha256": "42805fce7d71bd3725466c8ed90cf9d3eb6d794887b9b0f78a29befc17472191",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W10：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_11.png",
+      "sha256": "420e26bec8b26b0eaa7a07df5b760a78dcac870c96d508201ec1bf3153953fe6",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W11：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_12.png",
+      "sha256": "339beec8a79e7dab76e66dae49c77bde74ffea5c95f1565a1047b1a11946d4a0",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W12：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_13.png",
+      "sha256": "32799b8d375218f763351d5db0460a32793aa59bcad9db39308bebdc46a803ce",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W13：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_14.png",
+      "sha256": "fc5db6838766f023f2f055d6b4f9527503e2c5c52243312c52e3f1abbfe573fc",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W14：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_15.png",
+      "sha256": "7d0d1ff21b9eacbeeb7b1e74970016717a6234011eea5da1e92bd5b12741b47a",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W15：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    },
+    {
+      "file": "frames/run/W/frame_16.png",
+      "sha256": "3cac0d04281db888995d0e6a2d02efc6656081a3e25c9425b3d1439729dcbf77",
+      "status": "visual_passed",
+      "independentPoseObserved": true,
+      "observation": "W16：解剖右脚持续支撑，依次初承重、身体经过、后支撑、前掌后蹬；鞋尖沿左方，另一腿前摆/回收，盾杖肩肘协同。完整16帧连图实际核验，手不换持物。"
+    }
+  ]
+}

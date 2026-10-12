@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>霞角鹿 · 战斗动作预览</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#161b22;color:#ecf0f4}body{margin:0;padding:24px;max-width:1480px;margin:auto}h1{font-size:24px;margin:0 0 8px}p{color:#acb9c9;line-height:1.5}button,select,input{font:inherit}button,select{border:1px solid #465668;background:#243142;color:inherit;border-radius:7px;padding:9px 13px;cursor:pointer}button[aria-pressed=true]{border-color:#b4d6c6;background:#315445}.groups,.controls,.links{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.layout{display:grid;grid-template-columns:minmax(360px,700px) minmax(280px,1fr);gap:24px}.stage{position:relative;aspect-ratio:1;border:1px solid #586679;border-radius:12px;overflow:hidden;background-color:#dfe4e8;background-image:linear-gradient(45deg,#fff5 25%,transparent 25%),linear-gradient(-45deg,#fff5 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#fff5 75%),linear-gradient(-45deg,transparent 75%,#fff5 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0px}.stage.dark{background-color:#252d37}.stage.white{background:#fff}.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.anchor{position:absolute;width:18px;height:18px;left:50%;top:92%;transform:translate(-50%,-50%);pointer-events:none;display:none}.anchor:before,.anchor:after{content:"";position:absolute;background:#d2235f}.anchor:before{width:18px;height:1px;top:9px}.anchor:after{height:18px;width:1px;left:9px}.stage.anchorOn .anchor{display:block}.missing{position:absolute;inset:0;display:grid;place-items:center;font-size:22px;color:#a52430}.badge{display:inline-block;font-size:13px;border:1px solid #435366;border-radius:5px;padding:4px 8px}#status{color:#d5e4f2}.readout{font-variant-numeric:tabular-nums;font-size:17px;margin:12px 0}input[type=range]{width:100%;margin:10px 0}dl{display:grid;grid-template-columns:120px 1fr;font-size:14px;line-height:1.55;gap:10px}dt{color:#a9b9c9}dd{margin:0;overflow-wrap:anywhere}a{color:#bdddcf}.links a{background:#263440;padding:8px;border-radius:5px;text-decoration:none}details{border-top:1px solid #3d4857;margin:18px 0;padding-top:15px}.contact{width:100%;background:#1a222b}pre{max-height:320px;overflow:auto;font-size:12px;white-space:pre-wrap;color:#becbdb}.note{font-size:13px;color:#aab8c9}@media(max-width:850px){body{padding:14px}.layout{grid-template-columns:1fr}}
+[hidden]{display:none!important}
+.layout{grid-template-columns:minmax(320px,520px) minmax(280px,1fr)}
+.stage{max-width:64vh}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.stage{max-width:100%}}
+</style></head><body>
+<h1>霞角鹿 · 战斗动作预览</h1>
+<p>独立 E 斜前 / W 斜后 · 受击 6 帧 · 普攻 12 帧 · 施法 16 帧</p>
+<div id="status" role="status"></div><nav class="groups" id="groups" aria-label="动作与方向"></nav>
+<div class="layout"><section>
+<div class="stage" id="stage"><img id="sprite" alt="当前动作帧"><div class="missing" id="missing" hidden></div><span class="anchor"></span></div>
+<div class="controls"><button id="play">暂停</button><button id="prev">上一帧</button><button id="next">下一帧</button><button id="restart">从头播放</button>
+<label>速度 <select id="speed"><option value="1">正常 1×</option><option value="0.25">慢放 0.25×</option></select></label>
+<label>背景 <select id="background"><option value="">棋盘格</option><option value="dark">深色棋盘格</option><option value="white">纯白</option></select></label>
+<label><input id="anchor" type="checkbox">显示脚点</label></div>
+<input id="scrub" type="range" min="1" max="12" value="1" aria-label="逐帧滑块">
+<div id="readout" class="readout" aria-live="off"></div>
+<p class="note">空格播放 / 暂停，左右方向键逐帧。逐帧时保持同一画布与比例。缺帧将显示空位，不会用其它图补帧。</p>
+</section><aside>
+<span class="badge" id="complete"></span><h2 id="groupTitle"></h2>
+<dl id="metadata"></dl><div class="links" id="links"></div>
+<details open><summary>检查范围</summary><p class="note">技术检查只验证文件、尺寸、alpha、SHA 和来源引用。动作连贯性与客户端验收独立记录。</p><pre id="validation"></pre></details>
+<details><summary>当前帧清单记录</summary><pre id="record"></pre></details>
+<details><summary>本组全帧总览</summary><img id="contact" class="contact" alt="本组全帧总览"></details>
+<div class="links"><a href="../manifest.json">manifest</a><a href="../validation.json">技术检查</a><a href="../SHA256SUMS.txt">SHA256</a></div>
+</aside></div>
+<script src="data.js"></script>
+<script>
+const D=window.DELIVERY, m=D.manifest, v=D.validation;
+const $=id=>document.getElementById(id);
+const names={hit:"受击",attack:"普攻",cast:"施法"};
+let group=m.groups[0],current=1,playing=true,speed=1,epoch=performance.now(),baseFrame=0,loads=0;
+const cached=new Map();
+m.frames.forEach(f=>{let im=new Image();im.src="../"+f.file;cached.set(f.id,im)});
+$("status").textContent="已导出 "+m.presentFrames+" / "+m.expectedFrames+" 帧 · 技术状态："+m.technicalStatus+" · 客户端尚未验收";
+$("validation").textContent=JSON.stringify({技术状态:v.technicalStatus,缺帧:v.missingFrames,错误:v.errors,提醒:v.warnings,美术动态检查:v.visualReview,客户端:v.clientIntegration},null,2);
+function link(text,path){let a=document.createElement("a");a.textContent=text;a.href="../"+path;a.target="_blank";return a}
+function render(){
+ const f=group.frames.find(x=>x.frame===current);
+ $("scrub").value=current;
+ $("readout").textContent=names[group.action]+" "+group.direction+" · "+String(current).padStart(2,"0")+" / "+group.expectedFrames+" · "+group.durationMs+" ms / 帧 · "+speed+"×";
+ $("sprite").hidden=!f;$("missing").hidden=!!f;
+ if(f){$("sprite").src="../"+f.file;$("sprite").alt=names[group.action]+" "+group.direction+" 第"+current+"帧"}
+ else{$("missing").textContent="第 "+current+" 帧尚未完成"}
+ $("metadata").replaceChildren();$("links").replaceChildren();
+ const facts=f?[["方向",group.direction==="E"?"斜前朝右下":"斜后朝左上"],["导出","1024 × 1024 · RGBA"],["原生",f.nativeSize.join(" × ")],["事件",f.event||"—"],["脚点","[512, 942] / pivot [0.5, 0.08]"],["透明像素",String(f.alpha.transparentPixels)],["边缘 alpha",String(f.alpha.edgeAlphaMax)],["SHA256",f.sha256]]:[["状态","此帧尚未完成"]];
+ facts.forEach(([k,value])=>{let dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=k;dd.textContent=value;$("metadata").append(dt,dd)});
+ if(f){$("links").append(link("透明 PNG",f.file),link("提示词",f.prompt),link("生成证据",f.generationRecord),link("导出来源",f.exportRecord))}
+ if(group.normalPreview)$("links").append(link("原时间 APNG",group.normalPreview),link("0.25× APNG",group.slowPreview));
+ $("record").textContent=JSON.stringify(f||{missing:current},null,2);
+}
+function resetClock(){epoch=performance.now();baseFrame=current-1}
+function setGroup(g){
+ group=g;current=1;resetClock();$("scrub").max=g.expectedFrames;
+ $("groupTitle").textContent=names[g.action]+" · "+g.direction;
+ $("complete").textContent=g.presentFrames+" / "+g.expectedFrames+" 帧"+(g.complete?" · 已齐":" · 制作中");
+ $("contact").src="../"+g.contactSheet;
+ document.querySelectorAll("#groups button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.group===g.id));
+ render();
+}
+m.groups.forEach(g=>{let b=document.createElement("button");b.textContent=names[g.action]+" "+g.direction;b.dataset.group=g.id;b.onclick=()=>setGroup(g);$("groups").append(b)});
+function setPlaying(value){playing=value;$("play").textContent=value?"暂停":"播放";resetClock()}
+$("play").onclick=()=>setPlaying(!playing);
+function step(delta){setPlaying(false);current=(current-1+delta+group.expectedFrames)%group.expectedFrames+1;render()}
+$("prev").onclick=()=>step(-1);$("next").onclick=()=>step(1);
+$("restart").onclick=()=>{current=1;setPlaying(true);render()};
+$("scrub").oninput=()=>{setPlaying(false);current=Number($("scrub").value);render()};
+$("speed").onchange=()=>{speed=Number($("speed").value);resetClock();render()};
+$("background").onchange=()=>{$("stage").className="stage "+$("background").value+($("anchor").checked?" anchorOn":"")};
+$("anchor").onchange=()=>{$("stage").classList.toggle("anchorOn",$("anchor").checked)};
+document.addEventListener("keydown",e=>{if(e.target.matches("select,input"))return;if(e.code==="Space"){e.preventDefault();setPlaying(!playing)}if(e.code==="ArrowLeft")step(-1);if(e.code==="ArrowRight")step(1)});
+function tick(now){if(playing){let n=(baseFrame+Math.floor((now-epoch)*speed/group.durationMs))%group.expectedFrames+1;if(n!==current){current=n;render()}}requestAnimationFrame(tick)}
+setGroup(group);requestAnimationFrame(tick);
+</script></body></html>

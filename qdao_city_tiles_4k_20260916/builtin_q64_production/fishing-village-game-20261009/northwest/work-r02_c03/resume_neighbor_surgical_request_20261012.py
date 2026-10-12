@@ -1,0 +1,13 @@
+from production import *
+from datetime import datetime,timezone
+D=W/'resume-20261012-v1';n='r02_r03_roof_neighbor_surgical_v04';target=D/(n+'.target.png');source=D/'composition-v10/west-joint.png';shutil.copy2(source,target);b=[7565,8077,8819,9331]
+write(str(target)+'.derivation.json',{'file':str(target),'sha256':sha(target),'globalNativeBox':b,'source':str(source),'sourceSha256':sha(source),'resampled':False,'role':'actual exact native edit target of the remaining neighbor ceramic joint'})
+refs=[str(target).replace('\\','/')]+[str(p).replace('\\','/') for p in REFS];roles=['EDIT TARGET: actual current native neighbor ceramic joint','REFERENCE: whole village layout only','REFERENCE: material detail only','PRIMARY REFERENCE: Q-style Daoist game painting']
+prompt='''Use case: precise-object-edit
+Asset type: exact native 1254x1254 local blue ceramic seam repair for a daylight isometric Q-style Daoist game village map.
+Input images: Image 1 is the actual EDIT TARGET; image 2 is whole-village layout only; image 3 is material detail; image 4 is the PRIMARY Q-style Daoist game painting reference.
+Primary request: Repair only the two tiny visibly broken blue ceramic connectors near the upper middle of image 1: a small hard-edged triangular fragment around x=560,y=108 and a pinched black protruding rim corner around x=592,y=188. The damaged area is limited to x=490..700,y=60..285. Make the existing barrel-tile cylinder and its single rounded raised rim continuous and smooth through those tiny breaks. Retain the exact existing tile rows, tube widths, positions, orientation and highlight bands. Do not move or rephase any row or add any tiles.
+Style/materials: retain the existing azure glazed ceramic, bright warm daylight, shadow direction, painted Q-style finish and exact camera.
+Constraints: opaque 1254x1254 PNG. Preserve every part of the image outside that tiny repair area, including all undamaged ceramic texture, orange eave and beams, architecture and the outer borders. No new objects, text, watermark or transparency. This is a surgical defect correction, not an overall redraw.'''
+pp=D/(n+'.prompt.txt');pp.write_text(prompt,encoding='utf8');write(D/(n+'.request.json'),{'requestedAtUtc':datetime.now(timezone.utc).isoformat(),'route':'builtin','tool':'image_gen.imagegen','globalNativeBox':b,'promptFile':str(pp),'prompt':prompt,'referenced_image_paths':refs,'referenceRoles':roles,'references':[{'file':p,'role':r,'sha256':sha(p)} for p,r in zip(refs,roles)],'transparent_background':False,'actualModel':None,'actualQuality':None,'modelQualityReason':'Built-in exposes no model/quality selectors or actual response metadata.'})
+print(str(D/(n+'.request.json')))

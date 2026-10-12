@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Supplementary southern boundary visual QA against the final r04_c05 candidate. Earlier historical reports are preserved.",
+  "sourceCandidates": {
+    "north": {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c05/candidate/r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.png",
+      "sha256": "60ecd41051d16e950bd301453236cec3cd0227945ac8d034b9e379e6fce89760",
+      "pixels": [4096, 4096]
+    },
+    "south": {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/candidate/r04_c05-pipeline-minimum-error-e2769dba9467-6e5fcf.png",
+      "sha256": "ac954e1d5fbbbcfdba1a0cf4caef511d80a47d6edc5a51271785d8abc78919ac",
+      "pixels": [4096, 4096]
+    }
+  },
+  "sourceHashesValidated": true,
+  "sourceDimensionsValidated": true,
+  "method": "Four 1024x320 strips made by exact native-pixel crop/paste: upper 160 rows from r03_c05 bottom edge, lower 160 from final r04_c05 top edge. All four actually viewed using original-detail image viewer as one unscaled labelled batch. No resize, interpolation, image generation or source image edits.",
+  "cropManifest": "crop-manifest.json",
+  "viewedBatch": "south-latest-batch-native.png",
+  "formalAccepted": false,
+  "counts": {"PASS": 0, "FAIL": 4},
+  "items": [
+    {
+      "id": "south-segment01",
+      "evidence": "south-segment01.png",
+      "worldBox": [16384, 12128, 17408, 12448],
+      "formalBoundaryWorldY": 12288,
+      "verdict": "FAIL",
+      "actuallyViewed": true,
+      "finding": "北侧木门板及竖框接到南侧金色边框、红墙和红柱，实体类型及竖框位置冲突。新材质窄带没有修复结构不连续。"
+    },
+    {
+      "id": "south-segment02",
+      "evidence": "south-segment02.png",
+      "worldBox": [17408, 12128, 18432, 12448],
+      "formalBoundaryWorldY": 12288,
+      "verdict": "FAIL",
+      "actuallyViewed": true,
+      "finding": "北侧木门板与柱条直接切接南侧大红灯笼，灯笼弧面与轮廓在边界处无北向延续。"
+    },
+    {
+      "id": "south-segment03",
+      "evidence": "south-segment03.png",
+      "worldBox": [18432, 12128, 19456, 12448],
+      "formalBoundaryWorldY": 12288,
+      "verdict": "FAIL",
+      "actuallyViewed": true,
+      "finding": "北侧整片木门板接到南侧灯笼右缘、墙面、竖柱和格栅窗，材质与框线结构均未衔接。"
+    },
+    {
+      "id": "south-segment04",
+      "evidence": "south-segment04.png",
+      "worldBox": [19456, 12128, 20480, 12448],
+      "formalBoundaryWorldY": 12288,
+      "verdict": "FAIL",
+      "actuallyViewed": true,
+      "finding": "北侧木门板和红色竖柱接到南侧浅色窗格；窗框位置、面材及主体对象均有整段硬切。"
+    }
+  ],
+  "conclusion": "Latest true candidate comparison still fails all four southern segments. This supplement supersedes the old southern candidate comparison for the stated final hashes; it does not revise the historical QA or claim that a southern repair was attempted.",
+  "southernRepairAttempted": false,
+  "southernRepairMerged": false,
+  "selectionOrProgressModified": false
+}

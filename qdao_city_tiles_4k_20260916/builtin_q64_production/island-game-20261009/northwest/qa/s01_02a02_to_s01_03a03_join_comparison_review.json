@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-09 17:45:00 UTC",
+  "reviewer": "audit_contract",
+  "decision": "mechanical_join_insufficient_local_builtin_repair_of_left_source_required",
+  "rightNative": "r03_c03_s01_03_a03",
+  "rightNativeLayoutStatus": "usable_candidate_layout_repair",
+  "layoutFindings": [
+    "Lantern lower right silhouette now reaches approximately x840, within the guide's approximate x820..880 boundary band.",
+    "Lantern crown and suspension now sit at approximately x370 as specified by the root repair instruction.",
+    "Right pillar extends to the right edge again; the previously incorrect lower-right white wall strip has been removed.",
+    "These layout findings do not certify the neighboring seam."
+  ],
+  "testedMethods": [
+    {
+      "method": "dynamic_programming_minimum_error_hard_seam",
+      "record": "s01_02a02_to_s01_03a03_hard_minerror.json",
+      "combinedSha256": "47f49d9aaa55024583386ecaac2815ad5a19eb91452aac5a890256236d243fb4",
+      "decision": "reject_current_join",
+      "finding": "No complete duplicate lantern crown survives, but the seam retains portions of the old lantern surface at y905..1253, producing clearly broken shoulder/rib curves and conspicuous paint-value steps."
+    },
+    {
+      "method": "one_fixed_cut_at_overlap_x0",
+      "record": "s01_02a02_to_s01_03a03_fixed_left_overlap0.json",
+      "combinedSha256": "424a015f6698059ebd3f2c909ccee4a37cfc3765cf7cb9d563a99c2a1704c882",
+      "decision": "reject_current_join",
+      "finding": "Using the entire corrected right overlap removes stale crown/suspension. Roof and wood geometry are broadly continuous. However, around y960 onward the lantern shoulder highlight/outline shifts across the cut; at y1080..1160 the rib transition differs by roughly 20..30 pixels and a vertical value step remains to the bottom. This does not meet the requested no-object-discontinuity condition.",
+      "referencePixelCheck": "Combined first 1254 columns are exactly equal to guides/r03_c03_s01_02_a03.native-joint-edit.png."
+    }
+  ],
+  "recommendedRepair": {
+    "source": "r03_c03_s01_02_a02",
+    "approximatePrimaryRegionHalfOpen": [
+      950,
+      900,
+      1254,
+      1254
+    ],
+    "constraint": "Locally repaint the left-source lantern shoulder/ribs to meet the corrected right source, using its exact left edge as the native continuation constraint. Preserve the corrected right lantern size, suspension location and right pillar.",
+    "note": "Repair may need a modest surrounding context for smooth object geometry; do not feather, register, color-correct or shift source pixels as a substitute."
+  },
+  "onlyQaWritten": true,
+  "nativeSourcesModified": false,
+  "progressModified": false,
+  "formalAcceptance": false
+}

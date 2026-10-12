@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "patch": "r12_c06_p01_01",
+  "version": "v01",
+  "tool": "image_gen.imagegen",
+  "submittedArguments": {
+    "prompt": "Use case: stylized-concept\nAsset type: one ORIGINAL native raster patch of the approved fishing-village game map, not a whole scene or overview.\nOutput exactly 1254 by 1254 pixels, square, opaque, rendered at native detail.\nPatch ID r12_c06_p01_01_v01. Global native box [20365,44941,21619,46195]; central core [115,115,1139,1139] is 1024 square. Preserve the guide composition exactly, no zoom or camera change.\nInput images:\n1: exact coordinate layout guide. It is deliberately blurry enlarged layout-only material. REDRAW all surfaces crisply; do not upscale or reproduce blur.\n2: actual native NORTH overlap, size 1254x230. This strip corresponds exactly to the TOP 230 pixels of the requested output. Continue its warm sandy ground, fine pebble scale, sunlight and left soft shadow smoothly. Preserve matching pebbles/tones along the top; do not copy it over the whole image.\n3: nearby approved coordinate layout overview only; use it to understand that this patch is at the northern edge of the existing coast rock cluster, not to add a new rock or alter the shore.\n4: approved map close-up for handpainted Q Daoist surface quality only. Do not import its temple, stairs, statues, paving or lanterns.\n5: approved mail UI for detailed Q Daoist handpainted material/style only. Do not import its characters, text, frames, moon or night lighting.\nExact patch composition: open pale warm sandy beach across the top and right. A cropped portion of an EXISTING large rounded coastal boulder enters from the left and bottom: its softly warm pink-grey illuminated planes occupy the lower-left and lower-middle as in image1, with a slate-grey/lavender shadow plane near bottom-middle. Another cropped grey-pink rock is at extreme bottom-right as in guide. Keep all rock silhouettes/positions and sand wedge widths from image1. Top 230 pixels remain sandy and match image2. No sea or wave line is visible inside this specific patch.\nStyle: finely painted, rounded Daoist Q game art matching provided approved maps; matte stone with nuanced warm sunlight and cool grey shadow, restrained tiny mineral texture; warm sand with small scattered pebbles and subtle brushwork. Consistent approved elevated isometric/top-down map camera; all surfaces sharp and coherent at native scale.\nConstraints: no added rocks beyond guide silhouettes, no added coastline, no architecture, characters, props, trees, boats, text, UI, watermark, grid, frame. No plastic gloss, blurry enlarged detail, heavy outlines or noisy stippling. Return only this single complete patch.",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/r12_c06_p01_01.layout-only.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/r12_c06_p01_01.north-overlap-native.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/batch-layout-only.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-detail-v1.png",
+      "D:/work/image/designs/mail-ui-v1/01-mail-event.png"
+    ],
+    "transparent_background": false
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "requestedNativeDimensions": [
+    1254,
+    1254
+  ],
+  "actualModelEvidence": "not returned until tool result; preference is not evidence",
+  "allocation": "allocated_root_reserved",
+  "ownerAcknowledgementClaimed": false,
+  "requestedAtUtc": "2026-10-13T07:40:45.033779+00:00",
+  "references": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/r12_c06_p01_01.layout-only.png",
+      "sha256": "e6468c5e6a07cebb326846effdb1169428ffce19a74a03ac4cf2a41d261ef18b",
+      "role": "exact-coordinate-layout-only"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/r12_c06_p01_01.north-overlap-native.png",
+      "sha256": "c8473825fd367ee9da3321f9da1331ce76c629509c8123381f25ec43edb0ab44",
+      "role": "native-north-overlap"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/guides/batch-layout-only.png",
+      "sha256": "4a0abcecd9e6181b2e6c1ba9ec19a58cf7b8b37a4a7fc253f68b37db2947fd9b",
+      "role": "batch-coordinate-layout-only"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-detail-v1.png",
+      "sha256": "db47c3d1699c4163734fb4cd155cecc8529ea6adb56f3e7533d375764cf9152c",
+      "role": "map-detail-style-only"
+    },
+    {
+      "path": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+      "sha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+      "role": "approved-mail-style-only"
+    }
+  ]
+}

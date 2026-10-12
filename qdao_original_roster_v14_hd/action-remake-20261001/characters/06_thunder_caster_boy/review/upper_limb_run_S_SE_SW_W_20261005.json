@@ -1,0 +1,1759 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-05T06:11:06.614847+00:00",
+  "scope": "run S/SE/SW/W共64帧，上肢解剖握持与邻帧摆臂，并按2026-10-05最新要求重新检查全腿轴线。",
+  "reviewer": "/root/finish_s",
+  "method": [
+    "逐张实际查看肩至手指原尺寸裁切，追踪肩袖、肘轮廓、袖口腕、握杆/握牌指节。",
+    "实际查看4张16帧完整顺序板，比对躯干相对肩肘位置，区分整体起伏与真实摆臂。",
+    "实际重新看64张髋到鞋头原尺寸图；不将昨日无横翻结论当本次结论。",
+    "SE01/02/03/04完整原图及02/03候选旧新同画幅图已看；生成只改授权02/03上肢。",
+    "追加实际查看修后W01/02/03、08/09/10六张完整runtime；顺序比较肩肘腕与持物前后位置，按新SHA独立复核。"
+  ],
+  "limitations": [
+    "此处记录静态与顺序邻帧观察，未冒称本代理播放整圈动画。",
+    "宽袖遮住部分肘腕，按可见袖轮廓与手掌连接判断，不捏造被遮挡手指数量。",
+    "斜向脚方向按整腿前后平面比较；不能把正常屈膝造成的2D折线本身判为错误。"
+  ],
+  "timingUntouched": {
+    "frameMs": 60,
+    "cycleMs": 960,
+    "pairMs": 120,
+    "note": "最新用户覆盖75ms；根窗口负责预览/manifest，本代理未改动画文件。"
+  },
+  "summary": {
+    "framesReviewed": 64,
+    "holdingSwapsFound": 0,
+    "confirmedWristInversionsFound": 0,
+    "confirmedIssues": [
+      "SE02/03左臂跨躯干跳变已局部修正，父窗口负责全圈验收",
+      "W02/W09已由父窗口修正并经本代理按01→03与08→10完整图独立复核"
+    ],
+    "wholeLegAdditionalConfirmedTargets": [],
+    "wholeLegWatch": [],
+    "correctedHere": [
+      "SE02",
+      "SE03"
+    ],
+    "otherPngsEditedHere": false,
+    "wholeLegRetainedAfterIndependentParentReview": [
+      "SE06/07：三分之四透视，髋→膝→踝→鞋头向右下，无确证外翻；保留"
+    ]
+  },
+  "findings": [
+    {
+      "id": "SE02-03-left-arm-cross-body",
+      "status": "locally-corrected-await-parent-sequence-review",
+      "detail": "旧02/03符牌位于画面左后、对侧右臂后方，而01及04牌在画面右侧；左肩到左腕的位置跨过躯干且相邻帧突跳。已把左袖、肘腕、符牌回到自身肩侧的画面右腰旁，右手继续握杖。",
+      "evidence": [
+        {
+          "file": "runtime/run/SE/01.png",
+          "frame": 1,
+          "sha256": "593124477e41ee6520271e6020b05ea4979e8ddb1a0d16ae83931d138f2ff77e",
+          "auditedSnapshotSha256": "593124477e41ee6520271e6020b05ea4979e8ddb1a0d16ae83931d138f2ff77e"
+        },
+        {
+          "file": "runtime/run/SE/02.png",
+          "frame": 2,
+          "sha256": "95595a70d29219079864e93eb52605df5b88d8761ff4581b6a90f4d98cca78f4",
+          "auditedSnapshotSha256": "566ba42861123e2b08e236936f08581d6bcbdc464059c2b1596a95bc066d76ad"
+        },
+        {
+          "file": "runtime/run/SE/03.png",
+          "frame": 3,
+          "sha256": "4bf4d3813ecb207aaac4971ee6e95b9362d2edd1134d4ec1e047126835a5152a",
+          "auditedSnapshotSha256": "0b9cacbf2eda8c3f041f5962820e9fe3dbefab17b13f6c92e8fab26b3f289257"
+        },
+        {
+          "file": "runtime/run/SE/04.png",
+          "frame": 4,
+          "sha256": "789c8730d353b9fb28b2810764903ea47c5eba7c5a2a1c6e3be2f6666c999b4c",
+          "auditedSnapshotSha256": "789c8730d353b9fb28b2810764903ea47c5eba7c5a2a1c6e3be2f6666c999b4c"
+        }
+      ],
+      "resolvedBy": [
+        {
+          "file": "runtime/run/SE/02.png",
+          "frame": 2,
+          "sha256": "95595a70d29219079864e93eb52605df5b88d8761ff4581b6a90f4d98cca78f4",
+          "auditedSnapshotSha256": "566ba42861123e2b08e236936f08581d6bcbdc464059c2b1596a95bc066d76ad"
+        },
+        {
+          "file": "runtime/run/SE/03.png",
+          "frame": 3,
+          "sha256": "4bf4d3813ecb207aaac4971ee6e95b9362d2edd1134d4ec1e047126835a5152a",
+          "auditedSnapshotSha256": "0b9cacbf2eda8c3f041f5962820e9fe3dbefab17b13f6c92e8fab26b3f289257"
+        }
+      ],
+      "candidateNotes": "02 v1头膨大拒绝；02 v2与03 v1按整幅比较保留头脸、相机及腿脚。实际model/quality为null，宿主管理未确认。"
+    },
+    {
+      "id": "W-two-transition-jumps",
+      "status": "resolved-by-parent-independent-local-review",
+      "detail": "旧W02→03、09→10肩肘交换集中；新02左牌由前位收至腰侧，右杖臂由后伸收至身侧，成为01与03之间的中间姿态。新09右拳由前伸回胸侧、左牌从后位回到胸腹旁，形成08与10之间反向过渡。握持不换手，腕与前臂顺接。",
+      "evidence": [
+        {
+          "file": "runtime/run/W/01.png",
+          "frame": 1,
+          "sha256": "e26313d8c888268e111d4b6fed8d83a12d9690651ebb8730543d46c7e2eeabb0",
+          "auditedSnapshotSha256": "e26313d8c888268e111d4b6fed8d83a12d9690651ebb8730543d46c7e2eeabb0"
+        },
+        {
+          "file": "runtime/run/W/02.png",
+          "frame": 2,
+          "sha256": "475b211cad48891c15b9ec3c2473c9d2fbf8bcc1e9da3af603e530188bea65ee",
+          "auditedSnapshotSha256": "7b4899e3e35f212f7855a2f8f00f43dd4a5d4486d8f987ae5cfc28704ff8b104"
+        },
+        {
+          "file": "runtime/run/W/03.png",
+          "frame": 3,
+          "sha256": "3e63a9809097a0e7303ff15e560bb7b4eb4912fd619e858945ad9d1b61bd3dee",
+          "auditedSnapshotSha256": "3e63a9809097a0e7303ff15e560bb7b4eb4912fd619e858945ad9d1b61bd3dee"
+        },
+        {
+          "file": "runtime/run/W/08.png",
+          "frame": 8,
+          "sha256": "77ce1e5cb7e78a059d1390f32c743522602dc1882634bced912ab7ac9ce1dcf8",
+          "auditedSnapshotSha256": "77ce1e5cb7e78a059d1390f32c743522602dc1882634bced912ab7ac9ce1dcf8"
+        },
+        {
+          "file": "runtime/run/W/09.png",
+          "frame": 9,
+          "sha256": "0641ba712250e3597c54e15995720bc46b3f400c0a01b3fb40b039b020744370",
+          "auditedSnapshotSha256": "e4b524efe1e95f72ff838ba238caca93a6c78b03d17b8ae134bef481713b7768"
+        },
+        {
+          "file": "runtime/run/W/10.png",
+          "frame": 10,
+          "sha256": "f1f9fd2ec484190b8fc128d2e81a09ed9813d614e2181a78e2e6deff4166342c",
+          "auditedSnapshotSha256": "f1f9fd2ec484190b8fc128d2e81a09ed9813d614e2181a78e2e6deff4166342c"
+        },
+        {
+          "file": "runtime/run/W/11.png",
+          "frame": 11,
+          "sha256": "6078f2aec2a8d567dcc74230e2343772dcda9e90fc95db5351b7ced6846a0b36",
+          "auditedSnapshotSha256": "6078f2aec2a8d567dcc74230e2343772dcda9e90fc95db5351b7ced6846a0b36"
+        }
+      ],
+      "suggestion": "保留新02/09。其它端点多帧停留是节奏观察项，本次局部静态与顺序复核不等于代签整个动态循环。",
+      "resolvedBy": [
+        {
+          "file": "runtime/run/W/02.png",
+          "sha256": "475b211cad48891c15b9ec3c2473c9d2fbf8bcc1e9da3af603e530188bea65ee",
+          "reviewedAt": "2026-10-05T09:22:18.883408+00:00"
+        },
+        {
+          "file": "runtime/run/W/09.png",
+          "sha256": "0641ba712250e3597c54e15995720bc46b3f400c0a01b3fb40b039b020744370",
+          "reviewedAt": "2026-10-05T09:22:18.883408+00:00"
+        }
+      ]
+    },
+    {
+      "id": "SE06-07-strict-whole-leg-watch",
+      "status": "retained-after-parent-independent-whole-leg-review",
+      "detail": "本代理整腿复看未确证独立外折；父窗口另实际对照06/07原生、runtime及09角色同向06/07，确认髋→膝→踝和踝→鞋头均向右下推进。鞋底边近水平与鞋正面可见属于三分之四透视，不能要求鞋底边沿屏幕45度。",
+      "evidence": [
+        {
+          "file": "runtime/run/SE/06.png",
+          "frame": 6,
+          "sha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+          "auditedSnapshotSha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e"
+        },
+        {
+          "file": "runtime/run/SE/07.png",
+          "frame": 7,
+          "sha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+          "auditedSnapshotSha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7"
+        },
+        {
+          "file": "runtime/run/SE/08.png",
+          "frame": 8,
+          "sha256": "870dd73f940030b4a21a20603759115854164f7981e011562b8698d5b8c875cf",
+          "auditedSnapshotSha256": "870dd73f940030b4a21a20603759115854164f7981e011562b8698d5b8c875cf"
+        },
+        {
+          "file": "runtime/run/SE/09.png",
+          "frame": 9,
+          "sha256": "153a3b3f2953bf902c87ed754f79e3fc8e562341c8e99272540966f879ecf708",
+          "auditedSnapshotSha256": "153a3b3f2953bf902c87ed754f79e3fc8e562341c8e99272540966f879ecf708"
+        }
+      ],
+      "suggestion": "解除watch硬阻断并保留当前帧；不为了统一2D鞋底边角强行重画。",
+      "resolvedBy": [
+        {
+          "file": "runtime/run/SE/06.png",
+          "sha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+          "method": "父窗口独立完整图及09同向比较；本代理整腿原尺寸观察"
+        },
+        {
+          "file": "runtime/run/SE/07.png",
+          "sha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+          "method": "父窗口独立完整图及09同向比较；本代理整腿原尺寸观察"
+        }
+      ]
+    },
+    {
+      "id": "S-SW-endpoint-duration-watch",
+      "status": "observe-not-confirmed-anatomy-error",
+      "detail": "S03–09与SW04–08端点停留较多，但整圈确有肩肘前后交换，非整套固定持物；S10符牌斜转直较快。未发现比SE跨躯干/W一帧交换更明确的解剖错误。",
+      "evidence": [
+        {
+          "file": "runtime/run/S/09.png",
+          "frame": 9,
+          "sha256": "901e654e095b0c004f756fa9e933a34f421345b6ca0be0ea5ac3f873b96eaff3",
+          "auditedSnapshotSha256": "901e654e095b0c004f756fa9e933a34f421345b6ca0be0ea5ac3f873b96eaff3"
+        },
+        {
+          "file": "runtime/run/S/10.png",
+          "frame": 10,
+          "sha256": "730e9306be3ad7a7e82f2067e1d0ea5ae4fe0ea5f62e27ec93c9169ebe22b393",
+          "auditedSnapshotSha256": "730e9306be3ad7a7e82f2067e1d0ea5ae4fe0ea5f62e27ec93c9169ebe22b393"
+        },
+        {
+          "file": "runtime/run/S/11.png",
+          "frame": 11,
+          "sha256": "f5c3306a68a2926ff542f288e446052c7544b8f907907c808a27f6e886fed1a4",
+          "auditedSnapshotSha256": "f5c3306a68a2926ff542f288e446052c7544b8f907907c808a27f6e886fed1a4"
+        },
+        {
+          "file": "runtime/run/SW/08.png",
+          "frame": 8,
+          "sha256": "82faa4d988a1000694f8f5ab3f2a8a2a642a8312b0a65848d859284980cf3337",
+          "auditedSnapshotSha256": "82faa4d988a1000694f8f5ab3f2a8a2a642a8312b0a65848d859284980cf3337"
+        },
+        {
+          "file": "runtime/run/SW/09.png",
+          "frame": 9,
+          "sha256": "252f97bd4414f20a50776b6684036455adb78e6d04a532cfa8ceb3777b7df041",
+          "auditedSnapshotSha256": "252f97bd4414f20a50776b6684036455adb78e6d04a532cfa8ceb3777b7df041"
+        },
+        {
+          "file": "runtime/run/SW/10.png",
+          "frame": 10,
+          "sha256": "e9e1c68404e6f043452a10274b98073e630236db5a8ae6048b29221d4f721621",
+          "auditedSnapshotSha256": "e9e1c68404e6f043452a10274b98073e630236db5a8ae6048b29221d4f721621"
+        }
+      ],
+      "suggestion": "先保留，主窗口正常节奏复看后再决定是否补过渡。"
+    }
+  ],
+  "frames": [
+    {
+      "file": "runtime/run/S/00.png",
+      "sha256": "5aad372360763aa6f332c42c2c5591d6e985c25dca5ca4d47823898a2787e426",
+      "frame": 0,
+      "direction": "S",
+      "auditedSnapshotSha256": "5aad372360763aa6f332c42c2c5591d6e985c25dca5ca4d47823898a2787e426",
+      "rightArm": "右肩稍后收，肘在侧腰，腕握杖身两青珠之间。",
+      "leftArm": "左肩前带、肘弯，手指托夹符牌下缘。",
+      "adjacentPoseObservation": "15→00同一后杖前牌姿态，01开始收肘。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋至右膝落在画面左列，右踝和鞋中线继续正S；左腿折回在右列，未横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/01.png",
+      "sha256": "cf2bca4427712340ef53836e9e568474e25d0c97233184f01103d6eafecd797b",
+      "frame": 1,
+      "direction": "S",
+      "auditedSnapshotSha256": "cf2bca4427712340ef53836e9e568474e25d0c97233184f01103d6eafecd797b",
+      "rightArm": "右肘从腰侧前提，拳包住杖杆，腕未反折。",
+      "leftArm": "左肘较00收近，符牌依然握于下缘。",
+      "adjacentPoseObservation": "00→01手杖前移由肩肘变化带动。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋至右膝落在画面左列，右踝和鞋中线继续正S；左腿折回在右列，未横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/02.png",
+      "sha256": "704e29e7aa4e8642b778a873282e7315e10754c7fb694201cde6afb1f169bb7c",
+      "frame": 2,
+      "direction": "S",
+      "auditedSnapshotSha256": "704e29e7aa4e8642b778a873282e7315e10754c7fb694201cde6afb1f169bb7c",
+      "rightArm": "右肩前带，肘屈、拳正握；握点不跨青珠。",
+      "leftArm": "左牌靠胸，拇指与弯指夹住牌底部。",
+      "adjacentPoseObservation": "01→02微收近，03左肘开始后移。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿由髋下屈膝承重，踝鞋中线仍正S；左膝前提但鞋仍在自身腿列内。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/03.png",
+      "sha256": "11f40530ef031d842a0baee886985bafc4374332fd03984300f51a90de67a867",
+      "frame": 3,
+      "direction": "S",
+      "auditedSnapshotSha256": "11f40530ef031d842a0baee886985bafc4374332fd03984300f51a90de67a867",
+      "rightArm": "右肘前屈伸出，腕拳与杖轴相接。",
+      "leftArm": "左肩后摆，肘与符牌移到左侧腰后方。",
+      "adjacentPoseObservation": "02→03左臂后移幅度较大，但未跨到对侧肩。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿由髋下屈膝承重，踝鞋中线仍正S；左膝前提但鞋仍在自身腿列内。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/04.png",
+      "sha256": "556792e5e57c89e38e6b56853dfcef91041d13881b8677b87d448dfcda4ed0dd",
+      "frame": 4,
+      "direction": "S",
+      "auditedSnapshotSha256": "556792e5e57c89e38e6b56853dfcef91041d13881b8677b87d448dfcda4ed0dd",
+      "rightArm": "右前臂保持屈肘前伸，握点稳定。",
+      "leftArm": "左上臂后摆，前臂随袖口至后侧符牌。",
+      "adjacentPoseObservation": "03→04延续右前左后端点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿沿自身列后蹬，左髋向前提膝、踝与上翘鞋底仍居中，未横向外撇。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/05.png",
+      "sha256": "e75e89c0f5b1849ec21dde846b8fa8d96feca5b0278871318bfe4378b29c67dd",
+      "frame": 5,
+      "direction": "S",
+      "auditedSnapshotSha256": "e75e89c0f5b1849ec21dde846b8fa8d96feca5b0278871318bfe4378b29c67dd",
+      "rightArm": "右拳略收近而肘仍在前，手指环住杆。",
+      "leftArm": "左臂后带，牌下缘与手指连接。",
+      "adjacentPoseObservation": "04→05肩肘变化小，保留端点后续待节奏复核。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿沿自身列后蹬，左髋向前提膝、踝与上翘鞋底仍居中，未横向外撇。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/06.png",
+      "sha256": "a609539a62253e6a5eb14f2d319a5f4238dcd2b17d70b1b5adb988db6750b146",
+      "frame": 6,
+      "direction": "S",
+      "auditedSnapshotSha256": "a609539a62253e6a5eb14f2d319a5f4238dcd2b17d70b1b5adb988db6750b146",
+      "rightArm": "右拳随躯干稍下移，肘屈和腕轴连续。",
+      "leftArm": "左臂保持后摆，牌从袖后露出且未脱手。",
+      "adjacentPoseObservation": "05→06仍是前杖后牌，不是手腕单独抖动。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋前带、膝踝向下延伸到平掌鞋头，正S轴清楚；右腿折回没有向侧边叉开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/07.png",
+      "sha256": "af3ed79758964bbe291c74078313942346fc5839d5815bba95b33e6fb65be4b5",
+      "frame": 7,
+      "direction": "S",
+      "auditedSnapshotSha256": "af3ed79758964bbe291c74078313942346fc5839d5815bba95b33e6fb65be4b5",
+      "rightArm": "右拳较06略回收，握杆点仍在两珠之间。",
+      "leftArm": "左肘后摆幅度略减，牌与手保持接触。",
+      "adjacentPoseObservation": "06→07肩肘只小幅改变。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋前带、膝踝向下延伸到平掌鞋头，正S轴清楚；右腿折回没有向侧边叉开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/08.png",
+      "sha256": "0ce6ac8460655be9933383a8f8b4a7c55f12f4c5d996e66375d67f90f8d0f495",
+      "frame": 8,
+      "direction": "S",
+      "auditedSnapshotSha256": "0ce6ac8460655be9933383a8f8b4a7c55f12f4c5d996e66375d67f90f8d0f495",
+      "rightArm": "右臂前屈，肩到袖口轮廓可追踪。",
+      "leftArm": "左上臂向后外侧展开，手掌牢贴牌底。",
+      "adjacentPoseObservation": "07→08左肩袖形变化，未固定同一轮廓。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左膝踝前载回收而鞋头正S，右大腿后摆并屈膝，足部保持自身列。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/09.png",
+      "sha256": "901e654e095b0c004f756fa9e933a34f421345b6ca0be0ea5ac3f873b96eaff3",
+      "frame": 9,
+      "direction": "S",
+      "auditedSnapshotSha256": "901e654e095b0c004f756fa9e933a34f421345b6ca0be0ea5ac3f873b96eaff3",
+      "rightArm": "右手杖姿与08接近，腕未折断。",
+      "leftArm": "左臂仍在后方，牌与手随同一袖口。",
+      "adjacentPoseObservation": "08→09端点变化小；09→10是回摆起点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左膝踝前载回收而鞋头正S，右大腿后摆并屈膝，足部保持自身列。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/10.png",
+      "sha256": "730e9306be3ad7a7e82f2067e1d0ea5ae4fe0ea5f62e27ec93c9169ebe22b393",
+      "frame": 10,
+      "direction": "S",
+      "auditedSnapshotSha256": "730e9306be3ad7a7e82f2067e1d0ea5ae4fe0ea5f62e27ec93c9169ebe22b393",
+      "rightArm": "右肘开始收回胸侧，握杆手仍连续。",
+      "leftArm": "左肘向前下收，符牌由后方转至腰前并倾斜。",
+      "adjacentPoseObservation": "09→10→11回摆集中，牌倾角较快变化，列观察。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经过支撑膝踝，鞋头仍正S；右腿在自己的髋列前提，无横叉硬拧。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/11.png",
+      "sha256": "f5c3306a68a2926ff542f288e446052c7544b8f907907c808a27f6e886fed1a4",
+      "frame": 11,
+      "direction": "S",
+      "auditedSnapshotSha256": "f5c3306a68a2926ff542f288e446052c7544b8f907907c808a27f6e886fed1a4",
+      "rightArm": "右肘回到侧胸，拳握杖不漂移。",
+      "leftArm": "左前臂向前，符牌恢复直立，手指夹底边。",
+      "adjacentPoseObservation": "10→11牌从斜转直，未见腕倒折。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经过支撑膝踝，鞋头仍正S；右腿在自己的髋列前提，无横叉硬拧。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/12.png",
+      "sha256": "568571d9a0f77c37073492476b66eac3ea7e092ca0df080e1ecbfa9729d4c85b",
+      "frame": 12,
+      "direction": "S",
+      "auditedSnapshotSha256": "568571d9a0f77c37073492476b66eac3ea7e092ca0df080e1ecbfa9729d4c85b",
+      "rightArm": "右肩后收，肘及杖下移腰侧。",
+      "leftArm": "左肩前带，弯肘托牌于前方。",
+      "adjacentPoseObservation": "11→12形成右后左前端点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左后腿伸向正S运动平面的后端，右大腿前提，踝与前摆鞋底长轴居中。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/13.png",
+      "sha256": "373b0c4177cca61e0c5a80aa62a1d57469cc7752aeef3c419685a5894b36c27d",
+      "frame": 13,
+      "direction": "S",
+      "auditedSnapshotSha256": "373b0c4177cca61e0c5a80aa62a1d57469cc7752aeef3c419685a5894b36c27d",
+      "rightArm": "右肘保持后位，手指包住杆下段。",
+      "leftArm": "左前臂前伸，牌底被弯指稳定夹持。",
+      "adjacentPoseObservation": "12→13手杖略抬，属于肩肘变化。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左后腿伸向正S运动平面的后端，右大腿前提，踝与前摆鞋底长轴居中。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/14.png",
+      "sha256": "4979522e23c9995a7fc7cc05a8c509963a7e1c08439ea332cb2ca4079fea5df2",
+      "frame": 14,
+      "direction": "S",
+      "auditedSnapshotSha256": "4979522e23c9995a7fc7cc05a8c509963a7e1c08439ea332cb2ca4079fea5df2",
+      "rightArm": "右臂后摆，握杆拳靠侧腰。",
+      "leftArm": "左臂前屈，手指与牌底接触清楚。",
+      "adjacentPoseObservation": "13→14变化小，无换手。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右前膝踝至鞋头同在正S前后列，左腿后折，未出现前小腿配横向鞋头。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/S/15.png",
+      "sha256": "d46b0e7a5f8cfa7a5cbce4cc2c3290c56c19b091a70c480d9d4913b0e9bbd21b",
+      "frame": 15,
+      "direction": "S",
+      "auditedSnapshotSha256": "d46b0e7a5f8cfa7a5cbce4cc2c3290c56c19b091a70c480d9d4913b0e9bbd21b",
+      "rightArm": "右肩后带、肘靠腰，腕顺接握杆。",
+      "leftArm": "左肘前屈，牌立在手上且指节包覆底边。",
+      "adjacentPoseObservation": "14→15→00端点连续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右前膝踝至鞋头同在正S前后列，左腿后折，未出现前小腿配横向鞋头。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/S-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/S-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/S-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/00.png",
+      "sha256": "71480c276a2dbec37241425b7dab88ec07859430e9b30bb055e84a9967ef98cf",
+      "frame": 0,
+      "direction": "SE",
+      "auditedSnapshotSha256": "71480c276a2dbec37241425b7dab88ec07859430e9b30bb055e84a9967ef98cf",
+      "rightArm": "右肩后带，肘屈、拳在侧腰后，握点在青珠间。",
+      "leftArm": "左前臂在画面右前，手指托夹符牌底。",
+      "adjacentPoseObservation": "15→00手杖由后伸回收，肩肘有变化。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋至支撑膝踝向右下前端推进，鞋头仍在该前端；左腿在后侧屈膝回收。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/01.png",
+      "sha256": "593124477e41ee6520271e6020b05ea4979e8ddb1a0d16ae83931d138f2ff77e",
+      "frame": 1,
+      "direction": "SE",
+      "auditedSnapshotSha256": "593124477e41ee6520271e6020b05ea4979e8ddb1a0d16ae83931d138f2ff77e",
+      "rightArm": "右臂仍在后侧但肘略收，腕与握杆连续。",
+      "leftArm": "左牌处自己肩前下方，掌心托牌、指节包底。",
+      "adjacentPoseObservation": "旧01→02牌突然跨到画面左后，属确认跳变。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋至支撑膝踝向右下前端推进，鞋头仍在该前端；左腿在后侧屈膝回收。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/02.png",
+      "sha256": "95595a70d29219079864e93eb52605df5b88d8761ff4581b6a90f4d98cca78f4",
+      "frame": 2,
+      "direction": "SE",
+      "auditedSnapshotSha256": "566ba42861123e2b08e236936f08581d6bcbdc464059c2b1596a95bc066d76ad",
+      "rightArm": "修后右肘前屈，拳在胸侧，拇指与弯指固定杆身。",
+      "leftArm": "修后左袖由自身画面右肩向下，手握右腰旁牌下段。",
+      "adjacentPoseObservation": "旧左牌跨躯干现已消除；当前01→02为收臂。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋经过右膝，后段小腿向左后收而鞋头仍朝右前运动方向，属于后蹬同平面；左膝前提。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "corrected-local-arms-static-reviewed",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "已局部改上肢并逐图同画幅检查；左右持物不变，腿脚和相机保持。主窗口复核01→04连续效果。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。",
+        "candidateComparison": "review/run_SE_02_uppercontinuity_v2_compare.jpg"
+      },
+      "resolvedBy": {
+        "sha256": "95595a70d29219079864e93eb52605df5b88d8761ff4581b6a90f4d98cca78f4",
+        "generationRecord": "runtime/run/SE/02.png.generation.json"
+      }
+    },
+    {
+      "file": "runtime/run/SE/03.png",
+      "sha256": "4bf4d3813ecb207aaac4971ee6e95b9362d2edd1134d4ec1e047126835a5152a",
+      "frame": 3,
+      "direction": "SE",
+      "auditedSnapshotSha256": "0b9cacbf2eda8c3f041f5962820e9fe3dbefab17b13f6c92e8fab26b3f289257",
+      "rightArm": "修后右肘自然屈曲，杖倾角略变，腕未倒折。",
+      "leftArm": "修后左牌处画面右腰旁，肘腕沿自身肩侧相接。",
+      "adjacentPoseObservation": "旧03→04牌跨身回跳已消除，当前牌位同侧。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋经过右膝，后段小腿向左后收而鞋头仍朝右前运动方向，属于后蹬同平面；左膝前提。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "corrected-local-arms-static-reviewed",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "已局部改上肢并逐图同画幅检查；左右持物不变，腿脚和相机保持。主窗口复核01→04连续效果。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。",
+        "candidateComparison": "review/run_SE_03_uppercontinuity_v1_compare.jpg"
+      },
+      "resolvedBy": {
+        "sha256": "4bf4d3813ecb207aaac4971ee6e95b9362d2edd1134d4ec1e047126835a5152a",
+        "generationRecord": "runtime/run/SE/03.png.generation.json"
+      }
+    },
+    {
+      "file": "runtime/run/SE/04.png",
+      "sha256": "789c8730d353b9fb28b2810764903ea47c5eba7c5a2a1c6e3be2f6666c999b4c",
+      "frame": 4,
+      "direction": "SE",
+      "auditedSnapshotSha256": "789c8730d353b9fb28b2810764903ea47c5eba7c5a2a1c6e3be2f6666c999b4c",
+      "rightArm": "右肩前下带，弯肘握杖在胸左侧，握点稳定。",
+      "leftArm": "左肘在腰侧、牌略后下，手指托住下缘。",
+      "adjacentPoseObservation": "修后03→04牌保持同侧、略向下后移。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右大腿和小腿沿左后侧伸展，前掌朝运动前端；左大腿向右前抬，踝鞋随上翘，前后分腿而非横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/05.png",
+      "sha256": "f3e17a08f5b86600f0acc6ed6edfdc5a05176c38f2554e07466a2418f8d7af63",
+      "frame": 5,
+      "direction": "SE",
+      "auditedSnapshotSha256": "f3e17a08f5b86600f0acc6ed6edfdc5a05176c38f2554e07466a2418f8d7af63",
+      "rightArm": "右拳随上身前倾下带，肘与袖口连接。",
+      "leftArm": "左掌夹牌下端，腕随前臂自然微转。",
+      "adjacentPoseObservation": "04→05上身同类姿态，小幅摆动。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右大腿和小腿沿左后侧伸展，前掌朝运动前端；左大腿向右前抬，踝鞋随上翘，前后分腿而非横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/06.png",
+      "sha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+      "frame": 6,
+      "direction": "SE",
+      "auditedSnapshotSha256": "82548b248b38d5d84008e3df9020cd1d2ee7e9c516304cfc858e3bdb38c5887e",
+      "rightArm": "右握杆拳保持屈肘，杆在指间穿过且未漂移。",
+      "leftArm": "左肘低于肩，手托牌底侧，前臂未倒折。",
+      "adjacentPoseObservation": "05→06肩肘变化小；需整圈看停留感。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "髋→大腿→膝→踝与踝→鞋头朝右下推进；鞋底边较水平但鞋正面可见，三分之四透视成立，未确证独立外翻。父窗口对比09同向帧独立复核同意保留。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留当前帧，解除严格轴线watch硬阻断；不能要求鞋底边沿屏幕45度。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/07.png",
+      "sha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+      "frame": 7,
+      "direction": "SE",
+      "auditedSnapshotSha256": "37934c6b2af0631b2cfc245f433742d046a04acce9596e6118b15d820e6584b7",
+      "rightArm": "右肘稍回收，杖握点与06一致。",
+      "leftArm": "左手牌位随肩下移，仍在自身肩侧。",
+      "adjacentPoseObservation": "06→07不是孤立手部换位。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "髋→大腿→膝→踝与踝→鞋头朝右下推进；鞋底边较水平但鞋正面可见，三分之四透视成立，未确证独立外翻。父窗口对比09同向帧独立复核同意保留。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留当前帧，解除严格轴线watch硬阻断；不能要求鞋底边沿屏幕45度。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/08.png",
+      "sha256": "870dd73f940030b4a21a20603759115854164f7981e011562b8698d5b8c875cf",
+      "frame": 8,
+      "direction": "SE",
+      "auditedSnapshotSha256": "870dd73f940030b4a21a20603759115854164f7981e011562b8698d5b8c875cf",
+      "rightArm": "右臂在前侧屈肘，拳腕轴连贯。",
+      "leftArm": "左肘靠腰，牌沿侧腰直立，手在底部。",
+      "adjacentPoseObservation": "07→08整体姿态接近，端点停留较长。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左支撑腿由髋向右下经膝至踝，鞋头继续右前；鞋面展开较宽但不是向腿轴反侧，后腿折回。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/09.png",
+      "sha256": "153a3b3f2953bf902c87ed754f79e3fc8e562341c8e99272540966f879ecf708",
+      "frame": 9,
+      "direction": "SE",
+      "auditedSnapshotSha256": "153a3b3f2953bf902c87ed754f79e3fc8e562341c8e99272540966f879ecf708",
+      "rightArm": "右肩随躯干抬起，肘屈不变但手腕正常。",
+      "leftArm": "左手托牌稍后收，袖口覆盖腕部一部分。",
+      "adjacentPoseObservation": "08→09微变，未脱手或换手。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左支撑腿由髋向右下经膝至踝，鞋头继续右前；鞋面展开较宽但不是向腿轴反侧，后腿折回。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/10.png",
+      "sha256": "0e5cb498e9d34efc4bfcc4fb21f225d0b28e2769a5cc5409a8c619c798b5077d",
+      "frame": 10,
+      "direction": "SE",
+      "auditedSnapshotSha256": "0e5cb498e9d34efc4bfcc4fb21f225d0b28e2769a5cc5409a8c619c798b5077d",
+      "rightArm": "右肘收近躯干，握杆指节清楚。",
+      "leftArm": "左肘贴近侧腰，牌底与手指连在一起。",
+      "adjacentPoseObservation": "09→10仍为内收位置，11开始前带。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左膝与踝逐渐回髋下，鞋头在前方右下；右大腿后折，小腿与鞋没有另向体侧叉开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/11.png",
+      "sha256": "40128b4e31d86dc4ac8ba76d6fb4b42446d7cce22d68e88ccb8491880c64fefe",
+      "frame": 11,
+      "direction": "SE",
+      "auditedSnapshotSha256": "40128b4e31d86dc4ac8ba76d6fb4b42446d7cce22d68e88ccb8491880c64fefe",
+      "rightArm": "右上臂向后展开、肘稍屈，拳带杖回摆。",
+      "leftArm": "左肩带前臂前伸，掌心托夹符牌底部。",
+      "adjacentPoseObservation": "10→11两臂展开幅度增大，未跨错肩。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左膝与踝逐渐回髋下，鞋头在前方右下；右大腿后折，小腿与鞋没有另向体侧叉开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/12.png",
+      "sha256": "cc87336f83beefcc05d16bbc78a36ae1511a77ed184ad7afb7298ecd76e5cb29",
+      "frame": 12,
+      "direction": "SE",
+      "auditedSnapshotSha256": "cc87336f83beefcc05d16bbc78a36ae1511a77ed184ad7afb7298ecd76e5cb29",
+      "rightArm": "右臂后摆，肘微屈，腕顺接拳和杆。",
+      "leftArm": "左牌在自身肩前下方，手指贴住底边。",
+      "adjacentPoseObservation": "11→12延续右后左前。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经屈膝压向踝，后蹬鞋跟抬起、前掌仍在SE前端；右腿缩在前后摆动面。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/13.png",
+      "sha256": "8ac4504cb8e09770a9ccb0de608264ad52c720e44aab8104f4f5f60bf280bf59",
+      "frame": 13,
+      "direction": "SE",
+      "auditedSnapshotSha256": "8ac4504cb8e09770a9ccb0de608264ad52c720e44aab8104f4f5f60bf280bf59",
+      "rightArm": "右肘略上提，杖倾角随前臂变化，握点稳定。",
+      "leftArm": "左臂前屈，手掌与牌底相接。",
+      "adjacentPoseObservation": "12→13杖倾角变化来自臂而非脱握。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经屈膝压向踝，后蹬鞋跟抬起、前掌仍在SE前端；右腿缩在前后摆动面。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/14.png",
+      "sha256": "c9e768c48e963dfc58c989fbafeb4cf844689bd4510d8ce72891ddd50f697a8d",
+      "frame": 14,
+      "direction": "SE",
+      "auditedSnapshotSha256": "c9e768c48e963dfc58c989fbafeb4cf844689bd4510d8ce72891ddd50f697a8d",
+      "rightArm": "右臂后摆，握杆拳低于肩，腕未逆弯。",
+      "leftArm": "左肘前带，弯指夹牌下缘。",
+      "adjacentPoseObservation": "13→14轻回收，15右肘更展开。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋向前送膝，踝落在膝下前方、靴头继续右前；左腿在后侧折叠，未见横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SE/15.png",
+      "sha256": "6b8a820d3374a8ddd12c6cb4863418c0673ca36606c2507f6331f3055f4aea5d",
+      "frame": 15,
+      "direction": "SE",
+      "auditedSnapshotSha256": "6b8a820d3374a8ddd12c6cb4863418c0673ca36606c2507f6331f3055f4aea5d",
+      "rightArm": "右上臂后伸、肘趋伸直，拳带杖留在身后。",
+      "leftArm": "左臂前举符牌，握持底边稳定。",
+      "adjacentPoseObservation": "14→15→00存在真实肘伸再回收。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋向前送膝，踝落在膝下前方、靴头继续右前；左腿在后侧折叠，未见横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SE-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SE-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SE-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/00.png",
+      "sha256": "e25726eb740d3fac3dd92d0a854fb6017b6fcbfd1b7b2f5ec6c17920e8b3785f",
+      "frame": 0,
+      "direction": "SW",
+      "auditedSnapshotSha256": "e25726eb740d3fac3dd92d0a854fb6017b6fcbfd1b7b2f5ec6c17920e8b3785f",
+      "rightArm": "右肩后收、肘在侧腰，手握两青珠之间。",
+      "leftArm": "左肩前带、前臂展开，掌心托夹牌底。",
+      "adjacentPoseObservation": "15→00延续右后左前。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋向左下经膝到踝，鞋头在同一左前端；左腿后折，不把两膝向两侧打开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/01.png",
+      "sha256": "b35f0510a792193e4eae46494bb53b6eedd80e10519792b4f46d580410a14b77",
+      "frame": 1,
+      "direction": "SW",
+      "auditedSnapshotSha256": "b35f0510a792193e4eae46494bb53b6eedd80e10519792b4f46d580410a14b77",
+      "rightArm": "右肘由后向前收，握杖拳抬到胸侧。",
+      "leftArm": "左肘较00回收，牌仍沿自身肩侧。",
+      "adjacentPoseObservation": "00→01双肘开始交换。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋向左下经膝到踝，鞋头在同一左前端；左腿后折，不把两膝向两侧打开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/02.png",
+      "sha256": "8169578ae9dd0445f0484256b3a05b03edc08bad656f864e4987101b23073944",
+      "frame": 2,
+      "direction": "SW",
+      "auditedSnapshotSha256": "8169578ae9dd0445f0484256b3a05b03edc08bad656f864e4987101b23073944",
+      "rightArm": "右拳在胸前屈肘位置，指节包杆。",
+      "leftArm": "左肘贴近胸侧，符牌正立，手握底侧。",
+      "adjacentPoseObservation": "01→02内收持续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右支撑腿从髋下向后发展，膝屈、踝随之，鞋头仍朝SW；左膝在自身髋列前移。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/03.png",
+      "sha256": "9b33c4365c470fb15b5ed262875a9c22158f1f7beab407494f2a277f6f0b6108",
+      "frame": 3,
+      "direction": "SW",
+      "auditedSnapshotSha256": "9b33c4365c470fb15b5ed262875a9c22158f1f7beab407494f2a277f6f0b6108",
+      "rightArm": "右臂前屈，腕与拳杆连接正常。",
+      "leftArm": "左臂仍在前侧收肘，掌指托牌底。",
+      "adjacentPoseObservation": "02→03姿势微调，04左臂后摆。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右支撑腿从髋下向后发展，膝屈、踝随之，鞋头仍朝SW；左膝在自身髋列前移。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/04.png",
+      "sha256": "53f3137a9cdfb5795f0f79cd03bdaed8bb313187a71a427a55c861d3f52f9182",
+      "frame": 4,
+      "direction": "SW",
+      "auditedSnapshotSha256": "53f3137a9cdfb5795f0f79cd03bdaed8bb313187a71a427a55c861d3f52f9182",
+      "rightArm": "右肩前带、肘屈，拳握杖在身体前。",
+      "leftArm": "左肩后移，上臂至肘袖形可见，牌留在腰后。",
+      "adjacentPoseObservation": "03→04形成前杖后牌；没有跨到对侧。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋前送、膝踝连到左下鞋头，右腿后折；不是左右横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/05.png",
+      "sha256": "a407fed43d75053138d210224dd2ce8cbec4b5ceae2dc3c6720dc7f4657c253a",
+      "frame": 5,
+      "direction": "SW",
+      "auditedSnapshotSha256": "a407fed43d75053138d210224dd2ce8cbec4b5ceae2dc3c6720dc7f4657c253a",
+      "rightArm": "右前臂屈肘，手指包住杆身。",
+      "leftArm": "左肘后位，腕顺接符牌下端握手。",
+      "adjacentPoseObservation": "04→05端点接近但袖与肘位置略变。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋前送、膝踝连到左下鞋头，右腿后折；不是左右横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/06.png",
+      "sha256": "0bc8eaa2008e41215b330b72f02c94f4bd76336106cd2c262031faf345e8061f",
+      "frame": 6,
+      "direction": "SW",
+      "auditedSnapshotSha256": "0bc8eaa2008e41215b330b72f02c94f4bd76336106cd2c262031faf345e8061f",
+      "rightArm": "右握杖手在前方，拇指对握清楚。",
+      "leftArm": "左前臂后摆、牌在后腰，手不悬空。",
+      "adjacentPoseObservation": "05→06躯干随步伐下压，手随臂移动。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左腿前载压缩，膝踝到鞋头沿SW前后平面；右后折足近S投影但没有从踝另拐向外侧。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/07.png",
+      "sha256": "109a3d18d27e3f675f54b9588d6b1f7b225a87223fc7206e35797309753d306a",
+      "frame": 7,
+      "direction": "SW",
+      "auditedSnapshotSha256": "109a3d18d27e3f675f54b9588d6b1f7b225a87223fc7206e35797309753d306a",
+      "rightArm": "右腕接前臂，握杆位置不跨青珠。",
+      "leftArm": "左后臂牌位略抬，手腕未倒折。",
+      "adjacentPoseObservation": "06→07变化较小，属于端点段。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左腿前载压缩，膝踝到鞋头沿SW前后平面；右后折足近S投影但没有从踝另拐向外侧。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/08.png",
+      "sha256": "82faa4d988a1000694f8f5ab3f2a8a2a642a8312b0a65848d859284980cf3337",
+      "frame": 8,
+      "direction": "SW",
+      "auditedSnapshotSha256": "82faa4d988a1000694f8f5ab3f2a8a2a642a8312b0a65848d859284980cf3337",
+      "rightArm": "右肘前屈，拳杖连贯。",
+      "leftArm": "左臂仍后摆，牌下端被手扣持。",
+      "adjacentPoseObservation": "07→08后摆持续，09起回摆。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经过左支撑膝踝，鞋头沿左前；右大腿后收、膝自然折，不横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/09.png",
+      "sha256": "252f97bd4414f20a50776b6684036455adb78e6d04a532cfa8ceb3777b7df041",
+      "frame": 9,
+      "direction": "SW",
+      "auditedSnapshotSha256": "252f97bd4414f20a50776b6684036455adb78e6d04a532cfa8ceb3777b7df041",
+      "rightArm": "右肘微收，拳仍在前胸，腕正常。",
+      "leftArm": "左肩前转，肘和手由后腰移至身侧前；指节夹牌底角。",
+      "adjacentPoseObservation": "08→09左臂回摆幅度较大，未跨错误肩。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左髋经过左支撑膝踝，鞋头沿左前；右大腿后收、膝自然折，不横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/10.png",
+      "sha256": "e9e1c68404e6f043452a10274b98073e630236db5a8ae6048b29221d4f721621",
+      "frame": 10,
+      "direction": "SW",
+      "auditedSnapshotSha256": "e9e1c68404e6f043452a10274b98073e630236db5a8ae6048b29221d4f721621",
+      "rightArm": "右握杖拳随肩前倾，杆穿指间不漂移。",
+      "leftArm": "左肘继续前带，指节夹牌底角，腕自然旋转。",
+      "adjacentPoseObservation": "09→10手形同类且连接稳定。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左腿向右后方蹬离而鞋头朝SW前端；右腿由自身髋向左前摆，11鞋尖上翘露底，不仅凭露底判外翻。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/11.png",
+      "sha256": "f09a3e73673eceb1535a2003bbe8aee9db22945049258dbb3a05672cf240af90",
+      "frame": 11,
+      "direction": "SW",
+      "auditedSnapshotSha256": "f09a3e73673eceb1535a2003bbe8aee9db22945049258dbb3a05672cf240af90",
+      "rightArm": "右肘收回侧胸，杖握点仍在两珠之间。",
+      "leftArm": "左肘前屈，牌由底角握持转为底边托持。",
+      "adjacentPoseObservation": "10→11肘收与前臂旋转可解释手形变化。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "左腿向右后方蹬离而鞋头朝SW前端；右腿由自身髋向左前摆，11鞋尖上翘露底，不仅凭露底判外翻。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/12.png",
+      "sha256": "26406bf0693022f09f1e4231c94d8db8940ce674bd99b02e4e09e93d379b3c21",
+      "frame": 12,
+      "direction": "SW",
+      "auditedSnapshotSha256": "26406bf0693022f09f1e4231c94d8db8940ce674bd99b02e4e09e93d379b3c21",
+      "rightArm": "右肩后收，肘带杖退到侧腰。",
+      "leftArm": "左肩前带，手指托牌底边。",
+      "adjacentPoseObservation": "11→12进入右后左前。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋经前膝和踝到左下鞋头，左腿在身后折回；支撑小腿与鞋头未独立横折。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/13.png",
+      "sha256": "01bb612dd98b9fb00ae5c7ad19ee39fb772a27d4be8a15baced1b3a088eed096",
+      "frame": 13,
+      "direction": "SW",
+      "auditedSnapshotSha256": "01bb612dd98b9fb00ae5c7ad19ee39fb772a27d4be8a15baced1b3a088eed096",
+      "rightArm": "右上臂后摆更开，腕拳带杖后退。",
+      "leftArm": "左肘前屈，牌依然在手指中。",
+      "adjacentPoseObservation": "12→13后摆幅度增加，握点保持。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右髋经前膝和踝到左下鞋头，左腿在身后折回；支撑小腿与鞋头未独立横折。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/14.png",
+      "sha256": "76d35d4abb240e740e0cccf7d5e12e0ee26c0d038a74d45eab98504b42a83cdf",
+      "frame": 14,
+      "direction": "SW",
+      "auditedSnapshotSha256": "76d35d4abb240e740e0cccf7d5e12e0ee26c0d038a74d45eab98504b42a83cdf",
+      "rightArm": "右拳靠后腰，腕没有倒折。",
+      "leftArm": "左牌在前，弯指包住底边。",
+      "adjacentPoseObservation": "13→14小幅回摆。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿前载，膝踝与左前鞋头同一摆动面；左后腿收折，保持自然屈膝。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/SW/15.png",
+      "sha256": "065dd059595796877a3eb71c7b7a4f2c20366f025c2dbff931b235674060d7aa",
+      "frame": 15,
+      "direction": "SW",
+      "auditedSnapshotSha256": "065dd059595796877a3eb71c7b7a4f2c20366f025c2dbff931b235674060d7aa",
+      "rightArm": "右肘后收，手握杆下段但仍在青珠之间。",
+      "leftArm": "左前臂前带，牌底握点稳定。",
+      "adjacentPoseObservation": "14→15→00端点连续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "右腿前载，膝踝与左前鞋头同一摆动面；左后腿收折，保持自然屈膝。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/SW-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/SW-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/SW-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/00.png",
+      "sha256": "e51dbf3591514468a348afea5bba01b0dbbdd163990681833e818598e02c19c0",
+      "frame": 0,
+      "direction": "W",
+      "auditedSnapshotSha256": "e51dbf3591514468a348afea5bba01b0dbbdd163990681833e818598e02c19c0",
+      "rightArm": "远侧右肩后伸、肘略屈，拳抓杖杆于身后。",
+      "leftArm": "近侧左肩前带，弯肘握牌下段。",
+      "adjacentPoseObservation": "15→00基本处同一端点，幅度小。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "两髋沿W侧视前后展开，前膝屈曲、小腿落向前鞋跟，鞋头明确朝左；后腿折回无朝镜头侧叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/01.png",
+      "sha256": "e26313d8c888268e111d4b6fed8d83a12d9690651ebb8730543d46c7e2eeabb0",
+      "frame": 1,
+      "direction": "W",
+      "auditedSnapshotSha256": "e26313d8c888268e111d4b6fed8d83a12d9690651ebb8730543d46c7e2eeabb0",
+      "rightArm": "右后臂稍下移，腕和拳顺接杖杆。",
+      "leftArm": "左肘前位，牌下段握持不滑动。",
+      "adjacentPoseObservation": "00→01端点持续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "两髋沿W侧视前后展开，前膝屈曲、小腿落向前鞋跟，鞋头明确朝左；后腿折回无朝镜头侧叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/02.png",
+      "sha256": "475b211cad48891c15b9ec3c2473c9d2fbf8bcc1e9da3af603e530188bea65ee",
+      "frame": 2,
+      "direction": "W",
+      "auditedSnapshotSha256": "7b4899e3e35f212f7855a2f8f00f43dd4a5d4486d8f987ae5cfc28704ff8b104",
+      "rightArm": "右杖臂从后伸收至肋侧，肘屈且握杆点连续，作为向前摆的中间位。",
+      "leftArm": "左牌臂由前位回到腰侧，肩肘与袖口顺接，牌未换手。",
+      "adjacentPoseObservation": "实际顺看01→02→03，两臂经身侧中间位再交换，不再只跳两个端点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "支撑髋膝踝进入身体下方，鞋头仍向左；摆动腿后折后开始向前过，不外撇。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "parent-corrected-independently-reviewed",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留当前帧；端点长停留及全圈动态由主窗口复核，不冒称此处已播放整圈。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。",
+        "historicalDiagnosticsNote": "本字段旧裁切与顺序板属于auditedSnapshotSha256；当前复核直接看完整runtime。",
+        "currentActuallyViewed": [
+          "runtime/run/W/01.png",
+          "runtime/run/W/02.png",
+          "runtime/run/W/03.png"
+        ]
+      },
+      "previousReviewSha256": "7b4899e3e35f212f7855a2f8f00f43dd4a5d4486d8f987ae5cfc28704ff8b104",
+      "resolvedBy": {
+        "file": "runtime/run/W/02.png",
+        "sha256": "475b211cad48891c15b9ec3c2473c9d2fbf8bcc1e9da3af603e530188bea65ee",
+        "independentReviewedAt": "2026-10-05T09:22:18.883408+00:00"
+      }
+    },
+    {
+      "file": "runtime/run/W/03.png",
+      "sha256": "3e63a9809097a0e7303ff15e560bb7b4eb4912fd619e858945ad9d1b61bd3dee",
+      "frame": 3,
+      "direction": "W",
+      "auditedSnapshotSha256": "3e63a9809097a0e7303ff15e560bb7b4eb4912fd619e858945ad9d1b61bd3dee",
+      "rightArm": "右肩前送、肘屈，拳将杖带到身前。",
+      "leftArm": "左上臂后伸，腕顺接握牌手。",
+      "adjacentPoseObservation": "旧02→03为确认过渡集中；本帧端点可保留。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "支撑髋膝踝进入身体下方，鞋头仍向左；摆动腿后折后开始向前过，不外撇。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-0.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-0.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/04.png",
+      "sha256": "def8c9dc58af8efe82dc2570cdc5e2b429f29253efb1e4dda61c0f120809018f",
+      "frame": 4,
+      "direction": "W",
+      "auditedSnapshotSha256": "def8c9dc58af8efe82dc2570cdc5e2b429f29253efb1e4dda61c0f120809018f",
+      "rightArm": "右肘前屈，指节紧握杖杆。",
+      "leftArm": "左肩后带、肘微屈，牌后伸且手不断开。",
+      "adjacentPoseObservation": "03→04肩肘变化很少。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前大腿向左提，膝自然屈，踝鞋仍向W；后支撑腿向后延伸，鞋头同向左。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/05.png",
+      "sha256": "54da7e9999bbe7e94c2c1de11ee15e87aa2e5ec5d88c930c59a01fde65db23c3",
+      "frame": 5,
+      "direction": "W",
+      "auditedSnapshotSha256": "54da7e9999bbe7e94c2c1de11ee15e87aa2e5ec5d88c930c59a01fde65db23c3",
+      "rightArm": "右前拳杖握点稳定，腕未反折。",
+      "leftArm": "左肘后伸，手握牌下角保持。",
+      "adjacentPoseObservation": "04→05仍端点姿势，变化小。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前大腿向左提，膝自然屈，踝鞋仍向W；后支撑腿向后延伸，鞋头同向左。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/06.png",
+      "sha256": "256b998c0ada9a354f724e17ee99de09e166e285053c57126c51c02842a490ba",
+      "frame": 6,
+      "direction": "W",
+      "auditedSnapshotSha256": "256b998c0ada9a354f724e17ee99de09e166e285053c57126c51c02842a490ba",
+      "rightArm": "右肘与肩前摆轮廓连贯，拳握杆。",
+      "leftArm": "左臂后带，掌与牌连接自然。",
+      "adjacentPoseObservation": "05→06主体起伏较多，臂角变化少。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前膝伸展带小腿鞋头向左，后腿从髋到踝向右后蹬，两腿沿W前后平面分开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/07.png",
+      "sha256": "8c94d4b00dbed4779a0df4a32743ca77588c3fa89a6406c94d9851cba238aa15",
+      "frame": 7,
+      "direction": "W",
+      "auditedSnapshotSha256": "8c94d4b00dbed4779a0df4a32743ca77588c3fa89a6406c94d9851cba238aa15",
+      "rightArm": "右拳前位，杖轴与握点清楚。",
+      "leftArm": "左后臂伸展，腕没有向外折。",
+      "adjacentPoseObservation": "06→07肩肘近似端点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前膝伸展带小腿鞋头向左，后腿从髋到踝向右后蹬，两腿沿W前后平面分开。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-1.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-1.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/08.png",
+      "sha256": "77ce1e5cb7e78a059d1390f32c743522602dc1882634bced912ab7ac9ce1dcf8",
+      "frame": 8,
+      "direction": "W",
+      "auditedSnapshotSha256": "77ce1e5cb7e78a059d1390f32c743522602dc1882634bced912ab7ac9ce1dcf8",
+      "rightArm": "右肘仍前屈，杆与手未脱离。",
+      "leftArm": "左臂保持后伸、牌在腰后。",
+      "adjacentPoseObservation": "03–08长端点段，09开始交换。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前脚承重时膝踝位于髋前下，鞋头朝左；后腿折回仍在W侧视平面。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/09.png",
+      "sha256": "0641ba712250e3597c54e15995720bc46b3f400c0a01b3fb40b039b020744370",
+      "frame": 9,
+      "direction": "W",
+      "auditedSnapshotSha256": "e4b524efe1e95f72ff838ba238caca93a6c78b03d17b8ae134bef481713b7768",
+      "rightArm": "右杖臂由前伸收至胸侧，肘屈自然，为后摆准备。",
+      "leftArm": "左牌臂从后位向腹侧回收，腕与袖口自然衔接、直接握牌。",
+      "adjacentPoseObservation": "实际顺看08→09→10，前伸/后伸的两臂先回身侧，再继续反向摆动。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前脚承重时膝踝位于髋前下，鞋头朝左；后腿折回仍在W侧视平面。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "parent-corrected-independently-reviewed",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留当前帧；端点长停留及全圈动态由主窗口复核，不冒称此处已播放整圈。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。",
+        "historicalDiagnosticsNote": "本字段旧裁切与顺序板属于auditedSnapshotSha256；当前复核直接看完整runtime。",
+        "currentActuallyViewed": [
+          "runtime/run/W/08.png",
+          "runtime/run/W/09.png",
+          "runtime/run/W/10.png"
+        ]
+      },
+      "previousReviewSha256": "e4b524efe1e95f72ff838ba238caca93a6c78b03d17b8ae134bef481713b7768",
+      "resolvedBy": {
+        "file": "runtime/run/W/09.png",
+        "sha256": "0641ba712250e3597c54e15995720bc46b3f400c0a01b3fb40b039b020744370",
+        "independentReviewedAt": "2026-10-05T09:22:18.883408+00:00"
+      }
+    },
+    {
+      "file": "runtime/run/W/10.png",
+      "sha256": "f1f9fd2ec484190b8fc128d2e81a09ed9813d614e2181a78e2e6deff4166342c",
+      "frame": 10,
+      "direction": "W",
+      "auditedSnapshotSha256": "f1f9fd2ec484190b8fc128d2e81a09ed9813d614e2181a78e2e6deff4166342c",
+      "rightArm": "右臂收在身后，握杖拳在后侧腰。",
+      "leftArm": "左臂已向前、牌靠胸，腕连接正常。",
+      "adjacentPoseObservation": "旧09→10交换集中；11进一步伸臂。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "支撑腿髋膝踝向身体下方回收，鞋头向左；后抬脚随屈膝缩短，未朝镜头旋出。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/11.png",
+      "sha256": "6078f2aec2a8d567dcc74230e2343772dcda9e90fc95db5351b7ced6846a0b36",
+      "frame": 11,
+      "direction": "W",
+      "auditedSnapshotSha256": "6078f2aec2a8d567dcc74230e2343772dcda9e90fc95db5351b7ced6846a0b36",
+      "rightArm": "右肩后伸、肘趋直，拳带杖后摆。",
+      "leftArm": "左肩前送，屈肘持牌向前。",
+      "adjacentPoseObservation": "10→11展开到反端点。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "支撑腿髋膝踝向身体下方回收，鞋头向左；后抬脚随屈膝缩短，未朝镜头旋出。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-2.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-2.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/12.png",
+      "sha256": "5c78c9e3e2e4d01118fb405ff700c2d048a64c60724930db294015ac98470083",
+      "frame": 12,
+      "direction": "W",
+      "auditedSnapshotSha256": "5c78c9e3e2e4d01118fb405ff700c2d048a64c60724930db294015ac98470083",
+      "rightArm": "右后臂握杖稳定，腕不倒折。",
+      "leftArm": "左前臂举牌，指节贴牌下段。",
+      "adjacentPoseObservation": "11→12端点持续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前膝向左送，小腿与鞋沿W，后支撑腿逐渐伸长；前后步幅保留，不是横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/13.png",
+      "sha256": "0296c39ed84754e5db162584433cd44ec1862d22d558cc4fa9009442be395842",
+      "frame": 13,
+      "direction": "W",
+      "auditedSnapshotSha256": "0296c39ed84754e5db162584433cd44ec1862d22d558cc4fa9009442be395842",
+      "rightArm": "右手握杆，后肩到肘腕连续。",
+      "leftArm": "左手握牌底侧，肩肘前伸。",
+      "adjacentPoseObservation": "12→13臂角变化小。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "前膝向左送，小腿与鞋沿W，后支撑腿逐渐伸长；前后步幅保留，不是横叉。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/14.png",
+      "sha256": "11722dd1a296ca3048b1d4f1c41b3ded8585ec77282540574290e456e1b3e63f",
+      "frame": 14,
+      "direction": "W",
+      "auditedSnapshotSha256": "11722dd1a296ca3048b1d4f1c41b3ded8585ec77282540574290e456e1b3e63f",
+      "rightArm": "右臂后伸，握杆点未漂移。",
+      "leftArm": "左前臂持牌稳定，手腕顺接。",
+      "adjacentPoseObservation": "13→14端点持续。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "髋前后两腿分别向左前与右后伸，膝踝保持同一W侧视平面；前鞋上翘与后掌蹬地自然。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    },
+    {
+      "file": "runtime/run/W/15.png",
+      "sha256": "e3d193674d877f2e5dcdef6f5e020a5759d0be8f2bc6e1eeb439bc4c2fd426f6",
+      "frame": 15,
+      "direction": "W",
+      "auditedSnapshotSha256": "e3d193674d877f2e5dcdef6f5e020a5759d0be8f2bc6e1eeb439bc4c2fd426f6",
+      "rightArm": "右手杖后摆、肘稍屈，肩腕连贯。",
+      "leftArm": "左牌在前，手指固定牌底部。",
+      "adjacentPoseObservation": "14→15→00仍长端点段，由02/09过渡修补。",
+      "holdingAssignment": "解剖右手雷杖／左手符牌",
+      "wristAndFingers": "手指分组与握物接触实际可见；部分拇指或腕被牌/袖遮挡，不以遮挡判缺指。未确证腕倒折。",
+      "wholeLegAxisObservation": "髋前后两腿分别向左前与右后伸，膝踝保持同一W侧视平面；前鞋上翘与后掌蹬地自然。",
+      "fullLegAxisCriterion": "本次重新从髋经大腿、膝、小腿、踝看到鞋头，保留同一前后运动平面内的屈膝；不是要求2D关节成直线。",
+      "upperLimbStatus": "retained-no-confirmed-anatomy-error",
+      "wholeLegAxisStatus": "retain-no-confirmed-separate-twist",
+      "suggestion": "保留，勿为消除透视或露底强行改平。",
+      "evidence": {
+        "upperLimbCrop": "review/upper-limb-run-details-20261005/W-3.jpg",
+        "wholeLegCrop": "review/upper-limb-run-details-20261005/W-legs-3.jpg",
+        "sequence": "review/upper-limb-run-details-20261005/W-sequence.jpg",
+        "actuallyViewed": "上肢原尺寸、全腿原尺寸以及完整帧顺序板均已实际查看。"
+      }
+    }
+  ],
+  "mutations": {
+    "authorizedPngs": [
+      "runtime/run/SE/02.png",
+      "runtime/run/SE/03.png"
+    ],
+    "noGlobalStatusPreviewGitWrites": true,
+    "diagnosticJpegsOnly": "review/upper-limb-run-details-20261005与review/*_compare.jpg仅检查用"
+  },
+  "parentWUpdatesPending": false,
+  "lastIndependentRefreshAt": "2026-10-05T09:22:18.883408+00:00"
+}

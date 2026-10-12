@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T17:30:45.100575+00:00",
+  "scope": "Second-row vertical joins and full-width join between native rows 1 and 2, plus p02_03 layout alignment",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/two-rows-native-candidate.png",
+    "sha256": "9cc9e21e3cb73b7d9b03eb67a6829ef3337ec1bd5a41935bd17bd19e1e7a3065"
+  },
+  "sizeWidthHeight": [
+    4326,
+    2278
+  ],
+  "nativeSources": 8,
+  "complete4kCount": 0,
+  "formalAcceptedCount": 0,
+  "composition": "230px minimum error hard choice; no resize, feather, colour correction or drawing",
+  "verticalSecondRowReviews": [
+    {
+      "id": "row2-c1-c2",
+      "status": "no_definite_structural_break_found",
+      "finding": "Low stones, surrounding green leaves, root edge and dirt surface cross the join coherently."
+    },
+    {
+      "id": "row2-c2-c3",
+      "status": "no_definite_structural_break_found",
+      "finding": "Masonry courses and wall-to-ground edge continue; the later right-side wall-foot deviation is an absolute layout error, not a visible break at this seam."
+    },
+    {
+      "id": "row2-c3-c4",
+      "status": "no_definite_structural_break_found",
+      "finding": "Gold-capped timber post and wall edges remain continuous. The two rails on the right also appear in the original p02_04 layout guide; not treated as a seam artifact."
+    }
+  ],
+  "horizontalReview": {
+    "status": "no_definite_structural_break_found",
+    "fullWidthReviewed": 4326,
+    "cropPartsReviewed": 5,
+    "coverageBoxes": [
+      [
+        0,
+        794,
+        950,
+        1484
+      ],
+      [
+        850,
+        794,
+        1800,
+        1484
+      ],
+      [
+        1700,
+        794,
+        2650,
+        1484
+      ],
+      [
+        2550,
+        794,
+        3500,
+        1484
+      ],
+      [
+        3376,
+        794,
+        4326,
+        1484
+      ]
+    ],
+    "findings": [
+      "Tree trunk, left red architectural element and stone footing do not show a major broken contour at the row join.",
+      "Bushes and timber post remain coherent.",
+      "Masonry edges, rail, gold-capped post and paving continue across the row join."
+    ],
+    "limitation": "Visual inspection found no definite structural splice failure; this does not certify exterior joins, the entire layout or final acceptance."
+  },
+  "layoutIssue": {
+    "source": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/native/r09_c04_p02_03_v1.png",
+      "sha256": "def475c23b55164a28341d74ad851ec68d1b73480183a2f34bdc9fced1dde3a9"
+    },
+    "guide": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/layout-only/r09_c04_p02_03.png",
+      "sha256": "df707d85532513466ed420d892faf3e30c07775af1305d893c33f3359a46318e"
+    },
+    "status": "repair_before_downward_expansion",
+    "issue": "Wall foot immediately left of the right post is lower than the coordinate guide, increasing wall height and reducing the intended visible dirt-route area.",
+    "sourceRegionApprox": [
+      800,
+      1000,
+      1055,
+      1254
+    ],
+    "compositeRegionApprox": [
+      2848,
+      2024,
+      3103,
+      2278
+    ],
+    "globalRegionApprox": [
+      15021,
+      34677,
+      15276,
+      34931
+    ],
+    "estimatedDownwardDeviationPixels": [
+      100,
+      160
+    ],
+    "measurementPrecision": "Visual range; the low-resolution guide has approximately45.73 native pixels per reference sample.",
+    "impact": "The wrong wall-foot line enters the lower 230px context used to seed p03_03 and could propagate into the next row.",
+    "recommendation": "Keep already continuous upper and left geometry. Redraw lower masonry and lift the wall-to-ground boundary to the layout; do not translate or scale the entire native patch. Recheck the p02_04 lower-left adjacency after repair.",
+    "minimumSeamCanFix": false
+  },
+  "decisions": {
+    "continueDownwardFromP02_03": false,
+    "p02_04LowerLeftBoundary": "recheck after adjacent wall-foot repair; not automatically rejected as a standalone seam",
+    "allNativeInputsRemainCandidatesNotFormalTiles": true
+  },
+  "sourceHashesVerifiedUnchanged": true,
+  "writesRestrictedTo": "qa/two-rows*; no native/progress/production.py modification"
+}

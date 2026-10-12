@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T13:08:13.874Z",
+  "reviewType": "independent native 100-percent shared-edge visual review",
+  "status": "selected_row_partial_review_has_repair_blocker",
+  "scope": {
+    "tile": "r10_c03",
+    "selectedSnapshot": [
+      "r10_c03_s01_01_v02",
+      "r10_c03_s01_02_v01",
+      "r10_c03_s01_03_v01",
+      null
+    ],
+    "inspectedCoreGlobalX": [
+      8192,
+      11264
+    ],
+    "seamGlobalY": 36864,
+    "aboveActualFinal": "output/r09_c03-native-candidate-v05.png",
+    "aboveSha256": "cea1bdffed893cf86b95db496c0ac57c1dd6ff01d72d62a958842bf48b0b9705",
+    "excluded": "Unselected fourth column and later rows; no polling for them."
+  },
+  "method": "Read current local map and its QA notes, reviewed selected v02/v01 sources only, then generated 1:1 actual-v05 top/core-below shared-edge crops. Did not repeat whole-art source provenance validation.",
+  "findings": [
+    {
+      "id": "new_wallbase_flowers_and_rectangular_carryover",
+      "severity": "blocks_shared_edge_acceptance",
+      "sources": [
+        "r10_c03_s01_02_v01",
+        "r10_c03_s01_03_v01"
+      ],
+      "description": "A newly painted flower cluster conflicts with the existing above-tile pavement: flower tops terminate on the exact y=36864 tile boundary. The carried-over cluster and stone texture also terminate at an exact vertical x=10355 edge in the third core, creating a rectangular pasted region. This is a real object/geometry clipping defect, not just a tone mismatch.",
+      "exactSeamCoordinates": {
+        "topY": 36864,
+        "rightX": 10355
+      },
+      "approximateVisibleDefectGlobalBox": [
+        9936,
+        36864,
+        10355,
+        36985
+      ],
+      "recommendedMandatoryRepairGlobalBox": [
+        9930,
+        36850,
+        10370,
+        37015
+      ],
+      "evidence": "qa/r10-independent-flowers-and-right-rectangle-native100.png",
+      "evidenceGlobalBox": [
+        9916,
+        36774,
+        10416,
+        37034
+      ],
+      "evidenceSeamImageY": 90,
+      "recommendation": "Root is handling this crossing. Remove the unsupported flower strip and restore continuous stone pavement against the actual above tile; preserve legitimate stone joints and small joint weeds. Do not extend the clipped flower cluster as a workaround.",
+      "handoff": "Sent exact coordinates and evidence to /root and /root/lower_patch_resume; lower worker told not to duplicate root's repair."
+    },
+    {
+      "id": "first_core_package_leaf_rope_join",
+      "severity": "visible_shared_edge_needs_review_or_repair",
+      "source": "r10_c03_s01_01_v02",
+      "description": "The invented lower wall frame is gone in selected v02. However, at y=36864 the foreground package leaf brightness/strokes change abruptly and the rope texture/border transition is conspicuous. The broad package silhouette remains plausible; the horizontal material and local contour join should not be described as fully seamless.",
+      "approximateAffectedGlobalBox": [
+        8192,
+        36834,
+        8862,
+        36934
+      ],
+      "subregions": [
+        {
+          "kind": "rope",
+          "approximateGlobalBox": [
+            8192,
+            36834,
+            8392,
+            36934
+          ]
+        },
+        {
+          "kind": "leaf",
+          "approximateGlobalBox": [
+            8352,
+            36834,
+            8862,
+            36934
+          ]
+        }
+      ],
+      "evidence": "qa/r10-independent-package-leaf-rope-native100.png",
+      "evidenceGlobalBox": [
+        8192,
+        36774,
+        8862,
+        36974
+      ],
+      "evidenceSeamImageY": 90,
+      "recommendation": "Use a same-coordinate crossing repair if the top row is being finalized; preserve the already-approved package silhouette and rope placement. This is lower priority than the flower rectangle, but remains visible at native scale."
+    }
+  ],
+  "passes": [
+    {
+      "area": "s01_01 selected v02 lower wall",
+      "result": "No invented extra frame seen; do not reject it for the superseded v01 frame defect."
+    },
+    {
+      "area": "s01_02 post, stone foot and wall skirting",
+      "result": "Main contours cross the shared border continuously; no new large wooden/stone structure observed.",
+      "evidence": "qa/r10-independent-post-foot-and-wall-native100.png"
+    },
+    {
+      "area": "s01_03 gold/red column base and stair edge",
+      "result": "Column-base and stair contours remain connected across the shared edge outside the flower rectangle.",
+      "evidence": "qa/r10-independent-r10_c03_s01_03_v01-actual-v05-seam-native100.png"
+    }
+  ],
+  "evidenceManifest": "qa/r10-independent-evidence.json",
+  "limitations": [
+    "No claim of final tile or row acceptance.",
+    "Review restricted to three selected first-row cores at the map snapshot; fourth core was unselected.",
+    "No game/runtime tests or image generation performed."
+  ],
+  "writesRestrictedTo": "qa/r10-independent-*",
+  "sourceMapProgressIndexChanged": false
+}

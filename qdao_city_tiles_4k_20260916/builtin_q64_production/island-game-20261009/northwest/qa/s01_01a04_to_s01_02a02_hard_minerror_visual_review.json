@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-09 16:44:34 UTC",
+  "reviewer": "audit_contract",
+  "artifact": "s01_01a04_to_s01_02a02_hard_minerror_2278x1254.png",
+  "artifactSha256": "90e3fdbcbf4df52d0a581b627006fe66a8a7af9761ffdb264bf097aa6dde25ab",
+  "methodRecord": "s01_01a04_to_s01_02a02_hard_minerror.json",
+  "decision": "usable_candidate_for_continuing_native_expansion_not_final_seam_acceptance",
+  "inspectedAtNativePixels": [
+    "entire 480x1254 seam crop",
+    "y535..650 detail",
+    "y795..980 detail"
+  ],
+  "geometryFinding": "Roof tile grooves, tile overlap lines, upper beam silhouette and gold edge remain continuous; no full-tile phase shift, split groove, missing roof band, or silhouette step requiring structural repaint was observed.",
+  "remainingIssues": [
+    {
+      "yInclusive": [
+        220,
+        380
+      ],
+      "feature": "upper vermilion beam",
+      "finding": "Visible small color/value step follows a jagged minimum-error path near the right side of the overlap. Less abrupt than the initial vertical cut but still visible at 100%.",
+      "severity": "final-quality limitation; not a geometry break"
+    },
+    {
+      "yInclusive": [
+        535,
+        650
+      ],
+      "feature": "blue tile overlap highlights",
+      "finding": "Short changes in paint/highlight texture remain; tile count and groove direction continue across the cut.",
+      "severity": "small texture difference"
+    },
+    {
+      "yInclusive": [
+        795,
+        980
+      ],
+      "feature": "blue tiles and gold trim",
+      "finding": "Gold outer and inner edges continuous. No conspicuous seam step in this inspected interval.",
+      "severity": "no structural issue observed"
+    },
+    {
+      "yInclusive": [
+        1015,
+        1195
+      ],
+      "feature": "lower beam and gold curl",
+      "finding": "Contour continuous; minor natural-scale paint changes remain.",
+      "severity": "small texture difference"
+    }
+  ],
+  "limits": [
+    "This is a two-patch join, not a complete 4096x4096 game tile.",
+    "Formal acceptance remains with the root after remaining native patch joins and tile/zone edge review.",
+    "No feathering, registration, color correction, resizing, or generated pixels were used."
+  ],
+  "recommendedNextStep": "Continue adjacent native expansion using exact native overlap. Retain this deterministic hard join as a candidate; assess upper-beam color step during final join QA and use an authorized built-in local repair if it remains visibly unacceptable."
+}

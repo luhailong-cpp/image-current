@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "native_multi_source_alpha_derivation",
+  "tile": "r03_c04",
+  "repair": "roof-row-right",
+  "status": "LOCAL_PASS_ROOT_MAY_IMPORT",
+  "formalAccepted": false,
+  "contextTileBox": [
+    1433,
+    493,
+    2687,
+    1747
+  ],
+  "contextWorldBox": [
+    13721,
+    8685,
+    14975,
+    9939
+  ],
+  "base": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\candidate\\r03_c04-pipeline-minimum-error-5a45bea8726a-ccd4a3.png",
+    "sha256": "e0d58efd0b573055eb298cdecdd99cc3c03d8e4706371c4bc8c258d696339186",
+    "width": 4096,
+    "height": 4096,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "baseContext": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\context-native.png",
+    "sha256": "bd2d82db6627e1085e21349192cd6f438a4a28ac4b306956ee524b75f801d92b",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "raw": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\raw-v1.png",
+    "sha256": "c6b2d20d32ddd76bc04108c15d5839611db1bcb74570a64d96a998cb34146181",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "receipt": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\receipt-v1.json",
+    "sha256": "9737fb05afa521e6231b233c5f336c705fdc54ebf8d1614f147f20c843f7f870"
+  },
+  "alphaFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\alpha.png",
+  "alphaHash": "2b7571076b72cc616e2d0b188d3ea141e760bb6257adbdbdc646b5f473f14e56",
+  "supportPositiveMaskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\support-positive-mask.png",
+  "supportPositiveMaskHash": "635c74f5b589979b0d1cf05eed5cf5ea04783179def72a794a6680ddde7d8edd",
+  "derivedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\right\\derived-context.png",
+  "derivedHash": "4ab807dc1d49c4001e2b47a12339b84657ee077dedb7edab638e8dfc096dd00f",
+  "width": 1254,
+  "height": 1254,
+  "alphaFormula": "s(x,0,64)*(1-s(x,1000,1020))*s(y,470,530)*(1-s(y,700,760)), set to zero wherever x>=985 AND baseRed>baseBlue to preserve the actual gold ornament. x,y are pixel centers.",
+  "smoothstep": "s(v,a,b)=t*t*(3-2*t), t=clip((v-a)/(b-a),0,1)",
+  "alphaScale": 255,
+  "alphaQuantization": "floor(255*w+0.5)",
+  "blendFormula": "per-channel (base*(255-alpha)+raw*alpha+127)//255",
+  "positiveSupportContextBox": [
+    2,
+    472,
+    1019,
+    758
+  ],
+  "sameWorldCoordinateOnly": true,
+  "resizedAfterGeneration": false,
+  "finalArtUpscaled": false,
+  "spatialBlur": false,
+  "verifiedOutsideSupportUnchanged": true,
+  "verifiedGoldPixelsUnchanged": true,
+  "operation": "Copy this already-composited derived context only where support-positive-mask is nonzero. Do not apply alpha a second time. Or reconstruct from raw/base/alpha using the formula.",
+  "limits": "Right section only. Left section remains unresolved and must not be replaced with rejected left trial.",
+  "visualVerdict": "PASS after actual 1:1 view of final qa-right-join-native.png: repaired right section has rounded tile junctions, continuous gutters, no new triangular flap or double rim; unchanged unresolved left section remains outside this repair.",
+  "visualEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\qa-right-join-native.png",
+    "sha256": "7a24b0264dc191d7f474654eb434efcb0d8a0ed5b959dc38071636e31649f370",
+    "width": 1150,
+    "height": 420,
+    "tileBox": [
+      1370,
+      900,
+      2520,
+      1320
+    ]
+  }
+}

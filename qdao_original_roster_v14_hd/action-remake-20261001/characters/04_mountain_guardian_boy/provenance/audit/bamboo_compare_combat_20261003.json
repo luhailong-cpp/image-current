@@ -1,0 +1,1744 @@
+{
+  "schema": "qdao-bamboo-combat-comparison-v1",
+  "checkedAtUtc": "2026-10-04T01:53:03.620631+00:00",
+  "character": "04_mountain_guardian_boy",
+  "referenceCharacter": "09_bamboo_archer_girl",
+  "referenceManifest": {
+    "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\manifest.json",
+    "sha256": "12c7ebf1f8beb989ff1dea50040faf042c4a84fc27e3546917090f59545e7d4e"
+  },
+  "scope": {
+    "targetCombatFrames": 68,
+    "referenceCombatFrames": 68,
+    "contactSheetsViewed": 12,
+    "targetIndividualPngsViewed": 24,
+    "referenceIndividualPngsViewed": 8,
+    "imageEditsPerformed": false,
+    "sidecarOrManifestEditsPerformed": false
+  },
+  "criteria": [
+    "检查脚掌轴线相对同侧膝踝是否反拧，不要求所有持杖战斗帧复制弓箭手平行站姿。",
+    "自然后脚开角、提跟后蹬和收脚允许保留；不以缩小两腿间距替代脚向修复。",
+    "靴底高低须结合透视与承重相位；不按最低像素强行贴线。"
+  ],
+  "summary": {
+    "retain": 68,
+    "repairRequired": 0,
+    "repairSlots": [],
+    "bindingErrors": [],
+    "decision": "本轮未发现有充分静态证据必须修复的战斗槽，保留68张。此结论只回答新增09对照下脚掌/膝踝/承重问题，不写全角色视觉通过。"
+  },
+  "naturalStanceExamples": [
+    {
+      "slot": "attack/E/06",
+      "explanation": "屏左后侧膝、小腿和靴尖都朝左下展开；屏右前腿承接刺杖方向。鞋的开角没有逆着同侧膝踝。"
+    },
+    {
+      "slot": "attack/W/06",
+      "explanation": "屏右后侧膝、小腿和靴尖一起向右下展开，屏左前靴朝左；属于左右反向的发力弓步。"
+    },
+    {
+      "slot": "cast/W/10",
+      "explanation": "屏右后膝向右外展，踝与鞋掌同向承接；不是膝朝左而脚掌单独拧向右。"
+    }
+  ],
+  "timing": {
+    "referenceManifestCombatFrameMs": {
+      "hit": 40,
+      "attack": 30,
+      "cast": 45
+    },
+    "targetSpecifiedCombatFrameMs": {
+      "hit": 40,
+      "attack": 30,
+      "cast": 45
+    },
+    "combatDurationsMs": {
+      "hit": 240,
+      "attack": 360,
+      "cast": 720
+    },
+    "conclusion": "战斗规格时长与09一致；此次只读连图/单图，没有新增动态播放验收，未建议改战斗时长。跑步最新1200ms/75ms均匀要求由根处理，不在此战斗审计改动。"
+  },
+  "limitations": [
+    "裤腿遮挡部分真实关节，膝踝方向按可见轮廓作定性判断，没有宣称精确角度或骨骼测量。",
+    "本轮没有播放战斗GIF或进入客户端；不据静态站姿证明无脚滑、完整动态通过或客户端接入。",
+    "09为用户确认的动作参照；保留04本人的盾杖、体型与战斗发力差异。"
+  ],
+  "contacts": [
+    {
+      "action": "hit",
+      "direction": "E",
+      "target": {
+        "file": "preview/hit_E_contact.png",
+        "sha256": "5da4f35573b0292762c4285a4f908e145ead81aa3a9b3621251b4a7cc49b09f4",
+        "generationRecord": "preview/hit_E_contact.png.generation.json",
+        "generationRecordSha256": "fb1256124e0e773c9c433d86075a168560a857d166386f5dd08b4645071948be"
+      },
+      "reference": {
+        "file": "preview/qa/hit-E-contact.png",
+        "sha256": "59fc616888f339ec971f170be490f0e794ecf35ce9bda1d639b743bc6548a999",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "target": {
+        "file": "preview/hit_W_contact.png",
+        "sha256": "78850c2141c3bab0238a5395629cf798b766663f6b3eb387a32b0772f651dc37",
+        "generationRecord": "preview/hit_W_contact.png.generation.json",
+        "generationRecordSha256": "28b98184e335cb8d6fc918bc9ca6923c18570d0768366648d60ef1f17887103b"
+      },
+      "reference": {
+        "file": "preview/qa/hit-W-contact.png",
+        "sha256": "31e1221da9d4c9ce210511264f566072df569f96da826b4cc4876bd84c30fa64",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "target": {
+        "file": "preview/attack_E_contact.png",
+        "sha256": "f378ea963d89d72a00ae7c1c44087264d0ccd410147f65fdf15fd85298387627",
+        "generationRecord": "preview/attack_E_contact.png.generation.json",
+        "generationRecordSha256": "29239bc027326f317ce4551b9a9c4bb3162e48f34cdecbd9d202d21a98b44388"
+      },
+      "reference": {
+        "file": "preview/qa/attack-E-contact.png",
+        "sha256": "8b95e638118ff801128b472d2ae03df6519c50b75b830c1354b3e0f058ea7544",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "target": {
+        "file": "preview/attack_W_contact.png",
+        "sha256": "527b2d9011c737abb0d3f88136a3e8df4202528c27d740e475ce81036e64eb80",
+        "generationRecord": "preview/attack_W_contact.png.generation.json",
+        "generationRecordSha256": "5c5a76cf100df18b1ed05c788e5a828b5ad3b03696c58a89a11fec207b1e6269"
+      },
+      "reference": {
+        "file": "preview/qa/attack-W-contact.png",
+        "sha256": "0ee505fbdb0de3720cc10aafc1fffcbc42256901c51b6c9caa6b273ec7693df6",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "target": {
+        "file": "preview/cast_E_contact.png",
+        "sha256": "474a83b3a2fb6678b0d17110d133267b55ebb907b927622baeeabf09deb82681",
+        "generationRecord": "preview/cast_E_contact.png.generation.json",
+        "generationRecordSha256": "19e0616ce1ca14de775919900a3bde5ed2413a2eacee85664d7bbbe78073a8cf"
+      },
+      "reference": {
+        "file": "preview/qa/cast-E-contact.png",
+        "sha256": "09cc6afa607e3107acfbd87eac13d5e7b5a89b0369fe3b0de183d2b5f8291082",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "target": {
+        "file": "preview/cast_W_contact.png",
+        "sha256": "ddd4019ad7551aca90dbc6a3741d9b4a6f07258f9dde78380b15362e9a2c12dd",
+        "generationRecord": "preview/cast_W_contact.png.generation.json",
+        "generationRecordSha256": "8527f4811b59e9ce8607b33f9d9bd0cdec5db8bf2191b3789259af8b836ff7c8"
+      },
+      "reference": {
+        "file": "preview/qa/cast-W-contact.png",
+        "sha256": "0b546f6df572bd71222f7a5bdb7dcb42cd99b42c5e6a17151178434f4a8c41dd",
+        "note": "连图实际查看；09无同名独立sidecar，不冒称重现核验。正式来源按manifest及实际PNG SHA锁定。"
+      },
+      "viewed": true,
+      "groupDecision": "retain",
+      "observation": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    }
+  ],
+  "frames": [
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/hit/E/frame_01.png",
+      "sha256": "0e600c1050559305e28e2d0bf393b8739488382d484059af8c7698e7d55ba275",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/E/01.png",
+        "sha256": "ca3cb11ce936f3fcb98710f09de67bdc8ab851d3af3610651dfd1ac7ef9ba6f2",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/hit/E/frame_02.png",
+      "sha256": "656c856290a2ce41a82a2abe02e9e3ac4e8de165009726af02a22bf73c4233e7",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/E/02.png",
+        "sha256": "8b43372715e422c6fea28857713ac73bfe5836e4cb42013f6f34f786e5050bce",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/hit/E/frame_03.png",
+      "sha256": "272204657c7439d886b5b14ae0dab0e3d1b19738042e42c64414fdfaf0a57e0a",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/hit/E/03.png",
+        "sha256": "28d22a8ecdfbac27926946325187e86a2b15ab14639bf70bf7e2b88075f369f1",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/hit/E/frame_04.png",
+      "sha256": "e0a51bdaa5b548c4508beb4f2d9b876780acf356013b1d225eb9472b15e27b63",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/E/04.png",
+        "sha256": "157a62a1711fde027e24b7da5d796aa6930f4b1e93ab5db08d3d57fbc83ac728",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/hit/E/frame_05.png",
+      "sha256": "de555cc55f0de1c420f1a64f1ee829d36b90484c5e9934d3926211a671c00932",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/E/05.png",
+        "sha256": "6e9ac778084a23969d8278fc251e1db7bfd42832e8d3c4e3ef113cc4d32c844e",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/hit/E/frame_06.png",
+      "sha256": "e3057b6dd3a28cedc0d2056e3c2c916ee2116e250f7992b672c159f6c59dd786",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/E/06.png",
+        "sha256": "5d5ff6d1ff7093571bd359d4bbd03366e5a8e107d0f4fa3cfa258856c3cf2284",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴朝屏右下，膝踝承接屈膝缓冲",
+        "screenRight": "前靴朝屏右；01有抬尖，随后落稳",
+        "load": "后仰时后侧腿支撑；恢复段双脚承重"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "双靴主要朝屏右，受击后仰由屈膝缓冲；前靴早期抬尖而后落稳，不构成反拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/hit/W/frame_01.png",
+      "sha256": "8135b27ad25089b20c81a7e69b7155f22728582c790cf77101b613c2ecd4d53e",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/W/01.png",
+        "sha256": "18ecb6f485481e1089e425ce52182f0e9f2ac039747465d863bdc5b68cda9a1d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/hit/W/frame_02.png",
+      "sha256": "1b1c513b46fcf0e58c6b35613e64ddc9825d843cf049633c2b4d5b2ce1e0e613",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/W/02.png",
+        "sha256": "2399489a5c117eb8abba9816449c93b6810dd01c10699e5003e065729bc5c299",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/hit/W/frame_03.png",
+      "sha256": "336623219992306b74a46672c6beffceb1fcaa84feb02bfce4eb5a6e2f6f156c",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/hit/W/03.png",
+        "sha256": "fff828eb0e345e9db3fb38e969267ac37d589d534f899007e3585b5582bb26e0",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/hit/W/frame_04.png",
+      "sha256": "6c70a4462d45abc3bc224ca7040fb956cf37f5fb3a87fb324ff8c877aa128600",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/W/04.png",
+        "sha256": "d81b272481a53c105568978625c24a66a5f7599a6a5ddc69c7ccbf7799e51d1d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/hit/W/frame_05.png",
+      "sha256": "714c9c39cf41b49611f2fbfccb4178838f5bda9b2ba4e8529a42348e6fc6d9f0",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/hit/W/05.png",
+        "sha256": "3e7c6304d7cb304fe72892cfc923ca65d2831ac086975e5b4d12b44257066f92",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/hit/W/frame_06.png",
+      "sha256": "3cf2a85eb36eb70f78443d6ec879c31d11ded75618906b8db1e6ab8d7e1687c9",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/hit/W/06.png",
+        "sha256": "6439310fb38691e3ad9cbbcbc269a56f39e6e601afc26c029fbde8b1aae3fcb0",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前靴朝屏左，前段受击时抬起/抬尖",
+        "screenRight": "后侧承重靴朝左前或更接近正面，膝踝下承",
+        "load": "前靴卸载时后侧靴支撑，04后恢复双脚"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左，后侧承重靴更接近正面视角；膝踝没有与鞋掌反向折转。前靴受击抬起时，后靴提供支撑。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/attack/E/frame_01.png",
+      "sha256": "6fa0b33c448a6965340e5c086ac67366efd7d137cfed8bdaab264a2ca5f45c43",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/01.png",
+        "sha256": "a442dd9edebe381222f04e540c34d65eca4bf3ba610e79d8ec03a6cacc2daca8",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/attack/E/frame_02.png",
+      "sha256": "cebd507d111774b1ecb2a29b82acde3de8579baa499c199c453fac9a9afd3206",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/02.png",
+        "sha256": "e966e8e344f4aa5dd557199bf0360daf37f4bc1d82513fe840c2752c743a3f60",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/attack/E/frame_03.png",
+      "sha256": "da7f69a4cbc6c11842893f4d6acf2536adc027489c7dc8ed5e9cbab91b9c1298",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/03.png",
+        "sha256": "04711e320773d5b91bc7d7b10f09ec8dd677d29c759586ada6f6d290af2ea218",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/attack/E/frame_04.png",
+      "sha256": "6e84ea53d071156a52e3051e4a320be3c579c3c63e52d73dc1446c760ab391c1",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/04.png",
+        "sha256": "0b057cfaf7136c79144aa283e8ef26d566d569ff7b7e37e57a7794cd4ab9c2df",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/attack/E/frame_05.png",
+      "sha256": "3f033f87e487aeb12b0ad29378d344b5f14452d613f992b8281a6658b3f1df2b",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/05.png",
+        "sha256": "15704a4ee9d47c733217f2c4e051a12c50c147bc1e9c53eedfc0b78e90e41c3e",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴提跟、趾部向右下，符合后蹬阶段",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/attack/E/frame_06.png",
+      "sha256": "b5d5519e71c7b9a9d556b60f21326c2ba2526c888beb0ddf4eb335387b926550",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/06.png",
+        "sha256": "ae58c77f177a90326776bac5baebe854ec6bcaf04136e2ca48bf544ccec28990",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 7,
+      "file": "frames/attack/E/frame_07.png",
+      "sha256": "3271e8d10eadc774329421a1d4978a8f219b7165bf6d636c765ee1dfa3288a7a",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/07.png",
+        "sha256": "ea292c633586e4cac294416fc6ed936a40dabb262e53f77972e4a92711095bfd",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 8,
+      "file": "frames/attack/E/frame_08.png",
+      "sha256": "cdb7986f3e3012e38b3f6821d63e0b9a0cb623691a036469a18742dd65b8078b",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/08.png",
+        "sha256": "19d9d63a687cfe625876418e060d299418e452f79745b1a40594b40372d6ea9a",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 9,
+      "file": "frames/attack/E/frame_09.png",
+      "sha256": "bb5b2c5a314563ee0f9dfb11d91302af6b46750410cc2b192261689bc83a3141",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/09.png",
+        "sha256": "d33efe6c321b5bbc6ed7ea34c2fce98665cfadb1fdea36d7d95c3812df387623",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 10,
+      "file": "frames/attack/E/frame_10.png",
+      "sha256": "1a74b218f63eda5870684cf349433e9ea58d820a7f2271feb947ab54eae5902d",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/10.png",
+        "sha256": "484b34d105f4a5470b780a9c63a494de8b94b3377cfa0478275a3a2811f75e49",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 11,
+      "file": "frames/attack/E/frame_11.png",
+      "sha256": "60ee307d072d26bbb3416863d5217c732a19a24484570b70bfadfd0bb3a58b5b",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/11.png",
+        "sha256": "afac4b6c96af4096520d7b78db466b2aa9664c12f67d506b9b75629f801c7e54",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 12,
+      "file": "frames/attack/E/frame_12.png",
+      "sha256": "3c485eb4802220d88b8cdadbdc1cad02224ec3267d272f371784a40f6c62e6ec",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/E/12.png",
+        "sha256": "d977d04334204288055d62d8684807c22e85c2c769e8fe7cb4bc6a88e4c8bf3f",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧膝→踝向左下展开，靴轴随该腿自然外开；05提跟蹬地",
+        "screenRight": "前侧膝向前屈，靴尖朝屏右",
+        "load": "由准备站姿向前弓步转移再回收，宽脚距不是独立错误"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏右；后侧靴随后侧膝和小腿自然向屏左下打开。宽弓步中膝、踝、鞋方向一致，不应仅为模仿弓手而转成平行。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/attack/W/frame_01.png",
+      "sha256": "4e864532494f4a9f1b1cdca0052a9fb112583f248fc547fe9353d503933ee620",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/01.png",
+        "sha256": "0a9adbd159b186382c867335c99065c2abded43b8e85a49f5aebfa017bd037ce",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/attack/W/frame_02.png",
+      "sha256": "752934ef7300cfca289bedd60d774378d996954cbe3120497df1974bafad4673",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/02.png",
+        "sha256": "0aabed2a2e2ed9c45d81160123bf076d7afaae03e2c49e72b688f091718d4259",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/attack/W/frame_03.png",
+      "sha256": "a614719a1d569b32d462c50484806da5cfdbcb806434b5696ba6486313ed5dcd",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/03.png",
+        "sha256": "2b0389830a089937644b282c66652b518b2097159e83bf5b82b2e8732f0596ad",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/attack/W/frame_04.png",
+      "sha256": "57d2b133062a5f5825c20631caa305f32a460ae43b0134c41d39fd3b64f39991",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/04.png",
+        "sha256": "c63043a2eccee7559ecdc708cae26b93b7c278dbb0cb9d5c731b84246f98da21",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/attack/W/frame_05.png",
+      "sha256": "d85765325120c300100d6282b97b7a5b1d0d2ae3a9e4428ff9082c372c4b9147",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/05.png",
+        "sha256": "3851914a8ed7f393ebf5826b37a6026de24641354ceb6b0d333f9a796e6f2a93",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/attack/W/frame_06.png",
+      "sha256": "4d72c4bcc2f4ceed87ce41c70fe752eb928f9e1042d3bccfb489b1401e85b557",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/attack/W/06.png",
+        "sha256": "5c2be8d645bcff25a141edd0d02cb9238006acde21199f11b5205b4fa77c30c0",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 7,
+      "file": "frames/attack/W/frame_07.png",
+      "sha256": "65530b543572abe508b1c37a9c2be6912f1842c7966b601de44776876b6ef5b9",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/07.png",
+        "sha256": "19163b7c09d1f06b52ebc17946e915c8ec493eb531185e9bf6b9123261e89a38",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 8,
+      "file": "frames/attack/W/frame_08.png",
+      "sha256": "cf129127d96bbddc4c475dab8353646ca0d571418552660c83bfae3314cf7be6",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/08.png",
+        "sha256": "1e455be789c6d41b2134f837c3646680081e18c6c44e60900d22391d622f778d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 9,
+      "file": "frames/attack/W/frame_09.png",
+      "sha256": "7bbe68b82724a7a13dc6bcf449a7ac795ce798aecc59052c3d67fe32bdc5c4c9",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/09.png",
+        "sha256": "69ce6e12822879e126076d0ad23e32a448870b219b97f97d2b9c97617383e4a9",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 10,
+      "file": "frames/attack/W/frame_10.png",
+      "sha256": "36108442a4c6a4237cd55f335b54635541180c792f800f2272b3e2bbbde81770",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/10.png",
+        "sha256": "10677027960ba10a7e7f516c7959c68fa73e71bbddf09084721da4512ddd0515",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 11,
+      "file": "frames/attack/W/frame_11.png",
+      "sha256": "f35aeb8ee87ef3df074fdefaf36130385a6d6427c51a7f73ed4ac164c451b1cd",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/11.png",
+        "sha256": "d1ce9579ee6c1b9e74acde3f9e2b06726b058243cfb32ad4f731f8b3f355feba",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 12,
+      "file": "frames/attack/W/frame_12.png",
+      "sha256": "f98e5bc61ca4d17637c1892192688424bb0156160e1569af58543d8f4c46cbb1",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/attack/W/12.png",
+        "sha256": "49526dcb32b348d549c39c4ccd21079ec696f01b07ee272de135e80853a662f6",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧膝屈向屏左，前靴朝屏左",
+        "screenRight": "后侧膝→踝向右下展开，后靴同向外开",
+        "load": "前侧腿接住前刺重心，后侧腿外展支撑，无相对膝踝反拧证据"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "前靴朝屏左；后侧靴随后侧膝和小腿向屏右下打开。宽弓步是持杖前刺的发力站姿，未确认相对膝踝反拧。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/cast/E/frame_01.png",
+      "sha256": "7f21b0c902bc6d14aff89e02c13a81147281ea360c6347f860b05da0c53fafa6",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/01.png",
+        "sha256": "215c7dc9e9e3937860e839a22f2fd820d2b7af707e2326b604052813da283c34",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/cast/E/frame_02.png",
+      "sha256": "7d7a78f98e5c000365b30909e16df898841539f0937406c9dfa08642bbe7c182",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/02.png",
+        "sha256": "5600a5155419ae2e541855a3e037314afdcb26d7a5b25220deb031589f5549e9",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/cast/E/frame_03.png",
+      "sha256": "64afe9c6f083ec4846b9c33028ca3f0e6adea6c8a7a6261b222ea4305be584fc",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/03.png",
+        "sha256": "ab323e408769f649649c2d6506492ce3ac5684c654bd704c3cebe3db2f726c47",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/cast/E/frame_04.png",
+      "sha256": "84c2b73f5a03fcc4d7b889a68bb4291e5a357289d44a354a673e3d436cf9747f",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/04.png",
+        "sha256": "8f8acd3093bd8140136223e0f294e1d245b4c70e7c4e53e7e713b510adff7953",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/cast/E/frame_05.png",
+      "sha256": "748d6b21496be6545b13cb9268502b9812acc6b2bafdac12bc38653f9d95f95a",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/05.png",
+        "sha256": "f4dcaff321dcbfaf630c38b0125f18ab36fed9b38da108f8e1662d68417dec98",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/cast/E/frame_06.png",
+      "sha256": "7612f92d7cffb7de42a17e580baaa65e6f83a8328f89a22ab1f2bb588c513151",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/06.png",
+        "sha256": "08499ec080add3aced3ba2760a71fb3cb21671682243f026692a43a200e22ab9",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 7,
+      "file": "frames/cast/E/frame_07.png",
+      "sha256": "352f04699d02655df1384b69e2e3a05a79f423d8c1a3fba9bc90b08e7c2a3e44",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/07.png",
+        "sha256": "be582600caba67b4f88a3d702ab4fd1497aad59a7bd03d97ef3182d93680b3a3",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 8,
+      "file": "frames/cast/E/frame_08.png",
+      "sha256": "e55c8d9d05cf5c0a5f6e811c4b9a05c1a5feb3d2396a17cff0bac1932a51debc",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/08.png",
+        "sha256": "6d4e2eca026fc8800e4374b9cf61b04193cf5dc53e5a383dd0fb87b429a6f278",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 9,
+      "file": "frames/cast/E/frame_09.png",
+      "sha256": "89beb273602c26c26a82753379fc0fa1e65f4ae820c2594cc595babff75f2dec",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/09.png",
+        "sha256": "b494c990ee5502fde30fbaf2fd3f73ef6cab1865323a6e0630e66b0d43d94371",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 10,
+      "file": "frames/cast/E/frame_10.png",
+      "sha256": "5a833cf3a28910d2c4446625a03cd04f2f20efdcf2e1f42cd3efe5cdac127289",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/E/10.png",
+        "sha256": "a407877fa3c0a81fc3f39c29c6d0a58d37e566a78c60e47ef37fe40829f70dd9",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 11,
+      "file": "frames/cast/E/frame_11.png",
+      "sha256": "3099289b5d4497bdd369e7d11e0eabf73cd90dea83f5ccb163370050e220cf9c",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/11.png",
+        "sha256": "1c83f1b6b83c2a496d15747e6747451cbe254278065af426e67e159ed475a525",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 12,
+      "file": "frames/cast/E/frame_12.png",
+      "sha256": "903d3536372612a92f06026ca809ccb4636be293fa2c5e7a3a8b49e48ebff04c",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/12.png",
+        "sha256": "1f307c5fa7e3a80aa2da09afa9ea684db64eb88ddbb15633d63a0b02986623c0",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 13,
+      "file": "frames/cast/E/frame_13.png",
+      "sha256": "b6aad8bf14f99b7a28c4cf713ffd81cf15721243e9a6b5c600ea0d2fa0a5187b",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/E/13.png",
+        "sha256": "63345b7c9ec8ddbf5d1ecca3e4e8515d8523bba4f529d32cff3e6d860f88e420",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 14,
+      "file": "frames/cast/E/frame_14.png",
+      "sha256": "a9e56f57dca4cc66f1aea665e4300b6ae0e227a789ac20c1b82910d5b6422fc3",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/E/14.png",
+        "sha256": "eb731c5f91b3488df349dae9873de74211e335713196254d9fb1d37741184d80",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 15,
+      "file": "frames/cast/E/frame_15.png",
+      "sha256": "ab24d39c470130d840b0a3f83d8c94aa226648853ac4740b00938835a656e1c5",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/E/15.png",
+        "sha256": "6c6f0823ba1d2abdd82425977393b31f2fe8a6e9f675ab8a4374560e08fa405d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 16,
+      "file": "frames/cast/E/frame_16.png",
+      "sha256": "80b939a16dc4f200e4e9e3f03a70d22b1ff3fd230755909426ef73ac102368d4",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/E/16.png",
+        "sha256": "70e0fc28a64c70657bb6e10dcdc66a080f959350b0fffac69e46b131b330a69c",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "后侧靴随屈膝自然开角；13/14逐渐向内收回",
+        "screenRight": "前侧靴朝屏右，承接伸杖重心",
+        "load": "蓄势屈膝、释放前移、收脚站稳；本轮未重测物理根点"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "蓄势与释放时有加宽承重，双膝随各自靴轴屈伸；13/14收脚、15/16收稳。未见鞋掌独自反转。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/cast/W/frame_01.png",
+      "sha256": "ac011c0db2320a23e5eead239bed63831f7749a83324c40b0bd366010bbf16d8",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/01.png",
+        "sha256": "e0af8a4160055cbd332a9d16995512b6d04eb09f05da78d2f590639191c19335",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/cast/W/frame_02.png",
+      "sha256": "f8e4dca0d7523d39c0c2f2a36841176f2e6347fa266a6d669bcee46dfc86b927",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/02.png",
+        "sha256": "e9fc95c749ec848eb730a6ac83976fd80d96d1c612db1ea65d56b15e2bd8615f",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/cast/W/frame_03.png",
+      "sha256": "3bb48d134f7aa565c8c5c4a5c486012fdba9c7226b053cf6ef78f900d122f6d0",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/03.png",
+        "sha256": "84db23a16b43d14d8c3a866773ad33574e5dd5b14172409c4701c34c1fb66f43",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/cast/W/frame_04.png",
+      "sha256": "76a7058fe22d489fc8a84d68453f364640f07d25f93ecf50ab8c11271892b23b",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/04.png",
+        "sha256": "b1ea9de49723c635e16afe45f91ea23a351bf2ec5d9a694f799edc94ef56f107",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/cast/W/frame_05.png",
+      "sha256": "a478de495d3564a2a59f72a77b9271e5294cb9fae341e5aefce4298d76b811d3",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/05.png",
+        "sha256": "cbac60e8ea82f6369910e3f652c2cefe93c516483ec7c477d0862888fc805d8d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/cast/W/frame_06.png",
+      "sha256": "aa255ff8234ec7e0fce76cfd4fff2213233f55400055f76290475b44d4ab418f",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/W/06.png",
+        "sha256": "3570afe323e5a1b9d8e1a86b50b01ea0c6cc7a9c2f28b6e18608292c78ac5e34",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 7,
+      "file": "frames/cast/W/frame_07.png",
+      "sha256": "b8bd91d1eab50a85bbea029b11805296d755a827a3fd4c9254a5df7493e64a4a",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/07.png",
+        "sha256": "3b535b602e443202cebeae6a09f194075f37183cc4e466a4c7af6e87ad481cc2",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 8,
+      "file": "frames/cast/W/frame_08.png",
+      "sha256": "ba0731ff09f9d1f19fcd05164b54d3ed516ce0a188410c5793ed780dd3183bcd",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/08.png",
+        "sha256": "03853499f237589e453d6f45e047700895235dc7017914e69d5ef0acf3c0b666",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 9,
+      "file": "frames/cast/W/frame_09.png",
+      "sha256": "9f34545e05419bb8e1fb8483dac8ad6c23b97317c9eebe28e91222163b293880",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/09.png",
+        "sha256": "64315d91540e052acbb8c9000485e30f8fa3b6566492a98fa09860a0b8bb7a7a",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 10,
+      "file": "frames/cast/W/frame_10.png",
+      "sha256": "eaf7e704793bf2ba42312a302f4a0095cb7137077ac4bdbe1ddffd497b595124",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/W/10.png",
+        "sha256": "2ccc890a61b489d37846f786d8a4d9cb91d2ddeb5a175d57b9d4931b9fde0c3d",
+        "manifestSha256Matches": true,
+        "viewedVia": "individual_png_and_contact"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 11,
+      "file": "frames/cast/W/frame_11.png",
+      "sha256": "6ce4a072c720e60b646b01b47e1ea184fa72abde8f80d5c3bbdd289bc3557038",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/11.png",
+        "sha256": "8762bdd46e95efd26898fc24cf85ecc824c8b247c8fc47d34b721cd07309d6ae",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 12,
+      "file": "frames/cast/W/frame_12.png",
+      "sha256": "edfa38c7610b650eb7295d381b0f7c066600310a668e8f70e59d8f97e24747f0",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/12.png",
+        "sha256": "e8ffb8977a55123d9ec610d401ade0254942d43f1c73b821a3ea1523b314fa66",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 13,
+      "file": "frames/cast/W/frame_13.png",
+      "sha256": "d4f8a334629265dbeac9f287f33b9dcafdb9e98a0bff5921822d7fda5f7217bd",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/W/13.png",
+        "sha256": "9031f1abd995f3c09292d8a44ca072568377c8f3027d3233ecb3f88d2a917248",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 14,
+      "file": "frames/cast/W/frame_14.png",
+      "sha256": "e92c9bc292c6607200680e3dcabad4d5cc172dec371c77a39a70ee6870d71c72",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/14.png",
+        "sha256": "c17539a32fcdd0d3520f0a28898bc4dfd4f07c5cc2378d89ab0400117c9ec85d",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 15,
+      "file": "frames/cast/W/frame_15.png",
+      "sha256": "58fa2eff0b08e8303c2fac542989342d3c3b10ee8956819811d380031b0f5f5c",
+      "viewedVia": "contact_sheet",
+      "reference": {
+        "file": "runtime/cast/W/15.png",
+        "sha256": "09ea0b129a206ddde2dd7625a54e96e9b83e858ddf9d493b4cebf5f869036fe0",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 16,
+      "file": "frames/cast/W/frame_16.png",
+      "sha256": "7923ee6cf88e4f6b94f04610383ff964acf2f772f09712d39b50ad1b7be4a40d",
+      "viewedVia": "individual_png_and_contact",
+      "reference": {
+        "file": "runtime/cast/W/16.png",
+        "sha256": "412281ad12c830085c95c30d4e333609d7ad2bda1872c3eb0757c1dbabd8876f",
+        "manifestSha256Matches": true,
+        "viewedVia": "contact_sheet"
+      },
+      "decision": "retain",
+      "scope": "static_foot_axis_knee_ankle_support_comparison_only",
+      "feet": {
+        "screenLeft": "前侧靴朝屏左，膝踝下承",
+        "screenRight": "06/13为提跟/回收姿态，其余随后侧膝自然外开或收稳",
+        "load": "08–12宽弓步稳定释放；06/13的提跟不是双脚失去支撑"
+      },
+      "hands": "保留右手握长杖、左臂持盾的角色动作；未见需要改成弓箭手手型/操作的依据。",
+      "reason": "释放段后侧膝与靴同向外开；06与13存在有用途的提跟/回收脚姿。不能把提跟或宽弓步自然角度判成外八错误。"
+    }
+  ]
+}

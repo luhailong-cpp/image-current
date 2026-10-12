@@ -1,0 +1,5 @@
+import json,hashlib
+from pathlib import Path
+from PIL import Image,ImageDraw
+s=Path("C:/Users/luyua/.codex/generated_images/01a13614-ce7c-75b3-acf3-4eae68bfd935/exec-d31cdecb-078c-4ff9-ac95-145a8bd7460b.png");p=Path(__file__).with_name("p04_01.continue20261013c-v02.halo-guidance.png");assert not p.exists();im=Image.open(s).convert("RGB");assert im.size==(1254,1254);d=ImageDraw.Draw(im);d.rectangle((0,0,114,1253),fill=(0,0,0));d.rectangle((115,230,159,1253),fill=(235,30,210));im.save(p);r={"source":str(s),"sourceSha256":hashlib.sha256(s.read_bytes()).hexdigest(),"output":str(p),"outputSha256":hashlib.sha256(p.read_bytes()).hexdigest(),"pixels":[1254,1254],"resampling":False,"final":False,"type":"nonfinal_mechanical_extent_guidance","blackOutsideWorldBox":[0,0,115,1254],"magentaRepairBox":[115,230,160,1254],"note":"AI edit target only; restore exact black outside-world strip and render missing wall in magenta. Never final art."};Path(str(p)+".derivation.json").write_text(json.dumps(r,indent=2),encoding="utf8");print(json.dumps(r))
+

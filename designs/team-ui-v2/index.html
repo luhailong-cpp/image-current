@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>五行奇谈 · 结伴同游</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<!-- Existing v10 painted controls and V11 portraits; all labels are native HTML.
+     Fixed demo data only. No service requests or client changes. No approved-history UI. -->
+<main id="stage" data-screen-label="组队 · 结伴同游">
+<section class="team-panel" id="teamPanel" aria-labelledby="panelTitle">
+<header class="panel-header"><div class="title-plaque"><h1 id="panelTitle">结伴同游</h1></div><span class="eyebrow">五行奇谈 · 组队</span><img class="lantern" src="assets/lantern.png" alt=""><button class="close-button" id="closePanel" type="button" aria-label="关闭组队面板"></button><img class="close-tassel" src="assets/close_tassel.png" alt=""></header>
+<div class="team-summary"><div class="summary-count"><span>队伍人数</span><strong id="summaryCount">3<span> / 5</span></strong></div><div class="summary-id"><span>队伍编号</span><strong>10248</strong></div><div class="identity-badge" id="identityBadge">你是队长</div></div>
+<div class="panel-content"><section class="members-section" aria-labelledby="membersHeading"><div class="section-heading"><div><h2 id="membersHeading">队伍成员</h2><span class="section-subtitle">同道相伴，一路同行</span></div><span class="section-number" id="memberHeadingCount">3 / 5</span></div><ol class="member-list" id="members"></ol><nav class="pagination" id="memberPagination" aria-label="队伍成员分页" hidden></nav></section>
+<section class="applications-section" aria-labelledby="applicationsHeading"><div class="section-heading"><div><h2 id="applicationsHeading">申请列表 <span class="count-badge" id="applicationCount">2</span></h2><span class="section-subtitle">同意后，道友将加入你的队伍</span></div></div><div class="applications-list" id="applications"></div><nav class="pagination" id="applicationPagination" aria-label="入队申请分页" hidden></nav><p class="application-footnote" id="applicationFootnote">申请信息以刷新结果为准</p></section></div>
+<footer class="panel-footer"><div class="status-message" role="status" aria-live="polite"><img src="assets/notice_icon.png" alt=""><span id="statusMessage">同意申请后，道友将加入你的队伍。</span></div><button type="button" class="button secondary refresh-button" id="refresh">刷新</button></footer>
+</section>
+<div id="reopen" class="reopen" hidden><p>五行奇谈</p><button type="button" class="button primary" id="openPanel">结伴同游</button></div>
+</main>
+<details class="demo-controls" id="demoControls"><summary>示例数据 · 演示状态</summary><div><button type="button" data-scenario="leader" aria-pressed="true">队长</button><button type="button" data-scenario="member" aria-pressed="false">队员</button><button type="button" data-scenario="full" aria-pressed="false">满员</button><button type="button" data-scenario="unavailable" aria-pressed="false">服务未连接</button><button type="button" data-scenario="pagination" aria-pressed="false">多页列表</button><button type="button" id="resetDemo">重置</button><span>本地演示数据 · 刷新页面后恢复</span></div></details>
+<script src="app.js"></script>
+</body></html>

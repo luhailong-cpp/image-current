@@ -1,0 +1,41 @@
+{
+  "tileId": "r05_c11",
+  "reviewer": "repair_continued",
+  "reviewedAtUtc": "2026-10-13T15:30:29.535081+00:00",
+  "status": "requires_native_repair",
+  "nativeId": "r05_c11_p01_04",
+  "nativeSha256": "195ac4e423f68c8937961f4b174a7112e7c48ab6c4d2061a33b2a446ca70a58b",
+  "nativeCutLineX": 1024,
+  "coreRightEdgeX": 1139,
+  "tileLocalLineX": 3981,
+  "tileLocalAffectedYApprox": [
+    0,
+    600
+  ],
+  "evidence": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r05_c11-recovery-stable-boundaries/top-4-100pct.png",
+      "sha256": "02b958e13eb43256e8f0b7cff26d75199569be6b81cb274b976c0be76f57424d",
+      "nativeId": "r05_c11_p01_04",
+      "nativeSha256": "195ac4e423f68c8937961f4b174a7112e7c48ab6c4d2061a33b2a446ca70a58b",
+      "neighbor": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r04_c11.png",
+      "neighborSha256": "c7740d60c062bc74d74cb9d63e4499edb342ab524f12c82063556ef5387f4d8b",
+      "status": "requires_lantern_corner_repair",
+      "reviewedAtUtc": "2026-10-13T10:07:40.223236+00:00"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r05_c11-recovery-stable-boundaries/right-1-100pct.png",
+      "sha256": "19ed246db4e161c05b0fecdee373eaea61adff1488771580ec140031cfd66994",
+      "nativeId": "r05_c11_p01_04",
+      "nativeSha256": "195ac4e423f68c8937961f4b174a7112e7c48ab6c4d2061a33b2a446ca70a58b",
+      "neighbor": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c12-sol-v1.png",
+      "neighborSha256": "d6b9d2d1f087b28c6d8f9ec403f6ce15b7508dcb2b858ee6553c50c0b841826a",
+      "status": "requires_lantern_corner_repair",
+      "reviewedAtUtc": "2026-10-13T10:07:40.223236+00:00"
+    }
+  ],
+  "observation": "Lantern contour ends in a perfectly vertical line115px inside formal tile edge. Top-strip and right-strip1:1 evidence shows the cutoff. Actual adjacent tile sources unchanged.",
+  "possibleCause": "Internal half of230px right native overlap retained as hard anchor.",
+  "repairConstraint": "Only own tile may change. Neighbor sources read-only. Reconcile against actual formal neighbor core edges, not incompatible old halo predictions.",
+  "formalAccepted": false
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "roof_sol",
+  "verdict": "rejected_two_window_contributions",
+  "formalAccepted": false,
+  "viewedNative": ["interior-blue-tiles", "window1-top", "window1-bottom", "window1-left", "window1-right", "window2-top", "window2-bottom", "window2-left", "window2-right"],
+  "finding": "The returned native image redraws the whole lower blue roof plane with consistent curves. Cropping only the two requested windows truncates those curves at their borders and creates stepped outlines. These two small-window crops must not be selected.",
+  "preservedSource": "native/r05_c12_p11-p21-loweredge-v3.png",
+  "nextOperation": "Reuse unchanged generated native pixels over a single larger integer rectangle for separate boundary QA. No resize or paint."
+}

@@ -1,0 +1,78 @@
+主城既有素材独立收尾检查 — v1
+报告完成时点：2026-10-13T01:10:32.304077-04:00 (America/New_York)
+本报告对应固定输入快照；生产窗口后续新候选不自动继承本次结论。
+
+结果：完成本批清点、可用局部拼接、缺块清单与断点核验。全地图尚未完成，正式验收0。
+256坐标去重后：48个当前完整4K候选；208坐标尚无当前完整候选。
+49坐标具备全部16片位（其中r07_c06旧4K过期）；9坐标部分覆盖；198坐标无选定核心。
+选定核心855/4096，缺3241片位。该数字为逻辑坐标覆盖，不是原始工具输出张数。
+
+分工                   目标  当前4K  全16片位  部分  无核心  已选核心
+northwest                 60     11       12    0     48      192
+accelerated-yamen-north    4      4        4    0      0       64
+northeast                 64      8        8    6     50      181
+southwest                 64     15       15    3     46      258
+southeast                 64     10       10    0     54      160
+
+覆盖图：C=当前完整4K候选，F=16片位齐但旧4K未计入，p=部分，.=无选定核心；均不代表正式验收。
+列   01 02 03 04 05 06 07 08 | 09 10 11 12 13 14 15 16
+r01  . . . . . . . . | . . . . . . . .
+r02  . . . . . . . . | . . . . . . . .
+r03  . . . C C . . . | . . . . . . . .
+r04  . . . C C . . . | . . . . . . . .
+r05  . . C C C C C . | . . . . C C . .
+r06  . . . C C C C . | . . . . C C p .
+r07  . . . C C F . . | . . . . C C p p
+r08  . . . . . . . . | . p . p C C p .
+r09  C C p . C C C C | . . . . . . . .
+r10  . . . . C C C p | . . . . . . . .
+r11  . . . . C C . . | . . . . . . . .
+r12  . . . . C C . . | . . . . . . . .
+r13  . . . . C p . . | . . . . C C C C
+r14  . . . . C . . . | . . . . C C C .
+r15  . . . . . . . . | . . . . C C . .
+r16  . . . . . . . . | . . . . C . . .
+
+局部可交付图：官府r03–r05/c04–c05共6块，世界像素框[12288,8192,20480,20480]。
+新看8段南界、6个子片交点和1个四块交点，15处均主要轮廓局部通过。
+旧南界证据8段中6段像素已变，已用当前整块南邻替换检查；2段相同也重看。
+既有内部/其他共享边QA沿当前候选哈希复用。未验北西东外邻，不扩张为全图验收。
+新合图为6张既有复合候选的原像素整数坐标拼接，无缩放/混合/补绘；不是新生图或单次原生4K。
+8192×12288 PNG逐行独立解码，与输入拼接像素SHA256一致：2391953e032e7c1c242a87a25b72102d5b405755a33f5a9aee78b29c14054c42
+原像素合图：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\group01-yamen-current-south-6tiles\yamen-current-south-6tiles-native-8192x12288.png
+明确标注的缩小预览：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\group01-yamen-current-south-6tiles\PREVIEW-ONLY-LABELED-1536x2368.png
+源坐标、SHA256、100%裁片、逐处结论：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\group01-yamen-current-south-6tiles\manifest.json
+
+新增待修：
+1. 西南r11_c05→r12_c05，world y45056：沟槽错位约51/42px及多处切线断头，石面材质不同。4段、3交点及7定位细图实际100%查看。
+2. 东南r13_c13→r13_c14，约world[53213,50516,53283,50650]：伞面红/米白条带在真核心边同时折角。
+东南指定12段边界：9段新看、3段像素一致复用，11段主要轮廓局部通过、1段失败；2个640交点局部过。
+东南r14_c15旧N01局部修复已过；未将旧失败再列为当前失败。r14_c14更深x2842/2874端点已补看1200×1280宽窗，局部主要轮廓通过，关闭该端点待验项。
+
+复用待修及待验：
+西南v5中央竖界短斜边未闭、材质亮度差；左路木梁/布料边界断层；右路弧边折角；r12_c05→r13_c05几何/材质失败。
+东南r14_c14→r14_c15的W01/W02/W03与材质watch、r14_c14→r15_c14的N01/N02、r15_c13→r15_c14的W01/W02，双侧当前像素继承已证实。
+东北r06_c13→r07_c13虽然整图hash变更，四个原尺寸边窗双侧像素完全相同，原局部通过/材质watch结论可复用。
+具体当前source、worldbox与证据索引：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\seam-repair-and-review-queue.json
+
+跨四大区：32条分区边界中，当前两侧完整候选齐全的边为0；中心四块也未齐。不得把邻区缺源写成接缝通过。
+官府外北/西/东六个邻块仍缺源：r02_c04/r02_c05/r03_c03/r03_c06/r04_c03/r04_c06。
+分区边界逐段可用片位：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\four-zone-boundary-availability.json
+
+来源与规则：
+布局/材质参考的所记hash延续同一批准合同。邮件风格历史PNG/JPG所记版本有差异，保留原记录；本只读范围未重开外部参考像素，不声称它们字节相同。
+选定片位中含已披露的同坐标返修衍生复合片，不把其数量当全新原生工具输出。实际型号未返回的历史源仍写未返回。
+已重读2026-10-13模型更正：现有免费入口2.5优先，不可用可用内置2.0；本检查分工没有生图/AI返修。
+原图、progress、索引、AGENTS均未写入；未安装模型/技能、未改凭据、未删除、未恢复已删目录、未做Git操作。
+
+过期检查：
+末尾guard先后捕获northwest/southwest progress变更，旧guard均标stale并保留；分别重新核对当前选片数量、采用manifest、catalog/inventory及partial数量一致，另存v2/v3基线。
+最终guard：2026-10-13T05:09:29.682987+00:00；输入3160个，缺失选片路径59个；stale=False。
+最新guard：D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\source-guard-20261013T050929Z.json
+原生产恢复后继续变更是下一批输入。任一已记录source/selection/adoption/review hash变化，依赖检查须标过期并重验。
+
+交付索引：
+D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\current-256-coordinate-index.json
+D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\missing-current-4k-coordinates.json
+D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\missing-native-core-slots.json
+D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\parallel-review-20261013\main-city-game-20261009\review-v1\coverage-summary.json

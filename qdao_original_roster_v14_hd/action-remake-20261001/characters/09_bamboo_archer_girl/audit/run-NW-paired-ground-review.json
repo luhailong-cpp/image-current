@@ -1,0 +1,609 @@
+{
+  "reviewedAt": "2026-10-04T19:41:05.965328+00:00",
+  "action": "run",
+  "direction": "NW",
+  "requirement": "同脚连续8帧接触，前部落点→身下→近后→更后四个渐变空间位置，每位置两张独立姿态",
+  "timing": {
+    "frameMs": 75,
+    "frameCount": 16,
+    "cycleMs": 1200,
+    "pairMs": 150
+  },
+  "segments": [
+    {
+      "foot": "left",
+      "consecutiveContactFrames": [
+        15,
+        16,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "supportDurationMs": 600,
+      "positions": [
+        {
+          "frames": [
+            15,
+            16
+          ],
+          "position": "A 前部落点",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "左脚15/16在髋前的左上投影位置落地，16更深加载；近左腿与远右腿连接清楚，右脚仍向后回收。"
+        },
+        {
+          "frames": [
+            1,
+            2
+          ],
+          "position": "B 身体经过/髋下",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "左脚01/02在身体下方低跟承重；与15/16相比落点更靠身下，两张肩肘及右脚回收不同。"
+        },
+        {
+          "frames": [
+            3,
+            4
+          ],
+          "position": "C 近后支撑",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "左脚03/04在髋后较近处接触，右腿向前回收，04鞋底已由整片外露改为低跟支撑。"
+        },
+        {
+          "frames": [
+            5,
+            6
+          ],
+          "position": "D 更后蹬地",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "左脚05/06向后延展，前掌保持最低接触边、脚跟抬起；06保留原近左大腿归属，右腿前摆等待07落地。"
+        }
+      ]
+    },
+    {
+      "foot": "right",
+      "consecutiveContactFrames": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "supportDurationMs": 600,
+      "positions": [
+        {
+          "frames": [
+            7,
+            8
+          ],
+          "position": "A 前部落点",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "右脚07/08从远髋在身体前方落地，近左腿交叠向后回收；窄修保留两条大腿原遮挡。"
+        },
+        {
+          "frames": [
+            9,
+            10
+          ],
+          "position": "B 身体经过/髋下",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "右脚09/10支撑靴已从原过前位置后收至髋下，脚跟与前掌低平；与07/08的前落点分开。"
+        },
+        {
+          "frames": [
+            11,
+            12
+          ],
+          "position": "C 近后支撑",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "右脚11/12来自远右髋，在髋后较近处低跟承重；近左膝向前抬，12二次收回过后的右靴。"
+        },
+        {
+          "frames": [
+            13,
+            14
+          ],
+          "position": "D 更后蹬地",
+          "durationMs": 150,
+          "independentPoses": true,
+          "evidence": "右脚13/14在更后位置前掌蹬地，脚跟抬起且鞋尖沿NW轴；左腿保持前驱，直到15才换成左支撑。"
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "slot": "run/NW/01",
+      "frame": 1,
+      "file": "runtime/run/NW/01.png",
+      "sha256": "b41e3a437256368ea9d5f35a09a924de68718adbb39f566d623687714bc1afe5",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "B 身体经过/髋下",
+      "evidence": "左脚01/02在身体下方低跟承重；与15/16相比落点更靠身下，两张肩肘及右脚回收不同。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "b41e3a437256368ea9d5f35a09a924de68718adbb39f566d623687714bc1afe5",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "b41e3a437256368ea9d5f35a09a924de68718adbb39f566d623687714bc1afe5",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/02",
+      "frame": 2,
+      "file": "runtime/run/NW/02.png",
+      "sha256": "596163b47c002a062d0333f0071d95a3f67641e7923053370c4698e6fcbac0c9",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "B 身体经过/髋下",
+      "evidence": "左脚01/02在身体下方低跟承重；与15/16相比落点更靠身下，两张肩肘及右脚回收不同。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "596163b47c002a062d0333f0071d95a3f67641e7923053370c4698e6fcbac0c9",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "596163b47c002a062d0333f0071d95a3f67641e7923053370c4698e6fcbac0c9",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/03",
+      "frame": 3,
+      "file": "runtime/run/NW/03.png",
+      "sha256": "102a009d0c63cdda49023c402c5b9bb6e480001094be3c375c7763feb5b1bf84",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "C 近后支撑",
+      "evidence": "左脚03/04在髋后较近处接触，右腿向前回收，04鞋底已由整片外露改为低跟支撑。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "102a009d0c63cdda49023c402c5b9bb6e480001094be3c375c7763feb5b1bf84",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "102a009d0c63cdda49023c402c5b9bb6e480001094be3c375c7763feb5b1bf84",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/04",
+      "frame": 4,
+      "file": "runtime/run/NW/04.png",
+      "sha256": "c927a7439199dc71def1410616f5d66bd2123340e2a4bcabdcdcd039a3d0753c",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "C 近后支撑",
+      "evidence": "左脚03/04在髋后较近处接触，右腿向前回收，04鞋底已由整片外露改为低跟支撑。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "c927a7439199dc71def1410616f5d66bd2123340e2a4bcabdcdcd039a3d0753c",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "c927a7439199dc71def1410616f5d66bd2123340e2a4bcabdcdcd039a3d0753c",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/05",
+      "frame": 5,
+      "file": "runtime/run/NW/05.png",
+      "sha256": "5331fa030f35b2e385d8dbb09f278711e3a3af13cfdd0075c7bd7f0e9faf076c",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "D 更后蹬地",
+      "evidence": "左脚05/06向后延展，前掌保持最低接触边、脚跟抬起；06保留原近左大腿归属，右腿前摆等待07落地。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "5331fa030f35b2e385d8dbb09f278711e3a3af13cfdd0075c7bd7f0e9faf076c",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "5331fa030f35b2e385d8dbb09f278711e3a3af13cfdd0075c7bd7f0e9faf076c",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/06",
+      "frame": 6,
+      "file": "runtime/run/NW/06.png",
+      "sha256": "160f52440ec9a45e6077af9fac60f67082369cc52ff29c3844a772798c0ccd0d",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "D 更后蹬地",
+      "evidence": "左脚05/06向后延展，前掌保持最低接触边、脚跟抬起；06保留原近左大腿归属，右腿前摆等待07落地。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "160f52440ec9a45e6077af9fac60f67082369cc52ff29c3844a772798c0ccd0d",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "160f52440ec9a45e6077af9fac60f67082369cc52ff29c3844a772798c0ccd0d",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/07",
+      "frame": 7,
+      "file": "runtime/run/NW/07.png",
+      "sha256": "960ae7f1904ebeb6672a3d12c14d0ffe5d70f5486e2452568d58f66f5bd1a947",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "A 前部落点",
+      "evidence": "右脚07/08从远髋在身体前方落地，近左腿交叠向后回收；窄修保留两条大腿原遮挡。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "960ae7f1904ebeb6672a3d12c14d0ffe5d70f5486e2452568d58f66f5bd1a947",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "960ae7f1904ebeb6672a3d12c14d0ffe5d70f5486e2452568d58f66f5bd1a947",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/08",
+      "frame": 8,
+      "file": "runtime/run/NW/08.png",
+      "sha256": "b5236be876181db8a6572df8f0bdc9f3920a5b18d5bf1ab314c0447443685133",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "A 前部落点",
+      "evidence": "右脚07/08从远髋在身体前方落地，近左腿交叠向后回收；窄修保留两条大腿原遮挡。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "b5236be876181db8a6572df8f0bdc9f3920a5b18d5bf1ab314c0447443685133",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "b5236be876181db8a6572df8f0bdc9f3920a5b18d5bf1ab314c0447443685133",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/09",
+      "frame": 9,
+      "file": "runtime/run/NW/09.png",
+      "sha256": "cdb0dd68337279cbfc1281b24394ceb9b6a45324d04bf0c0cbd69218c0c98f72",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "B 身体经过/髋下",
+      "evidence": "右脚09/10支撑靴已从原过前位置后收至髋下，脚跟与前掌低平；与07/08的前落点分开。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "cdb0dd68337279cbfc1281b24394ceb9b6a45324d04bf0c0cbd69218c0c98f72",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "cdb0dd68337279cbfc1281b24394ceb9b6a45324d04bf0c0cbd69218c0c98f72",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/10",
+      "frame": 10,
+      "file": "runtime/run/NW/10.png",
+      "sha256": "74a554ffd19c7fc9bbf39260b141f5347a8f64455c6ad4f86be304818f146f10",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "B 身体经过/髋下",
+      "evidence": "右脚09/10支撑靴已从原过前位置后收至髋下，脚跟与前掌低平；与07/08的前落点分开。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "74a554ffd19c7fc9bbf39260b141f5347a8f64455c6ad4f86be304818f146f10",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "74a554ffd19c7fc9bbf39260b141f5347a8f64455c6ad4f86be304818f146f10",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/11",
+      "frame": 11,
+      "file": "runtime/run/NW/11.png",
+      "sha256": "1a417c28e95a2adf8c70c96988178fa5ab1fc93a303ed6b84f57da56a130bea4",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "C 近后支撑",
+      "evidence": "右脚11/12来自远右髋，在髋后较近处低跟承重；近左膝向前抬，12二次收回过后的右靴。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "1a417c28e95a2adf8c70c96988178fa5ab1fc93a303ed6b84f57da56a130bea4",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "1a417c28e95a2adf8c70c96988178fa5ab1fc93a303ed6b84f57da56a130bea4",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/12",
+      "frame": 12,
+      "file": "runtime/run/NW/12.png",
+      "sha256": "826cb48fa4d6e325eae18cb9644e2d00dd80a55c32d28ece345e907ba68254c6",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "C 近后支撑",
+      "evidence": "右脚11/12来自远右髋，在髋后较近处低跟承重；近左膝向前抬，12二次收回过后的右靴。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "826cb48fa4d6e325eae18cb9644e2d00dd80a55c32d28ece345e907ba68254c6",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "826cb48fa4d6e325eae18cb9644e2d00dd80a55c32d28ece345e907ba68254c6",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/13",
+      "frame": 13,
+      "file": "runtime/run/NW/13.png",
+      "sha256": "2d822602900a31186e421c9c0687a90ff8337c6595e4ad821b8e283c701645de",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "D 更后蹬地",
+      "evidence": "右脚13/14在更后位置前掌蹬地，脚跟抬起且鞋尖沿NW轴；左腿保持前驱，直到15才换成左支撑。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "2d822602900a31186e421c9c0687a90ff8337c6595e4ad821b8e283c701645de",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "2d822602900a31186e421c9c0687a90ff8337c6595e4ad821b8e283c701645de",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/14",
+      "frame": 14,
+      "file": "runtime/run/NW/14.png",
+      "sha256": "7b6455715dec190824347391e9627509f0cdfb27b468816cc890962a498fd306",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "right",
+      "position": "D 更后蹬地",
+      "evidence": "右脚13/14在更后位置前掌蹬地，脚跟抬起且鞋尖沿NW轴；左腿保持前驱，直到15才换成左支撑。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "7b6455715dec190824347391e9627509f0cdfb27b468816cc890962a498fd306",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "7b6455715dec190824347391e9627509f0cdfb27b468816cc890962a498fd306",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/NW/15",
+      "frame": 15,
+      "file": "runtime/run/NW/15.png",
+      "sha256": "39db5a619360d72b2a787f3bdc1e38d13adf8badda6ba574256d08c2526c145d",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "A 前部落点",
+      "evidence": "左脚15/16在髋前的左上投影位置落地，16更深加载；近左腿与远右腿连接清楚，右脚仍向后回收。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "918e859b08a1ed2f70f7dbc6ece7006685348dfe682b16b91835a3c2d0235370",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "918e859b08a1ed2f70f7dbc6ece7006685348dfe682b16b91835a3c2d0235370",
+        "retained": false,
+        "dynamicVisualAcceptance": false,
+        "repairReview": "audit/full-limb-root-repair-review.json",
+        "confirmedIssue": "NW14/16右空拳在胸前，旧15单帧甩到背后腰侧。",
+        "afterEvidence": "第二稿只在下颌前、近肩后露小拳和袖口，背后旧拳已消失。近侧左肩→大袖→持弓手保持；腿脚与整幅尺度目视保留。右上臂受身体遮挡，不虚构不可见关节。首稿拒用，理由见独立记录。",
+        "staticCorrectionReviewed": true,
+        "footPoseRetention": "Legs and boot axes visually rechecked after arm repair; prior foot observation retained, not a claim of identical pixels."
+      }
+    },
+    {
+      "slot": "run/NW/16",
+      "frame": 16,
+      "file": "runtime/run/NW/16.png",
+      "sha256": "0b91305105f44f1ca78a5ea55f0817dbb11c72c0d0d1df93e0adde13b74ceaad",
+      "status": "static_contact_reviewed_dynamic_pending",
+      "observedSupportFoot": "left",
+      "position": "A 前部落点",
+      "evidence": "左脚15/16在髋前的左上投影位置落地，16更深加载；近左腿与远右腿连接清楚，右脚仍向后回收。",
+      "footOrientation": "沿NW前左上方向，后视鞋跟与鞋底按透视可见，未把鞋掌旋向侧方。",
+      "staticContact": true,
+      "isFlight": false,
+      "dynamicVisualAcceptance": false,
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+        "beforeSha256": "0b91305105f44f1ca78a5ea55f0817dbb11c72c0d0d1df93e0adde13b74ceaad",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+        "beforeSha256": "0b91305105f44f1ca78a5ea55f0817dbb11c72c0d0d1df93e0adde13b74ceaad",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    }
+  ],
+  "evidenceFiles": [
+    "preview/qa/run-NW-contact.png",
+    "preview/qa/run-NW-paired-contact.png",
+    "preview/qa/run-NW-normal.apng",
+    "preview/qa/run-NW-slow.apng"
+  ],
+  "technical": {
+    "uniqueSha256": 16,
+    "all1024Rgba": true,
+    "apngFrames": 16,
+    "apngDurationsMs": [
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0
+    ],
+    "wholeCanvasExportOnly": true,
+    "noMirrorDuplicateInterpolationOrLowestFootAlignment": true
+  },
+  "staticPairedGroundStatus": "passed_static_pose_review",
+  "dynamicVisualAcceptance": false,
+  "clientModified": false,
+  "remainingIssues": [
+    "正常75ms动态顺滑、根锚点连续与首尾循环尚未通过动态观看验收。",
+    "未接入客户端或运行引擎验收。"
+  ],
+  "reviewLimit": "已实际查看原图、最终整圈连图和下肢裁切；APNG仅验证结构和时长，未冒称已观看动态。",
+  "actualModel": null,
+  "actualQuality": null,
+  "unverifiedReason": "内置宿主管理，工具无型号/画质选择器且返回未披露。逐图请求/回执/来源均已保存。",
+  "historicalWorkingEvidenceFiles": [
+    "audit/NW-finish-contact.png",
+    "audit/NW-finish-legs.png",
+    "audit/NW-finish-75ms.apng",
+    "audit/NW-finish-technical.json"
+  ],
+  "currentEvidenceFiles": [
+    "preview/qa/run-NW-contact.png",
+    "preview/qa/run-NW-paired-contact.png",
+    "preview/qa/run-NW-normal.apng",
+    "preview/qa/run-NW-slow.apng"
+  ],
+  "inspectionImageRetention": "Canonical preview/qa retained; working inspection images replaced by current equivalent and deletion SHA ledger, per user material retention rule.",
+  "latestVideoAxisRevision": {
+    "reviewedAtUtc": "2026-10-05T03:45:20.768168+00:00",
+    "repairSlots": [],
+    "beforeReview": "audit/video-axis-W-NW-SW-review.json",
+    "currentRepairReview": "audit/video-axis-root-repair-review.json",
+    "dynamicVisualAcceptance": false
+  },
+  "latestFullLimbRevision": {
+    "reviewedAtUtc": "2026-10-05T10:05:37.828777+00:00",
+    "currentRepairReview": "audit/full-limb-root-repair-review.json",
+    "repairSlots": [
+      "run/NW/15"
+    ],
+    "dynamicVisualAcceptance": false
+  },
+  "fullSupportChainReview": {
+    "file": "audit/NW-full-support-chain-review.json",
+    "sha256": "70ad279e8809d34ed77b8f26d15d6a57febbf33f0c5452aa228bb4c7716a9321",
+    "conclusion": "Visible thigh/knee/boot overlap supports continuity; screen-side changes do not establish a support-leg swap. Hip roots remain occluded; full anatomical identity is not confirmed. Legs retained; NW15 arm-only repair visually rechecked."
+  },
+  "sameAnatomicalFootConfirmed": false
+}

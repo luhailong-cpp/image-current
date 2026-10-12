@@ -1,0 +1,77 @@
+{
+  "reviewedAt": "2026-10-05T09:25:05.277585+00:00",
+  "slot": "run-NW-15",
+  "file": "runtime/run/NW/15.png",
+  "beforeSha256": "918e859b08a1ed2f70f7dbc6ece7006685348dfe682b16b91835a3c2d0235370",
+  "afterSha256": "39db5a619360d72b2a787f3bdc1e38d13adf8badda6ba574256d08c2526c145d",
+  "status": "accepted_by_editing_agent_pending_parent_independent_review",
+  "purpose": "Remove isolated backward right-empty-arm pose between chest-front NW14/NW16 without changing legs.",
+  "evidence": [
+    "Actual exported1024PNG viewed after second edit. Small right empty fist now peeks near collar/chin (about400,485), occluded by the intact near left shoulder. Old rear fist/sleeve below quiver is removed.",
+    "The visible left shoulder continues through its original broad sleeve to the hand grasping the long bow. No extra foreground sleeve replaces this chain; quiver stays on right shoulder.",
+    "Current near thigh/knee descends into supportboot near400,900, other leg remains bent with raisedsole near640,820. Support/raised roles, knee bend, ankle/sole axes and target framing are visually retained. No whole-character translation, mirrored leg, interpolation or lowest-foot alignment used.",
+    "Compared with NW14/NW16 actual originals, this removes the15-only rearward hand reversal. Continuous1200ms playback has not been verified."
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "sha256": "ea01d8b8cc216e9f0e09e94fb9dbcebf5f8854c96e7efd56a8c231cab93faf01",
+      "status": "rejected_then_original_restored_exact_sha",
+      "reason": "New large foreground sleeve made the near shoulder appear connected to empty fist; framing/scale drift. Not accepted as local edit.",
+      "spec": "audit/NW15-empty-arm.spec.json",
+      "request": "provenance/run-NW/run-NW-15-repair-20261005T080929686751Z.request.json",
+      "receipt": "provenance/run-NW/run-NW-15-repair-20261005T080929686751Z.receipt.json",
+      "generationRecord": "provenance/run-NW/history/run-NW-15-ea01d8b8cc21.generation.json"
+    },
+    {
+      "attempt": 2,
+      "sha256": "39db5a619360d72b2a787f3bdc1e38d13adf8badda6ba574256d08c2526c145d",
+      "status": "selected",
+      "spec": "audit/NW15-empty-arm-a2.spec.json",
+      "request": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\provenance\\run-NW\\run-NW-15-repair-20261005T090802212545Z.request.json",
+      "receipt": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\provenance\\run-NW\\run-NW-15-repair-20261005T090802212545Z.receipt.json"
+    }
+  ],
+  "generation": {
+    "record": "runtime/run/NW/15.png.generation.json",
+    "route": "builtin image_gen",
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "actualModel": null,
+    "actualQuality": null,
+    "reason": "Host-managed tool exposes no model/quality selectors or actual model/quality fields. Config goal is not claimed as actual return."
+  },
+  "modelRecheck": {
+    "checkedAtDate": "2026-10-05",
+    "officialRelease": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+    "officialModel": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+    "finding": "Official source still lists2.5 Sunburst as most capable image model, qualitylow/medium/high/xhigh/max/auto; same batch config goal retained; shared config not changed."
+  },
+  "supportChainReview": "audit/NW-full-support-chain-review.json",
+  "fullBeforeReview": "audit/full-limb-run-N-NE-E-NW-review.json",
+  "timing": {
+    "frameMs": 75,
+    "frames": 16,
+    "cycleMs": 1200,
+    "changed": false
+  },
+  "boundaries": {
+    "dynamicVerified": false,
+    "clientRun": false,
+    "clientModified": false,
+    "pairedReviewModified": false,
+    "globalReviewModified": false,
+    "selection": "Only authorized slot registration by existing locked helper."
+  }
+}

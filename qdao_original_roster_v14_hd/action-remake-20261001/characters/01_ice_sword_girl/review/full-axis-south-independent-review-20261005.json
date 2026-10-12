@@ -1,0 +1,273 @@
+{
+  "createdAt": "2026-10-05T07:36:24.776688+00:00",
+  "characterId": "01_ice_sword_girl",
+  "action": "run",
+  "scope": "Independent local transition review for SE11 and SW05; current six full-resolution images and incoming native drafts only.",
+  "status": "completed_two_local_proposals_passed",
+  "candidateOrSelectionModified": false,
+  "currentInputs": [
+    {
+      "file": "candidate/run/SE/10.png",
+      "sha256": "eaa96c42ae2d5c2153437e192260fddba090a171abfca1be5a5472b44c839767",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    },
+    {
+      "file": "candidate/run/SE/11.png",
+      "sha256": "595d0a0696028b8270d570077748d7cd6016005a98a23e112471627206b634dc",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    },
+    {
+      "file": "candidate/run/SE/12.png",
+      "sha256": "a6f74b819515f6a38c99edc66c03c03bc2738a9a71c849d164ada3afce290e22",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    },
+    {
+      "file": "candidate/run/SW/04.png",
+      "sha256": "4e53927b9c7820b191dd32e512216bf6eb52bbbdd4330cfebb17ace07dc31067",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    },
+    {
+      "file": "candidate/run/SW/05.png",
+      "sha256": "30d525ebcc3e5807619149fdd838d27ad4d3092853ece252dd97ecdec7a26d6b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    },
+    {
+      "file": "candidate/run/SW/06.png",
+      "sha256": "fd6cc38f30cbce0e510aa00a76dffddb4593e30abe26757f8e8dc59e0661f57b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "actuallyViewedFullResolution": true
+    }
+  ],
+  "baselineFindings": {
+    "SE11": "SE10 right sword hand reaches forward while left talisman reaches rear. OldSE11 shifts left talisman to full forward extension and blade to up-left orientation immediately; this should be divided through an intermediate pose towardSE12. Check anatomicalright shoulder/sleeve/wrist remains sword, left remains talisman.",
+    "SW05": "SW04 sword hand is in front; oldSW05 already has sword wrist behind waist, withSW06 farther rear. Need an intermediate far-right-arm position while preserving near anatomicalleft shoulder/sleeve connection to talisman."
+  },
+  "acceptanceCriteria": [
+    "Right ice-sword / left blue-talisman ownership, traced from shoulder through sleeve/elbow/wrist.",
+    "New arm/wrist positions truly interpolate immediate neighbors rather than retaining endpoint pose.",
+    "Old target hips, knees, shins, ankles, boot silhouettes and support/free-leg state remain visually intact.",
+    "Canvas registration, style and single-character identity preserved; no new weapon/body intersection.",
+    "Keep16x60ms (960ms cycle) per latest direct user request; static review does not itself verify world-floor contact or live playback."
+  ],
+  "drafts": [
+    {
+      "file": "drafts/full-axis-20261005/run/SE/11-v1.png",
+      "sha256": "5410260d1c97e8e9551ef31a9a6195198368d36e599bbc423741ca01238b9e0c",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SE",
+      "frame": 11,
+      "version": 1,
+      "passed": false,
+      "status": "right_arm_pass_left_talisman_endpoint_remaining",
+      "observations": "解剖右肩→右剑袖/腕链正确，剑腕已收胸，近直立刃改善角度；左手持符身份也正确，原腿脚与画布注册未见退化。但左符腕归一1024约x770，SE10约315，SE12约815，10→11仍承担绝大多数符手前移；未达到两臂共同中间位。建议保留已修好的右剑与腿，仅再把远侧左符腕收近胸腰边约x630–670/y630–670。",
+      "handOwnershipPassed": true,
+      "legRegressionFound": false,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim.",
+      "actuallyViewedNative": true
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/SW/05-v1.png",
+      "sha256": "67f96283081e8878498e0a2642908bc44708c2940e22475311d73fda0ee1a983",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SW",
+      "frame": 5,
+      "version": 1,
+      "passed": false,
+      "status": "reject_sword_wrist_still_front_endpoint",
+      "observations": "右剑左符身份链正确，原腿脚和注册未见退化。但剑腕移到前方，接近SW04前端；后续SW06为后伸端点，将大幅跳变拖到了05→06。不能作为中间腕位选用。",
+      "handOwnershipPassed": true,
+      "legRegressionFound": false,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim.",
+      "actuallyViewedNative": true
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/SE/11-v2.png",
+      "sha256": "780fbac5f33b2c810353a9a6ccaae9b3e07c28499bb5592725e6c262f31fe8f2",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SE",
+      "frame": 11,
+      "version": 2,
+      "passed": true,
+      "status": "pass_intermediate_arm_pose",
+      "observations": "实际原生图复核通过：左符腕已收至胸腰边，左肘/袖口贴近躯干，SE10后伸→v2近身→SE12前伸的中间姿势成立。解剖右剑/左符肩袖腕链保持；近直立剑刃与近胸右剑腕继续承接两邻帧；旧target的腿脚运动平面、支撑/回收姿势和画布注册未见退化。",
+      "handOwnershipPassed": true,
+      "legRegressionFound": false,
+      "actuallyViewedNative": true,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/SW/05-v2.png",
+      "sha256": "abedf835779c32fbad5b3195bd2fb9cc4f27552eff7ed88c757b3ec22543d238",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SW",
+      "frame": 5,
+      "version": 2,
+      "passed": false,
+      "status": "reject_sword_wrist_still_rear_endpoint",
+      "observations": "右剑左符身份及腿脚保持，但右剑腕仍位于躯干后侧端点，native约x750，尚未收到腰侧中间位；依然把主要剑腕位移集中在04→05。等待v3只修远侧右剑臂。",
+      "handOwnershipPassed": true,
+      "legRegressionFound": false,
+      "actuallyViewedNative": true,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/SW/05-v3.png",
+      "sha256": "9c326aa66fe326f77e50e7e5c06a5db4b197a7c7dcaa6d61e8a0f8e155ecced0",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SW",
+      "frame": 5,
+      "version": 3,
+      "passed": false,
+      "status": "reject_anatomical_hand_ownership",
+      "observations": "实际原生图复核确认拒绝：近侧解剖左大肩章→蓝上臂/袖口直接连接剑手，符手来自另一侧前袖，发生右剑左符身份交换。无需以腕位置改善抵消身份错误。",
+      "handOwnershipPassed": false,
+      "legRegressionFound": false,
+      "actuallyViewedNative": true,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/SW/05-v4.png",
+      "sha256": "909c148acbb9fb9bc2781b2353ee90139f0bc9f0ca990d6600e1efe6f8ba2161",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "direction": "SW",
+      "frame": 5,
+      "version": 4,
+      "passed": true,
+      "status": "pass_identity_and_intermediate_sword_wrist",
+      "observations": "实际原生图与SW04/SW06复核通过：画面左胸小肩章（解剖右）→下垂上臂/肘→腰前横向右前臂→剑腕连续明确；近侧解剖左大肩章→左蓝袖→胸前符手保持。剑腕native约535,850在腰前中间位，连接04前方和06后伸位置；两手握持分离，右上斜剑刃遮挡关系可读。原target腿脚姿势、支撑/回收状态、方向运动平面和画布注册未见退化。",
+      "handOwnershipPassed": true,
+      "legRegressionFound": false,
+      "actuallyViewedNative": true,
+      "canvasRegistration": "Whole-canvas visual preservation; not pixel-identity claim."
+    }
+  ],
+  "timingExpectation": {
+    "frameMs": 60,
+    "frameCount": 16,
+    "cycleMs": 960,
+    "basis": "Latest direct user request relayed by root; prior75ms audits remain historical evidence."
+  },
+  "generationHandoff": "axis_south capacity failure; root is generating the two drafts. Await root notification.",
+  "updatedAt": "2026-10-05T09:25:39.449482+00:00",
+  "reviewImages": [
+    "review/full-axis-south-SE11-v1-independent-neighbors-20261005.png",
+    "review/full-axis-south-final-independent-neighbors-20261005.png"
+  ],
+  "limitations": [
+    "Static visual inspection; native pixel provenance and final60ms runtime preview handled separately by root.",
+    "Approximate wrist coordinates are screen-space visual estimates normalized to1024; not body-rig joint measurements."
+  ],
+  "acceptedProposalFiles": [
+    "drafts/full-axis-20261005/run/SE/11-v2.png",
+    "drafts/full-axis-20261005/run/SW/05-v4.png"
+  ],
+  "finalContactSheet": "review/full-axis-south-final-independent-neighbors-20261005.png",
+  "rejectedProposalFiles": [
+    "drafts/full-axis-20261005/run/SE/11-v1.png",
+    "drafts/full-axis-20261005/run/SW/05-v1.png",
+    "drafts/full-axis-20261005/run/SW/05-v2.png",
+    "drafts/full-axis-20261005/run/SW/05-v3.png"
+  ],
+  "result": "Both local arm corrections are visually acceptable for root promotion. Native dimensions1254RGBA, alpha0..255 and SHA freshly verified; no candidate/selection modification by independent reviewer. Latest requested timing16x60ms=960ms is the delivery expectation."
+}

@@ -1,0 +1,13 @@
+from workflow import *
+from PIL import Image
+pid='r13_c12_p33';v='v01'
+im=Image.open(ROOT/'guides'/f'{pid}.layout-only.png').convert('RGB')
+placements=[('r13_c12_p32_v01.png',(1024,0,1254,1254),(0,0)),('r13_c12_p34_v01.png',(0,0,230,1254),(1024,0)),('r13_c12_p23_v02.png',(0,1024,1254,1254),(0,0)),('r13_c12_stair_cross_joint_v02.png',(512,1024,1254,1254),(0,0))]
+for f,box,dst in placements:im.paste(Image.open(ROOT/'native'/f).convert('RGB').crop(box),dst)
+gf=ROOT/'guides'/f'{pid}.native-context-{v}.png';assert not gf.exists();im.save(gf)
+write(Path(str(gf)+'.generation.json'),{'file':str(gf),'sha256':sha(gf),'usableAsFinalArt':False,'operation':'Registered real north ownership: accepted full-width whole staircase at left742, old right pillar foot at right512; exact west/east neighbors','placements':[{'file':str(ROOT/'native'/f),'sha256':sha(ROOT/'native'/f),'sourceCrop':list(b),'destination':list(d)} for f,b,d in placements]})
+q=ROOT/'qa/r13-stair-cross-v02-wide';write(q/'independent-review.json',{'reviewer':'left_resume_sol','status':'pass left/right/top actual hard joins and whole object geometry; bottom pending actual new p33','finding':'Both complete floor contours, column attachment and open-water gap continuous; upper narrowing groove terminates at genuine front-beam edge as a physical T. Full1254-width crop recommended.','source':str(ROOT/'native/r13_c12_stair_cross_joint_v02.png'),'sourceSha256':sha(ROOT/'native/r13_c12_stair_cross_joint_v02.png'),'sourceCrop':[0,115,1254,1139],'destinationBox':[1421,1024,2675,2048],'formalAccepted':False})
+write(ROOT/'proposed-overlay-r13_c12-stair-20261012-v02.json',{'tile':'r13_c12','status':'proposed_passed_left_right_top_pending_actual_bottom','overlays':[{'file':str(ROOT/'native/r13_c12_stair_cross_joint_v02.png'),'sha256':sha(ROOT/'native/r13_c12_stair_cross_joint_v02.png'),'sourceCrop':[0,115,1254,1139],'destinationBox':[1421,1024,2675,2048]}],'review':str(q/'independent-review.json')})
+p=read(ROOT/'progress-r13_c12.json');p['workingVersions'].update({'23':'v02','31':'v02','41':'v01','42':'v02','44':'v01'});p.update(updatedAt=now(),status='remaining_water_cores_and_bottom_join_review',missingPatches=['r13_c12_p33','r13_c12_p43'],pendingRepairs=['Complete whole-stair v02 passes left/right/top and independent object review; actual bottom join requires p33.'],inFlightRequests=[]);write(ROOT/'progress-r13_c12.json',p)
+write(ROOT/'qa/r13-p42-v01-rejected.json',{'source':str(ROOT/'native/r13_c12_p42_v01.png'),'sha256':sha(ROOT/'native/r13_c12_p42_v01.png'),'status':'rejected_not_adopted','reason':'Tool incorrectly copied whole northern column/deck into this sea-only crop. v02 is regenerated from the correctly registered guide without attaching full neighbor.'})
+print(str(gf))

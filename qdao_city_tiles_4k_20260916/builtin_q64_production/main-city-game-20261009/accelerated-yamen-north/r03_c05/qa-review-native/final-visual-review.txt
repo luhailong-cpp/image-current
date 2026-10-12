@@ -1,0 +1,76 @@
+r03_c05 最终稳定候选 / 尚未正式验收
+D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\main-city-game-20261009\accelerated-yamen-north\r03_c05\candidate\r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.png
+SHA256: 60ecd41051d16e950bd301453236cec3cd0227945ac8d034b9e379e6fce89760
+
+16/16 原生来源已生成并选择；18 张原始生成文件及回执保留。实际模型和 quality 未知。
+4096×4096 候选用无缩放最小误差源像素选择拼接；1254 原生 / 1024 core / 每侧115 halo。
+内部 24 窗口：9 PASS / 15 FAIL；9 交点：2 PASS / 7 FAIL。
+西界：前两段 PASS，第三段色阶 FAIL，第四段瓦当错位 FAIL。
+南界：4/4 结构冲突 FAIL；南界修复未尝试、未合入，无待保存的生成结果。
+内部 FAIL 以整个320像素检查窗口判定；同一缺陷可出现在多个窗口，不能将22个失败窗口说成22个独立缺陷。
+北、东外缘未验收。
+
+24 内缝
+internal-x1024-segment01 | FAIL | 窗口右端出现上排光滑大瓦与下排小瓦的平直截断，约 tile y=909。
+internal-x1024-segment02 | PASS | 斜瓦沟与高光跨缝延续；局部窄瓦片形状已单独放大核看，未确认切断。
+internal-x1024-segment03 | FAIL | 窗口起点邻近 y=2048 的木底/青瓦交界有尖角碎片和不自然裁口。
+internal-x1024-segment04 | FAIL | 青色圆瓦当花心双重化，中心与花瓣在拼接后重复。
+internal-x2048-segment01 | FAIL | 窗口右端约 y=909 存在瓦面相位/画法突变；金色卷饰主体连续。
+internal-x2048-segment02 | FAIL | 窗口尾端出现青瓦矩形碎片压到木底上，边缘直切。
+internal-x2048-segment03 | FAIL | 起点青瓦/木底裁口，尾端约 y=2960 的斜瓦与横瓦错接。
+internal-x2048-segment04 | PASS | 金色卷边、青瓦圆当及木面延续，未见明确切口。
+internal-x3072-segment01 | PASS | 斜瓦行列和高光跨缝延续。
+internal-x3072-segment02 | PASS | 斜金脊、瓦面和木构的跨缝轮廓延续。
+internal-x3072-segment03 | FAIL | 窗口尾端约 y=2960 出现横向窄重复瓦行，行距突然压缩。
+internal-x3072-segment04 | PASS | 瓦沟、圆瓦当和木板跨缝未见明确错位。
+internal-y1024-segment01 | FAIL | 窗口上部 y≈909 为明显水平截断，上方长大亮瓦和下方较小纹理瓦相位冲突。
+internal-y1024-segment02 | FAIL | 同一水平截断延续到第二列；不是仅颜色差。
+internal-y1024-segment03 | PASS | 斜金脊和两侧青瓦延续，未见明确断点。
+internal-y1024-segment04 | PASS | 金色卷饰及其周围瓦沟延续。
+internal-y2048-segment01 | FAIL | 青瓦顶端伸入木底，边缘为突出的三角形/裁切轮廓。
+internal-y2048-segment02 | FAIL | 木底与青瓦交界有明显锯齿切缝、悬空碎片。
+internal-y2048-segment03 | FAIL | 段首 x≈2048..2200 有矩形青瓦片与木底硬接；段内其余木梁较连续。
+internal-y2048-segment04 | PASS | 金色瓦当脊与蓝瓦面的跨缝轮廓连续。
+internal-y3072-segment01 | PASS | 水平金梁及下方横瓦延续，未见明确切口。
+internal-y3072-segment02 | FAIL | 金色弧梁起点有直立切边/角形色块，右上瓦面存在行距与方向突变。
+internal-y3072-segment03 | FAIL | 左端斜瓦截接横瓦，且窗口上部有细窄重复瓦缝横带。
+internal-y3072-segment04 | FAIL | 上部瓦行被压成细窄横带，与下方行距不一致。
+
+9 交点
+junction-x1024-y1024 | FAIL | 窗口上沿光滑瓦与纹理瓦的硬截断。
+junction-x1024-y2048 | FAIL | 木底/青瓦尖角和裁口。
+junction-x1024-y3072 | FAIL | 右上金梁由水平变弧形处保留垂直直切边。
+junction-x2048-y1024 | FAIL | 上沿左侧仍接触同一瓦面相位变化带。
+junction-x2048-y2048 | FAIL | 木底上留有矩形/三角青瓦碎片。
+junction-x2048-y3072 | FAIL | 斜瓦与横瓦之间有直边，薄横瓦缝异常。
+junction-x3072-y1024 | PASS | 斜瓦及局部金脊延续。
+junction-x3072-y2048 | PASS | 金色垂饰、红木梁和瓦面在交点连续。
+junction-x3072-y3072 | FAIL | 交点上部窄重复横瓦行延续。
+
+8 实际候选外界
+west-segment01 | PASS | 正式西界的瓦沟和高光延续；窗口 y≈909 的既有水平瓦面变化另记 D1，不能据此称整窗无瑕疵。
+west-segment02 | PASS | 正式边界的斜金脊和斜瓦沟延续；无明确断口。
+west-segment03 | FAIL | 正式边界存在直线色阶跳变，在木面及末端金色竖边最明显；几何大体对齐。
+west-segment04 | FAIL | 正式边界将青色圆瓦当截成错位的两段；周围瓦沟/木面也有切线。
+south-segment01 | FAIL | 北侧大面积木门板与南侧金边、红墙、柱框不匹配；竖框位置错开。
+south-segment02 | FAIL | 北侧木门板直接接到南侧红色大灯笼，实体结构不连续。
+south-segment03 | FAIL | 北侧木门板直接接到南侧灯笼右缘、墙/柱/格栅窗；结构不连续。
+south-segment04 | FAIL | 北侧木门板/柱直接接到南侧浅色格栅窗；框线和材质整体冲突。
+
+独立缺陷位置（tile ROI 为近似定位，精确裁图框与 world 坐标见 JSON）
+D1 | tile [0, 895, 2160, 940] | world [16384, 9087, 18544, 9132] | 上排/第二排之间的瓦型、材质和行相位发生平直切换，主可见线约 tile y=909。
+D2 | tile [500, 1930, 2210, 2160] | world [16884, 10122, 18594, 10352] | 木底与青瓦的最小误差路径留下锯齿、三角/矩形残片。
+D3 | tile [980, 3440, 1080, 3590] | world [17364, 11632, 17464, 11782] | x=1024 附近圆瓦当花心重复；不是单纯颜色差。
+D4 | tile [1900, 2945, 4096, 3020] | world [18284, 11137, 20480, 11212] | 斜/横瓦转换有断点，横瓦顶部出现压缩的重复窄瓦行。
+D5 | tile [1135, 2912, 1290, 3090] | world [17519, 11104, 17674, 11282] | 金弧梁起点保留直边，亮暗面的角形块突变。
+E1 | tile [0, 2048, 160, 3072] | world [16384, 10240, 16544, 11264] | 西界第三段沿正式界线的木面/金边色阶跳变。
+E2 | tile [0, 3420, 160, 3660] | world [16384, 11612, 16544, 11852] | 西界第四段圆瓦当与瓦沟错位。
+E3 | tile [0, 3936, 1024, 4096] | world [16384, 12128, 17408, 12288] | 南界第一段门板对金边、红墙、柱框结构冲突。
+E4 | tile [1024, 3936, 2048, 4096] | world [17408, 12128, 18432, 12288] | 南界第二段门板对灯笼结构冲突。
+E5 | tile [2048, 3936, 3072, 4096] | world [18432, 12128, 19456, 12288] | 南界第三段门板对灯笼/墙柱/窗结构冲突。
+E6 | tile [3072, 3936, 4096, 4096] | world [19456, 12128, 20480, 12288] | 南界第四段门板对格栅窗结构冲突。
+
+JSON报告: D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\main-city-game-20261009\accelerated-yamen-north\r03_c05\qa-review-native\final-visual-review.json
+来源回执与原图: D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\main-city-game-20261009\accelerated-yamen-north\r03_c05\native
+接缝路径/选择来源完整证据: D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\main-city-game-20261009\accelerated-yamen-north\r03_c05\candidate\r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.assembly.json
+外界真实候选哈希和无缩放裁图来源: D:\work\image\qdao_city_tiles_4k_20260916\builtin_q64_production\main-city-game-20261009\accelerated-yamen-north\r03_c05\qa-review-native\external-candidate\manifest.json

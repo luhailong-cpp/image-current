@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "scope": "r03_c03 native row s04, horizontal joins only",
+  "reviewer": "bottom_qa independent subagent",
+  "status": "usable_candidate_pending_upper_and_external_seams",
+  "mechanicalRecord": "row4_native_hard_minerror.json",
+  "rowOutput": "row4_native_hard_minerror_4326x1254.png",
+  "rowOutputSha256": "d2a7748d29fd6c8e03f65485404769ffba92834d4087c87aa08b072c9a91c412",
+  "reviewEvidence": {
+    "allFourNativeImagesViewed": true,
+    "allFourCorrespondingLayoutWithNativeGuidesViewed": true,
+    "allFourInputRecordsReadAndCoordinateChecked": true,
+    "allThreeFullHeightSeamCropsViewedAtNative100Percent": true,
+    "seamCropDimensions": [480, 1254],
+    "rowOverviewViewed": true,
+    "rowOverviewDisplayWasDownsampledByTool": true,
+    "fullRowOverviewWasNotUsedAs100PercentEvidence": true,
+    "everyOutputPixelVerifiedAsExactlyOneUnmodifiedSourcePixel": true
+  },
+  "joins": [
+    {
+      "pair": ["r03_c03_s04_01_a01", "r03_c03_s04_02_a01"],
+      "seamCrop": "row4_s04_01_to_s04_02_hard_minerror_seam100pct.png",
+      "decision": "usable_candidate",
+      "stoneJoints": "Full-height crossing joints remain continuous; no visible severed grout line or doubled slab edge along the selected boundary.",
+      "objects": "Only small flat red paper scraps overlap; no duplicated scraps large enough to read as an obstacle. The first cylinder lies beyond this seam.",
+      "requiredAiRepair": false
+    },
+    {
+      "pair": ["r03_c03_s04_02_a01", "r03_c03_s04_03_a01"],
+      "seamCrop": "row4_s04_02_to_s04_03_hard_minerror_seam100pct.png",
+      "decision": "usable_candidate",
+      "stoneJoints": "Stone edges beneath the cylinder and across the lower paving remain continuous at the selected boundary.",
+      "objects": "The partial right cylinder in s04_02 and left cylinder in s04_03 join into one continuous second cylinder; base ellipse, dark contact edge and gold band show no visible duplicate cylinder or broken base. Total visible row contains two existing cylinders, consistent with the supplied guides.",
+      "requiredAiRepair": false
+    },
+    {
+      "pair": ["r03_c03_s04_03_a01", "r03_c03_s04_04_a01"],
+      "seamCrop": "row4_s04_03_to_s04_04_hard_minerror_seam100pct.png",
+      "decision": "usable_candidate",
+      "stoneJoints": "Diagonal slab joints remain connected through the seam, including the upper junction, middle crossing and lower junction. Small local texture/shadow differences do not create a geometry break.",
+      "objects": "One flat red paper cluster and its small companion remain a single cluster; the open paving contains no added cylinder, box, tree or other blocking object.",
+      "requiredAiRepair": false
+    }
+  ],
+  "nativeDecisions": [
+    {"stem": "r03_c03_s04_01_a01", "decision": "usable_candidate_for_row4", "requiredAiRepairFromThisReview": false},
+    {"stem": "r03_c03_s04_02_a01", "decision": "usable_candidate_for_row4", "requiredAiRepairFromThisReview": false},
+    {"stem": "r03_c03_s04_03_a01", "decision": "usable_candidate_for_row4", "requiredAiRepairFromThisReview": false},
+    {"stem": "r03_c03_s04_04_a01", "decision": "usable_candidate_for_row4", "requiredAiRepairFromThisReview": false}
+  ],
+  "usableCandidateNativeCountWithinScope": 4,
+  "mustAiRepairStems": [],
+  "formalAcceptedCount": 0,
+  "complete4kCount": 0,
+  "limits": [
+    "This review only establishes horizontal row-four continuity; it does not accept any upper overlap with the middle native row.",
+    "Cylinder tops lie outside this row and are not accepted by this review.",
+    "No full 4096-square tile, external tile border or zone border is accepted.",
+    "No navigation, world-scale or capacity test is implied.",
+    "Global progress was deliberately not modified by this subagent."
+  ]
+}

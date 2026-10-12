@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Command executed successfully.",
+  "data": {
+    "isCompilationSuccessful": true,
+    "isExecutionSuccessful": true,
+    "executionId": 1,
+    "compilationLogs": "",
+    "executionLogs": "[Log] JUBAO_FINAL_OK|36 sprites|6 model tests|20 native UI screenshots|preview scene and prefab",
+    "localFixedCode": "using System.IO;\r\nusing UnityEngine;\r\nusing UnityEditor;\r\n\r\nnamespace Unity.AI.Assistant.Agent.Dynamic.Extension.Editor\r\n{\r\n    internal class CommandScript : IRunCommand\r\n    {\r\n        public void Execute(ExecutionResult result)\r\n        {\r\n            var textures = AssetDatabase.FindAssets(\"t:Texture2D\", new[]{\"Assets/Resources/UI/Ugui/JubaozhaiV1\"});\r\n            if (textures.Length != 36)\r\n                throw new System.Exception(\"Expected 36 Jubaozhai sprites; found \" + textures.Length);\r\n            foreach (var guid in textures)\r\n            {\r\n                var path = AssetDatabase.GUIDToAssetPath(guid);\r\n                var importer = (TextureImporter)AssetImporter.GetAtPath(path);\r\n                if (importer.textureType != TextureImporterType.Sprite || importer.spriteImportMode != SpriteImportMode.Single || importer.mipmapEnabled || importer.textureCompression != TextureImporterCompression.Uncompressed || AssetDatabase.LoadAssetAtPath<Sprite>(path) == null)\r\n                    throw new System.Exception(\"Invalid sprite import: \" + path);\r\n            }\r\n\r\n            File.WriteAllText(Path.Combine(JubaozhaiUiVerification.OutputDirectory, \"import-validation.json\"), \"{\\\"status\\\":\\\"passed\\\",\\\"sprites\\\":36,\\\"singleSprite\\\":true,\\\"mipmaps\\\":false,\\\"compression\\\":\\\"Uncompressed\\\",\\\"mcp\\\":\\\"Unity official Relay\\\"}\");\r\n            JubaozhaiUiVerification.RunTests();\r\n            JubaozhaiUiVerification.CaptureAll();\r\n            JubaozhaiUiVerification.BuildPreview();\r\n            result.Log(\"JUBAO_FINAL_OK|36 sprites|6 model tests|20 native UI screenshots|preview scene and prefab\");\r\n        }\r\n    }\r\n}",
+    "result": "Command executed successfully."
+  }
+}

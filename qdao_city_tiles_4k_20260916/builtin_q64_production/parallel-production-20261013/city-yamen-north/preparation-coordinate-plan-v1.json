@@ -1,0 +1,5665 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-13T06:31:48.826475+00:00",
+  "kind": "preparation_coordinate_plan_only",
+  "map": "main-city-game-20261009",
+  "batchKey": "city-yamen-north",
+  "intendedTiles": [
+    "r01_c04",
+    "r01_c05",
+    "r02_c04",
+    "r02_c05"
+  ],
+  "outputDirectory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north",
+  "outputDirectoryRelative": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/city-yamen-north",
+  "status": "prepared_pending_owner_ack_no_generation",
+  "owner": "01a12075-f5cf-7c30-9edc-ceb79ed8cfbd",
+  "worker": "01a1338b-73d0-75c1-aa57-8059e93e85a1",
+  "ownerAck": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\coordination\\city-yamen-north.owner-ack.json",
+    "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/coordination/city-yamen-north.owner-ack.json",
+    "existsAtPreparation": false,
+    "sha256": null,
+    "authorizationEffect": "This request authorizes preparation only; no generation or ownership claim is made even if acknowledgement appears."
+  },
+  "scopeSafeguards": {
+    "preparationOnly": true,
+    "ownershipClaimWritten": false,
+    "generationAllowedByThisTask": false,
+    "originalZoneAndSharedProgressReadOnly": true,
+    "noGitOperations": true,
+    "noDeletionOrRecovery": true,
+    "otherCoordinatesExcluded": true
+  },
+  "inputSnapshots": [
+    {
+      "file": "D:\\work\\image\\AGENTS.md",
+      "repositoryRelativePath": "AGENTS.md",
+      "sha256AtRead": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+      "sha256AtEnd": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2"
+    },
+    {
+      "file": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+      "repositoryRelativePath": "docs/MAP_PARALLEL_SPLIT_20261013.json",
+      "sha256AtRead": "9b94ae23ed4df431029521138867916d8927894f58868b11e00918435d197e67",
+      "sha256AtEnd": "9b94ae23ed4df431029521138867916d8927894f58868b11e00918435d197e67"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\production-contract.json",
+      "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-contract.json",
+      "sha256AtRead": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac",
+      "sha256AtEnd": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac"
+    }
+  ],
+  "modelPreference": "Free/existing included GPT Image 2.5 preferred; current built-in GPT Image 2.0 allowed if 2.5 unavailable. No paid API. No model was invoked during preparation.",
+  "contractNotes": {
+    "artCanvasPixels": [
+      65536,
+      65536
+    ],
+    "batchWorldBox": [
+      12288,
+      0,
+      20480,
+      8192
+    ],
+    "formalTilePixels": [
+      4096,
+      4096
+    ],
+    "nativeCorePixels": [
+      1024,
+      1024
+    ],
+    "haloPerSidePixels": 115,
+    "expectedNativePixels": [
+      1254,
+      1254
+    ],
+    "neighborOverlapPixels": 230,
+    "coordinateOrigin": "top-left",
+    "boxConvention": "LTRB, left/top inclusive, right/bottom exclusive",
+    "outOfCanvasHaloRule": "Keep exact 1254 native coordinate frame; top-edge requested halo reaches y=-115 for 8 patches. Valid canvas crop is explicitly recorded. This does not authorize adding exterior panorama or resizing final art.",
+    "referenceRule": "Before any future image call, re-read AGENTS, inspect confirmed UI primary references and relevant approved layout/actual native south and west boundaries; attach actual required reference images. Preparation does not assert those sources were visually checked.",
+    "layoutReference": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+    "layoutSHA256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+    "detailStyleReference": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+    "detailStyleSHA256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+    "rootPrimaryUIReferences": [
+      "designs/mail-ui-v1/01-mail-event.png",
+      "designs/team-ui-v2/team-ui-v2.png"
+    ],
+    "contractLegacyPrimaryStyleReferenceRecordedOnly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+    "currentRootStyleRulesTakePrecedence": true,
+    "formalAcceptedCount": 0
+  },
+  "productionOrder": "Eight-core frontier left to right across c04 then c05. Complete r02 subrows 04,03,02,01; then r01 subrows 04,03,02,01. This preserves south and west dependency order.",
+  "patches": [
+    {
+      "order": 1,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s04_01",
+      "subrow": 4,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        12288,
+        7168,
+        13312,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        7053,
+        13427,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        0,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        7053,
+        13427,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c04",
+        "patch": "s01_01",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c03",
+        "patch": "s04_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 2,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s04_02",
+      "subrow": 4,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        13312,
+        7168,
+        14336,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        7053,
+        14451,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        7053,
+        14451,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c04",
+        "patch": "s01_02",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 3,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s04_03",
+      "subrow": 4,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        14336,
+        7168,
+        15360,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        7053,
+        15475,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        7053,
+        15475,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c04",
+        "patch": "s01_03",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 4,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s04_04",
+      "subrow": 4,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        15360,
+        7168,
+        16384,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        7053,
+        16499,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        7053,
+        16499,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c04",
+        "patch": "s01_04",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 5,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s04_01",
+      "subrow": 4,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        16384,
+        7168,
+        17408,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        7053,
+        17523,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        7053,
+        17523,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c05",
+        "patch": "s01_01",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 6,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s04_02",
+      "subrow": 4,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        17408,
+        7168,
+        18432,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        7053,
+        18547,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        7053,
+        18547,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c05",
+        "patch": "s01_02",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 7,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s04_03",
+      "subrow": 4,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        18432,
+        7168,
+        19456,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        7053,
+        19571,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        7053,
+        19571,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c05",
+        "patch": "s01_03",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 8,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 1,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s04_04",
+      "subrow": 4,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 8,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        19456,
+        7168,
+        20480,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        7053,
+        20595,
+        8307
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        7168
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        7053
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        7053,
+        20595,
+        8307
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r03_c05",
+        "patch": "s01_04",
+        "role": "external accelerated-yamen-north r03 top edge; read-only original owner source required before generation",
+        "withinBatch": false
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 9,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s03_01",
+      "subrow": 3,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        12288,
+        6144,
+        13312,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        6029,
+        13427,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        0,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        6029,
+        13427,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c03",
+        "patch": "s03_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 10,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s03_02",
+      "subrow": 3,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        13312,
+        6144,
+        14336,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        6029,
+        14451,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        6029,
+        14451,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 11,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s03_03",
+      "subrow": 3,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        14336,
+        6144,
+        15360,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        6029,
+        15475,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        6029,
+        15475,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 12,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s03_04",
+      "subrow": 3,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        15360,
+        6144,
+        16384,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        6029,
+        16499,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        6029,
+        16499,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s04_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 13,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s03_01",
+      "subrow": 3,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        16384,
+        6144,
+        17408,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        6029,
+        17523,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        6029,
+        17523,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s03_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 14,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s03_02",
+      "subrow": 3,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        17408,
+        6144,
+        18432,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        6029,
+        18547,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        6029,
+        18547,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s03_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 15,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s03_03",
+      "subrow": 3,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        18432,
+        6144,
+        19456,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        6029,
+        19571,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        6029,
+        19571,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s03_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 16,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 2,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s03_04",
+      "subrow": 3,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 7,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        19456,
+        6144,
+        20480,
+        7168
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        6029,
+        20595,
+        7283
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        6144
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        6029
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        6029,
+        20595,
+        7283
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s04_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s03_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 17,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s02_01",
+      "subrow": 2,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        12288,
+        5120,
+        13312,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        5005,
+        13427,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        909
+      ],
+      "corePasteXYInBatch": [
+        0,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        5005,
+        13427,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c03",
+        "patch": "s02_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s02_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 18,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s02_02",
+      "subrow": 2,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        13312,
+        5120,
+        14336,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        5005,
+        14451,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        909
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        5005,
+        14451,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s02_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 19,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s02_03",
+      "subrow": 2,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        14336,
+        5120,
+        15360,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        5005,
+        15475,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        909
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        5005,
+        15475,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s02_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 20,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s02_04",
+      "subrow": 2,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        15360,
+        5120,
+        16384,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        5005,
+        16499,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        909
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        5005,
+        16499,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s03_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s02_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 21,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s02_01",
+      "subrow": 2,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        16384,
+        5120,
+        17408,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        5005,
+        17523,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        909
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        5005,
+        17523,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s02_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 22,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s02_02",
+      "subrow": 2,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        17408,
+        5120,
+        18432,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        5005,
+        18547,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        909
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        5005,
+        18547,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s02_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 23,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s02_03",
+      "subrow": 2,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        18432,
+        5120,
+        19456,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        5005,
+        19571,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        909
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        5005,
+        19571,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s02_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 24,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 3,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s02_04",
+      "subrow": 2,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 6,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        19456,
+        5120,
+        20480,
+        6144
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        5005,
+        20595,
+        6259
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        909
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        5120
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        5005
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        5005,
+        20595,
+        6259
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s03_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s02_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 25,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s01_01",
+      "subrow": 1,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        12288,
+        4096,
+        13312,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        3981,
+        13427,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        0,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        3981,
+        13427,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c03",
+        "patch": "s01_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s01_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 26,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s01_02",
+      "subrow": 1,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        13312,
+        4096,
+        14336,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        3981,
+        14451,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        3981,
+        14451,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s01_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 27,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s01_03",
+      "subrow": 1,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        14336,
+        4096,
+        15360,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        3981,
+        15475,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        3981,
+        15475,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s01_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 28,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c04",
+      "tileRow": 2,
+      "tileColumn": 4,
+      "patch": "s01_04",
+      "subrow": 1,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        4096,
+        16384,
+        8192
+      ],
+      "coreWorldBox": [
+        15360,
+        4096,
+        16384,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        3981,
+        16499,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        3981,
+        16499,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s02_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s01_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 29,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s01_01",
+      "subrow": 1,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        16384,
+        4096,
+        17408,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        3981,
+        17523,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        3981,
+        17523,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s01_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 30,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s01_02",
+      "subrow": 1,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        17408,
+        4096,
+        18432,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        3981,
+        18547,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        3981,
+        18547,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s01_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 31,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s01_03",
+      "subrow": 1,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        18432,
+        4096,
+        19456,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        3981,
+        19571,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        3981,
+        19571,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s01_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 32,
+      "phase": "r02_south_to_north",
+      "frontierOrder": 4,
+      "tile": "r02_c05",
+      "tileRow": 2,
+      "tileColumn": 5,
+      "patch": "s01_04",
+      "subrow": 1,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 5,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        4096,
+        20480,
+        8192
+      ],
+      "coreWorldBox": [
+        19456,
+        4096,
+        20480,
+        5120
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        3981,
+        20595,
+        5235
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        4096
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        3981
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        3981,
+        20595,
+        5235
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s02_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s01_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 33,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s04_01",
+      "subrow": 4,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        12288,
+        3072,
+        13312,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        2957,
+        13427,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        0,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        2957,
+        13427,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_01",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c03",
+        "patch": "s04_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s04_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 34,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s04_02",
+      "subrow": 4,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        13312,
+        3072,
+        14336,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        2957,
+        14451,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        2957,
+        14451,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_02",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s04_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 35,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s04_03",
+      "subrow": 4,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        14336,
+        3072,
+        15360,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        2957,
+        15475,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        2957,
+        15475,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_03",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s04_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 36,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s04_04",
+      "subrow": 4,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        15360,
+        3072,
+        16384,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        2957,
+        16499,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        2957,
+        16499,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c04",
+        "patch": "s01_04",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s04_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 37,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s04_01",
+      "subrow": 4,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        16384,
+        3072,
+        17408,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        2957,
+        17523,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        2957,
+        17523,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_01",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s04_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 38,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s04_02",
+      "subrow": 4,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        17408,
+        3072,
+        18432,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        2957,
+        18547,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        2957,
+        18547,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_02",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s04_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 39,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s04_03",
+      "subrow": 4,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        18432,
+        3072,
+        19456,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        2957,
+        19571,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        2957,
+        19571,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_03",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s04_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 40,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 5,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s04_04",
+      "subrow": 4,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 4,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        19456,
+        3072,
+        20480,
+        4096
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        2957,
+        20595,
+        4211
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        3072
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        2957
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        3072
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        2957
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        2957,
+        20595,
+        4211
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r02_c05",
+        "patch": "s01_04",
+        "role": "previously completed southern tile top edge",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s04_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 41,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s03_01",
+      "subrow": 3,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        12288,
+        2048,
+        13312,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        1933,
+        13427,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        0,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        1933,
+        13427,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c03",
+        "patch": "s03_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s03_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 42,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s03_02",
+      "subrow": 3,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        13312,
+        2048,
+        14336,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        1933,
+        14451,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        1933,
+        14451,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s03_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 43,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s03_03",
+      "subrow": 3,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        14336,
+        2048,
+        15360,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        1933,
+        15475,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        1933,
+        15475,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s03_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 44,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s03_04",
+      "subrow": 3,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        15360,
+        2048,
+        16384,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        1933,
+        16499,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        1933,
+        16499,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s04_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s03_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 45,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s03_01",
+      "subrow": 3,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        16384,
+        2048,
+        17408,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        1933,
+        17523,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        1933,
+        17523,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s03_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 46,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s03_02",
+      "subrow": 3,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        17408,
+        2048,
+        18432,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        1933,
+        18547,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        1933,
+        18547,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s03_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 47,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s03_03",
+      "subrow": 3,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        18432,
+        2048,
+        19456,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        1933,
+        19571,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        1933,
+        19571,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s03_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 48,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 6,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s03_04",
+      "subrow": 3,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 3,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        19456,
+        2048,
+        20480,
+        3072
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        1933,
+        20595,
+        3187
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        2048
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        1933
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        2048
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        1933
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        1933,
+        20595,
+        3187
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s04_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s03_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 49,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s02_01",
+      "subrow": 2,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        12288,
+        1024,
+        13312,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        909,
+        13427,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        909
+      ],
+      "corePasteXYInBatch": [
+        0,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        909,
+        13427,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c03",
+        "patch": "s02_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s02_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 50,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s02_02",
+      "subrow": 2,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        13312,
+        1024,
+        14336,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        909,
+        14451,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        909
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        909,
+        14451,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s02_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 51,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s02_03",
+      "subrow": 2,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        14336,
+        1024,
+        15360,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        909,
+        15475,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        909
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        909,
+        15475,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s02_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 52,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s02_04",
+      "subrow": 2,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        15360,
+        1024,
+        16384,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        909,
+        16499,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        909
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        909,
+        16499,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s03_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s02_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 53,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s02_01",
+      "subrow": 2,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        16384,
+        1024,
+        17408,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        909,
+        17523,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        909
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        909,
+        17523,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s02_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 54,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s02_02",
+      "subrow": 2,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        17408,
+        1024,
+        18432,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        909,
+        18547,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        909
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        909,
+        18547,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s02_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 55,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s02_03",
+      "subrow": 2,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        18432,
+        1024,
+        19456,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        909,
+        19571,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        909
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        909,
+        19571,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s02_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 56,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 7,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s02_04",
+      "subrow": 2,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 2,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        19456,
+        1024,
+        20480,
+        2048
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        909,
+        20595,
+        2163
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        1024
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        909
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        1024
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        909
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        909,
+        20595,
+        2163
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": false,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s03_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s02_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 57,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s01_01",
+      "subrow": 1,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 13,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        12288,
+        0,
+        13312,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        -115,
+        13427,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        0,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        -115,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        12173,
+        0,
+        13427,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c03",
+        "patch": "s01_04",
+        "withinBatch": false,
+        "role": "external western boundary; current source not assumed available"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s01_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 58,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s01_02",
+      "subrow": 1,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 14,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        13312,
+        0,
+        14336,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        13197,
+        -115,
+        14451,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        1024,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        909,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        13197,
+        0,
+        14451,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s01_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s01_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 59,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s01_03",
+      "subrow": 1,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 15,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        14336,
+        0,
+        15360,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        14221,
+        -115,
+        15475,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        2048,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        1933,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        14221,
+        0,
+        15475,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s01_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s01_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 60,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c04",
+      "tileRow": 1,
+      "tileColumn": 4,
+      "patch": "s01_04",
+      "subrow": 1,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 16,
+      "tileWorldBox": [
+        12288,
+        0,
+        16384,
+        4096
+      ],
+      "coreWorldBox": [
+        15360,
+        0,
+        16384,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        15245,
+        -115,
+        16499,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        3072,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        2957,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        15245,
+        0,
+        16499,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s02_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s01_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c04\\native\\s01_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 61,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s01_01",
+      "subrow": 1,
+      "subcolumn": 1,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 17,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        16384,
+        0,
+        17408,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        16269,
+        -115,
+        17523,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        0,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        -115,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        4096,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        3981,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        16269,
+        0,
+        17523,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_01",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c04",
+        "patch": "s01_04",
+        "withinBatch": true,
+        "role": "same frontier western tile last patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s01_01.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 62,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s01_02",
+      "subrow": 1,
+      "subcolumn": 2,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 18,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        17408,
+        0,
+        18432,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        17293,
+        -115,
+        18547,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        1024,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        909,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        5120,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        5005,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        17293,
+        0,
+        18547,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_02",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s01_01",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s01_02.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 63,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s01_03",
+      "subrow": 1,
+      "subcolumn": 3,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 19,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        18432,
+        0,
+        19456,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        18317,
+        -115,
+        19571,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        2048,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        1933,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        6144,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        6029,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        18317,
+        0,
+        19571,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_03",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s01_02",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s01_03.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    },
+    {
+      "order": 64,
+      "phase": "r01_south_to_north",
+      "frontierOrder": 8,
+      "tile": "r01_c05",
+      "tileRow": 1,
+      "tileColumn": 5,
+      "patch": "s01_04",
+      "subrow": 1,
+      "subcolumn": 4,
+      "globalCoreRowOneBased": 1,
+      "globalCoreColumnOneBased": 20,
+      "tileWorldBox": [
+        16384,
+        0,
+        20480,
+        4096
+      ],
+      "coreWorldBox": [
+        19456,
+        0,
+        20480,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        -115,
+        20595,
+        1139
+      ],
+      "expectedNativePixels": [
+        1254,
+        1254
+      ],
+      "nativeCoreCropLTRB": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "corePasteXYInTile": [
+        3072,
+        0
+      ],
+      "nativePasteOriginXYInTile": [
+        2957,
+        -115
+      ],
+      "corePasteXYInBatch": [
+        7168,
+        0
+      ],
+      "nativePasteOriginXYInBatch": [
+        7053,
+        -115
+      ],
+      "worldBoxWithHaloClippedToArtCanvas": [
+        19341,
+        0,
+        20595,
+        1139
+      ],
+      "validCanvasCropLTRBWithinNative": [
+        0,
+        115,
+        1254,
+        1254
+      ],
+      "haloOutsideArtCanvas": true,
+      "southContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s02_04",
+        "role": "previously prepared/generated southern frontier in this four-tile batch",
+        "withinBatch": true
+      },
+      "westContinuationDependency": {
+        "tile": "r01_c05",
+        "patch": "s01_03",
+        "withinBatch": true,
+        "role": "previous step western patch"
+      },
+      "referenceStatus": "logical dependency coordinates only; actual source files not inspected or copied in this preparation",
+      "proposedFutureNativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r01_c05\\native\\s01_04.png",
+      "futureFileExistsAtPreparation": false,
+      "generationSubmitted": false
+    }
+  ],
+  "validation": {
+    "nativeCoreCount": 64,
+    "formalTileCount": 4,
+    "coreCountPerTile": {
+      "r01_c04": 16,
+      "r01_c05": 16,
+      "r02_c04": 16,
+      "r02_c05": 16
+    },
+    "uniqueCoreCoordinateCount": 64,
+    "coverageWorldBox": [
+      12288,
+      0,
+      20480,
+      8192
+    ],
+    "coveragePixels": 67108864,
+    "coverageWidthHeight": [
+      8192,
+      8192
+    ],
+    "fullBatchCoveredWithoutCoreOverlapOrGaps": true,
+    "internalHorizontalNeighborPairs": 56,
+    "internalVerticalNeighborPairs": 56,
+    "allNeighborHaloOverlaps230": true,
+    "inBatchDependenciesPointToEarlierSteps": true,
+    "outOfCanvasHaloCount": 8,
+    "firstPatch": {
+      "tile": "r02_c04",
+      "patch": "s04_01",
+      "coreWorldBox": [
+        12288,
+        7168,
+        13312,
+        8192
+      ],
+      "worldBoxWithHalo": [
+        12173,
+        7053,
+        13427,
+        8307
+      ]
+    },
+    "lastPatch": {
+      "tile": "r01_c05",
+      "patch": "s01_04",
+      "coreWorldBox": [
+        19456,
+        0,
+        20480,
+        1024
+      ],
+      "worldBoxWithHalo": [
+        19341,
+        -115,
+        20595,
+        1139
+      ]
+    },
+    "instructionHashesUnchangedDuringPreparation": true,
+    "generatedImageCount": 0
+  }
+}

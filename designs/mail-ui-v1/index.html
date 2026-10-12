@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214e3e">
+  <title>五行奇谈 · 仙笺</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Design context: UI_SPEC §2 + 2026-09-10 project style reference. Existing
+       v10 hand-painted jade, ivory-paper and warm-gold assets are reused here.
+       Other games inform mail functions only. This is an isolated design preview. -->
+  <div class="world-backdrop" aria-hidden="true"></div>
+  <main id="stage" data-screen-label="仙笺 · 邮件">
+    <section class="mail-window" aria-labelledby="mail-title">
+      <header class="window-header">
+        <p class="game-name">五行奇谈</p>
+        <img class="header-lantern" src="assets/lantern.png" alt="">
+        <div class="title-plaque"><h1 id="mail-title">仙 笺</h1></div>
+        <span class="header-note">尺素传情 · 云中寄书</span>
+        <button id="close-mail" class="close-button" type="button" aria-label="关闭邮件"></button>
+        <img class="close-tassel" src="assets/close_tassel.png" alt="">
+      </header>
+      <div class="mail-toolbar">
+        <nav class="categories" aria-label="邮件分类">
+          <button type="button" data-category="all" class="category is-active" aria-pressed="true">全部<span id="all-count" class="tab-count"></span></button>
+          <button type="button" data-category="system" class="category" aria-pressed="false">系统</button>
+          <button type="button" data-category="event" class="category" aria-pressed="false">活动</button>
+          <button type="button" data-category="reward" class="category" aria-pressed="false">奖励</button>
+        </nav>
+        <p id="mail-summary" class="mail-summary"></p>
+      </div>
+      <div class="mail-columns">
+        <aside class="inbox" aria-label="收件箱">
+          <div class="inbox-heading"><h2>收件箱</h2><span id="inbox-count"></span></div>
+          <div id="mail-list" class="mail-list" tabindex="-1"></div>
+          <div class="inbox-actions">
+            <button id="clean-read" class="button secondary" type="button">清理已读</button>
+            <button id="claim-all" class="button primary" type="button">一键领取</button>
+          </div>
+        </aside>
+        <article id="mail-detail" class="mail-detail" aria-label="邮件内容"></article>
+      </div>
+      <footer class="window-footer"><img src="assets/notice_icon.png" alt=""><p id="footer-note">附件领取后将保留邮件，记得及时查收。</p></footer>
+    </section>
+    <section id="reopen-panel" class="reopen-panel" hidden><img src="assets/round_badge_taiji.png" alt=""><h2>仙笺已收起</h2><button id="reopen-mail" class="button primary" type="button">打开仙笺</button></section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="event-dialog" class="event-dialog" aria-labelledby="event-title">
+    <button class="close-button modal-close" data-close-dialog type="button" aria-label="关闭活动详情"></button>
+    <img class="event-dialog-art" src="assets/event-midautumn.png" alt="Q 版小道童和玉兔在道观赏月、放花灯的中秋插画">
+    <div class="event-dialog-copy"><p class="event-kicker">中秋雅集</p><h2 id="event-title">月满仙山 · 玉兔送福</h2><p id="event-intro">与道友共赏一轮明月，提一盏花灯，在桂香与云海间赴团圆之约。</p><div class="event-activities"><span>月下祈福</span><span>花灯游园</span><span>玉兔寻宝</span></div><p class="preview-notice">设计预览样例 · 此处仅展示活动承接页，非真实开放活动。</p><button class="button primary" data-close-dialog type="button">返回仙笺</button></div>
+  </dialog>
+  <details class="demo-controls"><summary>设计预览</summary><div><span>示例邮件与奖励仅用于界面演示</span><a href="gallery.html">查看全部节日图</a><button id="reset-demo" type="button">重置演示</button></div></details>
+  <script src="app.js"></script>
+</body>
+</html>

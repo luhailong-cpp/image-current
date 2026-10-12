@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-10",
+  "status": "reviewed-with-local-art-fixes-needed",
+  "scope": "r05_c13 selected p41,p42-v2,p43,p44 cores and r06_c13 p11-p14 cores; four south/north joins and three lower first-row internal joins",
+  "viewingMethod": "15 lossless 1:1 native-pixel crops viewed at original detail; no upscaled overview used for acceptance",
+  "evidenceManifest": "pixel-evidence.json",
+  "formalAcceptedCount": 0,
+  "runtimeOrClientTestsPerformed": false,
+  "sourceRecordsChanged": false,
+  "coordinateConvention": "half-open [x0,y0,x1,y1] integer art-canvas pixels, not game world units",
+  "summary": "道路边线、石缝、花枝和主要屋瓦轮廓衔接连续；未见 P1 级几何断裂。两处旧图局部虚糊需要重绘才能达到周围成图清晰度，不应以模糊新图修接缝。",
+  "issues": [
+    {
+      "id": "SOUTH-01",
+      "priority": "P2",
+      "title": "旧花瓣局部虚糊延续到新旧图交界",
+      "sourceIds": ["r05_c13/p41", "r05_c13/p42-v2", "r06_c13/p11", "r06_c13/p12"],
+      "worldBox": [49980, 20365, 50360, 20630],
+      "evidenceCrops": ["c1-external-join-100pct.png", "c2-external-join-100pct.png", "upper-p42-core-100pct.png", "lower-p11-core-100pct.png", "lower-p12-core-100pct.png"],
+      "observation": "旧 p42 南西角若干花瓣只有软色团和散开的边缘，缺少与下方成片花簇相同的花芯/花瓣界线；旧 p41 南东角有同样趋势。交界以下逐渐变清晰，花枝位置可接上，问题是局部完成度而非整体错位。",
+      "action": "保留花枝和路缘位置，对框内跨边界的完整花簇做原生局部重绘，附上下左右现存原生图；保护周围清晰花瓣与道路。不得通过模糊新花簇、锐化旧软团或拉大总览替代重绘。",
+      "acceptance": "1:1 观察花瓣边界、花芯、枝条清晰度与相邻新花簇一致，且道路/枝条接续不变。"
+    },
+    {
+      "id": "SOUTH-02",
+      "priority": "P2",
+      "title": "旧 p43 南边斜屋脊局部软糊",
+      "sourceIds": ["r05_c13/p43", "r06_c13/p13"],
+      "worldBox": [52085, 20385, 52224, 20575],
+      "evidenceCrops": ["upper-p43-core-100pct.png", "c3-external-join-100pct.png", "lower-p13-core-100pct.png"],
+      "observation": "旧 p43 右下切入的金色斜屋脊边缘和高光明显比新 p13 的同一屋脊圆卷/金边软，延续段可见清晰度变化；未看到金边走向或瓦垄跨线跳位。",
+      "action": "覆盖交界处同一段金色屋脊及紧邻蓝瓦做原生局部重绘，固定既有斜线、金边宽度和瓦垄间距。若局部修复重复破坏几何，应扩大到该连续屋脊对象，不能在成品上抹糊遮掩。",
+      "acceptance": "跨上下图块的金边轮廓和高光清晰度一致，瓦脊不中断。"
+    },
+    {
+      "id": "SOUTH-03",
+      "priority": "P3",
+      "title": "p13/p14 瓦面存在轻微纹理和亮度接续差异",
+      "sourceIds": ["r06_c13/p13", "r06_c13/p14"],
+      "worldBox": [52160, 20480, 52288, 21504],
+      "evidenceCrops": ["lower-internal-c3-100pct.png"],
+      "observation": "x=52224 附近瓦面细纹/刷痕与青色明度略有改变，圆瓦外轮廓、高光大形及纵向缝隙仍接续。该接缝的重叠 RGB MAE=15.60 是诊断指标，不单独作为拒收理由。",
+      "action": "完整 2×2 拼接后复看；若正常展示比例仍出现竖线，再以原生上下文局部重绘统一同一块瓦面的纹理。当前无需阻断后续缺块。"
+    }
+  ],
+  "seamResults": [
+    {"pair": ["r05_c13/p41", "r06_c13/p11"], "geometry": "continuous", "visual": "road edges and blue-grey paving continuous; SOUTH-01 touches east flower edge", "overlapMae": 3.6858932575179715},
+    {"pair": ["r05_c13/p42-v2", "r06_c13/p12"], "geometry": "continuous", "visual": "paving lines continuous; SOUTH-01 flower clarity needs local repair", "overlapMae": 3.950034671659386},
+    {"pair": ["r05_c13/p43", "r06_c13/p13"], "geometry": "continuous", "visual": "paving lines and gold diagonal continuous; SOUTH-02 clarity needs local repair", "overlapMae": 6.48336569354876},
+    {"pair": ["r05_c13/p44", "r06_c13/p14"], "geometry": "continuous", "visual": "gold trim, round tile ornament and red beam connect; no new blocking finding in viewed crop", "overlapMae": 7.874793703626655},
+    {"pair": ["r06_c13/p11", "r06_c13/p12"], "geometry": "continuous", "visual": "petals and branches connect; no new blocking finding in viewed crop", "overlapMae": 8.442479717079259},
+    {"pair": ["r06_c13/p12", "r06_c13/p13"], "geometry": "continuous", "visual": "gold curl/ridge, tiles and red support connect; no new blocking finding in viewed crop", "overlapMae": 8.945104361694751},
+    {"pair": ["r06_c13/p13", "r06_c13/p14"], "geometry": "continuous", "visual": "major tile geometry continuous; SOUTH-03 minor texture transition", "overlapMae": 15.603561935140883}
+  ],
+  "limits": [
+    "Two lower rows and the rest of r06_c13 are outside this first-row review; this is not complete tile acceptance.",
+    "r05_c13 baseline has historical style references whose bytes are absent; historical hashes were preserved, not reverified.",
+    "Visual softness is observable, but its generation cause is not proven by this audit.",
+    "Art-canvas coordinates make no client size, collision, capacity, or runtime claim."
+  ]
+}

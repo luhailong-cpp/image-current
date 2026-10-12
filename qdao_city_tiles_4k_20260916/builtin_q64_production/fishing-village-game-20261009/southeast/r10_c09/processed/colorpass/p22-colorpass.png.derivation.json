@@ -1,0 +1,84 @@
+{
+  "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\processed\\colorpass\\p22-colorpass.png",
+  "sha256": "e599225e30d310249d710519f877941b18250ad8b757bc3d6f481ab402e983c4",
+  "createdAt": "2026-10-09T19:51:25.329638+00:00",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "classification": "bounded additive color candidate; not formal acceptance",
+  "operation": "original selected image plus low-frequency harmonic RGB field; integer rounding and gamut clipping only",
+  "derivedFrom": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\native\\p22-v2.png",
+      "sha256": "038d3412df39c114f75c1e6c9c985191ba36074713a4dfe81c7859fc4637c9b6",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\native\\p22-v2.png.generation.json",
+      "role": "selected input pixels"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\native\\p22-v2.png",
+      "sha256": "038d3412df39c114f75c1e6c9c985191ba36074713a4dfe81c7859fc4637c9b6",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\native\\p22-v2.png.generation.json",
+      "role": "cumulative correction bound anchor"
+    }
+  ],
+  "correctionEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\processed\\colorpass\\p22-color-field.npz",
+    "sha256": "d21a26f48150325b142232e80d95facb4323fbbb0641f55bcd8b6db05396b41b",
+    "array": "additiveGridRgb",
+    "script": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\color_match_selected.py",
+    "scriptSha256": "8d49740de70317f507e9a39fba01b6a33f66e98a72221e0057ff8a5b53a39b90",
+    "reconstructionPixelsExactlyMatch": true
+  },
+  "parameters": {
+    "corePixels": 1024,
+    "haloPixels": 115,
+    "nativePixels": 1254,
+    "correctionLimit": 40.0,
+    "inwardSupportPixels": 384,
+    "fieldGridStep": 16,
+    "overlapStatisticHalfWidth": 20,
+    "profileGaussianSigma": 24,
+    "cornerStatisticHalfWidth": 24,
+    "cornerEndpointTransition": 96,
+    "incompatibleCornerPolicy": "disable corner correction when any RGB spread exceeds 80; do not conceal material/geometry discrepancy",
+    "harmonicSolver": "red-black successive over-relaxation",
+    "sorRelaxation": 1.8,
+    "solverTolerance": 2e-05,
+    "solverMaxIterations": 3000,
+    "coordinateShift": [
+      0,
+      0
+    ],
+    "pixelResampling": false,
+    "imageBlur": false,
+    "imagePixelBlending": false,
+    "colorSpace": "encoded 8-bit RGB additive",
+    "fieldInterpolation": "bilinear, correction field only",
+    "boundaryExtension": "clamp field to core boundary through 115px halo",
+    "boatSamplePolicy": "p31-p32:16px matching deck band only, native y<800, exclude gradients>=4.5 and RGB differences>=60; p41-p42:no trustworthy common surface, disabled",
+    "boatCorrectionSafety": "zero within128px of boat seam; restore field smoothly128..384px away; p31/p32 y760..880 transition to full protection; p41/p42 full height"
+  },
+  "maximumRequestedChannelCorrection": 26.893510818481445,
+  "spatialSafetyMask": {
+    "xWeightArray": "safetyWeightX",
+    "yProtectionArray": "safetyProtectionY",
+    "operation": "field *= 1 - yProtection*(1-xWeight); correction field only, no image pixels blended"
+  },
+  "maximumActualChannelChangeFromSelected": 27.0,
+  "maximumCumulativeChannelChangeFromNative": 27.0,
+  "requestedFieldCoordinateShift": [
+    0,
+    0
+  ],
+  "actualCoordinateShift": [
+    0,
+    0
+  ],
+  "resampling": false,
+  "imageBlur": false,
+  "imagePixelBlending": false,
+  "unchangedCoreCenter": true,
+  "formalAccepted": false,
+  "externalSeams": "unverified"
+}

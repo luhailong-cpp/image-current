@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "character": "03_lotus_healer_girl",
+  "auditDate": "2026-10-04",
+  "scope": "read-only audit of current selected N/NW; this file only added",
+  "selection": {
+    "path": "review/all-actions-selection.json",
+    "updatedAt": "2026-10-04T19:13:40.5914-04:00",
+    "sha256": "be8e21c3fa288dbb65a48364f707e9c6927b16c76d895aab44ffeb04cb0cc0a1"
+  },
+  "referencesViewed": [
+    {
+      "path": "C:/Users/luyua/AppData/Local/Temp/codex-clipboard-7cc4bf22-e4cf-4c35-8ac6-a37fd85f4037.png",
+      "use": "山岳守卫NW动作结构比较；静态单帧，不能证明连续性"
+    },
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/character-detail.jpg",
+      "use": "运动平面/体态参考；人物小、脚被UI与特效遮挡，不能据此逐鞋校角度"
+    }
+  ],
+  "method": "实际查看两向联系图及32张当前原生PNG。依鞋跟/鞋头、鞋底长轴、裤腿与踝连接比较相邻帧。未读视频，视频连续段由根任务核查。坐标为1254画布上的人工约读，不是骨架测量。",
+  "all32SelectedSourcesHashVerified": true,
+  "visualAccepted": false,
+  "conclusion": {
+    "definiteToeOutOrAnkleRoll": [],
+    "statement": "未找到足够证据将某张明确标为踝外滚/外八；不能把正常屈膝露底、后蹬露跟或NW透视一律重画。可确认的优先问题是支撑/摆脚空间轨迹跳变。"
+  },
+  "priorityRepairs": [
+    {
+      "rank": 1,
+      "direction": "NW",
+      "slot": 12,
+      "neighbors": [
+        11,
+        13
+      ],
+      "kind": "swing_trajectory_discontinuity",
+      "confidence": "high_visible_position_change",
+      "evidence": "11的右摆鞋仍在屏右后方，12一步跳到屏左前方，13仅小幅继续；12缺少从身体下方通过的中间位置。",
+      "proposedLocalEdit": "保留12的近左支撑腿及接触、头身双手；将右摆脚置于11与13之间、通过身下的中间位置，保持NW脚轴。"
+    },
+    {
+      "rank": 2,
+      "direction": "N",
+      "slot": 6,
+      "neighbors": [
+        5,
+        7
+      ],
+      "kind": "support_lateral_recoil",
+      "confidence": "high_visible_position_change",
+      "evidence": "右支撑鞋约x695→750→705，腿向屏右凸出后又收回，超过头身横移；不是鞋尖偏转。",
+      "proposedLocalEdit": "只把06右支撑膝踝鞋收回05→07的窄轨迹内，保持原接地高度和N鞋轴。"
+    }
+  ],
+  "secondaryWatch": [
+    {
+      "direction": "NW",
+      "transition": [
+        2,
+        3
+      ],
+      "issue": "摆脚由后方到前方的跨步也较大；髋被衣摆遮挡，不能仅凭投影判错腿。此次不建议为外八理由重画。"
+    },
+    {
+      "direction": "N",
+      "transition": [
+        13,
+        14
+      ],
+      "issue": "上身注册/姿态变化可放大腿脚观感，与足轴错误分开。"
+    }
+  ],
+  "groups": [
+    {
+      "direction": "N",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/N/01-v1.png",
+          "sourceSha256": "6cb919bc1b7f98025c16bcd113b8ad67c6ea92092f3b2dccfe609f6ba60a6db4",
+          "currentSha256": "6cb919bc1b7f98025c16bcd113b8ad67c6ea92092f3b2dccfe609f6ba60a6db4",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "两鞋长轴近纵向；左回收脚露完整鞋底为屈膝后抬，未见侧向外翻。"
+        },
+        {
+          "slot": 2,
+          "source": "generation/N/02-v3.png",
+          "sourceSha256": "7278bf34f6dd1aef0fab6960fb1073287078e5a8086b9c6f5705b17f9716599a",
+          "currentSha256": "7278bf34f6dd1aef0fab6960fb1073287078e5a8086b9c6f5705b17f9716599a",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "延续01脚轴；右支撑膝屈，鞋跟中线未突然倾斜。"
+        },
+        {
+          "slot": 3,
+          "source": "generation/N/03-v1.png",
+          "sourceSha256": "cfc6d818b3fcda02220822022c5607df871945cd9b90aba5f19599860f790110",
+          "currentSha256": "cfc6d818b3fcda02220822022c5607df871945cd9b90aba5f19599860f790110",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左摆脚降至身下附近、露底面积变小；鞋轴仍纵向。"
+        },
+        {
+          "slot": 4,
+          "source": "generation/N/04-support-v1.png",
+          "sourceSha256": "5251ee0bf89b0401a0ad7de9a1623858cabf185eaa44a300640008b8819c2519",
+          "currentSha256": "5251ee0bf89b0401a0ad7de9a1623858cabf185eaa44a300640008b8819c2519",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左摆脚再次提高；与03的高度变化较大，但单看屈膝/纵深不能判外翻。"
+        },
+        {
+          "slot": 5,
+          "source": "generation/N/05-stance-v1.png",
+          "sourceSha256": "d67b0e1fcfec7a136bba02614a200b37034370bb82fb40911e839ca152ef3117",
+          "currentSha256": "d67b0e1fcfec7a136bba02614a200b37034370bb82fb40911e839ca152ef3117",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右支撑鞋中线约x695；鞋长轴纵向。"
+        },
+        {
+          "slot": 6,
+          "source": "generation/N/06-stance-v2.png",
+          "sourceSha256": "ee481a0e982201c59e51924890dfe24fa65aeff9a2d46f7fd34b886f9f720cb1",
+          "currentSha256": "ee481a0e982201c59e51924890dfe24fa65aeff9a2d46f7fd34b886f9f720cb1",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右支撑鞋中线约x750，较05明显右移，07又回约x705；是局部横向轨迹凸出，鞋本身未明确外八。"
+        },
+        {
+          "slot": 7,
+          "source": "generation/N/07-stance-v1.png",
+          "sourceSha256": "bec252c730125f9ce69fbec22aa86377c5f4b3c401a6ff45802d5a47076796d0",
+          "currentSha256": "bec252c730125f9ce69fbec22aa86377c5f4b3c401a6ff45802d5a47076796d0",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右支撑鞋中线约x705；06→07回收明确，头身横移较小，不能只用整图注册解释。"
+        },
+        {
+          "slot": 8,
+          "source": "generation/N/08-stance-v1.png",
+          "sourceSha256": "a7dfa4ab03a4ea5519364eccea4488502d8f15307b8f12760da85641c9a44624",
+          "currentSha256": "a7dfa4ab03a4ea5519364eccea4488502d8f15307b8f12760da85641c9a44624",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右支撑继续向后；左摆脚降下，均未见左右外撇。"
+        },
+        {
+          "slot": 9,
+          "source": "generation/N/09-v2.png",
+          "sourceSha256": "5bf482cfe3f87ba2fcc0f0d98eb69bd437b3f62aaf6e30c3de27f181170aef68",
+          "currentSha256": "5bf482cfe3f87ba2fcc0f0d98eb69bd437b3f62aaf6e30c3de27f181170aef68",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "换左支撑，右回收脚露完整底；属俯仰，鞋轴近纵向。"
+        },
+        {
+          "slot": 10,
+          "source": "generation/N/10-v1.png",
+          "sourceSha256": "30ac734748671e831ea67311e25da555ba2de4e3446929a4d881a01330032eb0",
+          "currentSha256": "30ac734748671e831ea67311e25da555ba2de4e3446929a4d881a01330032eb0",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "延续09；鞋轴稳定，未见踝外滚。"
+        },
+        {
+          "slot": 11,
+          "source": "generation/N/11-v1.png",
+          "sourceSha256": "8c1ebe10e7d664cc518fc22ce12dec144480036f3125b0f20f5581664cd516c0",
+          "currentSha256": "8c1ebe10e7d664cc518fc22ce12dec144480036f3125b0f20f5581664cd516c0",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右摆脚通过时露底减少；足轴近纵向。"
+        },
+        {
+          "slot": 12,
+          "source": "generation/N/12-support-v1.png",
+          "sourceSha256": "e892f05d365c3908cd1883e9020d9f0a0ed67f68a7328cd41da09a3c99759253",
+          "currentSha256": "e892f05d365c3908cd1883e9020d9f0a0ed67f68a7328cd41da09a3c99759253",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右摆脚更高，左支撑脚跟近水平；无确定外翻。"
+        },
+        {
+          "slot": 13,
+          "source": "generation/N/13-stance-v1.png",
+          "sourceSha256": "ec5d3585b34d2606c23cc13cb789f4c31a3457a75ee25b3252d76b91872d82ec",
+          "currentSha256": "ec5d3585b34d2606c23cc13cb789f4c31a3457a75ee25b3252d76b91872d82ec",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左支撑纵向；头身比14更高，属于注册/体态差异，不能当脚轴外八。"
+        },
+        {
+          "slot": 14,
+          "source": "generation/N/14-stance-v2.png",
+          "sourceSha256": "06deb3632e3e8d77787018001fcf3bb1d65357220d1939b602eeea555357db6d",
+          "currentSha256": "06deb3632e3e8d77787018001fcf3bb1d65357220d1939b602eeea555357db6d",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "鞋轴仍纵向；13→14上身明显回落，需与腿轴问题分开。"
+        },
+        {
+          "slot": 15,
+          "source": "generation/N/16-stance-v2.png",
+          "sourceSha256": "b6e1e6800379b7780e8e2b0aa40f3cc1419af56eabc97bf86eb41aafd99278c8",
+          "currentSha256": "b6e1e6800379b7780e8e2b0aa40f3cc1419af56eabc97bf86eb41aafd99278c8",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "本槽源为16-stance-v2；右摆脚露底增大，但底长轴仍纵向，没有向左右翻转。"
+        },
+        {
+          "slot": 16,
+          "source": "generation/N/16-stance-v3.png",
+          "sourceSha256": "5cac383fed5bdaad990dba626a65dbdaeabc594a679dcc107a6c638fdabf660b",
+          "currentSha256": "5cac383fed5bdaad990dba626a65dbdaeabc594a679dcc107a6c638fdabf660b",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "本槽源为16-stance-v3；两鞋轴与15一致；16→01换脚而非鞋尖外翻。"
+        }
+      ]
+    },
+    {
+      "direction": "NW",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/NW/01-v1.png",
+          "sourceSha256": "d473de0016df5cd9b9b4020e67ec24621fb6b72e43f585456ae888dc1b2e1073",
+          "currentSha256": "d473de0016df5cd9b9b4020e67ec24621fb6b72e43f585456ae888dc1b2e1073",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "近左鞋回收露底、远右支撑鞋朝左上；鞋轴未见反转。"
+        },
+        {
+          "slot": 2,
+          "source": "generation/NW/02-v3.png",
+          "sourceSha256": "7542b022f9799ff342898203d5d82f035cb197d288ef9f121af40ab1619be393",
+          "currentSha256": "7542b022f9799ff342898203d5d82f035cb197d288ef9f121af40ab1619be393",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "延续01轴线；可见屈膝缓冲，不以完整鞋底朝镜头判外翻。"
+        },
+        {
+          "slot": 3,
+          "source": "generation/NW/03-v5.png",
+          "sourceSha256": "cbdc9ea8d9fb6659a1ab26964ee79f71a89681cf03a6cfe376c108081ef37bc5",
+          "currentSha256": "cbdc9ea8d9fb6659a1ab26964ee79f71a89681cf03a6cfe376c108081ef37bc5",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "摆脚已到屏左前方；02→03空间跨度偏大，髋被遮挡，不据此断定偷换脚。"
+        },
+        {
+          "slot": 4,
+          "source": "generation/NW/04-stance-v3.png",
+          "sourceSha256": "aba9633a82a424834f4c46305e7ce6c993d079b0146b3bf05e9af955f0af0275",
+          "currentSha256": "aba9633a82a424834f4c46305e7ce6c993d079b0146b3bf05e9af955f0af0275",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "两鞋仍朝NW运动平面；支撑鞋接触面与摆脚露底正常可解释。"
+        },
+        {
+          "slot": 5,
+          "source": "generation/NW/05-stance-v1.png",
+          "sourceSha256": "01db60be6ab0237685a65dcce0b23e187e06b145715092ab5f18dbb40c717f2b",
+          "currentSha256": "01db60be6ab0237685a65dcce0b23e187e06b145715092ab5f18dbb40c717f2b",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右支撑向右后延展、鞋尖仍朝左上；抬跟露底不是确定踝外滚。"
+        },
+        {
+          "slot": 6,
+          "source": "generation/NW/06-stance-v1.png",
+          "sourceSha256": "ad9458f9bde6a95176803fbac8af0f8948f210026dd0a15507ece7b2edb0f938",
+          "currentSha256": "ad9458f9bde6a95176803fbac8af0f8948f210026dd0a15507ece7b2edb0f938",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "延续05；鞋尖仍在NW方向，无确定横向翻掌。"
+        },
+        {
+          "slot": 7,
+          "source": "generation/NW/07-stance-v1.png",
+          "sourceSha256": "088196466d43162d8475917ae00dfc4b7f4b172c585925bf97f6cbf1da95028d",
+          "currentSha256": "088196466d43162d8475917ae00dfc4b7f4b172c585925bf97f6cbf1da95028d",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "摆脚伸开后鞋面可见、支撑脚跟面增多；可解释为腿前伸和后蹬俯仰，不足判外八。"
+        },
+        {
+          "slot": 8,
+          "source": "generation/NW/08-stance-v2.png",
+          "sourceSha256": "d62ea4fd691b4c6f3ebe261e96390f2bc9c96b1325d3defca54e5676c908152a",
+          "currentSha256": "d62ea4fd691b4c6f3ebe261e96390f2bc9c96b1325d3defca54e5676c908152a",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "支撑鞋保持07方向，鞋跟端更朝镜头；未见明确反向鞋尖。"
+        },
+        {
+          "slot": 9,
+          "source": "generation/NW/09-v2.png",
+          "sourceSha256": "252e326b5312440015d5a8ad3c6a3eac4109bc9b1c9b0632951130971258e65e",
+          "currentSha256": "252e326b5312440015d5a8ad3c6a3eac4109bc9b1c9b0632951130971258e65e",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "换左支撑；右回收脚露底但鞋长轴可由屈膝解释。"
+        },
+        {
+          "slot": 10,
+          "source": "generation/NW/10-v3.png",
+          "sourceSha256": "c4322ccd45f0056d223a1058e563735b17d75a2f65dea175dc048e3329b4f933",
+          "currentSha256": "c4322ccd45f0056d223a1058e563735b17d75a2f65dea175dc048e3329b4f933",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左鞋承重、右鞋回收；无确定外八。"
+        },
+        {
+          "slot": 11,
+          "source": "generation/NW/11-v2.png",
+          "sourceSha256": "75250f99f79c494c62ec53ad2492451b241f954fde204e3393a1e96d46510fe5",
+          "currentSha256": "75250f99f79c494c62ec53ad2492451b241f954fde204e3393a1e96d46510fe5",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右摆鞋仍位于屏右后方，中心约x760/y1040；左支撑鞋约x590/y1130。"
+        },
+        {
+          "slot": 12,
+          "source": "generation/NW/12-support-v1.png",
+          "sourceSha256": "4525d269157bf8c8cd62043c8949af2e623c4798de1c15b796fc8e23d8eeb4f7",
+          "currentSha256": "4525d269157bf8c8cd62043c8949af2e623c4798de1c15b796fc8e23d8eeb4f7",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右摆鞋突然到屏左前方约x475/y955，左支撑鞋约x750/y1135；11→12跨身体跳步明显，需中间通过姿态。鞋尖本身仍NW。"
+        },
+        {
+          "slot": 13,
+          "source": "generation/NW/13-stance-v1.png",
+          "sourceSha256": "04e0f3e53b847a78e085c98dd9b5d1fb8b3c01f1815c8f391f78ccaed7dd5d80",
+          "currentSha256": "04e0f3e53b847a78e085c98dd9b5d1fb8b3c01f1815c8f391f78ccaed7dd5d80",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "右摆鞋约x455/y935延续12，左支撑约x740/y1120；没有同等幅度继续前摆，强调12跳变孤立。"
+        },
+        {
+          "slot": 14,
+          "source": "generation/NW/14-stance-v1.png",
+          "sourceSha256": "c7b702656654505c0fd79cca61bba6b81a5fc707e0c9526098d9d54355aeefcc",
+          "currentSha256": "c7b702656654505c0fd79cca61bba6b81a5fc707e0c9526098d9d54355aeefcc",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左支撑后伸并抬跟；露底未形成确定侧向外滚。"
+        },
+        {
+          "slot": 15,
+          "source": "generation/NW/15-stance-v1.png",
+          "sourceSha256": "e6de52620a1afec63055855907dfea09f533029ea2cf307802a916b1b30c8d2d",
+          "currentSha256": "e6de52620a1afec63055855907dfea09f533029ea2cf307802a916b1b30c8d2d",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "左支撑鞋后侧鞋面变宽、摆鞋下降；鞋尖仍左上，不能仅按鞋面宽度判外八。"
+        },
+        {
+          "slot": 16,
+          "source": "generation/NW/16-stance-v2.png",
+          "sourceSha256": "3c2c3aed651919305cd0ce61fedfa2ad48a7a736c411b9049c8b657bdf905c34",
+          "currentSha256": "3c2c3aed651919305cd0ce61fedfa2ad48a7a736c411b9049c8b657bdf905c34",
+          "viewedNative": true,
+          "axisVerdict": "no_definite_yaw_or_roll_error",
+          "observation": "延续15鞋轴；16→01为换脚，未发现确定鞋尖突然翻向相反方向。"
+        }
+      ]
+    }
+  ],
+  "mutations": {
+    "input": false,
+    "exports": false,
+    "oldRecords": false,
+    "generatedImages": false
+  }
+}

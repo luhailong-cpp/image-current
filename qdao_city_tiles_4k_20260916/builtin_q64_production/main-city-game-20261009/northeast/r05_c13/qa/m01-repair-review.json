@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T15:48:09.698222+00:00",
+  "tile": "r05_c13",
+  "repairId": "M01",
+  "status": "M01_visually_resolved_in_reviewed_region_and_integration_boundaries",
+  "historicalInternalReview": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\internal-seam-review.json",
+    "sha256": "42b8fd0368a42f5e1cc5c54f3e8b879c01239ddfa5ca7e490021a90b7e950eb4"
+  },
+  "historicalReviewPreserved": true,
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png",
+    "sha256": "39a976416cbff8145d89893c0a6224cc9243db9abb4778a2b213d8ffa75d6939",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "integrationRecord": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\repairs\\m01-integration.json",
+    "sha256": "7ddf3230bab42df1bbece5c40b3c19e893ab362d42fc336427ba15703ccf0f38"
+  },
+  "nativeRepair": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\m01.png",
+    "sha256": "5324131944b077bf8043e0ed033eab83986c2c81d35ab9596ae1a505fbb9fa69",
+    "pixels": [
+      1254,
+      1254
+    ],
+    "generationRecord": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\m01.png.generation.json",
+      "sha256": "0dcb7a8bc82fd7a99777d3c1b9bec0e9e275855b73d9e57d1be61577bd1c4116"
+    }
+  },
+  "mask": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\repairs\\m01-integration-mask.png",
+    "sha256": "a75ec43cda246d7dead3fafc4255f8958f3bcb5daf0154dd49b59c306258497c",
+    "pixels": [
+      1254,
+      1254
+    ],
+    "nonzeroTileBox": [
+      681,
+      881,
+      1933,
+      1230
+    ]
+  },
+  "viewedEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\repairs\\m01-before-100pct.png",
+      "sha256": "61858eb38bcb4e93ecc0207d76ab6fa36ac881d360c2e1c8b2e3b796e315f43c",
+      "pixels": [
+        1400,
+        460
+      ],
+      "tileCrop": [
+        600,
+        820,
+        2000,
+        1280
+      ],
+      "role": "before native-pixel comparison"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\repairs\\m01-after-100pct.png",
+      "sha256": "e3f90bac016cf61922c48ff388ef6f5e96353c9b4e5772527fa8af40f71f5882",
+      "pixels": [
+        1400,
+        460
+      ],
+      "tileCrop": [
+        600,
+        820,
+        2000,
+        1280
+      ],
+      "role": "after native-pixel comparison covering all four integration boundaries"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\m01.png",
+      "sha256": "5324131944b077bf8043e0ed033eab83986c2c81d35ab9596ae1a505fbb9fa69",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "role": "native repaint geometry and texture inspection"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\repairs\\m01-integration-mask.png",
+      "sha256": "a75ec43cda246d7dead3fafc4255f8958f3bcb5daf0154dd49b59c306258497c",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "role": "inspect bounded material transition extent"
+    }
+  ],
+  "method": "Original-size view_image inspection of before/after, native repaint and mask, followed by exact pixel reconstruction and unchanged-outside-mask checks. No image was changed by this review.",
+  "visualFindings": [
+    {
+      "item": "original_horizontal_material_break",
+      "result": "resolved_in_reviewed_crop",
+      "tileY": 1024,
+      "observation": "修补前横穿多个灰石板面的硬性明暗/纹理分界，在修补后不再形成贯穿的水平断线；石面层次自然延续。"
+    },
+    {
+      "item": "stone_geometry",
+      "result": "no_new_obvious_geometry_defect_observed",
+      "observation": "可见石板竖缝、墙脚斜向压边和右侧扶壁外轮廓保持连续，没有新增双边、断口或错位。"
+    },
+    {
+      "item": "top_and_bottom_transition",
+      "result": "no_new_hard_boundary_observed",
+      "attentionTileY": [
+        881,
+        1230
+      ],
+      "observation": "上、下接入范围内未见新的水平硬线或把原断线平移到边缘的情况。"
+    },
+    {
+      "item": "left_and_right_transition",
+      "result": "no_new_hard_boundary_observed",
+      "attentionTileX": [
+        681,
+        1933
+      ],
+      "observation": "左侧靠红筒后的灰石面和右侧扶壁邻近处未见新的竖向硬接线，颜色与阴影连续。"
+    }
+  ],
+  "mechanicalVerification": {
+    "baselineMatchesHistoricalInternalReview": true,
+    "baselineSha256": "2e0a0d0802dee2e926863234ced35fee268cacc83224ddf1c6e8d5fe42df3882",
+    "repairAndMaskHashesMatchIntegration": true,
+    "nativeRepairPixels": [
+      1254,
+      1254
+    ],
+    "candidatePixels": [
+      4096,
+      4096
+    ],
+    "beforeAfterCropPixelIdentityVerified": true,
+    "beforeAfterTileCrop": [
+      600,
+      820,
+      2000,
+      1280
+    ],
+    "integerOrigin": [
+      680,
+      600
+    ],
+    "exactReconstruction": "PIL Image.composite(nativeRepair, baselineCrop, savedMask), integer paste at [680,600]",
+    "reconstructedCandidateBytePixelsEqual": true,
+    "pixelsOutsideNonzeroMaskUnchanged": true,
+    "actualChangedPixelBox": [
+      681,
+      882,
+      1933,
+      1230
+    ],
+    "changedPixelCount": 389647,
+    "sourceResamplingNeededToReproduce": false,
+    "geometryWarpNeededToReproduce": false,
+    "blurNeededToReproduce": false
+  },
+  "M01LocalReviewAccepted": true,
+  "remainingM01RepairRequired": false,
+  "newDefectsIdentifiedInRepairRegion": [],
+  "limits": [
+    "本结论仅解除M01局部材质修补项。",
+    "历史M02/M03轻微材质过渡及整块与v9布局/风格复核仍由完整候选检查决定。",
+    "外部4K邻块接缝和客户端/容量验证未在本次检查。"
+  ],
+  "formalAccepted": false,
+  "formalAcceptedCount": 0,
+  "imagesModified": false,
+  "progressJsonModified": false,
+  "writesPerformed": [
+    "qa/m01-repair-review.json"
+  ]
+}

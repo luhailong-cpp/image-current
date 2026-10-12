@@ -1,0 +1,96 @@
+{
+  "timestampUtc": "2026-10-09T16:45:37.786737+00:00",
+  "operation": "unscaled native mechanical crop and hard join; no feather or art edit",
+  "sourceA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s01_v01.png",
+    "sha256": "43cc2542995ab18542e1f3b4b2182c3fbe243d45b4e5637a96ee5b91d8feb643",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "sourceB": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s02_v03.png",
+    "sha256": "6ad7bd3da1d837bb700b301b93fa1ab6ef3c9372964eb0a2511f9918e1afb7e6",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "axis": "x",
+  "overlapSourceBoxes": {
+    "A": [
+      1024,
+      0,
+      1254,
+      1254
+    ],
+    "B": [
+      0,
+      0,
+      230,
+      1254
+    ]
+  },
+  "globalOverlapBox": [
+    9101,
+    8077,
+    9331,
+    9331
+  ],
+  "globalCoreSeam": {
+    "x": 9216
+  },
+  "coreSeamPreviewCoordinate": 384,
+  "metrics": {
+    "rgbMAE": 8.80658183667337,
+    "rgbRMSE": 12.396269131678052,
+    "pixelMeanChannelDifferenceP95": 21.0,
+    "coreSeamMeanAbsoluteChannelJump": 7.648111979166667,
+    "immediateBeforeNaturalPixelJump": 1.7278645833333333,
+    "immediateAfterNaturalPixelJump": 1.7942708333333333
+  },
+  "qaArtifacts": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s01_s02_v03-core-seam-100pct.png",
+      "sha256": "d84e6d74bba997cf3082b53a1c7aa228bfe4089170bacbbb160ae3818ebd4942",
+      "size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s01_s02_v03-core-stitch-100pct.png",
+      "sha256": "87613fcc5aadd533db2dff745144edad6516432f1da2413687cf5089530699cc",
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s01_s02_v03-overlap-absolute-rgb-difference.png",
+      "sha256": "b6cb25270fc9f46b958459429b99a61d9804bc6ce918bf81f630ed7e19ac93f9",
+      "size": [
+        230,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s01_s02_v03-overlap-pair-100pct.png",
+      "sha256": "1682f6cbc4ad639b14c28d1773ec070fd84d27158b1bc239eed4507faaf6c52e",
+      "size": [
+        460,
+        1254
+      ]
+    }
+  ],
+  "review": {
+    "status": "pass-local-geometry-and-visible-core-seam",
+    "formalAccepted": false,
+    "aiRepairRequiredForReviewedSeam": false,
+    "findings": [
+      "Roof tile ridges, diagonal eave, wood pillar/wall edges and shadows remain continuous in the hard core stitch. No conspicuous independent seam stripe or doubled geometric edge is visible at 100%.",
+      "Western overlap is not pixel-preserved by the edit: RGB MAE8.807/255 and core jump7.648/255 are higher than prior v02. The new wood/roof colors and strokes drift somewhat warmer/brighter, but their visible core join remains acceptable locally. This local visual pass is not an assertion of unchanged pixels."
+    ]
+  }
+}

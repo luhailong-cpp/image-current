@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-11T05:37:54.326Z",
+  "scope": "Four shared edges of southwest r10_c05/r10_c06/r11_c05/r11_c06, snapshot only. Visual inspection of four 1024-long native-scale segments per edge plus native-scale central crossing; no image generation or candidate mutations.",
+  "sourceManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/crossedge-review-20261011/manifest.json",
+  "coordinateConvention": "Half-open artwork pixel coordinates. All final candidate cores 4096 square. Native source halo 115 pixels; shared context overlap 230 pixels. Display preview only is resized.",
+  "crossEdgeVisualPassedCount": 1,
+  "crossEdgeRepairRequiredCount": 3,
+  "fullTileApprovalGranted": false,
+  "formalAccepted": false,
+  "edges": [
+    {
+      "id": "west_horizontal",
+      "pair": [
+        "r10_c05",
+        "r11_c05"
+      ],
+      "boundary": {
+        "axis": "y",
+        "value": 40960,
+        "range": [
+          16384,
+          20480
+        ]
+      },
+      "geometryPassed": true,
+      "colorSeamPassed": true,
+      "visualPassed": true,
+      "notes": "Leaf silhouettes, pillar and stair surfaces remain continuous across actual tile boundary. No repair required for this shared edge in the reviewed snapshot. The cellular stone texture is a broader material issue, not an additional boundary break.",
+      "nextAction": "Preserve edge; check unchanged after later tile repairs.",
+      "evidence": [
+        "west_horizontal.actual.segment1.png",
+        "west_horizontal.actual.segment2.png",
+        "west_horizontal.actual.segment3.png",
+        "west_horizontal.actual.segment4.png"
+      ]
+    },
+    {
+      "id": "north_vertical",
+      "pair": [
+        "r10_c05",
+        "r10_c06"
+      ],
+      "boundary": {
+        "axis": "x",
+        "value": 20480,
+        "range": [
+          36864,
+          40960
+        ]
+      },
+      "geometryPassed": false,
+      "majorGeometryBreak": false,
+      "colorSeamPassed": false,
+      "visualPassed": false,
+      "priority": 2,
+      "notes": "Main wood arcs, deck edge and stairs connect. However, wood grain/value changes on a straight vertical line at the exact tile boundary, especially middle planks; horizontal board grooves show small approximately 1â€“3 px notches at the same cut. This is not approved merely because same-world halo mean difference is low.",
+      "issueRegions": [
+        {
+          "worldBox": [
+            20316,
+            38288,
+            20656,
+            38648
+          ],
+          "id": "N1",
+          "description": "Native-scale crop of the visible plank colour cut and groove notch; representative of the middle wood strip.",
+          "evidence": "north-wood-detail.png"
+        }
+      ],
+      "nextAction": "If not already covered by an existing native repair, repair a local seam-centred native crop, locking the r10_c05 side and the existing circle/board geometry. Check native overlap quilting first; do not move the obvious colour cut into the 115 px core strip and call it fixed.",
+      "evidence": [
+        "north_vertical.actual.segment1.png",
+        "north_vertical.actual.segment2.png",
+        "north_vertical.actual.segment3.png",
+        "north_vertical.actual.segment4.png"
+      ]
+    },
+    {
+      "id": "south_vertical",
+      "pair": [
+        "r11_c05",
+        "r11_c06"
+      ],
+      "boundary": {
+        "axis": "x",
+        "value": 20480,
+        "range": [
+          40960,
+          45056
+        ]
+      },
+      "geometryPassed": false,
+      "colorSeamPassed": false,
+      "visualPassed": false,
+      "priority": 1,
+      "notes": "Two paving grooves appear only on the east tile and terminate abruptly in open stone at x=20480. A straight texture/value boundary is also visible at both terminations.",
+      "issueRegions": [
+        {
+          "worldBox": [
+            20296,
+            42554,
+            20746,
+            42834
+          ],
+          "id": "S1",
+          "description": "Horizontal paving groove starts at the boundary around y=42687 (r11 local yâ‰ˆ1727).",
+          "evidence": "south-joint1-detail.png"
+        },
+        {
+          "worldBox": [
+            20296,
+            43258,
+            20746,
+            43558
+          ],
+          "id": "S2",
+          "description": "Diagonal paving groove starts at the boundary around y=43382 (r11 local yâ‰ˆ2422).",
+          "evidence": "south-joint2-detail.png"
+        }
+      ],
+      "nextAction": "Native geometric repair required. Inspect the adjacent native/approved stone layout to decide consistent groove continuation or removal; include both neighbouring actual pixels in the edit crop and coordinate any pixels changed in each tile. Recheck the complete 4096-long edge after integration.",
+      "evidence": [
+        "south_vertical.actual.segment1.png",
+        "south_vertical.actual.segment2.png",
+        "south_vertical.actual.segment3.png",
+        "south_vertical.actual.segment4.png"
+      ]
+    },
+    {
+      "id": "east_horizontal",
+      "pair": [
+        "r10_c06",
+        "r11_c06"
+      ],
+      "boundary": {
+        "axis": "y",
+        "value": 40960,
+        "range": [
+          20480,
+          24576
+        ]
+      },
+      "geometryPassed": true,
+      "colorSeamPassed": false,
+      "visualPassed": false,
+      "priority": 2,
+      "notes": "Pillar, foliage, drum rim and stone pedestal geometry connect. On the right pedestal face a rectangular horizontal tone band starts at the actual boundary and changes again approximately 115 px below it. It is a cross-border appearance defect even though no shape is broken.",
+      "issueRegions": [
+        {
+          "worldBox": [
+            23552,
+            40856,
+            24452,
+            41206
+          ],
+          "id": "E1",
+          "description": "Right pedestal face: rectangular shade band around y=40960 and yâ‰ˆ41075; strongest on the western part of this crop.",
+          "evidence": "east-tone-detail.png"
+        }
+      ],
+      "nextAction": "Use an existing matching local native material repair if available, otherwise make a geometry-locked native material edit covering the band. Preserve the pedestal bevels and plants. Verify both the actual y=40960 cut and the yâ‰ˆ41075 halo/core transition.",
+      "evidence": [
+        "east_horizontal.actual.segment1.png",
+        "east_horizontal.actual.segment2.png",
+        "east_horizontal.actual.segment3.png",
+        "east_horizontal.actual.segment4.png"
+      ]
+    }
+  ],
+  "center": {
+    "worldBox": [
+      19968,
+      40448,
+      20992,
+      41472
+    ],
+    "geometryPassed": true,
+    "colorSeamPassed": true,
+    "visualPassed": true,
+    "evidence": "center.actual-1024.png",
+    "notes": "Four-way stair intersection connects without a visible shape break. Does not override defects elsewhere along the four edges."
+  },
+  "acceleratedAssignments": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/acceleration-20261010/assignments.json",
+    "southwestExcludedCoordinates": [],
+    "verified": true
+  },
+  "limitations": [
+    "Approval applies only to the exact source hashes in manifest.json. Other agents may create improved candidates after this snapshot.",
+    "No automated metric is used as a substitute for visual approval.",
+    "No surrounding unproduced tiles or whole-city acceptance assessed."
+  ],
+  "sourceSnapshotUnchangedAtEnd": true,
+  "sourceChecks": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\repairs\\output\\r10_c05.repaired.candidate.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\integrated-v2\\r11_c05.repaired-v2.candidate.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\integrated-v2\\r11_c05.repaired-v2.candidate.context.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c06\\pipeline\\output\\5c4d9d81c6fcc1ca\\r10_c06.candidate.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c06\\pipeline\\output\\5c4d9d81c6fcc1ca\\r10_c06.candidate.context.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\pipeline\\output\\94ddb3ea62a89ee2\\r11_c06.candidate.png",
+      "unchanged": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\pipeline\\output\\94ddb3ea62a89ee2\\r11_c06.candidate.context.png",
+      "unchanged": true
+    }
+  ]
+}

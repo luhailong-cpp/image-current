@@ -1,0 +1,41 @@
+{
+  "reviewer": "audit_resume",
+  "reviewedAtUtc": "2026-10-12T11:28:01.247874+00:00",
+  "patch": "r01_c13_p03_02_v4",
+  "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\native\\r01_c13_p03_02_v4.png",
+  "sha256": "25a64d4a4ef24075e237b977fcf735ef8cdc85596b185a80852e86b90762e406",
+  "size": [
+    1254,
+    1254
+  ],
+  "status": "passed_visible_core_seams_and_repaired_interior",
+  "checks": [
+    {
+      "scope": "west",
+      "neighbor": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\native\\r01_c13_p03_01.png",
+      "neighborSha256": "925a34474730c603beff3ec059b45242ea5d55e9fcf028260c137dac32dc00ea",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\qa\\audit-resume-20261012\\r01_c13_p03_02_v4-west-core-100pct.png",
+      "status": "passed",
+      "notes": "Actual core join at evidence x256 is continuous in color and ripple contours."
+    },
+    {
+      "scope": "south",
+      "neighbor": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\native\\r01_c13_p04_02.png",
+      "neighborSha256": "227fd1f9ef8d5acdbf2978df33bef983af6b999fe5fa55507c358aea3c4b6aa2",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\qa\\audit-resume-20261012\\r01_c13_p03_02_v4-south-core-100pct.png",
+      "status": "passed",
+      "notes": "Actual core join at evidence y256 is continuous in color and water pattern."
+    },
+    {
+      "scope": "interior",
+      "status": "passed_with_nonblocking_observation",
+      "evidence": [
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\qa\\audit-resume-20261012\\r01_c13_p03_02_v4-x230-100pct.png",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\accelerated-northeast-coast\\qa\\audit-resume-20261012\\r01_c13_p03_02_v4-lower-right-100pct.png"
+      ],
+      "notes": "Former lower-right rectangle removed. No blocking rectangular cutoff remains at y1024 or right lower corner. Mild texture-density transition near x230 remains non-blocking."
+    }
+  ],
+  "formalAccepted": false,
+  "limitations": "Only stated patch, west/south core joins and former interior artifact sites reviewed."
+}

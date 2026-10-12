@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 山岳守卫 · 动作逐帧预览</title>
+<style>
+  :root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#11191b;color:#ebeee8}
+  *{box-sizing:border-box}body{margin:0 auto;max-width:1180px;padding:24px}h1{font-size:24px;margin:0 0 10px}p{line-height:1.6}.muted{color:#aab8b1;font-size:13px}.summary{color:#b8d5bf}.layout{display:grid;grid-template-columns:minmax(300px,620px) 1fr;gap:24px}.stage{position:relative;width:100%;aspect-ratio:1;overflow:hidden;border:1px solid #50625c;border-radius:10px;background-color:#46504c;background-image:linear-gradient(45deg,#3e4743 25%,transparent 25%),linear-gradient(-45deg,#3e4743 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#3e4743 75%),linear-gradient(-45deg,transparent 75%,#3e4743 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+  #frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.message{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:20px;color:#f8dfb3;background:#10171890}.message[hidden]{display:none}.guide{position:absolute;pointer-events:none;opacity:.65}.cross-x{left:0;right:0;height:0;border-top:1px dashed #eec77d}.cross-y{top:0;bottom:0;width:0;border-left:1px dashed #eec77d}.anchor{position:absolute;width:8px;height:8px;background:#f0bc6d;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;align-items:center}button,select{font:inherit;border:1px solid #586a5f;border-radius:6px;padding:8px 12px;background:#26352d;color:inherit}button{cursor:pointer}button:hover{background:#354a3b}label{font-size:14px}.wide{width:100%}input[type=range]{width:100%;accent-color:#c7af73}#status{font-variant-numeric:tabular-nums;margin:8px 0 14px}pre{font:12px/1.65 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2823;border-radius:8px;padding:16px;max-height:500px;overflow:auto}.warning{color:#ffd29e}.key{padding:12px;background:#1b2823;border-radius:8px}a{color:#cbdbbc}details{margin:16px 0}summary{cursor:pointer}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 8px;border-bottom:1px solid #35463e;text-align:left}.selected{background:#2b4033}@media(max-width:780px){.layout{grid-template-columns:1fr}body{padding:16px}}
+</style>
+<h1>04 山岳守卫 · 动作逐帧预览</h1>
+<p class="summary" id="summary"></p>
+<p class="muted">完整画布统一显示；不逐帧贴地，不按人物包围盒缩放。缺帧保留空槽，播放不会跳过。技术检查不代表美术通过。</p>
+<div class="layout">
+  <section>
+    <div class="stage" id="stage">
+      <img id="frame" alt="当前动作帧" hidden>
+      <div id="ground" class="guide cross-x" hidden></div><div id="center" class="guide cross-y" hidden></div><div id="anchor" class="anchor" hidden></div>
+      <div id="message" class="message"></div>
+    </div>
+    <div class="controls">
+      <label>动作 <select id="action"></select></label>
+      <label>方向 <select id="direction"></select></label>
+      <label>速度 <select id="speed"><option value="1">正常 1×</option><option value="0.5">慢速 0.5×</option><option value="0.25">慢速 0.25×</option></select></label>
+      <label>画布显示 <select id="display-size"><option value="620">放大 620px</option><option value="256">游戏尺寸参考 256px</option><option value="128">小尺寸参考 128px</option></select></label>
+      <label>底色 <select id="background"><option value="checker">棋盘</option><option value="#f8f3e6">米白</option><option value="#101719">深色</option><option value="#729778">青绿</option></select></label>
+    </div>
+    <div class="controls"><button id="previous" aria-label="上一帧">上一帧</button><button id="play">播放</button><button id="next" aria-label="下一帧">下一帧</button><label><input id="guides" type="checkbox"> 显示布局参考点（非测量地面）</label></div>
+    <input id="scrub" type="range" min="0" max="15" value="0" step="1" aria-label="逐帧滑块">
+    <p id="status"></p><p id="phase" class="key"></p><p id="anchor-note" class="muted"></p>
+  </section>
+  <aside>
+    <p class="key">← / → 逐帧　空格播放 / 暂停<br><span class="muted">正常跑步960ms一圈，16帧均匀60ms；完整首尾循环无额外停顿。保留慢放和逐帧。受击240ms、普攻360ms、施法720ms保持原值；本角色未接入客户端。</span></p>
+    <div id="sequence-summary"></div>
+    <h2 style="font-size:17px">当前帧技术信息</h2><pre id="metadata"></pre>
+  </aside>
+</div>
+<p><a href="gallery.html">八方向跑步与战斗动画总览</a> · <a href="../MERGE_HANDOFF.md">合并交接</a></p>
+<details><summary>每组帧数与格式状态</summary><table><thead><tr><th>动作 / 方向</th><th>存在 / 目标</th><th>画布与 RGBA 符合</th></tr></thead><tbody id="sequences"></tbody></table></details>
+<details><summary>检查边界</summary><ul id="limitations"></ul><p class="muted" id="timestamp"></p></details>
+<script id="manifest-data" type="application/json">__FRAME_MANIFEST_JSON__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('manifest-data').textContent);
+const $=id=>document.getElementById(id);
+const action=$('action'),direction=$('direction'),speed=$('speed'),frameImage=$('frame'),message=$('message');
+let frameIndex=0,playing=false,lastTick=null,loadToken=0;
+const imageCache=new Map();
+function preload(s){for(const f of s.frames){if(f.exists&&!imageCache.has(f.url)){const image=new Image();image.src=f.url;imageCache.set(f.url,image)}}}
+const actions=[...new Set(data.sequences.map(s=>s.action))];
+for(const name of actions){const s=data.sequences.find(s=>s.action===name),o=document.createElement('option');o.value=name;o.textContent=s.label;action.append(o)}
+function sequence(){return data.sequences.find(s=>s.action===action.value&&s.direction===direction.value)}
+function frameMs(){return sequence().frame_ms/Number(speed.value)}
+function cycleMs(){return sequence().duration_ms/Number(speed.value)}
+function setDirections(){const prior=direction.value;direction.replaceChildren();for(const s of data.sequences.filter(s=>s.action===action.value)){const o=document.createElement('option');o.value=s.direction;o.textContent=s.direction;direction.append(o)}if([...direction.options].some(o=>o.value===prior))direction.value=prior;else if([...direction.options].some(o=>o.value==='E'))direction.value='E'}
+function setPlaying(value){playing=value;lastTick=null;$('play').textContent=value?'暂停':'播放'}
+function changeSequence(){frameIndex=0;lastTick=null;const s=sequence();preload(s);$('scrub').max=s.target_count-1;render()}
+function render(){
+ const s=sequence(),f=s.frames[frameIndex],token=++loadToken;
+ const runPositions=['01–02 初承重','03–04 身体经过支撑脚','05–06 支撑脚相对后移','07–08 接地后蹬','09–10 异侧初承重','11–12 身体经过支撑脚','13–14 支撑脚相对后移','15–16 接地后蹬'];
+ const supportLabel=s.direction==='W'?'可见支撑脚（解剖左右未确认）':`${frameIndex<8?'右脚':'左脚'}支撑`;
+ $('phase').textContent=s.action==='run'?`${supportLabel} · ${runPositions[Math.floor(frameIndex/2)]} · 每段两张独立姿态，正常速度120ms；未接入客户端世界位移。`:(s.action==='attack'?`${frameIndex<4?'蓄势':frameIndex<7?'出手 / 06 接触标记':'收招'}`:s.action==='cast'?`${frameIndex<7?'聚势':frameIndex<10?'伸杖释放 / 10 释放标记':'收势'}`:`${frameIndex<3?'受力后仰':frameIndex<4?'承重缓冲':'恢复站姿'}`);
+ $('scrub').value=frameIndex;
+ $('status').textContent=`${s.label} ${s.direction} · ${frameIndex+1} / ${s.target_count} 帧 · ${frameMs().toFixed(0)}ms / 帧 · ${cycleMs().toFixed(0)}ms / 段${s.action==='run'?'（离线建议；客户端未接入）':''}`;
+ $('sequence-summary').textContent=`本组 ${s.frames.filter(f=>f.exists).length} / ${s.target_count} 张已落盘；当前逐图记录中 ${s.frames.filter(f=>f.visual_review==='visual_passed').length} 张视觉复核通过。`;
+ if(!f.exists){frameImage.hidden=true;frameImage.removeAttribute('src');message.hidden=false;message.textContent=`第 ${frameIndex+1} 帧尚未生成`;}
+ else{
+   message.textContent='读取帧…';message.hidden=!frameImage.hidden;
+   const probe=imageCache.get(f.url)||new Image();
+   probe.onload=()=>{if(token!==loadToken)return;frameImage.src=f.url;frameImage.hidden=false;message.hidden=true};
+   probe.onerror=()=>{if(token!==loadToken)return;frameImage.hidden=true;message.hidden=false;message.textContent='此帧读取失败；请保留目录结构后重新打开预览。'};
+   if(probe.complete&&probe.naturalWidth){probe.onload()}else{probe.src=f.url}
+ }
+ const record=f.source;
+ $('metadata').textContent=JSON.stringify({文件:f.path,存在:f.exists,SHA256:f.sha256,PNG:f.png,技术问题:f.technical_issues,来源记录:record?record.record_path:null,来源绑定:record?record.binding:null,原生输入1024核实:f.native_single_frame_minimum_1024_verified,独立姿态核实:f.independent_pose_verified,视觉验收:f.visual_review},null,2);
+ for(const row of $('sequences').children)row.classList.toggle('selected',row.dataset.key===s.action+'/'+s.direction);
+}
+function step(delta){setPlaying(false);const s=sequence();frameIndex=(frameIndex+delta+s.target_count)%s.target_count;render()}
+action.addEventListener('change',()=>{setDirections();changeSequence()});direction.addEventListener('change',changeSequence);speed.addEventListener('change',()=>{lastTick=null;render()});
+$('display-size').onchange=()=>{$('stage').style.maxWidth=$('display-size').value+'px'};
+$('previous').onclick=()=>step(-1);$('next').onclick=()=>step(1);$('play').onclick=()=>setPlaying(!playing);
+$('scrub').oninput=()=>{setPlaying(false);frameIndex=Number($('scrub').value);render()};
+document.addEventListener('keydown',event=>{if(['SELECT','INPUT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName))return;if(event.code==='Space'){event.preventDefault();setPlaying(!playing)}else if(event.key==='ArrowLeft'){event.preventDefault();step(-1)}else if(event.key==='ArrowRight'){event.preventDefault();step(1)}});
+function updateGuides(){const a=data.root_anchor,shown=$('guides').checked&&a.status==='declared_for_preview';for(const id of ['ground','center','anchor'])$(id).hidden=!shown;if(shown){$('ground').style.top=(100*a.y/data.canvas.height)+'%';$('center').style.left=(100*a.x/data.canvas.width)+'%';$('anchor').style.left=(100*a.x/data.canvas.width)+'%';$('anchor').style.top=(100*a.y/data.canvas.height)+'%'}}
+$('guides').onchange=updateGuides;
+$('background').onchange=()=>{const value=$('background').value;$('stage').style.backgroundImage=value==='checker'?'':'none';$('stage').style.backgroundColor=value==='checker'?'#46504c':value};
+$('anchor-note').textContent=data.root_anchor.status==='declared_for_preview'?`统一根锚点：(${data.root_anchor.x}, ${data.root_anchor.y})，仅显示声明值；未据最低像素移动人物。`:'尚未声明根锚点；所有帧仍按同一完整 1024×1024 画布显示。';
+const count=data.summary;$('summary').textContent=`已落盘 ${count.present_frames} / ${count.target_frames} 张 · 视觉通过 ${count.visual_pass_count} 张 · 需修正 ${count.needs_revision_count} 张 · 待审 ${count.candidate_pending_visual_count} 张 · 缺帧 ${count.missing_frames} 张 · 未接入客户端`;
+for(const s of data.sequences){const row=document.createElement('tr');row.dataset.key=s.action+'/'+s.direction;for(const text of [`${s.label} ${s.direction}`,`${s.frames.filter(f=>f.exists).length} / ${s.target_count}`,String(s.frames.filter(f=>f.canvas_rgba_matches).length)]){const cell=document.createElement('td');cell.textContent=text;row.append(cell)}$('sequences').append(row)}
+for(const text of data.limitations){const li=document.createElement('li');li.textContent=text;$('limitations').append(li)}
+if(data.duplicate_sha_groups.length){const li=document.createElement('li');li.className='warning';li.textContent=`发现 ${data.duplicate_sha_groups.length} 组相同 SHA；详见技术清单，不能作为独立姿态的证据。`;$('limitations').append(li)}
+if(data.unexpected_png_files.length){const li=document.createElement('li');li.className='warning';li.textContent=`另有 ${data.unexpected_png_files.length} 个 PNG 不符合当前正式帧命名，未计入帧数。`;$('limitations').append(li)}
+$('timestamp').textContent='技术快照生成时间（UTC）：'+data.generated_at_utc+'。新增帧后重新运行构建工具。';
+function tick(now){if(playing){if(lastTick===null)lastTick=now;let advanced=false,guard=0;while(now-lastTick>=frameMs()&&guard++<128){lastTick+=frameMs();frameIndex=(frameIndex+1)%sequence().target_count;advanced=true}if(advanced)render()}requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',()=>{lastTick=null});
+setDirections();updateGuides();changeSequence();requestAnimationFrame(tick);
+</script>
+</html>

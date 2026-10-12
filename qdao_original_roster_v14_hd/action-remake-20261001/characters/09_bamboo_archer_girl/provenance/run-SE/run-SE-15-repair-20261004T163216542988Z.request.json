@@ -1,0 +1,49 @@
+{
+  "slot": "run-SE-15",
+  "action": "run",
+  "direction": "SE",
+  "frame": 15,
+  "requestedAt": "2026-10-04T16:32:16.543504+00:00",
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-01",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    }
+  },
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "prompt": "Use case: precise-object-edit. Produce ONE independently redrawn full-body animation frame on genuine transparent RGBA, native square at least1024x1024. Image1 is the current target: lock head, face, hair, upper-body root, scale, camera, both arms/hands, full-length bamboo bow and string, right-shoulder quiver, palette and costume details EXACTLY. Only redraw pelvis-to-boots and locally necessary shorts overlap. Image2 is same character's established support-foot chain; identify the same support leg, do not copy its pose. Image3 is approved primary painting-style reference only: bright clean rounded ivory/jade/gold hand-painted Daoist chibi; no UI reproduction. Exactly two connected legs, natural hip-knee-ankle, no everted ankle, toes align with movement rather than outward splay. Anatomical LEFT hand grips full long bow, RIGHT hand EMPTY; no new weapon or arrow. NO floor, shadow, text, particles, checkerboard or backdrop. No translating whole character, root recentering, bbox zoom, crop, mirror, interpolation, or copied repeated pose. Redraw joints individually. This16frame run uses one SAME support foot continuously grounded for8frames, then the other foot for8; each ground-position stage has2distinct poses. The support foot must actually take weight with clear sole/forefoot contact, not merely be the lowest dangling foot. The other swing foot must remain clearly lifted. Ground progression follows the running axis; no outward lateral steps. SOUTHEAST front-three-quarter facing screenBOTTOMRIGHT. Travel axis is diagonal down-right, rearward is up-left, NOT feet yawing outward. RIGHT support is near leg from screen-left hip; LEFT is the other swing leg. Frame15/16: rearward push-off with forefoot still contacting, first pose of this pair. First push-off pose: support heel rises, toe pad still visibly contacting; body carried by this chain, no airborne split. Support moves rearward only along diagonal upperLEFT relative to torso: sole contact near(415,920) on1024basis, corresponding to position stage4. Plant a convincing flat/forefoot-bearing boot at that depth, not a low trailing dangling foot. Boot toe remains pointed screenBOTTOMRIGHT with neutral ankle, never screenleft/outward. Swing LEFT knee advances bottomRIGHT with flexed raised shin and boot, only support foot contacts.",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/SE/15.png",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/SE/11.png",
+      "D:/work/image/designs/jubaozhai-ui/02-characters.png"
+    ],
+    "transparent_background": true
+  },
+  "referenceMetadata": [
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/SE/15.png",
+      "sha256": "738d2c5cb46a3b66c90aa573ab985e3e1331d18eb66a3112e17448d75a41a831",
+      "role": "edit_target"
+    },
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/SE/11.png",
+      "sha256": "fce811c84e699eb11dbb33d980956998c6a0c6a03fa4dc2bc67743edcfeb924c",
+      "role": "pose_or_approved_style"
+    },
+    {
+      "path": "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+      "sha256": "7a95140fc3c7a0ae6562ec6dff51d5296edd15116375152a8b22502c7107e879",
+      "role": "pose_or_approved_style"
+    }
+  ],
+  "repairReason": "2026-10-04 latest requirement: same support foot8consecutive frames, four gradually changing ground positions with2independent poses each; keep16uniform75ms frames."
+}

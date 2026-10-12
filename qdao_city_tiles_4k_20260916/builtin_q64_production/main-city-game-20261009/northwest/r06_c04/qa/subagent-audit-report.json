@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T10:31:30.198Z",
+  "scope": "Read-only audit of six r06_c04 sources and existing r05_c04 north neighbor source anchors",
+  "tile": "r06_c04",
+  "sourceSnapshot": "s01_01..s01_04, s02_01..s02_02; selection snapshot captured during audit; newer parent outputs excluded",
+  "writesRestrictedTo": "r06_c04/qa/subagent-audit-*",
+  "nativeArtModified": false,
+  "assembler": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/assemble_native.py",
+    "supportsTile": true,
+    "preflight": "--tile r06_c04 --preflight passed for six present sources; no writes",
+    "validatedNativeSourceCount": 6,
+    "missingAtSnapshot": [
+      "s02_03",
+      "s02_04",
+      "s03_01",
+      "s03_02",
+      "s03_03",
+      "s03_04",
+      "s04_01",
+      "s04_02",
+      "s04_03",
+      "s04_04"
+    ],
+    "recommendedWhenComplete": "python assemble_native.py --tile r06_c04 --method minimum-error",
+    "importantLimitation": "Minimum-error selection currently covers internal tile joins only. Separate tile exports retain hard boundary at world Y=20480. It does not automatically apply external pair seam previews."
+  },
+  "visual": {
+    "actuallyViewed": true,
+    "scale": 1,
+    "pairComparisons": 10,
+    "actualExternalSegments": 4,
+    "internalFindings": [
+      {
+        "severity": "minor",
+        "location": "s02_01 to s02_02 (x=1024, second patch row)",
+        "finding": "Hard-cut exposes a small edge/tone step in the timber/flower region; binary minimum-error selection keeps roof tiles, gold trim, timber beam and branches connected in viewed overlap.",
+        "action": "Use minimum-error assembly and recheck full four-way junction after all 16 sources exist."
+      },
+      {
+        "severity": "minor",
+        "location": "s01_02 to s01_03 and s01_03 to s01_04",
+        "finding": "Hard-cut petals show small local tone/outline changes. Pair minimum-error output has continuous flowers and branches, with no clear major missing branch or detached blossom.",
+        "action": "No regeneration justified by these pair previews alone."
+      }
+    ],
+    "externalFindings": [
+      {
+        "severity": "requires_external_seam_review",
+        "location": "r05_c04 south to r06_c04 north, world Y=20480, particularly x=14336..15360 (column 3)",
+        "finding": "Current independent-export boundary shows small petal outline/tone changes on the hard line, strongest in column 3. No major broken tree trunk detected. External minimum-error pair previews largely remove the hard-line defects, but those previews are not current final exports.",
+        "action": "Coordinate binary native-pixel external seam selection across the adjacent tiles then recut, or otherwise verify/repair the external boundary; do not count pair previews as acceptance."
+      },
+      {
+        "severity": "minor",
+        "location": "north boundary column 4, mostly exposed pavement",
+        "finding": "Pavement structure remains continuous. A faint material/tone step and bud-edge change exist on the hard boundary; no blocked-road/new-object finding from this narrow crop.",
+        "action": "Recheck after external seam treatment."
+      }
+    ],
+    "notReviewed": [
+      "Remaining ten newly generated sources",
+      "Full r06_c04 tile",
+      "All full four-way junctions",
+      "Other external tile edges"
+    ],
+    "formalAccepted": false
+  },
+  "evidence": {
+    "sourceHashesAndPairs": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c04/qa/subagent-audit-sources.json",
+    "pairPreviewPattern": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c04/qa/subagent-audit-*.png",
+    "actualBoundaryGeometry": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c04/qa/subagent-audit-actual-external.json",
+    "actualBoundaryPreviewPattern": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c04/qa/subagent-audit-actual-external-c{1..4}.png",
+    "construction": "Exact crop/transpose and binary source selection only. No scaling, blur, warp, color edit or native-art overwrite."
+  }
+}

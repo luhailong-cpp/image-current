@@ -1,0 +1,15 @@
+const b=load("base"), p=load("patch"), name="p"+p.r+p.c+"-v"+(p.v||1), d=b+"/"+p.tile;
+const common="Use case: stylized-concept. Create ONE 1254x1254 square high-detail native raster patch of a continuous Chinese Daoist Q RPG environment. IMAGE 1 controls EXACT framing, silhouettes, object positions, proportions and camera. The sharp strips in Image 1 are existing adjacent native pixels: preserve and continue those strips perfectly. Its blurred interior is only a positional guide: redraw into crisp original detail. IMAGE 2 is wider region context ONLY; do not zoom out or copy all of it. IMAGE 3 is approved daylight art/material style ONLY, never import its temple or plaza. IMAGE 4 is adjacent native art style and scale only, never repeat its objects. This is an extremely close-up small fragment of an enormous map; all large objects extend beyond frame. No reframe, no whole object fitting, no new building or props. Bright daylight, rounded finely painted Q game forms, clean soft bevels, warm upper-left sun, natural grey/blue-grey stone and warm wood, gentle shadows. No photorealism, noisy gritty texture, people, animals, UI, text, watermark, grid, margins. Maintain a seamless full-frame image at native 1254x1254. Center 1024 core is [115,115,1139,1139]. ";
+const prompt=common+"\nPATCH "+p.tile+" "+name+": "+p.description;
+const refs=[d+"/guides/"+name+"-positional.png",b+"/region-layout-only.png","D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-detail-v1.png",b+"/r03_c10/native/p11-v1.png"];
+const req={prompt,referenced_image_paths:refs,transparent_background:false,referenceRoles:["exact positional target and unscaled native overlap","wider region coordinate geometry only","approved daylight style and materials only","native anchor art scale/material only"]};
+await tools.apply_patch("*** Begin Patch\n*** Add File: "+d+"/records/"+name+".prompt.txt\n+"+prompt.replaceAll("\n","\n+")+"\n*** Add File: "+d+"/records/"+name+".request.json\n+"+JSON.stringify(req,null,2).replaceAll("\n","\n+")+"\n*** End Patch");
+const result=await tools.image_gen__imagegen({prompt,referenced_image_paths:refs,transparent_background:false});
+store("lastImageResult",result); generatedImage(result);
+const hint=result.output_hint||"", match=hint.match(/as (C:\\[^\n]+?\.png) by default/);
+if(!match) {text({error:"Result path not found; inspect receipt",output_hint:hint});exit();}
+const path=match[1].replaceAll("\\","/");
+const receipt={receivedAt:new Date().toISOString(),tool:"image_gen__imagegen",output_hint:hint,originalFile:path,actualModel:null,actualQuality:null};
+await tools.apply_patch("*** Begin Patch\n*** Add File: "+d+"/records/"+name+".receipt.json\n+"+JSON.stringify(receipt,null,2).replaceAll("\n","\n+")+"\n*** End Patch");
+text(await tools.exec_command({cmd:"& 'C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' '"+b+"/workflow.py' record "+p.tile+" "+p.r+" "+p.c+" "+(p.v||1)+" '"+path+"'",max_output_tokens:1000}));
+

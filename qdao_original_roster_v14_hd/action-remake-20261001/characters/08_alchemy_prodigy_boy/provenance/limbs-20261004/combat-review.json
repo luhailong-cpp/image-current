@@ -1,0 +1,1308 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-05T00:40:47.818886-04:00",
+  "scope": "08炼丹童子已有combat六组68帧；不新增方向、不改变时长、不复制帧",
+  "status": "offline_sequence_review_complete_one_candidate_ready_for_root_export",
+  "selectedReplacements": 1,
+  "retainedFrames": 67,
+  "failedGroups": [
+    "attack/E"
+  ],
+  "problemFrames": [
+    "attack/E/08"
+  ],
+  "method": [
+    "实际查看当前六组preview联系表，逐帧观察原有姿态及前后联系。",
+    "从当前runtime实时生成10张手部/腿脚分区放大板并逐槽查看，固定画布裁切仅作审阅，未编辑任何runtime。",
+    "另查看11张1024原图：cast/E03、06、07；cast/W09、10、11；attack/E02、03；attack/W03、06；hit/E03。",
+    "再次按六组01→末帧顺序逐段追踪肩—肘—腕—道具和遮挡交接，区分攻击/施法相位的大位移与没有中间位的换边。",
+    "对attack/E04–12逐张读取1024原图，定位07→08药瓶从背侧直接跳胸前；生成v2并查看07/旧08/新08/09完整画布并排，确认只保留一个瓶。"
+  ],
+  "referenceEvidence": {
+    "actuallyViewed": [
+      "C:/Users/luyua/AppData/Local/Temp/codex-clipboard-7cc4bf22-e4cf-4c35-8ac6-a37fd85f4037.png",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/character-detail.jpg",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/video-contact.jpg"
+    ],
+    "use": "只提取运动平面、关节与鞋轴衔接、连续性和接地。角色身份及项目画风保持。",
+    "limitation": "视频角色小且有名字/特效遮挡，抽样不能证明其每帧鞋掌角度；此次combat审阅为当前实图逐帧离线审阅，不声称连续游戏运行测量。"
+  },
+  "findings": [
+    "单帧审阅未发现腿脚反折或左右换持；连续轨迹复核补充发现attack/E08缺少药瓶身侧回摆过渡，已准备v2替换候选，其他67帧保留。",
+    "cast/E03在小联系表中容易误看成额外鞋尖；1024原图和放大腿脚板均确认只有两只靴，未为了缩略误判重画。",
+    "attack/W04-07及attack/E05-08后跟抬起是自然蹬地；hit/E03、attack/W03前脚鞋尖抬起是有效屈踝；不把正常战斗屈膝、抬跟套成跑步错误。",
+    "cast/E06-07的瓶和左手部分被右袖遮挡，原尺寸仍可见瓶颈/握持；不把正常遮挡判成缺手。",
+    "原有68槽SHA互不相同。本次仅attack/E08进行了两次内置AI编辑；v1双瓶拒用，v2通过静态连续性审阅，逐图模型/参数/receipt/提示词记录齐全。",
+    "07的左瓶在背侧，原08立即跳回胸前，与09同位，缺少身侧回摆过渡。08 v2将左手/瓶移到身侧中间位，承接07→08→09；右手丹炉、脚与原攻击相位保持。"
+  ],
+  "limitations": [
+    "较小的绘画轮廓/衣摆/道具体积差异仍存在；本审阅只判定可见肢体和握持是否有确定错误。",
+    "未进行客户端世界位移、滑步、事件帧或实机战斗测试；staticReviewed不等于dynamicAccepted。"
+  ],
+  "browserPreviewChecked": false,
+  "dynamicAccepted": false,
+  "clientValidated": false,
+  "slots": [
+    {
+      "slot": "hit/E/01",
+      "file": "runtime/hit/E/01.png",
+      "sha256": "86a621d993a370c7d7dc8ea971dbc02852c9183a78c97bf7ebfc0f82601a1cf9",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "受击起始双靴稳定；右掌托炉、左手握瓶，两袖口各连一手。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/E/02",
+      "file": "runtime/hit/E/02.png",
+      "sha256": "3e4f108a079f5f908a7e7a5d917726fdb3974c2e489ae39d47c866db2239957a",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "后仰开始，膝踝跟随躯干倾斜；两鞋尖保持向E，托炉腕未折断。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/E/03",
+      "file": "runtime/hit/E/03.png",
+      "sha256": "3c5a41e178c9828e3e3fafe8e05563386f350e679c91cc67bd24da3ad8531d82",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前脚抬鞋尖、后脚支撑；原尺寸检查排除反踝；抱炉与握瓶分别连接袖口。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/E/04",
+      "file": "runtime/hit/E/04.png",
+      "sha256": "6b9a74009562e6de839573d46a3a4dadb36613949972fcd6b06e2c3198e5960c",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前腿伸出承接后仰，两踝鞋轴仍随腿；双手道具未换手。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/E/05",
+      "file": "runtime/hit/E/05.png",
+      "sha256": "8869feb67fbce8b4bdd3f442d222795e887bb9a7e10c65ef4d6cda66f04e8d97",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "重心回收，前脚放平；膝位与靴口一致，腕部与道具接触完整。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/E/06",
+      "file": "runtime/hit/E/06.png",
+      "sha256": "2346775c1f8b8df9a146c5b53a5f0759b37c18adb96121e51102493fd94787a4",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "恢复站立，两脚均沿E方向透视；握瓶与托炉保持同一解剖归属。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/01",
+      "file": "runtime/hit/W/01.png",
+      "sha256": "06403fa0500b14f854a2f41189745fb0d2f9ca5e32b5db6cf9abd305d17dc60e",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "双脚W向支撑，右掌托炉、近侧左手握瓶；肩袖关系可读。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/02",
+      "file": "runtime/hit/W/02.png",
+      "sha256": "c84a2c551baeaea1291a220ec01db0ee8aaddbad6f772bac03535302780b36ea",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "受击缩膝并抬前脚，靴随小腿旋转，未额外向外拧；炉贴胸。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/03",
+      "file": "runtime/hit/W/03.png",
+      "sha256": "20cbaf8aefabf7ec993c4206abb07ee359c66da044f80f8db72bd9da7bfdd5b7",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前脚仍在抬起阶段，鞋尖W向，后脚稳定；收回托炉手未反折。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/04",
+      "file": "runtime/hit/W/04.png",
+      "sha256": "2f1d1336198750fcea4d5eaaa09cef3792663b8972c3c8dcef1fc1df00cd6b7d",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "双脚重新承重，膝踝不分叉；药瓶依然左手握持。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/05",
+      "file": "runtime/hit/W/05.png",
+      "sha256": "b44153d7679b33615b53ec4ba6ff98e1ffa68f50ba76c89b3f1facfb8f53df2e",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "恢复段向前伸炉，肘腕顺直、炉底贴掌；双靴落稳。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "hit/W/06",
+      "file": "runtime/hit/W/06.png",
+      "sha256": "e271cb9b0307363e7a4ab1c91ecf0a5e91f1ac58f3daae51baddc2101d9402be",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "恢复站立，肩肘保持合理屈度；左右手道具与前帧一致。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/01",
+      "file": "runtime/attack/E/01.png",
+      "sha256": "38c43e00cbd6f8d953ecfe024a9ae07f956e86db397a72e10ab9b76672625079",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "预备托炉，瓶在胸前，双脚自然前后站位。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/02",
+      "file": "runtime/attack/E/02.png",
+      "sha256": "bbf2beab5ef68b8cd0095505eb4eff423c2716e0cf5ce5401c8bb366c9b7fc3b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂收炉蓄势、左手握瓶；原尺寸确认两手两臂，无重复肢体。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/03",
+      "file": "runtime/attack/E/03.png",
+      "sha256": "2c1cac75ee3f428e111abef898a375dd9bb6dfa1cda60e7c671dd55ff2764a31",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "继续蓄势，肩肘腕位置延续02；两脚未突然换朝向。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/04",
+      "file": "runtime/attack/E/04.png",
+      "sha256": "6956d0dcfe5c519955ecb84c478dc5e913720de76088df008cf24bb92efdb74d",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂推出、前脚抬鞋尖开始跨步；屈膝及踝轴自然。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/05",
+      "file": "runtime/attack/E/05.png",
+      "sha256": "ce656b8447afb833ca5e76c5a7c7527a460fa27713e2ad6d755622830b36060f",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前脚承重，后脚抬跟前掌蹬地；托炉掌与右袖衔接。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/06",
+      "file": "runtime/attack/E/06.png",
+      "sha256": "097ac088efe578e7e6391d2e25e0b9f87f1986f9493e5509963a3f42351e5371",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "保持推出后随动，后跟抬起属于蹬地；左手药瓶未消失或换手。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/07",
+      "file": "runtime/attack/E/07.png",
+      "sha256": "df46f75601e33d1e228557db6ef10c99d2b23907b3530c9a3383d5908ddbe384",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "推出后回收开始，肩肘不过伸；双鞋轴保持E向透视。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/08",
+      "file": "runtime/attack/E/08.png",
+      "sha256": "35c2553bb632cce8d6703e7f200b52f34719145b8f0935af0d9df4d2cd4d009b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "replace_with_candidate",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "07的左瓶在背侧，原08立即跳回胸前，与09同位，缺少身侧回摆过渡。08 v2将左手/瓶移到身侧中间位，承接07→08→09；右手丹炉、脚与原攻击相位保持。",
+      "continuityReviewed": true,
+      "proposedSource": "generation/limbs-20261004/combat/attack-E-08-v2.png",
+      "proposedSHA256": "9a2f697d7df9261f82bd8cf474137ee2a992378addbd81ecc013144e89b1943c"
+    },
+    {
+      "slot": "attack/E/09",
+      "file": "runtime/attack/E/09.png",
+      "sha256": "77f0b291ae4511efc588d58fa6a0bd553d9273cf044cf75082519b0eff0b420c",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "屈膝回稳，右掌接炉底；前后脚支撑关系清楚。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/10",
+      "file": "runtime/attack/E/10.png",
+      "sha256": "e5cf8e41102d75d29bab73b034aaf7cf42a667bc8bfa41c420d31d1d7e41b8b1",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "起身回收，鞋掌无外撇突转；瓶仍由左手握持。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/11",
+      "file": "runtime/attack/E/11.png",
+      "sha256": "428eead5296726ce3172d97f1e260b9153db4e8ce21774e41783b427400b4b66",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "炉降至腰胸间，右肘自然弯曲；双脚平稳。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/E/12",
+      "file": "runtime/attack/E/12.png",
+      "sha256": "8af04128a113a1029210a5b54be1d5e85d809088319dc9f512da15cd0392d2e7",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "回到准备姿态，右掌托炉、左手贴胸握瓶；膝踝鞋连续。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/01",
+      "file": "runtime/attack/W/01.png",
+      "sha256": "fd6f1fa73c236c4549114de8a18337ed47e6d6768444b1f7538e6de26678c6f9",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "站立预备，右炉左瓶解剖归属正确，双靴W向。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/02",
+      "file": "runtime/attack/W/02.png",
+      "sha256": "37b28aa67621cc049611fc3946af055141bdd1e9e2aa946fe580cf8fc8b45c5d",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前腿抬起蓄势，鞋尖向W且与踝相连；炉随右肘后收。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/03",
+      "file": "runtime/attack/W/03.png",
+      "sha256": "3cb06f935b8595576e24bc6ca2afd390759fbd02acbb32e010dcc56d180cea9b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前脚鞋尖抬起跨步，原尺寸检查为正常足背屈；两手未换持。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/04",
+      "file": "runtime/attack/W/04.png",
+      "sha256": "8d92443eaa9cf78bec568dd4d3481ad24679239fac4c21da1088e0d14d66144e",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "跨步推出炉，前脚承重、后脚开始抬跟；肩肘腕连贯。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/05",
+      "file": "runtime/attack/W/05.png",
+      "sha256": "0ec020df17fbf3f1a351d3a53700ced11905dffad37d6eab15a97000730f42b5",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前脚稳定，后脚前掌触地蹬出；后脚可见鞋尖属透视而非反踝。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/06",
+      "file": "runtime/attack/W/06.png",
+      "sha256": "53f2104f188ff83acc55db093954218c1e2311f41a763f20919af249bb87e788",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "低弓步推出峰值；原尺寸确认后腿—踝—鞋轴自然相接，掌托炉底完整。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/07",
+      "file": "runtime/attack/W/07.png",
+      "sha256": "60ac7dca686c9faef08c475f09cc56be0270d9f808eecc4c391b19b4d444a3b9",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "推进后随动，后跟仍抬起；炉为右掌托持、左瓶贴近身体。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/08",
+      "file": "runtime/attack/W/08.png",
+      "sha256": "b2f9c67279c3557761449d142b61b76d805bb019966692f105dd4633ae86641c",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右肘回收，后脚回稳，脚掌方向未突然换向。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/09",
+      "file": "runtime/attack/W/09.png",
+      "sha256": "3d093412c9467b67c60e10208d3605d01d08088e612eeb40553e1d750f8b3e3d",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "站姿回收阶段，两脚重落稳定；手腕与炉底接触连贯。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/10",
+      "file": "runtime/attack/W/10.png",
+      "sha256": "313323620eda467b3953678d7bd9d6a4af43745b756766175474c491f78c7532",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂收回、左瓶靠胸；左右膝与各自靴口衔接。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/11",
+      "file": "runtime/attack/W/11.png",
+      "sha256": "fa6fdfb21a34f7abac2929fa85f72ab42372b2dcb0a283cd1ae23ae370173718",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "准备复位，前臂没有额外关节或重叠手；靴轴保持W向。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "attack/W/12",
+      "file": "runtime/attack/W/12.png",
+      "sha256": "97bedbc18ef071d4fdcfa7ff35cd1de83679fbe168f04ee3e43ca086636bb228",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "恢复准备姿态，双脚稳立、道具归属与01一致。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/01",
+      "file": "runtime/cast/E/01.png",
+      "sha256": "4fe5c751a8e773aed2c455834a9148291744dad4a945985970528cf7818884a2",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "起始托炉与握瓶均明确，两腿直立自然。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/02",
+      "file": "runtime/cast/E/02.png",
+      "sha256": "e85a1a0f6a1f068600dd1d3bb3a9270f1cfbdf4eb1cac21bf25d7116757d9019",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "向前送炉，肩肘腕顺势展开，双脚仍稳立。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/03",
+      "file": "runtime/cast/E/03.png",
+      "sha256": "fb944f05efaadd77cb85d6957f2cc6b7f7a61cb5ac68979836c08e27fbac091a",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "下蹲蓄力，原尺寸确认只有两脚；近鞋圆头与远鞋侧面为视角差，非额外鞋。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/04",
+      "file": "runtime/cast/E/04.png",
+      "sha256": "5d00947b99c428a2322c2544233e116e96a6560906bbe4018098830191d45e8b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "蓄力后小幅起身，双腿屈膝，靴轴与膝踝连接正常。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/05",
+      "file": "runtime/cast/E/05.png",
+      "sha256": "913a750860068fc6f7176d4d2f58e8db8acab528e107be0e3e5464489f942551",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "托炉右臂开始上抬，左瓶在胸前；脚掌继续承重。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/06",
+      "file": "runtime/cast/E/06.png",
+      "sha256": "be40e6abcaee78620975c5b51383859de74eb413d63fce878372ee9fc6b8c76e",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂举炉，原尺寸检查腕部自然仰掌；左手/瓶局部被右袖遮挡，未丢失。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/07",
+      "file": "runtime/cast/E/07.png",
+      "sha256": "1624a82d81ed721c9da7232f266b5310e309bedbd617ae5b4438a891387445e9",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "举炉最高点，原尺寸检查肩—肘—腕衔接；左瓶露出瓶颈及握持部位。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/08",
+      "file": "runtime/cast/E/08.png",
+      "sha256": "3e2a453cd7847415ce9a63a292aa3fd361c1db617110c012fd3debcee65b5708",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂开始向前送出，膝盖弯曲承力；脚趾朝E。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/09",
+      "file": "runtime/cast/E/09.png",
+      "sha256": "8eadf8b527bec00f7e79ff1baff291d50a83557fa975f4e09266f99cf4cb3595",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "前送并下蹲到释放段，前后膝踝一致，无外翻鞋底。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/10",
+      "file": "runtime/cast/E/10.png",
+      "sha256": "e189f7206ac93883c8e0d97f6df73690281ec49bf3e3aa9b9998ec6838053981",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "释放随动，托炉手从袖口正常伸出；左瓶继续在胸前。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/11",
+      "file": "runtime/cast/E/11.png",
+      "sha256": "838bd5cc667db60e6273b98264be769add98726dce4a01f49cc3fe6d0194cda0",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "起身收臂，双脚仍支撑，鞋方向延续10。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/12",
+      "file": "runtime/cast/E/12.png",
+      "sha256": "457e59964f846f9a05276cd037ab4340fa06b7d762184d96cf1123ca91318362",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "收回炉到胸高，肘部自然弯曲；握瓶手可见。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/13",
+      "file": "runtime/cast/E/13.png",
+      "sha256": "5065a35b4e94f23aad49edc611ba2b2e3b6e7b6307393cdfd4d97d1a616a062e",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "回收低点，炉底掌接触完整、没有第三手；双靴稳立。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/14",
+      "file": "runtime/cast/E/14.png",
+      "sha256": "bd67d2429120c1a515f9106a8165ddb7165cd1a655f812c54560a544b36ab0ee",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "恢复准备，袖口—腕—掌相接；瓶的解剖左手归属不变。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/15",
+      "file": "runtime/cast/E/15.png",
+      "sha256": "6d5d6cec855ca6f195c164e854157658622d2895db5d7192856ad6831e24d313",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "收势小幅调整，膝与靴口自然；两手道具完整。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/E/16",
+      "file": "runtime/cast/E/16.png",
+      "sha256": "74e2260c34713b687143798796b22647dcaff758c58089deb55a13748b588d5b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "最终准备姿态，右炉左瓶不换，双靴保持原E向透视。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/01",
+      "file": "runtime/cast/W/01.png",
+      "sha256": "4330db9a7b5b381151a9b6265ceb2eedcdbc75e6bc684ca3ce5515a3a237df38",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "准备站立，远侧右掌托炉、近侧左手握瓶。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/02",
+      "file": "runtime/cast/W/02.png",
+      "sha256": "7470dc11833b956b44b88f268e9c6c2739f65d230b7d747b7df6c75392c32bf0",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "开始俯身蓄力，肩肘自然收合，双膝屈曲方向一致。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/03",
+      "file": "runtime/cast/W/03.png",
+      "sha256": "81e989014b68882784d5467af4d0693ace23c23ad29385647c1a3068c2f07b2b",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "双腿下蹲、鞋掌平稳；右托炉腕没有反折。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/04",
+      "file": "runtime/cast/W/04.png",
+      "sha256": "bcf293dd0e1ac4122bc4c6e0d7df205b4084527c2bcb3077ebae8e250461715d",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "下蹲最低附近，膝踝与靴口相接，两脚没有重叠增生。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/05",
+      "file": "runtime/cast/W/05.png",
+      "sha256": "bcd5b3de76bf411cc402a51ba50547d51f39970e73ae0663856fd96826890410",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "起身准备举炉，两手道具归属延续。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/06",
+      "file": "runtime/cast/W/06.png",
+      "sha256": "9389ad89394699a630649ac95ea6ba81db5e5fd892481aa16428c76c8470bc36",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "右臂上抬初段，肘腕自然、炉底保持托掌接触。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/07",
+      "file": "runtime/cast/W/07.png",
+      "sha256": "24f6f6f6e72f9914db9785245a394ff2c0611fcbe47844e99354872b04b8c2ee",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "继续上抬，双腿平稳承重，左瓶仍在胸前。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/08",
+      "file": "runtime/cast/W/08.png",
+      "sha256": "7a25689ef3d318e204b75f80d5dbe15df34ff4bb309ec7261e6ade18990599e7",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "举炉接近头高，右袖口沿前臂落下，腕掌连续。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/09",
+      "file": "runtime/cast/W/09.png",
+      "sha256": "7426080622e514836f019148d2341623c88d9fbda1ba098be321970a287e66da",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "举炉高位，原尺寸确认右掌仰托炉底，肩肘自然上举；左手握瓶。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/10",
+      "file": "runtime/cast/W/10.png",
+      "sha256": "d56102aa9ee5dd188e14032ccedf55eed2a5f90008cd1e3f78cf960f88cbbe12",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "举炉峰值，原尺寸确认没有额外手臂或反腕；双脚承重，鞋尖朝W。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/11",
+      "file": "runtime/cast/W/11.png",
+      "sha256": "760e1df30d1e2c253aa51b88a10aca3a4bbec471ff2cefce2bc46f5a01d6acbb",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "高位回落，原尺寸确认腕掌结构延续10、左瓶仍握牢。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/12",
+      "file": "runtime/cast/W/12.png",
+      "sha256": "510dd68ac2de8d0dc0b82d07483a5537e4784d8b4b8dc8ca3de24146d154e568",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "炉回到头胸高度，右肘收回；两靴平稳。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/13",
+      "file": "runtime/cast/W/13.png",
+      "sha256": "e07d334a5fbc15f5a663405324c6ad54de2f948ec21e4ddb46503741b2abdd34",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "炉降到胸前，肩肘自然放松，两手道具无交换。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/14",
+      "file": "runtime/cast/W/14.png",
+      "sha256": "fb078a8c406a86cceee9e9db9a38566e53ccd6b540579d2a484068e770bc4bc0",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "准备复位，托炉掌与袖口连接清楚，双膝踝无扭转。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/15",
+      "file": "runtime/cast/W/15.png",
+      "sha256": "1f982de910b6ca9cd58f8927c72859437e3c94bcd1da877827b54a5470b6fc89",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "收势小幅调整，左右手握持持续；靴方向稳定。",
+      "continuityReviewed": true
+    },
+    {
+      "slot": "cast/W/16",
+      "file": "runtime/cast/W/16.png",
+      "sha256": "7d03c77be53675cbd1c2f7e743c710e4dbd3ccf715b7e6fc8232e9fe5f686d52",
+      "size": [
+        1024,
+        1024
+      ],
+      "decision": "retain",
+      "staticReviewed": true,
+      "feetLegs": "pass_current_pose",
+      "shoulderElbowWrist": "pass_visible_structure",
+      "gripOwnership": "anatomical_right_cauldron_left_green_bottle",
+      "observation": "最终准备姿态，右炉左瓶及自然两脚站位保持。",
+      "continuityReviewed": true
+    }
+  ],
+  "qaImages": "provenance/limbs-20261004/combat-qa/*.jpg（共11张），为审阅用派生图；根任务合并并核查引用后可删除图片，保留JSON与脚本文字。",
+  "initialReview": {
+    "status": "offline_static_review_complete_no_confirmed_limb_repair",
+    "retainedFrames": 68,
+    "selectedReplacements": 0,
+    "qualification": "初次结论限于单帧肢体结构；后续连续轨迹复核发现attack/E08回摆缺过渡，以下新结论取代初次全保留。"
+  },
+  "failedGroupsBeforeRepair": [
+    "attack/E"
+  ],
+  "problemFramesBeforeRepair": [
+    "attack/E/08"
+  ],
+  "currentRuntimeNote": "当前runtime尚未由本子任务修改；根任务合并combat-selection后方可将上面的待合并组清零。",
+  "unresolvedIssuesAfterCandidateReview": [],
+  "continuityReview": {
+    "reviewedAt": "2026-10-05T00:40:47.818886-04:00",
+    "groups": [
+      {
+        "group": "hit/E",
+        "frameCount": 6,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06"
+        ],
+        "previewSeamAlsoCompared": "06→01",
+        "notes": {
+          "rightCauldron": "01托炉预备→02/03靠胸缩臂保护→04/05随躯干回收→06恢复；手掌持续托底。",
+          "leftBottle": "各帧均握在胸前一带，随躯干后仰和复位小幅移动，无胸前/背侧突然换边。",
+          "occlusion": "两臂交错区域保持同一遮挡关系，抬炉保护和恢复的大位移对应受击相位。",
+          "decision": "retain_all_6"
+        }
+      },
+      {
+        "group": "hit/W",
+        "frameCount": 6,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06"
+        ],
+        "previewSeamAlsoCompared": "06→01",
+        "notes": {
+          "rightCauldron": "01前托→02/03收炉近胸→04再次前伸→05/06恢复，肘腕始终连到远侧右肩。",
+          "leftBottle": "始终在近侧胸前握持，02/03随缩身靠近炉，没有突然穿越前臂。",
+          "occlusion": "03双手靠近但仍分别托炉/握瓶，04展开恢复可沿袖口追踪，未缺失中间遮挡。",
+          "decision": "retain_all_6"
+        }
+      },
+      {
+        "group": "attack/E",
+        "frameCount": 12,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06",
+          "06→07",
+          "07→08",
+          "08→09",
+          "09→10",
+          "10→11",
+          "11→12"
+        ],
+        "previewSeamAlsoCompared": "12→01",
+        "notes": {
+          "rightCauldron": "01准备→02/03收炉蓄势→04快速推出→05/06命中随动→07–11收回→12复位；03→04是攻击加速，11→12为恢复前托，不强行插帧。",
+          "leftBottle": "04胸前→05身侧→06/07背侧→08 v2身侧→09胸前→10–12恢复。原08直接回胸，已用身侧独立姿态替换候选。",
+          "occlusion": "v2去除旧胸前瓶和手，只有一瓶、一只握瓶左手；身侧前臂被近侧右臂部分遮挡，恢复胸前前有中间位。",
+          "decision": "replace_08_with_v2_retain_other_11"
+        }
+      },
+      {
+        "group": "attack/W",
+        "frameCount": 12,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06",
+          "06→07",
+          "07→08",
+          "08→09",
+          "09→10",
+          "10→11",
+          "11→12"
+        ],
+        "previewSeamAlsoCompared": "12→01",
+        "notes": {
+          "rightCauldron": "01准备→02/03收臂→04快速前送→05/06前伸命中→07/08回收→09–12复位，右掌一直在炉底。",
+          "leftBottle": "整个序列保持近侧胸/腰前握持，随弓步躯干俯仰变化；没有突然跑到背后再跳回。",
+          "occlusion": "身前瓶与远侧送炉手遮挡分离，03→04送炉快变位是明确攻击相位而非换手。",
+          "decision": "retain_all_12"
+        }
+      },
+      {
+        "group": "cast/E",
+        "frameCount": 16,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06",
+          "06→07",
+          "07→08",
+          "08→09",
+          "09→10",
+          "10→11",
+          "11→12",
+          "12→13",
+          "13→14",
+          "14→15",
+          "15→16"
+        ],
+        "previewSeamAlsoCompared": "16→01",
+        "notes": {
+          "rightCauldron": "01/02前送准备→03/04屈膝收蓄→05–07上举→08/09前送释放→10–14收回→15/16复位。",
+          "leftBottle": "均在胸前，05–09逐步被举起的右袖遮挡，只露瓶颈或握持部位，10后重新显露。",
+          "occlusion": "06/07原尺寸确认瓶颈/左握持被右袖遮住，前后遮挡方向一致；07→08大回落跟随释放动作，无另一位置突然出现瓶。",
+          "decision": "retain_all_16"
+        }
+      },
+      {
+        "group": "cast/W",
+        "frameCount": 16,
+        "adjacentPairsActuallyReviewed": [
+          "01→02",
+          "02→03",
+          "03→04",
+          "04→05",
+          "05→06",
+          "06→07",
+          "07→08",
+          "08→09",
+          "09→10",
+          "10→11",
+          "11→12",
+          "12→13",
+          "13→14",
+          "14→15",
+          "15→16"
+        ],
+        "previewSeamAlsoCompared": "16→01",
+        "notes": {
+          "rightCauldron": "01预备→02–04屈膝蓄力→05–08渐举→09–11高位释放→12/13回落→14–16恢复。",
+          "leftBottle": "始终由近侧左手在胸前握持，随身体升降小幅位移，肩肘屈度保持。",
+          "occlusion": "高举段托炉手远离握瓶手，无遮挡交换；11→12大回落对应释法收势，腕掌附着不丢失。",
+          "decision": "retain_all_16"
+        }
+      }
+    ],
+    "consecutiveEdgesReviewed": 62,
+    "previewSeamsCompared": 6,
+    "method": "按相位的连续联系表、关键帧原尺寸和07/08/09候选并排；不是只按单帧是否有两只手判定。",
+    "browserPlaybackCheckedByThisSubtask": false,
+    "noFrameDuplication": true,
+    "frameCountsUnchanged": true,
+    "combatTimingUnchanged": {
+      "hitFrameMs": 40,
+      "attackFrameMs": 30,
+      "castFrameMs": 45
+    }
+  }
+}

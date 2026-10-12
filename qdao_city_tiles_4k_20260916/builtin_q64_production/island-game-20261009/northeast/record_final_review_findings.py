@@ -1,0 +1,9 @@
+from native_work import *
+p=ZONE/'capacity-road-building-risks.json';q=read(p)
+q['risks'].append({'id':'vessel-count-layout-risk','severity':'layout_count_requires_confirmation','tiles':['r03_c12','r03_c13'],'observation':'Independent adjacent native-context review sees3round jars+1long-neck vessel. Low-resolution sole layout appears to show3vessels total, but cannot resolve all overlaps reliably.','evidence':['qa/r03_c12-r03_c13-adjacent-preview.png','reference-audit.json'],'nextAction':'Confirm intended prop count against approved design before repainting; do not invalidate otherwise passed r03_c12 internal geometry solely from blurred overview.'})
+q['risks'][0]['tilePixelBox']=[1850,3450,2550,4096];q['risks'][0]['measuredVisualLocation']={'coreBoundaryX':2048,'approxY':[3570,3890],'estimatedFrontEdgeMismatchPixels':[150,220],'measurementKind':'native-resolution visual estimate, not gameplay units'}
+write(p,q)
+p=ZONE/'qa/r03_c12__r03_c13.final-border.json';q=read(p);q.update(status='passed_shared4096edge_visual_only',reviewedAtUtc=now(),reviewers=['root','contract_review'],notes='All four1024 shared-edge segments inspected at1:1. Gourd contours/medallion, stone platform and jar surfaces continuous. Entire neighboring tile still has one internal terrace defect; no formal acceptance.');write(p,q)
+p=ZONE/'capacity-gate-ack.json';q=read(p);q['auditOutputs']+=['qa/r03_c13-whole-review.json','qa/r03_c12__r03_c13-border-review.json','qa/r03_c13__r03_c14.existing-border.json'];q['finalSummary']={'nativeCount':63,'selectedCoreCoordinates':45,'fullyCovered4kCount':2,'internalPassed4kCount':1,'externalPassed4kCount':0,'formalAcceptedCount':0,'inFlightStatus':'none','knownGeometryDefect':'r03_c13 terrace front atx2048 y3570..3890','pendingReferenceAvailability':['config/image-generation.json','designs/mail-ui-v1/01-mail-event.png']};write(p,q)
+print('Capacity risk and full existing shared-edge conclusions saved.')
+

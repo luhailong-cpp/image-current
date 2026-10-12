@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T11:39:23.649Z",
+  "reviewType": "native 100-percent visual QA after exact-pixel repair assembly",
+  "status": "local_bamboo_visual_pass",
+  "adoptedPrefix": "c04-bamboo-join-v02-r09_c04",
+  "basePrefix": "multi-boundary-v02-r09_c04",
+  "repair": "r09_c04_bamboo_tone_v01",
+  "repairGlobalBox": [
+    14688,
+    33268,
+    15942,
+    34522
+  ],
+  "selectedParameters": {
+    "repairRoi": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "band": 70,
+    "mandatoryTarget": [
+      300,
+      400,
+      960,
+      650
+    ]
+  },
+  "rejectedComposite": {
+    "prefix": "c04-bamboo-join-v01-r09_c04",
+    "reason": "Partial ROI introduced a horizontal tone boundary across the bright right bamboo stalk and retained part of the original dark diagonal wedge at its right edge.",
+    "roi": [
+      180,
+      270,
+      1110,
+      810
+    ],
+    "band": 70
+  },
+  "adoptedCandidate": {
+    "path": "qa/c04-bamboo-join-v02-r09_c04-candidate-4096.png",
+    "sha256": "dd11d5ad00b320dfc0ed21c2beb09dc23332b8dcf47164a166f4cb9aae3f8d07",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "repairSourceId": 18,
+    "repairPixels": 1405525
+  },
+  "validation": {
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "sameGlobalCoordinateExact": true,
+    "diskRoundtripExact": true,
+    "allInputsUnchanged": true,
+    "interpolation": false,
+    "feathering": false,
+    "colorAdjustment": false,
+    "displacement": false,
+    "assemblyReport": "qa/c04-bamboo-join-v02-r09_c04-report.json"
+  },
+  "visualResults": [
+    {
+      "area": "Central mandatory target",
+      "result": "pass",
+      "observation": "The former large diagonal dark polygon through central stalks and background leaves is gone. Bamboo nodes and silhouettes remain continuous.",
+      "evidence": "c04-bamboo-v02-target-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "Right edge",
+      "result": "pass",
+      "observation": "The residual dark triangular seam seen in v01 is removed in v02; rear stalk and foreground node stay connected.",
+      "evidence": "c04-bamboo-v02-right-seam-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "Top edge",
+      "result": "pass",
+      "observation": "The bright stalk is continuous with no v01-style horizontal cut boundary. Minor painterly facet differences remain within the material appearance.",
+      "evidence": [
+        "c04-bamboo-v02-top-bright-stalk-base-left-candidate-right-100pct.png",
+        "c04-bamboo-join-v02-roi1-top-base-first-candidate-second-100pct.png"
+      ]
+    },
+    {
+      "area": "Left edge",
+      "result": "pass",
+      "observation": "Gold ornament and background leaves remain continuous; no conspicuous rectangular or straight patch boundary.",
+      "evidence": "c04-bamboo-join-v02-roi1-left-base-first-candidate-second-100pct.png"
+    },
+    {
+      "area": "Bottom edge",
+      "result": "pass",
+      "observation": "The vessel lid edge and highlight/shadow areas remain connected. Painterly texture changes are subtle at the perimeter.",
+      "evidence": [
+        "c04-bamboo-v02-bottom-vessel-base-left-candidate-right-100pct.png",
+        "c04-bamboo-join-v02-roi1-bottom-base-first-candidate-second-100pct.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "Local repair QA only; not full-tile or map acceptance.",
+    "Full source-image ROI slightly changes surrounding leaf/bamboo/vessel paint texture; no displacement or compositing color adjustment was used.",
+    "Previous boundary v02 minor door-molding tone note remains inherited elsewhere."
+  ],
+  "nextBasePrefix": "c04-bamboo-join-v02-r09_c04",
+  "progressIndexOrSourceMutated": false
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "Original-pixel hard-core boundary and 230px overlap, r04_c04/s04_01_fix02 north of northwest/r05_c04/s01_01",
+  "actuallyViewed": true,
+  "viewedFiles": [
+    "s04_01_fix02-south-hard-join-native.png",
+    "s04_01_fix02-south-overlap-pair-native.png",
+    "s04_01_fix02-rail-jump-native.png"
+  ],
+  "nativePixelScale": 1,
+  "newNativeSha256": "af9780068ac87a5041392a9c0d3c73cb13889dfde7ffe638798b950a27baacc0",
+  "southNativeSha256": "7919f7f22ce30a0b79704adec2f6932b9c4a46c7677b526b8c4670d8a831fe8a",
+  "status": "failed_visible_geometry_discontinuity",
+  "formalAccepted": false,
+  "coordinateSystem": "All native x coordinates shared because both source world x origins are12173; north-source y=1024+south-source y; formal seam is north y1139 / south y115 / world y16384.",
+  "blockers": [
+    {
+      "feature": "Stone rail right outer silhouette and stair start",
+      "finding": "At the hard-core boundary the north rail is visibly wider and its right outside edge jumps left when entering the existing southern source.",
+      "sampleNorthLocalXY": [1064, 1137],
+      "matchingSouthLocalXY": [1004, 113],
+      "northWorldX": 13237,
+      "southWorldX": 13177,
+      "approximateHorizontalOffsetPixels": 60,
+      "repair": "Use the actual southern native source as a locked reference and align the entire affected upper rail right edge near x1004 at the shared world rows, with a coherent smooth continuation upward; repaint the adjacent stair geometry, not a narrow pasted seam."
+    },
+    {
+      "feature": "Stone rail right inset groove",
+      "finding": "The right inset groove is also shifted, so moving just the rail's outside contour cannot fix the rail's width and internal construction.",
+      "sampleNorthLocalXY": [963, 1137],
+      "matchingSouthLocalXY": [917, 113],
+      "approximateHorizontalOffsetPixels": 46,
+      "repair": "Restore the rail's internal right groove and bevel positions from the real native neighbor together with its outer silhouette."
+    },
+    {
+      "feature": "Right-side stair riser-to-tread bright edge",
+      "finding": "The strongest matching bright step edge in the rightmost stair band arrives about23pixels early in the north source overlap.",
+      "measurementBandX": [1140, 1240],
+      "observedNorthLocalY": 1109,
+      "observedSouthLocalY": 108,
+      "expectedNorthLocalYFromSouth": 1132,
+      "approximateVerticalOffsetPixels": -23,
+      "repair": "Carry the existing southern stair edge into the upper patch at its correct y position while repairing the rail; do not independently invent a different stair cadence."
+    }
+  ],
+  "measurementMethod": "Manually constrained horizontal luminance-gradient feature intervals and averaged stair-band vertical luminance profile; approximate measurements support visible native-scale discontinuities, not a substitute for visual review.",
+  "otherObservations": "Green panel top and nearby left stone coping align much more closely than the rail's right side; retain their composition while correcting rail/stair geometry. Entire overlap was regenerated despite a keep-unchanged prompt: only185of288420pixels are byte-identical; MAE15.65andp9578are diagnostic, not a pass/fail threshold.",
+  "reviewRecommendation": "Keep fix02 as an unaccepted candidate and repair with both the current patch and actual r05_c04/s01_01 source attached; inspect the full230pxoverlap and the hard-core seam again after generation."
+}

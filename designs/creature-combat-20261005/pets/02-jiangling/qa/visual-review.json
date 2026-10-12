@@ -1,0 +1,819 @@
+{
+  "pet": "02-jiangling",
+  "name": "绛铃",
+  "reviewedAt": "2026-10-08T06:29:46.135219+00:00",
+  "framesReviewed": 68,
+  "stillReview": "all_final_frames_reviewed",
+  "parentReview": "All six final numbered contact sheets actually inspected; root directly inspected every generated E hit/attack frame and selected exported W/cast detail frames; subagents actually viewed every owned final frame.",
+  "checks": [
+    "existing identity and approved painted finish",
+    "E lower-right front / W upper-left true rear",
+    "two arms, two legs, no wings/tail",
+    "anatomical right fan, left empty",
+    "three fan-edge jade bells",
+    "pose progression and independently drawn return poses",
+    "full subject and effects retained inside canvas"
+  ],
+  "repairs": [
+    "hit E04 early left-arm recovery and stray puff repaired",
+    "hit W04 rebound pose repaired",
+    "attack W05 wrong-hand candidate replaced",
+    "cast E10 effect margin repaired",
+    "cast W10 wrong-hand attempt rejected, effect margin further repaired"
+  ],
+  "continuousPlayback": {
+    "status": "observed_native_live_samples",
+    "reviewer": "root",
+    "reviewedAt": "2026-10-08T06:23:25.410786+00:00",
+    "method": "Root inspected successive sky.get_window_state screenshots of the running offline Tk PNG renderer. E/W were displayed side by side; all three actions were explicitly selected at 1x and 0.25x, with changing frame labels/cycle counters and visible pose changes. Independent still-frame/contact-sheet reviews remain the source for every individual frame.",
+    "limitations": [
+      "This is visual sampling of real live playback, not a continuous video recording or observation of every normal-speed transition.",
+      "Window captures can straddle GUI paint boundaries; frame labels describe capture context, not pixel-perfect capture synchronization.",
+      "The monotonic-clock native preview targets 40/30/45 ms (slow:160/120/180 ms); desktop scheduling and capture timing are not game-engine frame-time benchmarks.",
+      "No client was read or integrated. Actual game size/pivot, rendering order, events and transitions to external idle assets remain integration work."
+    ],
+    "sessionRecord": "qa/native-playback-session.json",
+    "groups": [
+      {
+        "action": "hit",
+        "direction": "E",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "slow025": [
+            1,
+            4,
+            1,
+            3,
+            5
+          ]
+        },
+        "observation": "Front view recoil/closed-eye peak and recovery remain legible; anatomical right fan retained, left empty; bent hovering legs recover without a walking cycle.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      },
+      {
+        "action": "hit",
+        "direction": "W",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "slow025": [
+            1,
+            4,
+            1,
+            3,
+            5
+          ]
+        },
+        "observation": "Rear hair/back/shoe soles remain rear-facing through recoil and rebound; bent left arm transitions to the open recovery pose, right fan retained.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      },
+      {
+        "action": "attack",
+        "direction": "E",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            9,
+            5,
+            3,
+            8,
+            1
+          ],
+          "slow025": [
+            2,
+            5,
+            8,
+            11,
+            2,
+            5
+          ]
+        },
+        "observation": "Right fan progresses from shoulder windup across chest into lower-right follow-through and returns to the side; left empty balancing hand remains distinct.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      },
+      {
+        "action": "attack",
+        "direction": "W",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            9,
+            5,
+            3,
+            8,
+            1
+          ],
+          "slow025": [
+            2,
+            5,
+            8,
+            11,
+            2,
+            5
+          ]
+        },
+        "observation": "True rear view preserved; right fan travels around the head toward upper-left and retracts. Head/arm occlusion is consistent with the separately reviewed original frames.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      },
+      {
+        "action": "cast",
+        "direction": "E",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            2,
+            8,
+            14,
+            4,
+            11,
+            2
+          ],
+          "slow025": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            12,
+            15
+          ]
+        },
+        "observation": "Lift, bell illumination, forward release and lowering/return are visible; fan remains in anatomical right hand. Bell light stays within canvas; narrowing fan during return is perspective.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      },
+      {
+        "action": "cast",
+        "direction": "W",
+        "speedsReviewed": [
+          1,
+          0.25
+        ],
+        "sampledLiveFrameLabels": {
+          "normal": [
+            2,
+            8,
+            14,
+            4,
+            11,
+            2
+          ],
+          "slow025": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            12,
+            15
+          ]
+        },
+        "observation": "Rear shoulder lift, illuminated three bells, outward release and return retain identity and direction; light and trailing costume stay inside the canvas.",
+        "result": "no_new_asset_defect_identified_in_live_samples"
+      }
+    ],
+    "record": "qa/native-playback-review.json",
+    "fileStreamCheck": "qa/preview-frame-stream.json",
+    "warning": "Separate manual observation of normal and 0.25-speed live samples; file decoding does not constitute visual observation."
+  },
+  "clientReview": "not_tested; client and sibling repositories not read",
+  "frames": [
+    {
+      "file": "runtime/hit/E/01.png",
+      "sha256": "43f2ae111306b339efd80d9dca3842fcb8df84906ead3d73ebffd0be4fd3b6e0",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/E/02.png",
+      "sha256": "df5fbf626e58f9830d71bd7e2482ebcc763afc7c9802eea3acd7614ffe0cfdba",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/E/03.png",
+      "sha256": "c83197dd8a20d606f14464a9ca8a512fdcc7948f63eb46bc22d1cf49e532414c",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/E/04.png",
+      "sha256": "468d183fe757a9e1f86d0dea1fa365d73dd1af8620de8c2fd22d66d3a5e58b5f",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/E/05.png",
+      "sha256": "a9e0d396b1bd5c3f4185b347708e30e88f1a3632d5c17171018edd230c96a3de",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/E/06.png",
+      "sha256": "76c226e67a7a69121273d6decd7ea816d98f0112c6406f76c9dee45830852635",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/01.png",
+      "sha256": "720fd34557770a7be83579cebb76f897fe4aa2f2e95a146511d873ae75137e28",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/02.png",
+      "sha256": "28fce4ce47e5876d3de19bf7f1e4a80ab4444b4807c02a46990b3fb07b3671ba",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/03.png",
+      "sha256": "d0e2a6d1b57d236ffba188827b273cd018fb901d834082d49bec4f3b73fb37de",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/04.png",
+      "sha256": "4aae16fd9b6ab61869749ec6c336aed648868100b529a6d809a485a88c56d8cd",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/05.png",
+      "sha256": "1482627691d5dbd47e3030e7edffd90c8ae2f60ca327799fc4fec57becb3f2df",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/hit/W/06.png",
+      "sha256": "26cc988dfffdbbfd32be2b44850bd3c338eb9f866ed777572ae2124a665249e5",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/01.png",
+      "sha256": "0d532a7961ad2440de5054e013048bbe38e5025b05094079e45d7ac28fb23b0a",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/02.png",
+      "sha256": "6784faa96d251dabf4f2aa8bcda7525d01018aafb33763aa10376d8d8c031e6c",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/03.png",
+      "sha256": "b1e61a6ffbe8e10352867136994b66b5f38d00916d61afff01b06232ef4768eb",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/04.png",
+      "sha256": "bde9e54f7cc4475b84a2634b1ecf4eebd39c3d04bbf7608c1d00a5e6a66b7084",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/05.png",
+      "sha256": "cefa65398ea9ee9e66e29981ca06df14f49dc8d513b29aead7e0261c02bf8f04",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/06.png",
+      "sha256": "871449b73eb75b62e2a8baf381a3654c750033f5ad97a0cb77a7811520f59fb4",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/07.png",
+      "sha256": "095d0731360d77a82c521918435d083e8be5c74956a3bf72bad80346d22db27b",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/08.png",
+      "sha256": "a9b4a24f62e96f29bb6c7b94bc784df0c966e3eac8944baa44496e0eff7f6c62",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/09.png",
+      "sha256": "e95fe38c5229a8179a9b8b71168194828c1efcb0b471b08ac9dd1d0b6d059d14",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/10.png",
+      "sha256": "31c0ce114a3d020e075a9c731e65bac9c1303c2a83d745ab273e48ca540998b8",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/11.png",
+      "sha256": "3f8a72564c84b510170b51677f80903d42e1f3d12f391db8d684bba5efb5f6b3",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/E/12.png",
+      "sha256": "34a670f6ffd143ddf7f81cfe33cba3c643902508efb8da8df364eeccc9945b66",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/E-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/01.png",
+      "sha256": "3ff9fa2f5068b8cdb4d2e8e9f951d0471d66ca3681d028d447ec94506ce02d13",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/02.png",
+      "sha256": "222d602077c57562d98bf7ba13ba2dbe4bea2e94db204ed474d1ec885414218e",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/03.png",
+      "sha256": "c7c6205a041ec5ade33c2dba00ee584fd9bd98189c4d6a959c2902cf60eea103",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/04.png",
+      "sha256": "3c2e0d589e75c34847526d1f52d8ce2e7a682e794d4c5e692bab3de71160fa84",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/05.png",
+      "sha256": "675073da4f7d51d51c151252ca20765d6ea8d8ad9efb783c353b49e637118352",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/06.png",
+      "sha256": "26308197360ba36dfcbb722db3c3764437823430c2a2e32c9003bcaa314d0fc7",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/07.png",
+      "sha256": "42707a51f1e79a75f0e2026f479e5fcbeaf47c71ff8ec497133a38f073d5c607",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/08.png",
+      "sha256": "8be4a82344934d804c1e40f9121447bc42155839d091bdbcbeb3c78ef055e403",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/09.png",
+      "sha256": "02bd87fbb513b030f51fe2b53976adbcd5d41f6e2bae723fe50a9c2139bd0884",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/10.png",
+      "sha256": "e552560aa43956eabf175d6d3d81fda91698bb7f39f9983439749dd8a293dc78",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/11.png",
+      "sha256": "c94e90ac248c615e37a1b4176dfee6bed60f4fa0b1b7e3b2895b3f4cc7cef840",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/attack/W/12.png",
+      "sha256": "7e7037514b6a922710406fa04fe29bb4a110483e4cc0628d051ec47f593fdbad",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/W-hit-attack-visual.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/01.png",
+      "sha256": "be7ab748e6c69c63b3c4fb814e96cf99e3da7838310a4aa43e24f8d6cb773b62",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/02.png",
+      "sha256": "09c69de6e724ca583fae2f46ce69515b9d411ef0913ba0a63f7a16504ccf6e15",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/03.png",
+      "sha256": "9ec7c71470cf4b56064e28028658e2e6433c4f0a1a8f901af5ed03eb5bfc17a9",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/04.png",
+      "sha256": "66b9583cedf61c1cf4ffed9c65bfa72761b00cc0e8fa188e874ac0ee3a55bd97",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/05.png",
+      "sha256": "7eb582ba0b31b73a9dcb16110aad2007cc6cd16d73bc959062af2be4b1cbc58c",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/06.png",
+      "sha256": "758d827ca2fceea14ca2d6801baa730dccaa6ba3112bdd4f44ee88d495d22919",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/07.png",
+      "sha256": "34be924ba7ec51f8056f6a46049f595328fcfad623eca3c96106d73f58d9c6b4",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/08.png",
+      "sha256": "0ac391ead211321a4304c9538fe88874f4956357e1e113121a6eb8e8a669eb5a",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/09.png",
+      "sha256": "94bb16235e647e083a92299e935992b65d0c18536deab0f6567c0056205f7dc1",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/10.png",
+      "sha256": "0f420ff0424af28c340cb22d7dac421887da63e24e9f713041fab900ae547404",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/11.png",
+      "sha256": "809038a02723f680d88aec688d45a145b9586860c32cc3ba7116553e30c80dfa",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/12.png",
+      "sha256": "d5f7a8c009b6a23feee999de964a77f6e36b973847b44d9206e73b853b4c1e7d",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/13.png",
+      "sha256": "5a48ef9f44f31e6a4426eb928ec6815b951d84d1276d42d09e362a99029927e9",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/14.png",
+      "sha256": "023ad44f1dc6a6498ddc9bd66ff05b48e69d6e5351abc8297339ac1741edfe61",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/15.png",
+      "sha256": "599962a0beea65139dee5a364eac1c64b821293d602c9b9f212c3ee61c3dddef",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/E/16.png",
+      "sha256": "0d3897fdab3cd194e15a400d423fb1fb7dd0b7343045e741597c4977a17b22f0",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/cast-E-validation.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/01.png",
+      "sha256": "cb161c400163253733bc613194e75b7d1a4246d050201f3cdc3645a3dca826b9",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/02.png",
+      "sha256": "64c536f163a66ea7a834bbfb236049ffe975a474720f0253650204cf89b43470",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/03.png",
+      "sha256": "714f723e87f730098e3857c9efa028f854f610f0f197cf2d115870cc341ef124",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/04.png",
+      "sha256": "f15a7194bf384dbc695ae0f8bbe364c6620e646287a867fbff0b30593ce203c5",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/05.png",
+      "sha256": "2a332e35cf4ab4354326633e6eed76364991dcaca0fefac4df1c4597fc2388a1",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/06.png",
+      "sha256": "9f59ca6d64240fc465b5e27eac164542d992935609956321a08c275129bbd542",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/07.png",
+      "sha256": "407e8bfce25ef8132265d753e9e61dd362df16f875f6fac4cf0099e14c961ef4",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/08.png",
+      "sha256": "842c3203a1dabecf52450001da1bfdb75c1afa25ffa6c9b5bc4da3f90c5d196b",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/09.png",
+      "sha256": "e2770cba821a344afc1c988300d818098cd2594faccaf26a92d122dbdc6695da",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/10.png",
+      "sha256": "44aa9610e934952f96f34c7928e1cb0079d42d06dbfd25a134326403852802fb",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/11.png",
+      "sha256": "c2334acf7e97adc5e8b4da19d635b9ba175918279f28683ac805dbea40e811a3",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/12.png",
+      "sha256": "5b16193427ee371fa14f38051e8209f97d071498270412866da946ed3c9dcfe7",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/13.png",
+      "sha256": "ff3b5ca57a2ac95b147ba7faee19d0d776d558a8ea519d8212acd0787f8c64ff",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/14.png",
+      "sha256": "37d274131c042e03f4eb066b98f01fcd1680d09b8ddc8bf89c11bb713b85a725",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/15.png",
+      "sha256": "d2112235894621986204ffdbaa564516d84c804188e05eacf7e3a9c6fce21e13",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    },
+    {
+      "file": "runtime/cast/W/16.png",
+      "sha256": "99aff00bf233281f1cb0bfb103854d2261b81927462076d684c46b7619abf54e",
+      "stillReview": "reviewed",
+      "sequenceReview": "ordered-contact-sheet-reviewed; native-live-playback-sampled-normal-and-0.25",
+      "clientReview": "not_tested",
+      "evidence": "qa/technical-cast-W-reviewed.json",
+      "sequenceEvidence": "qa/native-playback-review.json"
+    }
+  ]
+}

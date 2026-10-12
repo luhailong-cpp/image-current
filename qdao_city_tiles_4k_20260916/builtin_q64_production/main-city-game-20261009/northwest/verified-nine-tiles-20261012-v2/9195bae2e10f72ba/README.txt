@@ -1,0 +1,7 @@
+Nine internally reviewed 4096 x 4096 production PNGs. Original PNG bytes are unchanged.
+This extends the unchanged verified eight package with r05_c07. Its 16 original 1254 PNG sources, generation/request/receipt evidence, 33 native internal reviews, and 7 native actual-west-boundary reviews are included.
+Every r05_c07 output pixel was reverified as an unmodified same-coordinate native sample. Earlier eight tile pixel proofs are inherited as unchanged validated evidence.
+Previous eight native originals remain at their recorded local paths; their records and hashes are preserved.
+The reduced mosaic is PREVIEW ONLY. Gray cells are pending. Northwest 60-tile zone remains incomplete. Formal acceptance, runtime integration and capacity validation remain false.
+Prior eight root metadata is stored unchanged under historical-eight/. Production tiles and evidence retain their former archive names.
+package-contents.json maps each archive entry to its original local file and SHA256. package.json and archive-verification.json alongside the archive verify CRC, entry hashes and original file identity.

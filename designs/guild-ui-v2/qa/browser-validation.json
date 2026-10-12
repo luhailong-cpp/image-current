@@ -1,0 +1,870 @@
+{
+  "testedAt": "2026-09-13T12:50:50.243Z",
+  "url": "http://127.0.0.1:4345/guild-ui-v2/",
+  "browser": "Microsoft Edge headless",
+  "isolatedContexts": true,
+  "checks": [
+    {
+      "name": "Click opens overview and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Click opens members and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Click opens donation and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Click opens tasks and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Click opens events and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Click opens shop and updates its URL",
+      "passed": true
+    },
+    {
+      "name": "Browser Back restores events",
+      "passed": true
+    },
+    {
+      "name": "Browser Forward restores shop",
+      "passed": true
+    },
+    {
+      "name": "Reload restores selected page",
+      "passed": true
+    },
+    {
+      "name": "Home activates and focuses first tab",
+      "passed": true
+    },
+    {
+      "name": "Right arrow activates next tab",
+      "passed": true
+    },
+    {
+      "name": "Left arrow activates previous tab",
+      "passed": true
+    },
+    {
+      "name": "End activates and focuses final tab",
+      "passed": true
+    },
+    {
+      "name": "Right arrow wraps to first tab",
+      "passed": true
+    },
+    {
+      "name": "Tab exits roving tab list",
+      "passed": true
+    },
+    {
+      "name": "Escape closes guild and focuses reopen",
+      "passed": true
+    },
+    {
+      "name": "Enter reopens guild and restores selected tab focus",
+      "passed": true
+    },
+    {
+      "name": "Informational modal initially focuses its dismissal button",
+      "passed": true
+    },
+    {
+      "name": "Native modal keeps background controls out of keyboard focus",
+      "passed": true,
+      "details": [
+        {
+          "id": "",
+          "tag": "BODY",
+          "inDialog": false,
+          "open": true
+        },
+        {
+          "id": "dialogClose",
+          "tag": "BUTTON",
+          "inDialog": true,
+          "open": true
+        },
+        {
+          "id": "dialogCancel",
+          "tag": "BUTTON",
+          "inDialog": true,
+          "open": true
+        },
+        {
+          "id": "",
+          "tag": "BODY",
+          "inDialog": false,
+          "open": true
+        },
+        {
+          "id": "dialogClose",
+          "tag": "BUTTON",
+          "inDialog": true,
+          "open": true
+        },
+        {
+          "id": "dialogCancel",
+          "tag": "BUTTON",
+          "inDialog": true,
+          "open": true
+        }
+      ]
+    },
+    {
+      "name": "Escape closes only the modal and returns focus",
+      "passed": true
+    },
+    {
+      "name": "Guild hall navigation opens requested feature",
+      "passed": true
+    },
+    {
+      "name": "Member directory paginates twelve members into five rows",
+      "passed": true
+    },
+    {
+      "name": "Next page displays next group",
+      "passed": true
+    },
+    {
+      "name": "Final page has two members and disables next",
+      "passed": true
+    },
+    {
+      "name": "Previous page works",
+      "passed": true
+    },
+    {
+      "name": "Search filters by member name and resets pagination",
+      "passed": true
+    },
+    {
+      "name": "Member profile contains selected member",
+      "passed": true
+    },
+    {
+      "name": "Closing member profile returns focus",
+      "passed": true
+    },
+    {
+      "name": "No results provides clear filter action",
+      "passed": true
+    },
+    {
+      "name": "Clear filter restores directory and search focus",
+      "passed": true
+    },
+    {
+      "name": "Online filter removes offline members",
+      "passed": true
+    },
+    {
+      "name": "Sorting by level orders visible members correctly",
+      "passed": true,
+      "details": {
+        "actual": [
+          "m2",
+          "m3",
+          "m4",
+          "m6",
+          "self"
+        ],
+        "expected": [
+          "m2",
+          "m3",
+          "m4",
+          "m6",
+          "self"
+        ]
+      }
+    },
+    {
+      "name": "Sorting by role orders visible members correctly",
+      "passed": true,
+      "details": {
+        "actual": [
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ],
+        "expected": [
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "name": "Sorting by contribution orders visible members correctly",
+      "passed": true,
+      "details": {
+        "actual": [
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ],
+        "expected": [
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6"
+        ]
+      }
+    },
+    {
+      "name": "Sign in credits contribution and disables repeating",
+      "passed": true
+    },
+    {
+      "name": "Repeated sign in stays disabled after reload",
+      "passed": true
+    },
+    {
+      "name": "Donation confirmation defaults to cancel",
+      "passed": true
+    },
+    {
+      "name": "Cancel donation leaves all resources unchanged and restores focus",
+      "passed": true
+    },
+    {
+      "name": "Confirm donation updates wallet and guild together",
+      "passed": true
+    },
+    {
+      "name": "Insufficient coins disable unaffordable donation",
+      "passed": true
+    },
+    {
+      "name": "Incomplete task is visibly disabled",
+      "passed": true
+    },
+    {
+      "name": "Claimed task credits all rewards and disables repeat",
+      "passed": true
+    },
+    {
+      "name": "Task reward cannot be repeated after reload",
+      "passed": true
+    },
+    {
+      "name": "Task items appear in earned inventory",
+      "passed": true
+    },
+    {
+      "name": "Upcoming and ended event actions are disabled",
+      "passed": true
+    },
+    {
+      "name": "Signup updates participants and action state",
+      "passed": true
+    },
+    {
+      "name": "Canceling cancellation keeps signup",
+      "passed": true
+    },
+    {
+      "name": "Confirm cancellation restores participant count",
+      "passed": true
+    },
+    {
+      "name": "Exchange focuses quantity input",
+      "passed": true
+    },
+    {
+      "name": "Invalid exchange quantity 0 shows an error without spending",
+      "passed": true
+    },
+    {
+      "name": "Invalid exchange quantity -1 shows an error without spending",
+      "passed": true
+    },
+    {
+      "name": "Invalid exchange quantity 1.5 shows an error without spending",
+      "passed": true
+    },
+    {
+      "name": "Invalid exchange quantity 11 shows an error without spending",
+      "passed": true
+    },
+    {
+      "name": "Quantity updates total contribution",
+      "passed": true
+    },
+    {
+      "name": "Cancel exchange leaves wallet and stock unchanged",
+      "passed": true
+    },
+    {
+      "name": "Exchange updates contribution, stock, limit, and inventory",
+      "passed": true
+    },
+    {
+      "name": "Unaffordable product clearly disables exchange",
+      "passed": true
+    },
+    {
+      "name": "Quantity within stock but above available contribution is rejected",
+      "passed": true
+    },
+    {
+      "name": "Exchanged items are visible in earned inventory",
+      "passed": true
+    },
+    {
+      "name": "Refresh preserves all transaction state and sold-out display",
+      "passed": true
+    },
+    {
+      "name": "Member sees announcement without an editor",
+      "passed": true
+    },
+    {
+      "name": "Role switch updates visible permissions",
+      "passed": true
+    },
+    {
+      "name": "Announcement editor receives initial focus",
+      "passed": true
+    },
+    {
+      "name": "Short announcement is rejected visibly",
+      "passed": true
+    },
+    {
+      "name": "Announcement renders malicious-looking input as literal text",
+      "passed": true
+    },
+    {
+      "name": "Saved announcement and permission survive refresh safely",
+      "passed": true
+    },
+    {
+      "name": "Cancel reset preserves prior progress",
+      "passed": true
+    },
+    {
+      "name": "Confirm reset restores balances, tasks, events, inventory and role",
+      "passed": true
+    },
+    {
+      "name": "Desktop overview has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "overview"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export overview is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "Desktop members has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "members"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export members is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "Desktop donation has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "donation"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export donation is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "Desktop tasks has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "tasks"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export tasks is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "Desktop events has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "events"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export events is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "Desktop shop has no horizontal overflow or missing image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 1600,
+        "viewportHeight": 675,
+        "scrollWidth": 1600,
+        "brokenImages": [],
+        "selectedTabs": [
+          "shop"
+        ],
+        "pageScrollWidth": 1168,
+        "pageClientWidth": 1168,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Export shop is exactly 2560 by 1080",
+      "passed": true
+    },
+    {
+      "name": "390x844 overview fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "overview"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "390x844 members fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "members"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "390x844 donation fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "donation"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "390x844 tasks fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "tasks"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "390x844 events fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "events"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "390x844 shop fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollWidth": 390,
+        "brokenImages": [],
+        "selectedTabs": [
+          "shop"
+        ],
+        "pageScrollWidth": 328,
+        "pageClientWidth": 328,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 overview fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "overview"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 members fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "members"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 donation fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "donation"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 tasks fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "tasks"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 events fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "events"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "844x390 shop fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 844,
+        "viewportHeight": 390,
+        "scrollWidth": 844,
+        "brokenImages": [],
+        "selectedTabs": [
+          "shop"
+        ],
+        "pageScrollWidth": 517,
+        "pageClientWidth": 517,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 overview fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "overview"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 members fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "members"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 donation fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "donation"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 tasks fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "tasks"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 events fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "events"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "320x700 shop fits width and loads every image",
+      "passed": true,
+      "details": {
+        "viewportWidth": 320,
+        "viewportHeight": 700,
+        "scrollWidth": 320,
+        "brokenImages": [],
+        "selectedTabs": [
+          "shop"
+        ],
+        "pageScrollWidth": 262,
+        "pageClientWidth": 262,
+        "selectedTabVisible": true
+      }
+    },
+    {
+      "name": "Blocked localStorage shows a clear temporary-session status",
+      "passed": true
+    },
+    {
+      "name": "Interactions still work with blocked localStorage",
+      "passed": true
+    },
+    {
+      "name": "Blocked-storage reload safely starts a new temporary session",
+      "passed": true
+    },
+    {
+      "name": "No uncaught page JavaScript errors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "No failed resource requests",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "screenshots": [
+    {
+      "page": "overview",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "01-overview_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "members",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "02-members_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "donation",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "03-donation_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "tasks",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "04-tasks_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "events",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "05-events_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "shop",
+      "viewport": "1600x675",
+      "deviceScaleFactor": 1.6,
+      "file": "06-shop_2560x1080.png",
+      "width": 2560,
+      "height": 1080
+    },
+    {
+      "page": "overview",
+      "viewport": "390x844",
+      "file": "responsive-390x844.png"
+    },
+    {
+      "page": "overview",
+      "viewport": "844x390",
+      "file": "responsive-844x390.png"
+    },
+    {
+      "page": "overview",
+      "viewport": "320x700",
+      "file": "responsive-320x700.png"
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "browserVersion": "153.0.4234.32",
+  "passed": true,
+  "summary": {
+    "passed": 103,
+    "failed": 0,
+    "screenshots": 9
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T16:54:22.243437+00:00",
+  "scope": "First native row internal seams plus read-only p02_01_v1 coordinate review",
+  "firstRow": {
+    "candidate": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/first-row-native-candidate.png",
+      "sha256": "f69d59a53dfad45bc2065f2c262eac807385ff048324c9a9fcd0068ffe4fbc02"
+    },
+    "dimensionsWidthHeight": [
+      4326,
+      1254
+    ],
+    "sources": [
+      "r09_c04_p01_01_v1",
+      "r09_c04_p01_02_v7",
+      "r09_c04_p01_03_v2",
+      "r09_c04_p01_04_v2"
+    ],
+    "usableNativeCandidateCount": 4,
+    "complete4kCount": 0,
+    "formalAcceptedCount": 0,
+    "seams": [
+      {
+        "id": "01-02",
+        "status": "candidate_usable",
+        "nativeFullHeightViewed": true,
+        "finding": "Golden foliage and green background continue without the prior full-height straight boundary; no obvious duplicated trunk."
+      },
+      {
+        "id": "02-03",
+        "status": "candidate_usable",
+        "nativeFullHeightViewed": true,
+        "finding": "Wood rail and stone wall cap cross the join continuously; nearby paving joints continue without a clear break. No structural failure found in this seam crop."
+      },
+      {
+        "id": "03-04",
+        "status": "candidate_usable",
+        "nativeFullHeightViewed": true,
+        "finding": "Gold-capped post remains single and coherent; paving and rail continue across the join. Minor irregular stone edges are present in source art and not established as splice failures."
+      }
+    ],
+    "visualReviewLimitations": [
+      "Only this first row internal seams were reviewed.",
+      "All outer edges and joins to rows above/below remain unverified.",
+      "This is not a final 4096x4096 tile or formal map acceptance."
+    ]
+  },
+  "p02_01_v1": {
+    "native": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/native/r09_c04_p02_01_v1.png",
+      "sha256": "73e1b1067e30a7b5a2c4e44b830f7e4d195b382947a7d912790048e7ae529cf7"
+    },
+    "layout": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/layout-only/r09_c04_p02_01.png",
+      "sha256": "3e781aae00fdc146c2e061de7a47acead0345d810dc64ba150a5f51961f4f6c7"
+    },
+    "decision": "not suitable as right-edge geometry anchor pending existing parent repair",
+    "imageModificationPerformed": false,
+    "visibleFindings": [
+      {
+        "issue": "Right-edge stone-base vertical placement differs substantially",
+        "nativeLocalCoordinates": "At x=1253, stone face begins around y=410-450 and reaches ground around y=680.",
+        "layoutLocalCoordinates": "At x=1253, principal pale stone area begins around y=650-700 and reaches ground around y=810.",
+        "estimatedDisplacement": "Native upper stone boundary about 220px higher; foot about 130px higher. Approximate readings; guide sample spacing is about45.73px.",
+        "affectedRegion": [
+          850,
+          280,
+          1254,
+          820
+        ],
+        "impact": "Changes right overlap and right part of source core; would force the adjacent patch to inherit a different wall/base profile."
+      },
+      {
+        "issue": "Stone block interpreted as a complete capped upright",
+        "nativeBoundsApprox": [
+          1035,
+          280,
+          1225,
+          655
+        ],
+        "finding": "Native has an explicit rectangular cap and tall stacked stone body. Low-resolution isolated highlights do not establish this full structure.",
+        "uncertainty": "The guide also has a pale highlight near x1160,y365. It cannot reliably be identified as the same cap, so no exact same-object XY displacement is asserted."
+      }
+    ],
+    "correctionToEarlierInformalMessage": "The earlier +185x/-205y cap comparison was not a reliable same-object displacement; use the right-edge stone/ground boundary measurements above."
+  },
+  "writesRestrictedTo": "qa/first-row* only",
+  "nativeSourcesUnchanged": true
+}

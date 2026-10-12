@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-09-14T09:31:42.831768+00:00",
+  "unity_version": "6000.6.0f1",
+  "project": "E:\\work\\tmp\\team-ui-verify-20260914",
+  "main_project_unmodified_by_test_agent": true,
+  "isolation": "Assets, Packages, ProjectSettings and Library caches are independent copies; no hardlinks or directory junctions",
+  "result": "Passed",
+  "total": 33,
+  "passed": 33,
+  "failed": 0,
+  "skipped": 0,
+  "runs": [
+    {
+      "platform": "editmode",
+      "result": "Passed",
+      "total": 27,
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0,
+      "started_utc": "2026-09-14 09:20:56Z",
+      "ended_utc": "2026-09-14 09:20:59Z",
+      "test_duration_seconds": 3.2545558,
+      "process_exit_code": 0,
+      "xml": "editmode-tests.xml",
+      "xml_sha256": "2eb0c07eda9d48be9cf2e4e9a74b42bedb18a7da38cb251d6df6c7ae35194ea2"
+    },
+    {
+      "platform": "playmode",
+      "result": "Passed",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "started_utc": "2026-09-14 09:25:32Z",
+      "ended_utc": "2026-09-14 09:25:33Z",
+      "test_duration_seconds": 1.1382895,
+      "process_exit_code": 0,
+      "xml": "playmode-tests.xml",
+      "xml_sha256": "d0c37192dd05e8e73cc53b5b3a2b316c5c1cc12abf21aa44c0937baadd3cb14c"
+    }
+  ],
+  "screenshots": {
+    "count": 20,
+    "nonblank_passed": true,
+    "minimum_sampled_unique_colors": 342,
+    "successful_capture_log": "capture-editor-4.log",
+    "glyph_assertions": "Each visible nonempty TMP label checked during CaptureAll.",
+    "manual_visual_checks": [
+      "dual-lists-two-applicants_2560x1080.png",
+      "dual-lists_1920x1080.png"
+    ],
+    "final_visual_check": "Final 2560 dual-applicant screenshot manually inspected after title alignment and outer alpha cleanup."
+  },
+  "source_vs_snapshot_mismatches_after_tests": [],
+  "known_prior_capture_failures": [
+    "capture-editor.log: narrow separator label did not render; fixed in production TeamWindow before successful tests.",
+    "capture-editor-2.log: PreviewScene produced uniform dark PNGs; rejected by visual inspection and recorded in capture-2-visual-failure.json."
+  ],
+  "scope": "Offline native UI, authoritative snapshot behavior and real PlayMode focus/lifecycle. No server connection or online team RPC acceptance.",
+  "tested_snapshot_manifest": "snapshot-sha256-tested.json",
+  "final_snapshot_manifest": "snapshot-sha256.json",
+  "post_test_visual_only_changes": {
+    "team_window_diff": [
+      "--- tested/TeamWindow.cs",
+      "+++ final/TeamWindow.cs",
+      "@@ -57,9 +57,9 @@",
+      "             _summary = Label(frame, \"队伍信息尚未同步\", 1264, 96, 846, 44, 24,",
+      "                 BodyMuted, TextAlignmentOptions.MidlineRight);",
+      "             Art(frame, \"section_plate\", 84, 104, 700, 86);",
+      "-            Text(frame, \"队伍成员\", 150, 114, 542, 66, 44, Cream);",
+      "+            Text(frame, \"队伍成员\", 188, 114, 504, 66, 44, Cream);",
+      "             Art(frame, \"section_plate\", 1264, 156, 580, 78);",
+      "-            Text(frame, \"申请列表\", 1330, 163, 438, 64, 42, Cream);",
+      "+            Text(frame, \"申请列表\", 1368, 163, 400, 64, 42, Cream);",
+      "             _memberCount = Label(frame, \"\", 954, 128, 220, 46, 30, BodyMuted, TextAlignmentOptions.MidlineRight);",
+      "             _applicationCount = Label(frame, \"\", 1890, 174, 220, 46, 30, Jade, TextAlignmentOptions.MidlineRight);",
+      "             Solid(frame, \"ListDivider\", 1218, 184, 1, 596, Border);"
+    ],
+    "title_sprite": "Outer background alpha cleanup only",
+    "behavior_tests_rerun": false,
+    "reason": "No behavior code changed after all 33 tests passed."
+  }
+}

@@ -1,0 +1,8 @@
+from pathlib import Path
+import json,datetime
+B=Path(r"D:/work/image/designs/creature-combat-20261005/pets/01-zhuling")
+p=B/"records/attack/W/05.generation.json";r=json.loads(p.read_text(encoding="utf-8"));r["visualInspection"]["note"]="定点修正后近侧屏右翼保持低位，翼肘开始前转、羽扇收紧；顺接W04后收和W06内转，未重新张成大V。";r["references"][3]["role"]="previous W04 native frame used as direct pose continuity reference";r["editingSource"]={"path":r["references"][3]["path"],"generationRecord":"records/attack/W/04.generation.json"};p.write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding="utf-8")
+p=B/"records/attack/W/05.rejected-v1.generation.json";r=json.loads(p.read_text(encoding="utf-8"));r["status"]="rejected-superseded";r["prompt"]="prompts/attack/W/05.rejected-v1.txt";r["rejectionReason"]="近侧右翼重新大V展开，W04到W06多一次开合，定点修正为低位前转。";r["file"]=r["sourcePath"];r["sha256"]=r["native"]["sha256"];r["supersededBy"]="records/attack/W/05.generation.json";p.write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding="utf-8")
+p=B/"qa/attack/subagent-check.json";r=json.loads(p.read_text(encoding="utf-8"));r["contactSheetsActuallyReviewedAt"]=datetime.datetime.now(datetime.timezone.utc).isoformat();r["contactReview"]="E01-12 and revised W01-06 viewed on checkerboard contacts; identity, direction, two wings/two feet/short tail and attached ornaments retained. W05 and W06 targeted AI corrections replace earlier neutral V candidates. Some native feather-tip edge contact/noise retained; consolidated playback still pending root.";r["records"][16]["note"]="修正后近翼低位前转，避免W04-W06之间大V开合。";p.write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding="utf-8")
+print("Updated W05 correction provenance and visual notes.")
+

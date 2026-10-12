@@ -1,0 +1,114 @@
+{
+  "reviewedAt": "2026-10-11T17:05:09.217722+00:00",
+  "scope": "Read-only independent endpoint and closure analysis. All coordinates local to 1254 source image. No image or candidate edits.",
+  "source": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-exact-joints-20261011T162236-aa6849a7\\source-1254.png",
+    "sha256": "edd7c32c78f7fcd0e7a993338c519fe332c6d912b207fa032eb1acf122d9c8f9"
+  },
+  "rejectedGeneration": {
+    "path": "C:\\Users\\luyua\\.codex\\generated_images\\01a1256f-f474-7161-a84b-6c353e51fc2f\\exec-21a0c258-87be-4f99-9f01-2a5f35a20968.png",
+    "sha256": "84cb43d224d9c347471b2629d8987c99cd0d4687e6de0def9ef955eff3b4d68f"
+  },
+  "immutableLeft": {
+    "xRangeHalfOpen": [
+      0,
+      315
+    ],
+    "requirement": "Keep these exact source pixels, including the original dark broad grout crossings."
+  },
+  "measuredSourceDarkCoreSamples": {
+    "upper": {
+      "300": 202,
+      "310": 195,
+      "314": 193,
+      "315": 143,
+      "350": 119,
+      "400": 85,
+      "450": 51,
+      "475": 33,
+      "500": 16,
+      "520": 3
+    },
+    "lowerLeft": {
+      "300": 865,
+      "310": 859,
+      "314": 857,
+      "315": 847
+    },
+    "lowerHeavyRightDiagonal": {
+      "585": 649,
+      "590": 655,
+      "594": 660,
+      "595": 662,
+      "600": 668,
+      "610": 681
+    }
+  },
+  "lower": {
+    "verdict": "A continuous broad beveled grout must run from the immutable left edge to the existing heavy right diagonal as a T-junction.",
+    "startApprox": [
+      315,
+      856
+    ],
+    "finishApprox": [
+      597,
+      665
+    ],
+    "finishTolerancePixels": 5,
+    "proposedSkeletonApprox": [
+      [
+        315,
+        856
+      ],
+      [
+        400,
+        798
+      ],
+      [
+        500,
+        729
+      ],
+      [
+        597,
+        665
+      ]
+    ],
+    "preserve": "Keep the pre-existing heavy diagonal through the final T-junction continuous in both directions. Match the left dark core plus both bevel rims; do not taper into a hairline crack.",
+    "incorrectRoute": "The generated image instead reorganizes the whole slab and sends its major lower boundary to the corner around (690,790). That does not match the immutable incoming left grout at y857."
+  },
+  "upper": {
+    "immutableIncomingApprox": [
+      315,
+      193
+    ],
+    "oldRightLineAtSeam": [
+      315,
+      143
+    ],
+    "verticalOffsetPixels": 50,
+    "currentHoleFixedExitApprox": [
+      472,
+      35
+    ],
+    "outsideHoleExistingLineSamples": [
+      [
+        475,
+        33
+      ],
+      [
+        500,
+        16
+      ],
+      [
+        524,
+        0
+      ]
+    ],
+    "closureConstraint": "With the current upper guide hole [315,35,690,380], a connected route must join (315,193) to the fixed existing exit near (472,35). These endpoints imply slope about -1.0, while the source incoming and outgoing tangents are about -0.65 and -0.69. A single straight connector therefore introduces an angular change at each end.",
+    "recommended": "Expand the upper editable support and actual upper context to a sufficient stable intersection/anchor if straight regular paving is required. Under the current fixed footprint, only a visibly bent or smoothly varying polygonal slab edge can connect both endpoints; do not describe that as exact straight-line alignment.",
+    "incorrectRoute": "Do not move the immutable left cross-junction upward or substitute the old right y143 endpoint for the required left y193 crossing."
+  },
+  "generationDisposition": "Reject for composition: it shifts left grout/corners and invents elongated right-side slabs instead of preserving the immutable left endpoints.",
+  "guideAdvice": "Cyan guide geometry may show the desired native-generated grout route, but must remain guide-only. The final accepted pixels should come from native image generation and be checked against immutable source borders.",
+  "mutations": "Only this analysis JSON under the allowed review directory."
+}

@@ -1,0 +1,53 @@
+{
+  "recordedAtUtc": "2026-10-10T21:16:24.567Z",
+  "tile": "r06_c05",
+  "scope": "assigned top two rows and third-row left two patches",
+  "selectedSources": "assigned10-source-handoff.json",
+  "nativeChecks": {
+    "size": [
+      1254,
+      1254
+    ],
+    "route": "builtin image_gen",
+    "promptArgsReceipts": "recorded per version",
+    "actualModel": null,
+    "actualQuality": null,
+    "resizedAfterGeneration": false
+  },
+  "visualReview": {
+    "s03_02_selected": "s03_02_fulljoint03",
+    "northPair": "no blocking discontinuity seen in native minimum-error pair",
+    "westPair": "no blocking discontinuity seen; full leaves continuous",
+    "southPair": "minimum-error pair continuous; hard-center crop remains unsuitable because whole source strips differ",
+    "northwestJunction": "native 730 square reviewed; continuous paving/tree edge",
+    "southwestJunction": "native 730 square reviewed; continuous leaves/branches"
+  },
+  "rejected": [
+    {
+      "id": "s03_02",
+      "reason": "south native grout/leaf mismatch visible under hard and minimum-error cuts"
+    },
+    {
+      "id": "s03_02_fix01",
+      "reason": "did not materially change incorrect southern grout geometry"
+    },
+    {
+      "id": "s03_02_southjoint02",
+      "reason": "new narrow diamond spur and southern right-cross drift; not selected"
+    },
+    {
+      "id": "s02_04",
+      "reason": "invented vertical grout at x230 guide edge; selected fix01 removes it"
+    }
+  ],
+  "delegatedRepair": {
+    "patch": "s02_01",
+    "worker": "/root/south_tile_continue",
+    "reason": "upper-left diagonal grout hangs against north rectangular slab; hardcut confirms actual native mismatch",
+    "status": "worker owns repair; do not duplicate"
+  },
+  "remaining": "root whole-tile 24 seam segments + 9 junctions and 2x2 external borders, with updated s02_01 source",
+  "internalPassed": false,
+  "formalAccepted": false,
+  "zoneProgressUpdated": false
+}

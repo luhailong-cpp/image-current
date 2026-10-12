@@ -1,0 +1,38 @@
+{
+  "checkedAtUtc": "2026-10-10T21:56:06.588480+00:00",
+  "script": "native_multi_tile_repair.py",
+  "scriptSha256": "fc76d6b5a8487af880a5b9cb572cce397b9833464b480abfe737c4ea1bb6d0eb",
+  "validCase": {
+    "base": "multi-boundary-v02-r09_c03",
+    "repair": "r09_r10_c03_package_join_v01",
+    "roi": [
+      0,
+      200,
+      950,
+      570
+    ],
+    "mandatoryTarget": [
+      0,
+      300,
+      500,
+      450
+    ],
+    "flushEdge": "left",
+    "status": "check_only_passed",
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "repairPixels": 255346
+  },
+  "invalidCase": {
+    "roi": [
+      50,
+      200,
+      950,
+      570
+    ],
+    "status": "rejected",
+    "reason": "Flush edge must coincide with supplied tile group outer boundary"
+  },
+  "artworkWritten": false,
+  "notVisualAcceptance": true
+}

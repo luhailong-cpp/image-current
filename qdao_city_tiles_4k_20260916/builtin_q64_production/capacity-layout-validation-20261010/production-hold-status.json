@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "auditedAtUtc": "2026-10-10T05:16:04.374525+00:00",
+  "gatePath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\capacity-layout-gate-20261010.json",
+  "method": "Read-only bounded inspection of each official zone root capacity-gate-ack.json and current progress.json, plus initial gate-text search. Child-only acknowledgments are excluded. Production files were not modified.",
+  "acknowledgedCount": 12,
+  "pendingCount": 0,
+  "totalZones": 12,
+  "meaning": "acknowledged means the official zone owner wrote an explicit hold acknowledgment. It does not independently prove every child/in-flight call stopped.",
+  "zones": [
+    {
+      "project": "main-city-game-20261009",
+      "zone": "northwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\capacity-gate-ack.json",
+          "sha256": "ead4d6fc75380dae6a0eeefcbf9b57b124799e58e695e3b081ef08fd495db6d7",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "receivedAtUtc": "2026-10-10T04:33:10.236865+00:00",
+            "status": "acknowledged_generation_on_hold",
+            "newImageGenAllowed": false,
+            "newCoordinatesAllowed": false
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "rootImageGen": "none",
+        "materialWorker": "completed; no in-flight generation",
+        "auditWorker": "interrupted after existing evidence checkpoint; limited basis report saved by parent",
+        "toolingWorker": "completed read-only provenance replay; no in-flight work"
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "main-city-game-20261009",
+      "zone": "northeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\capacity-gate-ack.json",
+          "sha256": "d32f2f6ec384684d67ef1624b0a0bd45c60d5cf6178e8853437824c980c1e37a",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T04:55:50.363278+00:00",
+            "status": "generation_held_pending_capacity_layout_gate",
+            "newGenerationAllowed": false
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "root": "none; no call started this resumed run",
+        "lower_column": "none; no call started this resumed run",
+        "coordinate_audit": "read-only QA only; no generation",
+        "pendingResultsToSave": 0
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "main-city-game-20261009",
+      "zone": "southwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\capacity-gate-ack.json",
+          "sha256": "c59f847d95d2b3f383585c850d8076e57a76487d5f66665015cb64050baf5c08",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T04:54:25.849579+00:00",
+            "status": "capacity_layout_gate_received_active",
+            "generationHold": true
+          }
+        }
+      ],
+      "inFlightEvidence": "none",
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "main-city-game-20261009",
+      "zone": "southeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\capacity-gate-ack.json",
+          "sha256": "d9342bac5d23b8668a8a74eba7fb2d109618606d884c6d6f4154a4a123281d7a",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "receivedAtUtc": "2026-10-10T04:39:11.358112+00:00",
+            "gateStatus": "capacity_layout_validation_before_new_area_expansion",
+            "acknowledged": true,
+            "generationHoldActive": true,
+            "newImageGenCallsAfterGate": 0
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "imageGen": "none",
+        "pendingNativeResults": 0,
+        "startedNewImageCallsThisResumption": 0,
+        "note": "No image generation was active or started before gate arrived in this resumption."
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "fishing-village-game-20261009",
+      "zone": "northwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\progress.json",
+          "sha256": "2e52071db7c73422aa96ed6c1899b899e2aea144cf5adbb70fff3473752832df",
+          "scope": "zone-root progress, does not acknowledge gate",
+          "fields": {
+            "status": "native-production-and-seam-repair",
+            "updatedAt": "2026-10-10T01:40:20.243860+00:00",
+            "nextStep": "Continue adjacent production and whole-boundary cross-tile checks; native bridge repairs where required"
+          }
+        },
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\capacity-gate-ack.json",
+          "sha256": "115493a3320f09b1efb856949a2fdc5e4bb1c3e84985265206ec5a47119b6e6f",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "status": "generation-held-awaiting-root-layout-capacity-review",
+            "newImageGenerationAllowed": false,
+            "newCoordinatesAllowed": false
+          }
+        }
+      ],
+      "notCountedAsZoneAcknowledgment": [
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r05_c03\\qa\\capacity-gate-ack.json"
+      ],
+      "inFlightEvidence": {
+        "root": false,
+        "cloth_center_column": false,
+        "cloth_wall_column": false,
+        "r03c04_qa": false,
+        "pendingNativeToolResult": false
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "fishing-village-game-20261009",
+      "zone": "northeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\capacity-gate-ack.json",
+          "sha256": "efc27faecc8c05dec6f72058075bcdd98e8c31e3bfc7c97416ab69b51ba1934c",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T05:00:18.265638+00:00",
+            "status": "capacity_gate_received_generation_on_hold"
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "imageGenInFlight": false,
+        "rootNewCallsSinceResume": 0,
+        "coordinateAuditConfirmedNoCall": true,
+        "otherWorkers": "Assigned read-only source replay and road/building risk review; no artwork requests"
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "fishing-village-game-20261009",
+      "zone": "southwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\progress.json",
+          "sha256": "0b11a67c452d14fa5d98d936d1d74688502b6701490c5464f769b5a1f8f3e82c",
+          "scope": "zone-root progress, does not acknowledge gate",
+          "fields": {
+            "status": "preparing_native",
+            "updatedAtUtc": "2026-10-10T01:56:58.717849+00:00",
+            "nextStep": "Inspect continuity guide, save full prompt, invoke builtin image_gen."
+          }
+        },
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\capacity-gate-ack.json",
+          "sha256": "d9998677be89085b16bbcf0808cf0411045e5e2126b803606e5829ea91e8af95",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T05:26:47.008527+00:00",
+            "status": "generation_held_readonly_qa_continues"
+          }
+        }
+      ],
+      "notCountedAsZoneAcknowledgment": [
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\qa\\capacity-gate-r10c04-geometry-risk.json"
+      ],
+      "inFlightEvidence": {
+        "root": "No active imagegen call. r09_c06_p04_03_v2 was prepared before interruption but never invoked; no PNG/receipt. Last successful root call r09_c06_p04_03_v1 is saved with full provenance.",
+        "agents": "All three previously errored with application network permission revoked; resumed with explicit no-imagegen read-only audit tasks. No active generation currently."
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "fishing-village-game-20261009",
+      "zone": "southeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\capacity-gate-ack.json",
+          "sha256": "53e373bd52600b0420cde94f4b2771c9ba4a02f18c9a2d81e08afbc21dd0182c",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T05:01:03.421369+00:00",
+            "status": "capacity_gate_active_no_new_generation",
+            "newGenerationStopped": true,
+            "newCoordinatesStopped": true
+          }
+        }
+      ],
+      "inFlightEvidence": "none: last root p43-v3 returned before gate acknowledgment and was saved with provenance; workers report no in-flight image_gen",
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "island-game-20261009",
+      "zone": "northwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\capacity-gate-ack.json",
+          "sha256": "82009408103c238cf25a0bf7b72f97702d231169ae1eb0ec2773cff8d1deba60",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "recordedAtUtc": "2026-10-10T05:14:03.375274+00:00",
+            "acknowledged": true,
+            "newImageGenerationAllowed": false,
+            "newCoordinatesAllowed": false
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "root": "none",
+        "audit_contract": "none",
+        "bottom_qa": "none",
+        "continue_native": "none; last r04_c03_s02_04_a02 attempt failed reference-read with no image output"
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "island-game-20261009",
+      "zone": "northeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\capacity-gate-ack.json",
+          "sha256": "13e5fe4abe4186c46b94bcd611fd08e4b693e86b7c52520df702faad1382b8fc",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "receivedAtUtc": "2026-10-10T04:54:01.611892+00:00",
+            "gateStatus": "capacity_layout_validation_before_new_area_expansion",
+            "acknowledged": true,
+            "newImageRequestsHeld": true
+          }
+        }
+      ],
+      "inFlightEvidence": "root none; child confirmations pending",
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "island-game-20261009",
+      "zone": "southwest",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southwest\\capacity-gate-ack.json",
+          "sha256": "467e170933ddfbe6b41613f27aa664d3c5626543d28dd3abf3815aa403b2cbdf",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T05:01:22.632854+00:00",
+            "generationHoldActive": true,
+            "newImageRequestsAfterAcknowledgment": 0
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "activeCalls": 0,
+        "atReceipt": "No root image_gen running; s03_04_v02 prompt/request prepared but never invoked. Child s04_02_v01 already returned and awaiting ingest.",
+        "savedReturnedOutput": "r09_c04_s04_02_v01",
+        "savedSha256": "9b438c0360054806b3dcb948b8f25cb36bef3c9bcfab974a4c974c7a2d9a9617",
+        "savedAtUtc": "2026-10-10T05:01:22.633892+00:00"
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    },
+    {
+      "project": "island-game-20261009",
+      "zone": "southeast",
+      "status": "acknowledged",
+      "evidence": [
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\progress.json",
+          "sha256": "eb9d84a1fb181c46a64cd74efda480a28eea0894f8198de2e8afa38e26389303",
+          "scope": "zone-root progress, does not acknowledge gate",
+          "fields": {
+            "status": "native_received",
+            "updatedAt": "2026-10-10T04:12:58.253827+00:00",
+            "nextStep": "Inspect native dimensions and content; verify joins before any acceptance"
+          }
+        },
+        {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\capacity-gate-ack.json",
+          "sha256": "ac0cdafa74fdef8da42c47a5241bc54adb24bb3b5c16cbabdd6f7cfa74dbe0cf",
+          "scope": "zone-root acknowledgment",
+          "fields": {
+            "acknowledgedAtUtc": "2026-10-10T05:27:04.541568+00:00",
+            "status": "holding_new_generation_for_capacity_layout_validation"
+          }
+        }
+      ],
+      "inFlightEvidence": {
+        "root": {
+          "inFlight": false,
+          "lastBatchRecovered": [
+            "r11_c12_p32_v01"
+          ],
+          "failedWithoutOutput": {
+            "r11_c12_p34_v01": "application network permission was revoked",
+            "r11_c12_p41_v01": "401 Unauthorized: missing authentication"
+          },
+          "newCallsAfterGate": 0
+        },
+        "tile_left": {
+          "inFlight": false,
+          "currentTile": "r10_c11",
+          "generated": [
+            "r10_c11_p14_v01"
+          ],
+          "p24": "context/prompt only, no call"
+        },
+        "tile_right": {
+          "inFlight": false,
+          "currentTile": "r09_c13",
+          "latestSaved": "r09_c13_seam2_v01",
+          "r10_c13": "not started"
+        },
+        "coordinate_audit": {
+          "inFlight": false,
+          "currentTile": "r08_c12",
+          "latestCandidate": "tiles/r08_c12.candidate-v3.png",
+          "latestAttempt": "input read failure, no image output"
+        }
+      },
+      "allDescendantCallsIndependentlyVerifiedStopped": false
+    }
+  ],
+  "updatedAtUtc": "2026-10-10T06:11:39.752790+00:00",
+  "updateScope": "Only previously pending3official zones checked again; descendant calls not independently verified."
+}

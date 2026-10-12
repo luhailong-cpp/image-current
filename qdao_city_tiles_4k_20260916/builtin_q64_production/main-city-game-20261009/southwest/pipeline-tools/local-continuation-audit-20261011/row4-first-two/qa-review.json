@@ -1,0 +1,253 @@
+{
+  "scope": "p04_01/p04_02 source macro and three shared boundaries",
+  "formalAccepted": false,
+  "verdict": "geometry_pending",
+  "evidence": {
+    "sources": [
+      {
+        "id": "p03_01",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_01.png",
+        "sha256": "e5aa3279fcf2fdd594f58a2052e9c7f9c98b9d2c91961b7bfab4595507f32a77",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "id": "p03_02",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_02.png",
+        "sha256": "83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "id": "p04_01",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p04_01.png",
+        "sha256": "c45d0978c402b0a6f0815dc8d82f32c7ae709746a776b4ad313ae40ac824df74",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "id": "p04_02",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p04_02.png",
+        "sha256": "a5963a0771e34bcdecf83f8d9d38f776e9b30785ba61f08aaeac9958c6a11546",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "a": "p03_01",
+        "b": "p04_01",
+        "axis": "horizontal",
+        "darkProfiles": {
+          "above": [
+            [
+              338,
+              341,
+              339
+            ],
+            [
+              964,
+              970,
+              968
+            ]
+          ],
+          "below": [
+            [
+              251,
+              253,
+              252
+            ],
+            [
+              341,
+              343,
+              342
+            ],
+            [
+              929,
+              931,
+              930
+            ]
+          ]
+        },
+        "world": {
+          "boundaryY": 48128,
+          "worldXRange": [
+            16269,
+            17523
+          ]
+        },
+        "native1to1": true,
+        "qaHardcutNotCompositionProposal": true
+      },
+      {
+        "a": "p03_02",
+        "b": "p04_02",
+        "axis": "horizontal",
+        "darkProfiles": {
+          "above": [
+            [
+              563,
+              563,
+              563
+            ],
+            [
+              574,
+              575,
+              575
+            ],
+            [
+              1006,
+              1010,
+              1007
+            ]
+          ],
+          "below": [
+            [
+              499,
+              501,
+              499
+            ],
+            [
+              1028,
+              1031,
+              1029
+            ]
+          ]
+        },
+        "world": {
+          "boundaryY": 48128,
+          "worldXRange": [
+            17293,
+            18547
+          ]
+        },
+        "native1to1": true,
+        "qaHardcutNotCompositionProposal": true
+      },
+      {
+        "a": "p04_01",
+        "b": "p04_02",
+        "axis": "vertical",
+        "darkProfiles": {
+          "left": [],
+          "right": [
+            [
+              388,
+              389,
+              388
+            ],
+            [
+              889,
+              890,
+              889
+            ]
+          ]
+        },
+        "world": {
+          "boundaryX": 17408,
+          "worldYRange": [
+            48013,
+            49267
+          ]
+        },
+        "native1to1": true,
+        "qaHardcutNotCompositionProposal": true
+      }
+    ],
+    "resized": false,
+    "finalArt": false
+  },
+  "measurementCaveat": "Raw dark threshold missed the lighter p04_01 horizontal seams; bounded grayscale minima and visual native hardcuts confirm they exist at y34,437,930. Do not interpret threshold absence as absent geometry.",
+  "findings": [
+    {
+      "edge": "p03_01 to p04_01",
+      "worldBoundaryY": 48128,
+      "verdict": "fail",
+      "mainVerticalWorldX": [
+        17237,
+        17199
+      ],
+      "mainVerticalGap": 38,
+      "smallVerticalWorldX": [
+        16608,
+        16611
+      ],
+      "smallVerticalGap": 3,
+      "blueRegion": "Above image is still pale stone at the shared boundary in its left region; below image is blue. Requires coherent region edge placement, not only color feathering."
+    },
+    {
+      "edge": "p03_02 to p04_02",
+      "worldBoundaryY": 48128,
+      "verdict": "fail",
+      "mainVerticalWorldXApprox": [
+        17861,
+        17792
+      ],
+      "mainVerticalGapApprox": 69,
+      "obliqueRimWorldX": [
+        18300,
+        18322
+      ],
+      "obliqueGap": 22
+    },
+    {
+      "edge": "p04_01 to p04_02",
+      "worldBoundaryX": 17408,
+      "verdict": "fail",
+      "horizontalWorldYs": [
+        [
+          48450,
+          48401
+        ],
+        [
+          48943,
+          48902
+        ]
+      ],
+      "gapPixels": [
+        49,
+        41
+      ],
+      "lineStyle": "Right-hand native seams are substantially darker/deeper; match shallow stone subdivisions after geometry."
+    }
+  ],
+  "jointSourceTargetsApprox": {
+    "sourceToleranceWorldPixels": 52.2615629984,
+    "innerFrameVerticalWorldX": 17184,
+    "outerFrameVerticalWorldX": 17847,
+    "westBlueRightWorldX": 16541,
+    "westBlueTopWorldY": 48107,
+    "row3LowerHorizontalWorldY": 48002,
+    "row4HorizontalWorldY": [
+      48446,
+      48959
+    ],
+    "note": "Approximate source locations only. Shared generated geometry must still align visually; source tolerance is not permission for gaps between images."
+  },
+  "p0402AdditionalFinding": {
+    "kind": "blue_band_width",
+    "nativeBottomEntryObservedApproxX": 690,
+    "guideBottomEntryApproxXRange": [
+      800,
+      900
+    ],
+    "action": "Coordinate lower blue edge/width against original guide before propagating this strip to p04_03. Current broad diagonal direction is correct but band footprint is narrowed/shifted."
+  },
+  "recommendationOrder": [
+    "Select one consistent shared world location for rectangular frame verticals and subdivisions from original guide.",
+    "Repair p03_01 blue field onset and lower horizontal, then match p04_01 top overlap.",
+    "Reconcile p03_02/p04_02 frame vertical and oblique rim.",
+    "Match both row4 horizontal seams and line strength across p04_01/p04_02.",
+    "Coordinate p04_02 blue band width with p04_03 using approved macro, not wrong current strips."
+  ],
+  "noGeneration": true,
+  "noCandidateProgressMutation": true
+}

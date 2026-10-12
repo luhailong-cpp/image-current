@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>砚羽灵 · 战斗动作检视</title>
+<style>
+:root{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#263b33;background:#eee8d9;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;padding:22px;max-width:1700px;margin-inline:auto}
+header{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}
+h1{font:700 27px "Microsoft YaHei";margin:0 0 6px}p{margin:0;line-height:1.6;color:#53665d}
+.badge{border:1px solid #baa47b;border-radius:20px;padding:8px 15px;background:#fbf7ed;white-space:nowrap;font-size:14px}
+.panel{border:1px solid #c8b68b;border-radius:14px;background:#faf6ec;box-shadow:0 2px 10px #203c2610;padding:15px}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px}
+button,select,input{font:inherit}button,select{border:1px solid #b9a476;border-radius:8px;padding:9px 13px;background:#fffaf0;color:#29493c;cursor:pointer}
+button.primary,button[aria-pressed=true]{background:#225943;color:#fff8dc;border-color:#225943}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #c68834;outline-offset:3px}
+button:disabled{opacity:.45;cursor:not-allowed}label{display:flex;align-items:center;gap:6px;font-size:14px}
+.layout{display:grid;grid-template-columns:minmax(350px,1fr) minmax(360px,1fr);gap:18px}
+.stage{position:relative;aspect-ratio:1;background:#f4efe1;border-radius:9px;overflow:hidden}
+.stage canvas{display:block;width:100%;height:100%;object-fit:contain}
+.stage[data-bg=navy]{background:#162539}
+.stage[data-bg=checker]{background-color:#dedfd8;background-image:conic-gradient(#c6cbc4 25%,transparent 0 50%,#c6cbc4 0 75%,transparent 0);background-size:32px 32px}
+.stage-meta{display:flex;justify-content:space-between;gap:15px;margin:12px 0 6px;flex-wrap:wrap}.stage-meta strong{font-size:18px}
+.note{font-size:13px;color:#68746b;line-height:1.6}.timeline{display:flex;align-items:center;gap:12px;margin-top:12px}.timeline input{width:100%}
+.group-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.card{padding:7px;border:1px solid #c5b78f;border-radius:10px;background:#f9f3e7;text-align:left;cursor:pointer;color:#263b33}
+.card[aria-pressed=true]{background:#e5eddc;border:2px solid #387058;color:#263b33;padding:6px}
+.card strong{display:block;margin:7px 2px 2px;font-size:14px}.card small{color:#637168}
+.card .stage{border-radius:5px}.frame-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:14px}
+.thumb{padding:4px;background:#faf5e9;border:1px solid #cabb99;border-radius:8px;color:#3a5044;font-size:12px}
+.thumb.active{outline:3px solid #52805b;outline-offset:0}.thumb img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+.thumb .missing{aspect-ratio:1;display:grid;place-items:center;color:#a05038}.thumb span{display:block;margin:4px 0}
+.grid-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px}
+h2{font-size:17px;margin:0}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}a{color:#276148}
+details{margin-top:16px}summary{cursor:pointer;font-weight:600}
+#issues{max-height:190px;overflow:auto;white-space:pre-wrap;font:12px/1.6 monospace;margin:12px 0 0}
+footer{margin-top:18px;font-size:13px;color:#667268}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.group-grid{grid-template-columns:repeat(3,minmax(0,1fr))}header{align-items:start;flex-direction:column}.badge{white-space:normal}}
+@media(max-width:520px){body{padding:12px}.group-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.frame-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.controls{gap:6px}button,select{padding:9px}}
+</style>
+</head>
+<body>
+<header><div><h1>砚羽灵 · 战斗动作检视</h1><p>保留原画布观察受击、普攻、施法。E 斜前朝右下 · W 真斜后朝左上。</p></div><div class="badge" id="progress"></div></header>
+<div class="panel controls">
+<button class="primary" id="play">暂停</button>
+<label>速度 <select id="speed"><option value="1">正常 1×</option><option value=".25">慢放 0.25×</option></select></label>
+<label>主画面 <select id="mode"><option value="single">当前组循环</option><option value="sequence">六组顺序连播</option></select></label>
+<label>背景 <select id="background"><option value="ivory">浅米白</option><option value="navy">深蓝</option><option value="checker">棋盘</option></select></label>
+<label><input id="anchor" type="checkbox">显示目标脚点</label>
+<button id="previous">上一帧</button><button id="next">下一帧</button><button id="reset">回到首帧</button>
+</div>
+<div class="layout">
+<section class="panel">
+<div class="stage" data-bg="ivory"><canvas id="main" width="1024" height="1024" aria-label="当前动作帧"></canvas></div>
+<div class="stage-meta"><strong id="caption"></strong><span id="frame-label"></span></div>
+<div class="timeline"><label for="frame">逐帧</label><input id="frame" type="range" min="1" max="16" value="1"><output id="frame-value"></output></div>
+<p class="note" id="event"></p>
+<p class="note">目标脚点为画内 [512, 942]；十字仅用于比较。预览不裁切、不逐帧对齐、不补帧。</p>
+<div class="links"><a id="open-frame" target="_blank" rel="noopener">打开当前 PNG</a><a id="open-record" target="_blank" rel="noopener">查看逐图来源</a></div>
+</section>
+<section class="panel">
+<h2 style="margin-bottom:12px">六组同步预览 · 点击切换主画面</h2>
+<div class="group-grid" id="groups"></div>
+<div class="grid-title"><h2 id="grid-title">帧格浏览</h2><span class="note">点击任意帧暂停检视</span></div>
+<div class="frame-grid" id="frames"></div>
+<div class="links"><a id="sheet-light" target="_blank" rel="noopener">浅色接触表</a><a id="sheet-dark" target="_blank" rel="noopener">深色接触表</a></div>
+</section>
+</div>
+<details class="panel"><summary>技术检查与文件记录</summary><p class="note" id="technical"></p><pre id="issues"></pre><div class="links"><a href="manifest.json">manifest.json</a><a href="qa/technical-validation.json">技术检查 JSON</a></div></details>
+<footer>本页用于素材审阅。文件数量与技术检查不代表动作连续性或游戏接入已经通过。缺帧会明确显示，时间轴不会跳过缺帧。</footer>
+<script id="manifest-data" type="application/json">__MANIFEST_JSON__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById("manifest-data").textContent);
+const groups=data.groups, images=new Map(), errors=new Set(), cards=[], canvases=[];
+const el=id=>document.getElementById(id);
+const state={group:0,frame:0,playing:true,speed:1,mode:"single",elapsed:0,last:null,anchor:false};
+const main=el("main").getContext("2d");
+function preloadImages(){
+  for(const frame of data.frames){
+    if(!frame.exists)continue;
+    const im=new Image();
+    im.onload=()=>{images.set(frame.file,im);render(true)};
+    im.onerror=()=>{errors.add(frame.file);render(true)};
+    im.src=frame.file;
+  }
+}
+function frameAt(group,time){
+  const elapsed=Number.isFinite(time)?Math.max(0,time):0;
+  return Math.floor(elapsed/group.durationMs)%group.frames.length;
+}
+function draw(ctx,frame){
+  ctx.clearRect(0,0,1024,1024);
+  const im=images.get(frame.file);
+  if(im){ctx.drawImage(im,0,0,1024,1024)}
+  else{
+    ctx.fillStyle="#9d6f4b";ctx.textAlign="center";ctx.font="30px sans-serif";
+    ctx.fillText(!frame.exists?"此帧尚未生成":errors.has(frame.file)?"图片加载失败":"图片载入中",512,490);
+    ctx.font="22px sans-serif";ctx.fillText(frame.id,512,535);
+  }
+  if(state.anchor){
+    ctx.save();ctx.strokeStyle="#fa5345";ctx.lineWidth=3;ctx.beginPath();
+    ctx.moveTo(490,942);ctx.lineTo(534,942);ctx.moveTo(512,920);ctx.lineTo(512,964);ctx.stroke();
+    ctx.fillStyle="#fa5345";ctx.font="20px sans-serif";ctx.textAlign="left";ctx.fillText("512,942",541,934);ctx.restore();
+  }
+}
+groups.forEach((group,index)=>{
+  const card=document.createElement("button");card.className="card";card.type="button";card.setAttribute("aria-pressed","false");
+  const stage=document.createElement("div");stage.className="stage";stage.dataset.bg="ivory";
+  const cv=document.createElement("canvas");cv.width=cv.height=1024;cv.setAttribute("aria-label",group.label+" "+group.direction+" 动画");
+  stage.append(cv);card.append(stage);
+  const title=document.createElement("strong");title.textContent=group.label+" · "+group.direction;card.append(title);
+  const meta=document.createElement("small");meta.textContent=group.presentFrames+"/"+group.expectedFrames+" 帧 · "+group.durationMs+"ms";card.append(meta);
+  card.onclick=()=>{state.group=index;state.frame=0;state.elapsed=0;state.mode="single";el("mode").value="single";buildGrid();render(true)};
+  el("groups").append(card);cards.push(card);canvases.push(cv.getContext("2d"));
+});
+function buildGrid(){
+  const group=groups[state.group];el("frames").replaceChildren();
+  el("grid-title").textContent=group.label+" "+group.direction+" · 全部 "+group.expectedFrames+" 帧";
+  group.frames.forEach((frame,index)=>{
+    const button=document.createElement("button");button.className="thumb";button.type="button";button.dataset.index=index;
+    const stage=document.createElement("div");stage.className="stage";stage.dataset.bg=el("background").value;
+    if(frame.exists){const im=document.createElement("img");im.src=frame.file;im.alt=frame.id;stage.append(im)}
+    else{const missing=document.createElement("div");missing.className="missing";missing.textContent="待生成";stage.append(missing)}
+    button.append(stage);
+    const label=document.createElement("span");label.textContent=String(frame.frame).padStart(2,"0")+" · "+frame.durationMs+"ms";button.append(label);
+    button.onclick=()=>{pause();state.mode="single";el("mode").value="single";state.frame=index;state.elapsed=index*group.durationMs;render(true)};
+    el("frames").append(button);
+  });
+  el("frame").max=group.frames.length;
+  el("sheet-light").href="qa/"+group.id+"-ivory.png";
+  el("sheet-dark").href="qa/"+group.id+"-navy.png";
+}
+let lastGroup=-1,lastFrame=-1;
+function render(force=false){
+  const group=groups[state.group];
+  if(!group||!group.frames.length)return;
+  state.frame=((Math.trunc(state.frame)||0)%group.frames.length+group.frames.length)%group.frames.length;
+  const frame=group.frames[state.frame];
+  if(state.group!==lastGroup){buildGrid();force=true}
+  if(force||state.group!==lastGroup||state.frame!==lastFrame){
+    draw(main,frame);el("caption").textContent=group.label+" · "+group.direction;
+    el("frame-label").textContent=String(frame.frame).padStart(2,"0")+" / "+group.frames.length+" · "+group.durationMs+"ms";
+    el("frame").value=frame.frame;el("frame-value").textContent=frame.frame;
+    el("event").textContent=frame.event?"视觉阶段标记："+frame.event+"（待接入定义）":" ";
+    el("open-frame").href=frame.file;el("open-frame").style.visibility=frame.exists?"visible":"hidden";
+    el("open-record").href=frame.sourceRecord||"#";el("open-record").style.visibility=frame.sourceRecord?"visible":"hidden";
+    document.querySelectorAll(".thumb").forEach((x,i)=>x.classList.toggle("active",i===state.frame));
+    cards.forEach((c,i)=>c.setAttribute("aria-pressed",String(i===state.group)));
+  }
+  groups.forEach((g,i)=>draw(canvases[i],g.frames[state.playing?frameAt(g,state.elapsed):Math.min(state.frame,g.frames.length-1)]));
+  lastGroup=state.group;lastFrame=state.frame;
+}
+function pause(){state.playing=false;el("play").textContent="播放"}
+function advance(delta){
+  pause();state.mode="single";el("mode").value="single";
+  const group=groups[state.group];state.frame=(state.frame+delta+group.frames.length)%group.frames.length;
+  state.elapsed=state.frame*group.durationMs;render(true);
+}
+el("play").onclick=()=>{state.playing=!state.playing;state.last=null;el("play").textContent=state.playing?"暂停":"播放";render(true)};
+el("speed").onchange=()=>{state.speed=Number(el("speed").value)};
+el("mode").onchange=()=>{state.mode=el("mode").value;state.elapsed=0;state.frame=0;render(true)};
+el("background").onchange=()=>{document.querySelectorAll(".stage").forEach(x=>x.dataset.bg=el("background").value)};
+el("anchor").onchange=()=>{state.anchor=el("anchor").checked;render(true)};
+el("previous").onclick=()=>advance(-1);el("next").onclick=()=>advance(1);
+el("reset").onclick=()=>{state.frame=0;state.elapsed=0;render(true)};
+el("frame").oninput=()=>{pause();state.mode="single";el("mode").value="single";state.frame=Number(el("frame").value)-1;state.elapsed=state.frame*groups[state.group].durationMs;render(true)};
+document.addEventListener("keydown",event=>{
+  if(["INPUT","SELECT"].includes(event.target.tagName))return;
+  if(event.code==="Space"){event.preventDefault();el("play").click()}
+  if(event.code==="ArrowLeft"){event.preventDefault();advance(-1)}
+  if(event.code==="ArrowRight"){event.preventDefault();advance(1)}
+});
+document.addEventListener("visibilitychange",()=>{state.last=null});
+function tick(now){
+  if(!Number.isFinite(now)){requestAnimationFrame(tick);return}
+  const delta=state.last===null?0:Math.max(0,Math.min(now-state.last,100));state.last=now;
+  if(state.playing){
+    state.elapsed+=delta*state.speed;
+    if(state.mode==="sequence"){
+      const total=groups.reduce((sum,g)=>sum+g.totalDurationMs,0);let t=state.elapsed%total;
+      for(let i=0;i<groups.length;i++){
+        if(t<groups[i].totalDurationMs){state.group=i;state.frame=frameAt(groups[i],t);break}
+        t-=groups[i].totalDurationMs;
+      }
+    }else state.frame=frameAt(groups[state.group],state.elapsed);
+    render();
+  }
+  requestAnimationFrame(tick);
+}
+el("progress").textContent=data.summary.presentFrames+" / 68 帧已落盘 · "+(data.summary.completeTechnicalPass?"技术检查通过":"在制／待核对");
+el("technical").textContent="构建时间："+data.generatedAt+"。像素级重复组 "+data.summary.duplicatePixelHashes.length+"；文件重复组 "+data.summary.duplicateFileHashes.length+"；记录问题帧 "+data.summary.errorFrames.filter(x=>x.errors.join()!=="missing_frame").length+"。";
+el("issues").textContent=JSON.stringify({missing:data.summary.missingFrames,errors:data.summary.errorFrames,extraRuntimePngs:data.summary.extraRuntimePngs,duplicatePixels:data.summary.duplicatePixelHashes},null,2);
+buildGrid();render(true);preloadImages();requestAnimationFrame(tick);
+</script>
+</body></html>

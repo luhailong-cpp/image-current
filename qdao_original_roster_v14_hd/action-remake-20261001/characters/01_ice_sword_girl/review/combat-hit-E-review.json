@@ -1,0 +1,121 @@
+{
+  "reviewedAtUtc": "2026-10-04T04:20:22.480040+00:00",
+  "action": "hit",
+  "direction": "E",
+  "frames": 6,
+  "frameMs": 40,
+  "segmentMs": 240,
+  "sourceNativeSize": [
+    1254,
+    1254
+  ],
+  "candidateSize": [
+    1024,
+    1024
+  ],
+  "selectedFrames": [
+    {
+      "path": "candidate/hit/E/01.png",
+      "sha256": "5f5ccb7985f592864620757d1787bafc9dccff623d0beff73f3a99ac35de1e3f",
+      "sourcePath": "drafts/hit/E/01-v2.png"
+    },
+    {
+      "path": "candidate/hit/E/02.png",
+      "sha256": "333cd7fd584041caf5494495a17ddaa35791cb880ea0ff3860f6b9c6c807c796",
+      "sourcePath": "drafts/hit/E/02-v1.png"
+    },
+    {
+      "path": "candidate/hit/E/03.png",
+      "sha256": "2581f42c90100fa3b008cbcccba9b533646cd697c8591ad0f6aaeff96a95787f",
+      "sourcePath": "drafts/hit/E/03-v4.png"
+    },
+    {
+      "path": "candidate/hit/E/04.png",
+      "sha256": "75649b690a602bda605c25bbffac2454be4266bfc5628db14d6776a9f131fdce",
+      "sourcePath": "drafts/hit/E/04-v1.png"
+    },
+    {
+      "path": "candidate/hit/E/05.png",
+      "sha256": "9b0640da29b3e5d116e136f21f0248b56d36a4dbe851ae697259c2445365c947",
+      "sourcePath": "drafts/hit/E/05-v1.png"
+    },
+    {
+      "path": "candidate/hit/E/06.png",
+      "sha256": "58479dbea65632eec7ed1220e8f7d8d8f2a67dfce38f5673ff452735ac31b75e",
+      "sourcePath": "drafts/hit/E/06-v2.png"
+    }
+  ],
+  "actualView": "Generated native outputs and all-six contact sheet inspected; adjacent poses and06/01 checked. No claim of continuous playback review.",
+  "findings": [
+    "Incoming force reads from right:01guard→02backward wince→03knee compression→04rebound→05settle→06guard.",
+    "All current frames retain near RIGHT sword arm and far LEFT talisman arm, complete weapon and two hands. Old03-v1/03-v2 ownership not reused.",
+    "01/06 retain comparable upright identity/scale;03/04 show lower, leaning compression rather than mirrored poses.",
+    "Both boots point E without outward flare; drawn soles read planted, but support positions/height shift across02→03 and04→05 by several pixels at256. Not accepted as no-slide/no-bounce grounding yet.",
+    "No large baked hit light effect. Native and candidate six PNG hashes distinct."
+  ],
+  "status": "candidate_segment_complete_needs_motion_grounding_review",
+  "clientRuntimeVerified": false,
+  "reviewMethod": "Generated native outputs and all-six contact sheet inspected; adjacent poses and06/01 checked. No claim of continuous playback review.",
+  "actualPhaseByFrame": [
+    "initial guard",
+    "backward wince begins",
+    "deepest knee compression and backward recoil",
+    "eyes reopen and rebound",
+    "late recovery, hair settling",
+    "restored guard"
+  ],
+  "actualContactByFrame": [
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    },
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    },
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    },
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    },
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    },
+    {
+      "left": "weight",
+      "right": "weight",
+      "confidence": "medium_visual_only",
+      "evidence": "Both boot soles drawn down with E-pointing axes; screen-space stance/ground height variation remains, not verified world contact."
+    }
+  ],
+  "events": {
+    "peakCompression": {
+      "frame": 3,
+      "offsetMs": 80,
+      "basis": "manual static pose observation",
+      "confidence": "medium"
+    },
+    "impactReaction": {
+      "frame": 2,
+      "offsetMs": 40,
+      "basis": "eyes shut/head backward/hair reversal; no damage event integrated"
+    }
+  },
+  "remaining": [
+    "Support positions/height vary across 02-to-03 and 04-to-05; no verified world-ground contact or client playback."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "status": "capacity_gate_ack_no_generation",
+  "inFlightStatus": "none",
+  "gatePath": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-gate-20261010.json",
+  "generatedCoordinates": 6,
+  "generatedRawVersions": 11,
+  "formalAcceptedCount": 0,
+  "provisionalMatrix": [
+    [
+      "r03_c04_s01_01_a03",
+      "r03_c04_s01_02_a01",
+      "r03_c04_s01_03_a02",
+      "r03_c04_s01_04_a01"
+    ],
+    [
+      "r03_c04_s02_01_a02",
+      "r03_c04_s02_02_a02",
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null
+    ]
+  ],
+  "guideOnlyUnstarted": [
+    "r03_c04_s02_03_a01"
+  ],
+  "currentTileMissingNativeCoordinates": 10,
+  "straightCoreFindings": [
+    {
+      "edge": "r03_c03 -> r03_c04, first row",
+      "result": "No visible contour discontinuity on true core cut; left pillar aligns. Formal external assembled boundary still pending."
+    },
+    {
+      "edge": "first row cols1->2",
+      "result": "True core straight cut visually continuous."
+    },
+    {
+      "edge": "first row cols2->3",
+      "result": "True core straight cut has a visible gold flower-pattern/brightness break; existing internal DP seam is continuous. Internal join requires hard seam, not naive straight concatenation."
+    },
+    {
+      "edge": "first row cols3->4",
+      "result": "True core straight cut visually continuous foliage/petals."
+    },
+    {
+      "edge": "r03_c03 -> r03_c04, second row",
+      "result": "Slight material-tone step at actual core boundary, no outline displacement. Needs whole external-edge native-source selection review."
+    }
+  ],
+  "partialAssembly": {
+    "path": "qa/r03_c04/partial_2x2_v1/native_2278x2278.png",
+    "core2048": "qa/r03_c04/partial_2x2_v1/core_2048x2048_PARTIAL.png",
+    "sourceCount": 4,
+    "fullCoverageOfDeclaredPartialRectangle": true,
+    "full4096": false,
+    "visual": "Center four-way seam and row join preserve window/column/wall boundaries; subtle material variation remains near left dark wood."
+  },
+  "capacitySensitiveRisks": [
+    "Building wall, staircase and both decorative cylinders consume most of the generated upper-left region; no measured walkability or 5000-player claim is justified.",
+    "Stair width, cylinder footprint and garden railing constrain the path below/right, whose native areas are not generated.",
+    "s02_02_a02 retains cylinder footprint differences of tens of pixels and an internal red wall-skirt line defect; await layout/scale gate before further art requests.",
+    "Only native/source continuity is reviewed; no world units, collision hull, character scale, movement simulation or crowd-capacity data established."
+  ],
+  "progressModified": false,
+  "selectionModified": false,
+  "artPreserved": true
+}

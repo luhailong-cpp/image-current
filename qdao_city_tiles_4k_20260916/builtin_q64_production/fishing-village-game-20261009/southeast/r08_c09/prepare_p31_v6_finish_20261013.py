@@ -1,0 +1,11 @@
+from pathlib import Path
+import json,hashlib
+from datetime import datetime,timezone
+T=Path(__file__).resolve().parent
+refs=[T/'layout-only/p31-true-core-conditioned-finish-20261013-v6.png',T/'native/p32-v1.png']
+prompt="""Use case: precise-object-edit. Make image1 into ONE seamless finished hand-painted game-map patch, exactly1254x1254. Image1 is the exact object-position target; image2 is the adjacent RIGHT patch, supplied ONLY as stone-surface/material reference. Keep golden finial, slim straight post x568..704, wood crossarm and clipped red lanterns exactly at current coordinates and scale.
+Replace the mismatched paved-ground interior in image1 with the crisp but natural bluegray large stone slabs and broad subtle painterly surface of image2. The rightmost115 columns and top115 rows of image1 are real adjacent image pixels. Repair the stone joints inside to meet EACH of their endpoints without offsets, keeping these outer endpoints fixed. Remove the horizontal pasted boundary at y115, the vertical pasted boundary at x1139, all changes in stone grain size at those cuts, and tile-shaped shadow blocks. In particular the top-right quarter must read as one continuous surface, not a rectangle. Extend the same brushwork smoothly over the entire paved background behind the finial and crossarm. No square micro-tile pattern, no blur, no artificial miniature cobbles. Broad flat hand-painted slabs with fine mottled texture as reference2. Do not alter foreground object contours at all. Preserve bottom seam contours at y1139, including straight wooden post and both lanterns. No new objects, no text or frame. Exact native1254x1254 RGB output, same crop and perspective."""
+d={'prompt':prompt,'referenced_image_paths':[str(x) for x in refs],'transparent_background':False,'route':'builtin','tool':'image_gen__imagegen','submittedModel':None,'submittedQuality':None,'actualModel':None,'actualQuality':None,'createdAt':datetime.now(timezone.utc).isoformat(),'referenceEvidence':[{'path':str(s),'sha256':hashlib.sha256(s.read_bytes()).hexdigest()} for s in refs]}
+for f,v in [('p31-v6.request.json',json.dumps(d,indent=2)),('p31-v6.prompt.txt',prompt)]:
+ p=T/f; assert not p.exists();p.write_text(v,encoding='utf-8')
+

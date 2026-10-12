@@ -1,0 +1,115 @@
+{
+  "reviewedAt": "2026-10-11T10:31:36.580936+00:00",
+  "status": "failed_west_parasol_geometry",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+    "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-context-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+    "sha256": "b68bcffb6b663bbf7facf895b47324a78b58cb47ea5436eac9e04cbb92282ea3",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "repairManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\repairs\\west-remove-grout-stub-20261011T082322-15c2e7ac-masked\\composition.json",
+  "lastAttemptNative": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\repairs\\west-spoke-fixed-visible-endpoint-20261011T100314-e6e40537-masked\\native.png",
+    "sha256": "3eea319f618f6b9ef44931ca3ea4b60da91dfaebd54fa9496d4ac06d8de37a37",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "lastAttemptTrialCandidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-spoke-fixed-visible-endpoint-20261011T100314-e6e40537-masked.png",
+    "sha256": "d5a2aa69b490910ac0b73b0347477829f3c10aa471a6255b068f9ff55168febb",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "lastAttemptVerdict": {
+    "status": "rejected",
+    "reviewedAt": "2026-10-11T10:31:35.421624+00:00",
+    "reason": "Actual1:1 east-only composite still has an obvious short vertical step and protruding upper silhouette at x0,y~670. Native generation changed the fixed left rod angle; rendered full native looks smooth but cropping new-tile pixels does not match original west.",
+    "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\repairs\\west-spoke-fixed-visible-endpoint-20261011T100314-e6e40537-masked\\review-closeup.png",
+    "trialCandidate": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-spoke-fixed-visible-endpoint-20261011T100314-e6e40537-masked.png",
+      "sha256": "d5a2aa69b490910ac0b73b0347477829f3c10aa471a6255b068f9ff55168febb",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "activeCandidateUnchanged": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+      "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    "formalAccepted": false
+  },
+  "blocking": [
+    {
+      "box": [
+        0,
+        630,
+        70,
+        735
+      ],
+      "source": "p01_01",
+      "issue": "Bamboo spoke top/bottom silhouettes do not meet fixed west atx0,y~670."
+    },
+    {
+      "box": [
+        0,
+        1340,
+        170,
+        1520
+      ],
+      "source": "p02_01",
+      "issue": "Red/cream stripe heights match but tangent makes a sharp pointed turn atx0,y~1388."
+    }
+  ],
+  "resolved": [
+    {
+      "box": [
+        0,
+        1760,
+        230,
+        1965
+      ],
+      "issue": "W3a hanging stone grout removed, local native1254 source and exact replay verified."
+    }
+  ],
+  "watch": [
+    "Fabric hue transition and wood illumination mismatch remain; geometry of wooden steps is continuous."
+  ],
+  "rootOwnedRegion": [
+    0,
+    3471,
+    629,
+    4096
+  ],
+  "externalPending": [
+    "north",
+    "east",
+    "south",
+    "four-tile corner"
+  ],
+  "formalAccepted": false,
+  "pixelChecks": {
+    "rootCornerUnchanged": true,
+    "east115Unchanged": true,
+    "oldWestCoreUnchanged": true
+  },
+  "internalArtQA": "Original full6bands/9junctions audit remains applicable outside changed regions. Retained W3a rectangular patch atx0..230,y1760..1965 visually reviewed at1:1 with no new geometry break."
+}

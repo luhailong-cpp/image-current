@@ -1,0 +1,87 @@
+{
+  "tile": "r14_c13",
+  "reviewedAt": "2026-10-10T21:18:34.098558+00:00",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\candidate\\r14_c13-4k-fix-small-lower-dp.png",
+    "sha256": "818508762e015069585a62866ef14314686eaed7f32569e78ce31234e6dd1a4b",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\candidate\\r14_c13-context-4326-repaired-v4.png",
+    "sha256": "b344ead9d8c8cee1b900a2c1a0e1e09bf27a2284163b7e7e1eee247ceb97313e",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "activeNativeCount": 16,
+  "generatedBaseNativeCount": 21,
+  "generatedRepairNativeCount": 8,
+  "appliedRepairNativeCount": 7,
+  "allGeneratedNativeCount": 29,
+  "activeContributingNativeCount": 23,
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "resampledArt": false,
+  "actualModel": null,
+  "actualQuality": null,
+  "internalSeamQA": "passed after full six seam-band and nine-junction visual review; repair perimeters and four micro repairs also reviewed at native resolution",
+  "internalArtQA": "pending_north_neighbor_transition_repair",
+  "excludedFromInternalPassBoxInTile": [
+    0,
+    0,
+    4096,
+    256
+  ],
+  "externalNeighborSeamQA": "north failed, repair required; other external neighbors not formally accepted",
+  "formalAccepted": false,
+  "worldSize": null,
+  "clientMappingValidated": false,
+  "capacity5000Validated": false,
+  "remainingFindings": [
+    {
+      "id": "NORTH-FOLIAGE",
+      "boxInTile": [
+        0,
+        0,
+        800,
+        200
+      ],
+      "finding": "Leaf silhouettes do not connect to existing r13_c13 at y=0. Preserve existing r13 pixels and repair only new r14 side.",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\review-notes\\r14_c13-native-audit-20261010T111127\\p01_01-north-boundary-unscaled.png"
+    },
+    {
+      "id": "NORTH-PAVING",
+      "boxInTile": [
+        1900,
+        0,
+        2360,
+        200
+      ],
+      "finding": "Northern paving has an isolated/missing grout connection around tile x1950,y120 and older source/new tile mismatch around x2048..2300 at y0. Repair as one slab topology with northern neighbor anchor.",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\review\\repaired-v4\\vertical-top-x2048-100pct.png"
+    }
+  ],
+  "reviewDirectories": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\review\\repaired-v4",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\review\\micro-dp",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\review\\repaired-v2"
+  ],
+  "rejectedCompositions": [
+    "repaired-v3 limited circular alpha introduced edge breaks; superseded by v4 minimum-error composition"
+  ],
+  "rejectedNativeRepairs": [
+    "fix-east-paving: shifted slab corners; retained for evidence only"
+  ],
+  "notes": [
+    "Roof/eave, beams and railing remain partial architecture from layout. Broad right paving stays open.",
+    "Seven applied native repairs reconstructed broken geometry; last two use recorded minimum-error alpha paths to avoid clipping the corrected grout.",
+    "Base 16 patch assembly passed strict source/hash/reference/guide replay preflight. Seven selected repair compositions passed exact pixel replay.",
+    "Current context copies the repaired 4096 core at integer offset115 into original context. External halo remains unreviewed and must not be propagated."
+  ]
+}

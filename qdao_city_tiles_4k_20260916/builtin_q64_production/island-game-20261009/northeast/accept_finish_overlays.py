@@ -1,0 +1,6 @@
+from native_work import *
+for ident in ['r03_c12_cross_01_01_repair','r03_c12_cross_01_02_repair']:
+    p=ZONE/'qa'/f'{ident}.overlay.json'; q=read(p); q['review']='passed_internal_geometry_color_and_four_edges'; q['reviewedAtUtc']=now(); q['reviewerEvidence']='root100% correction and perimeter inspection'; write(p,q)
+    p=ZONE/'native'/f'{ident}.png.generation.json'; q=read(p); q['status']='usable_native_repair_overlay'; q['internalSeams']='four overlay perimeter edges passed'; write(p,q)
+p=ZONE/'native/r03_c12_p04_04.png.generation.json'; q=read(p); q['status']='usable_native_candidate'; q['internalSeams']='root final native join crops horizontal3segment4 vertical3segment4 cross3-3 pass'; write(p,q)
+q=read(ZONE/'progress.json'); recs=[read(p) for p in (ZONE/'native').glob('*.png.generation.json')]; usable=[r for r in recs if r['status'].startswith(('usable_native','usable_seed'))]; q['generatedNativeCount']=len(recs); q['usableNativeCount']=len(usable); q['usableCorePatchCount']=sum('_cross_' not in r['id'] for r in usable); q['usableRepairOverlayCount']=sum('_cross_' in r['id'] for r in usable); q['status']='final_internal_visual_review'; q['updatedAtUtc']=now(); write(ZONE/'progress.json',q)

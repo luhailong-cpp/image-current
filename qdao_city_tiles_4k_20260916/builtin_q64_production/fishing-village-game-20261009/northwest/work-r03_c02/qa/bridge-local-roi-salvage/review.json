@@ -1,0 +1,93 @@
+{
+  "reviewedAtUtc": "2026-10-09T21:04:36.474830+00:00",
+  "request": "Evaluate local v02 repaired ROI + neighborhood hard-cut into v01 with exact native source identity and full left/right interfaces preserved",
+  "decision": "No verified usable local salvage. Reject both diagnostics; do not integrate into main tile.",
+  "mainFinding": "v02 geometry drift is present inside the supposedly repaired roof/cap/eave region, not only at the outer canvas. Same-coordinate original-pixel cuts cannot bridge the tested contour mismatch. Two differently sized constrained minimum-error candidates preserve external interfaces but introduce new broken tile channels, clipped caps and eave steps at the internal ROI boundary.",
+  "scopeOfConclusion": "These two concrete constrained native-pixel salvage attempts fail. This is not a mathematical proof that every conceivable binary mask fails; no successful geometrically continuous mask was found, so no acceptance is claimed.",
+  "internalContourDisplacement": [
+    {
+      "nativeX": 780,
+      "v01EaveY": 698,
+      "v02EaveY": 736,
+      "deltaY": 38
+    },
+    {
+      "nativeX": 850,
+      "v01EaveY": 674,
+      "v02EaveY": 713,
+      "deltaY": 39
+    },
+    {
+      "nativeX": 920,
+      "v01EaveY": 650,
+      "v02EaveY": 688,
+      "deltaY": 38
+    },
+    {
+      "nativeX": 990,
+      "v01EaveY": 622,
+      "v02EaveY": 660,
+      "deltaY": 38
+    },
+    {
+      "nativeX": 1060,
+      "v01EaveY": 593,
+      "v02EaveY": 630,
+      "deltaY": 37
+    },
+    {
+      "nativeX": 1120,
+      "v01EaveY": 569,
+      "v02EaveY": 603,
+      "deltaY": 34
+    }
+  ],
+  "measurement": "Golden eave top at same native x: 5-column average, first y>450 with R>150,R>1.6B,G>65. This samples actual contour position inside ROI, not overall RGB error.",
+  "candidates": [
+    {
+      "variant": "narrow-ribbon",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\narrow-ribbon\\record.json",
+      "recordSha256": "483cc853672f683a60843f5e74ced1dec311c8c827069ea8d62881598d972e36",
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\narrow-ribbon\\candidate.png",
+      "candidateSha256": "62592a674e3f31593824e508a056948c6140ea9873da2d8b7add8661b619bf51",
+      "v02PixelCount": 233380,
+      "decision": "reject",
+      "outerLeftRight115ExactlyV01": true,
+      "sourcePixelProvenanceVerified": true
+    },
+    {
+      "variant": "broad-neighborhood",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\broad-neighborhood\\record.json",
+      "recordSha256": "be32c732058b255833e234d02743e1ee0f49370daad126319f798ae35478f861",
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\broad-neighborhood\\candidate.png",
+      "candidateSha256": "3bd267ce2b9d0be4ddda5af12d81f5cca608e52037935a9a4dadb30e2b05f9c7",
+      "v02PixelCount": 495260,
+      "decision": "reject",
+      "outerLeftRight115ExactlyV01": true,
+      "sourcePixelProvenanceVerified": true
+    }
+  ],
+  "constraintsVerified": {
+    "v01LeftAndRight115PixelColumnsIdentical": true,
+    "allInsertedPixelsIdenticalToV02AtSameXY": true,
+    "noScaling": true,
+    "noWarp": true,
+    "noFeather": true,
+    "noColorEdit": true,
+    "noNewGeneration": true,
+    "mainNativePlanProgressCandidateUnmodifiedByThisTask": true
+  },
+  "reproduce": {
+    "python": "C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "script": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\reproduce.py",
+    "scriptSha256": "da212ea6558ef69347271ff6d7b9905c734376db190285e1715cbe286e9719b1",
+    "command": "& 'C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' 'D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\bridge-local-roi-salvage\\reproduce.py'",
+    "outputScope": "script directory only; script recreates mechanical candidates, masks and source-id records; this visual verdict remains separately in review.json",
+    "dependencies": [
+      "Pillow",
+      "NumPy"
+    ],
+    "algorithm": "two 4-connected per-row constrained min-squared-RGB vertical DP boundaries around mandatory diagonal repair pixels, plus horizontal DP bottom cut; binary source choice, not blending"
+  },
+  "nextAction": "Keep v01 as the better-aligned repair base while treating its narrow row as unresolved. Do not use either local QA candidate as a repaired source."
+}

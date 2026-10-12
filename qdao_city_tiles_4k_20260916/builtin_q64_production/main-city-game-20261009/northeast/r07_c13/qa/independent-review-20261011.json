@@ -1,0 +1,1551 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-11T06:16:40.658441+00:00",
+  "reviewer": "coordinate_audit",
+  "tile": "r07_c13",
+  "reviewMode": "read-only native-pixel geometry review with a single text report output",
+  "baseline": {
+    "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\assembly.json",
+    "sha256": "80c128fce14dce044e4d5b5a5ae40531a98d2d15fceee28aaeefb4e7265ea9bc",
+    "inputSignature": "f30ef04cf1155a6e57a2e0cf36c524ceba28493beb9421c2565ac485ccfd31bf",
+    "validSelectedNativeCount": 16,
+    "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\r07_c13-core-baseline.candidate.png",
+    "candidateSha256": "727db53616f82974e3f45acefa289a1927aef51945c746aa867486694c8ae7da",
+    "candidatePixels": [
+      4096,
+      4096
+    ],
+    "reassembledCorePixelIdentity": true,
+    "historicalIncompleteBaselineExcluded": "0941ac720509bb7f8afe"
+  },
+  "coordinateConvention": {
+    "units": "original pixels",
+    "boxes": "[left,top,right,bottom), integer half-open; bounded visual evidence regions, not segmentation masks",
+    "tileOriginWorld": [
+      49152,
+      24576
+    ],
+    "coreSize": 1024,
+    "nativeSize": 1254,
+    "halo": 115,
+    "nativeCoreCrop": [
+      115,
+      115,
+      1139,
+      1139
+    ]
+  },
+  "scope": {
+    "assigned": "First two horizontal boundaries, first two native rows of vertical boundaries, and all nine four-patch intersections; focused row-three vertical extensions for the reported structural defects.",
+    "internalPairCountAvailable": 24,
+    "internalPairsViewed": 17,
+    "intersectionCountViewed": 9,
+    "unreviewedFullPairStrips": [
+      "vertical-p41-p42",
+      "vertical-p42-p43",
+      "vertical-p43-p44",
+      "horizontal-p31-p41",
+      "horizontal-p32-p42",
+      "horizontal-p33-p43",
+      "horizontal-p34-p44"
+    ],
+    "note": "The nine intersection crops cover local portions of the seven unreviewed strips, not their full lengths. No assertion of all-24 pair-strip coverage is made."
+  },
+  "acceptance": {
+    "formalAccepted": false,
+    "formalAcceptedCount": 0,
+    "baselineGeometryStatus": "needs-local-repair",
+    "P2Count": 4,
+    "P3Count": 2,
+    "noMAEAcceptance": true,
+    "currentRepairsReviewed": false,
+    "note": "Parent reported local repair work in qa/finish-20261011 while this baseline review was in progress. This file preserves baseline observations and does not accept or reject those later repair pixels."
+  },
+  "findingsP2": [
+    {
+      "id": "P2-01",
+      "priority": "P2",
+      "title": "Diamond frame upper-left diagonal is displaced at two core boundaries",
+      "sourceIds": [
+        "p21",
+        "p22",
+        "p31",
+        "p32"
+      ],
+      "tileFeatureBoxHalfOpen": [
+        970,
+        2005,
+        1170,
+        2320
+      ],
+      "tileDefectBoxesHalfOpen": [
+        [
+          1016,
+          2108,
+          1033,
+          2277
+        ],
+        [
+          1091,
+          2044,
+          1150,
+          2054
+        ]
+      ],
+      "seamCoordinates": [
+        "x=1024",
+        "y=2048"
+      ],
+      "evidence": [
+        "intersection-r2-c1-100pct.png",
+        "vertical-p31-p32-join-100pct.png",
+        "horizontal-p22-p32-join-100pct.png"
+      ],
+      "observation": "The gold outer strip and red inner bevel have a visible step rather than a continuous straight diagonal. At y2048 a short horizontal splice cuts the ascending left gold edge. This is geometric, not a color-only transition.",
+      "suggestedLocalTreatment": "Reconstruct one consistent diagonal across both boundaries within a shared native-pixel repair window, retaining the diamond apex, existing frame thickness and relief.",
+      "worldFeatureBoxHalfOpen": [
+        50122,
+        26581,
+        50322,
+        26896
+      ],
+      "status": "observed-in-f30ef04cf1155a6e57a2-baseline; later repairs not reviewed here"
+    },
+    {
+      "id": "P2-02",
+      "priority": "P2",
+      "title": "Circular tile end and red fascia step at x3072",
+      "sourceIds": [
+        "p23",
+        "p24",
+        "p33",
+        "p34"
+      ],
+      "tileFeatureBoxHalfOpen": [
+        2980,
+        2050,
+        3155,
+        2330
+      ],
+      "tileDefectBoxesHalfOpen": [
+        [
+          3066,
+          2100,
+          3078,
+          2275
+        ]
+      ],
+      "seamCoordinates": [
+        "x=3072"
+      ],
+      "evidence": [
+        "intersection-r2-c3-100pct.png",
+        "vertical-p33-p34-join-100pct.png"
+      ],
+      "observation": "A circular decorated cap is cut at the vertical splice and replaced on the right by a plain oval tile end. Both red fascia edges jump in height at the same x coordinate.",
+      "suggestedLocalTreatment": "Use one shared local solution for the final cap, the tile-end rhythm and both red fascia edges; preserve the existing roof slope.",
+      "worldFeatureBoxHalfOpen": [
+        52132,
+        26626,
+        52307,
+        26906
+      ],
+      "status": "observed-in-f30ef04cf1155a6e57a2-baseline; later repairs not reviewed here"
+    },
+    {
+      "id": "P2-03",
+      "priority": "P2",
+      "title": "Orphan half gold ornament clipped at x2048",
+      "sourceIds": [
+        "p32",
+        "p33"
+      ],
+      "tileFeatureBoxHalfOpen": [
+        2025,
+        2085,
+        2105,
+        2230
+      ],
+      "tileDefectBoxesHalfOpen": [
+        [
+          2048,
+          2106,
+          2078,
+          2204
+        ]
+      ],
+      "seamCoordinates": [
+        "x=2048"
+      ],
+      "evidence": [
+        "intersection-r2-c2-100pct.png",
+        "vertical-p32-p33-join-100pct.png"
+      ],
+      "observation": "A gold crescent has a perfectly vertical missing left half coincident with the splice. It does not join the gold ridge and reads as a residual fragment on a blue tile.",
+      "removeFragmentRecommended": true,
+      "suggestedLocalTreatment": "Remove only the isolated crescent and continue the underlying blue-tile surface and highlight. Keep the large gold ridge and its end scroll unchanged.",
+      "worldFeatureBoxHalfOpen": [
+        51177,
+        26661,
+        51257,
+        26806
+      ],
+      "status": "observed-in-f30ef04cf1155a6e57a2-baseline; later repairs not reviewed here"
+    },
+    {
+      "id": "P2-04",
+      "priority": "P2",
+      "title": "Gray masonry band interrupts the upper gold pipe at x3072",
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "tileFeatureBoxHalfOpen": [
+        3035,
+        35,
+        3250,
+        140
+      ],
+      "tileDefectBoxesHalfOpen": [
+        [
+          3072,
+          44,
+          3237,
+          115
+        ]
+      ],
+      "seamCoordinates": [
+        "x=3072",
+        "flat masonry termination near y=114"
+      ],
+      "evidence": [
+        "vertical-p13-p14-join-100pct.png",
+        "vertical-p13-p14-overlap-comparison-100pct.png",
+        "native/p14.png"
+      ],
+      "observation": "The gold pipe visible in the left native overlap is covered in p14 by a gray stone band whose lower edge stops horizontally at native y229. The assembled pipe/masonry boundary changes abruptly at x3072; this is an occlusion/shape disagreement.",
+      "suggestedLocalTreatment": "Resolve the pipe and stone boundary in one local window using the existing north context. Preserve the existing large diagonal ridge and its elbow.",
+      "worldFeatureBoxHalfOpen": [
+        52187,
+        24611,
+        52402,
+        24716
+      ],
+      "status": "observed-in-f30ef04cf1155a6e57a2-baseline; later repairs not reviewed here"
+    }
+  ],
+  "findingsP3": [
+    {
+      "id": "P3-01",
+      "priority": "P3",
+      "title": "Roof sharpness and material change near first junction",
+      "tileEvidenceBoxesHalfOpen": [
+        [
+          574,
+          1008,
+          1135,
+          1055
+        ],
+        [
+          1013,
+          1078,
+          1038,
+          1155
+        ]
+      ],
+      "evidence": [
+        "intersection-r1-c1-100pct.png",
+        "horizontal-p11-p21-join-100pct.png",
+        "vertical-p21-p22-join-100pct.png"
+      ],
+      "observation": "Above y1024 the left blue roofing is softer; below it the surface and highlights are sharper. There is minor tone/relief mismatch where a cap crosses x1024. Main roof, ridge and eave outlines still connect.",
+      "treatment": "Optional material-only cleanup; do not move roof geometry."
+    },
+    {
+      "id": "P3-02",
+      "priority": "P3",
+      "title": "Subtle red window-header tone difference",
+      "tileEvidenceBoxesHalfOpen": [
+        [
+          3057,
+          2590,
+          3087,
+          2735
+        ]
+      ],
+      "evidence": [
+        "intersection-r3-c3-100pct.png",
+        "vertical-p33-p34-join-100pct.png"
+      ],
+      "observation": "The red header shows a small vertical material/tone change at x3072. Frame and gold-lattice contours remain continuous.",
+      "treatment": "Optional restricted material correction; no geometry repair required."
+    }
+  ],
+  "seamReviews": [
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "status": "no-P2",
+      "observation": "Stone courses, gold end cap and blue roof contours connect across x1024; small material variation only.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p11-p12-join-100pct.png",
+      "tileCropHalfOpen": [
+        832,
+        0,
+        1216,
+        1024
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p12",
+        "p13"
+      ],
+      "status": "no-P2",
+      "observation": "Gold pipe and roof grooves connect; no major cut or displaced outline.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p12-p13-join-100pct.png",
+      "tileCropHalfOpen": [
+        1856,
+        0,
+        2240,
+        1024
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "status": "P2",
+      "observation": "P2-04: gray masonry intrudes across the gold pipe at the upper part of x3072.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p13-p14-join-100pct.png",
+      "tileCropHalfOpen": [
+        2880,
+        0,
+        3264,
+        1024
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p21",
+        "p22"
+      ],
+      "status": "P3",
+      "observation": "P3-01: relief and material rendering differ around the cap crossed by x1024; main eave and wall boundaries remain connected.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p21-p22-join-100pct.png",
+      "tileCropHalfOpen": [
+        832,
+        1024,
+        1216,
+        2048
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p22",
+        "p23"
+      ],
+      "status": "no-P2",
+      "observation": "Roof grooves and segment borders continue across x2048; mild sheen variation does not change geometry.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p22-p23-join-100pct.png",
+      "tileCropHalfOpen": [
+        1856,
+        1024,
+        2240,
+        2048
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p23",
+        "p24"
+      ],
+      "status": "no-P2",
+      "observation": "Roof grooves and overlapping tile contours continue through x3072.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p23-p24-join-100pct.png",
+      "tileCropHalfOpen": [
+        2880,
+        1024,
+        3264,
+        2048
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p31",
+        "p32"
+      ],
+      "status": "P2",
+      "observation": "P2-01: upper-left diamond-frame outlines step at x1024. Lower decorative scrolls do not add a separate structural finding.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p31-p32-join-100pct.png",
+      "tileCropHalfOpen": [
+        832,
+        2048,
+        1216,
+        3072
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p32",
+        "p33"
+      ],
+      "status": "P2",
+      "observation": "P2-03: isolated gold crescent is cut off exactly at x2048. Main diagonal ridge and supporting red column remain continuous.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p32-p33-join-100pct.png",
+      "tileCropHalfOpen": [
+        1856,
+        2048,
+        2240,
+        3072
+      ]
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p33",
+        "p34"
+      ],
+      "status": "P2",
+      "observation": "P2-02: round tile end is clipped and red fascia changes elevation at x3072. P3-02: lower window header has a mild color boundary.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p33-p34-join-100pct.png",
+      "tileCropHalfOpen": [
+        2880,
+        2048,
+        3264,
+        3072
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p11",
+        "p21"
+      ],
+      "status": "P3",
+      "observation": "P3-01: a sharpness/material transition at y1024; tile profiles and gutter edges remain connected.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p11-p21-join-100pct.png",
+      "tileCropHalfOpen": [
+        0,
+        832,
+        1024,
+        1216
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p12",
+        "p22"
+      ],
+      "status": "no-P2",
+      "observation": "The diagonal gold ridge and main blue-tile profiles connect across y1024.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p12-p22-join-100pct.png",
+      "tileCropHalfOpen": [
+        1024,
+        832,
+        2048,
+        1216
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p13",
+        "p23"
+      ],
+      "status": "no-P2",
+      "observation": "Roof channel contours and highlights continue across y1024.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p13-p23-join-100pct.png",
+      "tileCropHalfOpen": [
+        2048,
+        832,
+        3072,
+        1216
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p14",
+        "p24"
+      ],
+      "status": "no-P2",
+      "observation": "Blue channels and the large gold ridge connect across y1024.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p14-p24-join-100pct.png",
+      "tileCropHalfOpen": [
+        3072,
+        832,
+        4096,
+        1216
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p21",
+        "p31"
+      ],
+      "status": "no-P2",
+      "observation": "Red column and adjacent plaster continue across y2048.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p21-p31-join-100pct.png",
+      "tileCropHalfOpen": [
+        0,
+        1856,
+        1024,
+        2240
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p22",
+        "p32"
+      ],
+      "status": "P2",
+      "observation": "P2-01: the diamond frame upper-left gold/red sloping edges are offset at y2048. The gold roof ridge itself remains connected.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p22-p32-join-100pct.png",
+      "tileCropHalfOpen": [
+        1024,
+        1856,
+        2048,
+        2240
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p23",
+        "p33"
+      ],
+      "status": "no-new-P2",
+      "observation": "Blue-tile channels connect across y2048. P2-03 gold fragment is below the seam at its left endpoint, already separately recorded.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p23-p33-join-100pct.png",
+      "tileCropHalfOpen": [
+        2048,
+        1856,
+        3072,
+        2240
+      ]
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p24",
+        "p34"
+      ],
+      "status": "no-P2",
+      "observation": "Red fascia, oval blue tile ends and masonry band connect across y2048; x3072 endpoint failure is P2-02.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p24-p34-join-100pct.png",
+      "tileCropHalfOpen": [
+        3072,
+        1856,
+        4096,
+        2240
+      ]
+    }
+  ],
+  "intersectionReviews": [
+    {
+      "row": 1,
+      "column": 1,
+      "tileCenter": [
+        1024,
+        1024
+      ],
+      "sourceIds": [
+        "p11",
+        "p12",
+        "p21",
+        "p22"
+      ],
+      "status": "P3",
+      "observation": "P3-01: visible focus/material transition across y1024 and minor cap relief change across x1024; primary ridge and eave geometry remain connected.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c1-100pct.png",
+      "tileCropHalfOpen": [
+        574,
+        574,
+        1474,
+        1474
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "tileCenter": [
+        2048,
+        1024
+      ],
+      "sourceIds": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "status": "no-P2",
+      "observation": "Four blue roof fields preserve the direction and continuity of channels; no clipped feature at the crossing.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c2-100pct.png",
+      "tileCropHalfOpen": [
+        1598,
+        574,
+        2498,
+        1474
+      ]
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "tileCenter": [
+        3072,
+        1024
+      ],
+      "sourceIds": [
+        "p13",
+        "p14",
+        "p23",
+        "p24"
+      ],
+      "status": "no-P2",
+      "observation": "Blue roof profiles remain continuous at the crossing.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c3-100pct.png",
+      "tileCropHalfOpen": [
+        2622,
+        574,
+        3522,
+        1474
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "tileCenter": [
+        1024,
+        2048
+      ],
+      "sourceIds": [
+        "p21",
+        "p22",
+        "p31",
+        "p32"
+      ],
+      "status": "P2",
+      "observation": "P2-01: upper-left diamond-frame edge is displaced at both x1024 and y2048; these are one connected frame repair area.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c1-100pct.png",
+      "tileCropHalfOpen": [
+        574,
+        1598,
+        1474,
+        2498
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "tileCenter": [
+        2048,
+        2048
+      ],
+      "sourceIds": [
+        "p22",
+        "p23",
+        "p32",
+        "p33"
+      ],
+      "status": "P2",
+      "observation": "P2-03: a gold crescent near [2048,2106,2078,2204] has a straight missing left half at the vertical seam; the main ridge is intact.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c2-100pct.png",
+      "tileCropHalfOpen": [
+        1598,
+        1598,
+        2498,
+        2498
+      ]
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "tileCenter": [
+        3072,
+        2048
+      ],
+      "sourceIds": [
+        "p23",
+        "p24",
+        "p33",
+        "p34"
+      ],
+      "status": "P2",
+      "observation": "P2-02: the circular cap, fascia top and fascia lower edge all break at x3072 below the crossing.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c3-100pct.png",
+      "tileCropHalfOpen": [
+        2622,
+        1598,
+        3522,
+        2498
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "tileCenter": [
+        1024,
+        3072
+      ],
+      "sourceIds": [
+        "p31",
+        "p32",
+        "p41",
+        "p42"
+      ],
+      "status": "no-P2",
+      "observation": "Diamond lower border, gold scrolls and surrounding plaster connect; no new displaced outline at [1024,3072].",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c1-100pct.png",
+      "tileCropHalfOpen": [
+        574,
+        2622,
+        1474,
+        3522
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "tileCenter": [
+        2048,
+        3072
+      ],
+      "sourceIds": [
+        "p32",
+        "p33",
+        "p42",
+        "p43"
+      ],
+      "status": "no-P2",
+      "observation": "Red column, wall and edge of hanging ornament connect; no new structural break at [2048,3072].",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c2-100pct.png",
+      "tileCropHalfOpen": [
+        1598,
+        2622,
+        2498,
+        3522
+      ]
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "tileCenter": [
+        3072,
+        3072
+      ],
+      "sourceIds": [
+        "p33",
+        "p34",
+        "p43",
+        "p44"
+      ],
+      "status": "P3",
+      "observation": "P3-02: red window header has a mild tone change at x3072; lattice geometry and frame outlines remain connected at the crossing.",
+      "evidenceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c3-100pct.png",
+      "tileCropHalfOpen": [
+        2622,
+        2622,
+        3522,
+        3522
+      ]
+    }
+  ],
+  "viewedFiles": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p11-p12-join-100pct.png",
+      "sha256": "030b2029354a782bb1943e3c6f771bf1330a5c729f69833c3c11e743a233789d",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        832,
+        0,
+        1216,
+        1024
+      ],
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p12-p13-join-100pct.png",
+      "sha256": "b7902798fd1b80bead50a93a57bfcaf2c786f12112a5d6f1ffbf5a3557bf952a",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        1856,
+        0,
+        2240,
+        1024
+      ],
+      "sourceIds": [
+        "p12",
+        "p13"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p13-p14-join-100pct.png",
+      "sha256": "1f89ba3d3c8dea8d42a382703b45e9ad68a0a96c89743626931b41cad6df378a",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        2880,
+        0,
+        3264,
+        1024
+      ],
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p21-p22-join-100pct.png",
+      "sha256": "8efc6d215ff8497d2eda986a5247332f0a79634e2723ddf5b5bc50b304228e59",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        832,
+        1024,
+        1216,
+        2048
+      ],
+      "sourceIds": [
+        "p21",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p22-p23-join-100pct.png",
+      "sha256": "d0c9322e0bb8ff968fc2aecb20e927f8bccb54fe270a29791a47bf29bcd364e9",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        1856,
+        1024,
+        2240,
+        2048
+      ],
+      "sourceIds": [
+        "p22",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p23-p24-join-100pct.png",
+      "sha256": "45a5fe76b4886eb8810ee5b42424854e63b602d7b01563bc22f83f4420317a8c",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        2880,
+        1024,
+        3264,
+        2048
+      ],
+      "sourceIds": [
+        "p23",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p31-p32-join-100pct.png",
+      "sha256": "00738eeb9090760a1b58b055ae93bfc809ee1fec6c9e43d4bea52f1d92986530",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        832,
+        2048,
+        1216,
+        3072
+      ],
+      "sourceIds": [
+        "p31",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p32-p33-join-100pct.png",
+      "sha256": "00e0319798d995487dbafcb234f8042317a46d3758e48eebb7e1f8c3f2b816aa",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        1856,
+        2048,
+        2240,
+        3072
+      ],
+      "sourceIds": [
+        "p32",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p33-p34-join-100pct.png",
+      "sha256": "5e0e3bd16b4a6d1b480737a218ca520a70fa081d25924840ab2d91320af0fb88",
+      "nativePixels": [
+        384,
+        1024
+      ],
+      "tileCropHalfOpen": [
+        2880,
+        2048,
+        3264,
+        3072
+      ],
+      "sourceIds": [
+        "p33",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p11-p21-join-100pct.png",
+      "sha256": "9a3a9e9eadb6837d45c087d22c61a902bba825d29c021b208800428898883413",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        0,
+        832,
+        1024,
+        1216
+      ],
+      "sourceIds": [
+        "p11",
+        "p21"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p12-p22-join-100pct.png",
+      "sha256": "73dfa9f62ea9760a3ab391b0399ab8d2d5dfd404037a5c8d4061fbe3638a2580",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        1024,
+        832,
+        2048,
+        1216
+      ],
+      "sourceIds": [
+        "p12",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p13-p23-join-100pct.png",
+      "sha256": "4a7112344f75fac8c1ef1bbdc0cdd1a6a2cb9afb063958b70c9097e5d47239c0",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        2048,
+        832,
+        3072,
+        1216
+      ],
+      "sourceIds": [
+        "p13",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p14-p24-join-100pct.png",
+      "sha256": "1fbfc4cceff2a1c7797f668bb7b5360d218f49d614b68db0a3c3ba871534ef5d",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        3072,
+        832,
+        4096,
+        1216
+      ],
+      "sourceIds": [
+        "p14",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p21-p31-join-100pct.png",
+      "sha256": "fae1ad78410de1ba4eabafa6eb532f518cae00fb79116ef663711437c02845e0",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        0,
+        1856,
+        1024,
+        2240
+      ],
+      "sourceIds": [
+        "p21",
+        "p31"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p22-p32-join-100pct.png",
+      "sha256": "a1df6b8831cb407544e1a05f627039a8f219d9967062a91bc1439fc016acc201",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        1024,
+        1856,
+        2048,
+        2240
+      ],
+      "sourceIds": [
+        "p22",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p23-p33-join-100pct.png",
+      "sha256": "051ad96aa0ca76b0106fdc9c2f45c266c675a60e1a3dae3430815f60ab0ba2c7",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        2048,
+        1856,
+        3072,
+        2240
+      ],
+      "sourceIds": [
+        "p23",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\horizontal-p24-p34-join-100pct.png",
+      "sha256": "18bde0dc503d13a10d8156d61fc7fb5b2dd87fe78f915d003d3ab0da3cbaa528",
+      "nativePixels": [
+        1024,
+        384
+      ],
+      "tileCropHalfOpen": [
+        3072,
+        1856,
+        4096,
+        2240
+      ],
+      "sourceIds": [
+        "p24",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c1-100pct.png",
+      "sha256": "2dd0e97cd5aba8b42e206d04524a370d4cf3351ac845c6d351c61c19d77ebdab",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        574,
+        574,
+        1474,
+        1474
+      ],
+      "sourceIds": [
+        "p11",
+        "p12",
+        "p21",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c2-100pct.png",
+      "sha256": "6e37213623e30b8f27c1731aa2d07b2a39e3977f470b8dc826bc06f4b0a9fb10",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        1598,
+        574,
+        2498,
+        1474
+      ],
+      "sourceIds": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r1-c3-100pct.png",
+      "sha256": "28d42e64ca2bfb8c699e60a6075f5ff792b0b5ecf278787d771ecd6177b15a5e",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        2622,
+        574,
+        3522,
+        1474
+      ],
+      "sourceIds": [
+        "p13",
+        "p14",
+        "p23",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c1-100pct.png",
+      "sha256": "3057ef3aeadc9a371a1a8d0c610ee8f65ef999b40939696d5bb2b86df429c289",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        574,
+        1598,
+        1474,
+        2498
+      ],
+      "sourceIds": [
+        "p21",
+        "p22",
+        "p31",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c2-100pct.png",
+      "sha256": "91b52849f345bf34e66c573b86f8ded36138cd1da6cb05543cb321312390bf6e",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        1598,
+        1598,
+        2498,
+        2498
+      ],
+      "sourceIds": [
+        "p22",
+        "p23",
+        "p32",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r2-c3-100pct.png",
+      "sha256": "5a1df43e30d47a1c839a61f578dd42d711a5e9d3a550ab02912e47295d8fc55e",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        2622,
+        1598,
+        3522,
+        2498
+      ],
+      "sourceIds": [
+        "p23",
+        "p24",
+        "p33",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c1-100pct.png",
+      "sha256": "daf00a94981d476f2d5469bf59ef19ac0b8bc707084de606ea3f61b921ef6d4f",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        574,
+        2622,
+        1474,
+        3522
+      ],
+      "sourceIds": [
+        "p31",
+        "p32",
+        "p41",
+        "p42"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c2-100pct.png",
+      "sha256": "82525cd92cbfb24281461bae26d3c031a19e74683496b3456d422a63d838d9ae",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        1598,
+        2622,
+        2498,
+        3522
+      ],
+      "sourceIds": [
+        "p32",
+        "p33",
+        "p42",
+        "p43"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\intersection-r3-c3-100pct.png",
+      "sha256": "fd0dc1362bd12cdc16c3012b330bce82584363c50b58b6f4b8873d9bdc6a1a22",
+      "nativePixels": [
+        900,
+        900
+      ],
+      "tileCropHalfOpen": [
+        2622,
+        2622,
+        3522,
+        3522
+      ],
+      "sourceIds": [
+        "p33",
+        "p34",
+        "p43",
+        "p44"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "pixelIdentityToReassembledSelectedCores": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\core-baseline\\f30ef04cf1155a6e57a2\\vertical-p13-p14-overlap-comparison-100pct.png",
+      "sha256": "d7333780adaedd9b5dbbd8bbfb2c8481419521cb445c050eb807851f3a77d22d",
+      "nativePixels": [
+        460,
+        1254
+      ],
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "viewedAtOriginalPixels": true,
+      "currentHashMatchesManifest": true,
+      "purpose": "Direct native-overlap evidence that p14 masonry replaces the upper gold-pipe pixels present in p13; no geometry acceptance inferred from MAE."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p14.png",
+      "sha256": "8f8e45ad48dd718222a33992b36c80a39657ac6eae2bd385a9ad52bbe7c4f69f",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "sourceIds": [
+        "p14"
+      ],
+      "viewedAtOriginalPixels": true,
+      "purpose": "Full native check of the flat-ended gray masonry band at native y229 / tile y114."
+    }
+  ],
+  "selectedNativeSourceEvidence": [
+    {
+      "id": "p11",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p11.png",
+      "sha256": "6ce7322fccb9e99da4fa519f33a220753ff0b1890b59f496e43d6bee3634d221",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p12",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p12.png",
+      "sha256": "218caf2d2e937d2a56d81ff53dd2b690d0320a790e581d7aec4a86859b01a9cb",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p13",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p13.png",
+      "sha256": "1fe667bf58f195a7068f6cb4b85a3dbca1f4140965654a5b59616987659d464e",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p14",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p14.png",
+      "sha256": "8f8e45ad48dd718222a33992b36c80a39657ac6eae2bd385a9ad52bbe7c4f69f",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "full native image and exact core crops"
+    },
+    {
+      "id": "p21",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p21.png",
+      "sha256": "131a6971493c8ff71f9a380cf77552de5c9e97c048f0c80f3d536d3fe7148b4c",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p22",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p22.png",
+      "sha256": "92a90e2322b453b9ad4dc4c51fa6aa3f915c6965837572e75cfd094293d041b8",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p23",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p23.png",
+      "sha256": "224eae846944133861dcfcf5e4725c38a18eb08d1b0694bcedad01d862473658",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p24",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p24.png",
+      "sha256": "88609d882e50eb4c83d5c9a4dc4d74c19cdc3dd0e47b5f7014374fff6e05c1f9",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p31",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p31.png",
+      "sha256": "448aab12fb683d54853828361f874b737744da64b40d14a28aacd214a15f8246",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p32",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p32.png",
+      "sha256": "e00e08785bfee6b3a3b1306d1aed6bb0352fd36f0ab097f4b93ee54bfd91eeff",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p33",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p33.png",
+      "sha256": "4719d0eb541a5f4ef21e7c7955b45e24241834a4ab90adab21c9d77292785ac6",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p34",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p34.png",
+      "sha256": "0f279f6c47f549f48fbbd25db82d87d4e56d63ead5951da85b70d844fcaa856e",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p41",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p41.png",
+      "sha256": "cf397df6f14d2f98ba29ab77f225242215c1fdaef827feafb133bb2c5508ef72",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p42",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p42.png",
+      "sha256": "31e276f38cd09245e96637a1624d351da581cfbe1d9fb6dc0547707ed7d6f766",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p43",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p43.png",
+      "sha256": "4149aab455d57a6e226dc1aa8b5698e53940d69bdd3ba7c1c5096d096bacd30e",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    },
+    {
+      "id": "p44",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\native\\p44.png",
+      "sha256": "8d31bdf001853bbb5e22912bff6c70325c926bc63b1005e82a19e3fd7ee29ee6",
+      "sha256Recomputed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "visualMethod": "exact core pixels in reviewed baseline crops; full native image not separately visually reviewed"
+    }
+  ],
+  "validation": {
+    "viewedFileHashesRecomputed": true,
+    "allViewedHashesMatchManifestWhereListed": true,
+    "all26JoinAndIntersectionCropsPixelIdenticalToSelectedNativeCores": true,
+    "fullCandidatePixelIdenticalToSixteenDirectCoreCrops": true,
+    "resizeUsed": false,
+    "blurUsed": false,
+    "sourceOrCandidateImagesModified": false,
+    "progressModified": false,
+    "imageGenerationCalled": false,
+    "onlyOutputWritten": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\qa\\independent-review-20261011.json"
+  }
+}

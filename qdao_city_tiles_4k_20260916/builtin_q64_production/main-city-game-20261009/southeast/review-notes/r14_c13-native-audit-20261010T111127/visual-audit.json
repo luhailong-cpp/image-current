@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T11:13:11.161162+00:00",
+  "tile": "r14_c13",
+  "reviewMethod": "Visual inspection of all six active native1254 sources and their exact anchor guides; approved tile-layout-only comparison; native1:1 north-boundary bridge crops and false-edge crops. Statistics did not substitute for visual review.",
+  "reviewedSources": {
+    "p01_01": {
+      "version": "p01_01_v20261010T105657_a1893930",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p01_01_v20261010T105657_a1893930.png",
+      "sha256": "167962a0f63737347d53123e8ff28f562822efe873fbb993f019c36087926381"
+    },
+    "p01_02": {
+      "version": "p01_02_v20261010T105904_e547d6b6",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p01_02_v20261010T105904_e547d6b6.png",
+      "sha256": "3c903a4f1dc2dbaf5df46a8543763304812ab90fd233b145f3678fbd3d681d91"
+    },
+    "p01_03": {
+      "version": "p01_03_v20261010T110317_9f04f4ef",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p01_03_v20261010T110317_9f04f4ef.png",
+      "sha256": "626a1845feeffb2a4cc5f318ab2d87ea123b8bef00cd55992d800a0f33fe98cf"
+    },
+    "p02_01": {
+      "version": "p02_01_v20261010T105906_2ec5ce40",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p02_01_v20261010T105906_2ec5ce40.png",
+      "sha256": "8013d87196d789ea82162ff296f3e579d928bb51a7f690ce58fb1adb409bf0bd"
+    },
+    "p02_02": {
+      "version": "p02_02_v20261010T110051_344cfb94",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p02_02_v20261010T110051_344cfb94.png",
+      "sha256": "696dae278146cb9c53de96cb4f427247e9472f3f81d9dae1b61b1e9c20a6afd1"
+    },
+    "p03_01": {
+      "version": "p03_01_v20261010T110318_77b0f1f8",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\native\\p03_01_v20261010T110318_77b0f1f8.png",
+      "sha256": "4eafe3b6169896557874a8d8e91f9507fbf5886aa446e4fc241641d8625a9e31"
+    }
+  },
+  "northCandidateSha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+  "coordinateConvention": "All boxes half-open in r14_c13 formal4096 tile coordinates; approximate visual issue boxes. Native patch -> tile: x=(column-1)*1024+nativeX-115; y=(row-1)*1024+nativeY-115. Tile world origin [49152,53248].",
+  "verdict": "fail_pending_local_geometry_repairs_and_remaining_native_production",
+  "formalAccepted": false,
+  "scopeLimit": "Six native patches present at snapshot; remaining ten not generated/reviewed. No assembled new tile reviewed. Existing r13_c13 remains unchanged and its prior internal verdict is preserved.",
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "high",
+      "type": "external_north_seam",
+      "patch": "p01_01",
+      "tileIssueBox": [
+        0,
+        0,
+        800,
+        180
+      ],
+      "boundary": "r14_c13 y=0 / r13_c13 y=4096",
+      "observation": "Across the formal tile boundary, leaf silhouettes and stems are abruptly cut/replaced and foliage values jump. Northern leaf shapes do not continue into the new southern pixels. The north115 anchor was provided, but visible retention/continuation is inadequate.",
+      "mustCorrect": true,
+      "action": "Reconcile foliage on the new-tile side against the unchanged corrected r13_c13 core. Preserve old-tile pixels and inspect the actual formal y=0 join, not just the generated image in isolation.",
+      "evidence": "p01_01-north-boundary-unscaled.png"
+    },
+    {
+      "id": "F2",
+      "priority": "high",
+      "type": "anchor_boundary_misinterpreted_as_object_edge",
+      "patches": [
+        "p01_02",
+        "p02_02"
+      ],
+      "nativeBoundaryX": 230,
+      "tileBoundaryX": 1139,
+      "tileIssueBox": [
+        1080,
+        65,
+        1450,
+        1770
+      ],
+      "observation": "p01_02 treats the right edge of the pasted230px left strip as a straight physical edge: blue-grey inset paving and pale slabs stop along x≈230 while foliage and a separately laid pavement grid start immediately to the right. p02_02 carries the same artificial vertical interface downward. The mapped layout does not specify this new ruler-straight border. It remains outside the230px blending overlap and therefore minimum-error assembly cannot remove it.",
+      "mustCorrect": true,
+      "action": "Continue existing flat stone slab faces, inset border direction and grout through the guide-strip boundary, reconciling nearby foliage instead of preserving the rectangular guide boundary as geometry. Correct the connected band in new artwork before final seam approval.",
+      "evidence": [
+        "p01_02-anchor-edge-unscaled.png",
+        "p02_02-anchor-edge-unscaled.png"
+      ]
+    },
+    {
+      "id": "F3",
+      "priority": "medium",
+      "type": "external_north_grout_discontinuity",
+      "patch": "p01_03",
+      "tileIssueBox": [
+        2048,
+        0,
+        2300,
+        160
+      ],
+      "observation": "Near the left end of the north bridge, the new diagonal grout stroke reaches y=0 and ends as a tapered/wedge-like fragment without the corresponding stroke above in r13_c13. Broad paving elsewhere across this reviewed north segment aligns substantially better.",
+      "mustCorrect": true,
+      "action": "Match the new-tile grout network to the unchanged northern stone surfaces; remove the orphan segment or continue only geometrically supported grout. Review its left/top intersection after correction.",
+      "evidence": "p01_03-north-boundary-unscaled.png"
+    }
+  ],
+  "otherVisualObservations": [
+    "All six files visually contain real newly rendered detail, not nearest-neighbor enlarged overview blocks. File dimensions and provenance alone are not an art-native guarantee.",
+    "p02_01 and p03_01 preserve the mapped partial roof/eave framing. No newly fit whole building or standalone table was found in these inspected crops.",
+    "p02_02 includes the mapped capped wooden upright; it is not by itself an invented prop. The artificial left anchor boundary remains the issue.",
+    "p01_02 northern main paving joins are substantially continuous outside the identified false vertical border. This is a local observation, not external-seam acceptance.",
+    "No game-world dimensions, character size, or5000-player capacity conclusion is drawn from this magnified artwork crop."
+  ],
+  "immutableSourcesPolicy": "No tile/native/progress files changed; review-only evidence saved in this new directory."
+}

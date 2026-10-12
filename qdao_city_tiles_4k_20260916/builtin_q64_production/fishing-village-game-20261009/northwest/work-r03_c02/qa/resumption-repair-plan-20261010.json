@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-10-10T08:02:11.793709+00:00",
+  "status": "read-only-followup-complete-repairs-required",
+  "tile": "r03_c02",
+  "priorCheckpoint": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\capacity-gate-checkpoint.json",
+    "sha256": "43fc1527f5199fc7308ab573ba727f99b6a476d4feeeb9d8b64626565d47ceef",
+    "changed": false
+  },
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\tiles\\r03_c02.candidate.png",
+    "sha256": "7187ba008de070936c53988fbe9cb29410aea9023f312bf00cab4902878a4a5a"
+  },
+  "eastCandidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v5.png",
+    "sha256": "01cc33b6fac4a1a233ef908c709b307cd3597d42aee521f355d3d935b52adea1"
+  },
+  "eastBelt": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\east-full-height-gate.png",
+    "sha256": "2d2d22f914d7a419e6f93c9cc4cf7af1d7ee0e6f002e1b195971918ba55a52e8",
+    "trueOverlap": 230,
+    "nativePairPixelReplay": 33554432,
+    "mismatches": 0
+  },
+  "reviewCompletion": {
+    "pendingThreeEastIntersectionsNowViewed": 3,
+    "eastIntersectionsGeometry": "No new silhouette/stone-joint/lamp disconnection observed in these3 crossings; material acceptance fails.",
+    "internalMaterialPendingResolved": [
+      "M1 repair required",
+      "M2 repair required"
+    ],
+    "remainingItemsFromRequestedScope": []
+  },
+  "internalAccepted": false,
+  "externalAccepted": false,
+  "formalAccepted": false,
+  "generationInFlight": false,
+  "newImageGenerationCalls": 0,
+  "newGenerationCoordinatesPrepared": 0,
+  "sharedIndexesModified": false,
+  "findings": [
+    {
+      "id": "G1",
+      "decision": "repair-required",
+      "class": "geometry",
+      "blockingInternal": true,
+      "defectBox": [
+        4990,
+        9230,
+        5050,
+        9290
+      ],
+      "evidence": "final-intersection-1-1.100pct.png",
+      "observation": "Actual assembled rail top rises into an angular notch immediately before its cap. Whole visible rail context confirms it is not a normal rounded end."
+    },
+    {
+      "id": "M1",
+      "decision": "repair-required",
+      "class": "internal-material",
+      "blockingInternal": true,
+      "defectBox": [
+        4990,
+        8192,
+        5060,
+        8450
+      ],
+      "evidence": "final-v1-segment1.100pct.png",
+      "observation": "Abrupt vertical bright rectangular strip through one continuous upper wooden junction block; does not follow the bevel or a wood joint. Geometry remains aligned."
+    },
+    {
+      "id": "M2",
+      "decision": "repair-required",
+      "class": "internal-material",
+      "blockingInternal": true,
+      "defectBox": [
+        6510,
+        10170,
+        7040,
+        10340
+      ],
+      "evidence": "final-h2-segment3.100pct.png",
+      "observation": "Visible diagonal/scalloped transition from blurred dark window to sharper lower window plus a horizontal tonal step on adjacent post. Lantern geometry remains coherent."
+    },
+    {
+      "id": "E1",
+      "decision": "repair-required",
+      "class": "cross-tile-material",
+      "blockingExternal": true,
+      "defectBox": [
+        8000,
+        9240,
+        8420,
+        9350
+      ],
+      "evidence": "east-full-height-gate.intersection1.100pct.png",
+      "observation": "Conspicuous wood-value patch below roof/header, continuing into right upright. Main wood change crosses actual root bridge19 to west8/east55 cuts at y about9274..9309. Header and lamp geometry pass."
+    },
+    {
+      "id": "E2",
+      "decision": "repair-required",
+      "class": "cross-tile-material",
+      "blockingExternal": true,
+      "defectBox": [
+        8090,
+        11300,
+        8270,
+        11800
+      ],
+      "evidence": "east-full-height-gate.intersection3.100pct.png",
+      "observation": "Rolls and folds connect, but weave density/pattern phase/lightness changes at west16/east63 source cut. Preserve geometry and unify material at complete-object level."
+    },
+    {
+      "id": "E3",
+      "decision": "repair-required-supplemental-root-review",
+      "class": "east-neighbor-internal-material-observed-during-boundary-review",
+      "blockingExternal": true,
+      "defectBox": [
+        8270,
+        10120,
+        8455,
+        10155
+      ],
+      "evidence": "east-full-height-gate.intersection2.100pct.png",
+      "observation": "Wood plank surfaces have visible scalloped horizontal value step, while vertical plank gaps and tassel remain continuous. Source55 to59 transition at x8275..8450,y10129..10149 matches defect. This lies inside r03c03 near its west side and supplements earlier acceptance without modifying shared status.",
+      "sources": [
+        "r03_c03_s02_s01_v01",
+        "r03_c03_s03_s01_v05"
+      ]
+    }
+  ],
+  "repairPlans": [
+    {
+      "id": "R1",
+      "findings": [
+        "M1"
+      ],
+      "target": "Upper beam junction blocks and gold spiral plaque; preserve all beam directions, plaque outline, upright post and shadow direction.",
+      "objectEnvelope": [
+        4920,
+        8170,
+        5340,
+        8470
+      ],
+      "repairCoreEnvelope": [
+        4585,
+        8192,
+        5609,
+        9216
+      ],
+      "single1254Ready": true,
+      "top115Source": "row1-with-approved-bridges; existing north native halo only",
+      "anchorFeatures": {
+        "north": "Upper beam edges and plaque upper entry; target extends 22 px above core, so north halo must be checked against existing native pixels.",
+        "east": "Long red-orange beam and cream wall; lower diagonal awning trim.",
+        "south": "Central timber grain, cream-panel bottom frame, incoming diagonal rail. G1 is repaired later.",
+        "west": "Left upper beam, peg and left upright. No peg or cloth movement."
+      },
+      "method": "One object-centered native material edit after gate release; actual source must include final 2D pixels below y8192 and the preserved row1 native halo above. No source-value step may remain at x about5000.",
+      "diagnosticContextBox": [
+        4470,
+        8077,
+        5724,
+        9331
+      ],
+      "contextSize": [
+        1254,
+        1254
+      ],
+      "fourSide230AuditBands": {
+        "north": [
+          4470,
+          8077,
+          5724,
+          8307
+        ],
+        "east": [
+          5494,
+          8077,
+          5724,
+          9331
+        ],
+        "south": [
+          4470,
+          9101,
+          5724,
+          9331
+        ],
+        "west": [
+          4470,
+          8077,
+          4700,
+          9331
+        ]
+      },
+      "coordinateMeaning": "Half-open global pixel boxes; this is a planned repair envelope, not a prepared/registered generation coordinate.230 bands center on the proposed core boundary. Existing canvas overlaps the full proposed native context, so these are audit bands, not a claim of230 total overlap. For a1254 centered bridge the eligible outer cut halo is115.",
+      "contextFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R1-complete-object.png",
+      "contextSHA256": "1b87598497df0b06b15c3f5ea71b142fbbfce0454989f1a6e59889b24b4a96f5",
+      "role": "Existing-pixel source crop / reviewable repair plan only; no generated or edited artwork."
+    },
+    {
+      "id": "R2",
+      "findings": [
+        "G1"
+      ],
+      "target": "Complete visible diagonal rail from cloth occlusion to rounded end cap, with receiving upright and all adjacent wall/beam junctions.",
+      "objectEnvelope": [
+        4415,
+        8935,
+        5065,
+        9415
+      ],
+      "repairCoreEnvelope": [
+        4405,
+        8750,
+        5429,
+        9774
+      ],
+      "single1254Ready": true,
+      "anchorFeatures": {
+        "north": "Hanging cloth edge, vertical timber, cream infill and center post must keep positions.",
+        "east": "Center post right face and awning corner/trim entry.",
+        "south": "Post continuation, rear diagonal timber cladding and next lower rail entry.",
+        "west": "Cloth occlusion at rail origin; rail must enter from the identical location and slope."
+      },
+      "method": "One native1254 object repair; remove the upward notch at global x4990..5050,y9230..9290 while retaining rounded cap and rail thickness. Do not move the entire rail or hide its end under the post.",
+      "diagnosticContextBox": [
+        4290,
+        8635,
+        5544,
+        9889
+      ],
+      "contextSize": [
+        1254,
+        1254
+      ],
+      "fourSide230AuditBands": {
+        "north": [
+          4290,
+          8635,
+          5544,
+          8865
+        ],
+        "east": [
+          5314,
+          8635,
+          5544,
+          9889
+        ],
+        "south": [
+          4290,
+          9659,
+          5544,
+          9889
+        ],
+        "west": [
+          4290,
+          8635,
+          4520,
+          9889
+        ]
+      },
+      "coordinateMeaning": "Half-open global pixel boxes; this is a planned repair envelope, not a prepared/registered generation coordinate.230 bands center on the proposed core boundary. Existing canvas overlaps the full proposed native context, so these are audit bands, not a claim of230 total overlap. For a1254 centered bridge the eligible outer cut halo is115.",
+      "contextFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R2-complete-object.png",
+      "contextSHA256": "ba93049851679794ea0979f04330b7c77eb76eeb642bdaa46f19c7fb78a54c41",
+      "role": "Existing-pixel source crop / reviewable repair plan only; no generated or edited artwork.",
+      "sourceIdFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R2-complete-object.source-id.png"
+    },
+    {
+      "id": "R3",
+      "findings": [
+        "M2"
+      ],
+      "target": "Complete center window/door-frame unit together with its already coherent hanging lantern as a locked geometric reference; do not redraw only the dark strip.",
+      "objectEnvelope": [
+        5800,
+        9600,
+        7100,
+        11200
+      ],
+      "repairCoreEnvelope": [
+        5800,
+        9600,
+        7100,
+        11200
+      ],
+      "single1254Ready": false,
+      "anchorFeatures": {
+        "north": "Awning fascia, hanging ring/chain attachment and upper window header.",
+        "east": "Full cream-panel left border, vertical timber and adjoining red-column edge.",
+        "south": "Lower panel/sill, stone step and existing shop stand boundary.",
+        "west": "Left frame, entire lantern silhouette/ribs/cap/tassel and incoming rails."
+      },
+      "method": "Complete object plus115 context requires1530x1830 source pixels. At fixed native1254, one whole-object edit cannot contain this envelope. Root must authorize a coordinated object-level patch group or a supported larger native output before production. Do not squeeze/resize or call a clipped1254 window/lamp crop a whole-object redraw. If divided, split at actual structural joints and hold the complete lantern pixels; every partial material change must rejoin all four sides.",
+      "diagnosticContextBox": [
+        5685,
+        9485,
+        7215,
+        11315
+      ],
+      "contextSize": [
+        1530,
+        1830
+      ],
+      "fourSide230AuditBands": {
+        "north": [
+          5685,
+          9485,
+          7215,
+          9715
+        ],
+        "east": [
+          6985,
+          9485,
+          7215,
+          11315
+        ],
+        "south": [
+          5685,
+          11085,
+          7215,
+          11315
+        ],
+        "west": [
+          5685,
+          9485,
+          5915,
+          11315
+        ]
+      },
+      "coordinateMeaning": "Half-open global pixel boxes; this is a planned repair envelope, not a prepared/registered generation coordinate.230 bands center on the proposed core boundary. Existing canvas overlaps the full proposed native context, so these are audit bands, not a claim of230 total overlap. For a1254 centered bridge the eligible outer cut halo is115.",
+      "contextFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R3-complete-object.png",
+      "contextSHA256": "3210b35635e8a090e75944fca9dc60fc8916df95eb52dd8ef0c1774917d25784",
+      "role": "Existing-pixel source crop / reviewable repair plan only; no generated or edited artwork.",
+      "sourceIdFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R3-complete-object.source-id.png"
+    },
+    {
+      "id": "R4",
+      "findings": [
+        "E1",
+        "E3"
+      ],
+      "target": "Eastern shop header/brackets, full wooden door leaves, right post and complete hanging lantern; combine the upper and lower material changes into one coherent timber appearance.",
+      "objectEnvelope": [
+        7500,
+        8950,
+        8570,
+        10880
+      ],
+      "repairCoreEnvelope": [
+        7500,
+        8950,
+        8570,
+        10880
+      ],
+      "single1254Ready": false,
+      "owner": "root cross-tile integration; affects r03_c02 and r03_c03",
+      "anchorFeatures": {
+        "north": "Approved roof bridge eave geometry and entire bracket/header top connections.",
+        "east": "Right post and cream wall/red window surround contact; preserve world position.",
+        "south": "Door bottom rail, stone threshold and column feet.",
+        "west": "Left door post/column, header entry and complete lantern including tassel."
+      },
+      "method": "Complete object plus115 context requires1300x2160 source pixels. Keep roof bridge v01 geometry. No narrow y9275 or y10140 repaint; these two source-value cuts belong to one tall door/header material unit. Root must choose a coherent multi-native group or supported larger native output. E3 must be logged as supplemental r03c03 internal material finding; do not silently retain previous material acceptance.",
+      "diagnosticContextBox": [
+        7385,
+        8835,
+        8685,
+        10995
+      ],
+      "contextSize": [
+        1300,
+        2160
+      ],
+      "fourSide230AuditBands": {
+        "north": [
+          7385,
+          8835,
+          8685,
+          9065
+        ],
+        "east": [
+          8455,
+          8835,
+          8685,
+          10995
+        ],
+        "south": [
+          7385,
+          10765,
+          8685,
+          10995
+        ],
+        "west": [
+          7385,
+          8835,
+          7615,
+          10995
+        ]
+      },
+      "coordinateMeaning": "Half-open global pixel boxes; this is a planned repair envelope, not a prepared/registered generation coordinate.230 bands center on the proposed core boundary. Existing canvas overlaps the full proposed native context, so these are audit bands, not a claim of230 total overlap. For a1254 centered bridge the eligible outer cut halo is115.",
+      "contextFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R4-complete-object.png",
+      "contextSHA256": "c63ac74bf058e9d6f51a2be1f5ded7e4af57759636cf33861f53c927294f3c82",
+      "role": "Existing-pixel source crop / reviewable repair plan only; no generated or edited artwork.",
+      "sourceIdFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R4-complete-object.source-id.png"
+    },
+    {
+      "id": "R5",
+      "findings": [
+        "E2"
+      ],
+      "target": "Both complete rolled green textiles and the full adjacent folded green stack; preserve rolled ends, gold ties, folds, table rim and stones.",
+      "objectEnvelope": [
+        7620,
+        11180,
+        8935,
+        12150
+      ],
+      "repairCoreEnvelope": [
+        7620,
+        11180,
+        8935,
+        12150
+      ],
+      "single1254Ready": false,
+      "owner": "root cross-tile integration; affects r03_c02 and r03_c03",
+      "anchorFeatures": {
+        "north": "Paving joints, top roll contour and back table rim.",
+        "east": "Folded-cloth far edge, wooden rim and neighboring cloth/table entry.",
+        "south": "Entire front folded edge and table diagonal front rim.",
+        "west": "Rolled spiral ends and table surface; no endpoint shift."
+      },
+      "method": "Complete group plus115 context requires1545x1200 source pixels. A1315px group width does not fit a1024 core. Roll pair alone [7620,11180,8450,11770] fits one native1254; large folded stack [7780,11380,8935,12150] still exceeds1024 width. If root splits at the natural gap between rolls and folds, both must use a common weave scale and keep all existing silhouettes; no narrow seam strip.",
+      "diagnosticContextBox": [
+        7505,
+        11065,
+        9050,
+        12265
+      ],
+      "contextSize": [
+        1545,
+        1200
+      ],
+      "fourSide230AuditBands": {
+        "north": [
+          7505,
+          11065,
+          9050,
+          11295
+        ],
+        "east": [
+          8820,
+          11065,
+          9050,
+          12265
+        ],
+        "south": [
+          7505,
+          12035,
+          9050,
+          12265
+        ],
+        "west": [
+          7505,
+          11065,
+          7735,
+          12265
+        ]
+      },
+      "coordinateMeaning": "Half-open global pixel boxes; this is a planned repair envelope, not a prepared/registered generation coordinate.230 bands center on the proposed core boundary. Existing canvas overlaps the full proposed native context, so these are audit bands, not a claim of230 total overlap. For a1254 centered bridge the eligible outer cut halo is115.",
+      "contextFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R5-complete-object.png",
+      "contextSHA256": "a933357495d53ac68c8be5f4998c326ac550fb8c8059f3f522f5071cb7fac319",
+      "role": "Existing-pixel source crop / reviewable repair plan only; no generated or edited artwork.",
+      "sourceIdFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\repair-plan-R5-complete-object.source-id.png"
+    }
+  ],
+  "productionOrder": [
+    "Root confirms exact style references and gate release; no new artwork in this task.",
+    "R1 upper timber material, then R2 complete rail geometry; overlapping guide must use latest approved pixels.",
+    "R3 center window material with full object/lantern constraints; establish feasible native object coverage before invoking generator.",
+    "Root-owned R4 door/header material across both tiles, then R5 textile material.",
+    "Rebuild actual2D candidate and true230 east join; visually inspect affected full seams and every intersecting crossing at native100%. Do not accept from a fixed core clip or minimum-error scalar alone."
+  ],
+  "limits": [
+    "Repair context envelopes are conservative object bounding boxes chosen from actual images, not segmentation masks.",
+    "R3/R4/R5 cannot honestly be called whole-object repairs in one fixed1254 output with a1024 protected core. Their larger source crops are mechanical diagnostics and must not be resized into a1254 art asset.",
+    "North/south/west external edge acceptance and5000-player capacity are outside this requested visual followup and remain unvalidated."
+  ],
+  "E3DirectCurrentCandidateVerification": {
+    "currentCandidateFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v5.png",
+    "currentCandidateSHA256": "01cc33b6fac4a1a233ef908c709b307cd3597d42aee521f355d3d935b52adea1",
+    "directCropFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\E3-current-r03_c03-v5-direct.100pct.png",
+    "directCropSHA256": "743ca10720cf145aad76346d16b3b4f6af97ffb8fccf9e1ec73f29bc367c7bb8",
+    "directCropGlobalBox": [
+      8310,
+      10060,
+      8490,
+      10220
+    ],
+    "directCropSize": [
+      180,
+      160
+    ],
+    "pairCropFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\E3-east-pair-same-box.100pct.png",
+    "pairCropSHA256": "743ca10720cf145aad76346d16b3b4f6af97ffb8fccf9e1ec73f29bc367c7bb8",
+    "pixelCount": 28800,
+    "differingPixels": 0,
+    "currentCandidateSourceIds": [
+      5,
+      9
+    ],
+    "roofBridgeGlobalNativeBox": [
+      7565,
+      8077,
+      8819,
+      9331
+    ],
+    "roofBridgeCannotReachThisCrop": true,
+    "westNativeMaxXExclusive": 8307,
+    "cropIsEntirelyEastOfWestNative": true,
+    "conclusion": "Visible E3 plank material step exists directly in current r03_c03 repair-v5; this crop is pixel-identical to the true230 pair. It is not introduced by the roof context or west-tile integration.",
+    "widerDirectCropFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\E3-current-r03_c03-v5-wider.100pct.png",
+    "widerGlobalBox": [
+      8240,
+      10020,
+      8530,
+      10260
+    ],
+    "widerSHA256": "a24ccf15f17117219414080e95b4169bc97561df9c0c3299406b9447cf847e9c"
+  }
+}

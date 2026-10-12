@@ -1,0 +1,44 @@
+{
+  "createdAtUtc": "2026-10-10T05:15:45.778561+00:00",
+  "status": "analysis_only_gate_active_do_not_generate",
+  "source": "independent sw_coordinate_audit read-only check",
+  "scope": "r10_c05 south and r11_c05 north existing shared border",
+  "worldArtBoundaryY": 40960,
+  "nativePatchSize": 1254,
+  "corePixels": 1024,
+  "haloPixels": 115,
+  "alreadyVerified": {
+    "r10SelectedCandidateSha256": "f228d0e07c4ed329bdcce87a46abb0ddeb48c9688dab1d86b33456051797ecad",
+    "r10Row4AssemblySize": [
+      4326,
+      1254
+    ],
+    "unifiedBottomStripExpression": "B = S[1024:1254, :] where S is existing row4 native assembly",
+    "BFirst115MatchesFinal": "B[:115,115:4211] == r10_final[3981:4096,0:4096]",
+    "comparedPixelDifferencesReported": 0
+  },
+  "futureSourceRule": {
+    "singleUnifiedStrip": true,
+    "perColumnNativeReference": "B[:,j*1024:j*1024+1254] for j=0..3",
+    "reason": "Use one already-seamed row strip to keep shared230 pixels identical between neighboring references."
+  },
+  "futureAssemblyRule": {
+    "preserveR10Candidate": true,
+    "r11CoreFirstRowMustContinue": "B row115",
+    "transitionRegion": "Only B rows115:230, on the r11 side of the boundary",
+    "maxFeatherPixels": 2,
+    "note": "Locking only the cropped-away top115 is insufficient; output core border needs actual native-source continuity, then visual QA."
+  },
+  "openAppearanceIssues": [
+    "r11 first-row x1024 and x3072 local warm/cool seams",
+    "upper-left leaves have slight horizontal tone difference"
+  ],
+  "geometry": "no obvious tread discontinuity in current inspection",
+  "notExecuted": [
+    "new image request",
+    "new coordinate creation",
+    "image edits",
+    "new border composition"
+  ],
+  "gateReleaseAuthority": "root_only"
+}

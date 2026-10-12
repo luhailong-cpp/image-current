@@ -1,0 +1,364 @@
+{
+  "checkedAtUtc": "2026-10-04T20:36:02.092163+00:00",
+  "previousCheckedAtUtc": "2026-10-03T16:54:41.3317082Z",
+  "clientPathExists": true,
+  "scope": "Read only the two previously recorded client C# source files and current local offline APNG timing; update this character audit only.",
+  "clientModified": false,
+  "clientExecuted": false,
+  "gitUsed": false,
+  "allSourceHashesMatchPreviousAudit": true,
+  "evidence": [
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "sha256": "25f0aecdc4dcbfbaef95dfe41ad607bc72a41881f8ab01c8426e826a2c5856c6",
+      "previousSha256": "25f0aecdc4dcbfbaef95dfe41ad607bc72a41881f8ab01c8426e826a2c5856c6",
+      "matchesPreviousAudit": true
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "sha256": "000c42270530936da6bf4fb562a7b90b6bec5b165169241e75e42c1dfb3104e5",
+      "previousSha256": "000c42270530936da6bf4fb562a7b90b6bec5b165169241e75e42c1dfb3104e5",
+      "matchesPreviousAudit": true
+    }
+  ],
+  "sourceFacts": [
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "V14 resource root remains World/Characters/QdaoOriginalRosterV14.",
+      "matches": [
+        {
+          "line": 18,
+          "code": "public const string OriginalV14Root = \"World/Characters/QdaoOriginalRosterV14\";"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "Appearance V14 still uses 16 frames.",
+      "matches": [
+        {
+          "line": 40,
+          "code": "public int FrameCount => Version == 13 || Version == 14 ? 16 : Version == 12 ? 8 : 4;"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "Appearance V14 still uses 30 ms per frame.",
+      "matches": [
+        {
+          "line": 41,
+          "code": "public int FrameDurationMs => Version == 13 || Version == 14 ? 30 : Version == 12 ? 60 : 120;"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "Catalog derives nominal Fps as 1000 / frame duration; V14 therefore remains about 33.333 fps.",
+      "matches": [
+        {
+          "line": 42,
+          "code": "public float FramesPerSecond => 1000f / FrameDurationMs;"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "Original manifest validation still requires 16 frames, 30 ms frame duration and 480 ms cycle duration.",
+      "matches": [
+        {
+          "line": 306,
+          "code": "manifest.frame_count == 16 && manifest.frame_duration_ms == 30 && manifest.cycle_duration_ms == 480 &&"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "Activation record validation still requires 30 ms for version >=13.",
+      "matches": [
+        {
+          "line": 355,
+          "code": "record.frameDurationMs != (version >= 13 ? 30 : 60) || !record.dedicatedIdle ||"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoCharacterCatalog.cs",
+      "description": "V14 activation validation still requires a 480 ms cycle.",
+      "matches": [
+        {
+          "line": 368,
+          "code": "if (version == 14 && (record.cycleDurationMs != 480 || record.frameWidth != 1024 || record.frameHeight != 1024 ||"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "ReferenceRunSpeed remains 9f.",
+      "matches": [
+        {
+          "line": 29,
+          "code": "public const float ReferenceRunSpeed = 9f;"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "FramesPerUnit remains Fps / ReferenceRunSpeed.",
+      "matches": [
+        {
+          "line": 119,
+          "code": "public float FramesPerUnit => Fps / ReferenceRunSpeed;"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "HD frame set takes Fps from the catalog appearance.",
+      "matches": [
+        {
+          "line": 287,
+          "code": "Fps = appearance.FramesPerSecond, Contact = appearance.ContactFrame, DedicatedIdle = true,"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "Other frame-set path also takes catalog Fps when appearance is present.",
+      "matches": [
+        {
+          "line": 474,
+          "code": "Fps = appearance?.FramesPerSecond ?? RunFramesPerSecond,"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "Running animation advances from traveled distance times FramesPerUnit; an offline APNG duration does not change this code.",
+      "matches": [
+        {
+          "line": 654,
+          "code": "_animationClock = Mathf.Repeat(_animationClock + distance * _frames.FramesPerUnit, _frames.Count);"
+        }
+      ]
+    },
+    {
+      "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+      "description": "Settling animation step still uses Fps times deltaTime.",
+      "matches": [
+        {
+          "line": 722,
+          "code": "var step = _frames.Fps * Mathf.Max(deltaTime, 0f);"
+        }
+      ]
+    }
+  ],
+  "offlinePreviewTiming": {
+    "frameCount": 16,
+    "frameDurationMs": 75,
+    "cycleDurationMs": 1200,
+    "normalApngChecks": [
+      {
+        "file": "preview/qa/run-N-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-NE-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-E-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-SE-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-S-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-SW-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-W-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      },
+      {
+        "file": "preview/qa/run-NW-normal.apng",
+        "frameCount": 16,
+        "frameDurationsMs": [
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0,
+          75.0
+        ],
+        "cycleDurationMs": 1200.0,
+        "uniform75Ms": true
+      }
+    ],
+    "allNormalPreviewsMatch1200Ms": true
+  },
+  "integrationStatus": "not_performed_by_this_asset_remake",
+  "runtimeValidationStatus": "not_executed",
+  "displacementCalibrationStatus": "not_performed",
+  "limitations": [
+    "Two matching source hashes establish that these inspected source files are unchanged since the previous audit; no claim is made about every file in the client workspace.",
+    "No client resource import, active-resource selection, manifest load or actual gameplay cadence was tested."
+  ],
+  "note": "Read-only recheck: both client source SHA256 values still match the previous audit. V14 catalog/activation/manifest code still specifies 16 x 30 ms = 480 ms and derives nominal Fps from that duration. Current offline normal APNGs are 16 x 75 ms = 1200 ms in all eight directions. The old 45 ms / 720 ms preview note is obsolete. This asset remake has not performed client integration or displacement calibration; client source was neither modified nor executed."
+}

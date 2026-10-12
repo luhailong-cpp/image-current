@@ -1,0 +1,130 @@
+{
+  "reviewer": "continue_native",
+  "reviewedAt": "2026-10-09T22:30:37.817Z",
+  "target": "tiles/r03_c03_candidate-v1_4096.png",
+  "targetSha256": "d6d6add7839ca14d8b001a38ef2cb6a6f17663d6b8f8544f1bd363029b34a4ca",
+  "scope": "12 left-right segments at 100% (r01-r04, c01-c02/c02-c03/c03-c04) plus all four r01-r02 top-bottom segments at 100%. No native/progress/selected/script mutations.",
+  "coordinateSystem": "4K tile local pixel coordinates, origin upper-left; boxes half-open; annotations are approximate visual bounds.",
+  "result": "No additional major architectural silhouette/scale discontinuity found in reviewed upper seams. Two material discontinuities require local cleanup before formal art acceptance; known lower-road geometry remains failed.",
+  "requiredFindings": [
+    {
+      "id": "M1",
+      "type": "material_continuity",
+      "box": [
+        1080,
+        75,
+        1155,
+        285
+      ],
+      "summary": "上部红木梁出现贯穿同一梁面的锯齿状明暗接缝；上暗条、正面、下缘同时在同一区域换色，形状与木纹走向无关。梁轮廓连续，仅需统一材质/高光。",
+      "evidence": "review_upper_beam_material.png",
+      "seam": "left-right_r01_c01-c02"
+    },
+    {
+      "id": "M2",
+      "type": "material_continuity",
+      "box": [
+        1505,
+        1125,
+        1575,
+        1260
+      ],
+      "summary": "窗框右上外侧白墙出现明显矩形浅色条，顶端恰与窗角同高，竖边硬切，局部显露贴片边。窗框主轮廓本身没有错位；应清除墙面矩形色阶并保留窗框。",
+      "evidence": "review_window_top_wall.png",
+      "seam": "top-bottom_r01-r02_x1024-2048"
+    }
+  ],
+  "secondaryObservations": [
+    {
+      "id": "S1",
+      "type": "material",
+      "box": [
+        800,
+        2095,
+        990,
+        2195
+      ],
+      "summary": "左红柱存在横向多边形明暗接带，属于此前同坐标梁修订附近材质变化，未发现柱宽或边缘断开。建议同次材质清理，不需要结构重画。",
+      "evidence": "review_left_post_material.png"
+    },
+    {
+      "id": "K1",
+      "type": "known_lower_geometry",
+      "box": [
+        2990,
+        2940,
+        3145,
+        3070
+      ],
+      "summary": "右侧道路在竖缝r03c03-c04/r04c03-c04交界附近有断掉的斜缝与孤立短缝，已知下部地砖问题的覆盖范围应包括这里。未另行生图。",
+      "evidence": "review_road_disconnection.png"
+    }
+  ],
+  "checkedSegments": [
+    [
+      "left-right_r01_c01-c02",
+      "M1 material; silhouettes continuous"
+    ],
+    [
+      "left-right_r01_c02-c03",
+      "no additional must-fix seam found"
+    ],
+    [
+      "left-right_r01_c03-c04",
+      "no additional must-fix seam found"
+    ],
+    [
+      "left-right_r02_c01-c02",
+      "no additional must-fix seam found"
+    ],
+    [
+      "left-right_r02_c02-c03",
+      "lantern boundary/ribs continuous"
+    ],
+    [
+      "left-right_r02_c03-c04",
+      "column/door/stone footing continuous"
+    ],
+    [
+      "left-right_r03_c01-c02",
+      "S1 material; base silhouette continuous"
+    ],
+    [
+      "left-right_r03_c02-c03",
+      "known cylinder lower join only; no additional upper problem"
+    ],
+    [
+      "left-right_r03_c03-c04",
+      "K1 known lower road failure; stairs/wall continuous"
+    ],
+    [
+      "left-right_r04_c01-c02",
+      "no additional must-fix seam found"
+    ],
+    [
+      "left-right_r04_c02-c03",
+      "known cylinder lower join only; remaining paving continuous"
+    ],
+    [
+      "left-right_r04_c03-c04",
+      "K1 at upper portion; no additional isolated failure below"
+    ],
+    [
+      "top-bottom_r01-r02_x0000-1024",
+      "no additional must-fix seam found"
+    ],
+    [
+      "top-bottom_r01-r02_x1024-2048",
+      "M2 white-wall material"
+    ],
+    [
+      "top-bottom_r01-r02_x2048-3072",
+      "lantern/post continuous"
+    ],
+    [
+      "top-bottom_r01-r02_x3072-4096",
+      "door plaque/post continuous"
+    ]
+  ],
+  "limits": "Review applies only to specified candidate-v1 segments. Not whole-tile or external-edge acceptance."
+}

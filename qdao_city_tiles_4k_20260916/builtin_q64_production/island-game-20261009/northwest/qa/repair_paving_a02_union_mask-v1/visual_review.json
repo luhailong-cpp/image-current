@@ -1,0 +1,152 @@
+{
+  "reviewedAtUtc": "2026-10-10T00:21:01.276782+00:00",
+  "reviewer": "audit_contract",
+  "status": "pass_local_hard_mask_union",
+  "tileApplied": false,
+  "sourceBinding": {
+    "targetPath": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/guides/r03_c03_repair_paving_a02.native-crop.png",
+    "targetSha256": "8f85a1aa0b06f51488bc504fe55e47e3f6a46ddc21a92f06f632b0bfb36d5216",
+    "originalAssembly": "candidate-v1",
+    "tileCropBox": [
+      2760,
+      2720,
+      4014,
+      3974
+    ],
+    "repairPath": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/native/r03_c03_repair_paving_a02.png",
+    "repairSha256": "54772d1fb411bfd96d49602735924c2e8d15ac7df57af7650c154660ea0c86e0"
+  },
+  "selectionRecord": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/mask_selection.json",
+    "sha256": "d00c42d528b846d771088d5363eed0996ce6f98b6d7a0a3c1bfdfc7d4d974b66"
+  },
+  "method": {
+    "binaryOrOfTwoDisjointMasks": true,
+    "resizing": false,
+    "registration": false,
+    "feathering": false,
+    "colorCorrection": false,
+    "pixelSynthesis": false,
+    "repairPixels": 105029,
+    "targetPixels": 1467487,
+    "outsideMaskExactOriginalTarget": true
+  },
+  "evidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/combined_native_crop.png",
+      "sha256": "2187c0e48bea0d86f4d8a679658e90e4b8cb919b0c1bfc44addf59b1ce163454",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/source_selection_mask.png",
+      "sha256": "555a9a12ad40665d6de58a5c9ed2ba07d928d80a282b832afd544147aa61f80b",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/node1_complete_boundary100pct.png",
+      "sha256": "85c9f23511364ba5246ecaa4085f7e2052b38fb0af1f0039a51d987b8e1668de",
+      "dimensions": [
+        445,
+        380
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/node2_complete_boundary100pct.png",
+      "sha256": "d13fd4a60a10750fd732a485a265dfcc80b66abdbad5dd00a5a5a714298312ad",
+      "dimensions": [
+        350,
+        345
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "item": "full_native1254",
+      "result": "pass",
+      "finding": "Combined image retains stone-grid layout, planting/stair corner, debris and light. Both intended grout failures are repaired without introducing a conspicuous patch boundary."
+    },
+    {
+      "item": "node1_all_boundary_crossings",
+      "result": "pass",
+      "outerLocalBox": [
+        130,
+        170,
+        470,
+        450
+      ],
+      "outerTileBox": [
+        2890,
+        2890,
+        3230,
+        3170
+      ],
+      "finding": "Inspected complete boundary with50px surrounding context. Reconnected short irregular joint preserves original lower crossing; all incoming grout segments cross hard-selection boundary continuously, with no severed tip, pale gap or duplicate line."
+    },
+    {
+      "item": "node2_all_boundary_crossings",
+      "result": "pass",
+      "outerLocalBox": [
+        790,
+        180,
+        1040,
+        425
+      ],
+      "outerTileBox": [
+        3550,
+        2900,
+        3800,
+        3145
+      ],
+      "finding": "One ordinary rounded intersection replaces the stacked diamond; all four surrounding grout branches remain continuous across mask boundary. No new cut line or obvious color strip."
+    },
+    {
+      "item": "out_of_scope_nodes",
+      "result": "pass_exact_preservation",
+      "finding": "Entire90x90 neighborhoods around the two formerly shifted anchors remain exact original target pixels; no registration or restoration painting was used."
+    },
+    {
+      "item": "material_edges",
+      "result": "pass",
+      "finding": "Minor ordinary brush-texture variation remains, but no conspicuous bright/dark hardmask outline is seen."
+    }
+  ],
+  "anchorChecks": [
+    {
+      "center": [
+        555,
+        497
+      ],
+      "box": [
+        510,
+        452,
+        600,
+        542
+      ],
+      "originalTargetPixelExact": true
+    },
+    {
+      "center": [
+        841,
+        694
+      ],
+      "box": [
+        796,
+        649,
+        886,
+        739
+      ],
+      "originalTargetPixelExact": true
+    }
+  ],
+  "mustRepair": [],
+  "limits": [
+    "Local union-mask QA only; root must apply to4096 and verify integration using the ancestor-crop reuse proof if current base differs.",
+    "No4K tile, progress, selected source or AI-native repair was changed by this task."
+  ]
+}

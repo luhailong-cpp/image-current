@@ -1,0 +1,147 @@
+{
+  "timestampUtc": "2026-10-09T16:32:29.203105+00:00",
+  "operation": "unscaled native mechanical crop and hard join; no feather or art edit",
+  "sourceA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s02_v02.png",
+    "sha256": "281d85cf226ac37d39dd9fe55508592c209ff37b9f81f3e8f959518f08ada2d5",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "sourceB": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s03_v02.png",
+    "sha256": "899114d0303477dfda0dc039e88c0bcfc6d7fb572d7b69e356673c2e9f733e33",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "axis": "x",
+  "overlapSourceBoxes": {
+    "A": [
+      1024,
+      0,
+      1254,
+      1254
+    ],
+    "B": [
+      0,
+      0,
+      230,
+      1254
+    ]
+  },
+  "globalOverlapBox": [
+    10125,
+    8077,
+    10355,
+    9331
+  ],
+  "globalCoreSeam": {
+    "x": 10240
+  },
+  "coreSeamPreviewCoordinate": 384,
+  "metrics": {
+    "rgbMAE": 8.079936666435522,
+    "rgbRMSE": 12.103441623107154,
+    "pixelMeanChannelDifferenceP95": 17.333333333333332,
+    "coreSeamMeanAbsoluteChannelJump": 7.119140625,
+    "immediateBeforeNaturalPixelJump": 0.8610026041666666,
+    "immediateAfterNaturalPixelJump": 0.9410807291666666
+  },
+  "qaArtifacts": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v02--s01_s03_v02-core-seam-100pct.png",
+      "sha256": "7d9f2c3792a8c8cd17be6d9676fe2c1cb462dafb326ac454d892ff5104fccb76",
+      "size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v02--s01_s03_v02-core-stitch-100pct.png",
+      "sha256": "48903cd325c2e74601da4950680eb829e60b5079c61b5ee5d0fe17ad8bc18ccf",
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v02--s01_s03_v02-overlap-absolute-rgb-difference.png",
+      "sha256": "8e9865d09ac88adae5c6148fbda414127ff20a68e312a561f4058a950498df46",
+      "size": [
+        230,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v02--s01_s03_v02-overlap-pair-100pct.png",
+      "sha256": "ab9d913fcecebf726f3ce5a3d1e9fade6228e16e53f3d5b2be47327bd364eff2",
+      "size": [
+        460,
+        1254
+      ]
+    }
+  ],
+  "sharpnessComparison": {
+    "grayRoad": {
+      "overlapLocalBox": [
+        20,
+        180,
+        220,
+        330
+      ],
+      "A": {
+        "meanAbsoluteLaplacian": 1.722972972972973,
+        "xGradientRMS": 1.1989805831876392,
+        "yGradientRMS": 1.5403194125302224
+      },
+      "B": {
+        "meanAbsoluteLaplacian": 2.3983415233415233,
+        "xGradientRMS": 2.4365310211621414,
+        "yGradientRMS": 3.7055056081566704
+      }
+    },
+    "sand": {
+      "overlapLocalBox": [
+        90,
+        1000,
+        220,
+        1210
+      ],
+      "A": {
+        "meanAbsoluteLaplacian": 2.438176081730769,
+        "xGradientRMS": 1.6617979829062077,
+        "yGradientRMS": 2.0868253153882237
+      },
+      "B": {
+        "meanAbsoluteLaplacian": 2.8067157451923075,
+        "xGradientRMS": 1.3349519521896112,
+        "yGradientRMS": 1.61987562966297
+      }
+    }
+  },
+  "review": {
+    "status": "repair-required-shared-ground-seam",
+    "formalAccepted": false,
+    "materialStyleStatusB": "improved-clean-Q-style-ground; previous conspicuous long stone cracks, heavy repeated mottling and faceted sand pebbles removed",
+    "geometryStatus": "road/sand diagonal and building/lamp positions remain continuous at the reviewed join; no large geometric step found",
+    "seamFinding": "Residual visible vertical ground-style seam: A retains soft blurry rock/grain marks while B now has smooth fine painterly sand; road joints/texture shift from A soft defocus to B clearer edge definition. The repaired B is cleaner but this does not make the A/B join pass.",
+    "metricsInterpretation": "core jump decreased 8.31 to 7.12/255 but remains much higher than adjacent natural-column changes 0.86/0.94. Visual review, not a fixed numeric threshold, decides the failure.",
+    "aiRepairRequired": true,
+    "recommendedNextRepair": {
+      "target": "s01_s02_v02 right exposed background ground",
+      "nativeBoundingBox": [
+        875,
+        0,
+        1254,
+        1254
+      ],
+      "scope": "ground-only within box; exclude and preserve eave/building, lamp and tassel; preserve A left230px and road/sand boundary",
+      "styleReference": "s01_s03_v02 clean low-contrast ground, plus approved detail reference",
+      "constraint": "use builtin redraw to clean out defocused pebbles and reconcile stone/sand precision across global x10240; do not blur B, feather the join, or rerender whole B again unnecessarily",
+      "followup": "recheck A west seam and A/B east seam after edit"
+    }
+  }
+}

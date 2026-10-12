@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "scope": "explicit single native vertical core-center seam override",
+  "script": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/assemble_2x2.py",
+    "sha256": "2229bd12a7ff9bf9182abdec088802e817e02e983c9de16ded3bb9198947c7c9"
+  },
+  "configuration": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-qa\\south-row-core-cut.json",
+    "sha256": "d26e1aae4f26a8bd3d6568b407185c6ff4ad9fcf270fbddedbcf9a93edb3cacb"
+  },
+  "selfCheck": {
+    "status": "passed",
+    "syntheticSources": 64,
+    "defaultPixelsVerified": 9216,
+    "overridePixelsVerified": 9216,
+    "serializedPathReplay": "pixel-identical for default and overridden assemblies",
+    "fullNativePairCut": "left x<core+halo; right x>=halo",
+    "invalidOrDuplicateConfigurationsRejected": 15,
+    "changedSourceHashRejected": true,
+    "defaultOverridesDisabled": true,
+    "sourceColorsUnmodified": true
+  },
+  "preflight": {
+    "status": "preflight_only",
+    "sourcesValidated": 63,
+    "expectedSources": 64,
+    "wouldBeComplete": false,
+    "missing": [
+      "r06_c05/s03_03"
+    ],
+    "writes": 0,
+    "formalAcceptedCount": 0,
+    "seamOverrides": {
+      "explicitlyEnabled": true,
+      "configuration": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-qa\\south-row-core-cut.json",
+        "sha256": "d26e1aae4f26a8bd3d6568b407185c6ff4ad9fcf270fbddedbcf9a93edb3cacb"
+      },
+      "overrides": [
+        {
+          "id": "r06-c05-s04-c2-c3-core-center",
+          "axis": "vertical",
+          "row": 7,
+          "leftColumn": 5,
+          "rightColumn": 6,
+          "mode": "core-center",
+          "worldSeamX": 18432,
+          "reason": "The native pair audit found that unconstrained minimum-error selection switches between offset diagonal slab-joint positions, creating doubled or disconnected lines. The fixed core-center comparison is continuous at those crossings. Apply only this row's full native-height vertical cut; preserve source pixels and all other minimum-error joins.",
+          "expectedSourceSha256": {
+            "left": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089",
+            "right": "6eba7413a1657a025e6fb0b29391d2a38d0bca4dc2f2d95b94b5c2beebdf96c6"
+          },
+          "evidence": [
+            {
+              "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c05\\qa\\south-row-completion-handoff.json",
+              "sha256": "13cef27ac521f6c7be8ec7a65d7b62dbcede28f0d91fbeff8cc6be2a2e7e6cff"
+            },
+            {
+              "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c05\\qa\\south-row-audit-report.json",
+              "sha256": "9f953ed42b1c8ea4ee9ab529f47cf936abb5541e2335eb5eabfb790a3c880d6b"
+            },
+            {
+              "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c05\\qa\\south-row-audit-internal-c2-c3.png",
+              "sha256": "dd665637e37b8e2ada2ef55d372521e59e1b6a376a8caeb3dc326427e1a600b9"
+            }
+          ],
+          "configurationEntryIndex": 0,
+          "overlapCutX": 115,
+          "worldFullNativeYRange": [
+            23437,
+            24691
+          ],
+          "worldCoreYRange": [
+            23552,
+            24576
+          ],
+          "leftNativeExclusiveStopX": 1139,
+          "rightNativeInclusiveStartX": 115,
+          "rowStripPathLength": 1254,
+          "scope": "full native row strip before the unchanged minimum-error joins between rows",
+          "configuration": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-qa\\south-row-core-cut.json",
+            "sha256": "d26e1aae4f26a8bd3d6568b407185c6ff4ad9fcf270fbddedbcf9a93edb3cacb"
+          },
+          "boundSources": {
+            "left": {
+              "status": "matched",
+              "sourceIndex": 62,
+              "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c05\\native\\s04_02.png",
+              "sha256": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089",
+              "globalId": "g08_06",
+              "tile": "r06_c05",
+              "localPatchId": "s04_02"
+            },
+            "right": {
+              "status": "matched",
+              "sourceIndex": 63,
+              "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c05\\native\\s04_03_roadalign02.png",
+              "sha256": "6eba7413a1657a025e6fb0b29391d2a38d0bca4dc2f2d95b94b5c2beebdf96c6",
+              "globalId": "g08_07",
+              "tile": "r06_c05",
+              "localPatchId": "s04_03"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "formalAssemblyExecuted": false,
+  "sourceSelectionModified": false,
+  "progressModified": false,
+  "horizontalOverridesSupported": false,
+  "usage": {
+    "preflight": "python assemble_2x2.py --preflight --seam-overrides joint-qa/south-row-core-cut.json",
+    "afterAllSourcesReady": "python assemble_2x2.py --all-seams --seam-overrides joint-qa/south-row-core-cut.json"
+  },
+  "notes": [
+    "Configuration paths are explicitly supplied; relative paths resolve under this northwest directory.",
+    "The override records all1254 native row-strip path values as115, before ordinary minimum-error joins between rows. Final row junctions still need visual review.",
+    "Configuration and evidence hashes plus bound source62/63 identities are included in the output manifest and in the override seam-path record.",
+    "Unrecognized horizontal override requests are rejected; no silent fallback."
+  ]
+}

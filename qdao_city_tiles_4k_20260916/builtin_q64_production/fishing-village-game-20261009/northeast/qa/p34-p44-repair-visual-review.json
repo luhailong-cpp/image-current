@@ -1,0 +1,151 @@
+{
+  "reviewedAtUtc": "2026-10-09T21:11:59.296Z",
+  "reviewer": "/root/first_patch_qa",
+  "method": "tools.view_image with detail original on the native output, exact layout-only guide, composite reference, full joint candidate, and every QA stripe. Numerical differences were not used as visual acceptance.",
+  "allChecksPassed": false,
+  "usable": false,
+  "formalAccepted": false,
+  "status": "failed_validation_candidate_only",
+  "selectionRecommendation": "Do not replace the current selection with these two candidates. Exactly one AI attempt completed; no retry.",
+  "findings": [
+    {
+      "check": "layout",
+      "result": "fail",
+      "coordinateSpace": "repair local 1254x1254",
+      "observed": {
+        "frontPostApproxX": 735,
+        "frontPostFootApproxY": 675,
+        "leftmostCornerCapApproxX": 670
+      },
+      "expectedFromExactGuide": {
+        "frontSupportXRange": [
+          520,
+          620
+        ],
+        "footYRange": [
+          930,
+          1030
+        ],
+        "leadingRimTipXRange": [
+          390,
+          470
+        ],
+        "leadingRimTipYRange": [
+          340,
+          420
+        ]
+      },
+      "detail": "Front support moved only about 65 native pixels left from original x~800. It remains about 160–180 pixels right of the guide center (~570), and the foot remains about 260–350 pixels too high. The intended protruding rim tip at x390–470 was not reconstructed. This is a whole silhouette/height failure, not only texture.",
+      "uncertainty": "Guide spans ~27.42 source-overview pixels, so tens of native pixels uncertainty applies; discrepancy is far larger."
+    },
+    {
+      "check": "blue_fish_material_and_proportion",
+      "result": "improved_not_global_acceptance",
+      "detail": "Balloon-like blue blobs were replaced by coherent tapered blue/silver fish with gills, fins and overlapping scales. Material and body treatment now resemble the supplied p13-v2 reference. Fish improvement does not resolve the stand footprint failure."
+    },
+    {
+      "check": "upper_insertion_boundary",
+      "result": "no_obvious_major_geometry_break_observed",
+      "jointY": 512,
+      "qaFile": "p34-p44-repair-upper-insertion-boundary.png",
+      "detail": "Major slab joints continue across y128 of the 1254x256 native stripe. The top guard is not pixel-identical; minor texture/value changes are visible but no large severed route or obvious full-width solid band was found."
+    },
+    {
+      "check": "lower_insertion_boundary",
+      "result": "fail_material_continuity",
+      "jointY": 1766,
+      "qaFile": "p34-p44-repair-lower-insertion-boundary.png",
+      "detail": "At stripe y128, warm ground changes texture/value along the horizontal native reinsertion line, especially across the middle/right slab interiors. Major slab outlines mostly continue, but the material transition remains visible at native scale."
+    },
+    {
+      "check": "p34_p44_core_boundary",
+      "result": "geometrically_continuous_observed",
+      "jointY": 1139,
+      "repairY": 627,
+      "qaFile": "p34-p44-repair-core-boundary.png",
+      "detail": "Stone outlines, wood support and shadow continue through the native core cut. Both candidates receive the same native repair pixels across their 230-pixel overlap; no horizontal strip appears at the old seam in this result."
+    },
+    {
+      "check": "p33_p34_left_neighbor",
+      "result": "no_obvious_major_break_observed",
+      "qaFile": "p34-p44-repair-p33-p34-left-neighbor.png",
+      "detail": "Vertical 256x1254 native stripe at x128 shows no large severed slab seam or strong full-height band. This observation does not mean the left180 guard was preserved exactly."
+    },
+    {
+      "check": "p43_p44_left_neighbor",
+      "result": "no_obvious_major_break_observed",
+      "qaFile": "p34-p44-repair-p43-p44-left-neighbor.png",
+      "detail": "Major paving edges and small diagonal crack broadly connect at x128; no large new geometric gap found. Texture differs subtly in the modified right side. Exterior right/bottom tile edges remain unaccepted."
+    },
+    {
+      "check": "left180_guard",
+      "result": "not_exactly_preserved",
+      "qaFile": "p34-p44-repair-left-guard-interior.png",
+      "detail": "Original slab geometry is largely retained, and no distinct x180 vertical guard band is seen. Pixel comparison confirms the explicit exact-preserve request was not met. Existing locally irregular fine line around the mid/lower gray slab is not counted as a new generated acceptance."
+    },
+    {
+      "check": "unrelated_ground_style",
+      "result": "existing_style_failure_retained",
+      "detail": "Fine repetitive diamond texture and bright gold-white seams still cover the gray paving, while warm slabs retain strong texture/highlights. The requested calm natural weak-gray-seam style has not been restored; this attempt was bounded to the stand and boundary preservation."
+    },
+    {
+      "check": "right_tile_exterior",
+      "result": "not_reviewed_not_accepted",
+      "detail": "The right outer tile edge has no accepted neighbor. No continuity or formal pass is claimed."
+    }
+  ],
+  "reviewedFileEvidence": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\native\\p34-p44-repair-native-v1.png",
+      "sha256": "7758587b09d30bdd9d8190ac17631f56d665b58e8f1066aa01871e479886566c"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\native\\p34-p44-repair-target-v1.png",
+      "sha256": "8f95e468c33773b1706cb3a6ea6839d060e20aea78274d4ea9b34c71044d93bc"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\guides\\p34-p44-repair-layout-only-v1.png",
+      "sha256": "6f5dbf624a2ec9ace058195d863eea8cf6b325a5ebf9057639599cb44aea392f"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\guides\\p34-p44-repair-reference-v1.png",
+      "sha256": "b328b517eb8f10be761c146bd633767234c33d484a99a524ed45c5e6c6cffe47"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-joint-candidate-v1.png",
+      "sha256": "fbc6a805b4fc3470914b71221e7ff50feaecd6002ba121ef25fed95201ac54c9"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-upper-insertion-boundary.png",
+      "sha256": "e164785ce91513bbe89db0163d6a044730d6a2a6bc469dc42d22843aff4d105d"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-lower-insertion-boundary.png",
+      "sha256": "0ddc994ff08517beab72047351c4c1e9b554e3a118f98a50398d175848de5745"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-core-boundary.png",
+      "sha256": "b7c4e5c8f6c651b361959d520883c5c0c5a2dd54e5a807b5b84d51d258bc011d"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-p33-p34-left-neighbor.png",
+      "sha256": "3266ed38181121437bda1fc7dde7e76ee05736d958d2e4e4b8966cba45695ab4"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-p43-p44-left-neighbor.png",
+      "sha256": "c37cd14cb64ef92b20be00c872cb08b35175f1178a539f747fd7c644decfa656"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\p34-p44-repair-left-guard-interior.png",
+      "sha256": "e87d187731464ac047085c7c890d19d6fb67cd42306ed2227eba0aea2393a6bf"
+    }
+  ],
+  "independentVisualReview": {
+    "reviewer": "/root/middle_column",
+    "method": "read-only view_image of actual host output and exact side-by-side reference; no files modified by independent reviewer",
+    "layoutResult": "fail",
+    "detail": "The exact-guide front rim protrudes around x360–420,y330–400 and support extends to y1000. The new capped corner lies around x670–800,y240–390 and support ends near y670. The footprint is too far right and too shallow, far beyond low-resolution uncertainty.",
+    "fishResult": "improved but complete proportion not certified",
+    "fishDetail": "Blue back, silver-white belly, round eye, organized overlapping scales and soft volume closely resemble p13 sample. Visible fish are slightly shorter/thicker and tails mostly obscured, so full-fish proportions cannot be certified."
+  }
+}

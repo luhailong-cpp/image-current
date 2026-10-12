@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,hashlib,sys
+from datetime import datetime,timezone
+T=Path(__file__).resolve().parents[1];B=T.parent;sys.path.insert(0,str(B));from checkpoint_resume import atomic_json
+req=json.loads((T/'pipeline/prompts/p04_01.resumed-full64-v01.request.json').read_text())
+prompt='''Repaint only the coarse interior of IMAGE1 into native1254x1254 art of this exact flat rectangular stone frame. The top230pixels are existing sharp native neighboring artwork: preserve their exact geometry, scale, tone and quiet material. Extend its strong right vertical joint at approximatelyx965 straight down. Extend the blue-gray left area below its existing top border, with the blue face ending nearx235 and the pale stone transition/border throughx335. The wide warm light-gray stone band betweenx335 andx965 must stay broad and quiet. Follow only two horizontal course divisions in the coarse lower area: one neary470 and one neary960, each crossing this broad band from its left side to the main right vertical. Keep the very weak existing rightward continuations in the guide, no added rows or columns. Preserve the top strip completely and continue its lines without a strip divider or kink. This is flat ground and border, no walls, stair risers or curbs. No diagonal line, building, roof, ornament, objects, paper or ripples. Material like IMAGE5: smooth satin-matte broad pale limestone, only3-5 large soft tonal areas over250pixels, no visible tiny marks under80pixels, no woven,cells,crosshatch,grain,noise,cracks or veins. Restrained shallow bevels and fine joints, clean daylight. Images2-4 are context only, copy no scene/object. Image5 material only. Output only this exact opaque1254square cropped fragment, no zoom.'''
+pp=T/'pipeline/prompts/p04_01.continuity-quiet-v01.prompt.txt';rp=pp.with_name('p04_01.continuity-quiet-v01.request.json');assert not pp.exists() and not rp.exists();pp.write_text(prompt)
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+req.update(prompt=prompt,promptFile=str(pp),promptSha256=sha(pp),preparedAtUtc=datetime.now(timezone.utc).isoformat())
+f=B/'pipeline-tools/local-continuation-audit-20261011/r12-firstrow/ref-stone-context.png';req['references'].append({'file':str(f),'sha256':sha(f),'role':'approved quiet limestone material only'})
+req['referenced_image_paths']=[r['file'] for r in req['references']]
+atomic_json(rp,req);print(rp)

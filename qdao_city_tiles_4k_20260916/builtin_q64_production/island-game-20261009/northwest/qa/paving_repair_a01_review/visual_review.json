@@ -1,0 +1,172 @@
+{
+  "status": "two_target_defects_repaired; local_source_selection_and_integration_pending",
+  "sources": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/guides/r03_c03_repair_paving_a01.native-crop.png",
+      "sha256": "8f85a1aa0b06f51488bc504fe55e47e3f6a46ddc21a92f06f632b0bfb36d5216",
+      "role": "real candidate-v1 unscaled edit target"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/native/r03_c03_repair_paving_a01.png",
+      "sha256": "4972fc60cae4ee3a96ccc4ad23f87fabdd36ec0ef7c364f48b8cd190aede5a19",
+      "role": "single builtin AI edit output1254"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/paving_repair_a01_review/node1_before_after100pct.png",
+      "sha256": "899a710498e79b6c7234eed56dfa5ac1a5eeaa645580169bc8caf188fe1eb885",
+      "nativeSize": [
+        670,
+        240
+      ],
+      "sourceCropBox": [
+        125,
+        170,
+        460,
+        410
+      ],
+      "tileCropBox": [
+        2885,
+        2890,
+        3220,
+        3130
+      ],
+      "layout": "left=source target;right=generated repair; exact crops without resampling"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/paving_repair_a01_review/node2_before_after100pct.png",
+      "sha256": "b40778ba34ec19d71c437b09968a9de945a507dccd0f71c85cbdbcea7e00462a",
+      "nativeSize": [
+        580,
+        240
+      ],
+      "sourceCropBox": [
+        750,
+        190,
+        1040,
+        430
+      ],
+      "tileCropBox": [
+        3510,
+        2910,
+        3800,
+        3150
+      ],
+      "layout": "left=source target;right=generated repair; exact crops without resampling"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/paving_repair_a01_review/unrequested_middle_node_before_after100pct.png",
+      "sha256": "c21247ea912242c1557f2abd2ab99e559838c3e90c341de592c9f6947f74fb7f",
+      "nativeSize": [
+        420,
+        170
+      ],
+      "sourceCropBox": [
+        440,
+        420,
+        650,
+        590
+      ],
+      "tileCropBox": [
+        3200,
+        3140,
+        3410,
+        3310
+      ],
+      "layout": "left=source target;right=generated repair; exact crops without resampling"
+    }
+  ],
+  "reviewedAtUtc": "2026-10-09T23:13:15.381807+00:00",
+  "generationCount": 1,
+  "fullCropReplacementAccepted": false,
+  "tileApplied": false,
+  "sourceBinding": {
+    "baseTile": "tiles/r03_c03_candidate-v1_4096.png",
+    "baseSha256": "d6d6add7839ca14d8b001a38ef2cb6a6f17663d6b8f8544f1bd363029b34a4ca",
+    "tileCropBox": [
+      2760,
+      2720,
+      4014,
+      3974
+    ],
+    "globalBox": [
+      10952,
+      10912,
+      12206,
+      12166
+    ],
+    "targetSha256": "8f85a1aa0b06f51488bc504fe55e47e3f6a46ddc21a92f06f632b0bfb36d5216",
+    "note": "Actual generation target/source remains candidate-v1. Later-base application must prove pixel-identical ancestor crop without rewriting this history."
+  },
+  "findings": [
+    {
+      "id": "disconnected_grout",
+      "status": "visually_repaired",
+      "requestedTileBox": [
+        2990,
+        2940,
+        3145,
+        3070
+      ],
+      "finding": "Severed grout is extended into one continuous ordinary joint; jagged white splice removed.",
+      "integrationConcern": "Repair junction moved about20-30px left and10px up within this1254 view. A source-selection mask bounded strictly to the old request rectangle would omit part of repaired junction.",
+      "suggestedTrialContextLocalBox": [
+        150,
+        180,
+        430,
+        395
+      ],
+      "suggestedTrialContextTileBox": [
+        2910,
+        2900,
+        3190,
+        3115
+      ]
+    },
+    {
+      "id": "double_diamond_node",
+      "status": "visually_repaired",
+      "requestedTileBox": [
+        3600,
+        2960,
+        3720,
+        3090
+      ],
+      "finding": "Duplicate stacked eye/diamond is replaced by one ordinary crossing with continuous incoming stone edges.",
+      "suggestedTrialContextLocalBox": [
+        800,
+        220,
+        1005,
+        400
+      ],
+      "suggestedTrialContextTileBox": [
+        3560,
+        2940,
+        3765,
+        3120
+      ]
+    },
+    {
+      "id": "out_of_scope_geometry",
+      "status": "must_exclude_when_integrating",
+      "finding": "AI also moved other stone nodes: central local node around(555,497) moved to about(521,510), and another around(841,694) to about(812,712). Whole1254 replacement is not accepted. Retain original outside localized repair masks.",
+      "exampleTileBox": [
+        3200,
+        3140,
+        3410,
+        3310
+      ]
+    },
+    {
+      "id": "plants_stairs_debris",
+      "status": "no_major_object_relocation_seen",
+      "finding": "Top planting/stair corner and red paper pieces retain their apparent positions; brushwork/color are not pixel-identical. Preserve original source outside repair masks."
+    }
+  ],
+  "limits": [
+    "One genuine1254 builtin output; no automatic application to tile was performed.",
+    "Suggested context boxes are trial integration context, not validated source-selection masks. Root must inspect grout continuity at every mask crossing.",
+    "Actual model and quality are unconfirmed because builtin host tool does not expose selectors or return values."
+  ]
+}

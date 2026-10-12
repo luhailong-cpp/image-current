@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "frame": "04-v3",
+  "reviewedOn": "2026-10-03",
+  "status": "provisional_midpass_candidate_pending_sequence_review",
+  "native": [
+    1254,
+    1254
+  ],
+  "root": [
+    800,
+    1164
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "pixelReadback": {
+    "fullBoundsAlphaGt8": [
+      [
+        98,
+        77,
+        1233,
+        1166
+      ],
+      [
+        159,
+        66,
+        1143,
+        1173
+      ]
+    ],
+    "supportShoeROI": {
+      "roi": [
+        420,
+        1030,
+        620,
+        1190
+      ],
+      "occupiedBoundsInclusiveV2V3": [
+        [
+          442,
+          1030,
+          617,
+          1166
+        ],
+        [
+          442,
+          1030,
+          619,
+          1173
+        ]
+      ],
+      "alphaMaskIoU": 0.8750593542260209,
+      "rgbaExactPixelFraction": 0.4301875
+    },
+    "headROI": {
+      "roi": [
+        560,
+        40,
+        1100,
+        560
+      ],
+      "occupiedBoundsInclusiveV2V3": [
+        [
+          560,
+          77,
+          1099,
+          559
+        ],
+        [
+          560,
+          66,
+          1067,
+          559
+        ]
+      ],
+      "alphaMaskIoU": 0.9487353835058981,
+      "rgbaExactPixelFraction": 0.298244301994302
+    }
+  },
+  "observations": [
+    "相比04-v2，远左摆动鞋收至原生x600附近、靠支撑大腿后側；比05提前极值的原姿势更接近通过相位。",
+    "玉瓶中心约(695,700)，回到腰侧，符合收回远侧瓶臂的大致过渡目标。",
+    "灯手约(910,685)，灯碗中心约(1035,795)，仍明显前于指示的手780–840/灯体800–900；03→04灯体横向跨度依然很大。",
+    "头顶由v2原生y77变66，上移11px；局部手脚修改没有完全锁住头部。",
+    "支撑鞋最低由v2原生y1166变1173，相对固定地面1164低9px；鞋ROI alpha轮廓IoU约0.875，脚部并非像素/几何不变。",
+    "近远手臂归属存在歧义：可见肩饰连到向腰侧瓶手的袖子，视觉上可能被读为近臂持瓶；前灯手的肩部连接被胸前衣袖遮住。物品身份未变不等同解剖持手正确，不能由本单帧断言右灯左瓶已验收。",
+    "脸、长波浪发、粉米白金服装保持，花仍在远侧隐藏；没有整图脚本移动/缩放或贴地加工。"
+  ],
+  "approximateLandmarksMeaning": "道具与手的坐标为原生图上视觉估计，用于对比提示目标；头顶/最低鞋行来自alpha>8读取。",
+  "selectionAdvice": "腿部通过相位与瓶臂回收优于v2，可作为带明确问题的整体WIP候选交主审择优。不得标动态通过；灯轨迹、左右臂遮挡归属、头部上移和脚底下沉均需保留在问题清单。",
+  "dynamicAcceptance": false,
+  "clientVerified": false,
+  "callCountForThisRevision": 1
+}

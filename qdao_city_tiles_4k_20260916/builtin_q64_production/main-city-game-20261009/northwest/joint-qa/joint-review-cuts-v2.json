@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "joint-8x8-zero-based",
+  "description": "Reviewed native binary cuts for current s03_03_jointfix01/s03_04_grid02 and s04_02/s04_03_bluealign03 source pairs. Explicit CLI opt-in only; old config remains immutable. This does not grant whole-joint visual QA.",
+  "overrides": [
+    {
+      "id": "joint-review-v2-r6-c6",
+      "axis": "vertical",
+      "row": 6,
+      "leftColumn": 6,
+      "rightColumn": 7,
+      "mode": "core-center",
+      "worldSeamX": 19456,
+      "reason": "The reviewed native minimum-error pair splits one diagonal paving junction into offset T junctions. Fixed core-center selection restores the coherent X junction. Apply only this row's full 1254px vertical cut; keep all horizontal and all other vertical joins at minimum-error.",
+      "expectedSourceSha256": {
+        "left": "605ffc3de6d14c322d0580fc73f9241966f925e1d624e5f62b5c3b1c508928f3",
+        "right": "92f863c35b80a24f3c1f103c889a7d96cff3f2e3e504dcd5bef0eabd227d8766"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-review.json",
+          "sha256": "15889ea2cd79d90976dd7a5fe0efaa13cd5448f20ef2faf5bafdc3bdaf2f2b0c"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-mechanical-evidence.json",
+          "sha256": "ca8d145f340c5a0399bb2bf77516df5fba06b295f80b67ac5b93a1101ef0fba5"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row6-left6-core-center.png",
+          "sha256": "4088870a5efad31291d5444a99921779b6766aa9b4c59f1880a40e3ec3238c22"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row6-left6-minimum-error.png",
+          "sha256": "ac55647ff40111c51b8cbfb1ca59c826c3c98eeb878606d6f1988b4b610eba7c"
+        }
+      ]
+    },
+    {
+      "id": "joint-review-v2-r7-c5",
+      "axis": "vertical",
+      "row": 7,
+      "leftColumn": 5,
+      "rightColumn": 6,
+      "mode": "core-center",
+      "worldSeamX": 18432,
+      "reason": "The reviewed native minimum-error pair exposes disconnected or duplicate diagonal slab lines. The fixed core-center pair keeps complete connected joints. Apply only this row's full 1254px vertical cut; keep all horizontal and all other vertical joins at minimum-error.",
+      "expectedSourceSha256": {
+        "left": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089",
+        "right": "83a20e2fb260dee00ab6afeb1ec5c3fb3de7ed274d41888a166e1114baee04b5"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-review.json",
+          "sha256": "15889ea2cd79d90976dd7a5fe0efaa13cd5448f20ef2faf5bafdc3bdaf2f2b0c"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-mechanical-evidence.json",
+          "sha256": "ca8d145f340c5a0399bb2bf77516df5fba06b295f80b67ac5b93a1101ef0fba5"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row7-left5-core-center.png",
+          "sha256": "b393d2f4e6c0cd3e353875f2e345ea568eb5e2c5d2b1d29160e90715a7ec76a9"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row7-left5-minimum-error.png",
+          "sha256": "e99215c25b6ff11b6cb1b8395b5c05584e148fafc5a8b742266406d0082b6bc2"
+        }
+      ]
+    }
+  ]
+}

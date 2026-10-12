@@ -1,0 +1,172 @@
+{
+  "createdAtUtc": "2026-10-09T20:04:02.003Z",
+  "candidate": "hardseam-v02-candidate-4096.png",
+  "candidateSha256": "b9f904d89e8eb9221364e289cd23677233444cbf08616102d52383ec9255744b",
+  "status": "candidate_pending_tone_QA; not promoted; no formal acceptance",
+  "inputsUpdated": [
+    "r09_c03_s04_03_resolved_v2",
+    "r09_c03_s04_04_resolved"
+  ],
+  "reviewed": [
+    "1254 QA-only preview",
+    "all nine 600x600 native crossing comparisons",
+    "repaired stone step native comparison",
+    "large corner post native comparison",
+    "diagonal roof native comparison"
+  ],
+  "stoneRepair": {
+    "tileLocalBox": [
+      2750,
+      3496,
+      3350,
+      4096
+    ],
+    "evidence": "hardseam-v02-repaired-stone-straight-left-candidate-right-100pct.png",
+    "result": "Pass for this visible local join: prior pointed notch and height discontinuity are absent; stone front highlight and block contour remain smooth. New row-4 column-3/4 overlap has zero RGB difference along both the selected and midpoint paths, reflecting the shared native repair rather than an algorithmic geometry repair."
+  },
+  "crossings": [
+    {
+      "xy": [
+        1024,
+        1024
+      ],
+      "result": "wood, plaster, and roof edges continuous; no worse visible artifact"
+    },
+    {
+      "xy": [
+        2048,
+        1024
+      ],
+      "result": "roof ridge and blue tile edges continuous; no worse visible artifact"
+    },
+    {
+      "xy": [
+        3072,
+        1024
+      ],
+      "result": "roof tile highlights more continuous; no worse visible artifact"
+    },
+    {
+      "xy": [
+        1024,
+        2048
+      ],
+      "result": "gold roof curl and adjacent blue tiles continuous; no worse visible artifact"
+    },
+    {
+      "xy": [
+        2048,
+        2048
+      ],
+      "result": "former square tone transitions substantially reduced; beam contour continuous"
+    },
+    {
+      "xy": [
+        3072,
+        2048
+      ],
+      "result": "angular tone difference remains on orange door lintel; detailed issue recorded"
+    },
+    {
+      "xy": [
+        1024,
+        3072
+      ],
+      "result": "window frame and plaster row boundary substantially improved; no new geometry break"
+    },
+    {
+      "xy": [
+        2048,
+        3072
+      ],
+      "result": "irregular brightness boundary remains on narrow plaster strip; detailed issue recorded"
+    },
+    {
+      "xy": [
+        3072,
+        3072
+      ],
+      "result": "repaired wood below lantern is continuous; original square boundary largely removed"
+    }
+  ],
+  "remainingIssues": [
+    {
+      "label": "转角大木柱与两侧墙面",
+      "severity": "visible_tone_boundary",
+      "tileLocalApproxBox": [
+        1432,
+        2980,
+        1810,
+        3230
+      ],
+      "sources": [
+        "r09_c03_s03_02_v01",
+        "r09_c03_s04_02_resolved"
+      ],
+      "evidence": "hardseam-v02-corner-post-straight-left-candidate-right-100pct.png",
+      "finding": "转角木柱中下段仍有明显的斜向不规则明暗分界，从左侧灰影墙延伸到柱面，原始水平分界被移动并曲折化，未消除光照差。",
+      "globalApproxBox": [
+        9624,
+        35748,
+        10002,
+        35998
+      ]
+    },
+    {
+      "label": "灯笼左侧窄墙",
+      "severity": "visible_tone_boundary",
+      "tileLocalApproxBox": [
+        2170,
+        2920,
+        2300,
+        3120
+      ],
+      "sources": [
+        "r09_c03_s03_03_v01",
+        "r09_c03_s04_03_resolved_v2"
+      ],
+      "evidence": "hardseam-v02-cross-2048-3072-straight-left-candidate-right-100pct.png",
+      "finding": "红色木条右侧、灯笼左侧的窄白墙仍存在锯齿状深浅变化，接缝约位于y=3000附近。饰框、木条轮廓没有新增明显断裂。",
+      "globalApproxBox": [
+        10362,
+        35688,
+        10492,
+        35888
+      ]
+    },
+    {
+      "label": "灯笼上方门楣",
+      "severity": "visible_tone_boundary",
+      "tileLocalApproxBox": [
+        3000,
+        1970,
+        3190,
+        2200
+      ],
+      "sources": [
+        "r09_c03_s02_03_resolved_v2",
+        "r09_c03_s02_04_v01",
+        "r09_c03_s03_03_v01",
+        "r09_c03_s03_04_v01"
+      ],
+      "evidence": "hardseam-v02-cross-3072-2048-straight-left-candidate-right-100pct.png",
+      "finding": "橙色横向门楣中段仍有角状的色温和明暗分界。原先直边拼贴感减轻，但100%可见局部多边形色块。",
+      "globalApproxBox": [
+        11192,
+        34738,
+        11382,
+        34968
+      ]
+    }
+  ],
+  "validation": {
+    "diskCandidateAndMaskRevalidatedPixels": 16777216,
+    "mismatches": 0,
+    "sourceSameGlobalCoordinateExact": true,
+    "straightMatchesExistingV03Pixels": true,
+    "record": "hardseam-v02-disk-validation.json"
+  },
+  "parametersAndPaths": "hardseam-v02-report.json",
+  "coordinateConvention": "Boxes are approximate, half-open [x0,y0,x1,y1]; tile-local origin is global [8192,32768].",
+  "recommendation": "石阶局部修复有效，可保留v02作为后续色差修整底稿。先修转角木柱、窄墙、门楣的源片光照分歧，再重跑；未进行正式接收或写入output。"
+}

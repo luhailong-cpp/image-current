@@ -1,0 +1,17 @@
+import { spawn } from 'node:child_process';
+import { createInterface } from 'node:readline';
+import fs from 'node:fs';
+const request = JSON.parse(fs.readFileSync(process.argv[2], 'utf8').replace(/^\uFEFF/, ''));
+if(request.codeFile) request.params={name:'Unity_RunCommand',arguments:{Code:fs.readFileSync(request.codeFile,'utf8'),Title:request.title||'UI integration'}};
+const child = spawn('C:/Users/luyua/.unity/relay/relay_win.exe', ['--mcp','--project-path','E:/work/mmorpg-client','--instance-id',process.argv[3]], {windowsHide:true, stdio:['pipe','pipe','pipe']});
+let id=0; const pending=new Map();
+const timer=setTimeout(()=>{console.error('MCP timed out');child.kill();process.exitCode=1;},90000);
+child.stderr.on('data', d=>{ if(String(d).includes('[ERROR]')) process.stderr.write(d); });
+createInterface({input:child.stdout}).on('line',line=>{try{const m=JSON.parse(line);if(pending.has(m.id)){pending.get(m.id)(m);pending.delete(m.id);}}catch{}});
+const send=(method,params)=>new Promise(resolve=>{const n=++id;pending.set(n,resolve);child.stdin.write(JSON.stringify({jsonrpc:'2.0',id:n,method,params})+'\n');});
+await send('initialize',{protocolVersion:'2024-11-05',capabilities:{},clientInfo:{name:'codex-ui-integration',version:'1.0'}});
+child.stdin.write(JSON.stringify({jsonrpc:'2.0',method:'notifications/initialized'})+'\n');
+const result=await send(request.method,request.params||{});
+if(request.output)fs.writeFileSync(request.output,JSON.stringify(result,null,2));
+const compact=result.result?.structuredContent||result; if(compact.data) delete compact.data.localFixedCode; console.log(JSON.stringify(compact));
+clearTimeout(timer);child.stdin.end();child.kill();

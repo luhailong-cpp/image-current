@@ -1,0 +1,18 @@
+{
+  "reviewedAtUtc": "2026-10-11T12:57:00Z",
+  "status": "failed_not_promoted",
+  "nativeSha256": "7456bf182bc69828210a1a10795698e502d0a5f94aed9f9e39ad82566e37537a",
+  "nativeSize": [1254, 1254],
+  "nativeGenerationSucceeded": true,
+  "appliedToTileCandidates": false,
+  "formalAccepted": false,
+  "findings": [
+    "The generated joint looks continuous only because the immutable upper-left joint moved downward.",
+    "At x624 the original fixed joint centre is y410; the generated joint is y426. At x625 the editable original joint is y425; the generated joint remains y426.",
+    "The generated right-side grout follows almost the same faulty original positions through x879. Cropping only editable right-side pixels therefore cannot repair the 15-pixel step.",
+    "Do not promote this source, translate a whole quadrant, or alter the immutable historical core."
+  ],
+  "measurementEvidence": "joint-registration.json",
+  "nextStep": "Use an explicitly masked narrow inpainting guide that removes only the faulty right-side grout while retaining the fixed left endpoint; otherwise leave the corner unaccepted. Do not repeat the same unmasked request.",
+  "sourceDeletionPerformed": false
+}

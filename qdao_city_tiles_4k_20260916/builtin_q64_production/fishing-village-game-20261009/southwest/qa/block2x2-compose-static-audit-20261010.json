@@ -1,0 +1,51 @@
+{
+  "createdAtUtc": "2026-10-10T10:24:35.867826+00:00",
+  "reviewer": "art_qa",
+  "status": "static_review_pass_runtime_waits_for_new_sources",
+  "script": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/block2x2-compose.py",
+    "sha256": "5cd44d8160fc21e47b5515717784a85b2478f490e22e4bd53e1a2653a16b45c1"
+  },
+  "helper": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/tools/seam_helpers.py",
+    "sha256": "3c9fb69c334985b77a51b254b59b5945bec893e746bda0ff71b0d41dca167a48"
+  },
+  "supportingScripts": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/production.py",
+      "sha256": "15379383678bb79437af2a5d029dec01347da380183b4f9d43b591b65271f8d1"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/full-tile-assemble.py",
+      "sha256": "9194a76ec5a1758ba6a8c12b72080edc8f0261c943dd551fec4e846094e94f3e"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-compose.py",
+      "sha256": "02cbf9b3c19e23392079fdaf9e13394baaf5502d6029154ab198ef14f54a4a59"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/joint-r09c04-c05-compose.py",
+      "sha256": "bbfa968a05c1e3aaeb287c3b04d12dfaacf08f1d8f4cc18fed6f9f66d4e9c82d"
+    }
+  ],
+  "checks": {
+    "localHelperAndBytecodeDisabled": true,
+    "bottomVerticalOverlap": "230px, left x4096:4326 and right x0:230, output x4096:4326",
+    "topBottomHorizontalOverlap": "Transposed (230,8422,3) to (8422,230,3), seam is 8422 heights in 0..229; mask restores y orientation",
+    "canvas": "8422x8422 maps global [12173,32653,20595,41075]",
+    "coreTiles": "Origins [115,115],[4211,115],[115,4211],[4211,4211]; 4096 square each, adjacent with no gap or duplicate rows",
+    "sourceIdentity": "All selected pixels checked against corresponding original top/left/right arrays with source IDs 0/1/2",
+    "qaCoverage": "Five overlapping 900-length strips per each of four 4096 edges, plus 900 square center, all integer crops",
+    "noResizeBlendOrColorCorrection": true
+  },
+  "changes": [
+    "Constrain outputPrefix to filename-safe block2x2-[A-Za-z0-9_-]+",
+    "Assert seam dimensionality, integer dtype, and 230px bounds",
+    "Assert QA crop coordinates stay within context"
+  ],
+  "verification": "AST syntax parse for 5 Python files; no candidate execution before lower sources are ready.",
+  "notClaimed": [
+    "Runtime image assembly success",
+    "Visual acceptance of complete 2x2"
+  ]
+}

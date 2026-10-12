@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "batch": "city-tower-north",
+  "status": "blocked_application_network_permission_revoked",
+  "observedError": "Fatal error: application network permission was revoked",
+  "affectedAgents": [
+    "tower_right",
+    "tower_receipts",
+    "tower_qa"
+  ],
+  "generationRequestsAfterRevocation": 0,
+  "permissionBypassAttempted": false,
+  "allocatedTiles": [
+    "r03_c13",
+    "r03_c14",
+    "r04_c13",
+    "r04_c14"
+  ],
+  "allocationStatus": "allocated_root_reserved",
+  "ownerAcknowledged": false,
+  "counts": {
+    "requiredNativeCores": 64,
+    "uniqueCoresWithReturnedArtwork": 2,
+    "registeredNativeVersions": 4,
+    "selectedWorkingAnchors": 1,
+    "complete4096Candidates": 0,
+    "formallyAcceptedTiles": 0
+  },
+  "route": "existing-builtin image_gen.imagegen",
+  "actualModel": null,
+  "modelEvidence": "actual model not returned",
+  "sharedGitModified": false,
+  "sharedProgressModified": false,
+  "workingSelection": "selections/root-east-r04c13-choice-v001.json",
+  "currentSlots": [
+    {
+      "tile": "r04_c13",
+      "patch": "p44",
+      "record": "versions/root-repair-v004/r04_c13/native/p44.png.generation.json",
+      "sha256": "8082b7f4854b91c620b5161505869072f74705e6ae31fc10ccd6c889d8a53d7c",
+      "status": "working_anchor_geometry_usable_not_formally_accepted",
+      "qa": "qa-v001/repair2-p44-qa.json",
+      "pending": "minor south front lip brightness/texture transition; concentrated review later"
+    },
+    {
+      "tile": "r04_c14",
+      "patch": "p44",
+      "record": "versions/right-r04c14-p44-native-v001/r04_c14/native/p44.png.generation.json",
+      "sha256": "d06e8715dd2a0a99b98e13764ae078bacdf38577332d77c15dd0774da299a6b3",
+      "status": "returned_native_not_selected_pending_geometry_repair",
+      "qa": "qa-v001/right-r04c14-p44-first-qa.json",
+      "pending": "south join left180px stone-joint level mismatch around100px, narrow duplicate course; repair lower300px before propagating"
+    }
+  ],
+  "preparedNotSubmitted": [
+    {
+      "tile": "r04_c13",
+      "patch": "p43",
+      "request": "requests/root-r04c13-p43-v001.request.json",
+      "prompt": "prompts/root-r04c13-p43-v001.txt",
+      "guide": "versions/root-r04c13-p43-guide-v001/r04_c13/guides/p43-GUIDE-only.png"
+    }
+  ],
+  "nextActionsAfterPermissionRestored": [
+    "Reread root AGENTS and current split allocation, inspect only new returned assets since checkpoint.",
+    "Submit already prepared r04_c13:p43 request; source references and native core layout already inspected.",
+    "Repair r04_c14:p44 lower south join using QA evidence, or generate r04_c14:p41 with root p44 east-neighbor anchor.",
+    "Produce west half from r04_c13:p41 and south current anchor, then p42; preserve non-overlapping allocation.",
+    "Assemble each16-core tile at4096 and4326context with native_batch, then full internal/seam review. No formal tile acceptance yet."
+  ],
+  "internalProductionSplit": {
+    "root": [
+      "r04_c13 columns3,4",
+      "r03_c13 columns3,4"
+    ],
+    "tower_receipts": [
+      "r04_c13 columns1,2",
+      "r03_c13 columns1,2"
+    ],
+    "tower_right": [
+      "r04_c14 all16",
+      "r03_c14 all16"
+    ],
+    "tower_qa": "read-only visual QA; write own QA records only"
+  },
+  "preservedPriorVersions": [
+    "versions/root-recovered-v002/r04_c13/native/p44.png",
+    "versions/root-repair-v003/r04_c13/native/p44.png"
+  ],
+  "notes": [
+    "First pre-restart output recovered from matching completed generation event;1254RGB verified and bytes copied unchanged.",
+    "All four returned image versions are saved in this project directory.",
+    "No late or extra return found in root task generated-images directory or right worker directory at checkpoint."
+  ]
+}

@@ -1,0 +1,121 @@
+# 玄潮龟 · 独立相邻静态复核与最终 SHA 绑定检查
+
+检查时间：2026-10-08T11:24:15.304559+00:00（2026-10-08 07:24 EDT）。只写本报告，未修改宠物目录，未生图、未播放。
+
+## 当前交付结论
+
+已读取当前 [STATUS.md](../../pets/10-xuanchaogui/STATUS.md)、[README.md](../../pets/10-xuanchaogui/README.md)、[manifest.json](../../pets/10-xuanchaogui/manifest.json) 与 [visual-review.json](../../pets/10-xuanchaogui/visual-review.json)。原窗口已完成收尾；当前视觉与动画状态均为 `pass_with_notes`，不是旧阶段的“还需连播”。
+
+本次重新计算全部正式 PNG 的 SHA256，逐一与 manifest 及 visual-review 中的绑定值比较：
+
+- 正式文件：68/68；manifest 条目：68；visual-review SHA 条目：68。
+- 两份记录的文件集合都精确等于 E/W × hit6、attack12、cast16，无缺帧、无额外帧。
+- 68个实际 SHA 全部同时匹配 manifest 和 visual-review；不匹配项0。
+- 未发现需要本任务继续改图或返工的证据，保留当前成品。
+
+绑定记录快照：
+
+| 记录 | SHA256 |
+|---|---|
+| manifest.json | `7bda626f331985bf88c7b409926576f3a0c2a366291b222da0a140408569197a` |
+| visual-review.json | `8c6707744c28b75694d4a3913e0abe229e56669be7ad47827bfe42cecbd291ed` |
+
+## 本任务独立静态观察
+
+实际查看原生E/W身份图，以及正式 hit/E03、E04、E05 与 attack/W01、W11、W12 六张相邻关键帧。静态观察针对当前替换版本，不把旧 final-art-review 的问题沿用到新稿。
+
+- **hit/E04 半回弹问题已修正。** 新E04头冠目视约y500，位于E03约y566与E05约y411之间；可见短颈，近前足仍有屈曲，眼半开，水珠衰减。原“一帧回升接近全部”的相位问题已消除。上述坐标是人工视觉估计，不是关节测量。
+- **attack/W12 收势位置问题已明显修正。** 新W12头冠约y126、画面左前足末端约y737，接近W01约y125/740；甲体位置也接近起势，原W12→W01头颈和前足明显跳点已消除。W11→W12是最终抬回警戒阶段。
+- 两处新稿保持原有四足遮挡关系、可见三爪、单条短尾、浅水盂背甲、月牙玉石和桂枝朱结；E/W视角与饰物侧别未观察到改变。
+- 本次另核对上述两张正式导出sidecar、原生生成记录和当前原生文件SHA，三者相符；实际prompt和receipt存在。统一导出为完整1254画布等比缩至1024，平移[0,0]，无逐帧对齐。
+
+两张重点正式图：
+
+| 帧 | 当前 SHA256 |
+|---|---|
+| hit/E04 | `398cfe35fcc6fdbfb43d65d0e1a726ce22744f66099e4a789a54d09e22932965` |
+| attack/W12 | `d045728774e76cc7279c05aa79b769f49c2c20102193194588a01188a1ed39d6` |
+
+## 原窗口播放记录与本报告范围
+
+原窗口 visual-review 的审核时间为 2026-10-08T11:08:10.549008+00:00，记录全部68帧静态复核、六组1×及0.25×浏览器播放抽样观察，并对关键衔接暂停逐帧检查，状态 `pass_with_notes` / `pass_with_notes`。本报告已验证该结论绑定的68个SHA正是当前正式像素。
+
+**播放工作由原窗口执行；本任务独立完成的是六张关键相邻帧静态复核及68张文件的SHA绑定检查。** 本次没有重新播放，也不声称独立完成全部68帧视觉审核。原窗口已做的播放不再列为未完成任务。
+
+当前STATUS保留42条极低alpha边缘警告，最大边缘alpha为6/255、无alpha≥16像素触边；这是原窗口技术及视觉记录的备注，本报告未追加像素处理。客户端未接入，未执行引擎或战斗逻辑验收。
+
+若后续正式图片变化，应重新核验对应来源和视觉结论，不能沿用本报告快照。
+
+## 本次实际计算的完整文件 SHA
+
+| 正式文件 | SHA256 |
+|---|---|
+| runtime/hit/E/01.png | `651b17eed823f220f6ba2244e5961169f9edb6c03c533ce14feb6d7111af9205` |
+| runtime/hit/E/02.png | `ef8f5d69788912c350901773d2cce82c3077a12eb2c2a4569969855d0eb24226` |
+| runtime/hit/E/03.png | `6b130a23ff4058e7b74c8760fdae99861dbf0fc59ff05549304879da7509e2b0` |
+| runtime/hit/E/04.png | `398cfe35fcc6fdbfb43d65d0e1a726ce22744f66099e4a789a54d09e22932965` |
+| runtime/hit/E/05.png | `9ffd3bfdf2f2ef4aa46c44a6681b26e5b03d3350f5ac20b3fee9ba72c308cd77` |
+| runtime/hit/E/06.png | `4d34841e70ce382d47678b6c3bb647372af0beb37307141caf47de91997d0d48` |
+| runtime/hit/W/01.png | `28bb1c18e284ab0597ca46d490f3337d6439d97bd6bf8cbf0d978e3cddea0638` |
+| runtime/hit/W/02.png | `2bb581366842dc51ceb049eb4770672374f8d125c285ee4a0d58917ac2b0977b` |
+| runtime/hit/W/03.png | `0b506724e2beaad5277f096f54c489530ae911a19ad896752f3c282bb252d960` |
+| runtime/hit/W/04.png | `ce8d625f5f0e8922edae0738a7969c82fed4ec18d9ca5e763a904fdde67a47cb` |
+| runtime/hit/W/05.png | `92408114a77af351cdd8b27efe70b259daf318f419451f7d85766dcaa8733bae` |
+| runtime/hit/W/06.png | `0b596517fbd9214967f7e4d72a4955b50be181d27b0bed4531be9f87e6847acf` |
+| runtime/attack/E/01.png | `769af0716b00653e4fdacafbb076a078a118d3f48f8299c1ce2d8806aa89d793` |
+| runtime/attack/E/02.png | `4bb39fb9bcb6a04ae27c31b15808afca0c66672d676986fb0b689ea761745a31` |
+| runtime/attack/E/03.png | `46bf539eb82b970e8cb297bb41bb76daa0fd93fdea525083ec596d12e93718c9` |
+| runtime/attack/E/04.png | `02e489971ab701cc7f0ed784771179bddb4cace7dc23415a987dc655169d3cb6` |
+| runtime/attack/E/05.png | `34b62dad1e5a1613117e75fabda35533a9031806d4dac00bad3d0e3afa51da0d` |
+| runtime/attack/E/06.png | `8bce28791896719be7337133703716004cec7c5f2bda343596dec0bb2f4ce854` |
+| runtime/attack/E/07.png | `817dc563bd5f1d6ada64835449f47396b056d64291cc8240b9f97d516e144073` |
+| runtime/attack/E/08.png | `5d3f749b839da22e871f76253164cb4983e7ca5ec73a5ba1b9cde74396860988` |
+| runtime/attack/E/09.png | `4d11e7274ddf81660953dfd01873f2af8a112cc555bc68fda91438d2146c00c2` |
+| runtime/attack/E/10.png | `326ebd0e2ce27cb8a9b778041cca02355337b183e97a22b5ffc6b5f8b825216a` |
+| runtime/attack/E/11.png | `b8f9ef590df0552e87ab8dae136ec06c9635eac9459fe208bbafb54fe16ddd27` |
+| runtime/attack/E/12.png | `213ecc78f72ba5e02464c226852325dbdc4c0b36efe72b577ac98fab61ad44eb` |
+| runtime/attack/W/01.png | `420a2365fa752717c9b1d7bad6a89363ec3e40919a119ddd466e1925dd931257` |
+| runtime/attack/W/02.png | `d3d35ac49335c20561c085b2cacccc28f84038545a32815305c7e4ebe98a0195` |
+| runtime/attack/W/03.png | `fa36505d97b896acf056b69ba305e4a255d0caa232ee92f1d8b15b2fb330e101` |
+| runtime/attack/W/04.png | `b61ba8f8f4c15790693fe9fcec490d5f41a09522631f455bf5c184d2dad9fe97` |
+| runtime/attack/W/05.png | `508d98900136129bb4d519520f7c0086b8205b1116fc839aa7e4639b733ed08e` |
+| runtime/attack/W/06.png | `b03d301a505629d8d6824c33137d9480994f5de70dd095a7950ccef494a0337e` |
+| runtime/attack/W/07.png | `a4ee17923011e4c9e817cb848d0b659d460853869b492f4979189e2c1cdfb602` |
+| runtime/attack/W/08.png | `f800615e44b21cbc69d10077a44e8842950fff3689e3549a29768c5999ebec8b` |
+| runtime/attack/W/09.png | `d8c4f37cbd40ae5fce46bb35dd6f7ce9667adc5431d2dc4ec76fca3c5be3ecbb` |
+| runtime/attack/W/10.png | `d77fb8d3e622573ef81b6d2f6e4713cecc1fdb5cfcc049400e9759a7949d30ac` |
+| runtime/attack/W/11.png | `138c62fb9044af0dbb837500b03bd18aa02e56c999782b98c0ec798127baa0e6` |
+| runtime/attack/W/12.png | `d045728774e76cc7279c05aa79b769f49c2c20102193194588a01188a1ed39d6` |
+| runtime/cast/E/01.png | `dcd40cc71676d249dfbfeffc566d5ba95bb4cf14bf23b41721c85f0596bbaa99` |
+| runtime/cast/E/02.png | `730ee4480c122a9ad9088addd00a4dbec8d175a3689b6f7f9d3e400abbc8a89f` |
+| runtime/cast/E/03.png | `4ef41da6274a41485d9095d3ef975f923719cbd787ccbd5e234bdb4501927372` |
+| runtime/cast/E/04.png | `bc21b06a10430eaf7e76cf6bebddc894e0b7270a66d1dbc01089e38e69aebf07` |
+| runtime/cast/E/05.png | `ffcf9416b1aa2e4804b6bc5eaf7ba641b1915e20a6eded4541a23ccddcfa52a5` |
+| runtime/cast/E/06.png | `3e627ed48528aebd3a28dd4853153a8ddfe8a4b0326cf014fce7cabe10993701` |
+| runtime/cast/E/07.png | `9a21198894082cbcf2c495eb1ee411b9993386a5acdfaeaca2a48ecfaf2290dd` |
+| runtime/cast/E/08.png | `9f797f14030b085819eeb5384dfae40ca64c0c4907e335238156d5230569f80f` |
+| runtime/cast/E/09.png | `4a8e6c180fadd7df33fc7489050b2d2d5445db0c82114f84aaf82d3a4c4b121c` |
+| runtime/cast/E/10.png | `df9d5fddc53c8a38571b6618864268d3e09f0a42def99a6676b0b4873f1b5829` |
+| runtime/cast/E/11.png | `6570b3d592bcc0b6d21e25ab67ad6102fe1e825265ed35d91d0a839cf996b1d2` |
+| runtime/cast/E/12.png | `c8504eb57b9b30a338054933eea5de73a0262f054865e67eb00d1a856144db9b` |
+| runtime/cast/E/13.png | `37104e4c29841edd3c7497f15ecf538f20a888e0af5be4067a2d43f360cac496` |
+| runtime/cast/E/14.png | `31448c874bbebd4024200129c0a9bed04f0f4f09e704e56513cd3ab919685544` |
+| runtime/cast/E/15.png | `2c4d46e77ae946f665ef32e37e8362498eabd78bc77f806f73add08427973d75` |
+| runtime/cast/E/16.png | `290166c89369789e68d9e548bf4731f150020c8d796dd263d244b8751b0314bc` |
+| runtime/cast/W/01.png | `afd98ff6c405a9dce29e6bc0a0605bee9b94135fb54eaf8740077ae6a3871770` |
+| runtime/cast/W/02.png | `93a48c55411a25a25c6ae1df8b817443b3c4ae9e5061a1775f9ff060974592b7` |
+| runtime/cast/W/03.png | `cdc9f09202877d00c7987d91214fe09638b91138e43096255c26d3e570d06d8a` |
+| runtime/cast/W/04.png | `422f21694b5baa367c70f45cad39f319370aae8b9e7bd8ee88825f86786eff45` |
+| runtime/cast/W/05.png | `006633de321f9358e9cd81831bb073b55400f37262060066ab2e2a9cf1c91003` |
+| runtime/cast/W/06.png | `1662ab4d4f7a575ea768b880a853aba53e639d04170be50882b4d1b6c85ba563` |
+| runtime/cast/W/07.png | `662d354cf2fa500d6cc37282b51c9fe8886ed245afc7a581922fdf8514a2ec11` |
+| runtime/cast/W/08.png | `b6ecb39beddad214f289ace7d6dd94baad9688b07381f05bb2633cb2aedd3bf2` |
+| runtime/cast/W/09.png | `8f68746ce87ee8fb979efc60fae6b4f6658c556e8e9b911948c4a6d02ac18c38` |
+| runtime/cast/W/10.png | `c085a4d468ece36b026839cc6a52ab95769f3e160cadb7abec5877ccc42be763` |
+| runtime/cast/W/11.png | `101f3aeeaf28d58dc84442b61c644afb0103d00e118eed7899e7e5f6a9d1f23c` |
+| runtime/cast/W/12.png | `ce000a9d047eb68991b6e13b80ca90cbf6c30a5b24bc0922160ed5ff02ca4e3e` |
+| runtime/cast/W/13.png | `127d77ecc35d4df608173e4e863c7e3707fb9ab0bdad71df5d27cc65abf72490` |
+| runtime/cast/W/14.png | `b80550747a5516f5963b116422d0dd8564b29c2a40533a7c4ffd2e22b6061ada` |
+| runtime/cast/W/15.png | `c40576dfacb12d4528a7b2f5a3f936743544ffa56317cb034bb68fead1820625` |
+| runtime/cast/W/16.png | `06c9b5bef5a5d7e338c71236e26c1c0ceb18a85f1370046296acb69777c82674` |
+

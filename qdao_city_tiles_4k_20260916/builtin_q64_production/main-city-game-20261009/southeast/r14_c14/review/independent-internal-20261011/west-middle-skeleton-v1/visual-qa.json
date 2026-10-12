@@ -1,0 +1,90 @@
+{
+  "reviewedAt": "2026-10-11T17:41:09.337337+00:00",
+  "scope": "Independent native/composite endpoint and selection-perimeter review; all image coordinates local to1254 crop, y1600 in core.",
+  "native": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-skeleton-20261011T171657-6e6e8902\\native.png",
+    "sha256": "3f0058bdc3edd9e9634b5aa7c4e6afcf968fb242253ce10b7c8aebef0cd4e1b3"
+  },
+  "compositeReview": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-skeleton-selected-v1-20261011\\review-composed-1254.png",
+    "sha256": "747ffda8c045718c48dbcc37231e449817c844dbbde638154d23edc7f980a6b8"
+  },
+  "compositionManifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-skeleton-selected-v1-20261011\\composition.json",
+    "sha256": "d74e762806f87d451740002fa1fa513ce89290152e84892a1d0bff7c14419a6a"
+  },
+  "source": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-exact-joints-20261011T162236-aa6849a7\\source-1254.png",
+    "sha256": "edd7c32c78f7fcd0e7a993338c519fe332c6d912b207fa032eb1acf122d9c8f9"
+  },
+  "immutableWest315PixelsExact": true,
+  "upperWestCrossing": {
+    "coordinateApprox": [
+      315,
+      193
+    ],
+    "continuity": "pass",
+    "sourceDarkCore": [
+      314,
+      193
+    ],
+    "compositeRightDarkest": [
+      315,
+      188
+    ],
+    "rightNextColumnDarkest": [
+      316,
+      191
+    ],
+    "darkPixelsThreshold85NearCrossing": {
+      "314": [
+        192,
+        193
+      ],
+      "315": [
+        187,
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "316": [
+        187,
+        188,
+        189,
+        190,
+        191
+      ]
+    },
+    "finding": "Dark grout bands remain physically connected. A roughly2-5px bevel/core profile step is visible at the seam and is cosmetic, not an open missing segment."
+  },
+  "lowerWestCrossing": {
+    "continuity": "fail",
+    "fixedDarkCore": [
+      314,
+      857
+    ],
+    "generatedRightDarkCore": [
+      315,
+      889
+    ],
+    "verticalOffsetPixels": 32,
+    "finding": "The left and right broad grout bands have disjoint vertical positions at x315. This is a hard seam discontinuity and requires another native repair before publishing the combined selection."
+  },
+  "otherPerimeters": {
+    "status": "pass continuity for inspected crossings",
+    "nativeCropsViewed": [
+      "upper-right-crossing.png",
+      "upper-bottom-crossing.png",
+      "lower-top-crossing.png",
+      "lower-right-crossing.png",
+      "lower-junction.png"
+    ],
+    "finding": "The heavy diagonal grout remains connected through upper-right, upper-bottom, lower-top and lower-right transition crossings. The newly generated lower T-junction is closed; no cut-off branch or floating endpoint was found in these inspected areas."
+  },
+  "recommendation": "Use trial only as an offline source for the next repair. Correct the lower left broad grout start to y856/857 while preserving the already closed right-side T-junction and validated transition crossings. Re-review after composition.",
+  "localAcceptance": false,
+  "formalTileAcceptance": false,
+  "mutations": "Only independent QA crops and JSON under review/independent-internal-20261011/west-middle-skeleton-v1."
+}

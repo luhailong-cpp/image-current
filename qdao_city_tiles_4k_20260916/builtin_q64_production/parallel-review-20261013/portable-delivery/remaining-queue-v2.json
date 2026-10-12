@@ -1,0 +1,3036 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T06:39:06.387593+00:00",
+  "scope": "Original-owner suggestions from captured manifests only; no source modification, artwork dispatch or coordinate reservation.",
+  "ordering": [
+    "phase0_changed_input_recheck",
+    "phase1_current_candidate_reference_and_metadata_repair",
+    "phase2_adjacent_original_owner_source_queue"
+  ],
+  "phase1_current_candidate_reference_and_metadata_repair": [
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceTaskIndex": 0,
+      "task": {
+        "owner": "southeast original zone owner",
+        "priority": 1,
+        "work": "Confirm r13_c16/r14_c14/r14_c15 current candidates and write next-version aligned delivery index; supply or correct missing r13_c13/progress.json reference without changing artwork.",
+        "claimsCoordinates": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceTaskIndex": 1,
+      "task": {
+        "owner": "southwest original zone owner",
+        "priority": 2,
+        "work": "Mark legacy delivery.json entry as superseded in a new current record; provide immutable selection/script evidence for current composites where old hashes differ. Do not overwrite or restore deleted directories.",
+        "claimsCoordinates": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceTaskIndex": 2,
+      "task": {
+        "owner": "northeast original zone owner / existing subowners",
+        "priority": 3,
+        "work": "Treat r07_c15 p44 and r08_c16 prefilled16 selections as pending actual files; reconcile recorded count with file evidence. Preserve/cache-map the one historical external edit input if needed for migration.",
+        "claimsCoordinates": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceTaskIndex": 3,
+      "task": {
+        "owner": "northwest original zone owner",
+        "priority": 4,
+        "work": "Freeze one currentVerifiedDelivery pointer/hash for the intended migration cutoff; retain observed nine/eleven versions and do not hot-swap an in-flight batch.",
+        "claimsCoordinates": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceTaskIndex": 0,
+      "task": {
+        "order": 1,
+        "ownerZone": "southeast",
+        "action": "Reconcile delivery-index entry r14_c08 selection SHA and coverage against the audited current tile selection, without rolling back selected artwork. Index recorded10 positions; audited tile selection has11.",
+        "evidence": {
+          "type": "selection_advanced_beyond_delivery_index_hash",
+          "priority": "metadata_repair_before_further_delivery_snapshot",
+          "certainty": "confirmed_difference_uncertain_owner_intent",
+          "sourceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/delivery-index-20261012.json",
+          "jsonPointer": "/entries/42/selection",
+          "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r14_c08/selected-patches.json",
+          "exists": true,
+          "declaredSha256": "dccff18889e7746e4725c6de5b28cd217e7b5f26257c6d9e24fce1936bf47a90",
+          "actualSha256": "7fb7a0a1130c66ead8098d94078ef1d3df5dcc745c5ece281bf18cf3ee5bed3d",
+          "result": "present",
+          "hashMatches": false,
+          "advice": "Original owner should preserve the image and reconcile this exact metadata/snapshot after inspecting current state. Hash mismatch is not an image-missing or failed-visual-QA finding."
+        },
+        "coordinatesClaimed": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceTaskIndex": 1,
+      "task": {
+        "order": 2,
+        "ownerZone": "northeast",
+        "action": "For full r06_c13 candidate, preserve matching image/selection and record the exact historical assembly script or explain changed script hash; no candidate substitution.",
+        "evidence": {
+          "type": "historical_assembly_script_hash_changed",
+          "priority": "metadata_repair_before_further_delivery_snapshot",
+          "certainty": "confirmed_difference_uncertain_owner_intent",
+          "sourceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c13-v1/manifest.json",
+          "jsonPointer": "/script/path",
+          "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/assemble_native_candidate.py",
+          "exists": true,
+          "declaredSha256": "d66238f17b7dfd1e5970109faa18804811ee18ff96c2c64a4900023858d23389",
+          "actualSha256": "33d9da18a1d0d78b65dbdd3f46f01a81ad74ef98847d0ed8ac074742213aa9dc",
+          "result": "present",
+          "hashMatches": false,
+          "advice": "Original owner should preserve the image and reconcile this exact metadata/snapshot after inspecting current state. Hash mismatch is not an image-missing or failed-visual-QA finding."
+        },
+        "coordinatesClaimed": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceTaskIndex": 2,
+      "task": {
+        "order": 3,
+        "ownerZone": "northeast/southwest",
+        "action": "Refresh current policy/resume metadata snapshots under the updated user model policy. These cached SHA differences do not mean image files are absent.",
+        "evidence": [
+          {
+            "type": "stale_current_policy_metadata_hash",
+            "priority": "metadata_repair_before_further_delivery_snapshot",
+            "certainty": "confirmed_difference_uncertain_owner_intent",
+            "sourceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/progress.json",
+            "jsonPointer": "/generationGate/projectRules/path",
+            "path": "AGENTS.md",
+            "exists": true,
+            "declaredSha256": "94b3d5f54a7f2bfb41a9a5f3e06f166d2e2f4bf24845813090974e59ac5dbbcf",
+            "actualSha256": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+            "result": "present",
+            "hashMatches": false,
+            "advice": "Original owner should preserve the image and reconcile this exact metadata/snapshot after inspecting current state. Hash mismatch is not an image-missing or failed-visual-QA finding."
+          },
+          {
+            "type": "stale_current_policy_metadata_hash",
+            "priority": "metadata_repair_before_further_delivery_snapshot",
+            "certainty": "confirmed_difference_uncertain_owner_intent",
+            "sourceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/progress.json",
+            "jsonPointer": "/generationGate/modelRequirement/path",
+            "path": "docs/IMAGE_MODEL_REQUIREMENT.md",
+            "exists": true,
+            "declaredSha256": "6ec0c0b2f5d582a86b363632e93bd09f932df858f1d4476dd662dd62e7b54817",
+            "actualSha256": "62b993caa0496f33e3cc752a19102f6f5afaccd9d1de9826add5b7aa2e8b7eb0",
+            "result": "present",
+            "hashMatches": false,
+            "advice": "Original owner should preserve the image and reconcile this exact metadata/snapshot after inspecting current state. Hash mismatch is not an image-missing or failed-visual-QA finding."
+          },
+          {
+            "type": "stale_resume_metadata_hash",
+            "priority": "metadata_repair_before_further_delivery_snapshot",
+            "certainty": "confirmed_difference_uncertain_owner_intent",
+            "sourceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/progress.json",
+            "jsonPointer": "/productionResume/path",
+            "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/production-resume-20261012.json",
+            "exists": true,
+            "declaredSha256": "9acc5d3ad892e5a9cc9f2c49041382b14bd2519de9a8cdbf499dfab698f46091",
+            "actualSha256": "51934e4ca91117d2f329656860be071f6f5bf8e8a4fbc16bd28e55cf42c65d3f",
+            "result": "present",
+            "hashMatches": false,
+            "advice": "Original owner should preserve the image and reconcile this exact metadata/snapshot after inspecting current state. Hash mismatch is not an image-missing or failed-visual-QA finding."
+          }
+        ],
+        "coordinatesClaimed": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceTaskIndex": 3,
+      "task": {
+        "order": 4,
+        "ownerZone": "southeast",
+        "action": "Mark the unused root-level selected-patches.json as a legacy alias in a future owner-managed version; current r10_c09 delivery points to its tile-level selection. Do not restore missing old root/native paths.",
+        "evidence": {
+          "legacy": "southeast/selected-patches.json",
+          "currentPointer": "southeast/delivery-index-20261012.json#/entries/15/selection"
+        },
+        "coordinatesClaimed": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceTaskIndex": 4,
+      "task": {
+        "order": 5,
+        "ownerZone": "northeast",
+        "action": "Keep old guide configSource/contract hashes as archival preparation facts; do not recreate removed config directories. Current contracts are handled by root audit.",
+        "coordinatesClaimed": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceTaskIndex": 0,
+      "task": {
+        "priority": 1,
+        "workType": "metadata_or_reference_repair_for_complete_candidate",
+        "auditFindingIndex": 0,
+        "evidence": {
+          "type": "delivery-index-scope-lag",
+          "zone": "northeast",
+          "evidence": {
+            "progressPointer": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/progress.json/deliveryIndex",
+            "deliveryIndex": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/exports/20261011-local-v2/delivery-index.json",
+            "deliveryTileIds": [
+              "r03_c12",
+              "r03_c13",
+              "r03_c14",
+              "r04_c12",
+              "r04_c13",
+              "r04_c14"
+            ],
+            "currentCompleteTileIds": [
+              "r03_c10",
+              "r03_c11",
+              "r03_c12",
+              "r03_c13",
+              "r03_c14",
+              "r04_c11",
+              "r04_c12",
+              "r04_c13",
+              "r04_c14",
+              "r05_c12",
+              "r05_c13",
+              "r05_c14"
+            ],
+            "inventory": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json"
+          },
+          "recommendation": "Owner publish a new versioned delivery index for current candidates; do not treat six-tile export as the entire current NE delivery."
+        },
+        "ownerZone": "northeast",
+        "newArtworkRequiredByThisFinding": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceTaskIndex": 1,
+      "task": {
+        "priority": 0,
+        "workType": "metadata_or_reference_repair_for_complete_candidate",
+        "auditFindingIndex": 3,
+        "evidence": {
+          "type": "reference-conflict",
+          "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c12-sol-v1.png.derivation.json",
+          "pointer": "/requiredOverlays/0/baseSources/2/file",
+          "original": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c13.png",
+          "resolvedRepoRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c13.png",
+          "expectedSha256": "92a523d470daf862589d81fba05098630372c8b0ba246b56d33d103636c05740",
+          "actualSha256": "2a34551e872cf6e23510809870b62bd1c5a7e3b82a09fb086569c0fdc7e212da",
+          "expectedDimensions": null,
+          "actualDimensions": [
+            4096,
+            4096
+          ],
+          "recommendation": "Original owner verify intended current version and export a new portable index; do not restore deleted paths or overwrite source files.",
+          "interpretation": "Mutable historical generation-reference context hash differs; directly selected repair source remains present and hash-matching. This is a reference reproducibility uncertainty, not proof of missing source pixels or a failed candidate."
+        },
+        "ownerZone": "northeast",
+        "newArtworkRequiredByThisFinding": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceTaskIndex": 2,
+      "task": {
+        "priority": 0,
+        "workType": "metadata_or_reference_repair_for_complete_candidate",
+        "auditFindingIndex": 4,
+        "evidence": {
+          "type": "reference-conflict",
+          "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c13.png.derivation.json",
+          "pointer": "/requiredOverlays/3/baseSources/2/file",
+          "original": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c13.png",
+          "resolvedRepoRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r05_c13.png",
+          "expectedSha256": "92a523d470daf862589d81fba05098630372c8b0ba246b56d33d103636c05740",
+          "actualSha256": "2a34551e872cf6e23510809870b62bd1c5a7e3b82a09fb086569c0fdc7e212da",
+          "expectedDimensions": null,
+          "actualDimensions": [
+            4096,
+            4096
+          ],
+          "recommendation": "Original owner verify intended current version and export a new portable index; do not restore deleted paths or overwrite source files.",
+          "interpretation": "Mutable historical generation-reference context hash differs; directly selected repair source remains present and hash-matching. This is a reference reproducibility uncertainty, not proof of missing source pixels or a failed candidate."
+        },
+        "ownerZone": "northeast",
+        "newArtworkRequiredByThisFinding": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceTaskIndex": 3,
+      "task": {
+        "priority": 0,
+        "workType": "metadata_or_reference_repair_for_complete_candidate",
+        "auditFindingIndex": 5,
+        "evidence": {
+          "type": "reference-conflict",
+          "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/tiles/r07_c03_candidate-v1_4096.assembly.json",
+          "pointer": "/manifestSnapshot/selectionBasis/path",
+          "original": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/root-current-selection-20261012.json",
+          "resolvedRepoRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/root-current-selection-20261012.json",
+          "expectedSha256": "b87d241fe7206dacaff48b0dc226897958f81c251c8dfcc85f0ebbb641e73454",
+          "actualSha256": "0770df0d5868e3539e62c3a1e6a7026cedb47eb5161e073d45b653ea9557833c",
+          "expectedDimensions": null,
+          "actualDimensions": null,
+          "recommendation": "Original owner verify intended current version and export a new portable index; do not restore deleted paths or overwrite source files.",
+          "interpretation": "Assembly records a prior selectionBasis hash while its path points to a mutable current selection. Embedded selection snapshot and selected-source hashes remain separate evidence; owner should reference an immutable version."
+        },
+        "ownerZone": "northwest",
+        "newArtworkRequiredByThisFinding": false
+      },
+      "newArtworkRequiredByThisAudit": false
+    }
+  ],
+  "rootMigrationMetadataTasks": [
+    {
+      "priority": 1,
+      "action": "Prepare next owner-managed delivery sidecar with repo-relative lookup for current selected paths; retain raw source history and hashes. This audit changes no original records.",
+      "evidenceReport": "root-reference-audit-v2.json"
+    },
+    {
+      "priority": 1,
+      "action": "Carry current AGENTS.md and both designs references with measured hashes; historic missing-mail note is superseded by actual presence.",
+      "evidenceReport": "root-reference-audit-v2.json"
+    }
+  ],
+  "phase2_adjacent_original_owner_source_queue": [
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 0,
+      "ownerZone": "northwest",
+      "coordinates": [
+        "r03_c02",
+        "r03_c03",
+        "r04_c02",
+        "r04_c03"
+      ],
+      "ownerQueueDetail": {
+        "zone": "northwest",
+        "originalOwnerThread": "01a12075-f5cf-7c30-9edc-ceb79ed8cfbd",
+        "existingSubOwnerLabel": "zone_owner",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-windows.json",
+        "coordinates": [
+          "r03_c02",
+          "r03_c03",
+          "r04_c02",
+          "r04_c03"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r03_c02",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "s01_01",
+              "s01_02",
+              "s01_03",
+              "s01_04",
+              "s02_01",
+              "s02_02",
+              "s02_03",
+              "s02_04",
+              "s03_01",
+              "s03_02",
+              "s03_03",
+              "s03_04",
+              "s04_01",
+              "s04_02",
+              "s04_03",
+              "s04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r03_c03",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "s01_01",
+              "s01_02",
+              "s01_03",
+              "s01_04",
+              "s02_01",
+              "s02_02",
+              "s02_03",
+              "s02_04",
+              "s03_01",
+              "s03_02",
+              "s03_03",
+              "s03_04",
+              "s04_01",
+              "s04_02",
+              "s04_03",
+              "s04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r04_c02",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "s01_01",
+              "s01_02",
+              "s01_03",
+              "s01_04",
+              "s02_01",
+              "s02_02",
+              "s02_03",
+              "s02_04",
+              "s03_01",
+              "s03_02",
+              "s03_03",
+              "s03_04",
+              "s04_01",
+              "s04_02",
+              "s04_03",
+              "s04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r04_c03",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "s01_01",
+              "s01_02",
+              "s01_03",
+              "s01_04",
+              "s02_01",
+              "s02_02",
+              "s02_03",
+              "s02_04",
+              "s03_01",
+              "s03_02",
+              "s03_03",
+              "s03_04",
+              "s04_01",
+              "s04_02",
+              "s04_03",
+              "s04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12075-f5cf-7c30-9edc-ceb79ed8cfbd",
+        "title": "主城游戏图｜西北官府区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 1,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r05_c09",
+        "r05_c10",
+        "r06_c09",
+        "r06_c10"
+      ],
+      "ownerQueueDetail": {
+        "zone": "northeast",
+        "originalOwnerThread": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "existingSubOwnerLabel": "left_finish_20261012",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/work-queue-finish-20261012.json",
+        "coordinates": [
+          "r05_c09",
+          "r05_c10",
+          "r06_c09",
+          "r06_c10"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r05_c09",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r05_c10",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c09",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c10",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "title": "主城游戏图｜东北通天塔区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 2,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r05_c11",
+        "r05_c12",
+        "r06_c11",
+        "r06_c12"
+      ],
+      "ownerQueueDetail": {
+        "zone": "northeast",
+        "originalOwnerThread": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "existingSubOwnerLabel": "middle_finish_20261012",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/work-queue-finish-20261012.json",
+        "coordinates": [
+          "r05_c11",
+          "r05_c12",
+          "r06_c11",
+          "r06_c12"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r05_c11",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r05_c12",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c11",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c12",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "title": "主城游戏图｜东北通天塔区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 3,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r03_c13",
+        "r03_c14",
+        "r04_c13",
+        "r04_c14"
+      ],
+      "ownerQueueDetail": {
+        "zone": "northeast",
+        "originalOwnerThread": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "existingSubOwnerLabel": "root",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/work-queue-finish-20261012.json",
+        "coordinates": [
+          "r03_c13",
+          "r03_c14",
+          "r04_c13",
+          "r04_c14"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r03_c13",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r03_c14",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r04_c13",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r04_c14",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "title": "主城游戏图｜东北通天塔区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 4,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r05_c15",
+        "r05_c16",
+        "r06_c15",
+        "r06_c16"
+      ],
+      "ownerQueueDetail": {
+        "zone": "northeast",
+        "originalOwnerThread": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "existingSubOwnerLabel": "east_finish_20261012",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/work-queue-finish-20261012.json",
+        "coordinates": [
+          "r05_c15",
+          "r05_c16",
+          "r06_c15",
+          "r06_c16"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r05_c15",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r05_c16",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c15",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 7,
+            "missingIds": null,
+            "state": "count_recorded_ids_not_explicit",
+            "notClaimed": true
+          },
+          {
+            "tile": "r06_c16",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation",
+        "ownershipNote": "r07_c15 remains the temporary root-owned coordinate explicitly excluded from east_finish; no suggestion transfers it."
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12075-ff24-76d0-ac68-97861111ddb0",
+        "title": "主城游戏图｜东北通天塔区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 5,
+      "ownerZone": "southwest",
+      "coordinates": [
+        "r09_c03",
+        "r09_c04",
+        "r10_c03",
+        "r10_c04"
+      ],
+      "ownerQueueDetail": {
+        "zone": "southwest",
+        "originalOwnerThread": "01a12076-0b9d-76b2-949d-c4cf520a83be",
+        "existingSubOwnerLabel": "zone_owner",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-windows.json",
+        "coordinates": [
+          "r09_c03",
+          "r09_c04",
+          "r10_c03",
+          "r10_c04"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r09_c03",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 2,
+            "missingIds": [
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r09_c04",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r10_c03",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r10_c04",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12076-0b9d-76b2-949d-c4cf520a83be",
+        "title": "主城游戏图｜西南擂台锁妖塔区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 6,
+      "ownerZone": "southwest",
+      "coordinates": [
+        "r13_c06",
+        "r13_c07",
+        "r14_c06",
+        "r14_c07"
+      ],
+      "ownerQueueDetail": {
+        "zone": "southwest",
+        "originalOwnerThread": "01a12076-0b9d-76b2-949d-c4cf520a83be",
+        "existingSubOwnerLabel": "zone_owner",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-windows.json",
+        "coordinates": [
+          "r13_c06",
+          "r13_c07",
+          "r14_c06",
+          "r14_c07"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r13_c06",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 14,
+            "missingIds": [
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r13_c07",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r14_c06",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          },
+          {
+            "tile": "r14_c07",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+            "recordedMissingCount": 16,
+            "missingIds": [
+              "p01_01",
+              "p01_02",
+              "p01_03",
+              "p01_04",
+              "p02_01",
+              "p02_02",
+              "p02_03",
+              "p02_04",
+              "p03_01",
+              "p03_02",
+              "p03_03",
+              "p03_04",
+              "p04_01",
+              "p04_02",
+              "p04_03",
+              "p04_04"
+            ],
+            "state": "missing_current_native_slots",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12076-0b9d-76b2-949d-c4cf520a83be",
+        "title": "主城游戏图｜西南擂台锁妖塔区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v5.json",
+      "sourceGroupIndex": 7,
+      "ownerZone": "southeast",
+      "coordinates": [
+        "r15_c15",
+        "r15_c16",
+        "r16_c15",
+        "r16_c16"
+      ],
+      "ownerQueueDetail": {
+        "zone": "southeast",
+        "originalOwnerThread": "01a12076-19f9-7f00-8135-01e1b5fb7007",
+        "existingSubOwnerLabel": "zone_owner",
+        "subOwnerEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-windows.json",
+        "coordinates": [
+          "r15_c15",
+          "r15_c16",
+          "r16_c15",
+          "r16_c16"
+        ],
+        "adjacency": "connected 2x2",
+        "items": [
+          {
+            "tile": "r15_c15",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r15_c16",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r16_c15",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          },
+          {
+            "tile": "r16_c16",
+            "basisInput": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+            "recordedMissingCount": 16,
+            "missingIds": null,
+            "state": "not_started_in_current_progress",
+            "notClaimed": true
+          }
+        ],
+        "ownershipAction": "suggestion_only_no_reservation_no_generation"
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a12076-19f9-7f00-8135-01e1b5fb7007",
+        "title": "主城游戏图｜东南民宅客栈区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceGroupIndex": 0,
+      "ownerZone": "northwest",
+      "coordinates": [
+        "r06_c02",
+        "r06_c03",
+        "r07_c02",
+        "r07_c03",
+        "r07_c04"
+      ],
+      "ownerQueueDetail": {
+        "ownerZone": "northwest",
+        "coordinates": [
+          "r06_c02",
+          "r06_c03",
+          "r07_c02",
+          "r07_c03",
+          "r07_c04"
+        ],
+        "adjacent": true,
+        "claimed": false,
+        "generationAuthorizedByThisReport": false,
+        "reason": "Connect south of current r05_c02/r05_c03/r05_c04 and around existing r06_c04; omit complete coordinate r06_c04.",
+        "evidence": "northwest/coordinate-inventory-current.json#/missingNativeWholeCoordinates",
+        "perCoordinateState": {
+          "r06_c02": "missing fully covered native coordinate per current inventory",
+          "r06_c03": "missing fully covered native coordinate per current inventory",
+          "r07_c02": "missing fully covered native coordinate per current inventory",
+          "r07_c03": "missing fully covered native coordinate per current inventory",
+          "r07_c04": "missing fully covered native coordinate per current inventory"
+        },
+        "action": "Original owner should re-read current manifest and continue missing sources when authorized; retain current complete candidates. This audit does not reserve coordinates."
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-24cd-7b61-8274-37c62f38654e",
+        "title": "渔村游戏图｜西北布店街区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceGroupIndex": 1,
+      "ownerZone": "southwest",
+      "coordinates": [
+        "r11_c04",
+        "r11_c05",
+        "r12_c04",
+        "r12_c05",
+        "r12_c06"
+      ],
+      "ownerQueueDetail": {
+        "ownerZone": "southwest",
+        "coordinates": [
+          "r11_c04",
+          "r11_c05",
+          "r12_c04",
+          "r12_c05",
+          "r12_c06"
+        ],
+        "adjacent": true,
+        "claimed": false,
+        "generationAuthorizedByThisReport": false,
+        "reason": "Adjacent continuation south of current r10_c04/r10_c05/r10_c06; preserve full r11_c06.",
+        "evidence": "southwest/current-tile-ledger.json#/tiles",
+        "perCoordinateState": {
+          "r11_c04": {
+            "nativeSlotsAsRecorded": 0,
+            "coverage": "missing"
+          },
+          "r11_c05": {
+            "nativeSlotsAsRecorded": 15,
+            "coverage": "partial"
+          },
+          "r12_c04": {
+            "nativeSlotsAsRecorded": 0,
+            "coverage": "missing"
+          },
+          "r12_c05": {
+            "nativeSlotsAsRecorded": 0,
+            "coverage": "missing"
+          },
+          "r12_c06": {
+            "nativeSlotsAsRecorded": 0,
+            "coverage": "missing"
+          }
+        },
+        "action": "Original owner should re-read current manifest and continue missing sources when authorized; retain current complete candidates. This audit does not reserve coordinates."
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-3f65-7331-939e-0ea73b19f3bf",
+        "title": "渔村游戏图｜西南民宅桥岸区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceGroupIndex": 2,
+      "ownerZone": "southeast",
+      "coordinates": [
+        "r08_c08",
+        "r08_c09",
+        "r08_c10",
+        "r09_c08",
+        "r09_c10"
+      ],
+      "ownerQueueDetail": {
+        "ownerZone": "southeast",
+        "coordinates": [
+          "r08_c08",
+          "r08_c09",
+          "r08_c10",
+          "r09_c08",
+          "r09_c10"
+        ],
+        "adjacent": true,
+        "claimed": false,
+        "generationAuthorizedByThisReport": false,
+        "reason": "Adjacent north of current r10_c08/r10_c09/r10_c10, retaining full r09_c09.",
+        "evidence": "southeast/delivery-index-20261012.json#/entries",
+        "perCoordinateState": {
+          "r08_c08": {
+            "missingPatchIds": [
+              "p11",
+              "p12",
+              "p13",
+              "p14",
+              "p21",
+              "p22",
+              "p23",
+              "p24",
+              "p31",
+              "p32",
+              "p33",
+              "p34",
+              "p41",
+              "p42",
+              "p43",
+              "p44"
+            ],
+            "selectedPositionsAsRecorded": 0
+          },
+          "r08_c09": {
+            "missingPatchIds": [
+              "p11",
+              "p12",
+              "p13",
+              "p14",
+              "p21",
+              "p22",
+              "p23",
+              "p24",
+              "p31",
+              "p32",
+              "p33",
+              "p34",
+              "p42",
+              "p43",
+              "p44"
+            ],
+            "selectedPositionsAsRecorded": 1
+          },
+          "r08_c10": {
+            "missingPatchIds": [
+              "p11",
+              "p12",
+              "p13",
+              "p14",
+              "p21",
+              "p22",
+              "p23",
+              "p24",
+              "p31",
+              "p32",
+              "p33",
+              "p34",
+              "p41",
+              "p42",
+              "p43",
+              "p44"
+            ],
+            "selectedPositionsAsRecorded": 0
+          },
+          "r09_c08": {
+            "missingPatchIds": [
+              "p11",
+              "p12",
+              "p13",
+              "p14",
+              "p21",
+              "p22",
+              "p23",
+              "p24",
+              "p31",
+              "p32",
+              "p33",
+              "p34",
+              "p41",
+              "p42",
+              "p43",
+              "p44"
+            ],
+            "selectedPositionsAsRecorded": 0
+          },
+          "r09_c10": {
+            "missingPatchIds": [
+              "p11",
+              "p12",
+              "p13",
+              "p14",
+              "p21",
+              "p22",
+              "p23",
+              "p24",
+              "p31",
+              "p32",
+              "p33",
+              "p34",
+              "p41",
+              "p42",
+              "p43",
+              "p44"
+            ],
+            "selectedPositionsAsRecorded": 0
+          }
+        },
+        "action": "Original owner should re-read current manifest and continue missing sources when authorized; retain current complete candidates. This audit does not reserve coordinates."
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+        "title": "渔村游戏图｜东南船厂码头区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "sourceGroupIndex": 3,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r03_c12",
+        "r03_c13",
+        "r03_c14",
+        "r04_c12",
+        "r04_c13",
+        "r04_c14"
+      ],
+      "ownerQueueDetail": {
+        "ownerZone": "northeast",
+        "coordinates": [
+          "r03_c12",
+          "r03_c13",
+          "r03_c14",
+          "r04_c12",
+          "r04_c13",
+          "r04_c14"
+        ],
+        "adjacent": true,
+        "claimed": false,
+        "generationAuthorizedByThisReport": false,
+        "reason": "Extend north of current r05_c12/r05_c13/r05_c14. Acceleration exclusions r03_c10/r03_c11/r04_c10/r04_c11/r05_c10/r05_c11 omitted.",
+        "evidence": "northeast/progress.json#/generatedCoordinateCoverageByTile",
+        "perCoordinateState": {
+          "r03_c12": {
+            "recordedCoverage": 0,
+            "status": "coverage count is owner-reported, not recensused"
+          },
+          "r03_c13": {
+            "recordedCoverage": 0,
+            "status": "coverage count is owner-reported, not recensused"
+          },
+          "r03_c14": {
+            "recordedCoverage": 0,
+            "status": "coverage count is owner-reported, not recensused"
+          },
+          "r04_c12": {
+            "recordedCoverage": 9,
+            "status": "coverage count is owner-reported, not recensused"
+          },
+          "r04_c13": {
+            "recordedCoverage": 0,
+            "status": "coverage count is owner-reported, not recensused"
+          },
+          "r04_c14": {
+            "recordedCoverage": 1,
+            "status": "coverage count is owner-reported, not recensused"
+          }
+        },
+        "action": "Original owner should re-read current manifest and continue missing sources when authorized; retain current complete candidates. This audit does not reserve coordinates."
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-31f1-7d92-879a-4d63c0e554c3",
+        "title": "渔村游戏图｜东北鱼市商铺区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceGroupIndex": 0,
+      "ownerZone": "northwest",
+      "coordinates": [
+        "r05_c01",
+        "r05_c02",
+        "r06_c01",
+        "r06_c02"
+      ],
+      "ownerQueueDetail": {
+        "id": "island-nw-original-owner-preflight-four",
+        "ownerZone": "northwest",
+        "action": "Review the 4 adjacent existing-owner tiles; only 2 have explicit selected-source gaps, other 2 are unindexed and need owner confirmation. Do not force new generation coordinates.",
+        "status": "preflight_required_before_missing-artwork-dispatch",
+        "tiles": [
+          "r05_c01",
+          "r05_c02",
+          "r06_c01",
+          "r06_c02"
+        ],
+        "items": [
+          {
+            "tile": "r05_c01",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/current-adopted-20261012.json",
+            "evidencePointer": "/partialTiles/r05_c01",
+            "ownershipClaimed": false,
+            "state": "not_listed_in_current_selected_index",
+            "missingGeneratedCoordinatesConfirmed": false,
+            "missingSourceCoordinates": null,
+            "requiredPreflight": "Original owner must confirm saved-but-unindexed sources before assigning any new image work."
+          },
+          {
+            "tile": "r05_c02",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/current-adopted-20261012.json",
+            "evidencePointer": "/partialTiles/r05_c02",
+            "ownershipClaimed": false,
+            "state": "selected_source_gaps_declared",
+            "missingSourceCoordinates": [
+              "r05_c02_s02_04",
+              "r05_c02_s03_03",
+              "r05_c02_s03_04",
+              "r05_c02_s04_03",
+              "r05_c02_s04_04"
+            ],
+            "missingGeneratedCoordinatesConfirmed": false,
+            "declaredStatus": "11of16_native_internal_QA_pending",
+            "requiredPreflight": "Differentiate existing unselected sources from genuinely ungenerated gaps."
+          },
+          {
+            "tile": "r06_c01",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/current-adopted-20261012.json",
+            "evidencePointer": "/partialTiles/r06_c01",
+            "ownershipClaimed": false,
+            "state": "not_listed_in_current_selected_index",
+            "missingGeneratedCoordinatesConfirmed": false,
+            "missingSourceCoordinates": null,
+            "requiredPreflight": "Original owner must confirm saved-but-unindexed sources before assigning any new image work."
+          },
+          {
+            "tile": "r06_c02",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/current-adopted-20261012.json",
+            "evidencePointer": "/partialTiles/r06_c02",
+            "ownershipClaimed": false,
+            "state": "selected_source_gaps_declared",
+            "missingSourceCoordinates": [
+              "r06_c02_s01_01",
+              "r06_c02_s01_02",
+              "r06_c02_s01_03",
+              "r06_c02_s01_04",
+              "r06_c02_s02_01",
+              "r06_c02_s02_02",
+              "r06_c02_s02_03",
+              "r06_c02_s02_04",
+              "r06_c02_s03_01",
+              "r06_c02_s03_02",
+              "r06_c02_s03_03",
+              "r06_c02_s03_04",
+              "r06_c02_s04_01",
+              "r06_c02_s04_02",
+              "r06_c02_s04_03",
+              "r06_c02_s04_04"
+            ],
+            "missingGeneratedCoordinatesConfirmed": true,
+            "declaredStatus": "not_started",
+            "requiredPreflight": "Differentiate existing unselected sources from genuinely ungenerated gaps."
+          }
+        ],
+        "ownerMustConfirmUnindexedTiles": [
+          "r05_c01",
+          "r06_c01"
+        ],
+        "anchorCurrentCandidates": [
+          "r04_c02",
+          "r05_c03",
+          "r06_c03"
+        ],
+        "newCoordinateClaimed": false,
+        "fourNeighborConnected": true,
+        "withinExistingOwnerScope": true
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-5a60-7332-b4ee-8acad0d64dba",
+        "title": "八仙岛游戏图｜西北仙居道场区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceGroupIndex": 1,
+      "ownerZone": "northeast",
+      "coordinates": [
+        "r04_c10",
+        "r05_c10",
+        "r05_c11",
+        "r06_c10",
+        "r06_c11",
+        "r06_c12"
+      ],
+      "ownerQueueDetail": {
+        "id": "island-ne-original-owner-six",
+        "ownerZone": "northeast",
+        "tiles": [
+          "r04_c10",
+          "r05_c10",
+          "r05_c11",
+          "r06_c10",
+          "r06_c11",
+          "r06_c12"
+        ],
+        "items": [
+          {
+            "tile": "r04_c10",
+            "missingGeneratedCoordinates": [
+              "r04_c10_p01_01",
+              "r04_c10_p01_02",
+              "r04_c10_p02_01",
+              "r04_c10_p02_02",
+              "r04_c10_p03_01",
+              "r04_c10_p03_02",
+              "r04_c10_p04_01",
+              "r04_c10_p04_02"
+            ],
+            "unselectedCoordinates": [
+              "r04_c10_p01_01",
+              "r04_c10_p01_02",
+              "r04_c10_p02_01",
+              "r04_c10_p02_02",
+              "r04_c10_p03_01",
+              "r04_c10_p03_02",
+              "r04_c10_p04_01",
+              "r04_c10_p04_02",
+              "r04_c10_p04_03"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/19",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          },
+          {
+            "tile": "r05_c10",
+            "missingGeneratedCoordinates": [
+              "r05_c10_p01_01",
+              "r05_c10_p01_02",
+              "r05_c10_p01_03",
+              "r05_c10_p01_04",
+              "r05_c10_p02_01",
+              "r05_c10_p02_02",
+              "r05_c10_p02_03",
+              "r05_c10_p02_04",
+              "r05_c10_p03_01",
+              "r05_c10_p03_02",
+              "r05_c10_p03_03",
+              "r05_c10_p03_04",
+              "r05_c10_p04_01",
+              "r05_c10_p04_02",
+              "r05_c10_p04_03",
+              "r05_c10_p04_04"
+            ],
+            "unselectedCoordinates": [
+              "r05_c10_p01_01",
+              "r05_c10_p01_02",
+              "r05_c10_p01_03",
+              "r05_c10_p01_04",
+              "r05_c10_p02_01",
+              "r05_c10_p02_02",
+              "r05_c10_p02_03",
+              "r05_c10_p02_04",
+              "r05_c10_p03_01",
+              "r05_c10_p03_02",
+              "r05_c10_p03_03",
+              "r05_c10_p03_04",
+              "r05_c10_p04_01",
+              "r05_c10_p04_02",
+              "r05_c10_p04_03",
+              "r05_c10_p04_04"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/26",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          },
+          {
+            "tile": "r05_c11",
+            "missingGeneratedCoordinates": [
+              "r05_c11_p02_01",
+              "r05_c11_p03_01",
+              "r05_c11_p04_01"
+            ],
+            "unselectedCoordinates": [
+              "r05_c11_p01_01",
+              "r05_c11_p02_01",
+              "r05_c11_p03_01",
+              "r05_c11_p04_01"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/27",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          },
+          {
+            "tile": "r06_c10",
+            "missingGeneratedCoordinates": [
+              "r06_c10_p01_01",
+              "r06_c10_p01_02",
+              "r06_c10_p01_03",
+              "r06_c10_p01_04",
+              "r06_c10_p02_01",
+              "r06_c10_p02_02",
+              "r06_c10_p02_03",
+              "r06_c10_p02_04",
+              "r06_c10_p03_01",
+              "r06_c10_p03_02",
+              "r06_c10_p03_03",
+              "r06_c10_p03_04",
+              "r06_c10_p04_01",
+              "r06_c10_p04_02",
+              "r06_c10_p04_03",
+              "r06_c10_p04_04"
+            ],
+            "unselectedCoordinates": [
+              "r06_c10_p01_01",
+              "r06_c10_p01_02",
+              "r06_c10_p01_03",
+              "r06_c10_p01_04",
+              "r06_c10_p02_01",
+              "r06_c10_p02_02",
+              "r06_c10_p02_03",
+              "r06_c10_p02_04",
+              "r06_c10_p03_01",
+              "r06_c10_p03_02",
+              "r06_c10_p03_03",
+              "r06_c10_p03_04",
+              "r06_c10_p04_01",
+              "r06_c10_p04_02",
+              "r06_c10_p04_03",
+              "r06_c10_p04_04"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/33",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          },
+          {
+            "tile": "r06_c11",
+            "missingGeneratedCoordinates": [
+              "r06_c11_p01_01",
+              "r06_c11_p01_02",
+              "r06_c11_p01_03",
+              "r06_c11_p01_04",
+              "r06_c11_p02_01",
+              "r06_c11_p02_02",
+              "r06_c11_p02_03",
+              "r06_c11_p02_04",
+              "r06_c11_p03_01",
+              "r06_c11_p03_02",
+              "r06_c11_p03_03",
+              "r06_c11_p03_04",
+              "r06_c11_p04_01",
+              "r06_c11_p04_02",
+              "r06_c11_p04_03",
+              "r06_c11_p04_04"
+            ],
+            "unselectedCoordinates": [
+              "r06_c11_p01_01",
+              "r06_c11_p01_02",
+              "r06_c11_p01_03",
+              "r06_c11_p01_04",
+              "r06_c11_p02_01",
+              "r06_c11_p02_02",
+              "r06_c11_p02_03",
+              "r06_c11_p02_04",
+              "r06_c11_p03_01",
+              "r06_c11_p03_02",
+              "r06_c11_p03_03",
+              "r06_c11_p03_04",
+              "r06_c11_p04_01",
+              "r06_c11_p04_02",
+              "r06_c11_p04_03",
+              "r06_c11_p04_04"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/34",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          },
+          {
+            "tile": "r06_c12",
+            "missingGeneratedCoordinates": [
+              "r06_c12_p01_01",
+              "r06_c12_p01_02",
+              "r06_c12_p01_03",
+              "r06_c12_p01_04",
+              "r06_c12_p02_01",
+              "r06_c12_p02_02",
+              "r06_c12_p02_03",
+              "r06_c12_p02_04",
+              "r06_c12_p03_01",
+              "r06_c12_p03_02",
+              "r06_c12_p03_03",
+              "r06_c12_p03_04",
+              "r06_c12_p04_01",
+              "r06_c12_p04_02",
+              "r06_c12_p04_03",
+              "r06_c12_p04_04"
+            ],
+            "unselectedCoordinates": [
+              "r06_c12_p01_01",
+              "r06_c12_p01_02",
+              "r06_c12_p01_03",
+              "r06_c12_p01_04",
+              "r06_c12_p02_01",
+              "r06_c12_p02_02",
+              "r06_c12_p02_03",
+              "r06_c12_p02_04",
+              "r06_c12_p03_01",
+              "r06_c12_p03_02",
+              "r06_c12_p03_03",
+              "r06_c12_p03_04",
+              "r06_c12_p04_01",
+              "r06_c12_p04_02",
+              "r06_c12_p04_03",
+              "r06_c12_p04_04"
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/production-inventory-20261012.json",
+            "evidencePointer": "/tileInventory/35",
+            "sourceAvailabilityMeaning": "Missing generated and unselected are separate; reuse saved sources after owner selection before requesting new artwork."
+          }
+        ],
+        "anchorCurrentCandidates": [
+          "r04_c11",
+          "r05_c12"
+        ],
+        "exclusionsApplied": [
+          "r01_c13",
+          "r01_c14",
+          "r02_c13",
+          "r02_c14"
+        ],
+        "newCoordinateClaimed": false,
+        "status": "suggested_missing-source_queue_for_original_owner",
+        "fourNeighborConnected": true,
+        "withinExistingOwnerScope": true
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-6907-7641-b5b1-a9c29f365c4c",
+        "title": "八仙岛游戏图｜东北仙居葫芦区"
+      },
+      "dispatchStatus": "suggestion only; owner rechecks current selected manifest before acting; no coordinate claims",
+      "latestOwnerInputsChangedAfterSnapshot": false
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceGroupIndex": 2,
+      "ownerZone": "southwest",
+      "coordinates": [
+        "r11_c01",
+        "r11_c02",
+        "r12_c01",
+        "r12_c02",
+        "r13_c01",
+        "r13_c02"
+      ],
+      "ownerQueueDetail": {
+        "id": "island-sw-original-owner-six",
+        "ownerZone": "southwest",
+        "tiles": [
+          "r11_c01",
+          "r11_c02",
+          "r12_c01",
+          "r12_c02",
+          "r13_c01",
+          "r13_c02"
+        ],
+        "items": [
+          {
+            "tile": "r11_c01",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r11_c01",
+            "currentNativeMapPointer": "/r11_c01",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          },
+          {
+            "tile": "r11_c02",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r11_c02",
+            "currentNativeMapPointer": "/r11_c02",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          },
+          {
+            "tile": "r12_c01",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r12_c01",
+            "currentNativeMapPointer": "/r12_c01",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          },
+          {
+            "tile": "r12_c02",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r12_c02",
+            "currentNativeMapPointer": "/r12_c02",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          },
+          {
+            "tile": "r13_c01",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r13_c01",
+            "currentNativeMapPointer": "/r13_c01",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          },
+          {
+            "tile": "r13_c02",
+            "missingSelectedCoreCoordinates": [
+              {
+                "subrow": 1,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 1,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 2,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 3,
+                "subcolumn": 4
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 1
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 2
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 3
+              },
+              {
+                "subrow": 4,
+                "subcolumn": 4
+              }
+            ],
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+            "evidencePointer": "/remainingCoreCoordinates/r13_c02",
+            "currentNativeMapPointer": "/r13_c02",
+            "currentSelectedMapCells": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                null,
+                null,
+                null
+              ]
+            ],
+            "sourceExistenceOutsideCurrentSelection": "not inventoried; original owner must reuse any existing saved source before new artwork"
+          }
+        ],
+        "anchorCurrentCandidates": [
+          "r11_c03"
+        ],
+        "partialAnchor": "r12_c03",
+        "newCoordinateClaimed": false,
+        "status": "suggested_missing-source_queue_for_original_owner",
+        "fourNeighborConnected": true,
+        "withinExistingOwnerScope": true
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-7a71-7041-94fe-b1b1e755e36d",
+        "title": "八仙岛游戏图｜西南竹院莲池区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "sourceGroupIndex": 3,
+      "ownerZone": "southeast",
+      "coordinates": [
+        "r13_c11",
+        "r14_c11",
+        "r14_c12",
+        "r14_c13",
+        "r13_c13",
+        "r13_c14"
+      ],
+      "ownerQueueDetail": {
+        "id": "island-se-original-owner-six",
+        "ownerZone": "southeast",
+        "tiles": [
+          "r13_c11",
+          "r14_c11",
+          "r14_c12",
+          "r14_c13",
+          "r13_c13",
+          "r13_c14"
+        ],
+        "items": [
+          {
+            "tile": "r13_c11",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/24",
+            "missingSourceCoordinates": [
+              "r13_c11_p41",
+              "r13_c11_p42",
+              "r13_c11_p43",
+              "r13_c11_p44"
+            ],
+            "coordinateEvidence": {
+              "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r13_c11.json",
+              "pointer": "/missingPatches"
+            },
+            "ownerHintFromCurrentRecord": null,
+            "currentStatus": "local_work_only_new_generation_on_hold_exact_model_requirement"
+          },
+          {
+            "tile": "r14_c11",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/30",
+            "missingSourceCoordinates": [
+              "r14_c11_p11",
+              "r14_c11_p12",
+              "r14_c11_p13",
+              "r14_c11_p14",
+              "r14_c11_p21",
+              "r14_c11_p22",
+              "r14_c11_p23",
+              "r14_c11_p24",
+              "r14_c11_p31",
+              "r14_c11_p32",
+              "r14_c11_p33",
+              "r14_c11_p34",
+              "r14_c11_p41",
+              "r14_c11_p42",
+              "r14_c11_p43",
+              "r14_c11_p44"
+            ],
+            "coordinateEvidence": {
+              "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r14_c11.json",
+              "pointer": "/missingPatches"
+            },
+            "ownerHintFromCurrentRecord": null,
+            "currentStatus": "local_work_only_new_generation_on_hold_exact_model_requirement"
+          },
+          {
+            "tile": "r14_c12",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/31",
+            "missingSourceCoordinates": [
+              "33",
+              "43"
+            ],
+            "coordinateEvidence": {
+              "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r14_c12.json",
+              "pointer": "/missingNativeCoordinates"
+            },
+            "ownerHintFromCurrentRecord": null,
+            "currentStatus": "new_generation_on_hold_exact_model_requirement"
+          },
+          {
+            "tile": "r14_c13",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/32",
+            "missingSourceCoordinates": null,
+            "requiredPreflight": "Current zone list declares incomplete tile; original owner must specify exact remaining patch coordinates from current saved source selection."
+          },
+          {
+            "tile": "r13_c13",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/25",
+            "missingSourceCoordinates": [
+              "11",
+              "12",
+              "13",
+              "21",
+              "22",
+              "23",
+              "24",
+              "31",
+              "32",
+              "33",
+              "34",
+              "41",
+              "42",
+              "43",
+              "44"
+            ],
+            "coordinateEvidence": {
+              "document": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r13_c13.json",
+              "pointer": "/missingPatchCoordinates"
+            },
+            "ownerHintFromCurrentRecord": "right_resume_sol",
+            "currentStatus": "local_work_only_new_generation_on_hold_exact_model_requirement"
+          },
+          {
+            "tile": "r13_c14",
+            "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/current-zone-counts-20261013.json",
+            "evidencePointer": "/missingNativeTiles/26",
+            "missingSourceCoordinates": null,
+            "requiredPreflight": "Current zone list declares incomplete tile; original owner must specify exact remaining patch coordinates from current saved source selection."
+          }
+        ],
+        "anchorCurrentCandidates": [
+          "r12_c11",
+          "r13_c12",
+          "r12_c13"
+        ],
+        "newCoordinateClaimed": false,
+        "status": "suggested_missing-source_queue_for_original_owner",
+        "fourNeighborConnected": true,
+        "withinExistingOwnerScope": true
+      },
+      "coordinatesClaimedByThisAudit": false,
+      "originalOwner": {
+        "threadId": "01a1216d-8b5f-7823-bf97-16e5128906cc",
+        "title": "八仙岛游戏图｜东南仙居渡口区"
+      },
+      "dispatchStatus": "blocked for automatic dispatch; original owner must compare latest selected paths/coverage and reuse saved sources before using this suggestion",
+      "latestOwnerInputsChangedAfterSnapshot": true
+    }
+  ],
+  "accelerationAssignmentsRetained": [
+    {
+      "id": "city_yamen_north",
+      "map": "main-city-game-20261009",
+      "coordinates": [
+        "r03_c04",
+        "r03_c05",
+        "r04_c04",
+        "r04_c05"
+      ],
+      "threadId": "01a12554-ab3d-7da1-b30e-6bc589e53523",
+      "newCoordinatesAllocated": []
+    },
+    {
+      "id": "village_jewelry_approach",
+      "map": "fishing-village-game-20261009",
+      "coordinates": [
+        "r03_c10",
+        "r03_c11",
+        "r04_c10",
+        "r04_c11",
+        "r05_c10",
+        "r05_c11"
+      ],
+      "threadId": "01a12554-b67d-7fe1-ba4d-e1ee2a2a8f20",
+      "newCoordinatesAllocated": []
+    },
+    {
+      "id": "island_northeast_coast",
+      "map": "island-game-20261009",
+      "coordinates": [
+        "r01_c13",
+        "r01_c14",
+        "r02_c13",
+        "r02_c14"
+      ],
+      "threadId": "01a12555-c57d-71f2-bbd6-68944dc616bc",
+      "newCoordinatesAllocated": []
+    }
+  ],
+  "completedAccelerationContext": [
+    {
+      "map": "fishing-village-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "context": {
+        "ownerZone": "accelerated-jewelry-approach",
+        "coordinates": [],
+        "claimed": false,
+        "reason": "All six explicitly assigned coordinates have current full candidates. No missing tile batch reassigned; outside neighbors remain original northeast owner coordinates.",
+        "evidence": "accelerated-jewelry-approach/resume-20261012/candidate-manifest.json#/sources"
+      }
+    },
+    {
+      "map": "island-game-20261009",
+      "sourceQueue": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v2.json",
+      "context": {
+        "id": "island-accelerated-ne-no-new-coordinate",
+        "ownerZone": "accelerated-northeast-coast",
+        "tiles": [
+          "r01_c13",
+          "r01_c14",
+          "r02_c13",
+          "r02_c14"
+        ],
+        "status": "no_missing_local_source_queue; current four complete candidates retained",
+        "newCoordinateClaimed": false,
+        "remainingWork": "External acceptance and delivery handoff belong to original owners; do not claim neighboring NE coordinates.",
+        "evidenceDocument": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/progress.json",
+        "evidencePointer": "/remainingCoordinates",
+        "fourNeighborConnected": true,
+        "withinExistingOwnerScope": true
+      }
+    }
+  ],
+  "mechanicalValidation": {
+    "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/queue-scope-validation-v2.json",
+    "sha256": "1efb0189abd110b71cc678ce3d199dc600043a5019f9a80dfc73b42b28093142",
+    "bytes": 14026
+  },
+  "ownerIdentitySources": [
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-windows.json",
+      "sha256": "58f1a4d6bf5d6215c28b0dafc3a995572af21f753a57e444ec1b9ef7864ad65d"
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/production-windows.json",
+      "sha256": "7919a278c42ec428a5b832e75cabe55956f1cabafc33787753e655647f332228"
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/production-windows.json",
+      "sha256": "3a1e6ce634dba812fac3a6e670feff2ab0572e7d5799b45870e3e38b20e406f6"
+    }
+  ],
+  "summary": {
+    "metadataTaskGroups": 13,
+    "adjacentOwnerGroups": 16,
+    "coordinateOccurrencesForOwnerSuggestions": 75,
+    "coordinatesClaimed": 0,
+    "newImageCalls": 0,
+    "changedInputDocumentsRequiringDeltaRecheck": 22,
+    "affectedOwnerZones": 11
+  },
+  "notMapCompletion": true,
+  "supersedes": {
+    "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/remaining-queue-v1.json",
+    "sha256": "b763932b1025a40570dbb300908181edb15a0a0318828f260496db30119d4a4c",
+    "reason": "Final recorded-input freshness check found 22 newer inputs; prioritize exact delta recheck and mark affected owner queues preflight-required. Coordinate groups unchanged."
+  },
+  "phase0_changed_input_recheck": [
+    {
+      "priority": 0,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "northeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "15d6ffd5261d32c32184f6ca9e7ecaa7ec95fac83af29ecfb0d5f3e586e1cfab"
+        }
+      ],
+      "finalObservedSha256": "0e8ce30a3cef7ca886197d7d1722228bb60e9a0f5e9a3328974dca3f4f45ffbc",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/delivery-index-20261012.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "52fe7b5ecfb857c62518e0e61a007b3a75d86dbb1a16c1e5032e2755bad61022"
+        }
+      ],
+      "finalObservedSha256": "2bdb3853c9accd2fef7a269b396f2d200ecb0ced421b6ed29147780a02ea7807",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "d69ed221637f50ddf7058abf27375f74282f1f314f4d2c67fc0ea0b19f40dd25"
+        }
+      ],
+      "finalObservedSha256": "89499dbfeb4f0a75a3c1bc1a9040df180ea583b2f9c1dd7a20420bf240b3cba2",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "d4ab5556c4cc631ed141379d3907221091e82d63e172cdaf0b3fdd6752f5a7d1"
+        }
+      ],
+      "finalObservedSha256": "8e494a2bc79be4b4c11904f9c380b10fd701c23bf248c1471de297a5495e7910",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "island-game-20261009",
+      "ownerZone": "accelerated-northeast-coast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/current-selection-20261012.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "868fd6e97d839f33a77e95f7c106f54aa34a6a5169c244375eb79fc1b7b8b4a5"
+        }
+      ],
+      "finalObservedSha256": "0efaa7ba8e6c2787872452fbacd2bca144fd7282f72024aa56e382078baf20f4",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "island-game-20261009",
+      "ownerZone": "accelerated-northeast-coast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "2948c54a813d030a251f403698c40c2d5ab9c4469eb440c4d12019a7f583fe9d"
+        }
+      ],
+      "finalObservedSha256": "94fc4c1637dfea1083b38b80909ee782fdbf9bd5e0bf0915a42c6646aad69717",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "island-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "58bb87d802f754e947d3d9d7d052d5ea9f8a2520ee26054c811326e9dc66cabf"
+        }
+      ],
+      "finalObservedSha256": "ae695de39dee730612eb580d467d4e3e452751769ee438c190dd66cb6be91885",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "island-game-20261009",
+      "ownerZone": "southwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "83b1a9519982be14b62f49416cb3d0e3c23363e4c1a790eec7e706ef25d4d302"
+        }
+      ],
+      "finalObservedSha256": "b85fbefaded32901710df61d2af2af401285210bdba384c00775663a6d567b8e",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "accelerated-yamen-north",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "a17375d1a982e80039875889ee683188917a017123c23f946c4983e801f505d8"
+        }
+      ],
+      "finalObservedSha256": "2b57837a9615c7c93cd127f43d1869b98773001f2d6aedb3278ad3b6081886ce",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "northwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "8d8ff695b8d5301a564e5e0fa3640725baf8993da1cdccc54cffe11c60e7899c"
+        }
+      ],
+      "finalObservedSha256": "fc3f6aad9028a2bb68266d4b8c685f226ff851aae09fefd2878656cd67227f44",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/delivery-20261012/index.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "d7009510fd6a0a41e45cc801ac029206d49da8dcab13bb4a07c1355ef8128b81"
+        }
+      ],
+      "finalObservedSha256": "ca64391c9d91cfe382264ea27ca0174f4e7d213b50486f6dfbda3e1a7b973611",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "7d6c20b405e0a594fed13e94eb6c0885d4dbf4b9110f141c6a4bebc5314780e8"
+        }
+      ],
+      "finalObservedSha256": "4d3b8065f35da41db661836853708c081daf1941a5dc0f869b50133296f3949d",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r16_c13/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "5f0ca3de0e430e86a5727bb510fbef08e2e811ed922fb9fd6bff81dc3ada5ffd"
+        }
+      ],
+      "finalObservedSha256": "c592d4e2749c56ada92b3634cff4e0d02567c862043ba95a77f5f6b4e149c585",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 0,
+      "map": "main-city-game-20261009",
+      "ownerZone": "southwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/progress.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "city-portability-v5.json",
+          "sha256": "91d1bae68fa5a7b428bfa6b2cc30ffceef27c8adde8629a980931610bfafd117"
+        }
+      ],
+      "finalObservedSha256": "045a5960b5f94bb3441ffc70eab2e229ebab6d16f32049e8245b2109f9ab3563",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r08_c09/selected-patches.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "54bfe5e0a6f7ef181561edb898c63c137daf83c5bf3baf27cfe91b578728ea18"
+        }
+      ],
+      "finalObservedSha256": "0f07589696bc0974ea753c35607b18030cbe29c9c2bf9513a6ca83a3e2f77d42",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r13_c10/selected-patches.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "a568b18206f028c60269d4ff1dd334ffea98e4617f4aa7255bd4a119ee766391"
+        }
+      ],
+      "finalObservedSha256": "a64bc3f3c12375cf46353e6f093a3f41e9267a0e7b8de3ac2c7515c3b40ca622",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "fishing-village-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r14_c08/selected-patches.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "village-portability-v3.json",
+          "sha256": "7fb7a0a1130c66ead8098d94078ef1d3df5dcc745c5ece281bf18cf3ee5bed3d"
+        }
+      ],
+      "finalObservedSha256": "0d63aed16ab3499016fdfc4a15495b74f9a1a58fd15c4ea9b8beebd712aa1da8",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "island-game-20261009",
+      "ownerZone": "northwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/west-current-selection-20261012.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "aafda5f112fda14a6d60c04a1520aeac016d6e9bcd4dc0175323c36e4c8a7567"
+        }
+      ],
+      "finalObservedSha256": "dc6e010de1707e06f6105397231db86a6e0c4040d177ea164edd51e4f2f5059c",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "island-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r13_c11.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "60c790e4f13452d0ff9dd857aa7130a2d351513e7deca67dca20c4466dbfedaa"
+        }
+      ],
+      "finalObservedSha256": "55bdb5dd88b869573426df081b0d204c30bc6d9b06d64522df701c5a302099ec",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "island-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r14_c11.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "90a3f8a6e12331c8c6602994d8874e6fa06459b55422345d36f5a9e718c1d556"
+        }
+      ],
+      "finalObservedSha256": "68a16ce57ef0dfb0ebc4f1a11548cad30c91f644eb331c0735817950ddfb255c",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "island-game-20261009",
+      "ownerZone": "southeast",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southeast/progress-r14_c12.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "6e4e778b7832d5f5ed4950a2c5fd5051752b08a1f63ac282b90453477875d8f3"
+        }
+      ],
+      "finalObservedSha256": "8de8776f9e4f11ca4d29503fec96279c80ac07de47ec6a8226facff4582cf2c3",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    },
+    {
+      "priority": 1,
+      "map": "island-game-20261009",
+      "ownerZone": "southwest",
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/current-native-map.json",
+      "capturedInputSha256ByReport": [
+        {
+          "report": "island-portability-v4.json",
+          "sha256": "84dcf1f8d1ba2ae0bd0c5d635d51ca8c2ca856a68d9467eb237bcdc0f4f773fd"
+        }
+      ],
+      "finalObservedSha256": "9459532ea9e625f5f5a016031b058e44272b45128b277eb362d9897bcce0ea86",
+      "fileExists": true,
+      "observedAtUtc": "2026-10-13T06:37:29.284824+00:00",
+      "action": "Original owner reconcile this newer manifest/selection and recheck only changed candidate/source references (path, dimensions, SHA and recorded positions). Old snapshot results do not approve this revision. Preserve current artwork; no automatic version choice or generation from this audit.",
+      "currentRevisionVerifiedByThisAudit": false,
+      "coordinatesClaimed": false
+    }
+  ],
+  "inputFreshness": {
+    "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/input-freshness-v1.json",
+    "sha256": "52c6c6c46c1e3a27ece3c163f7c77342b5ae140279a171e9b5df7a858445f0e3"
+  }
+}

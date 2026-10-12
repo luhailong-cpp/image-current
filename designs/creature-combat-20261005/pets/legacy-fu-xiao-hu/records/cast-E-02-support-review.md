@@ -1,0 +1,14 @@
+# E施法02支撑修复与来源纠正
+
+2026-10-05。仅修改cast/E/02；04已转由根任务处理，本分支未调用04生图，未改04/05/06。
+
+原02两前爪与四肢数量正确，但两后足/臀部支撑低于E基准。内置AI修复四次：repair1仍偏低；repair2抬升不足；repair3改用E基准为固定下半身，支撑回位但出现残留低前爪；repair4只删除该第五爪，保留已修的两大后足和臀部支撑。repair3有一次网络请求失败未返回图片，另留失败记录。每次实际prompt、request、receipt、原生SHA、配置快照和模型/质量null记录均已保存，三个拒稿没有覆盖成品。所有返回图实际查看，repair4导出后再次view_image查看。
+
+当前正式runtime/cast/E/02.png为1024 RGBA，SHA02b473e411e1224f65ee648cc738b4bebae0657ac827280fc5c05161b41e4f5f，原生1254SHA4af6f6075c837562e35ab4f3ddde7c5019618240a9fecf79207d61d8485c1ac9。同一整画布LANCZOS1254→1024，没有整图平移、逐帧对脚或缩脚。两后足仍为大圆奶白爪和肉垫；上半身保留凝神半闭眼、右爪胸前收握、左爪举起。四肢恰为两上举前爪和两后足，单尾，前额符箓与太极铃不变。主体alpha>=128范围为[121,99,909,959]，屏左后足底约959，屏右后足底约941；改善了原帧支撑过低，并保留透视高度差。
+
+新runtime旁.generation.json指向records/cast-E-02-support-repair4.generation.json。旧02完整来源文字保留在原文件和support-candidate02副本，标明superseded。旧02记录最后一项references错误记录了覆盖后的输出SHA94a877…；依据candidate01.generation.json及原作者确认，历史编辑输入SHA已纠正为02cc718d2d9a72c7a99a5fb6043a625a78dbb4cb08413b1fe9ef0dee686a2bdf，旧值保存在correctedFrom，未改写旧actualModel/quality。
+
+旧本地.native/02.png已核SHA后删除，拒稿图片未另建本地备份。宿主缓存位于授权写目录外未删除，四次源路径和SHA在support-validation与generation记录中列明。最终固定方向E(0,-15)尚未执行，由根任务统一记录；本记录中的SHA与坐标是该后处理前状态。
+
+逐帧局部检查完成，动态与整组动作仍由根任务综合复核。本分支不再修改runtime。
+

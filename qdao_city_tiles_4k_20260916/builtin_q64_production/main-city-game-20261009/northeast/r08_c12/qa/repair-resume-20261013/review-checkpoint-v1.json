@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "tile": "r08_c12",
+  "reviewedAt": "2026-10-13T10:14:00.221Z",
+  "status": "native_complete_local_repairs_unpassed",
+  "selectedNativeCount": 16,
+  "complete4kCandidateCount": 1,
+  "internalPassed4kCount": 0,
+  "formalAcceptedCount": 0,
+  "assemblyManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r08_c12/qa/core-baseline/f7529838f3e52b886085/assembly.json",
+  "priorReviewReused": "qa/local-review-paused-20261013.json",
+  "reusedUnchangedJoins": 20,
+  "newJoinsReviewed": [
+    "vertical-p11-p12",
+    "vertical-p12-p13",
+    "horizontal-p11-p21",
+    "horizontal-p12-p22"
+  ],
+  "newCornersReviewed": [
+    "intersection-r1-c1",
+    "intersection-r1-c2"
+  ],
+  "findings": [
+    {
+      "id": "M01",
+      "status": "erroneous orphan horizontal trim removed in first local AI repair; outer crop QA pending"
+    },
+    {
+      "id": "M02",
+      "status": "duplicated narrow blue route removed by north+south native AI repair; geometry improved; new local border mismatches remain",
+      "remainingPointsTilePixels": [
+        [
+          1500,
+          630
+        ],
+        [
+          1250,
+          1800
+        ],
+        [
+          2504,
+          2048
+        ],
+        [
+          1810,
+          1000
+        ],
+        [
+          1500,
+          2254
+        ]
+      ],
+      "reviewWindows": [
+        "m02-north-left.png",
+        "m02-north-right.png",
+        "m02-south-left.png",
+        "m02-south-right.png",
+        "m02-south-top.png",
+        "m02-south-bottom.png"
+      ],
+      "note": "One attempt per north/south segment so far; not treated as passed."
+    },
+    {
+      "id": "M03",
+      "status": "first repair in flight; input crop [1933,1933,3187,3187] contains retained context strip boundaries"
+    },
+    {
+      "id": "M04",
+      "status": "central-left material/joint differences remain; later bounded repair required"
+    }
+  ],
+  "propagationRules": {
+    "north": "do not propagate original duplicated narrow route",
+    "westMiddle": "use repaired M01 only after boundary review",
+    "westBottom": "p41 stable original native unaffected by local repair; r08_c11 bottom-row generation can proceed"
+  },
+  "allOriginalsPreserved": true,
+  "gitMutation": false
+}

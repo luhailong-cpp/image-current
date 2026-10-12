@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-09 18:04:22 UTC",
+  "reviewer": "audit_contract",
+  "record": "row1_current_native_hard_minerror.json",
+  "rowArtifact": "row1_current_native_hard_minerror_4326x1254.png",
+  "rowArtifactSha256": "8e42c0945a22e6ed8870f357354e284208a85560f25c3627f4b39370d68e9b46",
+  "status": "four_usable_native_candidates_pending_complete_tile_review",
+  "usableCandidateCountInThisRow": 4,
+  "usableCandidateNativeStems": [
+    "r03_c03_s01_01_a04",
+    "r03_c03_s01_02_a03",
+    "r03_c03_s01_03_a03",
+    "r03_c03_s01_04_a03"
+  ],
+  "mandatoryStructuralRepairRegions": [],
+  "inspectedFullHeightNativeSeamCrops": [
+    "r03_c03_s01_01_a04_to_r03_c03_s01_02_a03_row1_hard_minerror_seam100pct.png",
+    "r03_c03_s01_02_a03_to_r03_c03_s01_03_a03_row1_hard_minerror_seam100pct.png",
+    "r03_c03_s01_03_a03_to_r03_c03_s01_04_a03_row1_hard_minerror_seam100pct.png"
+  ],
+  "findings": [
+    {
+      "join": "01_01a04_to_01_02a03",
+      "geometry": "Roof tile channels, upper beam edges and golden edge continue; no structural repaint is required by this review.",
+      "remainingIssue": "Small jagged color/value seam remains in the upper vermilion beam around y220..380. This was already a final-quality concern in earlier versions.",
+      "actualSeamPathRowBoundingBoxHalfOpen": [
+        1222,
+        220,
+        1254,
+        381
+      ],
+      "suggestedFinalInspectionContextRowBoxHalfOpen": [
+        1180,
+        190,
+        1295,
+        415
+      ],
+      "severity": "candidate-quality limitation; final tile reviewer decides whether local appearance repair is required"
+    },
+    {
+      "join": "01_02a03_to_01_03a03",
+      "geometry": "The earlier lantern shoulder/rib mismatch is repaired. Outer shoulder, highlights and rib curves now continue across the hard seam. No stale crown, suspension or duplicate lantern fragment is visible.",
+      "remainingIssue": "Minor paint texture differences only; no required local structural repair."
+    },
+    {
+      "join": "01_03a03_to_01_04a03",
+      "geometry": "Door pillar width and boundaries remain continuous; no old white wall strip, duplicate pillar edge or missing beam section is visible.",
+      "remainingIssue": "A small wood-value change across a cap/beam face at y450..620 remains visible but does not break its contour.",
+      "actualSeamPathRowBoundingBoxHalfOpen": [
+        3197,
+        450,
+        3262,
+        621
+      ],
+      "suggestedFinalInspectionContextRowBoxHalfOpen": [
+        3160,
+        420,
+        3300,
+        650
+      ],
+      "severity": "minor material/shading seam to revisit in complete tile review"
+    }
+  ],
+  "mechanicalVerification": {
+    "overlapPixels": 230,
+    "allOutputPixelsVerifiedAgainstNativeSources": true,
+    "feathering": false,
+    "registration": false,
+    "colorCorrection": false,
+    "resizing": false,
+    "pixelSynthesis": false
+  },
+  "limits": [
+    "Four first-row candidates only. Native count is not a completed tile count.",
+    "Lower-row joins and outer tile edges are not certified by this row review.",
+    "Formal accepted count remains outside this review and was not modified."
+  ],
+  "filesWrittenScope": [
+    "qa/",
+    "join_row1.py"
+  ],
+  "nativeSourcesModified": false,
+  "progressModified": false
+}

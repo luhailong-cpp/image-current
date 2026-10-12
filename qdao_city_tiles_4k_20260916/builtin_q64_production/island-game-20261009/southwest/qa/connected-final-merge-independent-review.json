@@ -1,0 +1,149 @@
+{
+  "createdAtUtc": "2026-10-11T06:21:34.404755+00:00",
+  "reviewer": "finish_court",
+  "status": "passed",
+  "formalAccepted": false,
+  "codeReview": [
+    "Merge copies only donor pixels already selected by the six requested top source stems, at identical tile-local/global coordinates.",
+    "Base-exclusive finial cohorts are checked for disjointness. Source identity includes image path, source hash and native global extent before source-ID remapping.",
+    "The actual saved output cohorts were independently checked by source stem/hash/extent against the appropriate saved parent. No top pixels are missing and no finial or non-top pixels changed.",
+    "There is no image resizing, feathering, warp or color processing; the operation introduces no new geometric selection edge."
+  ],
+  "tiles": [
+    {
+      "tile": "r10_c03",
+      "status": "passed",
+      "basePrefix": "finial-final-v01-r10_c03",
+      "donorPrefix": "top-final-leftsteps-v01-r10_c03",
+      "candidateSha256": "74819d825de8b0c6768081cb930f685d26d950cf883e131c780d15fc61d23e61",
+      "topSelectedPixels": 1028809,
+      "finialSelectedPixels": 1910794,
+      "commonPixels": 13837613,
+      "checks": {
+        "savedSelectionIsBinary": true,
+        "savedSelectionMismatchedPixels": 0,
+        "topFinialOverlapPixels": 0,
+        "commonBranchArtMismatchedPixels": 0,
+        "missingOrWrongTopArtPixels": 0,
+        "changedFinialArtPixels": 0,
+        "changedOutsideTopSelectionPixels": 0,
+        "sourceIdCohortMismatchedPixels": 0,
+        "mergedSourceIdsAllKnown": true,
+        "reportOutputHashesMatch": true,
+        "reportParentHashesMatch": true,
+        "scriptHashMatches": true,
+        "reportsDescribeSameGlobalBox": true
+      },
+      "topAndFinialSourceCohorts": [
+        {
+          "stem": "r10_c03_c04_finial_upper_join_v01",
+          "expectedPixels": 575401,
+          "actualPixels": 575401,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r10_c03_c04_finial_middle_join_v01",
+          "expectedPixels": 634950,
+          "actualPixels": 634950,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r10_c03_c04_finial_lower_join_v01",
+          "expectedPixels": 700443,
+          "actualPixels": 700443,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c03_package_join_v01",
+          "expectedPixels": 399929,
+          "actualPixels": 399929,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c03_wallfoot_join_v01",
+          "expectedPixels": 154929,
+          "actualPixels": 154929,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c04_steps_join_v01",
+          "expectedPixels": 5842,
+          "actualPixels": 5842,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c03_steps_join_v01",
+          "expectedPixels": 468109,
+          "actualPixels": 468109,
+          "maskPositionMismatch": 0
+        }
+      ],
+      "allSourceCohortsChecked": 27
+    },
+    {
+      "tile": "r10_c04",
+      "status": "passed",
+      "basePrefix": "finial-final-v01-r10_c04",
+      "donorPrefix": "top-final-court2-v01-r10_c04",
+      "candidateSha256": "7b3529e2c7653e94eeba19f49eb02930c1ac12a09264dd965691569138bf43b7",
+      "topSelectedPixels": 940157,
+      "finialSelectedPixels": 1870956,
+      "commonPixels": 13966103,
+      "checks": {
+        "savedSelectionIsBinary": true,
+        "savedSelectionMismatchedPixels": 0,
+        "topFinialOverlapPixels": 0,
+        "commonBranchArtMismatchedPixels": 0,
+        "missingOrWrongTopArtPixels": 0,
+        "changedFinialArtPixels": 0,
+        "changedOutsideTopSelectionPixels": 0,
+        "sourceIdCohortMismatchedPixels": 0,
+        "mergedSourceIdsAllKnown": true,
+        "reportOutputHashesMatch": true,
+        "reportParentHashesMatch": true,
+        "scriptHashMatches": true,
+        "reportsDescribeSameGlobalBox": true
+      },
+      "topAndFinialSourceCohorts": [
+        {
+          "stem": "r10_c03_c04_finial_upper_join_v01",
+          "expectedPixels": 617457,
+          "actualPixels": 617457,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r10_c03_c04_finial_middle_join_v01",
+          "expectedPixels": 548065,
+          "actualPixels": 548065,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r10_c03_c04_finial_lower_join_v01",
+          "expectedPixels": 705434,
+          "actualPixels": 705434,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c04_steps_join_v01",
+          "expectedPixels": 332631,
+          "actualPixels": 332631,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c04_court_join1_v01",
+          "expectedPixels": 322504,
+          "actualPixels": 322504,
+          "maskPositionMismatch": 0
+        },
+        {
+          "stem": "r09_r10_c04_court_join2_v01",
+          "expectedPixels": 285022,
+          "actualPixels": 285022,
+          "maskPositionMismatch": 0
+        }
+      ],
+      "allSourceCohortsChecked": 27
+    }
+  ],
+  "remaining": "Connected group visual seam QA is separate."
+}

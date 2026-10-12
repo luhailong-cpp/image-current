@@ -1,0 +1,397 @@
+{
+  "atUtc": "2026-10-04T16:20:31.779710+00:00",
+  "reviewer": "delivery_check independent static review",
+  "direction": "W",
+  "status": "static_reviewed_no_confirmed_hard_defect",
+  "selection": {
+    "path": "generation/run/W/selection-middle4-side2-20261004.json",
+    "sha256": "be8f9593ed1f4f428c4f2fc4be40fb5d858f41d3006c7cd1a26915edc15ccaad"
+  },
+  "methods": [
+    "依据最终选表重新生成并实际查看全部16帧完整画布和固定区域腿部联系表。",
+    "已实际查看最终槽01、05、06、07、08、09、11、14、16完整原生图；07/14在上次修订落盘后也已单独审看。",
+    "完整画布联系表使用固定W导出变换、240px显示，不逐帧拟合或贴地。",
+    "支撑膝踝、腿的前后遮挡、鞋掌与鞋尖、持物手、头身和相邻相位综合判断；未以alpha最低点证明地面。"
+  ],
+  "nativeSlotsViewed": [
+    1,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    14,
+    16
+  ],
+  "nativeSourceCount": 16,
+  "uniqueFileAndPixelHashes": true,
+  "contactPattern": [
+    {
+      "foot": "right",
+      "front": [
+        1,
+        2
+      ],
+      "middleEarly": [
+        3,
+        4
+      ],
+      "middleLate": [
+        5,
+        6
+      ],
+      "rear": [
+        7,
+        8
+      ]
+    },
+    {
+      "foot": "left",
+      "front": [
+        9,
+        10
+      ],
+      "middleEarly": [
+        11,
+        12
+      ],
+      "middleLate": [
+        13,
+        14
+      ],
+      "rear": [
+        15,
+        16
+      ]
+    }
+  ],
+  "visibleSupportFrames": {
+    "right": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "left": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "contactConfidence": "medium: static support geometry only; world-ground and dynamic foot locking are unverified",
+  "resolvedConfirmedFindings": [
+    {
+      "issue": "06-v3、07-v3、14-v3在完整画布序列中头身明显放大",
+      "currentSources": [
+        "06-v5",
+        "07-v4",
+        "14-v4"
+      ],
+      "conclusion": "本次完整联系表及原生复核未再见相同程度的大小跳变。"
+    }
+  ],
+  "hardStaticDefectsRemaining": [],
+  "limitations": [
+    "03→04、10→11可见空右拳由身体后侧转向前侧或反向，葫芦遮挡中间路径；正常速度下是否显得突跳仍需实播判断。未判为新的高置信静态肢体错误。",
+    "接地、鞋掌承重由2D形状和相位判断，尚无世界地面标定、根点位移与滑步测量。",
+    "首尾换脚身份已静态检查，但没有动态循环或客户端运行验收。"
+  ],
+  "timing": {
+    "frameMs": 75,
+    "cycleMs": 1200,
+    "scope": "selection contract only; no playback performed"
+  },
+  "dynamicVisualVerified": false,
+  "clientIntegrated": false,
+  "frames": [
+    {
+      "frame": 1,
+      "source": "generation/run/W/01-v2.png",
+      "sourceSha256": "bd51a4f441a0c99e8a797ae894726e8c36ee3075f3560dffe7d6d1b3fded44bc",
+      "generationRecordSha256": "ea093d7ae4dec027607e7aad3ffde1ec067aea677569b80b04048851f51ec03d",
+      "nativePixelSha256": "720b9fcd84f38a855e0bc1aa7eb53559a6483a54a76d442dc32f1ef9c8383b2b",
+      "supportFoot": "right",
+      "positionPair": 1,
+      "staticObservation": "右支撑腿向W前伸，鞋跟侧初接触，另一腿后折；左手抱葫芦，右空臂后摆。"
+    },
+    {
+      "frame": 2,
+      "source": "generation/run/W/16-v5.png",
+      "sourceSha256": "16230944f0ebccecf128d96393805c27fd6f036f2ea5d2b487ede68247748341",
+      "generationRecordSha256": "32f8fbdb6379fc27efcfba77b38c021f23f0b206fcd3a8d0452880f1e0363d86",
+      "nativePixelSha256": "83a24154d6b598bd9f0f435fb8e66ab00df5e27e1bddf8c9486e7452c17b9ea0",
+      "supportFoot": "right",
+      "positionPair": 1,
+      "staticObservation": "同一右前脚转更平的加载姿态，左恢复腿后折；与01并非同一鞋掌姿态。"
+    },
+    {
+      "frame": 3,
+      "source": "generation/run/W/flow-03-v1.png",
+      "sourceSha256": "7c1fcec96bd59724f632627e851e688a9a94d625033b28b2cc9d92f134f518e2",
+      "generationRecordSha256": "b49549bb469f0f06d738a076fe7aca1b8822800529a3d57fb32a642d642d51d3",
+      "nativePixelSha256": "cdc87cfe46697afff306e7d3654299a02b31046a5b94dc083f84ae9bedf8b101",
+      "supportFoot": "right",
+      "positionPair": 2,
+      "staticObservation": "右远侧空臂经躯干与葫芦自然遮挡，形成后摆到前摆的经过位；左持物手与双腿保持。",
+      "observation": "右远侧空臂经躯干与葫芦自然遮挡，形成后摆到前摆的经过位；左持物手与双腿保持。",
+      "revisionEvidence": "review/full-body-20261004/run-south-repairs.json",
+      "revisionReviewer": "/root/full_body_run_south"
+    },
+    {
+      "frame": 4,
+      "source": "generation/run/W/03-v3.png",
+      "sourceSha256": "d7f52551af55ed1ebb54c763a44919c8e5c91743e8f3b5bbcd49ce5a2599c4a4",
+      "generationRecordSha256": "01abddb05d92aab3c8cb6ec61dde7b276f201d428eb7bea622751b48dd05b8bd",
+      "nativePixelSha256": "8735e4a40329c439f48541732ba58a06a050de4286b7548b0be966275dbf284d",
+      "supportFoot": "right",
+      "positionPair": 2,
+      "staticObservation": "右中段继续承重，左膝开始经过、左鞋仍抬起；右空拳出现在前侧，葫芦抱持侧未变。"
+    },
+    {
+      "frame": 5,
+      "source": "generation/run/W/05-v3.png",
+      "sourceSha256": "5cfd9914b3691197564fb2e715925390a58705c3784eb9bcb1c27efa34aaaa14",
+      "generationRecordSha256": "08e4f137bade7ee27e3ea895fa2cebd73b0474de0bcc0192f7aab8d4ac872678",
+      "nativePixelSha256": "bbb217b915168b83f62106777ee9eea8e1ca74152c4716661e595106e0d1a330",
+      "supportFoot": "right",
+      "positionPair": 3,
+      "staticObservation": "右支撑脚平掌承重，左膝向前上提；头身与相邻修订保持同一量级，没有先前的突然放大。"
+    },
+    {
+      "frame": 6,
+      "source": "generation/run/W/06-v5.png",
+      "sourceSha256": "cd67136b75e298c568f0b344d3f0af3bc30c99d1f29b0895a7aff351dc4efc71",
+      "generationRecordSha256": "4155ab021f2ed61e586d8151fef00366c4cb89a8f7575ec6e3354792d35e1600",
+      "nativePixelSha256": "6cb899ac1ec5d168d23743b689534705a353a05cb8b5d76ee8ba3b9d8394d03e",
+      "supportFoot": "right",
+      "positionPair": 3,
+      "staticObservation": "原生复核06-v5：右支撑膝踝相连、鞋掌仍朝地，左摆腿更前伸；头发、脸与身体比例已恢复到05附近。"
+    },
+    {
+      "frame": 7,
+      "source": "generation/run/W/07-v4.png",
+      "sourceSha256": "c7bd75ee079e9814ecab9f2b0d51f5fae6c8af55725908f333050e1274e6cba7",
+      "generationRecordSha256": "d5a239d4378a8cda9af66c54273823c46c3f67420513653e66b47f136cac72f2",
+      "nativePixelSha256": "49f17282ed3d0fc85cfc0adb9ff40c88900ccd5d89cea3e1bb675985a1799896",
+      "supportFoot": "right",
+      "positionPair": 4,
+      "staticObservation": "原生复核07-v4：右腿向髋后伸出、后跟开始抬而前掌朝地；左腿前抬，头身放大问题已收回。"
+    },
+    {
+      "frame": 8,
+      "source": "generation/run/W/08-v4.png",
+      "sourceSha256": "32fa43b76fae7fe7f15193f8c28fad56df4b18dfeea1bf01d9a6c8c03478a36f",
+      "generationRecordSha256": "c2c8212b12567286ae452ec57e551d24401e4dc3f26272f2d788a9504b336d30",
+      "nativePixelSha256": "d7489578e33f2c2fe2f80aa0d8624545a9c4a03a01602dd83c938e2c8ffe3299",
+      "supportFoot": "right",
+      "positionPair": 4,
+      "staticObservation": "原生复核：右腿后伸幅度进一步增加，前掌端朝地；左腿前方预备落脚，空右拳维持前摆段。"
+    },
+    {
+      "frame": 9,
+      "source": "generation/run/W/09-v2.png",
+      "sourceSha256": "153fe777b64e11bd44ce3dc28dffc0c932d6993f81952ef3a1844dabc35b8b7b",
+      "generationRecordSha256": "e22ffd026d1aa15603ffa1a700db0cd3c53e3304b18b95eb009376e286d4ab6b",
+      "nativePixelSha256": "419f7c7f3c7db587e8774c4c909d5ae944808470207449baa47928c51061db34",
+      "supportFoot": "left",
+      "positionPair": 1,
+      "staticObservation": "原生复核：换左脚前伸初触，右腿后折；膝踝未错接，空右手与左持葫芦保持身份。"
+    },
+    {
+      "frame": 10,
+      "source": "generation/run/W/08-v3.png",
+      "sourceSha256": "c3f3d658ad5f971650c59da64049354d05020cfb15cae7711df6d6a89065902c",
+      "generationRecordSha256": "d362abdd03e5700d095629ccb4d676b3e9c1341807a0f485f80cdc4d57da2b6a",
+      "nativePixelSha256": "1b97fd6c4e79fad4a719dd3483381832b756bcbb000228b397652dc4432917b6",
+      "supportFoot": "left",
+      "positionPair": 1,
+      "staticObservation": "同一左前脚由初触转较平承重，右腿仍后折恢复；前侧两张姿态确有差异。"
+    },
+    {
+      "frame": 11,
+      "source": "generation/run/W/flow-11-v1.png",
+      "sourceSha256": "c9d863b5e61fe3cca4932e0f761921ce1d5c1bc7aec08fd3cd1e9252a0cb660a",
+      "generationRecordSha256": "a6968f84f26b4e43bf278f8233a1441a980fa2a978745043aa20aecfd969ee44",
+      "nativePixelSha256": "7e31ce55861d46eb98d4e59f91715b7597ab9185942a7a816370a910e12cb416",
+      "supportFoot": "left",
+      "positionPair": 2,
+      "staticObservation": "右远侧空臂经躯干与葫芦自然遮挡，形成前摆到后摆的经过位；左持物手与双腿保持。",
+      "observation": "右远侧空臂经躯干与葫芦自然遮挡，形成前摆到后摆的经过位；左持物手与双腿保持。",
+      "revisionEvidence": "review/full-body-20261004/run-south-repairs.json",
+      "revisionReviewer": "/root/full_body_run_south"
+    },
+    {
+      "frame": 12,
+      "source": "generation/run/W/11-v1.png",
+      "sourceSha256": "bce754b820365b04c8ce07e54985fde3bedbb9a7758ac55735fd3f1691ee13d7",
+      "generationRecordSha256": "a35505402a786a4c2101f4b86e4cc00d4bedd50ea26b3ee5c50be2c22cbcb8fa",
+      "nativePixelSha256": "cc6f3317c5218075b5d9d10bedee6164073006a491d0dbd4e82e47cd4765ad0e",
+      "supportFoot": "left",
+      "positionPair": 2,
+      "staticObservation": "左髋下持续承重，右恢复膝更向前上方；右空手在后侧，左手握持葫芦稳定。"
+    },
+    {
+      "frame": 13,
+      "source": "generation/run/W/13-v3.png",
+      "sourceSha256": "7ac89709e9a9ac547d07392df2c2f1ceeda8144cf715643b10324b050749ba93",
+      "generationRecordSha256": "ce6907b6f96beeda4c0b2fa14a01044910d5719e469cffa5850430c44cab658b",
+      "nativePixelSha256": "972f6b70b6c9b2d7c416f0c84997c1a72d6df033568914cb9c83c9d0418fd1bb",
+      "supportFoot": "left",
+      "positionPair": 3,
+      "staticObservation": "左中段后半支撑，右摆腿向前抬起；鞋尖均朝W，未见脚掌向外扭转。"
+    },
+    {
+      "frame": 14,
+      "source": "generation/run/W/14-v4.png",
+      "sourceSha256": "c310ddfe8ce9cf9460d6745d7659d25539d4a03b8105c118f344e31990b89aab",
+      "generationRecordSha256": "4279c3231e8895aeaeab327a4c14563c58ea3db57eacbdfe9fbd2bcb9f038ed9",
+      "nativePixelSha256": "2ae6830e264ed8c2caba5a81622ee67a42825662183c6c3c3acb494474443978",
+      "supportFoot": "left",
+      "positionPair": 3,
+      "staticObservation": "原生复核14-v4：左中段末支撑、右腿进一步向前伸，头身与13/15相近；先前14突然放大已消除。"
+    },
+    {
+      "frame": 15,
+      "source": "generation/run/W/axis-15-v1.png",
+      "sourceSha256": "74339120198817e2d952d6e46b9de1b1ea54708526bb4a785994f5dbe6b138fd",
+      "generationRecordSha256": "e9c07ec1f9f2783b91dd602c806a1329f9317311ebfdf63254a4a78882ed6a9a",
+      "nativePixelSha256": "31efeeb9f2ec96bd30aefd2343ab041578cfeb495cdae6d258259f7f4b9d6b25",
+      "supportFoot": "left",
+      "positionPair": 4,
+      "staticObservation": "前抬右鞋转回W向侧帮长轴，减小14→15→16的朝镜头偏航变化；左后撑鞋保留，膝踝与左右手未改变。",
+      "observation": "前抬右鞋转回W向侧帮长轴，减小14→15→16的朝镜头偏航变化；左后撑鞋保留，膝踝与左右手未改变。",
+      "revisionReviewer": "/root/axis_side_review",
+      "revisionEvidence": "review/axis-review-20261004/side-repair-review.json"
+    },
+    {
+      "frame": 16,
+      "source": "generation/run/W/16-v6.png",
+      "sourceSha256": "4823447f5996dddcae491baf0ff5ae1afbb3566adeb49a46062c1bd7697ac973",
+      "generationRecordSha256": "59337aff3f238c02b2580d1cce95273d9ddda90095b0523d033be686e3cd4b64",
+      "nativePixelSha256": "2206ee881025281df06eaaf39e0a7b8c0ec20cca5365fa2ff308046e9c96fc4e",
+      "supportFoot": "left",
+      "positionPair": 4,
+      "staticObservation": "原生复核：左后伸腿与踝角继续变化，右腿预备前落；转01时支撑换到右脚，持物侧和脚朝向未交换。"
+    }
+  ],
+  "priorRevisions": [
+    {
+      "reportSha256": "7d0df5ce86479cc4c3f128d5679052ffa691942945679f1bfc3e3c904cc749ae",
+      "selection": {
+        "path": "generation/run/W/selection-middle4-side2-20261004.json",
+        "sha256": "be5b876321ec0c1d029312d0c38cf5c106f3ee8908f3004f3c4a8119bf109cac"
+      },
+      "replacedFrame": {
+        "frame": 15,
+        "source": "generation/run/W/15-v2.png",
+        "sourceSha256": "919d9f7779fae24e2f4684fe06bf4435b524b18e20ccd3a697379714a0263a16",
+        "generationRecordSha256": "f4bf5e662a0f1e8b8d52d52da79c076bdd10c9b57efe38ff0df39c408ab66c40",
+        "nativePixelSha256": "6c857bee351dbef9dc6f4415a456c0825dcf403fcfd129e78b261489455d53ff",
+        "supportFoot": "left",
+        "positionPair": 4,
+        "staticObservation": "左腿后伸推蹬、跟部提起而前掌朝地，右腿抬于前方；空右臂保持后摆。"
+      },
+      "reason": "shoe heading continuity follow-up"
+    },
+    {
+      "reportSha256": "fe8930ef5e471c2c0f84f9f8bdca3204e6d92f305c17463c82de01136f5f0609",
+      "selection": {
+        "path": "generation/run/W/selection-middle4-side2-20261004.json",
+        "sha256": "999e8e06e7e4d020b477cdefac6303919a751798657126b08663684a46ad1a0c"
+      },
+      "replacedFrame": {
+        "frame": 3,
+        "source": "generation/run/W/02-v2.png",
+        "sourceSha256": "1e943a2e776973353e85d3268a86fb0af450566d61d725ac24c5aa9c6eab6a3c",
+        "generationRecordSha256": "f2b403fe3f3a9eda9648fa5c107e23419fe5381d09f07da497b548f4e4a97614",
+        "nativePixelSha256": "f265b4690ecce98efaeac712dc23dcf967607cf2c4cc6919ac7ab559e9af94e0",
+        "supportFoot": "right",
+        "positionPair": 2,
+        "staticObservation": "右脚回到髋下，膝屈缓冲，左恢复鞋靠近身体下方；右空手仍在后摆回程。"
+      },
+      "reason": "localized arm/airborne-leg transition follow-up"
+    },
+    {
+      "reportSha256": "a867e4c84c89166b0b990d5ec6800ff0ce2c666ee5616fbc974e807350059cf7",
+      "selection": {
+        "path": "generation/run/W/selection-middle4-side2-20261004.json",
+        "sha256": "583deb2f9fe4584c9e5cf722f06dac29975e2169b51dc71f8a5a5851ef6be114"
+      },
+      "replacedFrame": {
+        "frame": 11,
+        "source": "generation/run/W/11-v3.png",
+        "sourceSha256": "2851bc631b87ce143ca616305a157d9c12c09977b5c7f931a8b6cce92ca5a1ae",
+        "generationRecordSha256": "3eef568bea2d7422dffd44c0ed8115ecf6f9ed8426398dcc486a7457f98cb83d",
+        "nativePixelSha256": "003331d353c39e872089da9cb7d4ce6b319b8c3d76faee5e4748cc2c75b7f66a",
+        "supportFoot": "left",
+        "positionPair": 2,
+        "staticObservation": "原生复核11-v3：近侧左支撑脚已在髋下，远侧右鞋抬起经过；双腿身份正确，头身与12和13接近。"
+      },
+      "reason": "localized arm/airborne-leg transition follow-up"
+    }
+  ],
+  "latestRevision": {
+    "atUtc": "2026-10-05T06:26:56.676338+00:00",
+    "review": "review/full-body-20261004/run-south-repairs.json",
+    "reviewSha256": "b0d9f6c51975ede93139ce0af107854cc9d65381e9304e0966025d82c4e014e7",
+    "frame": 11,
+    "sourceSha256": "c9d863b5e61fe3cca4932e0f761921ce1d5c1bc7aec08fd3cd1e9252a0cb660a",
+    "dynamicVerified": false
+  },
+  "historicalContactEvidence": [
+    {
+      "supersededAt": "2026-10-05T06:50:36.502840+00:00",
+      "evidence": {
+        "contactSheets": [
+          {
+            "path": "review/grounding-fourframes/W-independent-contact.jpg",
+            "sha256": "4e29e9abaffbb1e13f37d9b764e0454cbef7780d1a1479c3c195ebff167e1b01"
+          },
+          {
+            "path": "review/grounding-fourframes/W-independent-lower.jpg",
+            "sha256": "2641dc7d03d61e3d09b4d26a36c19f8ea88bbf2f2977800dd210849bd1edd515"
+          }
+        ],
+        "contactSourceRecord": {
+          "path": "review/grounding-fourframes/W-independent-contact.sources.json",
+          "sha256": "2bbce599007387d264887dc7a07e55004ecb065e84af9e6349682cbfc0428e53"
+        }
+      },
+      "status": "historical_before_flow_repair"
+    }
+  ],
+  "currentRootContactCheck": {
+    "path": "review/animations/run-W-contact.png",
+    "sha256": "681134e342e0e8d8a16da7a9597f8ba3c2a4ce71d10478c4bbbcc73502f6cd84",
+    "reviewer": "/root",
+    "actuallyViewed": true,
+    "dynamicVerified": false,
+    "scope": "Rebuilt current full export contact, read after five repairs; original independent observations and per-repair reviews retained separately."
+  },
+  "timingRebindings": [
+    {
+      "atUtc": "2026-10-05T08:44:17.829062+00:00",
+      "selectionBeforeSha256": "7d2d06a3974140afb0e7ea0e76b843b85f3a260acd207177da9000eea58f685e",
+      "selectionAfterSha256": "be8f9593ed1f4f428c4f2fc4be40fb5d858f41d3006c7cd1a26915edc15ccaad",
+      "oldFrameMs": 75,
+      "newFrameMs": 60,
+      "sourceImagesUnchanged": true,
+      "newVisualReviewClaimed": false
+    }
+  ],
+  "currentPlaybackTiming": {
+    "frameMs": 60,
+    "cycleMs": 960,
+    "visualPlaybackVerified": false
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-10T11:31:10.659458+00:00",
+  "reviewer": "joint_review independent subagent of tile_right",
+  "scope": "Read-only feasibility and native-coordinate analysis. Sole authorized new file is this report. No imagegen, raster mutation, selection change or formal approval.",
+  "coordinateConvention": "All coordinates are 0-based. Boxes are [left,top,right,bottom), half-open. Pixel contours are approximate anti-aliased boundaries.",
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c13_joint2_v03.hard-insert.png",
+      "sha256": "df143019ad5f6f178267f1018b1c42a26d4a5834796f5c65c162451b240718ee"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\guides\\r09_c13_joint2_v03.native-target.png",
+      "sha256": "589e08756185016af8d0f975d8f28c1f7605b6b080f5c59bdef79ab52424a9cd"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c13_joint2_v03.png",
+      "sha256": "70469c4a429381d41fd26e79d85fa13fc7e669ca52c6cc1ffa52bb4114ab23d7"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\guides\\r09_c13_joint2_v03.whole-visible-post.png",
+      "sha256": "5636d2f148056f40f1df83aff534c15c51aaba3ac466e166daa95a7ec1cf4743"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c13_p22_v01.png",
+      "sha256": "6726b6a8869c575ec860dc2c92ea994da80f006a312663da872dc9720b9101d0"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c13_p32_v01.png",
+      "sha256": "1c1e444b0e7c34e229e5afc37cf10e770a04b855696b169959c0f6d0cfe33eaa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c13_p42_v01.png",
+      "sha256": "403af06b9e3206e99aa0b33c7343cd8d6dcfdaf7514a9390426431e4fe0241b2"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r09_c13.candidate.png",
+      "sha256": "cd5a7e9274a4cc8c5550301e3301d05709977c053bdab7525630b642d054fe2b"
+    }
+  ],
+  "findings": [
+    "joint2_v03 repairs the internal beam discontinuity at tile y2048 but copies the wider upper column profile downward, moving the visible column discontinuity to the hard-insert bottom at tile y2560.",
+    "At native y700 through y1200, the generated column right contour is near x926 and target lower contour near x890, approximately 36 pixels apart. The bright-face threshold is near x770 versus x762, approximately 8 pixels apart. Outer-contour evidence is visual; color threshold alone can include neighboring warm foliage.",
+    "No valid horizontal cut in the current v03 native lower region resolves the column width mismatch. For a 1024-high crop contained in this 1254 image, its bottom lies at native y1024 through y1254, where the mismatch remains.",
+    "Changing a source crop must preserve world-coordinate mapping. Translating native artwork to conceal an edge offset is not a true-overlap cut and would shift scene geometry.",
+    "Both original overlap strips retain a column geometry mismatch. A lower MAE cut is not sufficient for structural approval.",
+    "The shortest proposed reconstruction is two adjacent 1024 cores, lower first and upper second. This is a feasibility recommendation, not a guarantee of a successful imagegen result."
+  ],
+  "v03Quantification": {
+    "rowDifferences": [
+      {
+        "nativeY": 627,
+        "coreWidthMae": 23.5853,
+        "postRegionMae": 17.8417
+      },
+      {
+        "nativeY": 700,
+        "coreWidthMae": 18.3255,
+        "postRegionMae": 26.3606
+      },
+      {
+        "nativeY": 800,
+        "coreWidthMae": 11.4831,
+        "postRegionMae": 15.2242
+      },
+      {
+        "nativeY": 900,
+        "coreWidthMae": 11.6628,
+        "postRegionMae": 20.0492
+      },
+      {
+        "nativeY": 1000,
+        "coreWidthMae": 11.6758,
+        "postRegionMae": 19.1432
+      },
+      {
+        "nativeY": 1100,
+        "coreWidthMae": 11.2025,
+        "postRegionMae": 17.6424
+      },
+      {
+        "nativeY": 1138,
+        "coreWidthMae": 12.1273,
+        "postRegionMae": 20.8394
+      },
+      {
+        "nativeY": 1139,
+        "coreWidthMae": 12.1019,
+        "postRegionMae": 20.6371
+      },
+      {
+        "nativeY": 1200,
+        "coreWidthMae": 11.1986,
+        "postRegionMae": 18.1576
+      },
+      {
+        "nativeY": 1253,
+        "coreWidthMae": 13.1637,
+        "postRegionMae": 16.7545
+      }
+    ],
+    "columnDifferences": [
+      {
+        "nativeX": 114,
+        "coreHeightMae": 5.5101,
+        "exactPixelFraction": 0.000977
+      },
+      {
+        "nativeX": 115,
+        "coreHeightMae": 5.6175,
+        "exactPixelFraction": 0.0
+      },
+      {
+        "nativeX": 1000,
+        "coreHeightMae": 7.8083,
+        "exactPixelFraction": 0.000977
+      },
+      {
+        "nativeX": 1080,
+        "coreHeightMae": 6.43,
+        "exactPixelFraction": 0.0
+      },
+      {
+        "nativeX": 1138,
+        "coreHeightMae": 7.0166,
+        "exactPixelFraction": 0.001953
+      },
+      {
+        "nativeX": 1139,
+        "coreHeightMae": 7.2959,
+        "exactPixelFraction": 0.000977
+      }
+    ],
+    "interpretation": "Metrics measure generated-versus-target differences, not visual acceptance; the full returned image is not pixel-identical to fixed target anchors."
+  },
+  "originalTrueOverlap": [
+    {
+      "pair": [
+        "p22_v01",
+        "p32_v01"
+      ],
+      "tileY": [
+        1933,
+        2163
+      ],
+      "upperNativeY": [
+        1024,
+        1254
+      ],
+      "lowerNativeY": [
+        0,
+        230
+      ],
+      "originalCutTileY": 2048,
+      "knownStructuralPass": false
+    },
+    {
+      "pair": [
+        "p32_v01",
+        "p42_v01"
+      ],
+      "tileY": [
+        2957,
+        3187
+      ],
+      "upperNativeY": [
+        1024,
+        1254
+      ],
+      "lowerNativeY": [
+        0,
+        230
+      ],
+      "originalCutTileY": 3072,
+      "knownStructuralPass": false
+    }
+  ],
+  "lowerAnchor": {
+    "source": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c13_p42_v01.png",
+      "sha256": "403af06b9e3206e99aa0b33c7343cd8d6dcfdaf7514a9390426431e4fe0241b2"
+    },
+    "candidateAnchorReplayExact": true,
+    "sampleTileY": 3584,
+    "sampleSourceNativeY": 627,
+    "sampleRebuildNativeY": 1139,
+    "sourceToRebuildXSubtract": 191,
+    "sourceNativeOriginTile": [
+      909,
+      2957
+    ],
+    "rebuildNativeOriginTile": [
+      1100,
+      2445
+    ],
+    "leftOuterContour": {
+      "sourceNativeApproxX": 710,
+      "rebuildNativeApproxX": 519,
+      "rebuildNativeDarkOutlineRange": [
+        518,
+        522
+      ]
+    },
+    "rightOuterContour": {
+      "sourceNativeApproxX": 1073,
+      "rebuildNativeApproxX": 882,
+      "rebuildNativeDarkOutlineRange": [
+        879,
+        882
+      ]
+    },
+    "brightBevel": {
+      "sourceNativeHighlightRange": [
+        934,
+        938
+      ],
+      "sourceNativePeakX": 937,
+      "rebuildNativeHighlightRange": [
+        743,
+        747
+      ],
+      "rebuildNativePeakX": 746
+    },
+    "validation": "Inspected native source rows 625,626,627,628,650,700,741. Left and right silhouettes are stable across the intended fixed bottom strip. Highlighing varies by a few pixels with wood grain.",
+    "promptGeometry": "Keep the lower fixed column silhouette: left contour x519, bright vertical bevel centered around x745-746, right contour x882 in the 1254-square lower target. Continue these straight upward; do not inherit the conflicting old upper-column width."
+  },
+  "recommendedSequence": [
+    {
+      "stage": 1,
+      "name": "lower-column-rebuild",
+      "nativeBoxRelativeToTile": [
+        1100,
+        2445,
+        2354,
+        3699
+      ],
+      "sourceCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "destinationCore": [
+        1215,
+        2560,
+        2239,
+        3584
+      ],
+      "fixed": "Bottom 115 rows, including post contours/bevel, and side background anchors.",
+      "provisional": "The outgoing top column section is allowed to change to the fixed lower column geometry. Do not simultaneously require the conflicting old upper column to remain an exact geometry anchor.",
+      "qa": "Check both side joins and the bottom join y3584 before preparing the next edit. The temporary top join is resolved by stage 2."
+    },
+    {
+      "stage": 2,
+      "name": "upper-cap-beam-column-rebuild",
+      "nativeBoxRelativeToTile": [
+        1100,
+        1421,
+        2354,
+        2675
+      ],
+      "sourceCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "destinationCore": [
+        1215,
+        1536,
+        2239,
+        2560
+      ],
+      "inputPreparation": "Crop the current native candidate at the stated box; paste stage 1 native [0,0,1254,230] at this target [0,1024,1254,1254]. This is the exact shared global region y2445..2675, with no scaling or repositioning.",
+      "fixed": "Inherit the accepted lower-stage post geometry and native overlap as the lower anchor; preserve top foliage and external beam/side joins.",
+      "editable": "Rebuild the complete upper cap, upper post and beam junction to the lower-stage column axis.",
+      "qa": "Nominal middle cut tile y2560. Alternative cuts may be evaluated only within true native overlap y2445..2675. Also inspect outer y1536, both side joins, beam silhouettes, texture/tone and all introduced junctions."
+    }
+  ],
+  "hardCutAcceptance": "Select a hard cut only after 100-percent native inspection confirms continuous column left/right contours, bright bevel, beam edge and nearby foliage. Exact source mapping and coverage must be replayable; no scale, blur, feather, warp or scripted painting.",
+  "formalApproval": false
+}

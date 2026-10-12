@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T15:46:19.277Z",
+  "reviewer": "/root/resume_r06_c03_fullqa/r06_c03_pending_qa",
+  "status": "passed_local_geometry_repair_with_preexisting_material_issues_outside_mask",
+  "localRepairAccepted": true,
+  "formalAccepted": false,
+  "fullTileAccepted": false,
+  "scope": "Review only this selected native repair and all its perimeter. Existing material seams outside the mask remain separate unresolved defects.",
+  "actuallyViewed": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/edit-target.png",
+      "sha256": "449b644674ed0eb137d37b731d7b7845517c8344e609c6f6ef0bbd2b684c6f79",
+      "detail": "original",
+      "notes": "Baseline contains the sharp straight truncation at source x627 and the pre-existing vertical material strip at source x742."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/native.png",
+      "sha256": "0dd0aac591fbb94e72aedd8b53346eaa7c1d146f45f14d1272a1ebdfe3895769",
+      "detail": "original",
+      "notes": "The x627 roof truncation is repaired into a coherent curved tile silhouette. Existing tile courses and column count are preserved; no added roof column."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/trials/v02-binary-seam/perimeter.png",
+      "sha256": "0a1d0fb2758a304071ba415bd792e1e82ba409eefb41b201ce7f7ea7d82236ef",
+      "detail": "original",
+      "nativePixels": [
+        316,
+        651
+      ],
+      "tileCropLTRB": [
+        1796,
+        900,
+        2112,
+        1551
+      ],
+      "exactCandidateCropVerified": true,
+      "geometryVerdict": "pass",
+      "newRepairPerimeterMaterialVerdict": "pass",
+      "notes": "The full selected repair and all four perimeter paths are covered. The tile outline is continuous, roof shading and fascia meet, and no new blocking cut or hard seam is visible along the selected-pixel perimeter. Pre-existing straight tonal transitions outside the selection remain visible and are listed separately."
+    }
+  ],
+  "candidate": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/trials/v02-binary-seam/candidate.png",
+    "sha256": "b85c64c18930893c057c18f35689b8e0675515c8b0d119b733653801f98ee183"
+  },
+  "manifest": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/trials/v02-binary-seam/manifest.json",
+    "sha256": "69c06ccf165423d316c56b226786dbf13d09e5d918610ccb79a327c685cdb9f0"
+  },
+  "pixelValidation": {
+    "maskFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/roof-truncation-02/trials/v02-binary-seam/native-mask.png",
+    "maskSha256": "c291e03195e960f5f1ec8a34c10b1f3874e7f3c83b99e5774688ca5e7c43e6d5",
+    "maskValues": [
+      0,
+      255
+    ],
+    "selectedNativePixels": 54477,
+    "maskBoundsSourceLTRB": [
+      571,
+      417,
+      725,
+      898
+    ],
+    "tileOriginXY": [
+      1306,
+      570
+    ],
+    "sameWorldBinarySelectionExact": true,
+    "perimeterExactCandidateCrop": true,
+    "operation": "Verified the entire 1254x1254 candidate frame equals native source where mask=255 and edit-target where mask=0."
+  },
+  "preexistingUnresolvedIssues": [
+    {
+      "key": "tile2048_vertical_material_strip",
+      "status": "needs_repair",
+      "sourceX": 742,
+      "tileX": 2048,
+      "introducedByThisRepair": false,
+      "entireSourceColumnMaskZeroVerified": true,
+      "entireSourceColumnBaselinePixelsUnchangedVerified": true,
+      "notes": "Visible vertical glaze/timber/plaster material transition remains. The entire x742 source column is unselected and exactly baseline pixels; this local geometry repair does not resolve it."
+    },
+    {
+      "key": "tile1024_horizontal_glaze_left_of_patch",
+      "status": "needs_repair",
+      "approximateTileBoundsLTRB": [
+        1796,
+        1021,
+        1877,
+        1028
+      ],
+      "sourceXRangeExcludedByMask": [
+        490,
+        571
+      ],
+      "introducedByThisRepair": false,
+      "unselectedByVerifiedMaskBounds": true,
+      "notes": "A mild horizontal glaze change remains in the crop left of the selected patch at roughly display y124/tile y1024. All source x<571 pixels are outside the selection and retain baseline. Record separately; do not classify it as newly introduced or silently pass the whole tile."
+    }
+  ],
+  "sourceResampled": false,
+  "sourceRecolored": false,
+  "feathering": false,
+  "interpolation": false,
+  "imagesModifiedByReviewer": false
+}

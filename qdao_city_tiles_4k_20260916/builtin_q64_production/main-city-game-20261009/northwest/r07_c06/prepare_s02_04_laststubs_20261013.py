@@ -1,0 +1,8 @@
+from pathlib import Path
+from PIL import Image,ImageDraw
+import json,hashlib
+r=Path(__file__).resolve().parent;src=r/'native/s02_04_surfacefix05.png';p=r/'layout-only/s02_04_laststubs06.locator-guide.png';im=Image.open(src).convert('RGB');d=ImageDraw.Draw(im)
+d.line((30,154,85,106),fill=(238,30,35),width=12);d.line((212,764,240,738),fill=(238,30,35),width=12);im.save(p)
+p.with_suffix('.png.derivation.json').write_text(json.dumps(dict(worldBox=[23437,25485,24691,26739],source=dict(file=str(src),sha256=hashlib.sha256(src.read_bytes()).hexdigest()),guideOnly=True,notFinalArt=True,redBranchesToErase=[[[30,154],[85,106]],[[212,764],[240,738]]]),indent=2),encoding='utf-8')
+prompt='Erase ONLY the two thick red marked dead-end grout branches in image 1. Remove the red ink AND the whole obsolete brown groove/cream bevel beneath each stroke, restoring uninterrupted matching pale stone mosaic over that short old edge. Branch 1: from fixed gold node (27,157) northeast to the old cutoff near (85,106). Branch 2: from fixed gold node (210,768) northeast to the tiny old cutoff near (240,738). Both northeast branches must disappear completely without a stub. Preserve both gold nodes and their other current connections exactly, especially node (27,157) to (81,217), node (81,217) to (299,27), node (210,768) to (345,930). Image 2 is the unmarked exact-coordinate edit target. Keep all other grout, gold vertices, texture, stone faces and every red paper scrap unchanged. No marker ink remains. Return full opaque native 1254x1254 PNG, exact original scale and canvas.'
+(r/'requests/s02_04_laststubs06.args.json').write_text(json.dumps(dict(prompt=prompt,referenced_image_paths=[str(p),str(src)],transparent_background=False),indent=2),encoding='utf-8')

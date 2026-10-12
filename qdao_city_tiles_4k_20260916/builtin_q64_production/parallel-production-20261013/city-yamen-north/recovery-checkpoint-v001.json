@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-13T08:45:15.808036+00:00",
+  "status": "blocked_explicit_application_network_permission_revoked",
+  "blocker": {
+    "message": "Fatal error: application network permission was revoked",
+    "reportedBy": [
+      "/root/production_helper",
+      "/root/east_column_native"
+    ],
+    "newExternalRequestsAfterDenial": 0,
+    "permissionOrCredentialChanges": false,
+    "note": "Explicit permission denial is not bypassed; saved outputs preserved. Resume generation only after network access is restored/authorized."
+  },
+  "perTile": {
+    "r01_c04": {
+      "nativeVersions": 0,
+      "nativePatchPositions": 0,
+      "selected": []
+    },
+    "r01_c05": {
+      "nativeVersions": 0,
+      "nativePatchPositions": 0,
+      "selected": []
+    },
+    "r02_c04": {
+      "nativeVersions": 8,
+      "nativePatchPositions": 4,
+      "selected": []
+    },
+    "r02_c05": {
+      "nativeVersions": 7,
+      "nativePatchPositions": 4,
+      "selected": [
+        {
+          "patch": "s04_01",
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_01-v001.png",
+          "sha256": "39c5eb97a39af69e9d3afa0d48f581af40467f9cd0f7b1002ec74ff8d0b74ceb",
+          "quickVisualPassed": true
+        },
+        {
+          "patch": "s04_02",
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_02-v003.png",
+          "sha256": "41fa74d0005d9ff95fc2062d173add7c0e53f25f1c32c94f97bc67966aa8282a",
+          "quickVisualPassed": true
+        },
+        {
+          "patch": "s04_03",
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c05\\native\\s04_03-v002.png",
+          "sha256": "f2d5787d3a746d80f48208388ecb273538b36d615adf99b45b6bcf845d4010ab",
+          "quickVisualPassed": true
+        }
+      ]
+    }
+  },
+  "selectedCoreCount": 3,
+  "expectedCoreCount": 64,
+  "completeSourceTiles": 0,
+  "formalAcceptedCount": 0,
+  "rawNativeVersionCount": 15,
+  "unarchivedHostOutputs": [],
+  "latestRootOutputSaved": "r02_c04/native/s04_02-v003.png",
+  "latestRootOutputReview": "Not yet rechecked after phase repair; do not select automatically. Previous version had south seam phase mismatch.",
+  "pending": {
+    "r02_c04": "s04 row original detail generated for 4 positions but south/east seams not passed; helper QA documents issues. No c04 selection. Need local phase/junction repair; s04_02-v003 needs visual review.",
+    "r02_c05": "3 selected positions; s04_03 current selected version should be checked against its latest review; s04_04-v001 saved but unreviewed. Continue missing subrows upward after quick review.",
+    "r01_c04": "0/16; continue from r02 native north anchors once available.",
+    "r01_c05": "0/16; continue from r02 native north anchors once available."
+  },
+  "helper": "batch_pipeline_v3.py",
+  "requestedV4Helper": "Not saved before network interruption; do not assume limited-reference support exists.",
+  "route": "builtin_image_gen",
+  "actualImageModel": null,
+  "modelEvidence": "Image tool returned image_url and output_hint only; actual image model not returned.",
+  "paidAPIUsed": false,
+  "gitMutation": false
+}

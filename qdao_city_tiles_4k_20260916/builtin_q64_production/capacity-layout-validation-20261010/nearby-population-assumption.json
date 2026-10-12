@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-10-10T06:08:48.671498+00:00",
+  "source": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-validation-20261010/population-probe.js",
+  "sourceSha256": "f74588ba8f433286f7ffc85ebbdd740813982336a4e2f4354b9bd80d25425d6b",
+  "sourceGeneratedAt": "2026-10-10T06:03:10.336360+00:00",
+  "method": "For each stored complete 5000-point default scenario, convert image pixel positions to world coordinates with mapWorldSide / 1254; count OTHER points with Euclidean distance <= 10 world units.",
+  "methodChinese": "按现成默认 500 / 2.5 完整 5000 个分散静态脚点，使用每张图的世界边长换算坐标，统计每个位置 10 世界单位内其他玩家脚点数，不含自己。",
+  "mainWorldSide": 500,
+  "spacingWorld": 2.5,
+  "imageAnnotationSidePixels": 1254,
+  "radiusWorld": 10,
+  "radiusAssumptionEvidence": {
+    "path": "D:/work/mmorpg/cpp/libs/services/scene/player/system/player_lifecycle.cpp",
+    "line": 2409,
+    "description": "player creation sets ViewRadius to 10; current running server configuration not verified"
+  },
+  "algorithm": {
+    "numpyVersion": "2.3.5",
+    "blockSize": 128,
+    "largestDistanceMatrixShape": [
+      128,
+      5000
+    ],
+    "createsFullNxNx2Array": false,
+    "distanceSquaredTolerance": 1e-08,
+    "p95Method": "numpy.percentile(...,95,method=linear)",
+    "selfExcluded": true,
+    "boundaryIncluded": true
+  },
+  "limitations": [
+    "均匀分散静态位置模型与源码 10 单位视距的条件估算；不是 AOI 运行验证。",
+    "像素平面按比例映射到世界平面，没有实际地面投影标定、遮挡或高度计算。",
+    "仅统计这 5000 个玩家脚点；热点聚集、NPC、宠物、队伍/置顶目标和其他视距规则不计。",
+    "不能把这里的 max 说成客户端实际只创建或只显示这么多角色；AOI 通知、淘汰和残留对象未运行验证。",
+    "主城 500、村岛各 sqrt(0.75)*500，2.5 间距均为本次实验参数，不是已批准制作尺寸或容量标准。"
+  ],
+  "aoiRuntimeValidated": false,
+  "nearbyClientCreatedCountValidated": false,
+  "capacity5000Validated": false,
+  "worldSizeApproved": false,
+  "maps": [
+    {
+      "map": "main",
+      "annotationSha256": "79e311689c85a86c29279939aa9a847727b70063bffaab5de8618880026af9df",
+      "imageSha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "mainWorldSide": 500,
+      "mapWorldSide": 500,
+      "spacingWorld": 2.5,
+      "pointCount": 5000,
+      "positionsAreSample": false,
+      "coordinateScaleWorldPerImagePixel": 0.39872408293460926,
+      "otherPlayersWithin10WorldUnits": {
+        "mean": 16.0384,
+        "p95": 24.0,
+        "max": 30,
+        "min": 0
+      },
+      "uniqueUndirectedPairsWithinRadius": 40096,
+      "selfIncluded": false
+    },
+    {
+      "map": "village",
+      "annotationSha256": "585aa588e86a77e3a3093a84c8ac6fc932772bb47ec2095d07247b48d0ab40fb",
+      "imageSha256": "cf450f0afe784b4700f2dfc19b3af35867765403e8f1d81741e78b3116583d42",
+      "mainWorldSide": 500,
+      "mapWorldSide": 433.0127018922193,
+      "spacingWorld": 2.5,
+      "pointCount": 5000,
+      "positionsAreSample": false,
+      "coordinateScaleWorldPerImagePixel": 0.34530518492202494,
+      "otherPlayersWithin10WorldUnits": {
+        "mean": 25.7716,
+        "p95": 37.0,
+        "max": 43,
+        "min": 1
+      },
+      "uniqueUndirectedPairsWithinRadius": 64429,
+      "selfIncluded": false
+    },
+    {
+      "map": "island",
+      "annotationSha256": "d98290740390f2de2ac1313af14185136a005b5f6ff29eeea79fe07bfdfae50e",
+      "imageSha256": "e7a06f547274a29a01cc4e20223637e99c0fab534d4982361e824147c800b34f",
+      "mainWorldSide": 500,
+      "mapWorldSide": 433.0127018922193,
+      "spacingWorld": 2.5,
+      "pointCount": 5000,
+      "positionsAreSample": false,
+      "coordinateScaleWorldPerImagePixel": 0.34530518492202494,
+      "otherPlayersWithin10WorldUnits": {
+        "mean": 28.8484,
+        "p95": 42.0,
+        "max": 45,
+        "min": 2
+      },
+      "uniqueUndirectedPairsWithinRadius": 72121,
+      "selfIncluded": false
+    }
+  ]
+}

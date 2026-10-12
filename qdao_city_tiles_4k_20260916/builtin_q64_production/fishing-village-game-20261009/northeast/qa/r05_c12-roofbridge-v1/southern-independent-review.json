@@ -1,0 +1,115 @@
+{
+  "reviewer": "southern_extension",
+  "createdAtUtc": "2026-10-11T19:31:17.344839+00:00",
+  "verdict": "blocking_blue_roof_geometry_discontinuity",
+  "formalAccepted": false,
+  "viewedNative1to1": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\context.native-1to1.png",
+      "sha256": "69c1c94dd97de6d02029e84dda6cbdfd8f0a4980109892bca888ca37f86ecd7b",
+      "size": [
+        1254,
+        1254
+      ],
+      "rawRGBPixelSha256": "f02544f537e6fcb9d9660b15b5e70f056380fd107863884c7dde2649e8d66eaa"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\top.native-1to1.png",
+      "sha256": "542ebb2f8af982654abd8c9a8377def0fcc54124fdcd57fcfb8d204a07368ba2",
+      "size": [
+        1254,
+        256
+      ],
+      "rawRGBPixelSha256": "c0523a8d5ef15997059dacd82a6fb02c29b72f539564d5beec0dff8ca9dea09e"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\bottom.native-1to1.png",
+      "sha256": "e08d1a3f08afca520ae36b9c0ffc3561bd387b76336577cf9247fad418e152d0",
+      "size": [
+        1254,
+        256
+      ],
+      "rawRGBPixelSha256": "97e1f334d28aa9da3acf39b6f3d7d3c442e634a6b679d18ce2570737177ae8b2"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\southern-detail-tiles.native-1to1.png",
+      "sha256": "cd56a1ceb6056cb6178eb1487b7a0ac9a0666b196c204de1bc7d7d4c46abb865",
+      "size": [
+        650,
+        250
+      ],
+      "rawRGBPixelSha256": "032a63e8308b4d45411eeff106db694590a4fe065b23dd4c5eb6f44364c5a55d"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\southern-detail-scroll.native-1to1.png",
+      "sha256": "1e5efc4ad055d87098501cc8d86b3deb4fb007d03624929935e5f4ea18763eda",
+      "size": [
+        400,
+        250
+      ],
+      "rawRGBPixelSha256": "e7ff92bf2a58be34c78c1e981e6447e9afdf4df4e7e9aa765a2563f4a25cd502"
+    }
+  ],
+  "source": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\native\\r05_c12_p11-p21-bridge-v1.png",
+    "sha256": "b31ba6034d1d3612dd3fcc5560d1e0b188272ee724901186e891833295f6a8ca"
+  },
+  "blockingFindings": [
+    {
+      "boundary": "contribution lower edge",
+      "contextY": 740,
+      "worldY": 17521,
+      "contextXIntervalsApprox": [
+        [
+          80,
+          125
+        ],
+        [
+          270,
+          340
+        ]
+      ],
+      "worldXIntervalsApprox": [
+        [
+          45021,
+          45066
+        ],
+        [
+          45211,
+          45281
+        ]
+      ],
+      "description": "Several blue ceramic tile overlap outlines and adjacent dark gaps fail to meet across this horizontal cut. Approximate 10-20px displacement on the affected portions produces short steps/wedges and a synchronized tile-rhythm break. This includes structural outlines, not just painted grain/tone."
+    }
+  ],
+  "nonblockingFindings": [
+    {
+      "area": "gold scroll at same y740 seam",
+      "description": "Main curled silhouette and supporting wood stay connected; minor painted-facet changes and a few pixels of contour variation are present but do not independently block."
+    }
+  ],
+  "topBoundary": "Main gold beam, supports and roof geometry appear continuous at contribution top; bottom defect determines failure.",
+  "derivedDetails": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\southern-detail-tiles.native-1to1.png",
+      "operation": "strict integer crop from context, no resize",
+      "contextCrop": [
+        0,
+        620,
+        650,
+        870
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r05_c12-roofbridge-v1\\southern-detail-scroll.native-1to1.png",
+      "operation": "strict integer crop from context, no resize",
+      "contextCrop": [
+        730,
+        620,
+        1130,
+        870
+      ]
+    }
+  ],
+  "scope": "Independent inspection only. No changes to artwork, selection or progress. Existing root pass impression not reused."
+}

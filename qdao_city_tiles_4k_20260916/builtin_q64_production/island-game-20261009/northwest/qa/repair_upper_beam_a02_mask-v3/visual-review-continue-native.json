@@ -1,0 +1,26 @@
+{
+  "reviewer": "continue_native",
+  "reviewedAt": "2026-10-10T00:16:38.941Z",
+  "decision": "mask-v3 visually passes local100% review; root integration and final tile review still required",
+  "method": "Binary same-coordinate selection from target and one built-in a02 repair. Boundaries follow narrow material-boundary bands; source pixel RGB cost selects the cut. No color correction, blending, resampling or synthesis.",
+  "checks": {
+    "M1": "Original jagged cross-beam tonal discontinuity removed.",
+    "right": "Selection continues to real right end joint instead of ending in beam face. No new isolated tonal strip or light patch.",
+    "top": "White-wall/beam contact is continuous; v1 tooth/v2 fine line absent in100% wall-edge crop.",
+    "bottom": "Beam lower silhouette and blue-roof contact remain continuous; no missing edge or duplicated line.",
+    "left": "Reviewed context includes200 original pixels to the left of target crop; no new crop-boundary material jump detected.",
+    "scope": "Unrelated lower beam, gold eave, window and column retain original target pixels."
+  },
+  "evidence": [
+    "context_left_boundary_100pct.png",
+    "right_join_100pct.png",
+    "wall_edge_100pct.png",
+    "combined_native_crop.png",
+    "source_selection_mask.png"
+  ],
+  "artSize": [
+    1254,
+    1254
+  ],
+  "integrated": false
+}

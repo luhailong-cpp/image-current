@@ -1,0 +1,737 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T05:01:08.880234+00:00",
+  "reviewClientDate": "2026-10-10",
+  "zone": "northeast",
+  "status": "existing_art_capacity_risks_reviewed_generation_hold_active",
+  "gate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\capacity-layout-gate-20261010.json",
+    "sha256": "ee4f0be8a25af1fb0d0653410a36475fdf36b2d9a5545d2a1fdcb9e185a765b6",
+    "snapshot": {
+      "schemaVersion": 1,
+      "createdAtUtc": "2026-10-10T04:26:04.568Z",
+      "status": "capacity_layout_validation_before_new_area_expansion",
+      "reason": "User asked whether unvalidated 5000-player capacity would cause later repainting. Root is checking actual footprint and conservative walkable masks before expanding into untouched areas.",
+      "scope": [
+        "main-city-game-20261009",
+        "fishing-village-game-20261009",
+        "island-game-20261009"
+      ],
+      "holdGenerationAtNewCoordinates": true,
+      "finishAndSaveInflightGeneration": true,
+      "allowedWhileGateActive": [
+        "Save in-flight native results and provenance",
+        "Read-only visual QA, replay provenance, seam inspection of already-generated candidates",
+        "Inventory existing coordinates and flag capacity-sensitive roads/buildings",
+        "Mechanical assembly from already-generated native pixels; do not make new artwork requests pending root validation"
+      ],
+      "sharedWorldSizeStillUnconfirmed": true,
+      "capacity5000Validated": false,
+      "releaseAuthority": "Root after layout/scale review; workers must not release this gate themselves",
+      "preserveExistingArtwork": true
+    },
+    "obeyed": true,
+    "workerMayReleaseGate": false
+  },
+  "progressEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\progress.json",
+    "sha256": "c861e11822e6e3db5a8bf3c68022c22b604e419ac344498d2a1e1a70a9b81362",
+    "snapshot": {
+      "zone": "northeast",
+      "updatedAt": "2026-10-10T04:55:50.363278+00:00",
+      "status": "generation_held_pending_capacity_layout_gate",
+      "firstTile": "r05_c13",
+      "currentTile": "r05_c14",
+      "tileOrigin": [
+        53248,
+        16384
+      ],
+      "zoneRows": [
+        1,
+        8
+      ],
+      "zoneColumns": [
+        9,
+        16
+      ],
+      "generatedNativeCount": 21,
+      "complete4kCandidateCount": 1,
+      "formalAcceptedCount": 0,
+      "currentTileNativeCount": 2,
+      "nextStep": "Hold new image_gen calls pending root capacity/layout release. Preserve current sources. After release continue r05_c14/p13; missing shared image-generation config must be restored/confirmed by owner.",
+      "actualModel": null,
+      "actualQuality": null,
+      "clientMappingValidated": false,
+      "capacity5000Validated": false,
+      "nextPatch": "r05_c14/p13",
+      "completedNativeCoreSets": [
+        "r05_c13"
+      ],
+      "currentSelectedCoreCount": 2,
+      "failedGenerationAttempts": 3,
+      "latestCandidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png",
+      "internalSeamStatus": "24 pairs and 9 intersections reviewed; M01 fixed and rechecked; two P3 material transitions remain for full style review",
+      "usableSelectedCoreCount": 18,
+      "fullyCovered4kCount": 1,
+      "internalPassed4kCount": 0,
+      "externalPassed4kCount": 0,
+      "missingFullyCovered4kCount": 63,
+      "missingFormalAcceptedTileCount": 64,
+      "missingNativeCoreCount": 1006,
+      "inFlightStatus": "none",
+      "capacityGateAck": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\capacity-gate-ack.json"
+    },
+    "interpretation": "读取到的progress仍为partial_production_checkpoint，nextStep是门控发布前的制作断点；最新门控优先，本检查未执行该续生成动作，也未改写progress。"
+  },
+  "contractEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\production-contract.json",
+    "sha256": "a66a2dfa93f60a3abb9df80cf25ff58c3e4cbcb3518f0ade4ec68631d4d5c1ce"
+  },
+  "coordinateBasis": {
+    "artCanvasPixels": [
+      65536,
+      65536
+    ],
+    "formalTilePixels": [
+      4096,
+      4096
+    ],
+    "originsCopiedFromExistingFiles": {
+      "r05_c13": [
+        49152,
+        16384
+      ],
+      "r05_c14": [
+        53248,
+        16384
+      ]
+    },
+    "coordinateFiles": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\coordinates.json",
+        "sha256": "7330eefeb39e08cf206a1e9d0fc25f045fe33bc61d641c97d05e549a7964c936"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\coordinates.json",
+        "sha256": "bcb382e0b0830f03f0bdaa69813e4889be51a541c6f36331bca12404790e119a"
+      }
+    ],
+    "legacyFieldNote": "coordinates.json中coreWorldBox/contextWorldBox在本报告仅解释为既有整图美术像素；不表示真实世界单位或已确认世界大小。",
+    "attentionBoxesOnly": true,
+    "productionCoordinatesAdded": false,
+    "worldSize": null
+  },
+  "existingArtInventory": {
+    "generatedNativeCountFromProgress": 21,
+    "nativePngFileCountsMeasured": {
+      "r05_c13": 19,
+      "r05_c14": 2
+    },
+    "complete4kCandidateCountFromProgress": 1,
+    "formalAcceptedCount": 0,
+    "r05_c13": {
+      "candidate": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png",
+        "sha256": "39a976416cbff8145d89893c0a6224cc9243db9abb4778a2b213d8ffa75d6939",
+        "pixels": [
+          4096,
+          4096
+        ],
+        "format": "PNG"
+      },
+      "selectedCoreCount": 16,
+      "coreCanvasBox": [
+        49152,
+        16384,
+        53248,
+        20480
+      ],
+      "sourceGenerationRecord": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png.generation.json",
+        "sha256": "1b48912f454083e4e536a0ea1931946e0209b6eedaf7930d9bbce40f4ccd71ff"
+      }
+    },
+    "r05_c14": {
+      "selectedCoreCount": 2,
+      "existingCoreCanvasBoxes": [
+        [
+          53248,
+          16384,
+          54272,
+          17408
+        ],
+        [
+          54272,
+          16384,
+          55296,
+          17408
+        ]
+      ],
+      "missingSelectedIds": [
+        "p13",
+        "p14",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p41",
+        "p42",
+        "p43",
+        "p44"
+      ],
+      "complete4kCandidate": false,
+      "unpaintedAreas": "其余14个核心没有原生成图；已有layout-only不构成游戏地面或容量证据。"
+    }
+  },
+  "inspectionEvidence": {
+    "c13_candidate": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png",
+      "sha256": "39a976416cbff8145d89893c0a6224cc9243db9abb4778a2b213d8ffa75d6939",
+      "pixels": [
+        4096,
+        4096
+      ],
+      "format": "PNG"
+    },
+    "c14_p11": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\native\\p11.png",
+      "sha256": "0da33447a5956ebfde7f9cf4b9954b7e6bfa45354d5a7560181bd2fb558b8f23",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "format": "PNG"
+    },
+    "c14_p12": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\native\\p12.png",
+      "sha256": "22cf98fa664786dfff34233cb30881e61e95be41b9cf3e58a443410418e609df",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "format": "PNG"
+    },
+    "c13_p33": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p33.png",
+      "sha256": "c5cf7c2a75268a3abea284b7f96fcc3f9a86734c2584c8f6758c239f802318cf",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "format": "PNG"
+    },
+    "c13_p42": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p42.png",
+      "sha256": "8d725750b2cf949ba932d208b564bc073c9fd5e941b3648bc6a8b06e0b8ed87a",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "format": "PNG"
+    },
+    "c13_p44": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p44.png",
+      "sha256": "dca96d368ad9836b64d780f4c9db53d8582dbb8e43d8a6834cb66f73d11d33eb",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "format": "PNG"
+    },
+    "c14_west_join": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\qa\\external-west-r05_c13-p14_to_p11-core-join-100pct.png",
+      "sha256": "797ed5d9cc8e00937470806fd531069622eefe587599ab0eb6ae1e4fa140d3f4",
+      "pixels": [
+        384,
+        1024
+      ],
+      "format": "PNG"
+    },
+    "c14_internal_join": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\qa\\internal-p11_to_p12-core-join-100pct.png",
+      "sha256": "3b90bd3f6211826eb92c7b8f6cc0045bffdd724788dfa794d4420d95f347cb63",
+      "pixels": [
+        384,
+        1024
+      ],
+      "format": "PNG"
+    }
+  },
+  "inspectionMethod": {
+    "candidateOverview": "现有4096²候选经view_image显示为1600²，仅用于整体定位；没有写回或更改图片尺寸。",
+    "nativeChecks": "实际查看p33/p42/p44、r05_c14 p11/p12及两个原尺寸接缝裁剪。历史24段/9交点原尺寸检查与M01修复记录按哈希关联。",
+    "roiPrecision": "关注框为保守目视范围，不是测绘结果或精确碰撞遮罩；框内混合地物不可用矩形面积直接求和。",
+    "noCapacityModelFit": true
+  },
+  "regionsAndRisks": [
+    {
+      "id": "NE-R01",
+      "classification": "possible_flat_paving",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        2250,
+        2250,
+        3600,
+        2860
+      ],
+      "existingCanvasAttentionBox": [
+        51402,
+        18634,
+        52752,
+        19244
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "塔前下方为连续浅灰铺石，局部只有薄红纸屑，已看p33原生片；没有可见高大建筑占据框中央。",
+      "capacityOrRepaintRisk": "这是可能可走的地面样区，不能把矩形面积直接当作有效站人面积；道路连接、角色间距和导航边界均未知。",
+      "requiresToResolve": [
+        "角色脚底占地与避让半径",
+        "导航/碰撞掩码",
+        "艺术像素到实际世界尺度的映射",
+        "相邻可走连通与活动位置"
+      ],
+      "evidenceIds": [
+        "c13_candidate",
+        "c13_p33"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R02",
+      "classification": "possible_road_surface",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        1600,
+        3370,
+        3340,
+        3740
+      ],
+      "existingCanvasAttentionBox": [
+        50752,
+        19754,
+        52492,
+        20124
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "下方青灰铺石带横向延伸，左侧转向斜路；该框选取尚未被右下屋檐遮住的中段。",
+      "capacityOrRepaintRisk": "青灰色并不自动定义整条可走道路；局部可见宽度不能换算通行人数，也无法确认离开图块后的回环连接。",
+      "requiresToResolve": [
+        "道路语义与导航范围",
+        "角色实际视觉/碰撞尺度",
+        "全局路网及出口连接",
+        "双向人流与活动分布验证"
+      ],
+      "evidenceIds": [
+        "c13_candidate",
+        "c13_p42",
+        "c13_p44"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R03",
+      "classification": "stairs_height_transition",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        2250,
+        0,
+        4096,
+        1950
+      ],
+      "existingCanvasAttentionBox": [
+        51402,
+        16384,
+        53248,
+        18334
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "右上为长阶梯，向下接前庭并向右延续到r05_c14；图面包含踏面、踢面和投影。",
+      "capacityOrRepaintRisk": "斜视台阶投影面积不等于水平可站立面积；能否行走、是否坡道代理或入口交互、是否汇集人流尚未知。入口宽度不足才可能导致返工，当前不能判为已堵塞。",
+      "requiresToResolve": [
+        "台阶导航模型与高度规则",
+        "入口/传送交互点",
+        "完整阶梯两边界",
+        "角色占地、期望流量与排队范围"
+      ],
+      "evidenceIds": [
+        "c13_candidate",
+        "c14_p11",
+        "c14_p12",
+        "c14_west_join"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R04",
+      "classification": "visible_wall_and_posts",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        0,
+        0,
+        2140,
+        2160
+      ],
+      "existingCanvasAttentionBox": [
+        49152,
+        16384,
+        51292,
+        18544
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "左上灰石围墙、墙基、压顶、栏柱和楼梯扶壁占据主要可见区域；关注框也包含少量地面与容器。",
+      "capacityOrRepaintRisk": "竖墙、压顶、柱身不能按图像亮色当作开放地面；真实接地边界被斜视投影隐藏，需导航多边形剔除。",
+      "requiresToResolve": [
+        "建筑/围墙接地轮廓",
+        "碰撞高度和避让规则",
+        "地面层与立面层区分"
+      ],
+      "evidenceIds": [
+        "c13_candidate"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R05",
+      "classification": "curb_transition_uncertain",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        0,
+        1750,
+        1850,
+        3330
+      ],
+      "existingCanvasAttentionBox": [
+        49152,
+        18134,
+        51002,
+        19714
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "一道浅色抬高路缘由左侧斜向下方，再转为横向边框；原生p42可见顶部和竖直侧面。",
+      "capacityOrRepaintRisk": "它可能是可跨小台阶或不可跨边界，两种规则会改变前庭与道路的连通关系；不能仅按阴影画出通行孔。",
+      "requiresToResolve": [
+        "路缘可跨越规则",
+        "高度/导航边界定义",
+        "跨越处角色动作或坡面方案"
+      ],
+      "evidenceIds": [
+        "c13_candidate",
+        "c13_p42"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R06",
+      "classification": "solid_prop_and_decal_ambiguity",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        0,
+        650,
+        1360,
+        2190
+      ],
+      "existingCanvasAttentionBox": [
+        49152,
+        17034,
+        50512,
+        18574
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "墙边有大型裁切红纸筒，地面有少量长条和碎片红纸；筒体有体积，碎纸薄且贴近地面。",
+      "capacityOrRepaintRisk": "纸筒若有实体碰撞将减少局部净宽，碎纸若仅地表装饰不应计为实体障碍；当前没有配置能确认任一规则。",
+      "requiresToResolve": [
+        "物件碰撞分类",
+        "装饰贴图与可交互物区分",
+        "纸筒接地轮廓及通路净空"
+      ],
+      "evidenceIds": [
+        "c13_candidate"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R07",
+      "classification": "foreground_roof_occlusion",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        3170,
+        2860,
+        4096,
+        4096
+      ],
+      "existingCanvasAttentionBox": [
+        52322,
+        19244,
+        53248,
+        20480
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "右下蓝瓦金檐前景从图块边缘进入并遮住部分路面；p44原生片明确显示屋檐覆盖铺石。",
+      "capacityOrRepaintRisk": "可见屋顶投影不等于建筑地面占地；可能存在可走但被遮挡的角色区域。直接把屋顶全框禁行或全框算空地都不可靠。",
+      "requiresToResolve": [
+        "前景遮挡/透明规则",
+        "建筑接地碰撞轮廓",
+        "角色深度排序",
+        "被遮挡地面的导航定义"
+      ],
+      "evidenceIds": [
+        "c13_candidate",
+        "c13_p44"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R08",
+      "classification": "vegetation_obstacle_uncertain",
+      "tile": "r05_c13",
+      "tileLocalAttentionBox": [
+        820,
+        0,
+        1990,
+        430
+      ],
+      "existingCanvasAttentionBox": [
+        49972,
+        16384,
+        51142,
+        16814
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "绿植紧挨石围栏后方，属于建筑/院墙旁种植区域。",
+      "capacityOrRepaintRisk": "图面绿植冠幅不能代表可走或碰撞轮廓，也不能自动把树冠下方计入开放区域。",
+      "requiresToResolve": [
+        "种植床与树干接地轮廓",
+        "围栏内外的通行规则"
+      ],
+      "evidenceIds": [
+        "c13_candidate"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R09",
+      "classification": "existing_stair_sources_only",
+      "tile": "r05_c14",
+      "tileLocalAttentionBox": [
+        0,
+        0,
+        1420,
+        1024
+      ],
+      "existingCanvasAttentionBox": [
+        53248,
+        16384,
+        54668,
+        17408
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "仅p11和p12已有原生图；p11为阶梯，p12左侧仍为阶梯，右侧转为浅石扶壁与绿色嵌板基座。此框概括可见阶梯部分，边界为目估。",
+      "capacityOrRepaintRisk": "这里只覆盖首排局部，不能推断整个入口宽度、落地连通、第二出口或该块容纳人数。",
+      "requiresToResolve": [
+        "沿用现有源片等待容量门控结论",
+        "完整入口与相邻地面的布局/导航验证"
+      ],
+      "evidenceIds": [
+        "c14_p11",
+        "c14_p12",
+        "c14_internal_join"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    },
+    {
+      "id": "NE-R10",
+      "classification": "visible_architectural_base",
+      "tile": "r05_c14",
+      "tileLocalAttentionBox": [
+        1430,
+        0,
+        2048,
+        1024
+      ],
+      "existingCanvasAttentionBox": [
+        54678,
+        16384,
+        55296,
+        17408
+      ],
+      "boxMeaning": "目视检查关注框，可能包含多种表面；不是可走掩码、碰撞多边形、建筑占地测量或新增生产坐标。",
+      "precision": "approximate visual ROI in existing art pixels",
+      "visibleObservation": "p12右侧为扶壁和石台基，带绿色立面嵌板；不是开放地砖。",
+      "capacityOrRepaintRisk": "石基限制阶梯右边界，但其绘制立面位置不是直接可用的碰撞边界，不能按亮色把台基算进可走宽度。",
+      "requiresToResolve": [
+        "台基接地边界",
+        "台阶/扶壁碰撞多边形",
+        "实际世界尺度"
+      ],
+      "evidenceIds": [
+        "c14_p12"
+      ],
+      "walkabilityConfirmed": false,
+      "worldArea": null,
+      "playerCapacity": null
+    }
+  ],
+  "unknownsBlockingCapacityConclusion": [
+    {
+      "id": "U01",
+      "unknown": "艺术像素到世界单位、摄像机投影及角色脚底/避让半径未确认",
+      "affectedExistingCanvasBoxes": [
+        [
+          49152,
+          16384,
+          53248,
+          20480
+        ],
+        [
+          53248,
+          16384,
+          54272,
+          17408
+        ],
+        [
+          54272,
+          16384,
+          55296,
+          17408
+        ]
+      ],
+      "cannotConfirm": [
+        "道路实际净宽",
+        "有效可走面积",
+        "人群间距",
+        "单点或全城人数"
+      ]
+    },
+    {
+      "id": "U02",
+      "unknown": "建筑、围栏、路缘、楼梯、前景的导航/碰撞/遮挡规则未提供",
+      "affectedRiskIds": [
+        "NE-R03",
+        "NE-R04",
+        "NE-R05",
+        "NE-R07",
+        "NE-R08",
+        "NE-R10"
+      ],
+      "cannotConfirm": [
+        "连通分区",
+        "楼梯是否可走",
+        "可站立面积",
+        "视觉遮挡是否影响操作"
+      ]
+    },
+    {
+      "id": "U03",
+      "unknown": "未完成的相邻核心与全局路网、回环、入口活动负载未验收",
+      "affectedExistingCanvasBoxes": [
+        [
+          49152,
+          16384,
+          53248,
+          20480
+        ],
+        [
+          53248,
+          16384,
+          57344,
+          20480
+        ]
+      ],
+      "cannotConfirm": [
+        "是否有狭窄必经路段",
+        "绕行是否成立",
+        "人流能否分散",
+        "5000人同时使用的实际表现"
+      ]
+    }
+  ],
+  "seamStatusCarriedForward": {
+    "r05_c13Internal": {
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\internal-seam-review.json",
+        "sha256": "42b8fd0368a42f5e1cc5c54f3e8b879c01239ddfa5ca7e490021a90b7e950eb4"
+      },
+      "reviewedPairCount": 24,
+      "reviewedIntersectionCount": 9,
+      "observedMajorGeometryBreakCount": 0,
+      "note": "历史M01所指横向材质线随后修复；M02/M03轻微材质过渡仍供全图风格复核，不是容量验证。"
+    },
+    "M01Repair": {
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\qa\\m01-repair-review.json",
+        "sha256": "c36f317f5c0bbff86c1659eda46e9d7e868095e557b2d091e1c060cb2d9da6ce"
+      },
+      "localReviewAccepted": true,
+      "matchesCurrentCandidateHash": true,
+      "formalAccepted": false
+    },
+    "r05_c14FirstTwo": {
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\qa\\first-two-review.json",
+        "sha256": "2e37d8a3eb56cc39d738fcdaaf2184ddb18e47f8691b0810236bf7fbe4106625"
+      },
+      "freshVisualObservation": "本次查看两个原生片及西邻核心接缝/内部p11-p12核心接缝，阶梯前缘未见明显错位；这仅支持局部图像连续。",
+      "reviewedExternalWestCanvasSegment": {
+        "x": 53248,
+        "yRange": [
+          16384,
+          17408
+        ]
+      },
+      "fullExternalEdgeReviewed": false
+    },
+    "navigationOrCapacityImpliedBySeamReview": false
+  },
+  "recommendedNextReadOnlyDecisions": [
+    "根任务先确定实际世界映射、角色占地和保守可走掩码。",
+    "用现有塔前台阶、前庭、青灰路带作为尺度和连通性抽查样本；不要按图块像素面积推人数。",
+    "区分竖墙/台基、可走台阶、抬高路缘和前景屋檐的导航语义。",
+    "门控解除只由根任务执行；本报告不建议缩放旧图、变更坐标或删除现有成果。"
+  ],
+  "capacity5000Validated": false,
+  "clientMappingValidated": false,
+  "worldSizeConfirmed": false,
+  "formalAccepted": false,
+  "formalAcceptedCount": 0,
+  "actionsTaken": {
+    "generatedImages": 0,
+    "artOrCoordinatesModified": false,
+    "resizedImages": false,
+    "deletedImages": false,
+    "progressModified": false,
+    "crossChatMessagesSent": false,
+    "writtenFiles": [
+      "northeast/capacity-existing-art-risk-review.json"
+    ]
+  }
+}

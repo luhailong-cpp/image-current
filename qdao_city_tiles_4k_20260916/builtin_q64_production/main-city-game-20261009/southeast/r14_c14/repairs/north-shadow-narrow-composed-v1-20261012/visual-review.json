@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12T16:18:58.679Z",
+  "status": "local_fail",
+  "candidateSha256": "209f26556c053d112d9ca0268dcc63e1764fa5c0e58deb4014fa1d51093661a9",
+  "reviewer": "assembly_support",
+  "sourceNativeSha256": "67cbd04783aa4261807c6e191ffc8f7cc730122b39837d57a492ac12ae124734",
+  "scope": "Fixed north core with actual selected new lower-side native at immutable saved alpha v2",
+  "viewed": [
+    "review-composed-1254.png",
+    "review-strip1-100pct.png",
+    "review-strip2-100pct.png",
+    "review-fixed-seam-100pct.png",
+    "review-small-mask-bottom-100pct.png",
+    "review-shadow-mask-bottom-100pct.png",
+    "review-left-bevel-100pct.png"
+  ],
+  "positiveFindings": [
+    "Two existing ledge layers and original supports are retained.",
+    "The broad existing shadow continues over the layered wooden structure.",
+    "No old failed trial pixels were adopted. The old trial lower y1020 stripe is absent.",
+    "No comparably clear new hard cutoff was seen at the small shadow mask bottom y880."
+  ],
+  "blockingFindings": [
+    {
+      "targetBox": [
+        0,
+        632,
+        1254,
+        648
+      ],
+      "coreBoundaryBox": [
+        2842,
+        0,
+        4096,
+        8
+      ],
+      "description": "A clear horizontal wood tone/grain discontinuity remains at fixed upper boundary y640, clearest at left column x0..180 and also visible across the shadow."
+    },
+    {
+      "targetBox": [
+        210,
+        710,
+        310,
+        750
+      ],
+      "coreBox": [
+        3052,
+        70,
+        3152,
+        110
+      ],
+      "description": "The left bevel contour moved in the native output. Near saved mask lower transition y720..735 it overlays the retained original contour and forms a double/ghost edge; local structure is not continuous."
+    }
+  ],
+  "published": false,
+  "latestPublishedCandidateSha256": "66848fcdb5ff648de5f448588dbb4cd1c70693dee07ea43f3b15da0ed353d377",
+  "mechanicalReplay": "pass",
+  "reservedCornerUnchanged": true,
+  "neighborCoreUnchanged": true,
+  "oldNorthTrialAdopted": false,
+  "resized": false,
+  "rgbCorrectionPerformed": false,
+  "formalAccepted": false,
+  "requiredFollowup": "Root review the exact failure crops. Any further native repair must preserve the fixed upper wood color/grain and match the existing left ledge contour across the actual saved-alpha lower edge. Do not mark this native or trial visually passed based on full output alone."
+}

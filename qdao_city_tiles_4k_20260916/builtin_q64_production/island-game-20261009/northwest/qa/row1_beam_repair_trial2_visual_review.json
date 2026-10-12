@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "bottom_qa",
+  "status": "failed_optional_repair_do_not_integrate",
+  "mechanicalRecord": "row1_beam_repair_trial2.json",
+  "trial2RowSha256": "cab0ace67033ed888b637c7456c89578540e042ab408bef660b5716cd5552bbd",
+  "method": "four independent minimum-error DP boundaries intersected into a binary source-selection mask; source pixels remain unmodified",
+  "coreRequirement": {
+    "localBoxHalfOpen": [553, 190, 668, 415],
+    "entireCoreTakenFromNewRepair": true
+  },
+  "visualEvidence": {
+    "baseNativeCropViewed": true,
+    "repairNativeViewed": true,
+    "rectangleTrial1ViewedAt100Percent": true,
+    "entireTrial2BoundaryViewedAt100Percent": true,
+    "allBoundaryCrop": "row1_beam_repair_trial2_all_boundaries100pct.png",
+    "allBoundaryCropDimensions": [698, 584],
+    "allBoundarySourceLocalBoxHalfOpen": [265, 20, 963, 604],
+    "sourceMaskViewed": true,
+    "additionalNativeScaleComparisons": [
+      "row1_beam_repair_trial2_right_upper_edge_compare100pct.png",
+      "row1_beam_repair_trial2_right_lower_edge_compare100pct.png"
+    ],
+    "comparisonLayout": "left half original; right half trial2; no scaling"
+  },
+  "findings": [
+    {
+      "type": "improvement",
+      "finding": "The central jagged beam-value step and the earlier rectangle's vertical color boundaries are visibly reduced. The requested core reads as a more continuous painted beam."
+    },
+    {
+      "type": "rejection_reason",
+      "approximateSourceLocalPosition": [891, 329],
+      "approximateRowPosition": [1518, 329],
+      "finding": "At the right selection boundary, the pale wall/beam border develops a visible small stair-step or notch. The original comparison shows the border continuing smoothly; trial2 does not preserve that continuity."
+    },
+    {
+      "type": "rejection_reason",
+      "approximateSourceLocalPosition": [824, 415],
+      "approximateRowPosition": [1451, 415],
+      "finding": "A second visible step appears on the red beam's long light edge/ridge at the right selection boundary. The 100% side-by-side comparison shows a changed edge segment, so lower average color mismatch is insufficient for acceptance."
+    },
+    {
+      "type": "remaining_material_issue",
+      "finding": "Small polygonal value transitions remain where the expanded mask meets the old beam. Trial2 improves the original defect but moves some joins outward and selects 169543 new pixels, compared with 45000 in the rectangle trial."
+    }
+  ],
+  "numericalComparison": {
+    "rectangleMeanAbsBoundarySourceMismatch": 4.485819735819736,
+    "trial2MeanAbsBoundarySourceMismatch": 2.0665445665445668,
+    "rectangleP95AbsBoundarySourceMismatch": 14,
+    "trial2P95AbsBoundarySourceMismatch": 6,
+    "interpretation": "Color mismatch is reduced, but these values do not certify geometry continuity."
+  },
+  "decision": {
+    "integrateIntoCurrentRow": false,
+    "useForMainAssembler": false,
+    "formalAcceptance": false,
+    "mainAssemblyBlocked": false,
+    "recommendedAction": "Keep the current unmodified row for main assembly. If this optional finish repair is pursued, the AI output must preserve edge positions before another exact-source join."
+  },
+  "writes": ["repair_beam_join.py", "qa/"],
+  "nativeModified": false,
+  "assemblerModified": false,
+  "progressModified": false
+}

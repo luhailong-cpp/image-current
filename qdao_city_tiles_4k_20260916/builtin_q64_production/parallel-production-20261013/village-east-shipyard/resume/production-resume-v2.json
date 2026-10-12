@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-13T09:09:43.689381+00:00",
+  "status": "incomplete_tool_network_permission_revoked",
+  "selectedUniqueCores": 4,
+  "requiredCores": 64,
+  "savedNativeVersions": 5,
+  "assembledCandidates": 0,
+  "formalAccepted": 0,
+  "allSelectedDimensions": [
+    1254,
+    1254
+  ],
+  "selectedSourceHashesVerified": true,
+  "failureRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\requests\\p31-v1.failure-v1.json",
+  "subagentFailure": "shipyard_top_row: Fatal error: application network permission was revoked",
+  "actualModel": null,
+  "actualModelEvidence": "Built-in results only returned image_url and output_hint; model not returned.",
+  "pendingIssues": [
+    {
+      "source": "r10_c11_p11-v3",
+      "status": "pending_concentrated_QA",
+      "blocking": false,
+      "detail": "Cap approx 30 px low and south post silhouette approx 35-45 px left vs blurred guide; major original offset corrected."
+    },
+    {
+      "source": "r10_c11_p12-v2",
+      "status": "pending_concentrated_QA",
+      "blocking": false,
+      "detail": "Minor wood-grain tone difference at west seam reported by production subagent; major plank/beam edges continuous."
+    },
+    {
+      "source": "r10_c11_p21-v2",
+      "status": "needs_local_AI_repair_before_east_continuation",
+      "blockingDirections": [
+        "east"
+      ],
+      "detail": "Horizontal discontinuity y235-236, x800..1254 cuts the rail into deck at right. South strip y1024..1254 remains usable."
+    },
+    {
+      "source": "r10_c11_p13-v2",
+      "status": "needs_local_AI_repair_before_east_continuation",
+      "blockingDirections": [
+        "east"
+      ],
+      "detail": "Native QA confirms x1139 upper diagonal beam approx 90-110 px too high and front beam lower edge approx 70-80 px too high. Repair before p14; regenerate p14 conditioned guide afterwards.",
+      "qaRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r10_c11-p13-v2-fast-v1\\review.json"
+    }
+  ],
+  "nextStepsAfterNetworkRestored": [
+    "Re-read AGENTS and allocated_root_reserved split. No paid API or permission modifications.",
+    "Continue r10_c11/p31 using saved p31-v1 request if input hashes still match; last attempt returned no image.",
+    "Repair p13 right-exiting beam before p14.",
+    "Repair p21 right upper strip before using it as p22 west anchor.",
+    "Finish r10_c11 left column p31,p41 then allow r11_c11 corresponding first-column continuation.",
+    "Do not duplicate saved p11-v3,p12-v2,p13-v2,p21-v2; no tile may be assembled until all16 unique cores exist."
+  ],
+  "writeScope": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard",
+  "sharedGitChanged": false,
+  "mapComplete": false,
+  "version": 2,
+  "supersedes": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\resume\\production-resume-v1.json",
+  "localVerification": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\resume\\local-verification-v1.json",
+  "newlyCompletedLocalQA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r10_c11-p13-v2-fast-v1\\review.json",
+    "sha256": "6398571157d1fb85dfd8e5b4891626ccd957ae14964c4dfe172884f88dcb018d",
+    "bytes": 6726,
+    "sampledAtUtc": "2026-10-13T09:09:43.690426+00:00"
+  },
+  "generationAttemptedThisResume": false,
+  "permissionRestorationEvidence": null,
+  "networkBlocker": "Last explicit tool result: application network permission was revoked. No evidence of restored permission; no new image call attempted.",
+  "helperKnownFailedEdgeGuards": {
+    "r10_c11/p14": "blocked by p13 east edge",
+    "r10_c11/p22": "blocked by p21 east edge",
+    "r10_c11/p31": "south anchor usable after network access is restored"
+  }
+}

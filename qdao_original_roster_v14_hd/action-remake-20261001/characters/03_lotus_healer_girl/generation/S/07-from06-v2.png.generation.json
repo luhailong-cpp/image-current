@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "file": "generation/S/07-from06-v2.png",
+  "sha256": "9046001d90bdff6f9e54ae60d1107d4d6ce4dbc66ee0628bf60e670fa9cbc2a2",
+  "generatedAt": "2026-10-04T02:20:44.366102-04:00",
+  "generatedAtMeaning": "local receipt time; server timestamp unavailable",
+  "native": {
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGBA"
+  },
+  "tool": "image_gen.imagegen",
+  "route": "builtin",
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-01",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    }
+  },
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/03_lotus_healer_girl/generation/S/06-v1.png",
+      "D:/work/image/designs/jubaozhai-ui/02-characters.png"
+    ]
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "unverifiedReason": "宿主管理，工具未披露/无可核实型号质量元数据",
+  "evidence": {
+    "hostOutputPath": "C:\\Users\\luyua\\.codex\\generated_images\\01a10178-9ad3-7c12-99e9-545de1ae9581\\exec-542cc4b2-75de-4013-9109-b863dd0130b7.png",
+    "copiedShaMatches": true,
+    "receipt": "generation/S/07-from06-v2.receipt.json",
+    "pngTextMetadata": {}
+  },
+  "prompt": "generation/S/07-from06-v2.prompt.txt",
+  "promptSha256": "b22f67f7b9962cbcaaef58f03ed02d20f58d72651112b4de5d111c0727858f1d",
+  "references": [
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/03_lotus_healer_girl/generation/S/06-v1.png",
+      "purpose": "Exact local native edit target: correct lamp arm and fullupperbody retained; foregroundLEFT lowerleg only extended",
+      "sha256": "0a6a4914e8ac9293fadc6e81950bf7c7906b3036c8564f8976c7c1cb62f4ba12"
+    },
+    {
+      "path": "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+      "purpose": "Confirmed renderingstyle only;09Southfootaxis was actually inspected in previous call, not attached as competing wholebody source in this narrow retry",
+      "sha256": "7a95140fc3c7a0ae6562ec6dff51d5296edd15116375152a8b22502c7107e879"
+    }
+  ],
+  "status": "selected_improvement_candidate_not_dynamic_accepted",
+  "review": {
+    "status": "selected_improvement_candidate_not_dynamic_accepted",
+    "reviewedOn": "2026-10-04",
+    "actualModel": null,
+    "actualQuality": null,
+    "observed": [
+      "S06 head/face/hair, both shoulders and hand/prop placement visibly preserved; crown y77.",
+      "AnatomicalRIGHT hand holds forward lotus lamp; anatomicalLEFT retains flask. Original07 local lamp backdip removed.",
+      "Screenright anatomicalLEFT knee extends with intact white trousers. Smaller rearRIGHTleg remains folded and visibly registered toS06.",
+      "Front shoe axis remains towardSouth; no meaningful outward yaw observed."
+    ],
+    "measured": {
+      "method": "Native alpha>8 foreground-shoe ROI below1040; bottom is last occupiedrow, not requested prompt coordinate",
+      "S06FrontShoeBottom": 1068,
+      "newS07FrontShoeBottom": 1181,
+      "S08FrontShoeBottom": 1174,
+      "delta06To07": 113,
+      "delta07To08": -7
+    },
+    "issues": [
+      "Actual extension exceeded intended1135 by46px; new07 already reaches nearcontactheight, and07→08 shoe rises7px rather than descending.",
+      "06→07 leg descent remains concentrated; selected for clear arm continuity improvement under requested small-drift tolerance, not dynamic pass."
+    ],
+    "visualAccepted": false
+  },
+  "officialVerification": {
+    "verifiedOn": "2026-10-03",
+    "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+    "finding": "most capable image model, max quality listed; no built-in selectors"
+  },
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "alphaGt8Bounds": [
+    166,
+    77,
+    1156,
+    1182
+  ]
+}

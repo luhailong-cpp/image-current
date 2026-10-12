@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "zone": "northwest",
+  "scope": "Existing r05_c04 pixels only; no new coordinates or artwork requested",
+  "candidate": "r05_c04/candidate/r05_c04-candidate-minimum-error-fc35358c1e27.png",
+  "candidateSha256": "29cfa909fcd030e9e5775496604221850803657f646a08adfab67ce34a00ba6a",
+  "tileWorldBox": [
+    12288,
+    16384,
+    16384,
+    20480
+  ],
+  "coordinateUnits": "artwork pixels; not world units",
+  "layoutPixels": [
+    1254,
+    1254
+  ],
+  "artCanvasPixels": [
+    65536,
+    65536
+  ],
+  "artPixelsPerOverviewPixel": 52.261562998405104,
+  "risks": [
+    {
+      "id": "government-stair-entry",
+      "tileApproxBox": [
+        0,
+        0,
+        4096,
+        1580
+      ],
+      "worldApproxBox": [
+        12288,
+        16384,
+        16384,
+        17964
+      ],
+      "description": "Government stair/left pedestal continues outside north/east of current tile; must preserve stair-bottom continuity and validate full approach once neighbor tiles exist.",
+      "cannotInfer": "Stair collision and elevation traversal; this is painted geometry, not a navigable mesh."
+    },
+    {
+      "id": "approach-road",
+      "tileApproxBox": [
+        0,
+        1580,
+        4096,
+        2580
+      ],
+      "worldApproxBox": [
+        12288,
+        17964,
+        16384,
+        18964
+      ],
+      "description": "Exposed paving in front of government stair is the clearest currently painted potential approach space. Do not estimate standing capacity until actor footprint, world mapping and navigation mask are established.",
+      "cannotInfer": "All visible paving is not automatically walkable."
+    },
+    {
+      "id": "peach-canopy-occlusion",
+      "tileApproxBox": [
+        0,
+        2580,
+        3150,
+        4096
+      ],
+      "worldApproxBox": [
+        12288,
+        18964,
+        15438,
+        20480
+      ],
+      "description": "Peach branches cover lower-left and lower-center; canopy image coverage does not establish trunk/obstacle footprint. Counting all covered pixels blocked or all visible gaps walkable would both be unjustified.",
+      "cannotInfer": "Tree trunk collision, player visibility, occlusion layers and usable ground beneath canopy."
+    },
+    {
+      "id": "external-boundaries",
+      "description": "No native neighbor artwork generated in r05_c05 or any other NW tile. Four external sides remain unreviewed. r05_c05 coordinates/layout-only guides were prepared before gate receipt but contain zero generated core pixels."
+    },
+    {
+      "id": "remaining-internal-joint",
+      "tilePoint": [
+        1543,
+        2995
+      ],
+      "worldPoint": [
+        13831,
+        19379
+      ],
+      "description": "Native paving joint at s03_02/s04_02 changes 8px to3-4px with slight center shift; current full internal QA remains needs_repair. Geometry repair must wait for gate release."
+    }
+  ],
+  "preservedInvariants": [
+    "65536 square artwork canvas",
+    "4096 square tile",
+    "existing building scale and door/stair placement",
+    "no world-size assignment",
+    "no actor resizing"
+  ],
+  "capacity5000Validated": false,
+  "worldSize": null,
+  "noNumericalCapacityEstimate": true,
+  "gateReleaseRequired": true
+}

@@ -1,0 +1,19 @@
+{
+  "patch": "r04_c03_s01_s04",
+  "selectedVersion": "v02",
+  "status": "candidate-north-geometry-pass",
+  "nativeSize": [1254, 1254],
+  "sha256": "a857b0f5a4f239576dd8225cb0f500d1eb6a7cf21d50ce504b0f9182eb4f5646",
+  "northActualTileSha256": "b681dbc9b33ef35b27bb093906ab8ba9a80e35a13cefd1b8577f22131b0b2117",
+  "examinedAt100Percent": ["r04_c03_s01_s04_v02.north-native-midline-100pct.png", "r04_c03_s01_s04_v02.north-actual-tile-midline-100pct.png", "r04_c03_s01_s04_v02.north-mincut-100pct.png"],
+  "observations": [
+    "All 1024 core pixels of the north boundary were visually examined using the current actual r03_c03 candidate tile above and the new native below, at original resolution.",
+    "Large block silhouettes, stone joint edges and diagonal block base continue without visible structural step at the tile boundary.",
+    "A slight horizontal tone and brush-texture difference is visible at the fixed midpoint cut; the exact native minimum-error hard cut has no evident structural defect.",
+    "No resizing, feathering, painting, or synthetic final pixels were used in these QA crops."
+  ],
+  "neededAIRepair": false,
+  "limits": "Only one native fragment has a usable candidate. The other 15 fragments and west/east/south external seams are unbuilt or unverified. This is not a formal tile.",
+  "rejectedVersion": "v01 was rejected for rendering the entire tile framing instead of the native fragment. It is not an additional completed fragment.",
+  "parentSteering": "Do not extend additional rows until root clears the north-boundary check."
+}

@@ -1,0 +1,99 @@
+{
+  "stem": "r09_c04_bamboo_tone_v01",
+  "createdAtUtc": "2026-10-10T11:17:43.903228+00:00",
+  "tool": "image_gen.imagegen",
+  "route": "builtin",
+  "prompt": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/prompts/r09_c04_bamboo_tone_v01.prompt.txt",
+  "promptText": "Use case: precise-object-edit.\nAsset type: native 1254 x 1254 local seam repair for a large painted game map.\nInput 1 is the exact native edit target. Return precisely the same square crop and framing, 1254 x 1254 pixels. Input 2 is a downsampled overview for context only; do not use its pixels or framing. Input 3 is the approved whole-island layout. Input 4 is independent material/style reference. Input 5 is approved Daoist painterly style only; do not transfer its UI, writing, people, or night lighting.\nPrimary request: correct only the unnatural diagonal/zigzag dark-light mosaic seam across the central bamboo in image 1. The affected region is approximately x300..960, y400..650 in this native crop. In particular the diagonal dark boundary rising through the background from around (575,560) to (700,450) is an accidental image join, not a cast shadow. Make light and green paint continuous across that boundary while retaining all original stalk edges, joints, leaves and depth planes.\nKeep every bamboo stalk, leaf cluster, gap, bamboo joint, existing rounded gold roof sliver at left, and the gray ceramic vessel lid at bottom at the same exact positions and size. Preserve the original sunlit green/yellow palette, soft dark background depth, crisp Q Daoist rounded painterly materials. Preserve all outside the central repair region and the outer 150-pixel border particularly closely.\nThis is a restrained repair of existing art, no new composition, no moving objects, no added plants, no text, HUD, grid, symbols or watermark. Do not draw an indicated rectangle or seam line. No global recolor, no blur, no redesign of lid, roof or bamboo. Output only the complete edited native crop.\n",
+  "references": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/guides/r09_c04_bamboo_tone_v01.native-guide.png",
+      "role": "native 1254 square edit target; exact coordinate crop",
+      "sha256": "fb7c925dac51931ddac45de11d8b9a0ad5b75a0f53cb0eeadab1e84e38e9ca4a",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest/qa/c04-hardseam-v01-preview-1254-QA-only.png",
+      "role": "QA overview only; downsampled context, never final pixels",
+      "sha256": "894b22b3c342a84ec0e7275c62d1bd1d0ac38dec9ce0774dd5614cc2db6fee2e",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+      "role": "approved entire island layout",
+      "sha256": "e7a06f547274a29a01cc4e20223637e99c0fab534d4982361e824147c800b34f",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-detail-v1.png",
+      "role": "independent style/material reference; not coordinate crop",
+      "sha256": "40ca8d6b5b062511ebd18dc0e278399644097ee10608000658f691796884c133",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+      "role": "primary approved Daoist Q painterly style; no UI/night/characters transfer",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "dimensions": [
+        1932,
+        814
+      ]
+    }
+  ],
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "transparent_background": false
+  },
+  "coordinates": {
+    "tile": "r09_c04",
+    "kind": "localized_native_repair",
+    "baseArtifact": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southwest\\qa\\c04-hardseam-v01-candidate-4096.png",
+    "baseSha256": "fd5bf3006c1da205dd09b3befdb46c954523e972ad5d196dd5d40bcefc581673",
+    "baseLocalBox": [
+      2400,
+      500,
+      3654,
+      1754
+    ],
+    "nativeGlobalBox": [
+      14688,
+      33268,
+      15942,
+      34522
+    ],
+    "expectedNativeDimensions": [
+      1254,
+      1254
+    ],
+    "repairLocalMandatoryTarget": [
+      300,
+      400,
+      960,
+      650
+    ],
+    "repairLocalROI": [
+      180,
+      270,
+      1110,
+      810
+    ],
+    "cropOperation": "exact integer-coordinate crop with no resampling",
+    "subrow": null,
+    "subcolumn": null,
+    "createdAtUtc": "2026-10-10T11:11:43.639470+00:00"
+  },
+  "status": "request_prepared"
+}

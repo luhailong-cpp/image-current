@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "frame": "02-v6",
+  "reviewedOn": "2026-10-03",
+  "status": "not_selected_correction_incomplete",
+  "recommendedCurrentFrame": "02-v5.png",
+  "native": [
+    1254,
+    1254
+  ],
+  "virtualRoot": [
+    800,
+    1164
+  ],
+  "groundY": 1164,
+  "observations": [
+    "本次按分工仅调用一次内置image_gen，目标是局部头脸/颈肩回收；未做任何脚本像素编辑。",
+    "头脸有轻微收小和回收，但可见眼睛仍约在原生x985附近，仍比01/03基准约x935前探约50px；此为视觉估计，不是自动关键点测量。",
+    "头顶y87，与v5的86相近，未出现全图上下平移；颈肩与脸形仍有变化，不能宣称注册问题已修复。",
+    "右膝屈曲和平底支撑姿态总体保留；支撑鞋实际最低由1159变1158，后鞋最低由1062变1061，局部横向轮廓也改变约2px，未实现严格脚部像素几何不变。",
+    "近右手后灯、远左手前瓶保持，长波浪发和远侧隐藏花保持；未见新增肢体或持物互换。"
+  ],
+  "pixelReadback": {
+    "supportShoeROI": {
+      "roi": [
+        700,
+        1040,
+        940,
+        1180
+      ],
+      "occupiedBoundsInclusiveV5V6": [
+        [
+          728,
+          1040,
+          915,
+          1159
+        ],
+        [
+          726,
+          1040,
+          917,
+          1158
+        ]
+      ],
+      "alphaMaskIoU": 0.9429491603404647,
+      "rgbaExactPixelFraction": 0.43276785714285715
+    },
+    "rearShoeROI": {
+      "roi": [
+        360,
+        900,
+        540,
+        1080
+      ],
+      "occupiedBoundsInclusiveV5V6": [
+        [
+          360,
+          900,
+          539,
+          1062
+        ],
+        [
+          360,
+          900,
+          539,
+          1061
+        ]
+      ],
+      "alphaMaskIoU": 0.968080278352075,
+      "rgbaExactPixelFraction": 0.36074074074074075
+    },
+    "lowerBodyROI": {
+      "roi": [
+        350,
+        820,
+        950,
+        1180
+      ],
+      "occupiedBoundsInclusiveV5V6": [
+        [
+          350,
+          820,
+          949,
+          1159
+        ],
+        [
+          350,
+          820,
+          949,
+          1158
+        ]
+      ],
+      "alphaMaskIoU": 0.9800701051577366,
+      "rgbaExactPixelFraction": 0.3365648148148148
+    }
+  },
+  "pixelReadbackCaveat": "ROI包含鞋/脚踝边缘及局部衣裤，IoU为区域alpha轮廓相似度，不等同动作通过；所有bbox最大值在此为最后占用像素坐标。",
+  "conclusion": "局部改善不足以满足本次头部与邻帧注册目标，保留02-v5为当前序列。v6及记录交主审择优/清理，不覆盖候选导出，不另行重试。",
+  "dynamicAcceptance": false,
+  "clientVerified": false,
+  "actualModel": null,
+  "actualQuality": null
+}

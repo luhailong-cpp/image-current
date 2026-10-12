@@ -1,0 +1,86 @@
+{
+  "status": "FAIL_DO_NOT_APPLY",
+  "contextTileBox": [
+    453,
+    493,
+    1707,
+    1747
+  ],
+  "contextWorldBox": [
+    12741,
+    8685,
+    13995,
+    9939
+  ],
+  "attempts": 4,
+  "rawCandidates": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\raw-v1.png",
+      "sha256": "f0e95a7ece83fe9d5ebe9eb0a4c4c9140d77264a052f48a4556abad8afbc0551",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\raw-v2.png",
+      "sha256": "f3a16aa05b911a584a2d861768865ddfccb1fac644fef2d5963470a39add8cab",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\raw-v3.png",
+      "sha256": "146a151a21dc9066d6c6ff5de1dcad63beba2c3ef3e95aeaecaca8510bfab68b",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\raw-v4.png",
+      "sha256": "951d1344d06b84bfba57626cb1c464e554519ec00eedd035362af49293999a9a",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "format": "PNG"
+    }
+  ],
+  "lastDerived": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\derived-context-v4.png",
+    "sha256": "8e041c03c463f3bcbf91231dd8e240a7ca45304c2aa0cef2b07adf4652b3931f",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "lastAlpha": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\alpha-v4.png",
+    "sha256": "d26e277c2b2728f7497cc9528280a21cfcd3242ec45e2b1021c228db99ac2005",
+    "width": 1254,
+    "height": 1254,
+    "mode": "L",
+    "format": "PNG"
+  },
+  "lastSupportPositiveMask": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\support-positive-mask-v4.png",
+    "sha256": "94ac7298ea816a48ee675d5a535f2022e5f02bfe095bd9e329967f74e5ceeba9",
+    "width": 1254,
+    "height": 1254,
+    "mode": "L",
+    "format": "PNG"
+  },
+  "evidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\roof-row-repair\\left\\qa-rejected-strip-native.png",
+    "sha256": "b949242227ea4edcb37f8b55ce4cecd4b7b2c2e61b0310b7a160dd5b941fd9e8",
+    "width": 1254,
+    "height": 400,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "finding": "All four left generations remove triangles but shift the original lower tile columns; restoring immutable outside pixels causes double gutters/blur-like alpha overlap near local y700..760. This is a geometric drift, not a tonal mismatch, so narrower alpha cannot truthfully fix it.",
+  "actualViewPerformed": true,
+  "furtherGenerationStopped": true,
+  "reason": "Bounded four attempts and explicit no-endless-generation constraint."
+}

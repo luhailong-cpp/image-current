@@ -1,0 +1,113 @@
+{
+  "reviewedAt": "2026-10-09T15:08:59.046071+00:00",
+  "tile": "r05_c13",
+  "scope": [
+    "p31",
+    "p41"
+  ],
+  "status": "native_candidates_ready_for_parent_assembly_review",
+  "generatedNativeCountForThisAssignment": 2,
+  "complete4kCandidateCount": 0,
+  "formalAcceptedCount": 0,
+  "actualModel": null,
+  "actualQuality": null,
+  "modelEvidence": "Built-in tool returned only image_url and output_hint; no actual model or quality exposed. Same batch configuration target was retained.",
+  "patches": [
+    {
+      "id": "p31",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p31.png",
+      "sha256": "a603ac81ea556f491aa441e089773a24269572cf29d383429898175d275c6ad5",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "resized": false,
+      "coreWorldBox": [
+        49152,
+        18432,
+        50176,
+        19456
+      ],
+      "contextWorldBox": [
+        49037,
+        18317,
+        50291,
+        19571
+      ],
+      "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p31.png.generation.json",
+      "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\prompts\\p31.prompt.txt",
+      "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\receipts\\p31.receipt.json",
+      "referenceHashesPresent": true
+    },
+    {
+      "id": "p41",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p41.png",
+      "sha256": "9d548997fbba694513151ea58548d74d093f2beeac89c9107c0f48e635e51846",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "resized": false,
+      "coreWorldBox": [
+        49152,
+        19456,
+        50176,
+        20480
+      ],
+      "contextWorldBox": [
+        49037,
+        19341,
+        50291,
+        20595
+      ],
+      "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\native\\p41.png.generation.json",
+      "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\prompts\\p41.prompt.txt",
+      "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\receipts\\p41.receipt.json",
+      "referenceHashesPresent": true
+    }
+  ],
+  "overlapMeasurements": [
+    {
+      "north": "p21",
+      "south": "p31",
+      "comparison": "north bottom230 versus south top230, without resize or alignment",
+      "mae": 4.150462288791808,
+      "p95AbsoluteChannelDifference": 13.0,
+      "exactPixelFraction": 0.007520282920740587,
+      "within8PixelFraction": 0.8764822134387352,
+      "medianRGBDelta": [
+        -2.0,
+        -2.0,
+        -2.0
+      ],
+      "visualAssessment": "Native overlap retains recognizable slab junctions and direction; generated strip is not pixel-identical. Full tile seam acceptance remains pending."
+    },
+    {
+      "north": "p31",
+      "south": "p41",
+      "comparison": "north bottom230 versus south top230, without resize or alignment",
+      "mae": 2.6858551186926474,
+      "p95AbsoluteChannelDifference": 8.0,
+      "exactPixelFraction": 0.013549684487899592,
+      "within8PixelFraction": 0.9284134248665141,
+      "medianRGBDelta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visualAssessment": "Native overlap retains recognizable slab junctions and direction; generated strip is not pixel-identical. Full tile seam acceptance remains pending."
+    }
+  ],
+  "visualReview": {
+    "p31": "Strict ground crop retained; diagonal ivory edging and sparse flat torn red paper rendered; no panorama/new building. Top overlap visually follows p21.",
+    "p41": "Grey-blue paving band continues on correct rising diagonal; upper slab junction follows p31. Small wall-side pink canopy tip is cropped at lower-right as layout indicates.",
+    "remainingConcerns": [
+      "Stone still has denser mottled flecks than approved close-up style; review globally before formal acceptance. Do not solve with arbitrary blur.",
+      "p31 large red paper shape follows blurred geometry but its exact silhouette was newly generated.",
+      "p41 lower-right canopy tip is soft and should be examined at the eventual neighboring join.",
+      "Native top overlaps were re-rendered with small differences; neither pair is certified pixel-perfect or formally seamless.",
+      "Lateral neighbors and complete 4x4 tile have not been reviewed by this assignment."
+    ]
+  },
+  "nextStep": "Parent may use p31/p41 native sources as west-overlap input for adjacent second-column patches and include them in full 4x4 assembly/seam QA; formal acceptance remains zero."
+}

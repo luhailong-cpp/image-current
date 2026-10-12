@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "active_art_repair",
+  "userRequirement": "我说的直脚着地两帧，再旁边点两帧，再旁边点两帧，再旁边点俩帧，依次类推",
+  "interpretation": "每个支撑位置2张独立姿态，同一支撑脚持续接地8帧，沿行进轴相对身体逐步从前到后，再换脚；不是外八方向，不能只改相位文字。",
+  "frames": 16,
+  "frameMs": 75,
+  "cycleMs": 1200,
+  "firstFoot": {
+    "E": "right",
+    "W": "left",
+    "NW": "left",
+    "N": "right",
+    "NE": "left",
+    "S": "right",
+    "SE": "right",
+    "SW": "left"
+  },
+  "positions": [
+    {
+      "frames": [
+        1,
+        2,
+        9,
+        10
+      ],
+      "stage": "forward_landing"
+    },
+    {
+      "frames": [
+        3,
+        4,
+        11,
+        12
+      ],
+      "stage": "body_approaches_support"
+    },
+    {
+      "frames": [
+        5,
+        6,
+        13,
+        14
+      ],
+      "stage": "body_passes_support"
+    },
+    {
+      "frames": [
+        7,
+        8,
+        15,
+        16
+      ],
+      "stage": "rear_forefoot_push_off"
+    }
+  ],
+  "continuousSupportFramesPerFoot": 8,
+  "continuousSupportMsPerFoot": 600,
+  "geometry": "固定世界地面，斜向透视下脚接触位置的屏幕Y可随深度变化；不得整图平移或按最低alpha像素对齐。",
+  "imageRules": [
+    "两帧为两张真实独立关节姿态",
+    "保留已经正确的上半身、手臂链、人物和画风",
+    "膝踝脚掌朝运动方向，无外八",
+    "后蹬前掌接地可抬跟，但不能整个鞋底悬空"
+  ],
+  "clientIntegrated": false
+}

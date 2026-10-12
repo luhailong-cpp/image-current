@@ -1,0 +1,72 @@
+{
+  "reviewedAtUtc": "2026-10-10T05:18:55.995Z",
+  "tile": "r10_c08",
+  "selectedManifest": "r10_c08/selected-patches.json",
+  "reviewedSourceSet": "QA/root-pass/manifest.json uses p13-v2,p41-v2,p43-v2 plus other v1",
+  "seamsReviewed": 24,
+  "intersectionsReviewed": 9,
+  "internalReady": false,
+  "formalAccepted": false,
+  "resolved": [
+    {
+      "id": "G1",
+      "issue": "p13 native x1024 barrel/bench clipping",
+      "resolution": "p13-v2 restores round barrel silhouette; full left/right/bottom adjacent strips reviewed, no same clipping remains"
+    },
+    {
+      "id": "G2",
+      "issue": "p41 native y230 hard geometry break and forked rib",
+      "resolution": "p41-v2 one continuous rib; p31-p41,p41-p42 full seam reviewed"
+    }
+  ],
+  "open": [
+    {
+      "id": "G3",
+      "kind": "geometry",
+      "patches": [
+        "p42",
+        "p43",
+        "p44"
+      ],
+      "issue": "p43-v2 foreground golden hull rim steps at both neighboring transitions; v3 improves left but right join still stepped and workbench stretcher now bends at cut",
+      "repairAfterGate": "No further same narrow repair. Native joint redraw containing complete right foreground rim intersection and workbench lower rail with all joining boundaries. Preserve neighbor world coordinates.",
+      "globalFocus": [
+        31509,
+        40051,
+        32000,
+        40960
+      ]
+    },
+    {
+      "id": "T1",
+      "kind": "completion",
+      "patch": "p24",
+      "nativeBox": [
+        115,
+        1045,
+        480,
+        1139
+      ],
+      "globalBox": [
+        31744,
+        38818,
+        32109,
+        38912
+      ],
+      "issue": "narrow soft ivory-canopy/wood edge in p24 at p23/p24/p33/p34 intersection",
+      "repairAfterGate": "Native joint containing full soft contour and existing sharp canopy/wood endpoints"
+    }
+  ],
+  "p43v3Review": {
+    "selected": false,
+    "files": "qa/p43-v3-review",
+    "left": "foreground hull line continuous, some color step remains",
+    "right": "blocking foreground rim contour step and artificial elbow in workbench stretcher",
+    "top": "geometry continuous"
+  },
+  "colorObservations": [
+    "Several wood/floor seams have mild RGB offsets; limited color-only correction after geometry is closed, with derivation recorded",
+    "Ivory weave changes density subtly at p22-p32; no clear cut or shape jump observed"
+  ],
+  "gate": "No further imagegen while capacity-layout-gate active"
+}

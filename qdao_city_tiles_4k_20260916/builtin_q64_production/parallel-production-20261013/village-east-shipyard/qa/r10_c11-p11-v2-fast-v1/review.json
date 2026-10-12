@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T08:18:19.128027+00:00",
+  "reviewType": "fast_native_layout_and_west_seam",
+  "tile": "r10_c11",
+  "patch": "p11",
+  "version": 2,
+  "status": "blocked_layout_geometry",
+  "formalAccepted": false,
+  "fullTileInternalQaCompleted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p11-v2.png",
+    "sha256": "d9afa1258a29294e5b6c59718a516755f466195f2c2ad0497b3346b35d2c2a08",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p11-v2-conditioned-target.png",
+    "sha256": "150da4dd22caa840fcb84e9e69b7a62231aa00d0397501376deb7a2f49a25229",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "westAnchor": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png",
+    "sha256": "a8a18455bcaa7d863115b023144952dd4b33c354d511477087c4bb9e20d03778",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "generationEvidence": {
+    "tool": "image_gen__imagegen",
+    "route": "existing built-in image tool",
+    "actualModel": null,
+    "actualModelStatus": "not returned / unknown",
+    "actualQuality": null,
+    "paidApiUsed": false
+  },
+  "dimensionsSatisfyContract": true,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "coreDimensions": [
+    1024,
+    1024
+  ],
+  "canAnchor": {
+    "p21_south": false,
+    "p12_east": false
+  },
+  "decision": "Do not propagate this candidate into p21 or p12. The west core seam is visually continuous, but the support post and outgoing rail drift from the approved layout. Keep this candidate preserved; repair geometry before dependent expansion.",
+  "blockers": [
+    {
+      "id": "B1_post_footprint_drift",
+      "severity": "blocking_propagation_south",
+      "coordinates": "Candidate native coordinates, approximate hand-inspected object bounds",
+      "candidateCapBox": [
+        542,
+        351,
+        835,
+        495
+      ],
+      "promptRequiredCapYRange": [
+        470,
+        620
+      ],
+      "promptRequiredCenterX": 620,
+      "observed": "Cap center is about x689/y423: roughly 70 px right and 100-130 px above the required placement. Only one post is present in the candidate; this is a displaced existing post, not a confirmed duplicated extra post.",
+      "southOutgoingAtY1139": {
+        "candidateShaftXApprox": [
+          462,
+          834
+        ],
+        "guideSoftShaftXApprox": [
+          430,
+          790
+        ],
+        "uncertainty": "Guide is blurred and cannot supply exact hard contour pixels. Candidate is visibly shifted right about 40-80 px relative to the intended shaft footprint."
+      },
+      "consequence": "Using the bottom overlap for p21 would carry the shifted support shaft and adjacent net geometry south.",
+      "evidence": [
+        "post-guide-vs-candidate-100pct.png",
+        "south-shaft-guide-vs-candidate-100pct.png"
+      ]
+    },
+    {
+      "id": "B2_east_rail_height_drift",
+      "severity": "blocking_propagation_east",
+      "atCandidateNativeX": 1139,
+      "candidateRailYApprox": [
+        945,
+        1120
+      ],
+      "guideRailWithHighlightYApprox": [
+        1070,
+        1225
+      ],
+      "observed": "The eastern outgoing beam is approximately 100-140 px higher and somewhat thicker than the guide footprint. Exact guide contour limits are uncertain because the guide is blurred.",
+      "consequence": "Using the right overlap for p12 would lock in the elevated rail and push the continuing rail/net course away from the approved layout.",
+      "evidence": [
+        "east-rail-guide-vs-candidate-100pct.png"
+      ]
+    }
+  ],
+  "quickChecks": [
+    {
+      "check": "west_core_join",
+      "status": "no_blocker_observed",
+      "sourceBoundaryX": 1139,
+      "candidateBoundaryX": 115,
+      "nativeWorldShiftX": 1024,
+      "observed": "At the true core cut, deck grooves, beam upper/lower contours and rope/net strands continue visibly without an abrupt gap, duplicated strip, stair-step beam offset or a second post at the seam. This is a local visual quick check, not formal cross-zone acceptance.",
+      "evidence": [
+        "west-core-seam-100pct.png",
+        "west-rail-crossing-100pct.png",
+        "west-net-crossing-100pct.png"
+      ]
+    },
+    {
+      "check": "single_post_count",
+      "status": "no_extra_post_within_candidate",
+      "observed": "Candidate contains one intended support post. The older west post remains in the west source; no duplicate post is introduced at the shared edge."
+    },
+    {
+      "check": "no_ui_people_or_new_large_structure",
+      "status": "no_blocker_observed",
+      "observed": "No text, UI, NPC, vessel or building was introduced in this tight deck fragment."
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_local_wood_finish",
+      "status": "pending_consolidated_visual_QA",
+      "observed": "Local grain and bright short highlights on the rail/post remain visually dense; assess material consistency with the complete tile. This does not by itself justify stopping independent production.",
+      "locationApprox": [
+        440,
+        640,
+        835,
+        890
+      ]
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidence": [
+    {
+      "file": "west-core-seam-100pct.png",
+      "size": [
+        384,
+        1024
+      ],
+      "left": {
+        "input": "west",
+        "crop": [
+          947,
+          115,
+          1139,
+          1139
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          115,
+          115,
+          307,
+          1139
+        ],
+        "paste": [
+          192,
+          0
+        ]
+      },
+      "joinX": 192,
+      "purpose": "Actual core seam at x192. West source x1138 followed by candidate x115; no overlap duplicated.",
+      "sha256": "db028a42336b2f56923f335b447824a68458780f0a09a1b4fb32763e829f6e28"
+    },
+    {
+      "file": "west-rail-crossing-100pct.png",
+      "size": [
+        512,
+        330
+      ],
+      "left": {
+        "input": "west",
+        "crop": [
+          883,
+          620,
+          1139,
+          950
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          115,
+          620,
+          371,
+          950
+        ],
+        "paste": [
+          256,
+          0
+        ]
+      },
+      "joinX": 256,
+      "purpose": "Rail crossing at actual seam x256.",
+      "sha256": "684804ae569ee7a38aa837ee2b39982f6ed136d7b1b455715fbd90bddef38f61"
+    },
+    {
+      "file": "west-net-crossing-100pct.png",
+      "size": [
+        512,
+        324
+      ],
+      "left": {
+        "input": "west",
+        "crop": [
+          883,
+          930,
+          1139,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          115,
+          930,
+          371,
+          1254
+        ],
+        "paste": [
+          256,
+          0
+        ]
+      },
+      "joinX": 256,
+      "purpose": "Rope/net seam plus bottom halo at actual seam x256.",
+      "sha256": "21cb0863507655a99ab0682f62cb08a3682edeb10289c59c081c5e1919914db6"
+    },
+    {
+      "file": "post-guide-vs-candidate-100pct.png",
+      "size": [
+        1100,
+        700
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          350,
+          300,
+          900,
+          1000
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          350,
+          300,
+          900,
+          1000
+        ],
+        "paste": [
+          550,
+          0
+        ]
+      },
+      "joinX": 550,
+      "purpose": "Left guide/right candidate same coordinates, 1:1. Layout-only guide does not provide final pixels.",
+      "sha256": "ba84c990523f05b4c76c205dc7c62205c29ea9b91dfe7919af06629d2612b56c"
+    },
+    {
+      "file": "south-shaft-guide-vs-candidate-100pct.png",
+      "size": [
+        1200,
+        254
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          350,
+          1000,
+          950,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          350,
+          1000,
+          950,
+          1254
+        ],
+        "paste": [
+          600,
+          0
+        ]
+      },
+      "joinX": 600,
+      "purpose": "South outgoing footprint guide left/candidate right; core edge is source y1139, image y139.",
+      "sha256": "2a647166252b5b2c3c86e42262f65b15939b9251ad059048ce5e7e2f3f0e2f76"
+    },
+    {
+      "file": "east-rail-guide-vs-candidate-100pct.png",
+      "size": [
+        508,
+        404
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          1000,
+          850,
+          1254,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          1000,
+          850,
+          1254,
+          1254
+        ],
+        "paste": [
+          254,
+          0
+        ]
+      },
+      "joinX": 254,
+      "purpose": "East outgoing rail guide left/candidate right; core edge is source x1139, crop x139.",
+      "sha256": "be3c54a37312a7fe7b2c3ecee9f704b97691f21c496753a93d0b9bb1c3ee83ef"
+    }
+  ],
+  "evidenceViewedAt100Percent": true,
+  "sourceImagesViewed": true,
+  "resized": false,
+  "evidenceOperations": "Exact rectangular crop and horizontal concatenation only; no scaling, blending, sharpening or drawing. All crop/paste coordinates are in evidence-manifest.json.",
+  "scopeLimits": {
+    "historicalVersionsRescanned": false,
+    "overviewRebuilt": false,
+    "sourcesOrSelectionsEdited": false,
+    "gitTouched": false,
+    "generationPerformed": false,
+    "guidePixelsCountedAsFinal": false,
+    "retryCountInferred": false
+  },
+  "recommendedNextStep": "Correct post placement and rail continuation using the same west native anchor; if the same point has already had two unsuccessful repair attempts, record it pending and continue an independent missing patch. Do not count deferred correction as passed."
+}

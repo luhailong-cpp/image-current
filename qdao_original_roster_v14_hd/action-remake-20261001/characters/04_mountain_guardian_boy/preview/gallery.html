@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 山岳守卫 · 动画总览</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#121c19;color:#e8eee8}body{max-width:1120px;margin:auto;padding:24px}h1{font-size:26px}p{line-height:1.7;color:#bdcabf}a{color:#d7c897}select{font:inherit;padding:8px;background:#293e31;color:inherit;border:1px solid #647464;border-radius:6px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}figure{margin:0;background:#23372d;border-radius:10px;padding:10px}img{width:100%;aspect-ratio:1;border-radius:7px;background:#f5f0e2}figcaption{display:flex;justify-content:space-between;padding:6px 0}small{color:#b6c7b9}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<h1>04 山岳守卫 · 动画总览</h1>
+<p>跑步八方向 128 帧，受击 12 帧、普攻 24 帧、施法 32 帧。共 196 张独立 1024×1024 RGBA 成品。<br>透明素材在米白底上统一整画布显示。此页供离线审阅；客户端尚未接入。</p>
+<p><a href="index.html">进入逐帧／放大／透明边缘检查</a> · <a href="../MERGE_HANDOFF.md">合并交接</a></p>
+<label>跑步速度 <select id="timing"><option value="normal">正常 1× · 960ms</option><option value="slow">慢放 0.25×</option></select></label>
+<p id="note">正常跑步每圈960ms，16帧均匀60ms，首尾无额外停顿。本页跑步动画与逐帧播放器均使用精确60ms。客户端速度未接入验证。</p>
+<div class="grid" id="run"></div>
+<h2>受击、普攻、施法</h2>
+<label>播放 <select id="combat-speed"><option value="normal">规格速度</option><option value="slow">0.25× 慢放</option></select></label>
+<div class="grid" id="combat"></div>
+<p>受击 240ms、普攻 360ms、施法 720ms。战斗动作独立保留规格速度；GIF 以 10ms 为单位，施法每帧 40/50ms 交替，总时长为 720ms。</p>
+<script>
+const revision='?v=video_axis_hands_960_20261005';
+const dirs=['N','NE','E','SE','S','SW','W','NW'];
+function card(action,direction,label,variant){const f=document.createElement('figure');f.innerHTML='<figcaption><span>'+label+' '+direction+'</span><small>'+(action==='run'?'16':action==='hit'?'6':action==='attack'?'12':'16')+'帧</small></figcaption>';const im=document.createElement('img');im.alt=label+' '+direction+' 动画';im.dataset.action=action;im.dataset.direction=direction;im.src=action+'_'+direction+'_'+variant+(action==='run'?'.apng':'.gif')+revision;f.append(im);const link=document.createElement('a');link.textContent='逐帧连图';link.href=action+'_'+direction+'_contact.png'+revision;f.append(link);return f}
+for(const d of dirs)document.getElementById('run').append(card('run',d,'跑步','normal'));
+for(const [a,label]of[['hit','受击'],['attack','普攻'],['cast','施法']])for(const d of ['E','W'])document.getElementById('combat').append(card(a,d,label,'normal'));
+document.getElementById('timing').onchange=e=>{for(const im of document.querySelectorAll('#run img'))im.src='run_'+im.dataset.direction+'_'+e.target.value+'.apng'+revision};
+document.getElementById('combat-speed').onchange=e=>{for(const im of document.querySelectorAll('#combat img'))im.src=im.dataset.action+'_'+im.dataset.direction+'_'+e.target.value+'.gif'+revision};
+</script></html>

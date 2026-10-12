@@ -1,0 +1,120 @@
+{
+  "inputs": {
+    "candidate": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p13-v2.png",
+      "sha256": "e6205c7463de26bfb9b8edf378b69288931f57c9b36b1c7abecb4cee02f291a0",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "p13_layout": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p13-v2-layout-only.png",
+      "sha256": "6765ca14ae5bee8d991d72c056f3bb48176e12fc31c405230355483e85f0b2b8",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "p14_layout": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p14-v1-layout-only.png",
+      "sha256": "00cd26787afb30c126f3458f8b48dadbb0c59db74363b4f958d171680dc30c8d",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "resized": false,
+  "annotationPixels": false,
+  "evidence": [
+    {
+      "file": "east-overlap-native-guide-guide-100pct.png",
+      "size": [
+        690,
+        800
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            1024,
+            150,
+            1254,
+            950
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "p13_layout",
+          "crop": [
+            1024,
+            150,
+            1254,
+            950
+          ],
+          "paste": [
+            230,
+            0
+          ]
+        },
+        {
+          "input": "p14_layout",
+          "crop": [
+            0,
+            150,
+            230,
+            950
+          ],
+          "paste": [
+            460,
+            0
+          ]
+        }
+      ],
+      "purpose": "Same world 230px overlap: native p13 left, p13 guide middle, p14 guide right. Candidate/source core boundary x1139 is panel-local x115; p14 boundary x115 is panel-local x115. No vertical offset.",
+      "sha256": "9978d483ce08a2fd7623be5491afdb2ca7ff4429caf122b619b8d594c797a19c"
+    },
+    {
+      "file": "p13-to-p14-core-guide-junction-100pct.png",
+      "size": [
+        500,
+        700
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            939,
+            200,
+            1139,
+            900
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "p14_layout",
+          "crop": [
+            115,
+            200,
+            415,
+            900
+          ],
+          "paste": [
+            200,
+            0
+          ]
+        }
+      ],
+      "purpose": "True core join placed at image x200: p13 native through x1138 then p14 layout from x115. This is diagnostic reference comparison, not final art.",
+      "sha256": "649509f0db30f0c280319e570729e2be61859c39af34e3d1d6cab9dbd2665d8e"
+    }
+  ],
+  "boxConvention": "[left,top,right,bottom), copied 1:1"
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>月弦师 · 三种战斗动作检查</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#162125;color:#e8e9df}body{max-width:1440px;margin:auto;padding:28px}h1{font-size:26px;margin:0 0 8px}p{color:#b4c5c8;line-height:1.6}a{color:#d9be78}button,select,input{font:inherit}button{border:1px solid #58716d;border-radius:8px;background:#294540;color:#eff2df;padding:8px 12px;cursor:pointer}button.active{background:#b9ceba;color:#17372e}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}#groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px}.card{background:#213035;border:1px solid #475f5c;border-radius:14px;padding:16px}.card h2{font-size:19px;margin:0 0 10px}.stage{position:relative;aspect-ratio:1;width:100%;background:repeating-conic-gradient(#45534f 0% 25%,#364842 0% 50%) 50%/24px 24px;border-radius:8px;overflow:hidden}.stage img{display:block;width:100%;height:100%;object-fit:contain}.stage.light{background:#f0eee5}.stage.dark{background:#0c1011}.stage .missing{position:absolute;inset:0;display:grid;place-items:center;color:#f4b595;font-size:20px}.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}.frame{font-variant-numeric:tabular-nums;min-width:75px}input[type=range]{width:100%;accent-color:#d9be78}.note{font-size:12px;color:#b8c5c7;line-height:1.5}.status{background:#243b3d;border-left:3px solid #dbbf76;padding:12px;white-space:pre-wrap}a{overflow-wrap:anywhere}@media(max-width:480px){#groups{grid-template-columns:1fr}body{padding:14px}}
+</style>
+<h1>月弦师 · 受击 / 普攻 / 施法</h1>
+<p>每组可独立正常播放、0.25 倍慢放及逐帧检查。E 为斜前朝右下，W 为斜后朝左上。动画直接读取正式 PNG，不插值、不平移。</p>
+<div id="summary" class="status"></div>
+<div class="toolbar"><button id="allNormal">全部正常播放</button><button id="allSlow">全部 0.25×</button><button id="allPause">全部暂停</button><button id="background">切换底色</button><a href="manifest.json">Manifest</a><a href="technical-validation.json">技术检查</a><a href="SHA256SUMS">SHA256</a></div>
+<div id="groups"></div>
+<script src="preview/manifest.js"></script>
+<script>
+const data=window.SPRITE_MANIFEST;
+const labels={hit:"受击",attack:"普攻",cast:"施法"},players=[];
+document.querySelector("#summary").textContent="文件 "+data.presentFrames+"/"+data.expectedFrames+"；技术状态 "+data.technicalStatus+"。\n"+(data.acceptanceStatus==="requires-repair"?"当前静态验收未通过，详见 VERIFICATION.md。":data.acceptanceStatus==="static-reviewed-playback-pending"?"脚位问题已修正，静态复核通过；详细证据见 VERIFICATION.md。":"逐帧视觉状态来自生成记录。")+"\n实际连播未验；未接入客户端。";
+function makePlayer(group){
+ const card=document.createElement("section");card.className="card";
+ card.innerHTML='<h2>'+labels[group.action]+' · '+group.direction+'　'+group.availableFrames+'/'+group.expectedFrames+' 帧</h2><div class="stage"><img alt="'+labels[group.action]+' '+group.direction+' 动画帧"><span class="missing" hidden></span></div><div class="row"><button data-play>播放</button><button data-normal>1×</button><button data-slow>0.25×</button><button data-prev>上一帧</button><button data-next>下一帧</button><span class="frame"></span></div><input type="range" min="1" max="'+group.expectedFrames+'" value="1" aria-label="'+group.id+' 帧序"><div class="note">'+group.durationMs+'ms / 帧 · 总长 '+group.totalDurationMs+'ms · <a href="'+group.contact+'">全帧联系表</a><br><span data-review></span></div>';
+ document.querySelector("#groups").append(card);
+ const links=document.createElement("div");links.className="note row";links.innerHTML='<a href="preview/'+group.id+'-normal.apng">正常速度 APNG</a> · <a href="preview/'+group.id+'-quarter-speed.apng">0.25× APNG</a>';card.append(links);
+ const img=card.querySelector("img"),missing=card.querySelector(".missing"),slider=card.querySelector("input"),counter=card.querySelector(".frame"),review=card.querySelector("[data-review]");
+ const cache=group.frames.map(f=>{if(!f.available)return null;const p=new Image();p.src=f.file;return p});
+ let index=0,speed=1,playing=false,last=performance.now(),acc=0,seen=new Set();
+ function draw(){const f=group.frames[index];img.style.visibility=f.available?"visible":"hidden";missing.hidden=f.available;if(f.available){img.src=f.file;missing.style.display="none"}else{missing.textContent="第 "+(index+1)+" 帧尚未落盘";missing.style.display="grid"}counter.textContent=String(index+1).padStart(2,"0")+" / "+group.expectedFrames;slider.value=index+1;review.textContent=f.visualStatus||"未审核";seen.add(index+1);card.dataset.frame=index+1;card.dataset.seen=JSON.stringify([...seen]);}
+ function play(nextSpeed){speed=nextSpeed;playing=true;last=performance.now();acc=0;card.querySelector("[data-play]").textContent="暂停";card.dataset.speed=speed;}
+ function pause(){playing=false;card.querySelector("[data-play]").textContent="播放";}
+ function step(n){pause();index=(index+n+group.expectedFrames)%group.expectedFrames;draw();}
+ card.querySelector("[data-play]").onclick=()=>playing?pause():play(speed);
+ card.querySelector("[data-normal]").onclick=()=>play(1);card.querySelector("[data-slow]").onclick=()=>play(.25);
+ card.querySelector("[data-prev]").onclick=()=>step(-1);card.querySelector("[data-next]").onclick=()=>step(1);
+ slider.oninput=()=>{pause();index=Number(slider.value)-1;draw()};
+ function tick(now){if(playing){acc+=now-last;const interval=group.durationMs/speed;while(acc>=interval){index=(index+1)%group.expectedFrames;acc-=interval;draw()}}last=now;requestAnimationFrame(tick)}
+ draw();requestAnimationFrame(tick);return{play,pause,card,group};
+}
+data.groups.forEach(g=>players.push(makePlayer(g)));
+document.querySelector("#allNormal").onclick=()=>players.forEach(p=>p.play(1));
+document.querySelector("#allSlow").onclick=()=>players.forEach(p=>p.play(.25));
+document.querySelector("#allPause").onclick=()=>players.forEach(p=>p.pause());
+let background=0;document.querySelector("#background").onclick=()=>{background=(background+1)%3;document.querySelectorAll(".stage").forEach(s=>s.className="stage "+["","light","dark"][background])};
+window.animationPreview={players,manifest:data};
+</script></html>

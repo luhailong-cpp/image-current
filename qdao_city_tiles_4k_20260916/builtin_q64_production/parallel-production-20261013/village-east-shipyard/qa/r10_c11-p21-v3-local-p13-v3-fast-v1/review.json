@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T16:05:52.539683+00:00",
+  "reviewType": "bounded_native_repair_fast_check",
+  "tile": "r10_c11",
+  "patch": "p21",
+  "version": "v3-local-native",
+  "status": "anchor_ready_pending_consolidated_QA",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p21-v3-local-native.png",
+    "sha256": "b1c3ff48bab56288a708c9d1f2cb4be73f2af3f922ba70aa13aea8b24ef66658",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "base": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p21-v2.png",
+    "sha256": "d12507f17857197d4d390ddcc9c1081726f9ea9590e9c7bbb07c1bc3273fc5d3",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "AIRepairSource": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p21-v3.png",
+    "sha256": "0b5ab23c6e28d204334170fe19ad1e98c2b06a227f604d7f111529f09cd03f65",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "canAnchor": {
+    "p22_east": true,
+    "p31_south": true
+  },
+  "decision": "The former y235 horizontal beam/deck cutoff is removed. The beam underside now flows diagonally through the bounded repair. Allow east continuation and retain the unchanged southern anchor.",
+  "preservationProof": {
+    "equalsBaseWithExactRepairCrop": true,
+    "west230Unchanged": true,
+    "south230Unchanged": true,
+    "north160Unchanged": true,
+    "repairBox": [
+      780,
+      160,
+      1254,
+      400
+    ]
+  },
+  "previousBlockers": [
+    {
+      "id": "B1_top_conditioned_strip_break",
+      "status": "resolved_for_anchor_use",
+      "nativeRegion": [
+        780,
+        160,
+        1254,
+        400
+      ],
+      "observed": "Beam outline and deck continue through y235 without the previous horizontal clipped edge. No duplicate support or new large object is introduced."
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_bounded_cut_edge_finish",
+      "status": "pending_consolidated_QA",
+      "nativeRegionApprox": [
+        1080,
+        385,
+        1200,
+        415
+      ],
+      "observed": "Small local cloth/rope finish transition near lower repair edge y400 merits consolidated QA. It does not introduce a broken beam or disconnected outgoing contour."
+    }
+  ],
+  "evidence": [
+    {
+      "file": "p21-bounded-repair-and-cut-edges-100pct.png",
+      "input": "p21_local",
+      "crop": [
+        720,
+        100,
+        1254,
+        480
+      ],
+      "size": [
+        534,
+        380
+      ],
+      "sha256": "7175bc6542b6885a4836d4104b230ace272b18ebf8e8c5a8755e91c13e13f5df"
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidenceViewedAt100Percent": true,
+  "mechanicalDerivedClassification": "Exact unscaled opaque crop/paste from native AI repair into preserved base; not a wholly newly generated full image.",
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "resized": false,
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateChanged": false,
+    "sourcesChanged": false,
+    "gitTouched": false,
+    "historicalFullScan": false
+  },
+  "p13V3ScopeNote": "Initial p13-v3 diagnostic crop remains preserved in this evidence directory. Further v3 review was superseded by root instruction to review p13-v4; see ../r10_c11-p13-v4-fast-v1/review.json."
+}

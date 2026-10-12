@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 1,
+  "character": "03_lotus_healer_girl",
+  "auditDate": "2026-10-05",
+  "scope": "run S/SE/SW 48 current selected native source frames",
+  "selectionSnapshot": {
+    "path": "review/all-actions-selection.json",
+    "sha256": "33c13bac3c910d334e37a0606b64f088bfdc6a0281d5be997b56916cce229888",
+    "updatedAt": "2026-10-04T23:48:23.415688-04:00"
+  },
+  "writtenAt": "2026-10-05T08:39:38.826Z",
+  "inputModified": false,
+  "exportModified": false,
+  "cleanupPerformed": false,
+  "visualAccepted": false,
+  "method": [
+    "Actual full16 contact sheets for S, SE, SW plus individual native PNG inspections. S and SW all16 reopened on2026-10-05; SE all16 had native inspection on prior continuous review, same sourceSHA checked, with suspect02/03/04/05/06/10/11/12 and new candidates reopened2026-10-05.",
+    "Trace visible shoulder/sleeve→elbow→wrist→grip and knee→ankle cuff→shoe toe. Hidden hip or shoulder is an uncertainty, not proof of limb ownership.",
+    "New stricter criterion: a shoe toe fanning sideways after a nearly downward/inward shin counts as suspected outward yaw even without a90-degree ankle twist. This supersedes earlier permissive axis-audit20261004 classifications for SE02/03/04/11/12.",
+    "Compared actual bamboo archer runtime/run/SE/03.png: near-down ankle/toe relation, used only for motion-axis comparison, not costume or anatomy substitution.",
+    "Coordinates are approximate native-image visual landmarks, not 3D joint measurements. Sole endpoint changes use actual alpha>8 bounds and visual support-shoe identification. Different front/back depth can legitimately change y.",
+    "Eight-frame support requirement is inspected as same-foot visible chain and progression. Transparent artwork alone does not prove a common physical groundplane, and phase labels or technical passed status are not dynamic acceptance."
+  ],
+  "priorityFindings": [
+    {
+      "direction": "SE",
+      "slots": [
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "finding": "支撑鞋头与小腿投影不连贯而向右外展；五个独立修订候选已实际查看。",
+      "status": "candidates_not_selected_by_this_agent"
+    },
+    {
+      "direction": "SE",
+      "transition": [
+        3,
+        4
+      ],
+      "finding": "旧03灯手仍后伸、04已前摆，缺中间位；root03-anatomy-v1将手收至髋侧，改善明确。",
+      "status": "candidate_available"
+    },
+    {
+      "direction": "SE",
+      "transition": [
+        10,
+        11,
+        12
+      ],
+      "finding": "11灯握点确在腰侧中间，刚性灯柄旋转使灯体端点跨度更大；本轮不额外改11手。",
+      "status": "retain_hands"
+    },
+    {
+      "direction": "SW",
+      "slots": [
+        2,
+        4,
+        10
+      ],
+      "finding": "支撑鞋横向左展优先复核；02踝x510→toe约400，04踝720→toe645，10踝355→toe240。",
+      "status": "reported_to_root_no_generation"
+    },
+    {
+      "direction": "SW",
+      "transition": [
+        2,
+        3
+      ],
+      "finding": "从灯前瓶后直接切到瓶前灯后，肩肘腕缺身侧过渡，归属本身未见明确交换。",
+      "status": "reported_to_root_no_generation"
+    },
+    {
+      "direction": "SW",
+      "transition": [
+        9,
+        10,
+        11
+      ],
+      "finding": "支撑足先继续前伸再退回身下，包含姿势与身体注册变化；不是只改鞋yaw即可消除的轨迹问题。",
+      "status": "review_with_sequence"
+    },
+    {
+      "direction": "S",
+      "slots": [],
+      "finding": "当前16张未见高置信错手或支撑鞋横折；03→04深度推进和11→12灯柄透视变化单列，不据此重画全向。",
+      "status": "retain"
+    }
+  ],
+  "newSECandidates": [
+    {
+      "slot": 2,
+      "file": "generation/SE/02-anatomy-v1.png",
+      "sha256": "75b35a83644a2530754940dab26c0d4852e68abf7f6081859f3fa8fc364a2610",
+      "soleChangeDownPx": 6,
+      "visualAccepted": false,
+      "inputUpdated": false,
+      "recommendation": "axis_improved_compare_ground_registration_before_selection"
+    },
+    {
+      "slot": 3,
+      "file": "generation/SE/03-anatomy-v1.png",
+      "sha256": "f1b68bab5e36c5169649dd4ff0ee1c93fcad9342dabdd893080591904821ac11",
+      "owner": "root",
+      "observation": "Support shoe straighter and right lamp hand now at hip intermediate; viewed with02/04.",
+      "visualAccepted": false,
+      "inputUpdated": false,
+      "recommendation": "axis_improved_compare_ground_registration_before_selection"
+    },
+    {
+      "slot": 4,
+      "file": "generation/SE/04-anatomy-v1.png",
+      "sha256": "ee7206870bacfedf2696dbdd43d2e3ceed88b5a52982e81803f483aa581e4440",
+      "soleChangeDownPx": 25,
+      "visualAccepted": false,
+      "inputUpdated": false,
+      "recommendation": "axis_improved_compare_ground_registration_before_selection"
+    },
+    {
+      "slot": 11,
+      "file": "generation/SE/11-anatomy-v1.png",
+      "sha256": "b49a5049d2452f59e2a0413941a8e025a5e623a8db32ff15cb5cb0298f6ee02f",
+      "soleChangeDownPx": 5,
+      "visualAccepted": false,
+      "inputUpdated": false,
+      "recommendation": "axis_improved_compare_ground_registration_before_selection"
+    },
+    {
+      "slot": 12,
+      "file": "generation/SE/12-anatomy-v1.png",
+      "sha256": "5ca8010c21a2047e0dc6dc71731253c1ae9730e71f1a1ec689f15dfff43768ec",
+      "soleChangeDownPx": 20,
+      "visualAccepted": false,
+      "inputUpdated": false,
+      "recommendation": "axis_improved_compare_ground_registration_before_selection"
+    }
+  ],
+  "groups": [
+    {
+      "direction": "SW",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/SW/01-v1.png",
+          "sourceSha256": "eea027fa8be5b52d7794ac120fa3ed84573d71bc68a67ef9539bb9de9d3d2d69",
+          "footLegConclusion": "跟触鞋有俯仰并向左投影，暂保留而不把露底判错。",
+          "shoulderGripConclusion": "近左瓶后摆、远右灯前摆。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 2,
+          "source": "generation/SW/02-v1.png",
+          "sourceSha256": "65d0d2a59a93a7f7656402b115990a649008a1f4edfb86bb5f4d05b66684f0d7",
+          "footLegConclusion": "支撑踝约x510、鞋头约x400，鞋头横向左展明显。",
+          "shoulderGripConclusion": "仍灯前瓶后；下一帧直接反转。",
+          "decision": "priority_review",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 3,
+          "source": "generation/SW/03-midstance-v1.png",
+          "sourceSha256": "c6e1a97ccdd13de87147d7c1981835efcd68697ed1d1bf5e83b030e8ac26563a",
+          "footLegConclusion": "比02左向展开轻；髋遮挡，不能仅凭鞋证明整条腿身份。",
+          "shoulderGripConclusion": "02→03直接改成瓶前灯后，缺少腰侧中间手位。",
+          "decision": "priority_review",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 4,
+          "source": "generation/SW/04-v3.png",
+          "sourceSha256": "ee2c863f76e8fb098ea5689bfd9a9c7b3de7c63bdc9a14339196058f7cda66aa",
+          "footLegConclusion": "后支撑踝约x720、鞋头约x645，和小腿下向右投影折转。",
+          "shoulderGripConclusion": "近左大袖→前瓶，远右肩后灯，未见换手。",
+          "decision": "priority_review",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 5,
+          "source": "generation/SW/05-v3.png",
+          "sourceSha256": "2136d604df9c8307b27e6f96f35acb028abb107d5e21f48eae8b2ed13a23b69a",
+          "footLegConclusion": "后支撑仍承重，鞋向左展开较04轻，保留待上下文。",
+          "shoulderGripConclusion": "极值附近双臂持续，握点完整。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 6,
+          "source": "generation/SW/06-v2.png",
+          "sourceSha256": "147ba5fe81a9bcc187bb980759f4348af3e3dbe812dd2b2aeb096a79d5668104",
+          "footLegConclusion": "前摆鞋沿左前方向展开，后支撑轴无新增严重折角。",
+          "shoulderGripConclusion": "两物在正确手中。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 7,
+          "source": "generation/SW/07-v6.png",
+          "sourceSha256": "92941c883db26d10305a8b72a64cf497b58eabea60155cc1067e682f16745fb7",
+          "footLegConclusion": "后支撑已递后；抬起前鞋见底有自然俯仰。",
+          "shoulderGripConclusion": "近左瓶前、远右灯后。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 8,
+          "source": "generation/SW/08-v3.png",
+          "sourceSha256": "d36aa37343340c16595c82df7ee55690aaf8f7ccdb430e8eea732ba91549ad7f",
+          "footLegConclusion": "末支撑提跟/前掌可读，摆腿沿前进轴伸展。",
+          "shoulderGripConclusion": "上身道具连续。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 9,
+          "source": "generation/SW/09-v2.png",
+          "sourceSha256": "556844eff8a79e70ad70e330c5201a6bf11297fd2a5b0a7610f2449b8c55ff9a",
+          "footLegConclusion": "另一脚前跟触，自然鞋掌俯仰可保留。",
+          "shoulderGripConclusion": "反半圈灯后瓶前。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 10,
+          "source": "generation/SW/10-v1.png",
+          "sourceSha256": "3aea08e89cb23aacd548f20db4b5ddf6e27a66ea077df41cef3ea3ec6640dd77",
+          "footLegConclusion": "支撑踝约x355、鞋头约x240，左向展开明显；09→10更前、10→11再退回。",
+          "shoulderGripConclusion": "右灯后、左瓶前；握点归属仍可读。",
+          "decision": "priority_review",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 11,
+          "source": "generation/SW/11-v4.png",
+          "sourceSha256": "efe8e29508b503515eb385ac417a27d75847a78d1b91ebc31b22d008f7416067",
+          "footLegConclusion": "修订v4支撑鞋头较近踝下，膝踝自然；不需仅因髋遮挡重做。",
+          "shoulderGripConclusion": "双手回胸腰附近的中间位可读。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 12,
+          "source": "generation/SW/12-v3.png",
+          "sourceSha256": "90617c83b22290375f2030bc2a5727af0596054f9c86d93ec0722672987528bd",
+          "footLegConclusion": "后支撑鞋仍略左展，较02/04/10弱；列放大复核。",
+          "shoulderGripConclusion": "灯前瓶后；11是可读中间手位。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 13,
+          "source": "generation/SW/13-v2.png",
+          "sourceSha256": "461fbcfc74a24538beb3ac0fbcccb87f87d8e22318aa2b55211122defd8430d3",
+          "footLegConclusion": "后支撑鞋略左展，摆鞋前伸自然。",
+          "shoulderGripConclusion": "双手仍沿既有肩袖，握点完整。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 14,
+          "source": "generation/SW/14-axis-v1.png",
+          "sourceSha256": "a62da4d3d0a23498677f5f9e8363baa97833bbfe53dc8429211911e219aaf660",
+          "footLegConclusion": "当前axis版摆鞋在前，不再采用旧14膝下回缩；支撑轴可留。",
+          "shoulderGripConclusion": "手与道具保持。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 15,
+          "source": "generation/SW/15-v2.png",
+          "sourceSha256": "780e489b2b6d5f2dc49566e109f995976078685320dc1c4b227714cb2c40fe09",
+          "footLegConclusion": "前摆/后支撑均延续，14→15有轻微位置回收但非旧版大回缩。",
+          "shoulderGripConclusion": "灯前瓶后，未见换手。",
+          "decision": "keep_with_transition_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 16,
+          "source": "generation/SW/16-v2.png",
+          "sourceSha256": "de6d4206a25816973350e82e9742732e3712c13c54dac4294fb1db10eda48b7e",
+          "footLegConclusion": "末支撑与前鞋落下可接01，未见突然鞋头横转。",
+          "shoulderGripConclusion": "首尾手位相近可衔接。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        }
+      ],
+      "auditedSnapshotTotalDurationMs": 1200
+    },
+    {
+      "direction": "S",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/S/01-v2.png",
+          "sourceSha256": "222058620ddd5e76f9faa4c4a5a9f43f2697d3550a283df23e1a4239535afdeb",
+          "footLegConclusion": "支撑鞋头位于踝下，抬起的另一鞋轴自然。",
+          "shoulderGripConclusion": "右灯后侧、左瓶前侧；握点与袖口相接。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 2,
+          "source": "generation/S/02-v1.png",
+          "sourceSha256": "b529b7cc906245b8f6bcb606c39beb27aa9d9ef4a702e8c25a78939bbc2120a2",
+          "footLegConclusion": "前支撑膝有压缩，鞋头仍正向屏下。",
+          "shoulderGripConclusion": "01→02 手位小幅连续。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 3,
+          "source": "generation/S/03-v1.png",
+          "sourceSha256": "aa8eb40841a4ad1fb91114a481a6b63ff1de7bb7979be130bd1dd15f17b008fb",
+          "footLegConclusion": "支撑鞋轴正，另一足仍后折；03→04 支撑深度推进较快。",
+          "shoulderGripConclusion": "灯手开始前移，但幅度有限。",
+          "decision": "keep_with_transition_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 4,
+          "source": "generation/S/04-v2.png",
+          "sourceSha256": "f46dd81c0d8de482b3bf21331a75516003c0a001a09e6a39ce3aa6c80a74547e",
+          "footLegConclusion": "屏左右脚继续支撑，屏右左腿前摆；鞋轴正。",
+          "shoulderGripConclusion": "灯臂前伸、瓶臂后收；03→04 幅度较大但归属清楚。",
+          "decision": "keep_with_transition_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 5,
+          "source": "generation/S/05-paired-v1.png",
+          "sourceSha256": "9a5ccd054b31a749e52f47678958f301e342e1ef4c4d04121e9a7f5852b1d63e",
+          "footLegConclusion": "后支撑鞋轴正，前摆鞋见底来自抬趾俯仰。",
+          "shoulderGripConclusion": "两持物连贯，未见断腕。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 6,
+          "source": "generation/S/06-paired-v1.png",
+          "sourceSha256": "f080d9471931ea1ea7080b548e4b8602371db91cf0ab91d19d44062368082c3c",
+          "footLegConclusion": "支撑小腿和鞋掌近同轴，前脚保持正向抬趾。",
+          "shoulderGripConclusion": "05→06 灯前摆继续。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 7,
+          "source": "generation/S/07-paired-v1.png",
+          "sourceSha256": "7aee1911de48987f5a1e36866f7e538ed35fcba4fce1394afa648a1c9c249d68",
+          "footLegConclusion": "支撑鞋头正；摆鞋有轻微斜倾但未见横向外翻折角。",
+          "shoulderGripConclusion": "灯前瓶后，肩袖链一致。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 8,
+          "source": "generation/S/08-paired-v1.png",
+          "sourceSha256": "3490d65d3d9f308708b356f2377d78c0b7c18553714e44143c3b4109579a0ba2",
+          "footLegConclusion": "后支撑脚更深，前摆鞋放低；近远脚不同 y 不单独判双触。",
+          "shoulderGripConclusion": "准备换相，仍右灯左瓶。",
+          "decision": "keep_with_depth_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 9,
+          "source": "generation/S/09-v1.png",
+          "sourceSha256": "9f9a337160c6e2cc6c2ee822815501d4a4e84c075ac978b5780d2a74fa5e500a",
+          "footLegConclusion": "另一脚转为前支撑，鞋轴正。",
+          "shoulderGripConclusion": "灯仍前、瓶后，对应反半圈。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 10,
+          "source": "generation/S/10-v2.png",
+          "sourceSha256": "5ed3147c0eb3cec66f90e1a7106f4bd0e886c1672451c9707c11196a0bb7d690",
+          "footLegConclusion": "前支撑膝缓冲，踝鞋轴正。",
+          "shoulderGripConclusion": "09→10 手位连续。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 11,
+          "source": "generation/S/11-v1.png",
+          "sourceSha256": "7ab0e1cf48e594769cd6fa94f8f1d0dffbbccd893ea8614a4c1bb668af91c90c",
+          "footLegConclusion": "支撑鞋头正，另一足后折。",
+          "shoulderGripConclusion": "瓶回胸侧、灯降至腰前，中间位可读。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 12,
+          "source": "generation/S/12-v2.png",
+          "sourceSha256": "00e0f466fe13b889ac75a1deee641084bbfe86f17f2b70eb0f05bd64bc3ce1a7",
+          "footLegConclusion": "支撑鞋轴正，另一膝向前，未见交叉外八。",
+          "shoulderGripConclusion": "灯移后下、瓶上提；灯柄显得缩短，可能含透视，未证实脱手。",
+          "decision": "keep_with_prop_projection_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 13,
+          "source": "generation/S/13-paired-v1.png",
+          "sourceSha256": "3caa7961f6a3910c44d184484d3ccd01dddcda76fa878008d799e1b52dfb140c",
+          "footLegConclusion": "后支撑鞋轴正；前摆鞋见底为俯仰。",
+          "shoulderGripConclusion": "灯后瓶前，握持连续。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 14,
+          "source": "generation/S/14-paired-v1.png",
+          "sourceSha256": "574a75f78c9a8cc520f82876105b899542ae509b9eec015b07b5f8178d4e55eb",
+          "footLegConclusion": "支撑鞋头仍踝下；前脚有轻微回收，不构成明显反向突跳。",
+          "shoulderGripConclusion": "灯手较13回收少量。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 15,
+          "source": "generation/S/15-progression-v1.png",
+          "sourceSha256": "6be38a90a2be80e9ccff93c7f33d8a8e6b1f128e06177ef29fd7f15085027b2c",
+          "footLegConclusion": "支撑轴正，前鞋进一步前伸且正向见底。",
+          "shoulderGripConclusion": "持物归属保持。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 16,
+          "source": "generation/S/16-paired-v1.png",
+          "sourceSha256": "992433f280f48471634ea822c09909fed0b45aacd3ee9564ed01cd7722ed6f7b",
+          "footLegConclusion": "另一鞋即将前接触，后支撑保留；16→01换相可读。",
+          "shoulderGripConclusion": "瓶前灯后可接01，未见换手。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        }
+      ],
+      "auditedSnapshotTotalDurationMs": 1200
+    },
+    {
+      "direction": "SE",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/SE/01-v1.png",
+          "sourceSha256": "ee15881620031c7becf6587276d967163bf2af049ed12e184f95d594e6895b01",
+          "footLegConclusion": "前鞋有自然抬趾/跟触俯仰；不以露底独断外翻。",
+          "shoulderGripConclusion": "右灯后、左瓶前，肩袖大体可追。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 2,
+          "source": "generation/SE/02-v1.png",
+          "sourceSha256": "c0be86ffc755b3e1ca94dd8168bd3354f0737ca2475d9cc5db300f48b3b10b53",
+          "footLegConclusion": "支撑小腿下行偏收，鞋头却明显向屏右展开。",
+          "shoulderGripConclusion": "上身/握持可保留。",
+          "decision": "repair_candidate_generated",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 3,
+          "source": "generation/SE/03-midstance-v2.png",
+          "sourceSha256": "9375b4cae2af37469d627333b5ede63dab134fc4b8ebe9b3677fb0c61c5ac087",
+          "footLegConclusion": "支撑踝约x730、鞋头到约x805，右展明显；并有03→04手臂跨度。",
+          "shoulderGripConclusion": "灯仍后伸接近02，04已向前，缺身侧中位。",
+          "decision": "repair_candidate_generated_by_root",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 4,
+          "source": "generation/SE/04-v4.png",
+          "sourceSha256": "b7807099ea183e63a742e5b959a4a3faa3c82144302b51d12d51a1520508b8ab",
+          "footLegConclusion": "后支撑小腿下行，鞋头向屏右折出。",
+          "shoulderGripConclusion": "近右肩/前景袖→灯，远左瓶后摆当前可读。",
+          "decision": "repair_candidate_generated",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 5,
+          "source": "generation/SE/05-v2.png",
+          "sourceSha256": "e47b30623f22160920d6254d55b034e5cf8d5c1e2aeecef0f22784860e0d1918",
+          "footLegConclusion": "支撑鞋右向展开较轻，低于02/04优先级。",
+          "shoulderGripConclusion": "右灯前、左瓶后，握点完整。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 6,
+          "source": "generation/SE/06-v2.png",
+          "sourceSha256": "4c0e22de8e232c0dc926d4d2b2b841072390975d1ebc9dba30b4f96e68a36b2e",
+          "footLegConclusion": "支撑鞋有斜向投影但未见02同等强烈踝后横折。",
+          "shoulderGripConclusion": "05→06 前摆保持，袖口握点相接。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 7,
+          "source": "generation/SE/07-v3.png",
+          "sourceSha256": "281a14a35fd881b33da58037a2957638f263b408907e5d910b2882d25d44e193",
+          "footLegConclusion": "后支撑与前摆腿轴可读，膝有自然弯曲。",
+          "shoulderGripConclusion": "灯前瓶后，未发现明确换手。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 8,
+          "source": "generation/SE/08-v2.png",
+          "sourceSha256": "e2757562ce0b592bcba2dc3212ca52c78586244cc198ea1030593e22445e9df5",
+          "footLegConclusion": "后侧末支撑继续，前鞋前伸；两腿非横向劈开。",
+          "shoulderGripConclusion": "手/道具仍接同肩袖链。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 9,
+          "source": "generation/SE/09-v1.png",
+          "sourceSha256": "9392ad2920974f0dbc7509df661409e6f2c69d5db002b1738457679e9ca6fb90",
+          "footLegConclusion": "反脚跟触带抬趾，保留自然俯仰。",
+          "shoulderGripConclusion": "灯前瓶后保持进入反半圈。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 10,
+          "source": "generation/SE/10-v1.png",
+          "sourceSha256": "d11a8043fa7e16ce423ee902b9cc0b905635796e22ae43e800a65c14b93f4d03",
+          "footLegConclusion": "支撑鞋右展较轻，未达02/03同级，列邻帧复看。",
+          "shoulderGripConclusion": "灯握点约(866,704)在身前。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 11,
+          "source": "generation/SE/11-v3.png",
+          "sourceSha256": "711711a1751a5b0d3e67d7ab4647fdce06ea4ec8243029b4254b82c0b6c5328e",
+          "footLegConclusion": "支撑鞋头明显向屏右展开，需收正。",
+          "shoulderGripConclusion": "灯握点约(568,716)已处腰侧中位，不建议盲改手。",
+          "decision": "repair_candidate_generated",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 12,
+          "source": "generation/SE/12-v3.png",
+          "sourceSha256": "67cee747f4ff03bc85da6cdd57fb06f0c3e51a2ff9aa436191f044a351f613c4",
+          "footLegConclusion": "后支撑鞋头向屏右折出，和小腿下行不连贯。",
+          "shoulderGripConclusion": "灯握点约(516,527)回后高位；11确是中间位。",
+          "decision": "repair_candidate_generated",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 13,
+          "source": "generation/SE/13-v2.png",
+          "sourceSha256": "8212f75adb8872a88001c297ea5ef1ab6c1d795d34d8ab21d92c401fb41d8a89",
+          "footLegConclusion": "后支撑保持，鞋右向展开较轻；髋被裙遮，不宣称全链已证明。",
+          "shoulderGripConclusion": "右灯后、左瓶前，握持可读。",
+          "decision": "retain_pending_context",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 14,
+          "source": "generation/SE/14-v4.png",
+          "sourceSha256": "cf96251126c1ae7f1bd9dccd84c1565c855e1441a452e17fe0ec6c334418a397",
+          "footLegConclusion": "支撑/摆腿轴未发现明确新增折角；13→14摆脚有小幅回收。",
+          "shoulderGripConclusion": "两臂在反向极值附近。",
+          "decision": "keep_with_transition_note",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 15,
+          "source": "generation/SE/15-v3.png",
+          "sourceSha256": "2c8857b764cf8212da0e03352a1ba586fdf92a4a4e4fd93ca68501779d4d7471",
+          "footLegConclusion": "后支撑/前摆继续，未见明确换脚。",
+          "shoulderGripConclusion": "右灯后、左瓶前。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        },
+        {
+          "slot": 16,
+          "source": "generation/SE/16-v6.png",
+          "sourceSha256": "0f7d9b7f330382c5dd4a312d317ca408e9b26e4b25e397507e951b7f2e3a7728",
+          "footLegConclusion": "末支撑可接01，鞋轴未见横折；身体注册细差单列。",
+          "shoulderGripConclusion": "手位可回01，未见物品交换。",
+          "decision": "keep",
+          "completeHipChainVisible": false,
+          "visualAccepted": false,
+          "auditedSnapshotDurationMs": 75
+        }
+      ],
+      "auditedSnapshotTotalDurationMs": 1200
+    }
+  ],
+  "remainingLimits": [
+    "全套没有发现可高置信断言的左右持物交换，但部分肩肘被头发/衣袖遮挡，不能宣称每帧解剖链完全可见。",
+    "新SE04/12鞋底相对原稿分别低25/20原生像素，必须与邻帧看接地轨迹；本审没有用程序贴地。",
+    "旧标签、文件名和导出成功不等于动作验收；本文件不批准整套。"
+  ],
+  "timingNote": "75ms values describe only the audited selection snapshot. Latest human instruction is60ms/frame; another agent owns timing edits. This audit changed no timing.",
+  "auditedSnapshotDurationMsPerFrame": 75,
+  "auditedSnapshotTotalDurationMsPerDirection": 1200,
+  "newSWCandidates": [
+    {
+      "file": "generation/SW/02-anatomy-v1.png",
+      "sha256": "8052bb2ecd380d70b8bc7319ec85b351cc2c9b8b226d22b8bef255f4241eceb7",
+      "decision": "recommend_axis_improvement",
+      "review": "generation/SW/02-anatomy-v1.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    },
+    {
+      "file": "generation/SW/04-anatomy-v1.png",
+      "sha256": "cb49da8854010df97fa40967827b11f1c7e62a8f50ed816bfca6cf28405509a8",
+      "decision": "recommend_axis_improvement",
+      "review": "generation/SW/04-anatomy-v1.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    },
+    {
+      "file": "generation/SW/10-anatomy-v1.png",
+      "sha256": "8568d71877b9dc7fee1d639738607131761fed9e3afc7845b610b3914850999c",
+      "decision": "recommend_axis_improvement",
+      "review": "generation/SW/10-anatomy-v1.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    },
+    {
+      "file": "generation/SW/03-anatomy-v1.png",
+      "sha256": "051f9238ef3b374e1c97fbd7fcc77deaf9ae498892db8eb90450492a2a405bb8",
+      "decision": "reject_as_final_transition",
+      "review": "generation/SW/03-anatomy-v1.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    },
+    {
+      "file": "generation/SW/03-anatomy-v2.png",
+      "sha256": "f456b4c47c31063d49050801060dd4be83cb9e511846b40db4851d41c9fa820c",
+      "decision": "reject_third_hand_remnant_and_prop_scale",
+      "review": "generation/SW/03-anatomy-v2.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    },
+    {
+      "file": "generation/SW/03-anatomy-v3.png",
+      "sha256": "b11a62efa3824962d66bdd7fa3ac7307073e86338239578aa4da222251b83ad2",
+      "decision": "recommend_cleaned_intermediate_arm_candidate",
+      "review": "generation/SW/03-anatomy-v3.review.json",
+      "visualAccepted": false,
+      "inputUpdated": false
+    }
+  ],
+  "followupSummary": "Targeted independent edits completed: SE02/04/11/12; SW02/04/10 shoe axes and SW03 arm transition. SW03v1/v2 rejected, v3 recommended after residual hand removal and lamp size recovery. Root independently reviewed final candidates and owns selection. No more image generation in this scope."
+}

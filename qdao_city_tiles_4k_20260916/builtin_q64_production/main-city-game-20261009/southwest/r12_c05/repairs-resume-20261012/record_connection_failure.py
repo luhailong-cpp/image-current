@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,datetime,hashlib
+D=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r12_c05/repairs-resume-20261012');T=D/'blue-direct-control-left-v05'
+(T/'failure-receipt-01.json').write_text(json.dumps({'tool':'image_gen.imagegen','outcome':'connection_failed_no_output','requestFile':str(T/'request.json'),'requestSha256':hashlib.sha256((T/'request.json').read_bytes()).hexdigest(),'exactError':'image generation failed: connection failed: error sending request','permissionDenialReported':False,'actualModel':None,'actualQuality':None,'outputPaths':[],'recordedAtUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'nextAction':'Inspect current native seams, then retry same authorized builtin request; no API fallback or permission bypass.'},indent=2),encoding='utf-8')
+S=D/'lane-state.json';o=json.loads(S.read_text());o['successfulBuiltinCalls']=7;o['failedBuiltinCalls']=1;o['currentCandidateAssembly']=str(D/'integrated-local-v10/assembly.json');o['latestFailure']=str(T/'failure-receipt-01.json');o['updatedAtUtc']=datetime.datetime.now(datetime.timezone.utc).isoformat();S.write_text(json.dumps(o,ensure_ascii=False,indent=2),encoding='utf-8')
+print(T/'failure-receipt-01.json')

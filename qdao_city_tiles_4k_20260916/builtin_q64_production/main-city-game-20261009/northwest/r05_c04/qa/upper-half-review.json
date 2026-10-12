@@ -1,0 +1,53 @@
+{
+  "status": "partial_review_not_accepted",
+  "selectedNativeCount": 8,
+  "reviewedInternalSeamSegments": 10,
+  "reviewedIntersections": 3,
+  "geometry": "Most sampled stair edges align within0-1px; no obvious broken levels",
+  "issues": [
+    {
+      "type": "layout_deviation",
+      "patch": "s02_01",
+      "detail": "building foot ends near native y665 versus layout y740, ~75px north; full-city y17958 versus18033; must correct before formal acceptance"
+    },
+    {
+      "type": "brightness",
+      "pair": [
+        "s01_02",
+        "s02_02"
+      ],
+      "meanRgbDelta": [
+        -6.53,
+        -5.96,
+        -5.1
+      ],
+      "tileRegion": [
+        1984,
+        1024,
+        2048,
+        1025
+      ],
+      "meanBoundaryDifference": 10.42
+    },
+    {
+      "type": "edge_sample",
+      "tileXY": [
+        793,
+        1024
+      ],
+      "maxChannelJump": 68,
+      "detail": "localized carving edge, not whole brightness jump"
+    },
+    {
+      "type": "overlap_geometry",
+      "patch": "s02_04",
+      "tileXY": [
+        3117,
+        974
+      ],
+      "approximateDisplacement": 8,
+      "detail": "outside current hard cut; recheck if using minimum error seam"
+    }
+  ],
+  "formalAccepted": false
+}

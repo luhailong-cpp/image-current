@@ -1,0 +1,104 @@
+{
+  "prompt": "Use case: precise-object-edit. Edit IMAGE 1 only, output one opaque native 1254x1254 PNG. This is an extremely close overhead-oblique game arena wooden floor fragment; keep camera, crop, all wood boards, seams, wood color, grain, top/left edge strips and lower-left short pale arc unchanged. Correct ONLY the upper long cream painted arc geometry. It currently curves down too quickly and hits the bottom edge near x720, which is wrong. Flatten and extend this existing arc to the RIGHT so its center hits the bottom edge at x860. IMAGE 5 is the exact low-resolution POSITION reference, not final art or material: follow the upper cream arc route there. Anchor its center near (0,870), (230,950), (505,1050), (615,1100), (725,1150), (810,1200), (865,1250). Keep these positions and a roughly 48px perpendicular stroke width. Preserve the first 230px at the left. Erase the old wrong part of the pale arc by restoring matching native wood texture; draw only the replacement one continuous same cream arc. Do not add another arc. Keep the separate lower-left short arc exactly unchanged; it exits bottom near x260. These are clipped painted lines on flat floor, not raised wood or metal. No full circles, emblems, props or borders. Exact existing horizontal seams at y30,165,310,455,600,745,895,1045,1190 remain straight and unchanged. Make this local geometry correction in the current native image only. Images 2,3,4 remain required context: 2 approved whole-city layout only, 3 natural daylight stone and material finish, 4 rounded hand-painted Daoist chibi style; never copy their scenes, objects, UI or framing.\n",
+  "promptFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\pipeline\\prompts\\p02_01.resume-20261012-v02.prompt.txt",
+  "promptSha256": "c40725cb53f61aeb2d502052b6b9b9287dea21c8e093554ff48ea36113e787d4",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\refinement\\versions\\resume-20261012-v01\\p02_01.rejected-native.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\pipeline\\guides\\p02_01.resume-20261012-v01.continuity-seed.png"
+  ],
+  "transparent_background": false,
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\refinement\\versions\\resume-20261012-v01\\p02_01.rejected-native.png",
+      "sha256": "ba53728075a6848f5bba5206090c701c48ed7feb6a65fa67ee15e065b7c9c39b",
+      "role": "actual builtin native output to edit; preserve fixed crop and explicitly stated invariants"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved whole-city geometry only; no full scene output"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved clean grey stone, daylight and material finish"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "current primary Daoist chibi style; copy no UI"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\pipeline\\guides\\p02_01.resume-20261012-v01.continuity-seed.png",
+      "sha256": "af3af110e238b1a33c9f48fc21987e57219fc365817c196002faa19bb900f398",
+      "role": "Approved exact arc geometry only; no final pixels"
+    }
+  ],
+  "neighborSources": [],
+  "cornerTreatment": {
+    "bothSourcesPresent": false,
+    "reason": "Actual native edit target; preserve exact approved geometry except explicitly requested corrections."
+  },
+  "coordinates": {
+    "id": "p02_01",
+    "row": 2,
+    "column": 1,
+    "coreWorldBox": [
+      20480,
+      33792,
+      21504,
+      34816
+    ],
+    "contextWorldBox": [
+      20365,
+      33677,
+      21619,
+      34931
+    ],
+    "nativeCoreBox": [
+      115,
+      115,
+      1139,
+      1139
+    ]
+  },
+  "tile": "r09_c06",
+  "requestedNativePixels": [
+    1254,
+    1254
+  ],
+  "submittedParameters": {
+    "model": null,
+    "quality": null
+  },
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-10",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+      "quality": "https://developers.openai.com/api/reference/resources/images/methods/generate"
+    }
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "preparedAtUtc": "2026-10-12T12:58:18.718541+00:00",
+  "productionResumeEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\resume-production-20261010\\production-resume.json",
+    "sha256": "57dc445fc3cd921dd9aa15e9cda1977f4192786d17a0240e06ac415597ef9a04"
+  },
+  "warnings": [],
+  "requiresActualVisualInspectionBeforeToolCall": true,
+  "editBaseRequest": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\pipeline\\prompts\\p02_01.resume-20261012-v01.request.json",
+    "sha256": "efe6068ab365ff8d670b65d4c33ebd28d63b0cc366ef9afebc81f7436678034e"
+  }
+}

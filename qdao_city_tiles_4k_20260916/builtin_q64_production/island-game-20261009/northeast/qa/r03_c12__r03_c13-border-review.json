@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T06:17:07Z",
+  "reviewer": "contract_review independent visual QA",
+  "mode": "read_only_art_review_with_two_authorized_report_writes",
+  "capacityGateRespected": true,
+  "imageGenerationCalls": 0,
+  "a": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r03_c12.png",
+    "sha256": "0405a72d05a7e7cb6982dde405eb6aa1188079af02c77848bba5940f283292e1",
+    "hashIndependentlyVerified": true
+  },
+  "b": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/tiles/r03_c13.png",
+    "sha256": "c5cd412d241b467a77300028f0505d70835265003a0780f8777e5d2a13e69591",
+    "hashIndependentlyVerified": true
+  },
+  "worldSeamX": 49152,
+  "worldY": [
+    8192,
+    12288
+  ],
+  "coverageGapPixels": 0,
+  "coverageEvidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12__r03_c13.final-border.json",
+  "inspectionScale": 1,
+  "operation": "现成最终4K边缘原尺寸硬拼检查；无缩放、无羽化。",
+  "segments": [
+    {
+      "segment": 1,
+      "tileY": [
+        0,
+        1024
+      ],
+      "worldY": [
+        8192,
+        9216
+      ],
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12__r03_c13.final-border.segment-1.png",
+      "geometry": "pass_this_border",
+      "color": "pass_this_border"
+    },
+    {
+      "segment": 2,
+      "tileY": [
+        1024,
+        2048
+      ],
+      "worldY": [
+        9216,
+        10240
+      ],
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12__r03_c13.final-border.segment-2.png",
+      "geometry": "pass_this_border",
+      "color": "pass_this_border"
+    },
+    {
+      "segment": 3,
+      "tileY": [
+        2048,
+        3072
+      ],
+      "worldY": [
+        10240,
+        11264
+      ],
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12__r03_c13.final-border.segment-3.png",
+      "geometry": "pass_this_border",
+      "color": "pass_this_border"
+    },
+    {
+      "segment": 4,
+      "tileY": [
+        3072,
+        4096
+      ],
+      "worldY": [
+        11264,
+        12288
+      ],
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12__r03_c13.final-border.segment-4.png",
+      "geometry": "pass_this_border",
+      "color": "pass_this_border"
+    }
+  ],
+  "status": "visual_pass_this_border_only",
+  "formalAccepted": false,
+  "findings": "全部4096高度共边已按四段100%查看。葫芦上/下腹、金玉徽饰、支脚附近石台、下部台阶和前景圆罐跨边连续；未见明确轮廓错位、矩形拼贴或明显直线色带。",
+  "wholeObjectContextEvidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c12-r03_c13-adjacent-preview.png",
+  "relatedKnownFailure": {
+    "report": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c13-whole-review.json",
+    "tile": "r03_c13",
+    "tileSeamX": 2048,
+    "affectedTileYApprox": [
+      3570,
+      3890
+    ],
+    "detail": "内部石台前缘跳变不在本共边；共边视觉通过不使c13整块内部通过。"
+  },
+  "layoutRiskReferences": [
+    "container-count-near-gourd",
+    "gourd-total-height-and-support-proportion"
+  ],
+  "limitations": "仅是c12/c13这一条共边的视觉结论。其他邻接、完整世界布局、导航、客户端及5000人容量均未由此验证。"
+}

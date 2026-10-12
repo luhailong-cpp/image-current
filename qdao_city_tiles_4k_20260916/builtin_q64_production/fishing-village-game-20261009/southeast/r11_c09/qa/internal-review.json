@@ -1,0 +1,245 @@
+{
+  "tile": "r11_c09",
+  "reviewedAt": "2026-10-10T00:21:06.182731+00:00",
+  "status": "internal_ready_external_pending",
+  "internalReady": true,
+  "formalAccepted": false,
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\candidate\\r11_c09-internal-ready-4096.png",
+  "candidateSha256": "32aeee99debd786ea9e21c5540d5f66204e58ca61657a1bde6f8438a1694159b",
+  "fullReview": {
+    "reviewer": "provenance_audit production agent",
+    "nativeSeamsInspected": 24,
+    "nativeFourPatchCrossingsInspected": 9,
+    "completePreviewInspected": true,
+    "jointAdoptionBoundaryInspectedAtNativeResolution": true,
+    "geometryBlockingFindings": [],
+    "colorBlockingFindings": []
+  },
+  "independentReview": {
+    "reviewer": "layout_audit",
+    "scope": [
+      "p13-p23",
+      "p33-p43",
+      "p32-p33",
+      "p12-p13",
+      "complete1254 joint adoption region before and after color"
+    ],
+    "result": "No new blocking geometry discontinuity, outline jump or halo. Hull bottom and main paving seams continuous. p12-p13 hard cut is visually coherent wooden construction despite unmatched overlap structures. Independent review covers these ranges only; complete24-seam review by production agent above."
+  },
+  "resolvedFindings": [
+    {
+      "id": "G1",
+      "resolution": "Selected native joint-p32-p33-v1 over expanded low-difference binary material cut. Full lower hull edge reconnected; original left crop endpoints x0/64/128 preserve y439/476/511. No resizing/warping/blending.",
+      "adoptionBoxNative": [
+        60,
+        345,
+        1000,
+        1000
+      ],
+      "adoptionPixelCount": 521495,
+      "source": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\native\\joint-p32-p33-v1.png",
+      "sourceSha256": "3f2cadadb20ee50cfad2fecfb6738254d536183ad79519f6fd820308adb43cc0",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\processed\\jointpass\\jointpass-report.json"
+    },
+    {
+      "id": "C1",
+      "pair": [
+        "p13",
+        "p23"
+      ],
+      "beforeRobustColorResidual": 14.776041984558105,
+      "afterRobustColorResidual": 1.2291666269302368
+    },
+    {
+      "id": "C2",
+      "pair": [
+        "p33",
+        "p43"
+      ],
+      "beforeRobustColorResidual": 11.0625,
+      "afterRobustColorResidual": 1.1927083730697632
+    },
+    {
+      "id": "C3",
+      "pair": [
+        "p22",
+        "p32"
+      ],
+      "beforeRobustColorResidual": 11.8125,
+      "afterRobustColorResidual": 0.9479166865348816
+    }
+  ],
+  "colorSummary": {
+    "all24SeamRobustMeanBefore": 6.3628471692403155,
+    "all24SeamRobustMeanAfter": 1.4490017605324585,
+    "maximumActualChannelDelta": 40,
+    "correctionSupportCorePixels": 384,
+    "fieldReconstructionVerified": true,
+    "coordinateShift": [
+      0,
+      0
+    ],
+    "sourceResampling": false,
+    "sourceBlur": false,
+    "imagePixelBlending": false,
+    "note": "Statistics are diagnostics; p12-p13 full-overlap residual17.13 includes different inner-frame geometry, and was not forced down without visual cause."
+  },
+  "artObservationsNotSeamBlocks": [
+    "Existing stool timber join is readable as joinery; no hard-cut offset.",
+    "Fine painterly wood/stone texture retained; no blur used."
+  ],
+  "externalSeams": "not formally accepted; parent owns cross-tile QA after final selection",
+  "formal49TileAcceptanceCount": 0,
+  "priorReviewBeforeRepairs": {
+    "tile": "r11_c09",
+    "reviewedAt": "2026-10-09T22:39:46.742Z",
+    "status": "candidate_requires_geometry_repair_and_local_color_matching",
+    "formalAccepted": false,
+    "nativeSelectedPatchCount": 16,
+    "candidateSize": [
+      4096,
+      4096
+    ],
+    "candidateSha256": "58b73c124863c1fbc57e7192907a4738f39bf4ae721495f3d73a4d22d2927816",
+    "reviewMethod": "All 24 native seam strips (256x1024/1024x256), all nine native384x384 crosses, full1024 QA preview and each1254 native generation were visually inspected. Contact sheets only paste unscaled native strips. Numerical overlap diagnostics include structural changes and are not acceptance thresholds.",
+    "geometryBlockingFindings": [
+      {
+        "id": "G1",
+        "pair": [
+          "p32",
+          "p33"
+        ],
+        "type": "hull-bottom/floor discontinuity",
+        "tileFocusBox": [
+          1920,
+          2268,
+          2176,
+          2478
+        ],
+        "globalFocusBox": [
+          34688,
+          43228,
+          34944,
+          43438
+        ],
+        "estimatedVerticalMismatchPixels": [
+          60,
+          80
+        ],
+        "description": "At the vertical core seam, left lower hull plank extends below the right hull bottom; wooden silhouette changes into right paving/packed ground. Independent layout_audit confirmed. Color-only correction cannot fix this.",
+        "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r11_c09/qa/p32-p33-vertical.png",
+        "repairAttempts": [
+          {
+            "stem": "joint-p32-p33-v1",
+            "selected": false,
+            "reason": "Corrected overall silhouette but repainted hull bottom far outside requested local rectangle; cropped insertion would introduce new endpoint discontinuities."
+          },
+          {
+            "stem": "joint-p32-p33-v2",
+            "selected": false,
+            "reason": "Again moved broad hull bottom and chock/support context despite explicit local boundary; no safe local insertion. Not applied."
+          }
+        ]
+      }
+    ],
+    "colorFindings": [
+      {
+        "pair": [
+          "p13",
+          "p23"
+        ],
+        "severity": "clear",
+        "description": "Horizontal brightness/color step across golden bow stem; main outline and plank connections remain aligned.",
+        "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r11_c09/qa/p13-p23-horizontal.png"
+      },
+      {
+        "pair": [
+          "p33",
+          "p43"
+        ],
+        "severity": "clear",
+        "description": "Horizontal value step across platform legs/front frame and ground at core cut. No comparable large structure break detected.",
+        "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r11_c09/qa/p33-p43-horizontal.png"
+      },
+      {
+        "pair": [
+          "p11",
+          "p21"
+        ],
+        "severity": "mild",
+        "description": "Horizontal surface value/brush difference across hull and left upright.",
+        "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r11_c09/qa/p11-p21-horizontal.png"
+      }
+    ],
+    "intrapatchFindings": [
+      {
+        "patch": "p31-v1",
+        "description": "Left stool leg shows a horizontal join/extension in wood near native y160-220; structural plausibility needs art review. Not a final hard-cut dislocation."
+      },
+      {
+        "patch": "p32-v2",
+        "description": "The artificial y230 guide-composite line of p32-v1 was removed by a native AI local-edit pass. Adjacent seam QA inspected; old output remains source evidence, selected version v2."
+      },
+      {
+        "patches": [
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p41",
+          "p42",
+          "p43",
+          "p44"
+        ],
+        "description": "Ground changes from broad paving at left to packed pebble ground at right; large paving faces contain dense small painterly marks. Readability/material consistency needs art review; no synthetic blur used."
+      }
+    ],
+    "otherSeamGeometry": "No obvious blocking large-structure hard-cut discontinuity observed in the other23 native seam strips at this review scale. This does not certify gameplay or external adjacency.",
+    "crossesReviewed": [
+      "r1c1",
+      "r1c2",
+      "r1c3",
+      "r2c1",
+      "r2c2",
+      "r2c3",
+      "r3c1",
+      "r3c2",
+      "r3c3"
+    ],
+    "externalSeamStatus": "Independent layout_audit reports north r10_c09-to-r11_c09 four segments and three junctions showed no obvious geometry block; this tile report does not formally accept external seams. West/east/south are not accepted.",
+    "failedRequests": [
+      {
+        "stem": "p23-v1",
+        "reason": "Network request failure; no image returned; prompt/request/failure receipt preserved."
+      }
+    ],
+    "selectionExclusions": [
+      {
+        "stem": "p12-v1",
+        "reason": "Duplicated left-neighbor composition."
+      },
+      {
+        "stem": "p32-v1",
+        "reason": "Superseded by local native repair p32-v2."
+      },
+      {
+        "stem": "joint-p32-p33-v1",
+        "reason": "Repair scope exceeded; not applied."
+      },
+      {
+        "stem": "joint-p32-p33-v2",
+        "reason": "Repair scope exceeded; not applied."
+      }
+    ],
+    "resamplingFinalApplied": false,
+    "blurApplied": false,
+    "pixelBlendingApplied": false,
+    "finalPixelSource": "Exactly sixteen1024x1024 crops of selected1254x1254 builtin native outputs; no joint repair pixels selected.",
+    "nextAction": "Regenerate or jointly repair the complete lower-hull region with stable surrounding edges; then recheck geometry before bounded local color matching. Preserve candidate status until internal/external review succeeds."
+  },
+  "recordPaths": {
+    "colorpass": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\processed\\colorpass\\colorpass-report.json",
+    "jointpass": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\processed\\jointpass\\jointpass-report.json",
+    "verification": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\candidate\\processed-verification.json"
+  }
+}

@@ -1,0 +1,2367 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-04T20:16:40.038758+00:00",
+  "reviewer": "finish_ew independent subagent",
+  "scope": "68 combat frames only; static inspection",
+  "staticVisualInspectionCompleted": true,
+  "dynamicPlaybackReviewed": false,
+  "clientIntegrated": false,
+  "method": "实际查看全部六组联系表中的 68 张图片；对重点帧另看完整 1024 图。原联系表 68 个来源 SHA 在修复前与正式图一致；随后对 E00/09/10/11 新图完整查看。当前报告重新计算所有 68 个正式 SHA 与逐图来源。",
+  "observations": [
+    {
+      "action": "hit",
+      "direction": "E",
+      "observation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "observation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "observation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "observation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "observation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "observation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。"
+    }
+  ],
+  "resolvedIssues": [
+    {
+      "files": [
+        "runtime/attack/E/00.png",
+        "runtime/attack/E/09.png",
+        "runtime/attack/E/10.png",
+        "runtime/attack/E/11.png"
+      ],
+      "issue": "原图近侧解剖右手错持符牌",
+      "resolution": "各自 AI 重绘为近侧右手持杖、远侧左手持符牌；新的 4 张正式图已实际查看。"
+    },
+    {
+      "files": [
+        "runtime/cast/W/13.png"
+      ],
+      "beforeSha256": "724c3e33796d2a790689a93edf9ef5a2df2bfbc20d9552be920b144a0b3e66df",
+      "afterSha256": "f49717f8ced4aef3912d29575bd4582afaa539893e79d79bc7a7ca2335885abb",
+      "issue": "新用户视频反馈后重新定位近侧左靴向镜头偏转的12→13鞋轴突变",
+      "resolution": "本轮视频反馈定位并AI局部修正：近侧解剖左靴鞋尖向W/左延展，右侧鞋跟块与鞋侧壁恢复，12→13的近正面鞋轴突变已处理。膝弯、白绑腿/踝位置、远靴、收勢、身份和右杖左牌保持。已实际查看1254原生与1024正式图；动态另验。",
+      "evidenceReport": "review/video_axis_EW_combat_20261004.json"
+    },
+    {
+      "date": "2026-10-05",
+      "file": "runtime/cast/W/14.png",
+      "beforeSha256": "61e5967dd493d375e4559d0c1b6d28390577ad788e807f0f4d3fdd733ce66163",
+      "afterSha256": "93b2d162f4e4f13bba4258f414963929b93328fb2ea6049bb3debecfe6217bf8",
+      "issue": "近靴鞋头比W12及新W13更偏画面下方，长鞋侧缩短；膝踝与髋没有对应转身，收势鞋轴出现局部外转。并非仅因展示鞋面/鞋底判错，也不以09三分之四透视作放行依据。",
+      "resolution": "内置image_gen逐张局部修靴，将鞋头转朝W偏左，恢复长鞋侧，鞋跟在右；保留白裹踝、踝点、膝弯、另一靴、头脸相机及右杖左牌。",
+      "review": "已实看1254原生与1024导出：近侧靴鞋头左伸，长侧面和右侧鞋跟清楚，与新W13同一W鞋轴；全身取景、膝踝、另一靴及两手持物连接保持。",
+      "evidence": "review/upper_limb_combat_20261005.json"
+    },
+    {
+      "date": "2026-10-05",
+      "file": "runtime/cast/W/15.png",
+      "beforeSha256": "c353262c0f3186b1d96039f886424db2a36d74eb211f63adc218f73be3ccc775",
+      "afterSha256": "9bbeccba500f9f2e2fb96f6fc2f8b053bc2303031ce2509f407b3a6b22d11a7a",
+      "issue": "近靴鞋头比W12及新W13更偏画面下方，长鞋侧缩短；膝踝与髋没有对应转身，收势鞋轴出现局部外转。并非仅因展示鞋面/鞋底判错，也不以09三分之四透视作放行依据。",
+      "resolution": "内置image_gen逐张局部修靴，将鞋头转朝W偏左，恢复长鞋侧，鞋跟在右；保留白裹踝、踝点、膝弯、另一靴、头脸相机及右杖左牌。",
+      "review": "已实看1254原生与1024导出：近侧靴鞋头左伸，长侧面和右侧鞋跟清楚，与新W13同一W鞋轴；全身取景、膝踝、另一靴及两手持物连接保持。",
+      "evidence": "review/upper_limb_combat_20261005.json"
+    }
+  ],
+  "limitations": [
+    "本报告是静态逐图检查，不代表完整正常/慢放循环验收。",
+    "E11 新稿头部位置与旧稿存在约 30px 高度变化，现整体更接近 E00/01；循环衔接由主窗口单独复核。",
+    "宿主未披露实际型号及质量；配置目标 GPT Image 2.5 Sunburst/max 不当作实测。",
+    "当前无客户端，未接入或运行客户端。"
+  ],
+  "sourceWarnings": [],
+  "unresolvedBlockingIssues": [],
+  "frames": [
+    {
+      "file": "runtime/hit/E/00.png",
+      "sha256": "5a0be96de26fc6b1108c1740760dc6f64123554c01bf856b5beeb545a64d583f",
+      "action": "hit",
+      "direction": "E",
+      "frame": 0,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_00_v3.png",
+          "sha256": "15d2fb6a556e36d21857e5062ea61cea8f756820b783cd7320e93821d5d73d30",
+          "generationRecord": "work/hit_E_00_v3.png.generation.json",
+          "generationRecordSha256": "ca359845b91e4a28d09776249ab5ea5e3f398796811748265337acf9537e6a5f",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/E/01.png",
+      "sha256": "f10d02c667fa1cc3e33555edf3bf19d2d3fafbd13b44efb5847e0dd9ca617b00",
+      "action": "hit",
+      "direction": "E",
+      "frame": 1,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_01_v3.png",
+          "sha256": "b2ef112a715862746d8d207f54306d56bc0a4490052f1f710a4325a0b4c71ffc",
+          "generationRecord": "work/hit_E_01_v3.png.generation.json",
+          "generationRecordSha256": "4d53c2ad48645064d8bdfbdb5e72b313a6e9c707c34be8a7d03caa6441ab5fda",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/E/02.png",
+      "sha256": "d4095affb9a08f52877d442a3b8e7d8491defff0843a526c9b3fc15748515416",
+      "action": "hit",
+      "direction": "E",
+      "frame": 2,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_02_v3.png",
+          "sha256": "7d4d0e63eea3513d93b6680750e1990d6100af06f3efa2eeb7b672954fd88425",
+          "generationRecord": "work/hit_E_02_v3.png.generation.json",
+          "generationRecordSha256": "4373beb092c3075bd8d6cec7c4b28d6a04b153ef5202d276f7960e0bb0a5dee1",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/E/03.png",
+      "sha256": "8d227bc11bd4a56d76787d77bb6eef37165d04370575454b631fba5874d1b99c",
+      "action": "hit",
+      "direction": "E",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_03_v3.png",
+          "sha256": "5e44e61d273a7818a869f778888ced38ae16f5c56862b3cf7fde35e8208809dc",
+          "generationRecord": "work/hit_E_03_v3.png.generation.json",
+          "generationRecordSha256": "3e4e94ecae99009eda0a243848b81fe859cc1ddb4455b8ce17259516cf758d18",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/E/04.png",
+      "sha256": "12077f4d429a8c234c860f438034ee712eec699c59a080c39c4b45cabeb675c9",
+      "action": "hit",
+      "direction": "E",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_04_v3.png",
+          "sha256": "0cb8658729f8b2302edae681c20d9c8a0448d3d4104141aeadf9f6de9313437a",
+          "generationRecord": "work/hit_E_04_v3.png.generation.json",
+          "generationRecordSha256": "06b534c4755efb16152758fdbc36efaa86747ef4f15141d8f2599bbe5a388c72",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/E/05.png",
+      "sha256": "04b7946db07d837c8858ead2280f572147151bba5020ea988382ec2716e50f7d",
+      "action": "hit",
+      "direction": "E",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；后仰/缓冲中双靴仍朝东，02 抬起前靴而没有外拧。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_E_05_v3.png",
+          "sha256": "49ca96afbbd32b237bbe4795a7c409aa55c82108c811e5bd5040e2925a81e295",
+          "generationRecord": "work/hit_E_05_v3.png.generation.json",
+          "generationRecordSha256": "0828c83a23af94ed1cf0df30a201fdf38a21fb5b37c07dfd332792d495cc63d8",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/00.png",
+      "sha256": "0a68c5c2b487120fb5fa55a46b900c1ee0371cb55bc7f1550689d4f46b1a42a2",
+      "action": "hit",
+      "direction": "W",
+      "frame": 0,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_00_v6.png",
+          "sha256": "90e16fdab638103fba714a6c9b441a23bcafb0a8786008b163fe444e30219782",
+          "generationRecord": "work/hit_W_00_v6.png.generation.json",
+          "generationRecordSha256": "45f85da87317685e18e7036fab5d1d5f27a3bf4f7e51cb3bc19e25abf5c78652",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/01.png",
+      "sha256": "f67e889abdf762b9af144756d90e6d9a642057399d3e8a76e2da19e6b3c580e0",
+      "action": "hit",
+      "direction": "W",
+      "frame": 1,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_01_v3.png",
+          "sha256": "29d1d29a760d49259727f14d6cddc10ee5c3f09282ae53f460868afe13f80791",
+          "generationRecord": "work/hit_W_01_v3.png.generation.json",
+          "generationRecordSha256": "7be5d43c275877b8fd813b844c45865fb3b4d073a8eee76bea5758fb07fbbfe3",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/02.png",
+      "sha256": "5cec59d2ccfe4cca3f794b0dbde204f3eeee81d308f1b195699d62037d9a817d",
+      "action": "hit",
+      "direction": "W",
+      "frame": 2,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_02_v3.png",
+          "sha256": "c164b6067fa39edd11dfed59204017b65d3cfff9fe5e63b676b58e09ca0702f8",
+          "generationRecord": "work/hit_W_02_v3.png.generation.json",
+          "generationRecordSha256": "c6197046f658b4677576cf5a2513f19e1a6ec3583584d29c943708acb27eb00f",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/03.png",
+      "sha256": "6e301b16bbda7a0851440ba98fbca2155ac1ceee7f2ac7fc31271121e33003cf",
+      "action": "hit",
+      "direction": "W",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_03_v3.png",
+          "sha256": "28df1aa795f4420754b15a0cda68c58a40207746a8fa1fa8d6cf4f957e241a14",
+          "generationRecord": "work/hit_W_03_v3.png.generation.json",
+          "generationRecordSha256": "cd948889bfcdf92d6a43421cf335f4123ac90da03ac53776cb0dc151539d7810",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/04.png",
+      "sha256": "0925a69a58b6fe4c504bd7342af26174d290683acf67aaf9954ff53188786a14",
+      "action": "hit",
+      "direction": "W",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_04_v3.png",
+          "sha256": "e84a307ad0fda943b27f10fe4cb25a4bb2a776c02e9abdd03fddad73c0c35685",
+          "generationRecord": "work/hit_W_04_v3.png.generation.json",
+          "generationRecordSha256": "a9fac28362948402efa800b93eea405abe3d53bc16a54a6f5197fef3c7b68456",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/hit/W/05.png",
+      "sha256": "a78c764b2a6afd21a42c6a9100999f4b14d662f2536d5ea1904db094ab3b9128",
+      "action": "hit",
+      "direction": "W",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；反冲中双靴朝西。00 与 02 已额外查看完整单帧，握持清楚。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/hit_W_05_v3.png",
+          "sha256": "f0be006eeecf81cd13319e684411fd2bcbc426c9c2ec3d901840bb348cfed3c5",
+          "generationRecord": "work/hit_W_05_v3.png.generation.json",
+          "generationRecordSha256": "1b6b7d315dcfc3c2d3d25ceb86b26c718ba2088422c99bf7d513f543699e2bc6",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/00.png",
+      "sha256": "3ecd11c7dbd35c49525dc2e9c7b652c8277bb7bb77ce3016dac195dfb22d389e",
+      "action": "attack",
+      "direction": "E",
+      "frame": 0,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_00_grip_v1.png",
+          "sha256": "addf7fee60b7238ec241169b5eadc7b02126fd8771ad1bde934ff2d3dc6bcf3c",
+          "generationRecord": "work/attack_E_00_grip_v1.png.generation.json",
+          "generationRecordSha256": "892b4bf52fb0d4ee405039f8d1d6506659b0fe0f7bc140094a5a1551e7283ed6",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/01.png",
+      "sha256": "5af36dd905e655ba6512dcc0663f0ba8b648c9acf209c9bbae00d08ffeedd221",
+      "action": "attack",
+      "direction": "E",
+      "frame": 1,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_01_axis_v1.png",
+          "sha256": "cfe2ff6262394f224b4c43c64179bc01b4505e882420cff8dac83a4987156d21",
+          "generationRecord": "work/attack_E_01_axis_v1.png.generation.json",
+          "generationRecordSha256": "75283eab9f5fb26568c88cad5847a0ca1dc190d74ae313c92fa0275ff916f8f2",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/02.png",
+      "sha256": "362574b5dda33672e7999018a94ae0c35426c5375635932db25d2ae4ee370257",
+      "action": "attack",
+      "direction": "E",
+      "frame": 2,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_02_axis_v1.png",
+          "sha256": "61d099976b2be3488c3a9dff36b4e8b884b37f9cff2155f3fa9e68f17645efe7",
+          "generationRecord": "work/attack_E_02_axis_v1.png.generation.json",
+          "generationRecordSha256": "748d16cbfcd5ba0d572af549a97fc4cda2d7b33b5954c62f668e5b0464d9cb4c",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/03.png",
+      "sha256": "516f3cdc32a13407c2f8a3d212708ca3e3f23dc2df4aaf7959d040311940ca3f",
+      "action": "attack",
+      "direction": "E",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_03_axis_v1.png",
+          "sha256": "e3e5b88c2b1a000d309dc595935f6a77ee6b67a5ab1bb08faa67ee96a72adf62",
+          "generationRecord": "work/attack_E_03_axis_v1.png.generation.json",
+          "generationRecordSha256": "2404e1b9ec8647a7897aaea3aa03b601ca001e9db6a8f54a5bef8ea27828d398",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/04.png",
+      "sha256": "5ea2191773e8172e96ed2ae087a61772eee0e370484e8314891cc4688b1a860a",
+      "action": "attack",
+      "direction": "E",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_04_axis_v2.png",
+          "sha256": "9b55a1303860747b572fc2af83e1f8dc25605420ba70c99b321463306dd28784",
+          "generationRecord": "work/attack_E_04_axis_v2.png.generation.json",
+          "generationRecordSha256": "66c2dbc0b863910b8fee45e6d810f75c15a4f73ba6bad1f8c60d794eab76fe17",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/05.png",
+      "sha256": "c3ecbd526bf0c883de1b91f255a050ca744da44492d8f2ec52e8199babd4eafe",
+      "action": "attack",
+      "direction": "E",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_05_axis_v2.png",
+          "sha256": "fbdb3317462353fa9d2b145cf989a6f26af82e67202206597e1b1718f60802d3",
+          "generationRecord": "work/attack_E_05_axis_v2.png.generation.json",
+          "generationRecordSha256": "e12a9286dcc0c03f6b5dd0de7c6ecf36989fb571ba62733a72190a008fee2e75",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/06.png",
+      "sha256": "60f3564d743c10c7d3d661cca08d8fed6d5232249fc3d2b1feacdd4b026777d9",
+      "action": "attack",
+      "direction": "E",
+      "frame": 6,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_06_axis_v1.png",
+          "sha256": "5bcdb80c14df5d70d67e5887a74effde1440102966ae79ecdb7265795de7fc8d",
+          "generationRecord": "work/attack_E_06_axis_v1.png.generation.json",
+          "generationRecordSha256": "691b4cf48256370d7ecd1d563d99750835783a69a1723a276e394f9db1f0ff51",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/07.png",
+      "sha256": "486837e67265001b441c7f172e3b55beb7e4895d6e664d33c0267a4bf9c8e307",
+      "action": "attack",
+      "direction": "E",
+      "frame": 7,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_07_axis_v1.png",
+          "sha256": "381a14520d1dae15965f663ea2241730bf1ed79f28b9e2ce68d5584bb8dd3888",
+          "generationRecord": "work/attack_E_07_axis_v1.png.generation.json",
+          "generationRecordSha256": "ec643537ef01cfa81e52284b1c2cd2133d0d402d73d80237b1cabc51e15c64a0",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/08.png",
+      "sha256": "5b4ff75baf0a0c94f0166bcb7691e4ad610f277fc879576aebf0810e424d2520",
+      "action": "attack",
+      "direction": "E",
+      "frame": 8,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_08_axis_v2.png",
+          "sha256": "cbb4daf4539ee7547a0b80c7674158d1ebd719be9b6480733b3f0004f398dd32",
+          "generationRecord": "work/attack_E_08_axis_v2.png.generation.json",
+          "generationRecordSha256": "6ecdd10534b1bcb5630c2b5a14c12b13f6570c670970ae0c972e6184223a421d",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/09.png",
+      "sha256": "1c63f5d5b23e348f1a08bc7f0b4f38120c0a3481d2df3bba5ad99311faedd53a",
+      "action": "attack",
+      "direction": "E",
+      "frame": 9,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_09_hands_v2.png",
+          "sha256": "fbd65164a8300b960e74f1c1fae11960d1c0baa8a243492f05b9f222652a5a56",
+          "generationRecord": "work/attack_E_09_hands_v2.png.generation.json",
+          "generationRecordSha256": "354bac0d673c50de9c6fc6b5079e6a95087c870eaeda6cf07cec06bac0acd083",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/10.png",
+      "sha256": "16511330d601c4af270787e1a08ae31e41148768317cccd64c2aa0c74b5621ae",
+      "action": "attack",
+      "direction": "E",
+      "frame": 10,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_10_hands_v1.png",
+          "sha256": "f775fdf0666fa506a1baea4fad9c18074fb4bba59f52fc5933c65277655eeae6",
+          "generationRecord": "work/attack_E_10_hands_v1.png.generation.json",
+          "generationRecordSha256": "b5add33f81ab7ab34fe0c73fc6a81b5c5142f80e87a379603d83ea650cbfa89b",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/E/11.png",
+      "sha256": "88214a08136415253441a2b657df4ebf6d06177cd1a64ea41cef19efa5ea0e45",
+      "action": "attack",
+      "direction": "E",
+      "frame": 11,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右臂持杖、远侧左手持符牌；脚尖朝东。00/09/10/11 换手错误经独立 AI 重绘后再次实际查看。06 前伸出手，随后收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_E_11_grip_v1.png",
+          "sha256": "fe9b33bc7f532aa7cf0d4868d6e708aa535302ba892a66e7b7db81584d2db6c5",
+          "generationRecord": "work/attack_E_11_grip_v1.png.generation.json",
+          "generationRecordSha256": "52d3af565692f5284bb4439d5092a91047e2631c8ad4c6fc668e13c7efedee98",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/00.png",
+      "sha256": "768397a77738f59e6e2e7163979db2be7e4da28af12e64ad36d789dd41e09b8d",
+      "action": "attack",
+      "direction": "W",
+      "frame": 0,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_00_axis_v1.png",
+          "sha256": "a0cf45b60e459dd7f7c5ff5c58e57199430c90660eadb4ba7f1a4745a169543d",
+          "generationRecord": "work/attack_W_00_axis_v1.png.generation.json",
+          "generationRecordSha256": "b75a3e026f1256186d2e116ef669cb494d30a5555316dd7a54c5d7ebacbe66a2",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/01.png",
+      "sha256": "fb5b45df5a314a639b672d875ab015ad4e628c351316c20a0c8c6499171474c0",
+      "action": "attack",
+      "direction": "W",
+      "frame": 1,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_01_axis_v1.png",
+          "sha256": "f982e64f9f4380a7252aad81b6a9988607dd54376b7a00dfcf7ac996f61776a3",
+          "generationRecord": "work/attack_W_01_axis_v1.png.generation.json",
+          "generationRecordSha256": "60547e28abf98fcbd4ca8d3fb296a482d904770355bf4b364f7d02a568b02e58",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/02.png",
+      "sha256": "29a5bc6755d1e4ae5c0455bf21089ef732082bfee074bc19d2f6e91941715534",
+      "action": "attack",
+      "direction": "W",
+      "frame": 2,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_02_axis_v1.png",
+          "sha256": "efb5f957b1efb767218df85bfa9d76d84b43529f8095ec9c0b09da83d498bdd8",
+          "generationRecord": "work/attack_W_02_axis_v1.png.generation.json",
+          "generationRecordSha256": "dec702a38c844e248a9c386dec56711e1abc178adc23253aa81fcca015517005",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/03.png",
+      "sha256": "8812662750f7c4c6fe4b9a18202bd43e4c24cf5be19c011b78c112a1a1781a67",
+      "action": "attack",
+      "direction": "W",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_03_axis_v1.png",
+          "sha256": "40a534ff0fbb3d493b6de6c8b52b355d8e0d099d1c78a44a7cb495699dd8b524",
+          "generationRecord": "work/attack_W_03_axis_v1.png.generation.json",
+          "generationRecordSha256": "08dae9f316f0aa861d0aa61673b359ad6c7f7e14bc4376dac5c8696019b084ca",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/04.png",
+      "sha256": "ecd3a69b98fb80413f761262e37305ced3b17d728a6a21b6c18967ef4ce3f455",
+      "action": "attack",
+      "direction": "W",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_04_axis_v1.png",
+          "sha256": "2274f8a94ea72f4db83afd6c3de214ce18102db099d6e002587e91e5b8d5b7cf",
+          "generationRecord": "work/attack_W_04_axis_v1.png.generation.json",
+          "generationRecordSha256": "8987e875b4772534022b7a1397a45620d3ec9bdcd437bc64ae47e1b75e1de398",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/05.png",
+      "sha256": "2e82a410e304330400958be82b4a412489b569bcfecb3ff164c471e910326a40",
+      "action": "attack",
+      "direction": "W",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_05_axis_v1.png",
+          "sha256": "05bae6915b96863cf16693a8cf2035efd517ef61e9f4197809ec4e754ecaa99b",
+          "generationRecord": "work/attack_W_05_axis_v1.png.generation.json",
+          "generationRecordSha256": "81de8374f70bb3d20272e3f5e94bc1b4b4d7229c9aef8e89eaffa3d72993b855",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/06.png",
+      "sha256": "f86d688d9fec46c95ec9217d4c6c95ee710e719216e5614720cb40cf15398921",
+      "action": "attack",
+      "direction": "W",
+      "frame": 6,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_06_axis_v1.png",
+          "sha256": "4c42f13c7f887fa83077eda9eaa4e6afc823bbd39603f49d98b48ec63944f989",
+          "generationRecord": "work/attack_W_06_axis_v1.png.generation.json",
+          "generationRecordSha256": "55d86e3dcdf086677a25387cf02eb6705fbf1cbdc51c0fe9a4b4da3ad243e443",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/07.png",
+      "sha256": "427b315d08bf74b7018d799fe5f2edd1a5b86e122627e29764efde3bc3cea88f",
+      "action": "attack",
+      "direction": "W",
+      "frame": 7,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_07_axis_v1.png",
+          "sha256": "a66e3cfd7d84d0ad77921ed03edd968debf7de647015c886bc289c7a44209625",
+          "generationRecord": "work/attack_W_07_axis_v1.png.generation.json",
+          "generationRecordSha256": "c28fe498bb09ed6a8f54617cffc6697a2c5f476383a6b92c1ee00a7c739577dc",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/08.png",
+      "sha256": "b5797805807ccae308a2b2ed42357f8efe3f513461898e3366f8ccc7b01693db",
+      "action": "attack",
+      "direction": "W",
+      "frame": 8,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_08_axis_v1.png",
+          "sha256": "8abf746479346a27130b604368cb20aca2a458e4e984540c89da3230b12393d8",
+          "generationRecord": "work/attack_W_08_axis_v1.png.generation.json",
+          "generationRecordSha256": "21cb9e0c68767d82c4148e98faddb4a2d1900133b939ab7fb988f3fa5540dd15",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/09.png",
+      "sha256": "bc1f605358192d0d3ff1494851f49596f1cb91e51f071b050cdc4a4113061d22",
+      "action": "attack",
+      "direction": "W",
+      "frame": 9,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_09_axis_v1.png",
+          "sha256": "980cc7cb436bdbe54daf0d358c4b68abb9706b08c772d7d22e8e5fccaa50cd4a",
+          "generationRecord": "work/attack_W_09_axis_v1.png.generation.json",
+          "generationRecordSha256": "a9657ed0ca1dfd7ba78644f70937e85ca84b1c988cf63bcfae75f4185afc0d50",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/10.png",
+      "sha256": "54b57e1d48b50fb27d59f3b1e2459eee6b80241715ada3ecc5d9fd00e075b26b",
+      "action": "attack",
+      "direction": "W",
+      "frame": 10,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_10_axis_v1.png",
+          "sha256": "c65efc90d13f49a64b038f5ce3ab0d90949a0d8d79d12089a5e2ddc03e5c1a4c",
+          "generationRecord": "work/attack_W_10_axis_v1.png.generation.json",
+          "generationRecordSha256": "cfc2bbc1c6115918b9eba4e6ed586812d0e889788b98d5d68186269bf1c23126",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/attack/W/11.png",
+      "sha256": "f7532b2edcab64dec3a75db355ba2c1fddb0691b67caaea5a774605048f4379c",
+      "action": "attack",
+      "direction": "W",
+      "frame": 11,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。06 完整单帧可见出手手臂与杖柄连贯，08–11 收招。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/attack_W_11_axis_v1.png",
+          "sha256": "f243e47fceac8d00ba9372e0ecc34e922765fde41832490d8c0db5920240f7fd",
+          "generationRecord": "work/attack_W_11_axis_v1.png.generation.json",
+          "generationRecordSha256": "90994a289d220ef38791094826d181727986a24d1b77476d0bd9dbdf01cebcb8",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/00.png",
+      "sha256": "020ea69b454aec3333e3dd64c0b5171f76aa218541e6e69eb09f18ff6e558d7e",
+      "action": "cast",
+      "direction": "E",
+      "frame": 0,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_00_v1.png",
+          "sha256": "d4a33e0d4ecdd2b313cd9cab648e3c4a6fa95012fd1bde97c47560b7e5669daa",
+          "generationRecord": "work/cast_E_00_v1.png.generation.json",
+          "generationRecordSha256": "4cd17f7cf14a35afae2af1b6288d73ec3d46e1c3a753e4fe979a09edd61a0b69",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/01.png",
+      "sha256": "816b2a2b5ae4ae0d34f23436a1bb38fc9884a086010d8785089adc9f91a43126",
+      "action": "cast",
+      "direction": "E",
+      "frame": 1,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_01_v2.png",
+          "sha256": "2245f0e48fa38406a36b31f201c3cd9c6fbf62c45a2d6042ac849915cf8964b6",
+          "generationRecord": "work/cast_E_01_v2.png.generation.json",
+          "generationRecordSha256": "67282795e40d4c7b4c36919fc29c8a8fd2dc8bbd0fc3f14cb2c4d8d2fdd7ba06",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/02.png",
+      "sha256": "d6866b6276146e1d2d90fdd821e3ffd3a17896cc5bb667066081f40741aa2f31",
+      "action": "cast",
+      "direction": "E",
+      "frame": 2,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_02_v1.png",
+          "sha256": "d25d580d4fa9fdfa23cf4405b7b73625096533ac5388a9fb5da57cc5217f807f",
+          "generationRecord": "work/cast_E_02_v1.png.generation.json",
+          "generationRecordSha256": "9fcaf7851f32a778de7f5117cfde3a5999bd6ee3e2af1067aa8529726116a451",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/03.png",
+      "sha256": "3862ea0ed39a26da81a27dc18852e4000356644b40aecdea9f373d18dbf64eca",
+      "action": "cast",
+      "direction": "E",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_03_v2.png",
+          "sha256": "6e37b6d4dd9efacb1b3405ccec0e1aff7badece677617ee7a04114807781407d",
+          "generationRecord": "work/cast_E_03_v2.png.generation.json",
+          "generationRecordSha256": "b0ea576e745515744cbd34ef0bd1e895110e964f29209c647dfb546db9208b42",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/04.png",
+      "sha256": "6ab51c568763c70c2cfd34c72e743ac345f44381acf0958047675c31833937ad",
+      "action": "cast",
+      "direction": "E",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_04_v1.png",
+          "sha256": "4478df2b5f9f44f26f020eddba84932cbe70966fda27d764d305175087a38f4a",
+          "generationRecord": "work/cast_E_04_v1.png.generation.json",
+          "generationRecordSha256": "b8aab308ff0ff687aad36d375e398f56e4eaab8b398f29550f73ebf468c84aa7",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/05.png",
+      "sha256": "5d526c5148eb80bc6c5baaf1ec346e15b059e035df8af872aa34c194fa0e2c03",
+      "action": "cast",
+      "direction": "E",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_05_v1.png",
+          "sha256": "80f3d4abaeff4077ca4ac3a00cf9bd167fe607370849cde551dc3f63784fe51a",
+          "generationRecord": "work/cast_E_05_v1.png.generation.json",
+          "generationRecordSha256": "a20052fd81aa5da4311612d577c26886ed8d5895dbed265c93fa9f9f24e1205f",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/06.png",
+      "sha256": "9e2592350104b92cdc66ab14e9367d335b4fc04205e553b2c60f645d38ce575b",
+      "action": "cast",
+      "direction": "E",
+      "frame": 6,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_06_v1.png",
+          "sha256": "6d178ba76e54f1a7f930abceec15eae54336b8b78254f60865205c9dfdcb6680",
+          "generationRecord": "work/cast_E_06_v1.png.generation.json",
+          "generationRecordSha256": "37e7ad2ccb09dc28888b1e465cecc6398f9f1faafb4d7a4bbe9763272ca394cb",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/07.png",
+      "sha256": "14faa0315f8256abf8c1458f35097da84b0cee9390bba11a9f7b0608655a6d70",
+      "action": "cast",
+      "direction": "E",
+      "frame": 7,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_07_v1.png",
+          "sha256": "e6cd21c4d58d9af07defe1cd5cb46e191fbd80798faa63a2879ec5322b7f5e0f",
+          "generationRecord": "work/cast_E_07_v1.png.generation.json",
+          "generationRecordSha256": "6cedbd9209d19799e0809a625b611da541f45e54f8ef9359479ec27cb4808af5",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/08.png",
+      "sha256": "f016874ecb35838f7ed098f578607495a9d8beef21d7da603b827a2e8299c814",
+      "action": "cast",
+      "direction": "E",
+      "frame": 8,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_08_v1.png",
+          "sha256": "9534d389e2e97148014d0affc2043b8c5167cdc58e15f5cd0b99cf0a03062d83",
+          "generationRecord": "work/cast_E_08_v1.png.generation.json",
+          "generationRecordSha256": "2b93a199b37f65e2f7522f241ceab3dfacc08f292e294cf67ae28830f9e35f04",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/09.png",
+      "sha256": "209f7f18b5679520c406bf45e56987a3cdc1c775b39d79198f053501861f0bf5",
+      "action": "cast",
+      "direction": "E",
+      "frame": 9,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_09_v3.png",
+          "sha256": "7b352464bc81920f11d3490e5d0c58b4fb8e106e50ef4304222c7fee49161390",
+          "generationRecord": "work/cast_E_09_v3.png.generation.json",
+          "generationRecordSha256": "1c2b8740326283a55eb4f66668ce55626225d8924e95aa87e8b1155783b3b1f2",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/10.png",
+      "sha256": "13a9023eaa35c2129c4d19f4aeb16c5f7f1207fe21a34f86bd22f345d8db0c33",
+      "action": "cast",
+      "direction": "E",
+      "frame": 10,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_10_v1.png",
+          "sha256": "7b8035cf37706a9426ee724ebf5f90673d0f44063419e1b5a8f03fa41bc536ba",
+          "generationRecord": "work/cast_E_10_v1.png.generation.json",
+          "generationRecordSha256": "03bf70c1b914d31c0c4c0d2e63bb75b31c8aff990483c6437ce658b8934c72d1",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/11.png",
+      "sha256": "428d17940b6ad1dd111f3dae4da777d7f31d5d040227d4d2351b21c74c26ce88",
+      "action": "cast",
+      "direction": "E",
+      "frame": 11,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_11_v1.png",
+          "sha256": "37fa6ef2194c0602b72c71d9fd45c344ee0b5bc4b5ca7decd6041e96e2751ff2",
+          "generationRecord": "work/cast_E_11_v1.png.generation.json",
+          "generationRecordSha256": "5bbb3c2d7b1ccbcf0d416cdb45b2db9f0c147a1069d1516b4969b7bb4cf57c70",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/12.png",
+      "sha256": "7e4d009a29613133a5399b9ea6ce599c8b9d7643cac77cf675d8a03f5af3d38b",
+      "action": "cast",
+      "direction": "E",
+      "frame": 12,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_12_v1.png",
+          "sha256": "62c97382904b7e80f5dfd49a159e7a74b5d20d8f64b16e2143232f64c90ffbf7",
+          "generationRecord": "work/cast_E_12_v1.png.generation.json",
+          "generationRecordSha256": "3ecd486502bb9d7af0379c8d4235e48a3adfe5cf418e9ace1bf450021334e9a8",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/13.png",
+      "sha256": "474e0d54c5e0f99e4f011a6df6d024205e83bb09724e456564039192b3ede5ca",
+      "action": "cast",
+      "direction": "E",
+      "frame": 13,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_13_v1.png",
+          "sha256": "9775ada6f3fd27cd8ceae4c83f6e8c4fc6a930fe751fe442d3fc317aa0d7ea77",
+          "generationRecord": "work/cast_E_13_v1.png.generation.json",
+          "generationRecordSha256": "75d4b0fef6da220bc91d11271374b99b7c9c5131c501b6115e7889e1fefa483b",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/14.png",
+      "sha256": "bf417ed7ac60930b9b5a16ff089b3131c17d55a233faa9a964d2449bb8f18ffb",
+      "action": "cast",
+      "direction": "E",
+      "frame": 14,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_14_v1.png",
+          "sha256": "b1242e69496732088321ea003e0a381497963ce15a2832e4bff34b2bfcea9fef",
+          "generationRecord": "work/cast_E_14_v1.png.generation.json",
+          "generationRecordSha256": "9e882006bcaa9ead2fe84af7ff909dd820f869a898dbed3399db2cb36a85fca2",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/E/15.png",
+      "sha256": "05386a09224f811dbf647d882509ab502444f0489e8d846750612ae0883b4848",
+      "action": "cast",
+      "direction": "E",
+      "frame": 15,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧右手持杖、远侧左手持符牌；脚尖朝东。09 释放与 12–15 收势完整单帧已额外查看，未见换手。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_E_15_v1.png",
+          "sha256": "8a444137c988557eb1a2a869c349d0d4322fc6a46a9c4bc94d9e1add146ac124",
+          "generationRecord": "work/cast_E_15_v1.png.generation.json",
+          "generationRecordSha256": "833ff0dc1bf841aeabc98f8bd80e42ec1215e00cc3a004a56d83ee7a728ee929",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/00.png",
+      "sha256": "96a7ede3d3ada6fe7dd77d31d120d143eb71583afa6b11a0788d72bd1dcb6ebc",
+      "action": "cast",
+      "direction": "W",
+      "frame": 0,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_00_v1.png",
+          "sha256": "c2723f28c48b61335c53104c431103097eb9c5ccd7a5156511f5501d4851bbf6",
+          "generationRecord": "work/cast_W_00_v1.png.generation.json",
+          "generationRecordSha256": "5dc8a7cc801f55bdd021c45ff29f32222841dfe7fe1cfe41b12d6befb8e53edb",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/01.png",
+      "sha256": "46c6bf37c9d369076e2ad418b335941b959ee36e798e22106abdb5ce35977732",
+      "action": "cast",
+      "direction": "W",
+      "frame": 1,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_01_v1.png",
+          "sha256": "48f7e02bbb2da351f14389d46eacb3a3b324ebb7183ab7409bffe08c59533a94",
+          "generationRecord": "work/cast_W_01_v1.png.generation.json",
+          "generationRecordSha256": "b2f3bc66fd822749e71a7d7adf5aa150359d8597bd35445163da1f24c37244d4",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/02.png",
+      "sha256": "6af4bf57847834c51b3fa7370c9ac4503d0e86ca897f67ae042f04a865906375",
+      "action": "cast",
+      "direction": "W",
+      "frame": 2,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_02_v1.png",
+          "sha256": "d271b477dffeb72896271c50e3c01d0c4c2c8655db95ab8d5651851e9536f94f",
+          "generationRecord": "work/cast_W_02_v1.png.generation.json",
+          "generationRecordSha256": "5f9111f79833daa928844493cba5527c40ade8dad025deb4965ef7af16a9eba6",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/03.png",
+      "sha256": "5623587375c7efcaea95cc5ee7fb830a716be6a6754620e554626c0d696e77c1",
+      "action": "cast",
+      "direction": "W",
+      "frame": 3,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_03_v1.png",
+          "sha256": "ff66ba10c146818b10a61a85c98724a94885ed4e996f7b559d20758670026630",
+          "generationRecord": "work/cast_W_03_v1.png.generation.json",
+          "generationRecordSha256": "135066a982423e90453cc903cc1d5da03b1adbc948123866889548d99bf869e2",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "host-generated-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/04.png",
+      "sha256": "f893d73520cc1ada337fb20590ebf7a8c7f93dd1d732e185a20c29c8de1067bb",
+      "action": "cast",
+      "direction": "W",
+      "frame": 4,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_04_v2.png",
+          "sha256": "7233c754fda03c95cdaded88c5d97c1bfc8c6d837e23df0aee0c6d72362211b2",
+          "generationRecord": "work/cast_W_04_v2.png.generation.json",
+          "generationRecordSha256": "c03f6eba5d9675449a39997d9224ce31c8439c2b67d5595ff1779fc78ed53458",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/05.png",
+      "sha256": "6c10461fcf5dd76873e70963e8b8d554f8ae339811ef2baf747c1c445f88817f",
+      "action": "cast",
+      "direction": "W",
+      "frame": 5,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_05_v2.png",
+          "sha256": "61bee6df6e159d3db302bcc702cc95b168c8db7f19d134ad365632e0be50def3",
+          "generationRecord": "work/cast_W_05_v2.png.generation.json",
+          "generationRecordSha256": "d703b3cf4c34b821ec483ce7c622882d4be93475d2924e5377b043e70a98f524",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/06.png",
+      "sha256": "191dcd7ac70c02e79430cab5c192041eb7d35e77313b3760dc3ee2453e9abff1",
+      "action": "cast",
+      "direction": "W",
+      "frame": 6,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_06_v2.png",
+          "sha256": "b7d68392a210d54d8333749cc1abfc499d228a7a61afb60d78477c98f101be49",
+          "generationRecord": "work/cast_W_06_v2.png.generation.json",
+          "generationRecordSha256": "c8139e5a18bac39252c7396e4f57710e05d5c493187505798c205d30ac818d1e",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/07.png",
+      "sha256": "dfb901f3648bf9aa0c74a4af9e747c042ec1dbe3358ad32430d6fffb538b9f54",
+      "action": "cast",
+      "direction": "W",
+      "frame": 7,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_07_v3.png",
+          "sha256": "8126155027d983494d88d4a0d1929e796a4d61ee624e269c953dd92018fa8e61",
+          "generationRecord": "work/cast_W_07_v3.png.generation.json",
+          "generationRecordSha256": "70462a71d65c658a78924207acd0bb3aaef580fec9fbd4080f9b000017ce7474",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/08.png",
+      "sha256": "2f84735bb53b61142ad0bca8f98bac602da4c86b57ea67878ac1b5699fd9f95a",
+      "action": "cast",
+      "direction": "W",
+      "frame": 8,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_08_v2.png",
+          "sha256": "04404970abb631de4f690d603b78ba2d47bcd341a5695431b0fc1cbea0f889e2",
+          "generationRecord": "work/cast_W_08_v2.png.generation.json",
+          "generationRecordSha256": "732e3cdf970afac040058a53f5693ad4865b645379b7ec8553f08b45b950723c",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/09.png",
+      "sha256": "2e2c99abc6076ecf4e26b9891d1b404093241b5c35e81ff9edefd1d160ccb151",
+      "action": "cast",
+      "direction": "W",
+      "frame": 9,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_09_v2.png",
+          "sha256": "6b2f92dcb4434ba472ddeef5442b49a127d67b4ceecb263546d35451b9e29b1d",
+          "generationRecord": "work/cast_W_09_v2.png.generation.json",
+          "generationRecordSha256": "a9dec15f17b07b5f9f46758e607f00353871a6ac9a7f545efe5eb2718ad1ca88",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/10.png",
+      "sha256": "014d41110a19c206a776465526da6ea20d50f6fdb116ffb2a088ea37b7970fd7",
+      "action": "cast",
+      "direction": "W",
+      "frame": 10,
+      "visualInspection": "full contact-sheet cell inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_10_v4.png",
+          "sha256": "7c2abf428ce642d9b3e25bb38790a6bc572c622da039dc505bbc883843587846",
+          "generationRecord": "work/cast_W_10_v4.png.generation.json",
+          "generationRecordSha256": "f737993433dc1db294965394dff7299f7814f233842bee35bbbc0728610c696d",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/11.png",
+      "sha256": "725136b1ad1d4bbae037c2889fab9065d5a49c67236a6407048ec69c3cc47dc7",
+      "action": "cast",
+      "direction": "W",
+      "frame": 11,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_11_rootaxis_v1.png",
+          "sha256": "6570a1d9ceedd2895e52d176d87d7294f06d7bf005deaa22ee1d6dd585ec8fae",
+          "generationRecord": "work/cast_W_11_rootaxis_v1.png.generation.json",
+          "generationRecordSha256": "2781860ec4174dc60657636f1b8d969acc9d3f9290f77191f307ce91ae18f44d",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/12.png",
+      "sha256": "1942e3eac4367b08df74b16e40c69a509e6f27cae7cedcbc3d1f5adc182e9554",
+      "action": "cast",
+      "direction": "W",
+      "frame": 12,
+      "visualInspection": "contact sheet plus full-frame inspection",
+      "staticObservation": "近侧左手持符牌、远侧右手持杖；脚尖朝西。09 释放及 11/12 完整单帧已额外查看，11/12 鞋尖向左、鞋跟在右。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_12_rootaxis_v1.png",
+          "sha256": "f9fd4aa37278dfb9349e436bc3ac1d99e78383b40127e9072b246dfa806cd529",
+          "generationRecord": "work/cast_W_12_rootaxis_v1.png.generation.json",
+          "generationRecordSha256": "d7cb784231324ff566e8e325f64d57688a3cd08b5241d4b4e0104b3752a64ae4",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/13.png",
+      "sha256": "f49717f8ced4aef3912d29575bd4582afaa539893e79d79bc7a7ca2335885abb",
+      "action": "cast",
+      "direction": "W",
+      "frame": 13,
+      "visualInspection": "contact sheet before correction; full native and 1024 runtime inspection after local correction",
+      "staticObservation": "本轮视频反馈定位并AI局部修正：近侧解剖左靴鞋尖向W/左延展，右侧鞋跟块与鞋侧壁恢复，12→13的近正面鞋轴突变已处理。膝弯、白绑腿/踝位置、远靴、收勢、身份和右杖左牌保持。已实际查看1254原生与1024正式图；动态另验。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_13_videoaxis_v1.png",
+          "sha256": "a1bb945a83fd78730adcab508358fe90b217be1bb44f09a69d65e624b28fc0f8",
+          "generationRecord": "work/cast_W_13_videoaxis_v1.png.generation.json",
+          "generationRecordSha256": "98e0754529cef5e2c174f1f5f4c7045ae287a06aed9d636228f102ecdb19b05a",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ]
+    },
+    {
+      "file": "runtime/cast/W/14.png",
+      "sha256": "93b2d162f4e4f13bba4258f414963929b93328fb2ea6049bb3debecfe6217bf8",
+      "action": "cast",
+      "direction": "W",
+      "frame": 14,
+      "visualInspection": "2026-10-05 full native image and full runtime 1024 image; adjacent W12/W13/W14/W15 static comparison",
+      "staticObservation": "已实看1254原生与1024导出：近侧靴鞋头左伸，长侧面和右侧鞋跟清楚，与新W13同一W鞋轴；全身取景、膝踝、另一靴及两手持物连接保持。 本次上肢全量复核未见新换手/倒折腕/握点脱离，仍各45ms。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true,
+        "native1254FullCanvasExportMatches": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_14_axisfollow_20261005_v1.png",
+          "sha256": "c8f98519a8c3931a7a0aa23b9b802bc73958ff2babd951da7ff015533606a4e3",
+          "generationRecord": "work/cast_W_14_axisfollow_20261005_v1.png.generation.json",
+          "generationRecordSha256": "807458a3b6572c335618ef7616002f6b67cd68be7d16e1d92e7edde6a5d3bd20",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ],
+      "laterFootAxisCorrection": {
+        "report": "review/upper_limb_combat_20261005.json",
+        "beforeSha256": "61e5967dd493d375e4559d0c1b6d28390577ad788e807f0f4d3fdd733ce66163",
+        "status": "resolved"
+      }
+    },
+    {
+      "file": "runtime/cast/W/15.png",
+      "sha256": "9bbeccba500f9f2e2fb96f6fc2f8b053bc2303031ce2509f407b3a6b22d11a7a",
+      "action": "cast",
+      "direction": "W",
+      "frame": 15,
+      "visualInspection": "2026-10-05 full native image and full runtime 1024 image; adjacent W12/W13/W14/W15 static comparison",
+      "staticObservation": "已实看1254原生与1024导出：近侧靴鞋头左伸，长侧面和右侧鞋跟清楚，与新W13同一W鞋轴；全身取景、膝踝、另一靴及两手持物连接保持。 本次上肢全量复核未见新换手/倒折腕/握点脱离，仍各45ms。",
+      "technicalChecks": {
+        "runtimeShaMatchesSidecar": true,
+        "rgba1024": true,
+        "transparentPixels": true,
+        "native1254FullCanvasExportMatches": true
+      },
+      "sources": [
+        {
+          "file": "work/cast_W_15_axisfollow_20261005_v1.png",
+          "sha256": "8d2d10d079e4b0a3491a24e903a576f127b9ab2b1b83cb46c49214af6c4ffc98",
+          "generationRecord": "work/cast_W_15_axisfollow_20261005_v1.png.generation.json",
+          "generationRecordSha256": "7189a27e57981fc789d46f52645a82e6fb253cae98c0d1380c730a4e9af8b8ce",
+          "recordShaMatches": true,
+          "nativeImageAvailable": true,
+          "nativeImageLocation": "character-work-native",
+          "nativeShaMatches": true,
+          "actualModel": null,
+          "actualQuality": null,
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "nativeFullCanvasExportMatches": true
+        }
+      ],
+      "laterFootAxisCorrection": {
+        "report": "review/upper_limb_combat_20261005.json",
+        "beforeSha256": "c353262c0f3186b1d96039f886424db2a36d74eb211f63adc218f73be3ccc775",
+        "status": "resolved"
+      }
+    }
+  ],
+  "updatedAt": "2026-10-05T07:13:19.592423+00:00",
+  "laterVideoAxisReview": {
+    "report": "review/video_axis_EW_combat_20261004.json",
+    "sha256": "6e54e9bed4ce7fd72d824482a8840d31e410218c85a8ae7911085c1c721d42a4",
+    "changedFrame": "runtime/cast/W/13.png",
+    "other67RowsPreserved": true
+  },
+  "laterUpperLimbReview": {
+    "file": "review/upper_limb_combat_20261005.json",
+    "frameCount": 68,
+    "upperLimbProblems": [],
+    "correctedFootFrames": [
+      "runtime/cast/W/14.png",
+      "runtime/cast/W/15.png"
+    ],
+    "staticOnly": true
+  }
+}

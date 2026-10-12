@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-05",
+  "scope": "08_alchemy_prodigy_boy existing 196 frames; offline assets and preview",
+  "staticSequenceReviewed": true,
+  "reviewedFrames": 196,
+  "reviewedDirections": ["N","NE","E","SE","S","SW","W","NW"],
+  "combatDirections": ["E","W"],
+  "replacedFrames": 8,
+  "replacedSlots": ["run/E/03","run/E/11","run/NE/03","run/NE/11","run/NE/13","run/NE/14","run/NE/15","attack/E/08"],
+  "groupReviews": ["north-review.json","south-review.json","combat-review.json","feet-review.json","foot14-review.json","foot15-review.json"],
+  "rootVisualReview": {
+    "sourceCandidatesInspected": ["E03-v1","E11-v1","NE03-v1","NE11-v1","NE13-v2","NE14-v4","NE15-v2","attack-E08-v2"],
+    "comparisonSheet": "root-NE-tail-review.jpg",
+    "sequence": ["NE12 retained","NE13 v2","NE14 v4","NE15 v2","NE16 retained","NE01 retained"],
+    "finding": "NE13/14/15 shoe forefoot enters the same depth plane as the shin instead of protruding sideways. Heel lift and forefoot contact remain readable; NE15 transitions to the opposite support foot at16, then continues on that foot at01. Hand candidates add a low side position between forward and backward bottle swing.",
+    "retainedResidual": "Small drawing/contour differences remain. NE14 contact outline is11px higher than before at1024, about2.75px at256; this is local boot perspective, with no body/knee/ankle translation. NE15 retains a narrow far-side shoe-cap rim, consistent with perspective."
+  },
+  "frameOrderChanged": false,
+  "contactPairs": [[16,1],[2,3],[4,5],[6,7],[8,9],[10,11],[12,13],[14,15]],
+  "timing": {"latestDirectUserCorrectionApplied": true,"runFrameMs":60,"runCycleMs":960,"positionPairMs":120,"combatChanged":false,"record":"timing-correction.json"},
+  "browserPreviewChecked": true,
+  "browser": {
+    "url":"http://127.0.0.1:8818/preview/index.html?review=limbs-20261005",
+    "all14GroupsDecoded":true,"decodedFrames":196,"imageSize":[1024,1024],
+    "finalNormalPlaybackSamples":["run/E","run/NE"],
+    "finalFrameSamples":["run/NE/14","run/NE/15","run/NE/16","attack/E/08"],
+    "displaySizes":[128,256],
+    "normalReadout":"60.0ms per run frame;960ms per cycle",
+    "slowAndStepControlsChecked":true,
+    "decodeNote":"Immediate fast group-switch reads sometimes precede decode. After waiting for networkidle and revisiting incomplete groups, every final group had all images decoded.",
+    "beforeTimingCorrectionEvidence":"browser-premerge-review.json: unchanged groups and NW16/01 seam were visually sampled before the user's latest60ms correction. Its75ms timing is historical, not the final setting."
+  },
+  "unresolvedMaterialItems": [],
+  "clientValidated": false,
+  "notes": [
+    "This round replaces8 images: four E/NE bottle-arm passing poses, three NE support-shoe axes, and attack/E08 bottle-arm recovery. All other188 image bytes remain unchanged.",
+    "Latest direct human timing correction overrides earlier75ms requirements: all eight run directions now use60ms per frame and960ms per cycle. Hit40ms,attack30ms,cast45ms remain unchanged.",
+    "Keep original phase start and16/01 support pair. NW07/08 is the intended half-cycle support-foot exchange. No frame duplication or reordering was performed.",
+    "Every accepted candidate is a full1254canvas uniformly resampled to1024 with zero offset. No pose warping, per-frame bounding-box fit or foot-pixel alignment.",
+    "196-frame static/adjacent-sequence review and live browser samples are complete. Browser file decoding and clock tests do not prove game-world grounding or artistic perfection.",
+    "Client world displacement, ground-relative foot sliding, cross-direction/idle transitions and combat event synchronization have not been tested. Battle asset scope is east/west only."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "candidate": "hardseam-candidate-4096.png",
+  "candidateSha256": "4b5b3592bd4b8d1273570d7d730c7090c9c9f08adb0f51d6581321a7b785784c",
+  "reviewedAtUtc": "2026-10-09T19:30:37.755Z",
+  "status": "Do not promote unchanged; useful seam-selection candidate with visible residual tone boundaries and a worse step-edge artifact.",
+  "reviewed": [
+    "1254 QA preview",
+    "all nine 600x600 native cross crops as straight-left/candidate-right comparisons",
+    "three crops at largest selected-path RGB differences"
+  ],
+  "findings": [
+    {
+      "severity": "must-fix-before-promotion",
+      "tileLocalApproxBox": [
+        3010,
+        3750,
+        3140,
+        3890
+      ],
+      "evidence": "hardseam-worst-row-4-columns-3-4-straight-left-candidate-right-100pct.png",
+      "finding": "Native candidate introduces a more prominent pointed notch along the stone step's bright front edge where the seam changes source. Straight baseline has an abrupt join here too, but the DP selection makes the local silhouette less natural. Source geometry disagreement is not repaired by the algorithm."
+    },
+    {
+      "severity": "visible-residual",
+      "tileLocalApproxBox": [
+        1432,
+        2980,
+        1810,
+        3230
+      ],
+      "evidence": "hardseam-worst-rows-3-4-straight-left-candidate-right-100pct.png",
+      "finding": "The straight row-3/4 brightness boundary on the large wooden corner post becomes a diagonal/jagged tone boundary; it remains visible and is not a lighting repair."
+    },
+    {
+      "severity": "visible-residual",
+      "tileLocalApproxBox": [
+        2170,
+        2920,
+        2290,
+        3120
+      ],
+      "evidence": "hardseam-cross-2048-3072-straight-left-candidate-right-100pct.png",
+      "finding": "Ivory wall strip near the lamp retains an irregular light/dark boundary. Main trim and floral ornament geometry remain continuous."
+    },
+    {
+      "severity": "visible-residual",
+      "tileLocalApproxBox": [
+        3000,
+        1970,
+        3190,
+        2200
+      ],
+      "evidence": "hardseam-cross-3072-2048-straight-left-candidate-right-100pct.png",
+      "finding": "Door lintel's original straight tone boundary becomes an angular boundary. Less grid-shaped overall, but still visible at 100%."
+    },
+    {
+      "severity": "improvement",
+      "evidence": "hardseam-cross-2048-2048-straight-left-candidate-right-100pct.png",
+      "finding": "The central crossing's square tone discontinuities across wood and plaster are substantially reduced while selected structural edges remain continuous."
+    },
+    {
+      "severity": "improvement",
+      "evidence": "hardseam-cross-1024-3072-straight-left-candidate-right-100pct.png",
+      "finding": "Window frame and wall's original horizontal tone step is substantially reduced at this crossing."
+    },
+    {
+      "severity": "improvement",
+      "evidence": "hardseam-cross-3072-1024-straight-left-candidate-right-100pct.png",
+      "finding": "Roof tile bright highlights are more continuous at the crossing without visible duplication."
+    }
+  ],
+  "technicalValidation": "Both in-memory assembly and independently reopened candidate+source-ID mask verified all 16,777,216 pixels exactly equal the selected source pixel at the same global coordinates. No interpolation, feathering, color adjustment, or displacement. Straight baseline equals existing native candidate v02 pixel-for-pixel.",
+  "recommendation": "Retain as QA candidate. Use provenance/path evidence to guide native AI repairs of residual source disagreement; do not call this geometry repair or final acceptance."
+}

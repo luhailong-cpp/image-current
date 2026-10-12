@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T11:54:34.188359+00:00",
+  "tile": "r06_c13",
+  "status": "QA complete with one P2 and one P3",
+  "scope": [
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p21",
+    "p22",
+    "p23",
+    "p24",
+    "p31"
+  ],
+  "selectedNative": {
+    "p21": "p21-v2.png"
+  },
+  "sourceInspection": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\source-inspection.json",
+  "method": "assemble.py load_plan and inspect_source; exact integer core crops and pastes; original-pixel visual inspection; no resize, interpolation, enhancement or blur",
+  "coordinateConvention": "[x0,y0,x1,y1), exclusive right/bottom; world means art-canvas pixel coordinates only",
+  "sourceEvidence": {
+    "selectedCount": 9,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "hashesVerified": true,
+    "sourceHashesUnchangedAtEnd": true,
+    "actualModelAndQuality": "kept as recorded; no inference"
+  },
+  "counts": {
+    "reviewedSeamPairs": 11,
+    "reviewedFourWayIntersections": 3,
+    "P1": 0,
+    "P2": 1,
+    "P3": 1
+  },
+  "findings": [
+    {
+      "id": "UPPER-01",
+      "priority": "P2",
+      "status": "repair-required",
+      "sourceIds": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "title": "p23 左上花叶形成矩形硬断口",
+      "description": "四角原生 core 直接拼接时，p23 左上花簇形成矩形块：左侧在 world x=51200 与 p22 绿叶截断，底侧在 world y=21619 从粉花硬切到绿叶。不是正常的枝叶遮挡轮廓。",
+      "primarySource": "p23",
+      "primaryNativeBox": [
+        115,
+        115,
+        230,
+        230
+      ],
+      "primaryWorldBox": [
+        51200,
+        21504,
+        51315,
+        21619
+      ],
+      "inspectionNativeBox": [
+        60,
+        130,
+        365,
+        365
+      ],
+      "inspectionWorldBox": [
+        51145,
+        21519,
+        51450,
+        21754
+      ],
+      "recommendedContextWorldBox": [
+        51020,
+        21370,
+        51400,
+        21730
+      ],
+      "recommendation": "在上述四图角点用同一花叶结构做局部原生修复，保护红柱和屋瓦；同时处理左侧与底侧的断物体，不能只模糊横线。修复后重新核对两个接缝与四角。",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p23-mixed-flower-leaf-100pct.png",
+          "sha256": "2be0e0788a05d34d56f49acd7fead98475605de2e907aaa7b9dd0e3aff68fab5",
+          "pixels": [
+            305,
+            235
+          ],
+          "resized": false,
+          "blurred": false
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\intersection-r1-c2-100pct.png",
+          "sha256": "b06c18c26b424921bc8a2d348fc261b45f5041ec1e7ff26fa7cb929bfb326787",
+          "pixels": [
+            600,
+            600
+          ],
+          "resized": false,
+          "blurred": false
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p22-p23-join-100pct.png",
+          "sha256": "1e2e318ff7f4bfd8145b0d1d4b2a53fae2512863bc3e2d75929623bbc83d6d4d",
+          "pixels": [
+            384,
+            1024
+          ],
+          "resized": false,
+          "blurred": false
+        }
+      ]
+    },
+    {
+      "id": "UPPER-02",
+      "priority": "P3",
+      "status": "minor-local-softness",
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "title": "p12 左上继承花簇局部偏软",
+      "description": "小花的花心、花瓣轮廓明显比同一裁片下方大花柔软，但花枝方向连续，没有发现重复、错位或断裂。此项为局部清晰度建议，不认定整张原生图被放大。",
+      "primarySource": "p12",
+      "primaryNativeBox": [
+        115,
+        115,
+        280,
+        245
+      ],
+      "primaryWorldBox": [
+        50176,
+        20480,
+        50341,
+        20610
+      ],
+      "inspectionNativeBox": [
+        80,
+        80,
+        360,
+        370
+      ],
+      "inspectionWorldBox": [
+        50141,
+        20445,
+        50421,
+        20735
+      ],
+      "recommendation": "若继续统一花簇清晰度，只处理这些小花的花心和轮廓，同时保持左邻已有花枝位置。",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p12-upper-flower-softness-100pct.png",
+          "sha256": "10be6f9c6f84895376b649daa987fafdb3631795a7d25f3e2c2835c21c55ad7e",
+          "pixels": [
+            280,
+            290
+          ],
+          "resized": false,
+          "blurred": false
+        }
+      ]
+    }
+  ],
+  "seams": [
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "worldSeam": 50176,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p11-p12-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 8.442479717079259,
+        "p95AbsoluteChannelDifference": 30,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p12",
+        "p13"
+      ],
+      "worldSeam": 51200,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p12-p13-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 8.945104361694751,
+        "p95AbsoluteChannelDifference": 29,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "worldSeam": 52224,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p13-p14-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 15.603561935140883,
+        "p95AbsoluteChannelDifference": 40,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p21",
+        "p22"
+      ],
+      "worldSeam": 50176,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p21-p22-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 12.129550655294361,
+        "p95AbsoluteChannelDifference": 42,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p22",
+        "p23"
+      ],
+      "worldSeam": 51200,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p22-p23-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 15.391522779280216,
+        "p95AbsoluteChannelDifference": 57,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "P2 issue in reviewed crop; see UPPER-01",
+      "note": null
+    },
+    {
+      "axis": "vertical",
+      "sourceIds": [
+        "p23",
+        "p24"
+      ],
+      "worldSeam": 52224,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p23-p24-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 5.063030765319095,
+        "p95AbsoluteChannelDifference": 16,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p11",
+        "p21"
+      ],
+      "worldSeam": 21504,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\horizontal-p11-p21-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 9.015736310473153,
+        "p95AbsoluteChannelDifference": 27,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p12",
+        "p22"
+      ],
+      "worldSeam": 21504,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\horizontal-p12-p22-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 13.145958440237616,
+        "p95AbsoluteChannelDifference": 65,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p13",
+        "p23"
+      ],
+      "worldSeam": 21504,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\horizontal-p13-p23-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 5.354432193791461,
+        "p95AbsoluteChannelDifference": 14,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "P2 issue in reviewed crop; see UPPER-01",
+      "note": "p13→p23 actual core cut is continuous; UPPER-01 sits 115 pixels below this cut and reaches left corner"
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p14",
+        "p24"
+      ],
+      "worldSeam": 21504,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\horizontal-p14-p24-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 3.646109839816934,
+        "p95AbsoluteChannelDifference": 11,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    },
+    {
+      "axis": "horizontal",
+      "sourceIds": [
+        "p21",
+        "p31"
+      ],
+      "worldSeam": 22528,
+      "crop": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\horizontal-p21-p31-join-100pct.png",
+      "overlapMetrics": {
+        "meanAbsoluteRGBDifference": 7.3681147863070064,
+        "p95AbsoluteChannelDifference": 24,
+        "interpretation": "diagnostic only; no geometry or visual acceptance inferred"
+      },
+      "visualStatus": "no obvious geometric discontinuity in original-pixel seam crop",
+      "note": null
+    }
+  ],
+  "lowerEdgeReview": [
+    {
+      "upperSource": "p21",
+      "selectedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\native\\p21-v2.png",
+      "nativeInspectionBox": [
+        115,
+        955,
+        1139,
+        1254
+      ],
+      "worldInspectionBox": [
+        49152,
+        22344,
+        50176,
+        22643
+      ],
+      "seamWorldY": 22528,
+      "status": "checked against p31; gold ridge and blue tiles continuous",
+      "objects": "gold ridge, blue roof tiles, flowers",
+      "followup": null,
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p21-lower-core-and-halo-100pct.png",
+        "sha256": "268311fce93ae71e5e631b3d69d61b96517e37e771164fc5daf564fec60fd08a",
+        "pixels": [
+          1024,
+          299
+        ],
+        "resized": false,
+        "blurred": false
+      }
+    },
+    {
+      "upperSource": "p22",
+      "selectedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\native\\p22.png",
+      "nativeInspectionBox": [
+        115,
+        955,
+        1139,
+        1254
+      ],
+      "worldInspectionBox": [
+        50176,
+        22344,
+        51200,
+        22643
+      ],
+      "seamWorldY": 22528,
+      "status": "upper native lower edge inspected only; lower counterpart deliberately outside this task",
+      "objects": "blue tiles, beige wall and red column",
+      "followup": "Read the selected lower source and compare exact 230-pixel overlap and core cut when its producer completes it.",
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p22-lower-core-and-halo-100pct.png",
+        "sha256": "8e6b6bbafeff8cb82811012e5df1b102a0069534e5ac73b719f8293b576134ef",
+        "pixels": [
+          1024,
+          299
+        ],
+        "resized": false,
+        "blurred": false
+      }
+    },
+    {
+      "upperSource": "p23",
+      "selectedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\native\\p23.png",
+      "nativeInspectionBox": [
+        115,
+        955,
+        1139,
+        1254
+      ],
+      "worldInspectionBox": [
+        51200,
+        22344,
+        52224,
+        22643
+      ],
+      "seamWorldY": 22528,
+      "status": "upper native lower edge inspected only; lower counterpart deliberately outside this task",
+      "objects": "red window frames/lattice, beige wall, dark foliage",
+      "followup": "Read the selected lower source and compare exact 230-pixel overlap and core cut when its producer completes it.",
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p23-lower-core-and-halo-100pct.png",
+        "sha256": "d7a95d32af26a0b4a0b0f0acc4cbb941f4079a22d01d5565afed118e6a82a39e",
+        "pixels": [
+          1024,
+          299
+        ],
+        "resized": false,
+        "blurred": false
+      }
+    },
+    {
+      "upperSource": "p24",
+      "selectedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\native\\p24.png",
+      "nativeInspectionBox": [
+        115,
+        955,
+        1139,
+        1254
+      ],
+      "worldInspectionBox": [
+        52224,
+        22344,
+        53248,
+        22643
+      ],
+      "seamWorldY": 22528,
+      "status": "upper native lower edge inspected only; lower counterpart deliberately outside this task",
+      "objects": "red window frame/lattice, beige wall and right red column",
+      "followup": "Read the selected lower source and compare exact 230-pixel overlap and core cut when its producer completes it.",
+      "evidence": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p24-lower-core-and-halo-100pct.png",
+        "sha256": "1062f10528f55e0eb07e31fdd90d52d1c3b718d1ad29ace1a08b99337074e0ed",
+        "pixels": [
+          1024,
+          299
+        ],
+        "resized": false,
+        "blurred": false
+      }
+    }
+  ],
+  "limits": [
+    "No p32 or later source read, even if concurrently created.",
+    "No external tile seams reviewed in this task.",
+    "This does not mark the tile formally accepted."
+  ],
+  "writes": {
+    "directory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa",
+    "nativeModified": false,
+    "promptsModified": false,
+    "selectionModified": false,
+    "candidateModified": false,
+    "progressModified": false,
+    "imageGenerationCalls": 0
+  }
+}

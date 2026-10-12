@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,hashlib,datetime
+import numpy as np
+from PIL import Image
+T=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r15_c14');Z=T.parent;D=T/'repairs/west-upper-v1-20261012';D.mkdir()
+def read(p):return json.loads(Path(p).read_text())
+def rec(p):return {'path':str(p),'sha256':hashlib.sha256(Path(p).read_bytes()).hexdigest()}
+base=T/'candidate/r15_c14-4k-north-cap-thin-v4-20261012.png';west=read(Z/'r15_c13/candidate/latest-assembly.json');wp=Path(west['candidate']['path']);assert rec(wp)['sha256']==west['candidate']['sha256'];target=Image.new('RGB',(1254,1254));target.paste(Image.open(wp).crop((3469,0,4096,1254)),(0,0));target.paste(Image.open(base).crop((0,0,627,1254)),(627,0));tp=D/'target-native-1254.png';target.save(tp)
+mask=np.zeros((1254,1254),dtype='uint8');mask[0:1230,627:747]=255;mp=D/'edit-mask-1254.png';Image.fromarray(mask).save(mp)
+refs=read(T/'records/p01_01_v20261012T135016_73f165cf.request.json')['referenced_image_paths'][:3]
+prompt='Use case: precise-object-edit. LAST image is actual native1254 square close crop of two adjacent stone ground cores. LEFT 627 columns are immutable approved older neighbor including wooden gold scroll. RIGHT 627 columns are new tile. The sharp seam at x627 cuts through stone and blue-inlay side edges. Repair ONLY the narrow white mask right of x627: close the exposed LEFT side of existing blue paving with a thin natural stone bevel and coherent grout edge, and join any incoming pale-stone grout from the left to this border at its exact visible endpoints. Preserve the left image exactly. Preserve all right-side slab sizes, blue stripe width and directions, all wood/gold and paper. At the lower portion where blue stones already continue across the seam, keep that continuation, do not add a dividing line. Do not create one vertical wall, rail or architectural object; these are flush ground paving joints only. Do not reroute the whole grid or move any farther-right border. Keep surrounding material, texture and lighting; no color correction, zoom, warp, resize or new props. First3 refs define material only; second-last is editable-mask. Return1254x1254 actual native PNG.'
+req={'prompt':prompt,'referenced_image_paths':refs+[str(mp),str(tp)],'transparent_background':False};(D/'request.json').write_text(json.dumps(req,indent=2));(D/'prompt.txt').write_text(prompt)
+(D/'preparation.json').write_text(json.dumps({'createdAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base':rec(base),'baseContext':rec(T/'candidate/r15_c14-context-4326-north-cap-thin-v4-20261012.png'),'westSelection':west,'sourcePieces':[{'source':rec(wp),'crop':[3469,0,4096,1254],'paste':[0,0]},{'source':rec(base),'crop':[0,0,627,1254],'paste':[627,0]}],'origin':[-627,0],'plannedApplyBox':[0,0,120,1230],'references':[rec(p) for p in req['referenced_image_paths']],'request':rec(D/'request.json'),'nativeSize':[1254,1254],'noResize':True,'noHalo':True,'neighborPixelsImmutable':True},indent=2))
+print(str(D))
+

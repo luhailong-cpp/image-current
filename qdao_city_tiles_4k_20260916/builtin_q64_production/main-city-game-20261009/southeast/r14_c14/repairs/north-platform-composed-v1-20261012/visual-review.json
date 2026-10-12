@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12T13:56:21.956Z",
+  "status": "local_fail",
+  "candidateSha256": "1c82695da894fa8f89d778373ff76ec62b17529315bd75721c17af7b72a8fd97",
+  "reviewer": "assembly_support",
+  "scope": "Actual fixed-north-core plus lower-side native1254 crop at stored alpha",
+  "viewed": [
+    "review-composed-1254.png",
+    "review-strip1-100pct.png",
+    "review-strip2-100pct.png",
+    "review-before-fixed-seam-100pct.png",
+    "review-fixed-seam-100pct.png",
+    "review-bottom-alpha-100pct.png"
+  ],
+  "findings": [
+    {
+      "severity": "fail",
+      "targetBox": [
+        0,
+        632,
+        1254,
+        650
+      ],
+      "coreBoundaryBox": [
+        2842,
+        0,
+        4096,
+        10
+      ],
+      "detail": "The removed intermediate ledge improves the large geometric shape, but wood grain/brightness/shadow still stop at the fixed north core border at target y640. The line is clearly visible across the face and especially in the shadow at target x690..1050."
+    },
+    {
+      "severity": "fail",
+      "targetBox": [
+        0,
+        1005,
+        1254,
+        1021
+      ],
+      "coreBox": [
+        2842,
+        365,
+        4096,
+        381
+      ],
+      "detail": "The saved alpha transitions to the existing bottom content with a visible horizontal dark/ghost stripe, clearest in the left and right vertical wooden supports and backboard."
+    }
+  ],
+  "nativeSourcePreserved": true,
+  "trialPreserved": true,
+  "published": false,
+  "publishedCandidateRemains": "66848fcdb5ff648de5f448588dbb4cd1c70693dee07ea43f3b15da0ed353d377",
+  "mechanicalReplay": "pass",
+  "reservedCornerUnchanged": true,
+  "neighborCoreUnchanged": true,
+  "rgbCorrectionPerformed": false,
+  "formalAccepted": false,
+  "requiredFollowup": "A further builtin native repair must match both immutable upper boundary and original lower/support boundary. Do not use RGB correction, modify upper neighbor, or publish this trial as passed."
+}

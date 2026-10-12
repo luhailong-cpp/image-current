@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "preparedAtUtc": "2026-10-12T12:14:26.018205+00:00",
+  "status": "prepared_only_not_submitted",
+  "generationSubmitted": false,
+  "builtinOnly": true,
+  "paidApiAllowed": false,
+  "authority": {
+    "file": "D:\\work\\image\\docs\\MAP_PRODUCTION_RESUME_20261012.json",
+    "sha256": "6b169e04fd4228ac9482819f4e23a224c36f24d6161c2c159c50ac7ed9035203"
+  },
+  "toolInput": {
+    "prompt": "Use case: precise-object-edit\nAsset type: native fishing-village isometric map seam repair; opaque 1254x1254 frame.\nPrimary request: Edit only the two small adjoining masonry and foreground rock discontinuities in Image 1. This is a native same-scale edit, not a new scene. Image 1 is the exact assembled current native pixels and the sole geometry authority. Image 2 is the full provisional p14 tile for context only; do not borrow its incorrect right or lower halo geometry.\nImage 1 frame: world [32150,45250,33404,46504], one source pixel per output pixel. The vertical join at local x618 is world x32768. The horizontal join at local y830 is world y46080.\nG4 masonry: Work only LEFT of x618, within local x350..617,y280..829. Repair the gray/cyan coping-block front face bottom edges and the next lower wall course so their courses, gaps, top faces, perspective and silhouettes meet the existing fixed right side at x618. Retain the same block scale and wall slope. Make the stone crevice plants and small foreground boulders cross the join naturally without truncated shapes. Use the RIGHT of x618 as fixed edge conditions; do not move or replace the right blocks.\nG5 rock: Work only ABOVE y830, within local x430..617,y670..829. Connect the foreground boulder outlines and plant gaps to the exact existing rocks below y830 without rectangular cuts. Retain rock mass, natural gray stone and the current painterly surface. Use the BELOW y830 as fixed edge conditions; do not move or replace those rocks.\nInvariants: All pixels outside these two stated edit rectangles must stay visually unchanged. In particular keep every pixel x618..1253 and y830..1253 unchanged, the top 280 pixels unchanged, the current paving, existing wood rails and post unchanged. The approved stepped timber connector and rail geometry at local x320..649,y0..240 are locked. Do not touch any wood, add a rail or post, change daylight, shift perspective, alter scale, crop or resize. Keep every distant rock and plant in place. No global recolor, blur, haze, seam feathering, texture replacement or stylization pass.\nStyle: Crisp rounded painterly Q-style Daoist game art under clear daylight; preserve the first image's stone material, edges and colors. Opaque complete frame. No text, guides, labels, borders, characters, UI or watermark.\nOutput: Exactly the same framing and native pixel scale as Image 1, 1254x1254. Repair both G4 and G5 together as one local continuous wall-and-rock edit.\n",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\seam-qa\\repair-resume-20261012\\r12c08-wall-rock-conditioned-v2-guide-native1254.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\seam-qa\\repair-resume-20261012\\r12c08-wall-rock-conditioned-v2-p14-provisional-native1254.png"
+    ],
+    "transparent_background": false
+  },
+  "referenceRoles": [
+    "edit target: exact current native core assembly with explicit p14 provisional override and approved rail rectangle",
+    "context only: unselected p14 provisional full native tile; right and lower halo are not boundary authorities"
+  ],
+  "globalBox": [
+    32150,
+    45250,
+    33404,
+    46504
+  ],
+  "expectedDimensions": [
+    1254,
+    1254
+  ],
+  "editRegions": [
+    {
+      "id": "G4",
+      "worldBox": [
+        32500,
+        45530,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        350,
+        280,
+        618,
+        830
+      ],
+      "editPurpose": "Repair left p14 masonry courses, crevice plants and rock edges to match fixed c09 right core at x32768."
+    },
+    {
+      "id": "G5",
+      "worldBox": [
+        32580,
+        45920,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        430,
+        670,
+        618,
+        830
+      ],
+      "editPurpose": "Repair upper p14 rock silhouettes to match fixed p24 below y46080; lower source is immutable."
+    }
+  ],
+  "protectedRailBoxGlobal": [
+    32470,
+    45066,
+    32800,
+    45491
+  ],
+  "outputPolicy": "Save generated raw output under this versioned stem with generation receipt. Reject changed scale or framing; never resize it. Root owner must review output and exact native adoption boundaries before selection.",
+  "subagentGenerationPermission": "No generation call by preparing agent until root later authorizes built-in generation.",
+  "formalAccepted": false,
+  "promotedToSelected": false
+}

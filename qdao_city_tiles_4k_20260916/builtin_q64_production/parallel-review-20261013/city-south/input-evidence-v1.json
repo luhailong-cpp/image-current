@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "task": "main-city-game-20261009 southwest+southeast referenced-source and missing-coordinate audit",
+  "status": "evidence_snapshot_for_independent_audit",
+  "writeScope": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/city-south/",
+  "initialInputs": {
+    "capturedAtUtc": "2026-10-13T04:38:58.048782+00:00",
+    "inputs": [
+      {
+        "path": "AGENTS.md",
+        "exists": true,
+        "bytes": 6840,
+        "sha256": "94b3d5f54a7f2bfb41a9a5f3e06f166d2e2f4bf24845813090974e59ac5dbbcf",
+        "modifiedUtc": "2026-10-13T03:55:14.058417+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/acceleration-20261010/assignments.json",
+        "exists": true,
+        "bytes": 3885,
+        "sha256": "122d9ec07325246df616691c6e4cdcee663e0893b60c9816157ed2950074031d",
+        "modifiedUtc": "2026-10-11T07:34:23.350326+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-contract.json",
+        "exists": true,
+        "bytes": 4290,
+        "sha256": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac",
+        "modifiedUtc": "2026-10-10T08:52:16.092045+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/root-status.json",
+        "exists": true,
+        "bytes": 2625,
+        "sha256": "97e37195a96ea8bbb58e847354e9dc85d120906e2f15b8f7c345ef3993b9ab84",
+        "modifiedUtc": "2026-10-09T14:57:29.312557+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/progress.json",
+        "exists": true,
+        "bytes": 20879,
+        "sha256": "af1dbe128d05b6ce77d802195f5090145115659970f9376cd558d61ad9cc0fad",
+        "modifiedUtc": "2026-10-13T04:36:49.006716+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/current-candidates.json",
+        "exists": true,
+        "bytes": 23391,
+        "sha256": "7c1b3ad694db26b49837113ac8601157fa779cea5620e321524414f63cc02f35",
+        "modifiedUtc": "2026-10-13T04:36:48.993044+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-delivery-inventory-20261013/inventory.json",
+        "exists": true,
+        "bytes": 287570,
+        "sha256": "8fcaaf7b697bf53a0a445d60757895dae4a97a4c688fe978bea29192831896a4",
+        "modifiedUtc": "2026-10-13T03:51:06.315180+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/local-qa-handoff-20261013.json",
+        "exists": true,
+        "bytes": 9042,
+        "sha256": "8bad24ad226d74cfddc84f5ba0031dd7a75823ceedb8f0a185f3eff3a3dd83c7",
+        "modifiedUtc": "2026-10-13T04:36:48.975708+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/delivery.json",
+        "exists": true,
+        "bytes": 1853,
+        "sha256": "413888535bdf53141dd2d6a6633328a0158ef6d820ac55d7dcfc9f5d9ddc12c7",
+        "modifiedUtc": "2026-10-09T16:49:02.052619+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/progress.json",
+        "exists": true,
+        "bytes": 27483,
+        "sha256": "7d6c20b405e0a594fed13e94eb6c0885d4dbf4b9110f141c6a4bebc5314780e8",
+        "modifiedUtc": "2026-10-13T02:45:16.245757+00:00"
+      },
+      {
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/delivery-20261012/index.json",
+        "exists": true,
+        "bytes": 62259,
+        "sha256": "d7009510fd6a0a41e45cc801ac029206d49da8dcab13bb4a07c1355ef8128b81",
+        "modifiedUtc": "2026-10-13T02:45:16.229489+00:00"
+      }
+    ]
+  },
+  "currentPolicy": {
+    "checkedAtUtc": "2026-10-13T04:43:35.137476+00:00",
+    "files": [
+      {
+        "path": "AGENTS.md",
+        "sha256": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+        "bytes": 6705
+      },
+      {
+        "path": "docs/IMAGE_MODEL_REQUIREMENT.md",
+        "sha256": "62b993caa0496f33e3cc752a19102f6f5afaccd9d1de9826add5b7aa2e8b7eb0",
+        "bytes": 794
+      }
+    ],
+    "rule": "Prefer free/existing GPT Image 2.5 when available; existing builtin GPT Image 2.0 allowed otherwise. Do not claim an actual model if not returned. No paid API authority.",
+    "taskRemainsReadOnlyOutsideReportDirectory": true,
+    "initialRootInstructionHashIsSuperseded": true
+  },
+  "contractReferenceEvidence": {
+    "checkedAtUtc": "2026-10-13T04:41:06.691351+00:00",
+    "references": [
+      {
+        "role": "layoutReference",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+        "expectedSha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+        "source": "main-city production-contract current reference field",
+        "exists": true,
+        "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+        "pixels": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "expectedHashMatches": true,
+        "visuallyViewedByThisTask": false,
+        "roleIsNativeTileCoverage": false
+      },
+      {
+        "role": "detailStyleReference",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+        "expectedSha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+        "source": "main-city production-contract current reference field",
+        "exists": true,
+        "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+        "pixels": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "expectedHashMatches": true,
+        "visuallyViewedByThisTask": false,
+        "roleIsNativeTileCoverage": false
+      },
+      {
+        "role": "primaryStyleReference",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+        "expectedSha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+        "source": "main-city production-contract current reference field",
+        "exists": true,
+        "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+        "pixels": [
+          1932,
+          814
+        ],
+        "format": "JPEG",
+        "expectedHashMatches": true,
+        "visuallyViewedByThisTask": false,
+        "roleIsNativeTileCoverage": false
+      },
+      {
+        "role": "current_root_instruction_ui_reference",
+        "path": "designs/mail-ui-v1/01-mail-event.png",
+        "source": "root AGENTS.md",
+        "exists": true,
+        "sha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+        "pixels": [
+          1931,
+          814
+        ],
+        "format": "PNG",
+        "visuallyViewedByThisTask": false,
+        "roleIsNativeTileCoverage": false
+      },
+      {
+        "role": "current_root_instruction_ui_reference",
+        "path": "designs/team-ui-v2/team-ui-v2.png",
+        "source": "root AGENTS.md",
+        "exists": true,
+        "sha256": "5fab5229de7030ac48172cfa39bb45f612a545cee0dba6303ae6f2dcfdf38750",
+        "pixels": [
+          1931,
+          814
+        ],
+        "format": "PNG",
+        "visuallyViewedByThisTask": false,
+        "roleIsNativeTileCoverage": false
+      }
+    ],
+    "accelerationSouthOverlap": [
+      {
+        "assignment": "city_yamen_north",
+        "coordinates": [
+          "r03_c04",
+          "r03_c05",
+          "r04_c04",
+          "r04_c05"
+        ],
+        "overlapSouthwestOrSoutheast": []
+      }
+    ]
+  },
+  "existingEvidenceReuse": {
+    "checkedAtUtc": "2026-10-13T04:40:23.785786+00:00",
+    "existingEvidence": [
+      {
+        "role": "existing_southwest_visual_lane_left",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r09_c03/pipeline/local-review-20261013-v01/left-lane-local-review-handoff.json",
+        "expectedSha256": "bd9a6dfd555a7a54e01ab82fef211be77eb9c1bfa7abfb3d29ffeea2406f3cb8",
+        "reportedReviewCounts": {
+          "nativePanelsBuilt": 28,
+          "nativePanelsActuallyViewed": 17,
+          "unviewedPanelsPending": 11,
+          "repairQueueCountsByTile": {
+            "r09_c01": 3,
+            "r09_c02": 4,
+            "r09_c03": 7
+          }
+        },
+        "exists": true,
+        "sha256": "bd9a6dfd555a7a54e01ab82fef211be77eb9c1bfa7abfb3d29ffeea2406f3cb8",
+        "bytes": 4977,
+        "expectedHashMatches": true,
+        "topLevelKeys": [
+          "schemaVersion",
+          "createdAtUtc",
+          "scope",
+          "status",
+          "policyEvidence",
+          "requestedImageModel",
+          "verifiedImage25RouteAvailable",
+          "newGeneratorCallsDuringThisLocalReview",
+          "actualModel",
+          "actualQuality",
+          "paidApiUsed",
+          "gitUsed",
+          "selectedNativeCount",
+          "fullCoverageCandidateCount",
+          "formalAcceptedCount",
+          "completeCityOr64TilesClaimed",
+          "nativeQaPanelsBuilt",
+          "nativeQaPanelsActuallyViewed",
+          "writesRestrictedTo",
+          "sharedProgressOrCatalogChanged",
+          "tiles"
+        ],
+        "reuseOnly": true,
+        "visualRereviewPerformedByThisTask": false
+      },
+      {
+        "role": "existing_southwest_visual_lane_right",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r10_c08/pipeline/qa/right-lane-review-20261013-v01/lane-review-and-repair-queue.json",
+        "expectedSha256": "d09124d9b1568c258739a3dea6e529e9799ce0bf54e4d5d4d01d2bfe855e1897",
+        "reportedReviewCounts": {
+          "nativePanelsActuallyViewed": 26,
+          "externalSegmentsActuallyViewed": 19,
+          "internalSegmentsActuallyViewed": 7,
+          "unviewedGeneratedPanelsPending": 12,
+          "repairQueueItems": 8
+        },
+        "exists": true,
+        "sha256": "d09124d9b1568c258739a3dea6e529e9799ce0bf54e4d5d4d01d2bfe855e1897",
+        "bytes": 68694,
+        "expectedHashMatches": true,
+        "topLevelKeys": [
+          "schemaVersion",
+          "createdAtUtc",
+          "scope",
+          "status",
+          "newGenerationPerformedInThisReview",
+          "generatorCallsAfterModelGate",
+          "apiUsed",
+          "actualModel",
+          "actualQuality",
+          "formalAcceptedCount",
+          "internalPassed",
+          "sourceResampling",
+          "globalCatalogOrProgressModified",
+          "sourceManifest",
+          "originalEvidenceIndex",
+          "modelGate",
+          "coverage",
+          "viewedPanelCount",
+          "unviewedGeneratedPanelCount",
+          "viewedAtOriginalNativePixels",
+          "externalEdgeCount",
+          "externalPanelsViewedCount",
+          "selectedInternalPanelsViewedCount",
+          "edges",
+          "panels",
+          "repairQueue",
+          "priorActuallyViewedTargetedR10c07Review",
+          "nextGenerationRequest",
+          "limits"
+        ],
+        "reuseOnly": true,
+        "visualRereviewPerformedByThisTask": false
+      },
+      {
+        "role": "existing_southwest_visual_lane_col5",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/col5-local-audit-20261013-v01/actual-views-and-findings.json",
+        "expectedSha256": "b4c6981a500a99344bb1688930fdb18f83b8f26ea9c5fbac3f01f0b42c5cba9d",
+        "reportedReviewCounts": {
+          "nativeCropsActuallyViewed": 75,
+          "nativePanelsActuallyViewed": 20,
+          "additionalSingleNativePartialEdgeViewed": 1,
+          "repairQueueItems": 11
+        },
+        "exists": true,
+        "sha256": "b4c6981a500a99344bb1688930fdb18f83b8f26ea9c5fbac3f01f0b42c5cba9d",
+        "bytes": 145211,
+        "expectedHashMatches": true,
+        "topLevelKeys": [
+          "createdAtUtc",
+          "manifest",
+          "rootInstructionsRead",
+          "modelRequirement",
+          "scope",
+          "actualPanelViews",
+          "actuallyViewedCrops",
+          "actuallyViewedCoarseGuides",
+          "pendingBuiltButUnviewedCrops",
+          "missingExternalNeighbors",
+          "actualModel",
+          "actualQuality",
+          "internalAccepted",
+          "formalAccepted",
+          "status"
+        ],
+        "reuseOnly": true,
+        "visualRereviewPerformedByThisTask": false
+      },
+      {
+        "role": "existing_southwest_partial_root_review",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r13_c06/pipeline/output/e7b5e8d88639ad53/root-local-qa-model-gate-20261013/root-review.json",
+        "exists": true,
+        "sha256": "041c75d4e4606fdc1332a002eb20fa8b0b3fa49473ecf5620937f5fdea9a6a21",
+        "bytes": 9127,
+        "topLevelKeys": [
+          "recordedAtUtc",
+          "assembly",
+          "assemblySha256",
+          "output",
+          "nativeQA",
+          "availableCoverage",
+          "missingSlots",
+          "modelGateSource",
+          "newGenerationCalls",
+          "internalPassed",
+          "formalAccepted",
+          "visualReviewStatus",
+          "reviewedAtUtc",
+          "reviewer",
+          "rootActuallyViewed",
+          "findings",
+          "repairQueue",
+          "generationGate"
+        ],
+        "reuseOnly": true,
+        "visualRereviewPerformedByThisTask": false
+      },
+      {
+        "role": "existing_southeast_active_native_audit",
+        "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/delivery-20261012/active-native-audit.json",
+        "exists": true,
+        "sha256": "9ac37aa6f1963937729b7af2a65f9972d4e9e63bb0ec6c382208dbc4e95031ca",
+        "bytes": 115132,
+        "topLevelKeys": [
+          "checkedAtUtc",
+          "allActiveSourcesHashAndNativeDimensionsVerified",
+          "tiles"
+        ],
+        "reuseOnly": true,
+        "visualRereviewPerformedByThisTask": false
+      }
+    ]
+  },
+  "independentCoverageCounts": {
+    "checkedAtUtc": "2026-10-13T04:43:00.718051+00:00",
+    "counts": [
+      {
+        "zone": "southwest",
+        "tileCount": 64,
+        "duplicateTiles": [],
+        "missingTileEntries": [],
+        "outsideZoneEntries": [],
+        "fullCoverageTiles": 15,
+        "partialTiles": 3,
+        "emptyTiles": 46,
+        "selectedNativeSlots": 258,
+        "missingNativeSlots": 766,
+        "metadataArithmeticIssues": [],
+        "basis": "Independently recomputed current index metadata; actual source verification is in zone audit reports."
+      },
+      {
+        "zone": "southeast",
+        "tileCount": 64,
+        "duplicateTiles": [],
+        "missingTileEntries": [],
+        "outsideZoneEntries": [],
+        "fullCoverageTiles": 10,
+        "partialTiles": 0,
+        "emptyTiles": 54,
+        "selectedNativeSlots": 160,
+        "missingNativeSlots": 864,
+        "metadataArithmeticIssues": [],
+        "basis": "Independently recomputed current index metadata; actual source verification is in zone audit reports."
+      }
+    ]
+  },
+  "notes": [
+    "Only current referenced source closures are audited. Directory-name discovery did not constitute historical image review.",
+    "No visual seam re-review, image generation, AI repair, stitching, installation, model testing, paid API, Git operation, upload, deletion, restoration, or cross-chat message was performed by this task.",
+    "Root map status (2026-10-09) and Southwest delivery.json (2026-10-09) are older than current zone catalogs; they are not current coverage authorities.",
+    "The authoritative root model rule changed during the audit. Old generation gate strings in Southwest progress/inventory/CSV are retained as historical source text and are not current project policy.",
+    "Actual source position verification concerns declared tile/core/native geometry; semantic map alignment is outside this task and belongs to existing visual reviews.",
+    "Source hashes and timestamps bind this evidence to inspected versions. Continued production may require selective rechecks."
+  ]
+}

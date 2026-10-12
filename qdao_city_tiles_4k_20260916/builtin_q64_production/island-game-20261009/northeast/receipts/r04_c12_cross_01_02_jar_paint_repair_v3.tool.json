@@ -1,0 +1,56 @@
+{
+  "tool": "image_gen.imagegen",
+  "route": "builtin",
+  "id": "r04_c12_cross_01_02_jar_paint_repair_v3",
+  "prompt": "Precise minimal color repair of Image1. Output exactly1254x1254, same framing, shapes and texture. Image1 is a native exact edit target of a brown-orange glazed jar with blue round inlay on pale gray paving. Image2 wider native context only. Images3-5 layout/material/style references only. The scene is already correct: do not redraw its geometry, rim, circular blue medallion, jar foot, perspective, size or paving joints.\nONLY fix the straight rectangular color/lightness boundaries on the jar glaze in Image1: there are artificial abrupt paint-value changes around x627, x998, y256, y371 and y486 inherited from separate crops. Replace those straight cut lines with one continuous gently curved natural warm glazed ceramic light gradient and irregular subtle painterly strokes. Preserve the existing exact hue/brightness of the top of the jar, and naturally interpolate toward the existing lower jar color. Do not make the entire jar darker or lighter.\nMost critically: TOP200 pixels and LEFT200 pixels must stay exactly unchanged from Image1. BOTTOM200 pixels including paving stay exactly unchanged. These are fixed native border color/geometry anchors, not areas to repaint. Keep all perimeter silhouettes and stone joints unchanged. At right edge preserve the existing color and form except the one visibly false horizontal glaze value step at y371, which must disappear smoothly. Blend color adjustments entirely within the jar surface without any hard rectangular transition. Match the original TOP200 warm orange glaze through y200..350 with absolutely no new horizontal value jump. Keep the outer golden rim of the blue inlay and blue reflection precisely unchanged. No added pattern, seam, line, highlight band, new object, blur, vignette, reframe or scale. Detailed clean daylight Daoist Q art matching the supplied native pixels. All paving, light/shadows, stones and jar shapes unchanged; this is a narrowly targeted color continuity correction.",
+  "references": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/guides/r04_c12_cross_01_02_jar_paint_repair_v3.png",
+      "sha256": "5314431e757a0558ca3214c95e84a8ec9bf21edd75b4f4b920e5d45dbc7cc21d",
+      "role": "edit target with exact original outer256 native color and interior corrected jar paint",
+      "derivationRecord": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/guides/r04_c12_cross_01_02_jar_paint_repair_v3.png.derivation.json"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/guides/r04_c12_cross_01_02_jar_paint_repair_v3.context.png",
+      "sha256": "44ed6bc554f6e0a4ca3f55d526a81768fa931b5da948e46a7f2d91a50e90d592",
+      "role": "surrounding original native context geometry only",
+      "derivationRecord": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/guides/r04_c12_cross_01_02_jar_paint_repair_v3.context.png.derivation.json"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+      "sha256": "e7a06f547274a29a01cc4e20223637e99c0fab534d4982361e824147c800b34f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "sole full-map layout authority"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-detail-v1.png",
+      "sha256": "40ca8d6b5b062511ebd18dc0e278399644097ee10608000658f691796884c133",
+      "size": [
+        1536,
+        1024
+      ],
+      "role": "material and Spring Festival architecture style only; NOT coordinate crop"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "size": [
+        1932,
+        814
+      ],
+      "role": "primary approved user-provided Daoist Q painting; same approved direction as missing oldPNG, distinct source; no UI/night",
+      "authority": "updated production-contract and production-resume20261010"
+    }
+  ],
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "transparent_background": false
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "output_hint": "Generated images are saved to C:\\Users\\luyua\\.codex\\generated_images\\01a1216d-6907-7641-b5b1-a9c29f365c4c as C:\\Users\\luyua\\.codex\\generated_images\\01a1216d-6907-7641-b5b1-a9c29f365c4c\\exec-cb65eb94-f71b-4d49-9539-b07b60d37f44.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

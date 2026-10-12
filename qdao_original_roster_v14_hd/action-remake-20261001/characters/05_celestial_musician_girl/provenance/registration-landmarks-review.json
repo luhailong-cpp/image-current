@@ -1,0 +1,1895 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "finish_ew",
+  "reviewedAt": "2026-10-03",
+  "status": "manual_registration_proposal_not_applied",
+  "scope": {
+    "landmarkedClips": 13,
+    "landmarkedImages": 33,
+    "notIncluded": [
+      {
+        "action": "run",
+        "direction": "S",
+        "reason": "根代理/另一代理独立标注"
+      },
+      {
+        "direction": "N",
+        "actions": [
+          "attack",
+          "cast",
+          "hit"
+        ],
+        "reason": "本批次SPEC战斗方向只有E/W，无本轮N战斗源图；未借旧图替代。"
+      }
+    ]
+  },
+  "method": {
+    "coordinateSystem": "原生1254x1254左上(0,0)，x向右、y向下；坐标取5px级人工近似，非自动精确骨骼检测。",
+    "hipDefinition": "衣袍遮挡下，依据下躯干轴与两大腿近端会聚位置估计骨盆中心投影。绿色腰结是装饰且偏一侧，不直接当髋。",
+    "rootDefinition": "每个action/direction整段的固定虚拟地面原点；由中性/成对支撑髋轴在同一相机下的地面投影建立。骨盆的逐帧运动不是根运动。",
+    "groundEvidence": "可见支撑脚的平掌、踝—膝承重链和多个相位的接触带仅约束共同地面；远近脚透视深度不同，绝不使用每帧最下像素、影像bbox中心或最低鞋自动贴齐。",
+    "uncertainty": "±范围是人工图像解释范围，不是统计置信区间。长发/衣袍遮挡较大，原生根是可复核初值；不能声称3D相机已经精确解算。",
+    "mutation": "本轮只读图和写本审阅JSON，未移动/缩放图片，未修改任何选帧表。"
+  },
+  "landmarks": [
+    {
+      "id": "run/E/1",
+      "action": "run",
+      "direction": "E",
+      "frame": 1,
+      "file": "../../../run-correction-20260930/characters/05_celestial_musician_girl/generation/E/01-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          765,
+          625
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          735,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          765,
+          625
+        ],
+        "to": [
+          735,
+          940
+        ]
+      },
+      "observation": "右接触；跑步前倾，左后收腿，髋并不在画布中心。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/E/3",
+      "action": "run",
+      "direction": "E",
+      "frame": 3,
+      "file": "staging/run/E/03-v3.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          790,
+          610
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          760,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          790,
+          610
+        ],
+        "to": [
+          760,
+          940
+        ]
+      },
+      "observation": "右中支撑，近腿在前遮住远腿，可从支持膝及下袍推断髋；头/躯干比attack E整体偏右。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/E/9",
+      "action": "run",
+      "direction": "E",
+      "frame": 9,
+      "file": "staging/run/E/09-v3.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          775,
+          610
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          745,
+          925
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          775,
+          610
+        ],
+        "to": [
+          745,
+          925
+        ]
+      },
+      "observation": "左远腿支撑的另一半周期，供01成对核对，不把承重靴x当根。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "attack/E/1",
+      "action": "attack",
+      "direction": "E",
+      "frame": 1,
+      "file": "staging/attack/E-01-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          730,
+          580
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          690,
+          930
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          730,
+          580
+        ],
+        "to": [
+          690,
+          930
+        ]
+      },
+      "observation": "预备，双腿分开，躯干近直立；近右手下弦，远左手上端。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "attack/E/5",
+      "action": "attack",
+      "direction": "E",
+      "frame": 5,
+      "file": "staging/attack/E-05-v3.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          740,
+          595
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          705,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          740,
+          595
+        ],
+        "to": [
+          705,
+          940
+        ]
+      },
+      "observation": "出手前压，髋与肩有真实前移；不能把本帧单独拉回预备位置。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "attack/E/12",
+      "action": "attack",
+      "direction": "E",
+      "frame": 12,
+      "file": "staging/attack/E-12-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          730,
+          580
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          690,
+          935
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          730,
+          580
+        ],
+        "to": [
+          690,
+          935
+        ]
+      },
+      "observation": "回到预备，01/12轴线相近，可作为整段固定根证据。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/E/1",
+      "action": "cast",
+      "direction": "E",
+      "frame": 1,
+      "file": "staging/cast/E-01-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          675,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          655,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          675,
+          585
+        ],
+        "to": [
+          655,
+          945
+        ]
+      },
+      "observation": "并足中性；身体轴比attack E左约40–55px。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/E/9",
+      "action": "cast",
+      "direction": "E",
+      "frame": 9,
+      "file": "staging/cast/E-09-v2.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          755,
+          620
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          705,
+          955
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          755,
+          620
+        ],
+        "to": [
+          705,
+          955
+        ]
+      },
+      "observation": "释放前压、扩步和躯干向右倾；属于动作，不取它作整段中性根。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/E/16",
+      "action": "cast",
+      "direction": "E",
+      "frame": 16,
+      "file": "staging/cast/E-16-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          685,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          665,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          685,
+          585
+        ],
+        "to": [
+          665,
+          945
+        ]
+      },
+      "observation": "中性收势，接近01，可校验cast整段取景。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/E/1",
+      "action": "hit",
+      "direction": "E",
+      "frame": 1,
+      "file": "staging/hit/E-01-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          660,
+          555
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          785,
+          930
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          660,
+          555
+        ],
+        "to": [
+          785,
+          930
+        ]
+      },
+      "observation": "受击起点已后仰：颈在髋左，不能用颈点横坐标当根。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/E/2",
+      "action": "hit",
+      "direction": "E",
+      "frame": 2,
+      "file": "staging/hit/E-02-v2.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          645,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          835,
+          955
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          645,
+          585
+        ],
+        "to": [
+          835,
+          955
+        ]
+      },
+      "observation": "后仰/抬腿，髋与颈差异属于姿态，需要保持。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/E/3",
+      "action": "hit",
+      "direction": "E",
+      "frame": 3,
+      "file": "staging/hit/E-03-v4.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          605,
+          590
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          785,
+          955
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          605,
+          590
+        ],
+        "to": [
+          785,
+          955
+        ]
+      },
+      "observation": "缩身反应；头和支持靴较相邻帧同时偏小，比例疑点已交根代理修复；不要用此帧定义根。 当前v5已另外实看恢复量级；旧v4坐标仅保留审阅历史，不用于当前配准。",
+      "method": "manual_visual_estimate_not_pixel_detector",
+      "status": "historical_rejected_version_not_current_root_evidence",
+      "supersededBy": "staging/hit/E-03-v5.png"
+    },
+    {
+      "id": "hit/E/6",
+      "action": "hit",
+      "direction": "E",
+      "frame": 6,
+      "file": "staging/hit/E-06-v2.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          665,
+          555
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          785,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          665,
+          555
+        ],
+        "to": [
+          785,
+          945
+        ]
+      },
+      "observation": "收势，双腿站回；颈仍偏髋左，受击恢复姿态未完全等同attack预备。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/W/1",
+      "action": "run",
+      "direction": "W",
+      "frame": 1,
+      "file": "staging/run/W/01-v4.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          475,
+          615
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          585,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          475,
+          615
+        ],
+        "to": [
+          585,
+          940
+        ]
+      },
+      "observation": "右远腿支撑、左近腿后收，躯干向左前倾。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/W/9",
+      "action": "run",
+      "direction": "W",
+      "frame": 9,
+      "file": "staging/run/W/09-v1.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          435,
+          605
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          540,
+          925
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          435,
+          605
+        ],
+        "to": [
+          540,
+          925
+        ]
+      },
+      "observation": "左近腿支撑；身体轴与01不同包含周期内真实位移，不逐帧配准。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "attack/W/1",
+      "action": "attack",
+      "direction": "W",
+      "frame": 1,
+      "file": "staging/attack/W-01-v2.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          495,
+          580
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          510,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          495,
+          580
+        ],
+        "to": [
+          510,
+          940
+        ]
+      },
+      "observation": "双足预备，近左前臂横过琴面连上端。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "attack/W/12",
+      "action": "attack",
+      "direction": "W",
+      "frame": 12,
+      "file": "staging/attack/W-12-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          495,
+          580
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          510,
+          940
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          495,
+          580
+        ],
+        "to": [
+          510,
+          940
+        ]
+      },
+      "observation": "收势回到预备，固定原生轴证据稳定。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/W/1",
+      "action": "cast",
+      "direction": "W",
+      "frame": 1,
+      "file": "staging/cast/W-01-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          585,
+          590
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          610,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          585,
+          590
+        ],
+        "to": [
+          610,
+          945
+        ]
+      },
+      "observation": "中性并足；相对attack W颈和髋都右移约90–100px，强于单一关节姿态偏差。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/W/3",
+      "action": "cast",
+      "direction": "W",
+      "frame": 3,
+      "file": "staging/cast/W-03-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          585,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          605,
+          950
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          585,
+          585
+        ],
+        "to": [
+          605,
+          950
+        ]
+      },
+      "observation": "抬腕聚势；髋轴接近01，发髻更高、靴底较低约20–30px，整组完成后需再核支撑平面。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/W/1",
+      "action": "hit",
+      "direction": "W",
+      "frame": 1,
+      "file": "staging/hit/W-01-v3.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          515,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          560,
+          925
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          515,
+          585
+        ],
+        "to": [
+          560,
+          925
+        ]
+      },
+      "observation": "双足受击预备，手臂连接可读；头略前、髋略后。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/W/3",
+      "action": "hit",
+      "direction": "W",
+      "frame": 3,
+      "file": "staging/hit/W-03-v3.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          590,
+          600
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          545,
+          930
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          590,
+          600
+        ],
+        "to": [
+          545,
+          930
+        ]
+      },
+      "observation": "身体向右后仰、近左腿抬起；颈点真实右移，应保留。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "hit/W/6",
+      "action": "hit",
+      "direction": "W",
+      "frame": 6,
+      "file": "staging/hit/W-06-v2.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          515,
+          555
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          550,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          515,
+          555
+        ],
+        "to": [
+          550,
+          945
+        ]
+      },
+      "observation": "恢复双足站立，髋回近01；头/长发姿态收势。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/N/1",
+      "action": "run",
+      "direction": "N",
+      "frame": 1,
+      "file": "staging/run/N/01-v2.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          625,
+          470
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          645,
+          850
+        ],
+        "uncertaintyPlusMinusPx": [
+          35,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          625,
+          470
+        ],
+        "to": [
+          645,
+          850
+        ]
+      },
+      "observation": "背后躯干轴被长发遮挡；由耳中线、腰带弧和两大腿起点估计。右支撑。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/N/9",
+      "action": "run",
+      "direction": "N",
+      "frame": 9,
+      "file": "staging/run/N/09-v2.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          655,
+          485
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          655,
+          875
+        ],
+        "uncertaintyPlusMinusPx": [
+          35,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          655,
+          485
+        ],
+        "to": [
+          655,
+          875
+        ]
+      },
+      "observation": "左支撑，琴/躯干略向左旋；头轴/髋中心仍在画布中右侧，不取琴重心。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/NE/1",
+      "action": "run",
+      "direction": "NE",
+      "frame": 1,
+      "file": "staging/run/NE/01-v1.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          815,
+          545
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          740,
+          910
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          815,
+          545
+        ],
+        "to": [
+          740,
+          910
+        ]
+      },
+      "observation": "后右三分之四，近右腿落地；颈肩轴在髋右前方，衣袍/长发遮挡。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/NE/9",
+      "action": "run",
+      "direction": "NE",
+      "frame": 9,
+      "file": "staging/run/NE/09-v1.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          820,
+          550
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          705,
+          885
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          820,
+          550
+        ],
+        "to": [
+          705,
+          885
+        ]
+      },
+      "observation": "左腿支撑、右腿后抬，髋由两上腿推断。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/SE/1",
+      "action": "run",
+      "direction": "SE",
+      "frame": 1,
+      "file": "staging/run/SE/01-v2.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          685,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          675,
+          925
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          685,
+          585
+        ],
+        "to": [
+          675,
+          925
+        ]
+      },
+      "observation": "前右三分之四，近右支撑；两肩和前襟轴可见。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/SE/9",
+      "action": "run",
+      "direction": "SE",
+      "frame": 9,
+      "file": "staging/run/SE/09-v3.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          710,
+          605
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          690,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          710,
+          605
+        ],
+        "to": [
+          690,
+          945
+        ]
+      },
+      "observation": "左支撑、另一半循环，身体略向右前倾。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/SW/1",
+      "action": "run",
+      "direction": "SW",
+      "frame": 1,
+      "file": "staging/run/SW/01-v1.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          530,
+          565
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          595,
+          880
+        ],
+        "uncertaintyPlusMinusPx": [
+          35,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          530,
+          565
+        ],
+        "to": [
+          595,
+          880
+        ]
+      },
+      "observation": "前左三分之四，颈轴在髋左前；右支撑。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/SW/9",
+      "action": "run",
+      "direction": "SW",
+      "frame": 9,
+      "file": "staging/run/SW/09-v1.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          570,
+          585
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          630,
+          920
+        ],
+        "uncertaintyPlusMinusPx": [
+          35,
+          40
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          570,
+          585
+        ],
+        "to": [
+          630,
+          920
+        ]
+      },
+      "observation": "另一半循环左支撑；与01构成实际髋摆动范围，不固定每帧髋。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/NW/1",
+      "action": "run",
+      "direction": "NW",
+      "frame": 1,
+      "file": "staging/run/NW/01-v2.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          455,
+          560
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          620,
+          915
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          455,
+          560
+        ],
+        "to": [
+          620,
+          915
+        ]
+      },
+      "observation": "后左三分之四，身体向左前倾，长发使髋估计误差较大。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "run/NW/9",
+      "action": "run",
+      "direction": "NW",
+      "frame": 9,
+      "file": "staging/run/NW/09-v2.native.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          450,
+          580
+        ],
+        "uncertaintyPlusMinusPx": [
+          45,
+          50
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          630,
+          900
+        ],
+        "uncertaintyPlusMinusPx": [
+          40,
+          45
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          450,
+          580
+        ],
+        "to": [
+          630,
+          900
+        ]
+      },
+      "observation": "肩/躯干前倾、近端大腿在下袍后，脚有透视纵深差。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    },
+    {
+      "id": "cast/W/16",
+      "action": "cast",
+      "direction": "W",
+      "frame": 16,
+      "file": "staging/cast/W-16-v1.png",
+      "nativeCanvas": [
+        1254,
+        1254
+      ],
+      "neckBase": {
+        "xy": [
+          585,
+          590
+        ],
+        "uncertaintyPlusMinusPx": [
+          20,
+          20
+        ]
+      },
+      "pelvisEstimate": {
+        "xy": [
+          610,
+          945
+        ],
+        "uncertaintyPlusMinusPx": [
+          30,
+          35
+        ],
+        "visibility": "衣袍/长发遮挡下由两侧近端大腿与下躯干轴估计，不是可见裸露骨盆"
+      },
+      "torsoAxis": {
+        "from": [
+          585,
+          590
+        ],
+        "to": [
+          610,
+          945
+        ]
+      },
+      "observation": "末尾中性原生图已看；颈约585,590、髋约610,945，与01同量级同轴，支持cast W整段固定根。",
+      "method": "manual_visual_estimate_not_pixel_detector"
+    }
+  ],
+  "clipRoots": [
+    {
+      "action": "run",
+      "direction": "E",
+      "nativeRoot": [
+        740,
+        1184
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        15
+      ],
+      "evidenceLandmarkIds": [
+        "run/E/1",
+        "run/E/3",
+        "run/E/9"
+      ],
+      "basis": "成对接触与中支撑的平均骨盆轴给x；E已实际标注的共同支撑带交叉约束y。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        31,
+        172.39999999999998
+      ],
+      "applied": false
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "nativeRoot": [
+        695,
+        1180
+      ],
+      "uncertaintyPlusMinusPx": [
+        25,
+        15
+      ],
+      "evidenceLandmarkIds": [
+        "attack/E/1",
+        "attack/E/12"
+      ],
+      "basis": "预备/回势骨盆轴与双足承重地面；05前压保留。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        60.25,
+        175
+      ],
+      "applied": false
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "nativeRoot": [
+        660,
+        1178
+      ],
+      "uncertaintyPlusMinusPx": [
+        30,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "cast/E/1",
+        "cast/E/16"
+      ],
+      "basis": "首尾并足中性髋轴；释放09的前压不影响固定根。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        83,
+        176.29999999999995
+      ],
+      "applied": false
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "nativeRoot": [
+        785,
+        1185
+      ],
+      "uncertaintyPlusMinusPx": [
+        40,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "hit/E/1",
+        "hit/E/6"
+      ],
+      "basis": "起/末髋与双腿支撑构造根，后仰颈线保留；03排除根拟合。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        1.75,
+        171.75
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "W",
+      "nativeRoot": [
+        565,
+        1202
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        15
+      ],
+      "evidenceLandmarkIds": [
+        "run/W/1",
+        "run/W/9"
+      ],
+      "basis": "成对半周期髋轴；实际W共同支撑带1202，只作为整段根地面的证据。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        144.75,
+        160.69999999999993
+      ],
+      "applied": false
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "nativeRoot": [
+        515,
+        1185
+      ],
+      "uncertaintyPlusMinusPx": [
+        25,
+        15
+      ],
+      "evidenceLandmarkIds": [
+        "attack/W/1",
+        "attack/W/12"
+      ],
+      "basis": "首尾相近的骨盆轴和双足承重构图。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        177.25,
+        171.75
+      ],
+      "applied": false
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "nativeRoot": [
+        610,
+        1185
+      ],
+      "uncertaintyPlusMinusPx": [
+        30,
+        25
+      ],
+      "evidenceLandmarkIds": [
+        "cast/W/1",
+        "cast/W/3",
+        "cast/W/16"
+      ],
+      "basis": "首尾中性01/16颈/髋轴相近，03蓄势轴相近；支持整段R(610,1185)，释放期真实前压保留。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        115.5,
+        171.75
+      ],
+      "applied": false
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "nativeRoot": [
+        555,
+        1185
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "hit/W/1",
+        "hit/W/6"
+      ],
+      "basis": "首尾双支撑髋轴；03后仰脊柱、抬腿位移保留。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        151.25,
+        171.75
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "nativeRoot": [
+        645,
+        1180
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "run/N/1",
+        "run/N/9"
+      ],
+      "basis": "背面耳中线/腰带弧/近端大腿中心；前后脚深度透视不同，1170–1190支撑范围只作整段参考。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        92.75,
+        175
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "nativeRoot": [
+        720,
+        1190
+      ],
+      "uncertaintyPlusMinusPx": [
+        40,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "run/NE/1",
+        "run/NE/9"
+      ],
+      "basis": "近远半周期骨盆中心居中于约705–740；颈肩向右前方投影，不能用颈或琴取x。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        44,
+        168.5
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "SE",
+      "nativeRoot": [
+        680,
+        1195
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "run/SE/1",
+        "run/SE/9"
+      ],
+      "basis": "两肩/前襟与近端大腿会聚处；两半周期髋中心约675–690；脚深度差保留。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        70,
+        165.25
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "SW",
+      "nativeRoot": [
+        615,
+        1205
+      ],
+      "uncertaintyPlusMinusPx": [
+        35,
+        20
+      ],
+      "evidenceLandmarkIds": [
+        "run/SW/1",
+        "run/SW/9"
+      ],
+      "basis": "两半周期髋中心約595–630；颈轴左前倾属于姿态；支撑接触带约1200–1220。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        112.25,
+        158.75
+      ],
+      "applied": false
+    },
+    {
+      "action": "run",
+      "direction": "NW",
+      "nativeRoot": [
+        625,
+        1180
+      ],
+      "uncertaintyPlusMinusPx": [
+        40,
+        25
+      ],
+      "evidenceLandmarkIds": [
+        "run/NW/1",
+        "run/NW/9"
+      ],
+      "basis": "后左视角肩在髋前方，髋中心约620–630；09接触脚投影略高，与01有深度/压缩差，禁止抬脚对齐。",
+      "status": "provisional_reviewed",
+      "scope": "this entire action/direction clip; identical transform on every frame",
+      "previewTranslationAtCommonScale065": [
+        105.75,
+        175
+      ],
+      "applied": false
+    }
+  ],
+  "crossActionFindings": [
+    {
+      "direction": "E",
+      "finding": "run髋轴约735–760，attack中性约690，cast中性约655–665，hit起/末髋约785。单一每方向原生根不能同时消除全部动作源图构图偏移。",
+      "caveat": "hit颈向左、髋向右的后仰是姿态，不可仅按头/颈匹配；本方案按各片段起/末骨盆与支撑相机位置固定一次。"
+    },
+    {
+      "direction": "W",
+      "finding": "attack首尾颈约495/髋510；cast中性颈约585/髋610，两点同时右移约90–100px，支持整段源图取景偏移。run前倾使颈较髋向左，不能按颈居中。"
+    },
+    {
+      "direction": "N",
+      "finding": "本轮只有run，可固定其整段根；不能据此宣称已验证N所有战斗动作。"
+    }
+  ],
+  "sequenceStaticReview": {
+    "contactSheets": [
+      "preview/qa-attack-E-current.jpg",
+      "preview/qa-cast-E-current.jpg",
+      "preview/qa-hit-E-current.jpg",
+      "preview/qa-hit-W-current.jpg"
+    ],
+    "overall": "可见手臂/肢体未见明确多肢或换手；最新静态脚向和比例结论以SHA绑定审阅为准。",
+    "attackE": {
+      "anatomy": "近解剖右臂连续连接下段拨弦手，远左手握琴上端；03抬腕、04开始回到弦面、05身体前压最明确，06/07下拨随势，08–12恢复。",
+      "events": {
+        "firstVisibleStringPass": 4,
+        "strongestForwardAccent": 5,
+        "lateFollowThrough": 7
+      },
+      "timingNote": "事件依据图像，并非只抄生成提示词。强命中若用05可说明取身体出力峰；04已不是纯蓄力。",
+      "scale": "首尾和03/05/07头/靴整体量级稳定，05前压与扩步保留。"
+    },
+    "castE": {
+      "anatomy": "两手来源可读，近右手05–07抬腕，08回弦接近，09前压释放，10下拨随势，11–16恢复。",
+      "events": {
+        "windupPeak": 7,
+        "stringApproach": 8,
+        "releaseAccent": 9,
+        "followThrough": 10
+      },
+      "scale": "09扩步前压造成轮廓变宽及身体前移，不能当成bbox缩放任务；首尾01/16近似同构图。"
+    },
+    "hitEW": {
+      "anatomy": "E近右手下弦/左手上端，W近左臂跨琴连上端/远右手下弦；03主要后仰/抬腿，04恢复，05/06回站。",
+      "scaleIssue": {
+        "fileReviewed": "staging/hit/E-03-v5.png",
+        "previousFile": "staging/hit/E-03-v4.png",
+        "finding": "最新v5已原生实看，头/身体/支持靴共同量级恢复，后仰姿态与正确手脚保留。",
+        "status": "resolved_in_selected_v5"
+      },
+      "otherScale": "W1/3/6没有同等级整体缩小；不同后仰/发带展开不按轮廓大小归一化。"
+    },
+    "shaBoundFinalStaticReview": "provenance/EW-visible-anatomy-foot-heading-review-20261003.json"
+  },
+  "implementationProposal": {
+    "targetCanvas": [
+      1024,
+      1024
+    ],
+    "targetRoot": [
+      512,
+      942
+    ],
+    "formula": "p_out = s * (p_native - R[action,direction]) + (512,942)",
+    "commonScalePreview": 0.65,
+    "commonScaleFinal": null,
+    "rules": [
+      "对每个动作/方向只建立一个固定二维平移；整段所有帧严格复用，旋转/局部形变/单帧比例/脚底吸附全部禁用。",
+      "全角色只有一个比例s。先按标注根定位，再用全部已选图alphaBBox做无截边容纳检查；bbox只限制一个全局s的上限，绝不定义根或按图决定尺寸。",
+      "透明低alpha彩边只影响容纳审计，不能据此盲剪实际素材。",
+      "若源图本身比例跳变（如旧hit E03-v4），应AI修复源图，整段平移无法补救。",
+      "cast W首尾01/16已复核同一中性轴；释放前压和扩步严格保留，全段固定R不变。"
+    ],
+    "uniformScaleSafety": "建议最终在0.63–0.70内取一个常数。设输出边距m=16，全部源图相对本片段R的左右/上下最大距离给s的四个容纳上界：496/maxLeft、496/maxRight、926/maxUp、66/maxDown；只取全图共有上界后向下选一个固定值。此处未完成所有新cast W/S的安全边界审计。 根代理已报告按0.65完成固定R复核导出；最终全图容纳审计由其导出清单记录，本标注文档不改动其结果。",
+    "validation": [
+      "以固定十字根切换同方向run/attack/cast/hit，身体姿态可以倾斜但不应出现不合理的整体取景跳变。",
+      "用固定地面深度网格连播；真实腾空/压膝/后仰保留，不能按最低鞋把每帧拖回地线。",
+      "普通游戏尺寸检查动作事件、脚尖沿朝向和膝踝承重；客户端世界位移后的脚滑另验。"
+    ]
+  },
+  "footDirectionReview": {
+    "status": "completed_static_review",
+    "file": "provenance/EW-visible-anatomy-foot-heading-review-20261003.json",
+    "finding": "E/W已选100图无剩余明确必须重画的外撇；attack W09已选修复v3。动态/客户端另验。"
+  },
+  "imageTransformsApplied": false,
+  "selectionTablesModified": false,
+  "latestStaticReviewAt": "2026-10-03T19:49:05.824044+00:00"
+}

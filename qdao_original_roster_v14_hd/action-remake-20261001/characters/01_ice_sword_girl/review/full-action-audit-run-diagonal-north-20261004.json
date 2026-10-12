@@ -1,0 +1,803 @@
+{
+  "schemaVersion": 1,
+  "auditType": "fresh_visual_current_candidate_audit",
+  "characterId": "01_ice_sword_girl",
+  "scope": {
+    "action": "run",
+    "directions": [
+      "NE",
+      "NW"
+    ],
+    "expectedFrames": 32
+  },
+  "overallPassed": false,
+  "failedGroups": [
+    "run/NE"
+  ],
+  "passedGroups": [
+    "run/NW"
+  ],
+  "method": {
+    "freshContactSheetsViewed": [
+      "preview/run-NE-selected-256.png",
+      "preview/run-NW-selected-256.png"
+    ],
+    "all32CandidateImagesAlsoViewedAt1024": true,
+    "neighborComparisons": "Reviewed all 01..16 in both complete contact sheets and opened all 32 current 1024 RGBA candidates individually; compared 03/04/05, 07/08/09, 12/13/14 and 15/16/01 transitions.",
+    "armTrace": "Shoulder -> sleeve -> elbow direction -> wrist -> held object, including visible and hair-occluded segments; never assign ownership from screen side alone.",
+    "legTrace": "Thigh/hip -> knee -> shin -> ankle -> heel/toe orientation, followed across neighbors. Visible raised sole is not automatically an outward-turned foot.",
+    "freshRealtimePlaybackObservedThisAudit": false,
+    "continuityJudgment": "Sequential actual-image comparison using the current 75 ms schedule; no claim of a newly observed live client playback.",
+    "priorPassLabelsUsedAsEvidence": false,
+    "clientRuntimeVerified": false,
+    "videoReference": {
+      "previouslyActuallyDecoded": true,
+      "redecodedThisAudit": false,
+      "evidence": "review/video-axis-20261004/reference-motion-analysis.json",
+      "NE": {
+        "zeroBasedFrames": [
+          96,
+          119
+        ],
+        "ptsSeconds": [
+          4.0,
+          4.958333333333333
+        ]
+      },
+      "NW": {
+        "zeroBasedFrames": [
+          396,
+          411
+        ],
+        "ptsSeconds": [
+          16.5,
+          17.125
+        ]
+      },
+      "limitations": "The reference video establishes general direction and neighboring-pose continuity only; its small compressed feet cannot prove every sole angle or exact contact interval."
+    }
+  },
+  "findings": [
+    {
+      "id": "NE_ARM_TRANSITION_03_04",
+      "direction": "NE",
+      "category": "arm_and_weapon_continuity",
+      "requiredRepair": true,
+      "confidence": "high",
+      "affectedTransition": [
+        3,
+        4
+      ],
+      "neighborFramesInspected": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "firstRepairCandidate": 4,
+      "observed": "NE03 的右剑手位于身体右前侧，剑刃朝画面右；左符手位于后侧。NE04 在一个75ms帧后，右剑手已经伸到左后侧、剑尖朝左下，左符手则已伸到身体右前方。两只手和剑刃朝向一起跨越大幅中间位置，没有对应的中间摆臂图。NE05继续保持该后摆端点，故03->04是明确的局部跳变。",
+      "notTheFinding": "沿肩袖链仍能认出解剖右手持剑、左手持符，没有证据将其判为换手或镜像。",
+      "repairDirection": "优先把NE04的肩袖肘腕与剑/符改成NE03到NE05之间的真实中间摆臂位置；保留角色身份、当前正确持物手、左脚支撑及既有腿脚运动平面。若单帧不足，再连同NE03局部调整，不能只旋转剑或平移手。"
+    },
+    {
+      "id": "NE_ARM_TRANSITION_08_09",
+      "direction": "NE",
+      "category": "arm_and_weapon_continuity",
+      "requiredRepair": true,
+      "confidence": "high",
+      "affectedTransition": [
+        8,
+        9
+      ],
+      "neighborFramesInspected": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "firstRepairCandidate": 8,
+      "observed": "NE07/08右剑手维持左后侧伸展、左符手位于右前侧；NE09右剑手突然来到右前侧、剑刃向右上，左符手突然退到身后。该75ms间隔中手腕和整条袖臂跨过躯干前后两端，缺少返程中间摆臂位置。NE10继续前举剑的阶段，因此08->09是另一处明确跳变。",
+      "notTheFinding": "09是正常左右支撑脚交替边界，不能因此把该手臂瞬移当成合理的脚步换相。持剑手本身仍是解剖右手。",
+      "repairDirection": "优先把NE08改为从NE07后摆向NE09前摆收回的中间臂位，并回看07->08->09->10；保留当前左前掌支撑、右腿自由摆动与75ms时长。"
+    }
+  ],
+  "groups": {
+    "NE": {
+      "overallPassed": false,
+      "handOwnership": "pass_right_sword_left_talisman",
+      "handGripAndVisibleJointConnection": "no_required_anatomy_repair_identified",
+      "armContinuity": "fail_at_03_to_04_and_08_to_09",
+      "footAxisVisualCheck": "pass_no_specific_outward_twist_identified",
+      "supportVisualCheck": "pass_left_01_to_08_right_09_to_16",
+      "supportNote": "按连续大腿/膝/靴追踪，01–08仍是左脚支撑，09–16是右脚支撑。后跟抬起/鞋底显露存在正常屈膝和前掌支撑解释；未发现必须按外翻重画的指定脚帧。",
+      "positionPairs": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "pairPoseVisualCheck": "Pairs contain distinct neighboring poses; support progression is visually present. NE03/04 upper-body transition fails even though this is not a support-leg ownership swap.",
+      "requiredRepairFramesProposed": [
+        4,
+        8
+      ],
+      "otherFramesToPreserveUnlessNeighborRetestRequiresLocalAdjustment": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "correctFeaturesToPreserve": [
+        "解剖右剑/左符",
+        "膝踝鞋掌沿NE方向的运动平面",
+        "左01–08/右09–16支撑顺序",
+        "自然屈膝和后跟抬起",
+        "16×75ms总时长1200ms"
+      ]
+    },
+    "NW": {
+      "overallPassed": true,
+      "handOwnership": "pass_right_sword_left_talisman",
+      "handGripAndVisibleJointConnection": "pass_visible_left_shoulder_sleeve_wrist_talisman_chain_and_occluded_far_right_sword_arm",
+      "armContinuity": "pass_no_abrupt_hand_or_weapon_reversal_identified",
+      "armObservation": "近侧左肩/袖/腕连接到前方蓝符，远侧右剑手被头发遮住部分臂段但仍连接到后侧冰剑。全圈持物位置稳定、摆臂幅度克制；未发现NE那种前后两端单帧跳变，也没有据此要求改变已正确的持物姿态。",
+      "footAxisVisualCheck": "pass_no_specific_outward_twist_identified",
+      "supportVisualCheck": "pass_left_01_to_08_right_09_to_16",
+      "supportNote": "01/02左脚在前，03/04身体接近，05/06身体通过，07/08后段前掌蹬地；09–16换右脚重复相同支撑组织。07/08及15/16的露底/抬跟由膝踝连续性和前掌支撑解释，未按正常透视误报外翻。",
+      "positionPairs": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "pairPoseVisualCheck": "pass_visual_distinct_two_pose_pairs_with_support_progression",
+      "requiredRepairFramesProposed": [],
+      "framesToPreserve": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    }
+  },
+  "limits": [
+    "This is a fresh visual review of exported 1024 candidates, not a new read of previously retired 1254 native source PNGs.",
+    "Transparent sprites have no independently calibrated world-floor/collision plane. Contact statements describe the visible intended stance; client no-slip/physical contact remains unverified.",
+    "No candidate, selection, manifest, ZIP or other character was changed by this audit."
+  ],
+  "reviewEvidenceImage": "review/full-action-audit-NE-arm-transitions-20261004.png",
+  "checkedAt": "2026-10-05T04:10:56.960519+00:00",
+  "frames": [
+    {
+      "file": "candidate/run/NE/01.png",
+      "sha256": "b0c5d699e2990c5506a82dba4f45cb8de811026119405ed4c640e388ab45b669",
+      "pixelSha256": "613edb592dac8f38fa46d30a10c6107341ca3b112ea24f0bb7386d402983167b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/02.png",
+      "sha256": "bdb994471e68c97932746d499e2727e182ac171935c4f93aa275a4cddf9b6601",
+      "pixelSha256": "eaf27bc3735c3be07636e2dfedff5acea98bf5fdf45509ed53eb5dbac609b5a1",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/03.png",
+      "sha256": "34baa38a4f9b013742c6501281d31e6e0e7653753cc586ef749e5680969e2fc6",
+      "pixelSha256": "27ff1dc92e8fc05244373ed980f31c6eaf7ed0cef29fb89ae91c4339e9225978",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/04.png",
+      "sha256": "7585fd6e1a03ca96872f082ce37e0c5c023f764274c6bd166b48bc70ca7da2f9",
+      "pixelSha256": "bc09bf5d62c4d7681158bd15fcbb16a5054f3e25a65a5681362e3925e4f1e377",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": true
+    },
+    {
+      "file": "candidate/run/NE/05.png",
+      "sha256": "a262897b0c6c17553ba8d642a78f9d77ef2acbe117d8fd5988ec4bbbb3e6cf95",
+      "pixelSha256": "5f06076e29aef490cc7966277422cc57e4b74f1b5bba5ba6df74f8dafe8a0d15",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/06.png",
+      "sha256": "c11af24f0083c7fbc4edc596aff72641aa3bd112325cffd3708f881975748446",
+      "pixelSha256": "aceeeb92592ef49faa676cdc1ae95feedfb8ed27da90f562df7935912aff31a7",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/07.png",
+      "sha256": "5c5e15c0ac9bdfa85903e3328083af20da82d11a8d717a2102c3f429bf4a9c5f",
+      "pixelSha256": "3348d1bcc29de087ec464eff488ab125e9feea1ff58232c75cf3ca79eff4306e",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/08.png",
+      "sha256": "6eda2425cd5e26c5e6c812010ab5acf3b633d64479f1a7584ee15da6cc9cfbea",
+      "pixelSha256": "eb1b919f769c73f6767dedfbeac1bf6834b1778f7e6f7b53de13747120357365",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": true
+    },
+    {
+      "file": "candidate/run/NE/09.png",
+      "sha256": "a06664e1bc3fe4d04b34c6d757544ba9d578e9a906b664768e84d8d59c878577",
+      "pixelSha256": "68c20d4a6c260b530efc269a1db6cd1c382e23bc763d69f016586f2b4c42cd2c",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/10.png",
+      "sha256": "28fd0862b6a01a49cd4abbaf97e17277ffb761ceb03d440c3367e387f09cc7ac",
+      "pixelSha256": "f2393a12b2a046bf39d7fa4552258c7b2279df088d4c7e6d5634780dfc0647af",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/11.png",
+      "sha256": "17a3153429fb34a0a39a83d334b63f4ca5bbe43498b79506ad28ff7e4f417271",
+      "pixelSha256": "60e65711a118f7c07934645edb28a6d78c999b902b5628305fbc9c33ed75cb84",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/12.png",
+      "sha256": "5ae781e4f25c9741f4d9be1244bbf004dff0546d78435066f7f98710e0d97027",
+      "pixelSha256": "e57950e89cf766ec1da0c985faafb7e7983218fdbbb90566cf0aedaef36577cc",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/13.png",
+      "sha256": "7c6c8e4608b456d4cf7cc9304bca365ec20a81946c5aeb3d5a34763f0bac16af",
+      "pixelSha256": "2fcdc191874cbed29de46e3d4b15b03a5d37f3b2f687ce9c70cbd24eb5bb315d",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/14.png",
+      "sha256": "2634ea690691b9c6e4ddf99c0eb43e99b59bae446b481ca79fe6fd0f20cd4358",
+      "pixelSha256": "3ee69a88f63535d5663f59ea3433daae90c2c47c48dc8656eb145848ca727e2d",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/15.png",
+      "sha256": "475ccd415220b4dc5def8eff9126a6b2aafae03e40180de20fbafffe63a5f8d2",
+      "pixelSha256": "1c6367c8437a97f4ac7863165f49cb89d9bbf51d76b5486b950f63004229f89c",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NE/16.png",
+      "sha256": "4aada374861101e05ce5c6c954a4ae98672ac7c8de2ed9a941996ad1ea91f13e",
+      "pixelSha256": "399b29e781323aa690bb0f8fd29c419041f1d5083416552aede001887657e48f",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/01.png",
+      "sha256": "e6f195552cec1523b913c478a08a8316bbe85b0214be891aecbc61460d60757c",
+      "pixelSha256": "23fc863e96642fa7225bd952fa03f77f786372df1c25dcb1357fc2392dfcd882",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/02.png",
+      "sha256": "7ff6f3d053bc2ce1087131c40237b0784d9ad4fa164472d2777fc97288611839",
+      "pixelSha256": "ea812fcfe3a8a05211a7bb613b32c5deb682c3a31a180fc61c3f1455d04d845b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/03.png",
+      "sha256": "9917ea70b47805b087fa2f797db33d1feafc7b648ab50fbad0791f057e584aba",
+      "pixelSha256": "131e1393ad9d7e5cf499af07f6c9a735932717d85b94e0db34ad60bdd09efc63",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/04.png",
+      "sha256": "fc68a995c95c041d542c93972a456346cc394f5acf9763001fcc514d50101aa9",
+      "pixelSha256": "aa90cc988fc8aa4f2eb530546e0813c71185f79456391c81e403ac7b6704c562",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/05.png",
+      "sha256": "b3ebb4e82b0de5c378b4f0e45ad6f69141546c3566c15285b214d1f3e3c25057",
+      "pixelSha256": "7cb8f31637ec3bce9ee8a25fb64567fd1797c71b57c979ab36c0f2d646389fd9",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/06.png",
+      "sha256": "33878723e31de3dfb9a25e4756258d3c2adc29b0fe37c7436f97236c574f332c",
+      "pixelSha256": "2811c56b1121165d6873bef795dd75395599035fdd48447a8c9199666f6ead88",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/07.png",
+      "sha256": "206cf61e6937ff7ab22c50f68cf9252173b90fd3853ee62fa3b878150fe48906",
+      "pixelSha256": "96801578c54b799f2831e9d0747fb9925cca6577fb5bb5f79b289f0949b473f5",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/08.png",
+      "sha256": "d3ac136001e2560cda0f91dafe92e6509e235da5efd49f6d670dd230fc523643",
+      "pixelSha256": "aa61d020fd75d2d88c58356b50e2467545ecc752bb5565a45964417278392b84",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "left",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/09.png",
+      "sha256": "5e6cab747f4460a5a733f375dbe3afd20e05ae237349a0af0f868b46828efefd",
+      "pixelSha256": "644cc4cebeaf1fd2bec6b240d8d89a97be3eff19117950ab635f563f80ec0930",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/10.png",
+      "sha256": "d5e2989277c49f76de5e342f26b17d8e0e8b0bc5a23222b3524a30e9fe3f696a",
+      "pixelSha256": "7d2e9ed4542d2aa73cab35322e3bfc1bdcb74d7bd0b587889109d26e080316e0",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/11.png",
+      "sha256": "679f9795f243b0f1dbd5c8a57c2d499f2ff738fb06780cbe53316c3f09eb8606",
+      "pixelSha256": "84dfa2e10175c8990e7cbfcf4a66cd7eb6804497617ff5a4101bcd4759d82c13",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/12.png",
+      "sha256": "ff35d4f9989bf305ae31fa2b0d09bb21b8d971ab4ba6397d85e4a10da176ce65",
+      "pixelSha256": "9a5e1a14f35e6c897d360cc4ca61f09849c2fa34e136160561826ae83d4bc406",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/13.png",
+      "sha256": "398741afe99a75f79a6c5f16c409214fa8339832365f13b4227fd0b2940bbe60",
+      "pixelSha256": "33e0a69107aa4a7ceb7b6c6555ac8ed0ee9a8acb8ed681fc0eb7d4003f1398bd",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/14.png",
+      "sha256": "c451879d0abce1ac46ea5977f37a08f06de2a550e95e885b82161ee1172050c7",
+      "pixelSha256": "b89e74066bfecf0732e92cb951f35ae17b7171d0da2e7374cfec75699e03699c",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/15.png",
+      "sha256": "fb0620bb955883225479a5d7a1988c62d7e84e8df44fbf4ceca1a129c707ffa6",
+      "pixelSha256": "39ae5f8356aeab4f7e6ce907f2c6e6983e4560a914ddc1c14a5caa555aaed3ba",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    },
+    {
+      "file": "candidate/run/NW/16.png",
+      "sha256": "fa5e64c49d0a7f96759e66023712b07a176f990f0f08f5bc0b102d40676d0594",
+      "pixelSha256": "d3a94872966fa97bd2d50bdd5bbb7de0a0afe59b1803b0e1df34ccbfcfc006c5",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "durationMs": 75,
+      "matchesManifest": true,
+      "viewedAt1024": true,
+      "visibleAnatomicalRightHolds": "ice_sword",
+      "visibleAnatomicalLeftHolds": "blue_talisman",
+      "supportFoot": "right",
+      "requiredRepairProposed": false
+    }
+  ],
+  "technicalSummary": {
+    "count": 32,
+    "all1024RGBA": true,
+    "all75ms": true,
+    "allMatchManifest": true,
+    "uniquePixelFrames": 32,
+    "technicalChecksDoNotEstablishVisualPass": true
+  },
+  "reviewEvidenceImageSha256": "c1291d0672befbb942d86f6a96d87355635859cfcc77dabc6e9188153b876bce"
+}

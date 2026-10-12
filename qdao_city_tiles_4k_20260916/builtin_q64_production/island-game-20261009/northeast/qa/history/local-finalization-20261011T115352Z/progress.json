@@ -1,0 +1,136 @@
+{
+  "zone": "northeast",
+  "status": "native_production_in_progress",
+  "updatedAtUtc": "2026-10-11T04:07:19.273482+00:00",
+  "generatedNativeCount": 142,
+  "usableNativeCount": 75,
+  "complete4kCount": 4,
+  "formalAcceptedCount": 0,
+  "target4kCount": 49,
+  "currentTile": "r04_c13",
+  "currentPatch": "whole-tile-QA",
+  "nextStep": "Finish cross-tile jar color repair and connected2x2 validation; continue adjacent r03_c11 and r04_c14 native artwork.",
+  "errors": [
+    {
+      "stage": "python_discovery",
+      "error": "python command points to Windows Store alias; bundled Python selected as recovery",
+      "resolved": true
+    },
+    {
+      "resolved": true,
+      "recovery": "two native neighbors combined into one no-resize reference plate",
+      "stage": "r03_c12_p02_02 input submission",
+      "error": "referenced_image_paths must contain at most 5 paths"
+    },
+    {
+      "stage": "r03_c13_p02_02 attempt1",
+      "error": "image generation failed: network error: error sending request",
+      "resolved": true,
+      "retry": "same builtin input",
+      "recovery": "same builtin request succeeded on attempt2; native output saved and inspected"
+    },
+    {
+      "stage": "shared input availability",
+      "error": "D:/work/image/config/image-generation.json missing; batch metadata preserved from existing snapshot; no shared-file reconstruction attempted",
+      "resolved": true,
+      "recordedAtUtc": "2026-10-10T06:14:34.546419+00:00",
+      "action": "Recorded for delegating root; no substitute reference or alternate generation route used.",
+      "recovery": "Restored config and explicitly approved userJPG replacement for future calls; historical evidence unchanged.",
+      "resolvedAtUtc": "2026-10-10T09:06:22.567611+00:00"
+    },
+    {
+      "stage": "approved style reference availability",
+      "error": "D:/work/image/designs/mail-ui-v1/01-mail-event.png missing; child r04_c12_p01_01 and r03_c14_p04_02 requests failed before image output",
+      "resolved": true,
+      "recordedAtUtc": "2026-10-10T06:14:34.546419+00:00",
+      "action": "Recorded for delegating root; no substitute reference or alternate generation route used.",
+      "recovery": "Restored config and explicitly approved userJPG replacement for future calls; historical evidence unchanged.",
+      "resolvedAtUtc": "2026-10-10T09:06:22.567611+00:00"
+    }
+  ],
+  "clientMappingValidated": false,
+  "navigationValidated": false,
+  "capacity5000Validated": false,
+  "usableCorePatchCount": 64,
+  "usableRepairOverlayCount": 11,
+  "activeTiles": [
+    "r03_c11",
+    "r04_c13",
+    "r04_c14"
+  ],
+  "fullyCovered4kCount": 5,
+  "internalPassed4kCount": 4,
+  "externalPassed4kCount": 0,
+  "selectedCoreCoordinateCount": 87,
+  "complete4kCountDefinition": "legacy field: internally passed candidate count; see fullyCovered4kCount for pixel coverage",
+  "inFlightStatus": "parallel builtin native generation and QA",
+  "worldSize": [
+    57344,
+    57344
+  ],
+  "tileSummary": {
+    "r03_c12": {
+      "coreCoverage": 16,
+      "repairOverlays": 4,
+      "internalPassed": true,
+      "missingCores": 0
+    },
+    "r03_c13": {
+      "coreCoverage": 16,
+      "repairOverlays": 1,
+      "internalPassed": true,
+      "missingCores": 0
+    },
+    "r03_c14": {
+      "coreCoverage": 16,
+      "repairOverlays": 5,
+      "internalPassed": true,
+      "missingCores": 0
+    },
+    "r04_c12": {
+      "coreCoverage": 16,
+      "repairOverlays": 2,
+      "internalPassed": true,
+      "missingCores": 0
+    },
+    "r04_c13": {
+      "coreCoverage": 16,
+      "repairOverlays": 2,
+      "internalPassed": false,
+      "missingCores": 0
+    },
+    "r04_c14": {
+      "coreCoverage": 7,
+      "repairOverlays": 0,
+      "internalPassed": false,
+      "missingCores": 9
+    }
+  },
+  "knownSharedEdgesReviewed": [
+    {
+      "pair": [
+        "r03_c12",
+        "r03_c13"
+      ],
+      "reviewedPixels": 4096,
+      "geometry": "pass",
+      "scope": "shared edge only"
+    },
+    {
+      "pair": [
+        "r03_c13",
+        "r03_c14"
+      ],
+      "reviewedPixels": 4096,
+      "geometry": "pass",
+      "scope": "shared existing edge only; c14 partial"
+    }
+  ],
+  "delegatedElsewhere": [
+    "r01_c13",
+    "r01_c14",
+    "r02_c13",
+    "r02_c14"
+  ],
+  "ownedRemainingTarget4kCount": 45
+}

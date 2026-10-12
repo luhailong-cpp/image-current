@@ -1,0 +1,56 @@
+{
+  "createdAtUtc": "2026-10-09T21:47:20.238426+00:00",
+  "status": "failed_bottom_junction_continuity",
+  "formalAcceptedCount": 0,
+  "builtInCallsThisRepair": 1,
+  "native": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_04_a05.png",
+    "sha256": "2108bb2a144c0b0aa13efde962888b9127fdce0003a7cec4169fee1898e68264",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_04_a05.png.generation.json",
+    "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\prompts\\r03_c03_s03_04_a05.prompt.txt",
+    "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\receipts\\r03_c03_s03_04_a05.receipt.json",
+    "actualModel": null,
+    "actualQuality": null,
+    "unverifiedReason": "Host managed builtin tool did not disclose actual model/quality."
+  },
+  "reviewScale": "100% original pixels",
+  "findings": [
+    "The actual hard-seam edit input exposed the two original junctions. The generated a05 removes the visible double knot in its own single image.",
+    "The resulting single junction remains above the original lower-neighbor junction. After recomputing the ordinary minimum-error hard seam, the x~695 core region again contains two vertically stacked junctions and an extra narrow diamond/white branch.",
+    "This is still a structural seam failure, not an acceptable stone material variation.",
+    "The edit also changed stone and plant rendering outside its requested local ROI, including top and left overlaps. Whole a05 substitution is not justified."
+  ],
+  "decision": "Do not select a05. No local composite was made because the proposed repair still does not align with the required original lower junction. Stop after this one authorized built-in output and report.",
+  "pending": [
+    "x~60 was explicitly not repaired; final s03_03 four-way decision remains with parent.",
+    "Any later retry or a different hard-source selection requires its own native-scale geometry review."
+  ],
+  "evidence": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\s03_04a05_check\\record.json",
+      "sha256": "8d2540854fb96a7b34c03d0089c5678d6a4a1b04d4bc5fc3ad7adb4709df9aa8"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\s03_04a05_check\\bottom_hard_minerror100pct.png",
+      "sha256": "71883c885223a5528b9cdd28c13bfc3aabab771486c14786c60168dbb38bc1df"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\s03_04a05_check\\central_junction100pct.png",
+      "sha256": "634887f65f8081886ffd4856ccb61115cbab6c27aebe29aa19893bfd2476f835"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\s03_04a05_check\\guide_vs_a05_repair100pct.png",
+      "sha256": "d13e69cf85a376e377676b44016f3628b9fbc2b4b8aa45c08482b3306b7aca33"
+    }
+  ],
+  "untouched": [
+    "progress.json",
+    "selected manifests",
+    "s03_03 generation files",
+    "assemble_tile.py"
+  ]
+}

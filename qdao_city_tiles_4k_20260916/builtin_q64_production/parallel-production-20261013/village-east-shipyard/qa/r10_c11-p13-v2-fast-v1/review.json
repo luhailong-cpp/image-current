@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T09:04:06.522076+00:00",
+  "reviewType": "local_only_fast_east_rack_geometry",
+  "tile": "r10_c11",
+  "patch": "p13",
+  "version": 2,
+  "status": "blocked_east_rack_geometry_pending_repair",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p13-v2.png",
+    "sha256": "e6205c7463de26bfb9b8edf378b69288931f57c9b36b1c7abecb4cee02f291a0",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuides": {
+    "p13_layout": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p13-v2-layout-only.png",
+      "sha256": "6765ca14ae5bee8d991d72c056f3bb48176e12fc31c405230355483e85f0b2b8",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "p14_layout": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p14-v1-layout-only.png",
+      "sha256": "00cd26787afb30c126f3458f8b48dadbb0c59db74363b4f958d171680dc30c8d",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "canAnchor": {
+    "p14_east": false
+  },
+  "decision": "The reported high east-running wooden rack beams are confirmed. Keep p13-v2 unpassed and do not propagate its full east overlap as the fixed west anchor for p14.",
+  "blockers": [
+    {
+      "id": "B1_east_rack_beams_too_high",
+      "severity": "blocks_p14_east_continuation",
+      "candidateNativeSharedCoreX": 1139,
+      "p14CorrespondingCoreX": 115,
+      "nativeWorldShiftX": 1024,
+      "affectedOutgoingStrip": [
+        1024,
+        200,
+        1254,
+        850
+      ],
+      "upperDiagonalBeam": {
+        "candidateYApprox": [
+          228,
+          390
+        ],
+        "guideSoftYApprox": [
+          320,
+          510
+        ],
+        "observed": "The rising upper/rear beam occupies a higher band than the same-world layout. Its dark face is roughly 90-110 px too high at the core exit."
+      },
+      "foregroundBeam": {
+        "candidateYApprox": [
+          516,
+          738
+        ],
+        "guideSoftYApprox": [
+          550,
+          810
+        ],
+        "observed": "The front beam also exits high; its lower contour is approximately 70-80 px above the guide lower contour. This is a silhouette/placement discrepancy rather than a wood-grain detail."
+      },
+      "confidenceNote": "All intervals are manual approximate readings at x1139. Guides are blurry; they define the object footprint, not exact final-pixel contours. Both independent adjacent coordinate crops visibly agree on the lower intended beam course.",
+      "propagation": "Copying p13 x1024..1254 into p14 x0..230 fixes both beams and the grey inset at elevated coordinates; following the approved p14 guide then requires an abrupt bend/step or shifts the rack footprint through p14.",
+      "evidence": [
+        "east-overlap-native-guide-guide-100pct.png",
+        "p13-to-p14-core-guide-junction-100pct.png"
+      ],
+      "repairScope": "Required repair is the outgoing right-hand rack geometry. Do not change the already-checked p11/p12/p21 sources or treat this deferred correction as passed."
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidence": [
+    {
+      "file": "east-overlap-native-guide-guide-100pct.png",
+      "size": [
+        690,
+        800
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            1024,
+            150,
+            1254,
+            950
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "p13_layout",
+          "crop": [
+            1024,
+            150,
+            1254,
+            950
+          ],
+          "paste": [
+            230,
+            0
+          ]
+        },
+        {
+          "input": "p14_layout",
+          "crop": [
+            0,
+            150,
+            230,
+            950
+          ],
+          "paste": [
+            460,
+            0
+          ]
+        }
+      ],
+      "purpose": "Same world 230px overlap: native p13 left, p13 guide middle, p14 guide right. Candidate/source core boundary x1139 is panel-local x115; p14 boundary x115 is panel-local x115. No vertical offset.",
+      "sha256": "9978d483ce08a2fd7623be5491afdb2ca7ff4429caf122b619b8d594c797a19c"
+    },
+    {
+      "file": "p13-to-p14-core-guide-junction-100pct.png",
+      "size": [
+        500,
+        700
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            939,
+            200,
+            1139,
+            900
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "p14_layout",
+          "crop": [
+            115,
+            200,
+            415,
+            900
+          ],
+          "paste": [
+            200,
+            0
+          ]
+        }
+      ],
+      "purpose": "True core join placed at image x200: p13 native through x1138 then p14 layout from x115. This is diagnostic reference comparison, not final art.",
+      "sha256": "649509f0db30f0c280319e570729e2be61859c39af34e3d1d6cab9dbd2665d8e"
+    }
+  ],
+  "allThreeInputsViewedAt100Percent": true,
+  "evidenceViewedAt100Percent": true,
+  "resized": false,
+  "evidenceOperations": "Exact crops and horizontal concatenation only, without scaling, drawing, blending or sharpening. Guide pixels are comparison-only and never final art.",
+  "networkState": "revoked; no restoration evidence provided",
+  "generationModelEvidence": "not inspected in this local geometry QA; root owns source/request audit; no model assertion made",
+  "scopeLimits": {
+    "networkUsed": false,
+    "generationPerformed": false,
+    "previousPassedChecksRepeated": false,
+    "overviewRebuilt": false,
+    "sourcesOrSelectionsEdited": false,
+    "gitTouched": false,
+    "fullTileAcceptancePerformed": false
+  },
+  "nextStep": "Persist the blocked geometry record and retain all saved source versions. Keep p14 continuation intercepted until the local rack correction is actually produced and rechecked under restored generation authorization. No background generation or pending network action is claimed."
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "file": "generation/E/08-support-v3.png",
+  "reviewedAt": "2026-10-04T22:00:55.230Z",
+  "reviewMethod": "Actual full native PNG inspected with view_image; alpha >8 extents measured separately. Coordinates are observations, not applied image transforms.",
+  "decision": "improved_geometry_candidate_with_support_height_residual",
+  "selectedByThisAgent": false,
+  "visualAccepted": false,
+  "observedPhase": "Near anatomical RIGHT rearward shoe has raised heel and downward toe/forefoot; far LEFT forward shoe stays airborne. Rear support endpoint moved backward, but ends above the fixed diagnostic y1164.",
+  "supportFoot": {
+    "anatomicalSide": "RIGHT",
+    "screenSide": "rear_left",
+    "soleY": 1141,
+    "lowerShoeAlphaGt8ROI": [
+      296,
+      1050,
+      497,
+      1142
+    ],
+    "approxWholeShoeCenterX": 361,
+    "targetCompared": "08-support-v1.png",
+    "previousApproxWholeShoeCenterX": 465,
+    "actualRearwardScreenLeftPx": 104
+  },
+  "swingFoot": {
+    "anatomicalSide": "LEFT",
+    "airborne": true,
+    "observedBottomApproxY": 1093,
+    "unchangedVisualPose": true
+  },
+  "upperBody": {
+    "headTopAlphaGt8": 86,
+    "poseAndPropOwnership": "Near RIGHT shoulder-to-sleeve-to-hand visibly continues to lantern; far LEFT arm continues to bottle. Upper-body registration visually retained.",
+    "lanternRightmostVisibleX": 1250,
+    "canvasRightMarginPx": 3,
+    "edgeAlphaMax": 3,
+    "clippedAtSignificantAlpha": false
+  },
+  "issues": [
+    "Rear support sole y1141 is 23 px above provisional E diagnostic plane, 16 px higher than target v1 y1157; cannot certify exact ground contact from standalone transparent image.",
+    "Lamp outer petal is now visually complete but only 3 px significant-alpha margin remains, less than requested 12 px.",
+    "Target waist ribbons were mildly redrawn locally near edited hip/leg; no body translation or scaling was applied."
+  ],
+  "sourceIntegrity": {
+    "builtinIndependentCall": true,
+    "actualModel": null,
+    "actualQuality": null,
+    "programmaticBodyMove": false
+  },
+  "inputUpdated": false
+}

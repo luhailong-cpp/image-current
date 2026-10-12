@@ -1,0 +1,27 @@
+{
+  "scope": "Independent QA only; no native/selection/progress/prior QA changes",
+  "status": "no_defensible_complete_repair_found",
+  "formalAccepted": false,
+  "nativeSourcesActuallyViewed": [
+    "s02_02_resume02",
+    "s02_02_transitionfix01",
+    "s02_02_transitionfix02",
+    "s02_02_transitionfix03",
+    "s02_02_transitionfix04",
+    "s02_04_resume02",
+    "s02_04_transitionfix01",
+    "s02_04_transitionfix02"
+  ],
+  "nativeScaleCropRecords": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\independent-transition-review-20261012\\crop-records.json",
+  "proposalRecords": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\independent-transition-review-20261012\\proposal-records.json",
+  "mechanicalProof": "Every tested proposal pixel reconstructed exactly from its base or donor at the identical source coordinate, with PNG hashes, native provenance, and binary mask. No resize, warping, blending, recoloring or generated texture.",
+  "findings": [
+    "s02_02_transitionfix02 supplies a continuous grid but moves the west anchor; simply using it as the source fails the real west join.",
+    "s02_02_transitionfix03 and transitionfix04 are closer to the desired T-junction layout, but retain a southwest branch from the native junction near (267,770); its endpoint is disconnected inside a slab.",
+    "Both s02_04 donors retain a southwest middle tail; transitionfix01 extends it farther left but it still terminates inside a slab. The lower donor tail also remains.",
+    "The three explicit minimum-error overlays tested here fail transition QA. They are evidence probes only and are not suitable for source selection.",
+    "The selected sources remain unchanged; their two previously recorded blockers are not resolved by this review."
+  ],
+  "limits": "This is a visual rejection of the supplied native sources and the saved minimum-error probes, not a proof that every possible binary pixel mask is impossible. No proposal earned complete perimeter acceptance.",
+  "recommendedNextNativeEdit": "Use anchor-preserving native edit to close or remove the remaining donor branches while preserving the full x115/y115 core seam anchors; inspect complete native-scale transition and all perimeter joins before any selection."
+}

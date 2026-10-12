@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T04:28:06.830203+00:00",
+  "tile": "r09_c01",
+  "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\manifest.json",
+  "manifestSha256": "2391be64f83857b043d64b6d0a353691164d367189d31e65648ffa6457802849",
+  "selectedNativeCount": 16,
+  "missingPatchIds": [],
+  "formalAccepted": false,
+  "status": "defects_open_formal_acceptance_withheld",
+  "actualModel": null,
+  "actualQuality": null,
+  "sourceCandidateActuallyViewed": true,
+  "sourceCandidateViewNote": "Full or partial overview viewed; per-pixel material acceptance is not established by overview.",
+  "additionalRectangleActuallyViewed": false,
+  "actuallyViewedNativeQaPanels": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-intersections.png",
+      "sha256": "6d8b213bc89a898bbecade8d731be6a2a8682eb9e4fc129eff17e4a9b09e40a5",
+      "pixels": [
+        1572,
+        1608
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-vertical-x1024.png",
+      "sha256": "8d167447ce252b7fc00d9edd54daf87acab8fa176a5a5e30715acb8b5be7fdbc",
+      "pixels": [
+        1000,
+        1048
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-vertical-x2048.png",
+      "sha256": "fdc52159b6aaf80a5b4843b8ad5d64208a83b09d5e61e8c96768c186509f89f5",
+      "pixels": [
+        1000,
+        1048
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-vertical-x3072.png",
+      "sha256": "df6f7ae83057030c032ebe028505e29ebfaf00e6d0e0eebd619cbedda93decd2",
+      "pixels": [
+        1000,
+        1048
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-horizontal-y1024.png",
+      "sha256": "5976481f18621a97f323c6c23a71508839e44107e482b747e14abf09c465fec8",
+      "pixels": [
+        1024,
+        1048
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-horizontal-y2048.png",
+      "sha256": "223dc5213387f8eb53dfef81a77b5eb47533b892e3971160c18f87ed2aa738c4",
+      "pixels": [
+        1024,
+        1048
+      ],
+      "status": "actually_viewed"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\local-review-20261013-v01\\main-horizontal-y3072.png",
+      "sha256": "09cf3b111b7fa749ba8251508883319423b33c41745c87a22b70aae0ef70f320",
+      "pixels": [
+        1024,
+        1048
+      ],
+      "status": "actually_viewed"
+    }
+  ],
+  "unreviewedNativeQaPanels": [],
+  "repairQueue": [
+    {
+      "id": "c01-blue-board-tone",
+      "kind": "material_seam",
+      "priority": 1,
+      "approximateTilePixelBox": [
+        250,
+        905,
+        1200,
+        1143
+      ],
+      "patches": [
+        "p01_01",
+        "p01_02",
+        "p02_01",
+        "p02_02"
+      ],
+      "evidence": [
+        "main-horizontal-y1024.png",
+        "main-intersections.png"
+      ],
+      "observation": "Same curved turquoise roof-board surface has a hard irregular horizontal shade/brush-density boundary near y1024, crossing multiple boards without a physical joint.",
+      "futureRepairIntent": "Unify painted blue-board tone and grain over the existing shape; preserve gold silhouette and board grooves."
+    },
+    {
+      "id": "c01-brown-plane-tone",
+      "kind": "material_seam",
+      "priority": 2,
+      "approximateTilePixelBox": [
+        1929,
+        1792,
+        2167,
+        2816
+      ],
+      "patches": [
+        "p02_02",
+        "p02_03",
+        "p03_02",
+        "p03_03"
+      ],
+      "evidence": [
+        "main-vertical-x2048.png",
+        "main-intersections.png"
+      ],
+      "observation": "Broad sloped brown surface retains a narrow vertical tone/brush transition around x2048; continuity is unresolved.",
+      "futureRepairIntent": "Match one continuous surface material without moving its outline, tree shadows or adjacent roof."
+    },
+    {
+      "id": "c01-background-tone",
+      "kind": "material_seam",
+      "priority": 1,
+      "approximateTilePixelBox": [
+        1929,
+        2816,
+        2167,
+        4096
+      ],
+      "patches": [
+        "p03_02",
+        "p03_03",
+        "p04_02",
+        "p04_03"
+      ],
+      "evidence": [
+        "main-vertical-x2048.png",
+        "main-intersections.png",
+        "main-horizontal-y3072.png"
+      ],
+      "observation": "Unjointed grey-brown background below the sloped plane has a conspicuous jagged vertical light/dark boundary near x2048, continuing behind the lower lantern.",
+      "futureRepairIntent": "Repaint only the background material/shadow continuity at native scale; preserve lantern and timber edges."
+    }
+  ],
+  "externalBordersNotReviewed": [
+    "top",
+    "bottom",
+    "left_outer_world_edge"
+  ],
+  "modelGate": "No new generation or AI repair until explicit verified GPT Image 2.5 route exists. Existing art remains preserved and actual model metadata unknown.",
+  "generatorCallsDuringReview": 0,
+  "sourceResampling": false,
+  "missingPixelsFilled": false
+}

@@ -1,0 +1,334 @@
+{
+  "status": "GEOMETRY_PASS_MATERIAL_REVIEW_PENDING",
+  "reviewedAtUtc": "2026-10-10T18:40:26.678Z",
+  "reviewer": "/root/sw_boundary_qa",
+  "geometryPassed": true,
+  "internalPassed": false,
+  "formalAccepted": false,
+  "allSevenListedGeometricDefectsResolved": true,
+  "output": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c05/refinement-resume20261010/integrated-v2/r11_c05.repaired-v2.candidate.png",
+    "sha256": "a003e9ab16588dc8373440bda3e2a28d97cd67b626446c504b1bad7bd6aa0af8",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c05/refinement-resume20261010/integrated-v2/r11_c05.repaired-v2.candidate.context.png",
+    "sha256": "0d6d89a6e6c97ef1b397a77268b83a745d4333579e18e64f4f827bd34fbc6906",
+    "pixels": [
+      4326,
+      4326
+    ]
+  },
+  "assembly": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c05/refinement-resume20261010/integrated-v2/assembly.json",
+    "sha256": "5f13837c4eafaa1c1f65ce02ec8d206634c2562b3d28eccd04f06b2d77902f07"
+  },
+  "conclusion": "The seven previously identified clear dangling/offset grout defects are resolved in the integrated candidate. Independent source-hash verification and exact replay confirm no crossed-mask overwrite, and the north boundary remains unchanged. Geometry pass is limited to this review; full tile internal acceptance is withheld because material polish/style issues remain.",
+  "geometryFindings": [
+    {
+      "id": "G01",
+      "passed": true,
+      "corePoint": [
+        930,
+        2795
+      ],
+      "finding": "Unsupported northwest spur is fully removed. No remaining beveled free endpoint."
+    },
+    {
+      "id": "G02",
+      "passed": true,
+      "corePoint": [
+        1113,
+        3158
+      ],
+      "finding": "Short unsupported southwest spur is removed; original NE-SE corner remains clean."
+    },
+    {
+      "id": "G03",
+      "passed": true,
+      "corePoint": [
+        1100,
+        3290
+      ],
+      "finding": "Previously free diagonal now reaches the existing southeast edge in a continuous T-junction; A/B junctions remain separated and coherent."
+    },
+    {
+      "id": "G04",
+      "passed": true,
+      "corePoint": [
+        975,
+        3642
+      ],
+      "finding": "Visible gap and offset are replaced by a continuous groove and bevel; no new dangling endpoint visible in crop."
+    },
+    {
+      "id": "G05",
+      "passed": true,
+      "corePoint": [
+        1065,
+        4000
+      ],
+      "finding": "Small positional/width notch is smoothed into a continuous diagonal."
+    },
+    {
+      "id": "G06",
+      "passed": true,
+      "corePoint": [
+        2118,
+        2165
+      ],
+      "finding": "Original deep horizontal free-end groove and bright bevel are removed, leaving the vertical-to-right corner intact. A very faint leftward tonal trace remains, listed below as material polish."
+    },
+    {
+      "id": "G07",
+      "passed": true,
+      "corePoint": [
+        930,
+        2350
+      ],
+      "finding": "Original stepped/doubled joint now connects continuously. Expanded repair corridor intentionally moves the local T endpoint by about six pixels; far diagonal and vertical stem remain connected.",
+      "localTEndpointAdjustmentPixels": 6
+    }
+  ],
+  "materialReview": {
+    "passed": false,
+    "severity": "P2",
+    "internalAcceptanceGranted": false,
+    "findings": [
+      {
+        "id": "M01",
+        "severity": "P2",
+        "category": "stone-tone-continuity",
+        "coreBox": [
+          2950,
+          1030,
+          3150,
+          1490
+        ],
+        "finding": "Mild slanted warm/cool tone transition remains on second-row stair risers around x3072. Previously improved dominant x2048 tone seam remains fixed."
+      },
+      {
+        "id": "M02",
+        "severity": "P2",
+        "category": "texture-density-style",
+        "coreBox": [
+          0,
+          1500,
+          4096,
+          4096
+        ],
+        "finding": "Close inspection shows dense, repetitive small diagonal/rhomboid stone microtexture over large slabs. It reads more granular/patterned than a calm natural stone surface. This is a qualitative material/style concern, not a disconnected geometry line; reference and native crop have different viewing scales, so no quantitative density claim is made."
+      },
+      {
+        "id": "M03",
+        "severity": "P2",
+        "category": "residual-tonal-trace",
+        "coreBox": [
+          2115,
+          2155,
+          2170,
+          2175
+        ],
+        "finding": "A faint horizontal gray trace remains left of the corrected G06 corner. It no longer has the original deep grout trench or bright bevel, but is still visible at native scale and deserves polish."
+      }
+    ]
+  },
+  "northBoundary": {
+    "passed": true,
+    "r10SourceUnchanged": true,
+    "r10Sha256": "f228d0e07c4ed329bdcce87a46abb0ddeb48c9688dab1d86b33456051797ecad",
+    "currentNorthComparisonMatchesFourPreviouslyViewedNativeWidthCrops": true,
+    "first116ContextRowsEqualFixedNorthReference": true,
+    "upper2048ContextRowsExactlyPreserved": true,
+    "finding": "Viewed all four 1024-wide north cross-tile strips and verified each remains pixel-identical to the current integrated candidate pairing. Leaf and stone/stair continuity remain intact."
+  },
+  "mergeVerification": {
+    "contextReplayExact": true,
+    "allRecordedHashesMatch": true,
+    "coreEqualsContextCrop": true,
+    "allSevenQACropsExact": true,
+    "maskOverlapPixels": 0,
+    "outsideMasksExact": true,
+    "upperContext0to2048Unchanged": true,
+    "acceptedP04RepairUnchanged": true,
+    "northComparisonFourCropsExact": true,
+    "northFirst116RowsEqualFixedBoundary": true,
+    "r10SourceHashUnchanged": true,
+    "recordedFileHashesVerified": 23,
+    "activeMaskPixelCount": 147337,
+    "patches": [
+      {
+        "id": "G01-G02",
+        "activePixels": 32499,
+        "contextBox": [
+          1021,
+          2886,
+          1385,
+          3301
+        ]
+      },
+      {
+        "id": "G07",
+        "activePixels": 32597,
+        "contextBox": [
+          744,
+          2371,
+          1180,
+          2688
+        ]
+      },
+      {
+        "id": "G03",
+        "activePixels": 27501,
+        "contextBox": [
+          1026,
+          3212,
+          1451,
+          3562
+        ]
+      },
+      {
+        "id": "G04",
+        "activePixels": 37287,
+        "contextBox": [
+          655,
+          3551,
+          1334,
+          4119
+        ]
+      },
+      {
+        "id": "G05",
+        "activePixels": 13478,
+        "contextBox": [
+          1002,
+          4008,
+          1323,
+          4262
+        ]
+      },
+      {
+        "id": "G06",
+        "activePixels": 3975,
+        "contextBox": [
+          2210,
+          2250,
+          2285,
+          2303
+        ]
+      }
+    ],
+    "verifiedFiles": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\full-tile-review\\output\\r11_c05.repaired.candidate.context.png",
+        "sha256": "09e3107e74361a9c2cc3a1b2911554ad3dbb470843a833d6e648e47b86804686"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\assembly.json",
+        "sha256": "62e3c84fe5ebbc4635f58380e0d67deeca3ffc0f69f09ca32bcf8cc0650a172c"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\overlay-proposal.json",
+        "sha256": "8459e990c500c847ddd99147b3518f0d124a9136cc0a4b84bf6ea09708a4808c"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\c-repair\\overlay-proposal.json",
+        "sha256": "93c9fb73d95c522ccb9ece5fb4a3f5b0fdd9fe50ed8a2a6618a392d378ba495f"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\integrated-v2\\r11_c05.repaired-v2.candidate.context.png",
+        "sha256": "0d6d89a6e6c97ef1b397a77268b83a745d4333579e18e64f4f827bd34fbc6906"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\integrated-v2\\r11_c05.repaired-v2.candidate.png",
+        "sha256": "a003e9ab16588dc8373440bda3e2a28d97cd67b626446c504b1bad7bd6aa0af8"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\G01-G02.preblended.patch.png",
+        "sha256": "aa90639b49c28b98c67d583bde070b9cce7d9772ba0a5a5a61616f0766407325"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\native\\group-a-v4.png",
+        "sha256": "ce55aefa7506bb9eb27f8a5e39180ef8ad52a654af866c4364b0f23fbb15f7af"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\G01-G02.paste-mask.png",
+        "sha256": "8b72a5fb7d8527a9b63330c829d0329e1b7e1b66f3779d515b9ae929bc3a0af6"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\G07.preblended.patch.png",
+        "sha256": "95b3ce297cc908533347e5075662d3143d87ceb8e240ae9ee989b63d606d4386"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\G07-worker\\native\\G07-v1.raw.png",
+        "sha256": "6e250ca116eb50bb9b96e665f99ee64feb3aec45940fc7679b19e8c56287b39c"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\G07.paste-mask.png",
+        "sha256": "cf1a96b4a0b98ead796bdc177235ad5810bae925d2637b1e66ae0167a589ebe7"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G03.preblended.patch.png",
+        "sha256": "60ed0e31e52b6cde0f02edad208459024f1bd2d9eb58af040b5ed3039741b3cd"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\native\\B-v1.png",
+        "sha256": "8bb5535acc6655253fee767e90d189579dcc1cadceccac7401fefcd282aa4c04"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G03.paste-mask.png",
+        "sha256": "8d69fa2121f4b26faa748b99175ae841470f0fd3f23f92f257ce242f26be4a3f"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G04.preblended.patch.png",
+        "sha256": "5d2cba22a7b629ae217b2b897f6e5c7b06952d68f5416a0f0196a3c5b3a40eed"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\native\\B-v2.png",
+        "sha256": "db9e1b7115559afbccac231cf55ee64a7cadb87921438854a170aa51f217f87a"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G04.paste-mask.png",
+        "sha256": "2e07f3bab353a514118a356c7653912946297a8498def02b1f7493246896a1e1"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G05.preblended.patch.png",
+        "sha256": "5fa0697424f469b2af788255fada8cdc37844dd9d51c01d2ee3deb3efab00664"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\native\\B-v1.png",
+        "sha256": "8bb5535acc6655253fee767e90d189579dcc1cadceccac7401fefcd282aa4c04"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\G05.paste-mask.png",
+        "sha256": "9c58091628b3088929c8f486fdd0a7a36a81fc5859a1e0d35917022006a28e8c"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\c-repair\\c-horizontal-joint.overlay.patch.png",
+        "sha256": "aa44984f11e812e36f4393d555b18ebf0ed9b2b720cfd6e8d4e7361c3ebeabde"
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\c-repair\\c-horizontal-joint.native.png",
+        "sha256": "faa2e762f29e8669e072b04edc7ae943ae70b68f61bb23033aeeeea1919d656a"
+      }
+    ]
+  },
+  "reviewCoverage": {
+    "entire4096OverviewViewed": true,
+    "allSevenNativeResolutionQACropsViewed": true,
+    "allSevenQACropsValidatedAgainstCore": true,
+    "northAllFourSegmentsViewed": true,
+    "approvedDetailStyleReferenceViewed": true,
+    "otherExternalBordersReviewed": false,
+    "gameCameraOrClientRenderingTested": false
+  },
+  "modificationScope": {
+    "newGenerationCalls": 0,
+    "sourceImagesModified": false,
+    "nativeSelectionProgressModified": false,
+    "onlyWrittenFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c05/refinement-resume20261010/integrated-v2/qa-review.json"
+  }
+}

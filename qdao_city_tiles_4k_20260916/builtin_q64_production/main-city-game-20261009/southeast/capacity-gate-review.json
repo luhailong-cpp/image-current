@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T05:10:30.0254275Z",
+  "status": "capacity_sensitive_inventory_only_gate_remains_active",
+  "gate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-gate-20261010.json",
+  "tileId": "r13_c13",
+  "sources": {
+    "candidate": {
+      "path": "r13_c13/candidate/r13_c13-4k-candidate-repaired.png",
+      "sha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+      "pixels": [
+        4096,
+        4096
+      ]
+    },
+    "layoutCrop": {
+      "path": "r13_c13/layout-only/tile-layout-only.png",
+      "sha256": "7b49d65b6182bdaf67ea254c4cae40d09f4a817890bd83e3a173dc9a4338dbcb",
+      "role": "layout-only"
+    },
+    "approvedFullLayout": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7"
+    }
+  },
+  "coordinateSystem": {
+    "origin": "current 4096 candidate top-left",
+    "bounds": [
+      0,
+      0,
+      4096,
+      4096
+    ],
+    "boxes": "Integer pixel inspection ROIs [left,top,right,bottom); approximate object envelopes, not collision masks or new generation coordinates",
+    "existingArtOrigin": [
+      49152,
+      49152
+    ]
+  },
+  "scaleLimit": "本块是已画出的巨幅家具/地面细节裁图；高像素数不代表已验证世界尺度。禁止从桌腿、砖块或伞面推定角色大小、米数、站人数量、通行宽度或5000人容量。",
+  "worldSize": null,
+  "characterFootprint": null,
+  "walkableArea": null,
+  "capacity5000Validated": false,
+  "reviewMethod": "Read-only inspection of current candidate, existing native QA evidence, approved tile-layout crop and full v9 layout. Whole-candidate tool display was resized to 3200 for viewing; ROI coordinates are expressed in the original 4096 system. No masks, crop files, artwork, collision or navigation data were created.",
+  "risks": [
+    {
+      "id": "northwest-timber-supports",
+      "priority": "high",
+      "roi": [
+        300,
+        0,
+        1900,
+        1150
+      ],
+      "observed": "大木桌/架的直腿、横撑、斜撑占据左上区域，并继续延伸出北边界。",
+      "capacitySensitiveRisk": "桌下能看见地砖，仍有木腿和斜撑阻挡；不能将所有可见地面计作可走面积。完整物体占地和北侧出口关系超出本块。",
+      "requiredCheck": "在冻结的尺度与碰撞规则中分别核对桌架支撑和可通行间隙；结合现有北侧布局确认是否存在绕行。"
+    },
+    {
+      "id": "inn-seating-approach",
+      "priority": "high",
+      "roi": [
+        1550,
+        0,
+        3420,
+        1370
+      ],
+      "observed": "圆桌、小凳和伞旁凳围住上方铺地；左侧斜撑朝该空隙伸出。",
+      "capacitySensitiveRisk": "客栈外摆可能压缩出入路径；桌凳之间的视觉空隙尚无角色占地依据，不能断言可通行或计算人数。",
+      "requiredCheck": "核对客栈入口到中央铺地的连通关系，区分家具实际地面占位与家具上表面投影。"
+    },
+    {
+      "id": "parasol-and-east-bench",
+      "priority": "high",
+      "roi": [
+        2600,
+        320,
+        4096,
+        3060
+      ],
+      "observed": "右侧伞面遮盖大片地面，下有木支柱，右下长凳/木台与栏件延伸出东边界。",
+      "capacitySensitiveRisk": "伞面与阴影不是等同的地面障碍；支柱和凳体却可能阻断绕行。若按整个伞面扣面积会低估空间，若把其下全当可走又可能穿过家具。",
+      "requiredCheck": "确认遮挡层与碰撞占位分离，并连同东侧既有布局核对绕行；不能仅依据本块确定入口或通路宽度。"
+    },
+    {
+      "id": "center-paving-continuity",
+      "priority": "high",
+      "roi": [
+        950,
+        1100,
+        2850,
+        3200
+      ],
+      "observed": "中央至下方保持连续可见铺地；先前独立植物已移除。",
+      "capacitySensitiveRisk": "这只是潜在通行表面，尚未确认连接到主路、旁路或活动节点；一个局部空地不能代表全城通行网络。",
+      "requiredCheck": "只在主任务冻结世界尺度、角色占地和邻区连接后评估。不要以局部内部视觉PASS代替导航或容量通过。"
+    },
+    {
+      "id": "southwest-foliage-and-paving-inlay",
+      "priority": "medium",
+      "roi": [
+        0,
+        2280,
+        2110,
+        4096
+      ],
+      "observed": "左下边缘有植物，铺地含蓝灰色嵌边和转角；画面未证明这些嵌边存在高差。",
+      "capacitySensitiveRisk": "植物遮盖部分边缘地面，不能据叶冠推断地面占位；蓝灰装饰带也不能自动当墙、台阶或通行边界。",
+      "requiredCheck": "核对植物实际根部/墙边关系与材质带是否仅为平面装饰；不要把红纸碎屑自动加入障碍清单。"
+    },
+    {
+      "id": "cropped-building-footprint",
+      "priority": "high",
+      "roi": [
+        3420,
+        0,
+        4096,
+        500
+      ],
+      "observed": "右上可见建筑/木柱基座和墙面，完整客栈主体及入口不在当前裁图内。",
+      "capacitySensitiveRisk": "本块无法提供完整建筑占地、室外集散面积或入口瓶颈；不能外推整座客栈或本分区容量。",
+      "requiredCheck": "主任务使用已确认完整布局与统一尺度复核建筑占地、入口及回环，不新增坐标生成。"
+    }
+  ],
+  "preservedArtQa": {
+    "internalVisualVerdict": "pass",
+    "coveredCandidateSha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+    "externalVerdict": "pending",
+    "formalAccepted": false,
+    "outerHaloKnownIssue": "已有外围上下文在正式块以外约x4155–4211仍有旧竹骨/伞沿残留，沿用原QA记录；不是本块内部新问题。",
+    "qaReport": "r13_c13/review/current/qa-report.json"
+  },
+  "provenanceEvidenceGap": {
+    "primaryStylePath": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "primaryStyleCurrentlyExists": false,
+    "recordedPrimaryStyleSha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+    "styleIndexPath": "D:/work/image/designs/README.md",
+    "styleIndexCurrentlyExists": false,
+    "impact": "现存记录及旧查看证据保留，但当前无法从原路径重新核验该风格参考。不会把其他JPG视为相同图或相同哈希。该证据缺口不改变既有成图哈希和内部视觉结论。"
+  },
+  "actionsTaken": {
+    "newImageRequests": 0,
+    "newArtwork": false,
+    "newMasks": false,
+    "newCoordinateGeneration": false,
+    "existingArtworkChanged": false,
+    "progressChanged": false,
+    "sharedFilesChanged": false,
+    "gateReleased": false
+  },
+  "nextAuthority": "Only root may release capacity/layout gate after scale and layout validation."
+}

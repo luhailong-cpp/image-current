@@ -1,0 +1,134 @@
+{
+  "createdAtUtc": "2026-10-09T21:03:57.992Z",
+  "candidate": "hardseam-v04-candidate-4096.png",
+  "candidateSha256": "8ee82b7ea612c125dc243d2f64404ed4d0f50a9e487fdcb8754da5f20f3b9206",
+  "status": "candidate_pending_external_QA; not promoted; no formal acceptance",
+  "selectedAssembly": {
+    "source17Base": "hardseam-v02-candidate-4096.png",
+    "source17Intermediate": "hardseam-v04-lower3-candidate-4096.png",
+    "source17Report": "hardseam-v04-lower3-report.json",
+    "source17RepairPatchRois": [
+      [
+        0,
+        0,
+        720,
+        780
+      ],
+      [
+        875,
+        0,
+        1150,
+        720
+      ]
+    ],
+    "source17MandatoryTargets": [
+      [
+        170,
+        440,
+        550,
+        610
+      ],
+      [
+        980,
+        400,
+        1050,
+        600
+      ]
+    ],
+    "source17SelectedPixels": 608550,
+    "source18RepairPatchRoi": [
+      395,
+      360,
+      1210,
+      860
+    ],
+    "source18MandatoryTarget": [
+      520,
+      470,
+      1050,
+      780
+    ],
+    "source18SelectedPixels": 309600,
+    "bandPixels": 64,
+    "algorithm": "For each ROI take the intersection of four continuous DP edge paths; union the two separate source-17 ROI masks. All coordinates remain native. Rebuild source-17 selection over v02 to remove only its unneeded contribution from v03, then add source 18.",
+    "source17BinaryMask": "hardseam-v04-lower3-repair-selection-mask.png",
+    "source18BinaryMask": "hardseam-v04-repair-selection-mask.png",
+    "completeSourceIdMask": "hardseam-v04-source-id-mask.png"
+  },
+  "inspected": [
+    "new source18 native image",
+    "source17 old edit target",
+    "all four boundaries for both selected source17 ROIs at 100%",
+    "all four boundaries for source18 ROI at 100%",
+    "source18 mandatory target at 100%",
+    "source17 wood and narrow-wall mandatory targets at 100%",
+    "source17 top and bottom cropped comparisons against v03",
+    "previous bottom issue cropped comparison against v03",
+    "1254 QA preview"
+  ],
+  "results": [
+    {
+      "target": "门楣角状色块",
+      "result": "指定目标完整采用source18，原中央角状色阶消失。梁上缘、柱边和金边保持连续。",
+      "evidence": "hardseam-v04-door-target-v03-left-v04-right-100pct.png"
+    },
+    {
+      "target": "木柱原斜带",
+      "result": "指定目标完整采用source17；原斜向色带没有藏回去。木柱ROI的上界延回原修补图顶部，避免在木柱中段产生新的横向色阶。",
+      "evidence": "hardseam-v04-wood-target-v03-left-v04-right-100pct.png"
+    },
+    {
+      "target": "窄墙原锯齿色阶",
+      "result": "目标完整采用source17，锯齿色阶仍已去掉。ROI上端延到墙面起点，未使用把分界移到更高位置的失败尝试。",
+      "evidence": "hardseam-v04-wall-target-v03-left-v04-right-100pct.png"
+    },
+    {
+      "target": "v03底边木柱小色差",
+      "tileLocalBox": [
+        1640,
+        3710,
+        1740,
+        3780
+      ],
+      "result": "此非修复目标区恢复为v02的精确同坐标原生像素，source17完全排除；v03的角状边界消失。",
+      "evidence": "hardseam-v04-previous-bottom-issue-v03-left-v04-right-100pct.png"
+    },
+    {
+      "target": "新边界",
+      "result": "所查四边未见新增明显几何断裂或与先前目标同量级的色带。局部木纹、墙面及金边有轻微原生色值/纹理切换；不能声称像素级无接缝。source17木柱缩短后的底缘仍有低幅度色值切换，范围约tile-local[1625,3320,1740,3380]，视觉影响小于v03原底边角状带。",
+      "evidence": "hardseam-v04-wood-roi-bottom-v03-left-v04-right-100pct.png"
+    }
+  ],
+  "rejectedExperiments": [
+    {
+      "prefix": "hardseam-v04-lower",
+      "reason": "Narrow wall ROI began at patch y300 and produced a conspicuous new top boundary. Do not select."
+    },
+    {
+      "prefix": "hardseam-v04-lower2",
+      "reason": "Wood ROI began at patch y340 and produced a new visible mid-post horizontal transition. Do not select."
+    },
+    {
+      "previousV04Hash": "1fb459e94a73207a198ca93fd77a3e658d378277cc3ce57945d07bbdbe2b925e",
+      "reason": "Initial v04 used lower2. Superseded by current v04 using lower3 before handoff."
+    }
+  ],
+  "validation": {
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "all18SourceIdsPresent": true,
+    "sameGlobalCoordinateExact": true,
+    "source17WoodTargetEntirely17": true,
+    "source17WallTargetEntirely17": true,
+    "source18DoorTargetEntirely18": true,
+    "previousBottomIssueExactlyV02": true,
+    "previousBottomIssueExcludes17": true,
+    "noInterpolation": true,
+    "noFeathering": true,
+    "noColorAdjustment": true,
+    "noDisplacement": true,
+    "fullRecord": "hardseam-v04-report.json",
+    "combinedTargetsRecord": "hardseam-v04-combined-target-validation.json"
+  },
+  "recommendation": "保留当前v04候选供独立全图及外部接边复核。不要采用lower/lower2尝试，不作正式接收声明。"
+}

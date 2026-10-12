@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "scope": "Limited geometry-basis review at production hold; not layout or capacity acceptance",
+  "status": "exact_baseline_repair_deferred_pending_layout_gate",
+  "artCanvas": [
+    65536,
+    65536
+  ],
+  "overviewPixels": [
+    1254,
+    1254
+  ],
+  "artPixelsPerOverviewPixel": 52.261562998405104,
+  "previousReportedDeltaArtPixels": 75,
+  "equivalentOverviewPixels": 1.435089111328125,
+  "findings": [
+    "The original total-layout sample is about52.26 artwork pixels per overview pixel; prior75-artwork-pixel baseline difference equals about1.44 overview pixels.",
+    "A bicubic-enlarged layout guide provides broad placement but does not by itself justify an exact1254-native-pixel bottom line at y740. Boundary softness and semantic interpretation remain uncertain.",
+    "Existing selected second-row source patches preserve continuous stair lines according to full internal QA. Prior s02_01_fix01/fix02 remain unselected; changing one alone would create new adjacent-edge risk.",
+    "Root's independent production-quality-audit-20261010 reached the same prioritization: evaluate cross-tile structural/approach effects instead of repeatedly repainting solely for a1-2overview-pixel discrepancy."
+  ],
+  "decision": "Do not run further small-frame baseline repair before root layout gate is released. Do not call baseline definitively passed; confirm full stair/approach across real adjacent tiles.",
+  "stillBlocking": {
+    "tilePoint": [
+      1543,
+      2995
+    ],
+    "reason": "Separate native paving-joint8px-to3-4px discontinuity is directly visible in current full internal QA and remains an actual repair item."
+  },
+  "evidence": [
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/geometry-repair-review.json",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/full-internal-review-20261010.json",
+    "D:/work/image/quality-review-20261010/production-quality-audit.md",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/coordinates.json"
+  ],
+  "notPerformed": [
+    "No revised exact geometry tolerance established",
+    "No new world-unit scale chosen",
+    "No navigation or actor-footprint validation",
+    "No external-edge acceptance"
+  ],
+  "auditWorkerStatus": "Longer independent audit was interrupted when gate-only checkpoint was closed; this report contains only already available measurements and root review evidence.",
+  "capacity5000Validated": false,
+  "formalAccepted": false
+}

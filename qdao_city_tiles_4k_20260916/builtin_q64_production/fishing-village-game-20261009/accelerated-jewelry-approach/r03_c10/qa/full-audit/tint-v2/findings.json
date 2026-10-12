@@ -1,0 +1,97 @@
+{
+  "tile": "r03_c10",
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\accelerated-jewelry-approach\\r03_c10\\candidate\\r03_c10-4096-candidate-v2.png",
+  "candidateSha256": "39be3ec5b0dbb3438c978a0d36c9a13c2f63d67e5d6ebefcf3f7c68e68bbc0cc",
+  "status": "targeted native repair candidate completed; residual internal tone seam requires review",
+  "formalAccepted": false,
+  "externalSeamsChecked": false,
+  "visualInspection": "Target and builtin result inspected at native 1254x1254. Composite and all four feather transitions inspected through unscaled 512x1088 and 603x1043 crops, plus rib/rim and horizontal-seam crops. Whole tile preview inspected.",
+  "primaryVerticalRepair": {
+    "result": "Pass for targeted seam: straight vertical tint step removed; no doubled ribs or broken bamboo/rim geometry observed. Feather boundaries do not introduce a new rectangular border.",
+    "meanAdjacentRGBJumpBefore": 5.527604103088379,
+    "meanAdjacentRGBJumpAfter": 1.2416666746139526,
+    "reductionPercent": 77.53698254330101,
+    "nearbyTextureJumpAfter": 1.0816532373428345
+  },
+  "invariants": {
+    "measuredRepairNativeDimensions": [
+      1254,
+      1254
+    ],
+    "candidateDimensions": [
+      4096,
+      4096
+    ],
+    "nativePixelsResized": false,
+    "allFourOuter115PixelStripsByteIdentical": true,
+    "allPixelsOutsideRoiByteIdentical": true,
+    "v1SourceShaUnchanged": true,
+    "nativesAndSelectionsModified": false,
+    "roiTileXYXYHalfOpen": [
+      1811,
+      358,
+      2286,
+      1273
+    ],
+    "actualChangedBoundingBoxTileXYXY": [
+      1818,
+      361,
+      2279,
+      1270
+    ]
+  },
+  "remainingFindings": [
+    {
+      "priority": 2,
+      "kind": "pre-existing horizontal paper-tone step",
+      "seam": "tile y1024, p12-p22 / p13-p23 / p14-p24",
+      "description": "Wider native context reveals a horizontal yellow paper-tone step, most visible outside the narrow repaired strip. The same discontinuity is present in v1; native compositing reduces it in the middle but does not alter it outside the authorized ROI. No geometric break is observed.",
+      "confirmedExampleFaultBoxTileXYXY": [
+        2286,
+        1008,
+        3072,
+        1040
+      ],
+      "confirmedExampleFaultBoxGlobalXYXY": [
+        39150,
+        9200,
+        39936,
+        9232
+      ],
+      "nextReviewContextBoxesTileXYXY": [
+        [
+          1421,
+          768,
+          2675,
+          1280
+        ],
+        [
+          2675,
+          768,
+          3929,
+          1280
+        ]
+      ],
+      "metricsFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\accelerated-jewelry-approach\\r03_c10\\qa\\full-audit\\tint-v2\\horizontal-residual-metrics.json",
+      "exampleBeforeAfterUnchangedJump": {
+        "xRangeHalfOpen": [
+          2286,
+          2675
+        ],
+        "yBoundary": 1024,
+        "meanAbsRGBJump": 9.739502906799316,
+        "neighborMeanAbsRGBJump": 1.9669679403305054
+      },
+      "action": "Retain v2 as successful vertical-seam repair. Review/repair the remaining horizontal parasol-tone line with native builtin generation before declaring all internal seams cleared. Preserve existing ribs/rim; do not stretch or move pixels.",
+      "evidence": [
+        "before-roi-transition-native-603x1043.png",
+        "after-roi-transition-native-603x1043.png",
+        "remaining-horizontal-tint-native.png",
+        "remaining-horizontal-right-native.png"
+      ]
+    }
+  ],
+  "correctionToPriorAudit": "The first audit understated horizontal-y1024 color continuity. Expanded native context during repair verification revealed the existing horizontal line; this report supersedes the earlier no-defect color assessment for that seam. Earlier geometry-continuity findings stand.",
+  "provenanceManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\accelerated-jewelry-approach\\r03_c10\\candidate\\r03_c10-4096-candidate-v2.manifest.json",
+  "reviewedAt": "2026-10-10T14:46:38.532523+00:00"
+}

@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-04T12:05:33.693071+00:00",
+  "model": null,
+  "quality": null,
+  "actual_returned": {
+    "model": null,
+    "quality": null,
+    "generation_id": null
+  },
+  "configuration_target": {
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5"
+  },
+  "target_confirmation": "宿主管理入口无型号/质量选择器，返回未披露；不能将配置目标当作实测",
+  "submitted": {
+    "prompt": "Use case: precise-object-edit\n透明游戏跑步序列的单帧局部编辑。图1是唯一编辑底稿；图2仅角色身份，图3仅确认的Q版绘制风格，图4竹弓少女仅同方向膝踝靴轴与透视参考，不复制她的衣服/弓/比例/动作。\n输出单张RGBA透明画布，保留图1整个1024方形画布的构图比例、角色在画布的位置和头顶坐标，不裁切、不放大、不平移整个人；若输出更大画布，保持相同归一化坐标。画面无地板、阴影、光效、文字、水印。\n星阵少女朝正西/屏幕左的侧视。保持头脸、红金星冠、发丝、上身、衣纹配色、两手与道具完全不变，解剖左手恰好三卡，解剖右手握圆星盘下柄；绝不镜像。\n本槽04，支撑左脚，位置段“身下经过第二张”。用户要求同一脚连续接地并经过4位置，当前是其中一张真实不同的承重姿态，不是腾空，不是滑动整张图。\n局部目标：编辑双腿成为下一张经过姿态：当前画面右下方的解剖左脚仍是支撑脚，向身体后方也就是画面右移动约35像素，踝心约x575，整只靴底稳定接地y=932；膝和白裤褶皱跟随屈伸，绝不平移整人。右腿保持在画面左前方抬起，但膝略向前和向上摆，靴不落地。\n关节清楚而自然，保留原Q版短腿和黑金红星靴设计，只改所需双腿与紧邻下摆，支撑靴有可读的压地重量。坐标均按输入1024方形画布；透明背景不画地面线。",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/runtime/run/W/03.png",
+      "D:/work/image/q_daoist_character_pack_4096/20_star_formation_master_girl_transparent_4096.png",
+      "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png"
+    ],
+    "transparent_background": true
+  },
+  "references": [
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/runtime/run/W/03.png",
+      "role": "edit_target_current_runtime",
+      "sha256": "1745330c5c959c59ba763255b0610d0cc862601ad1a72a2f97f8b12dff7582ec",
+      "source_generation_record": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/runtime/run/W/03.png.generation.json",
+      "source_generation_record_sha256": "53bd791bc3e014880e7ca165758c9e9fef195219d6664e95e59b32dbc0d69996",
+      "source_generation_record_snapshot": {
+        "file": "runtime/run/W/03.png",
+        "sha256": "1745330c5c959c59ba763255b0610d0cc862601ad1a72a2f97f8b12dff7582ec",
+        "width": 1024,
+        "height": 1024,
+        "format": "PNG",
+        "mode": "RGBA",
+        "exportedAt": "2026-10-04T02:39:27.607701-04:00",
+        "derivedFrom": {
+          "file": "generation/run/W/03-v3.png",
+          "sha256": "23007b8e840cee2978492b80e52f3d558966f66e35c7969c5513b53082c4bad6",
+          "generationRecord": "generation/run/W/03-v3.png.generation.json",
+          "generationRecordSha256": "368a281a8655aef881defd11659113167335f1801290a74b2c2e05b9bb3eb046",
+          "nativeWidth": 1254,
+          "nativeHeight": 1254
+        },
+        "operation": {
+          "type": "full_canvas_resize_and_fixed_offset",
+          "sourceCanvas": [
+            1254,
+            1254
+          ],
+          "canvasSize": [
+            1024,
+            1024
+          ],
+          "imageSize": [
+            922,
+            922
+          ],
+          "offset": [
+            51,
+            40
+          ],
+          "pivot": [
+            512,
+            922
+          ],
+          "resizeCount": 1,
+          "resample": "LANCZOS",
+          "usesBoundingBox": false,
+          "alignsLowestPixel": false,
+          "alphaKeying": false
+        },
+        "pivot": [
+          512,
+          922
+        ],
+        "isNewAIGeneration": false,
+        "modelAndQuality": "沿 derivedFrom 追溯，不继承当前默认配置",
+        "status": "offline_delivery",
+        "visualReview": "offline_reviewed",
+        "dynamicReview": "browser_normal_slow_sampled",
+        "clientIntegration": "not_integrated",
+        "recordValidation": {
+          "sha256": "matched",
+          "width": "matched",
+          "height": "matched",
+          "format": "matched"
+        },
+        "reviewRecord": "provenance/offline-visual-review.json",
+        "userFinalAcceptance": false,
+        "nativeOrigin": {
+          "file": "generation/run/W/03-v3.png",
+          "sha256": "23007b8e840cee2978492b80e52f3d558966f66e35c7969c5513b53082c4bad6",
+          "generationRecord": "generation/run/W/03-v3.png.generation.json",
+          "generationRecordSha256": "368a281a8655aef881defd11659113167335f1801290a74b2c2e05b9bb3eb046",
+          "nativeSize": [
+            1254,
+            1254
+          ]
+        }
+      }
+    },
+    {
+      "path": "D:/work/image/q_daoist_character_pack_4096/20_star_formation_master_girl_transparent_4096.png",
+      "role": "identity_only",
+      "sha256": "4a5de67ffb880a852554d460c709f7179bffd3706fa7bf825767e5369e9bd3e5"
+    },
+    {
+      "path": "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+      "role": "approved_designs_rendering_style_only",
+      "sha256": "7a95140fc3c7a0ae6562ec6dff51d5296edd15116375152a8b22502c7107e879"
+    },
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png",
+      "role": "same_direction_knee_ankle_boot_axis_perspective_only",
+      "sha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+      "source_generation_record": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png.generation.json",
+      "source_generation_record_sha256": "835e45909ca91b175630eb700a1ac36ac8903281b468dee7eef5a7b1df383fcf",
+      "source_generation_record_snapshot": {
+        "file": "runtime/run/W/06.png",
+        "sha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+        "generatedAt": "2026-10-03T09:53:37.273Z",
+        "tool": "image_gen.imagegen",
+        "route": "builtin",
+        "configSnapshot": {
+          "schema_version": 1,
+          "model": "gpt-image-2.5-sunburst",
+          "quality": "max",
+          "builtin_product": "ChatGPT Images 2.5",
+          "selection": "latest_verified",
+          "preferred_route": "builtin",
+          "verified_on": "2026-10-01",
+          "sources": {
+            "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+            "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+          }
+        },
+        "submittedParameters": {
+          "model": null,
+          "quality": null,
+          "transparent_background": true,
+          "referenced_image_paths": [
+            "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png",
+            "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/05.png",
+            "D:/work/image/designs/jubaozhai-ui/02-characters.png"
+          ]
+        },
+        "actualModel": null,
+        "actualQuality": null,
+        "unverifiedReason": "Host managed builtin; tool does not expose model/quality parameters or disclose returned model/quality.",
+        "evidence": {
+          "request": "provenance/run-south/W-06-20261003T095215371536Z.request.json",
+          "receipt": "provenance/run-south/W-06-20261003T095215371536Z.receipt.json"
+        },
+        "prompt": "Precise identity-preserving COLOR/MATERIAL correction of ONE running sprite W6. Image1 EDIT TARGET, image2 W05 corrected original paint baseline, image3 main approved drawing style. Keep image1 exact pose, body/head/canvas positions and sizes, every shoulder/elbow/hand/knee/ankle/boot position. Change ONLY paint tones/material finish: match image2 soft rich BROWN hair instead of the orange/rust/red streaks; cream ivory fabric, muted jade green and warm soft gold, gentler contrast. Preserve exact full long bamboo bow in far anatomical LEFT hand screenleft, near anatomical RIGHT arm EMPTY and swinging back, right shoulder quiver, face and accessories. Preserve all contours, entire bow tips/string, chibi proportions and original camera. No scaling, shift, crop, mirror, foot grounding normalization or alternate pose. One native >=1024 square true-alpha transparent RGBA frame, no shadow/floor/effects/text.",
+        "references": [
+          {
+            "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png",
+            "sha256": "6e8948ffaf0035e58184d5d6fee6950bc957cc02fcdd5138061fec150f140002",
+            "purpose": "edit target"
+          },
+          {
+            "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/05.png",
+            "sha256": "d1a55e337551da1bd3fcd17d6d820fa4e5e3b77dab2b8bb85d73f66bd5e4c1a3",
+            "purpose": "identity/style/pose reference"
+          },
+          {
+            "path": "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+            "sha256": "7a95140fc3c7a0ae6562ec6dff51d5296edd15116375152a8b22502c7107e879",
+            "purpose": "identity/style/pose reference"
+          }
+        ],
+        "width": 1024,
+        "height": 1024,
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "nativeCellSize": [
+          1254,
+          1254
+        ],
+        "format": "PNG",
+        "derivedFrom": {
+          "path": "C:\\Users\\luyua\\.codex\\generated_images\\01a100ff-8597-7ab3-ac28-4d441c03fb85\\exec-2bcba11e-b82d-4dca-ab72-2925f1abdbb3.png",
+          "sha256": "09ccb5e0dbf4f88be2a737e93931c3c5cb32e1f8a068a72dfceb8281fc8c9143",
+          "nativeSize": [
+            1254,
+            1254
+          ]
+        },
+        "operation": "Clear only alpha<=2 pixels before and after uniform whole-canvas Lanczos resize to 1024; no bbox scaling, translation, floor snapping, mirroring, deformation or interpolation."
+      }
+    }
+  ],
+  "prompt_file": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/grounding4/W/04-v1.prompt.txt",
+  "prompt_sha256": "303565625e40e31dda70f2a022789092790a678077ff74d2704f322b7f394ea7",
+  "receipt": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/grounding4/W/04-v1.receipt.json",
+  "receipt_sha256": "60f310a4b19ca0715c9057678a7bbf512a6f050bc90127e46b62d8696bda6067",
+  "native": {
+    "file": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/grounding4/W/04-v1-native.png",
+    "sha256": "41441eb8c09df044793ca1e58b9a241644f08b9eda3a83b9e772ec758fccdda0",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA"
+  },
+  "export": {
+    "file": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/20_star_formation_master_girl/grounding4/W/04-v1.png",
+    "sha256": "46a76e306da9c7a7f3ce153764e89ad43b39664fd9d7e31d72b2fe8c7a85869b",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "operation": {
+      "type": "full_canvas_uniform_resize",
+      "from": [
+        1254,
+        1254
+      ],
+      "to": [
+        1024,
+        1024
+      ],
+      "resample": "LANCZOS",
+      "resizeCount": 1,
+      "offset": [
+        0,
+        0
+      ],
+      "usesBoundingBox": false,
+      "alignsLowestPixel": false
+    }
+  },
+  "phase_spec": {
+    "support_foot": "左脚",
+    "position": "身下经过第二张",
+    "output_slot": 4,
+    "reference_source_frame": 3
+  },
+  "status": "awaiting_static_visual_review",
+  "clientIntegration": "not_integrated"
+}

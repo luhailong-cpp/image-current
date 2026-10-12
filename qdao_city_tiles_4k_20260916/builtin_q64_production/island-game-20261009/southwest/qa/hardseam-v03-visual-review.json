@@ -1,0 +1,105 @@
+{
+  "createdAtUtc": "2026-10-09T20:25:10.741Z",
+  "candidate": "hardseam-v03-candidate-4096.png",
+  "candidateSha256": "4bbf54d6a3dd8e4a77b44ac2c29c7dd219fa12b99e3e0df6a51c00152b6313b5",
+  "status": "local repair integrated; candidate_pending_remaining_tone_QA; not formal",
+  "aiSourceId": 17,
+  "aiSource": "r09_c03_tone_lower_cross_v01.png",
+  "repairTileLocalBox": [
+    1220,
+    2600,
+    2474,
+    3854
+  ],
+  "reviewed": [
+    "new AI native repair before integration",
+    "four direct-paste preflight boundaries at 100%",
+    "four optimized boundaries at 100%",
+    "all four boundary corners",
+    "worst RGB-disagreement point on each selected edge",
+    "both mandatory correction targets",
+    "1254 QA preview"
+  ],
+  "targetResults": [
+    {
+      "target": "大木柱中段斜色带",
+      "result": "已由AI源实际修复并完整采用；原斜向深浅带在新候选目标区消失。",
+      "evidence": "hardseam-v03-wood-fixed-base-left-candidate-right-100pct.png"
+    },
+    {
+      "target": "右窄墙锯齿色阶",
+      "result": "已由AI源实际修复并完整采用；patch[980,400,1050,600]全为source-id17，未用旧像素绕开。",
+      "evidence": "hardseam-v03-wall-fixed-base-left-candidate-right-100pct.png"
+    }
+  ],
+  "boundaryResults": [
+    {
+      "side": "left",
+      "result": "No new conspicuous color step or geometry break in inspected native strips and worst-point crop."
+    },
+    {
+      "side": "right",
+      "result": "Lantern contour and wood edges remain continuous. No new conspicuous color step in inspected strip."
+    },
+    {
+      "side": "top",
+      "result": "Beam/post/plaster outlines remain continuous. Small texture and color changes at the join; no new conspicuous band."
+    },
+    {
+      "side": "bottom",
+      "result": "No geometry break. A new small shallow angular tone transition is visible on the right face of the large corner post at 100%. This region is locally worse than the unchanged baseline and remains a QA item."
+    }
+  ],
+  "remainingNewBoundaryIssue": {
+    "severity": "minor_visible_tone_boundary",
+    "tileLocalApproxBox": [
+      1640,
+      3710,
+      1740,
+      3780
+    ],
+    "globalApproxBox": [
+      9832,
+      36478,
+      9932,
+      36548
+    ],
+    "evidence": "hardseam-v03-bottom-post-tone-base-left-candidate-right-100pct.png",
+    "finding": "中央转角木柱右亮面在回贴底边附近出现约100px范围的浅角状色差；原先两处明显色阶已消除，但不能把新边界描述成完全无色差。",
+    "recommendedAction": "如要求100%下完全无拼接痕迹，针对该小范围做原生AI局部色阶统一；不通过羽化/调色/位移遮掩。"
+  },
+  "outsideRepair": {
+    "doorLintelToneUnchanged": true,
+    "doorLintelTileLocalApproxBox": [
+      3000,
+      1970,
+      3190,
+      2200
+    ],
+    "stoneRepairUnchanged": true
+  },
+  "technicalValidation": {
+    "totalValidatedPixels": 16777216,
+    "pixelMismatches": 0,
+    "sameGlobalCoordinateExact": true,
+    "aiRepairPixels": 1362226,
+    "binarySelectionMask": "hardseam-v03-repair-selection-mask.png",
+    "localSelectionMask": "hardseam-v03-repair-local-selection-mask.png",
+    "sourceIdMask": "hardseam-v03-source-id-mask.png",
+    "mandatoryCorePatchBox": [
+      150,
+      150,
+      1104,
+      1104
+    ],
+    "mandatoryCoreEntirelyAi": true,
+    "rightWallTargetEntirelyAi": true,
+    "allNonSelectedPixelsExactlyBase": true,
+    "noInterpolation": true,
+    "noFeathering": true,
+    "noColorAdjustment": true,
+    "noDisplacement": true,
+    "record": "hardseam-v03-report.json"
+  },
+  "recommendation": "保留为后续门楣及底边小色差修整的候选底稿；未转正式。"
+}

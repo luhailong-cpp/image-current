@@ -1,0 +1,2036 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-04T02:52:38.070450+00:00",
+  "task": "04跑步E/W/SW对照用户指定09竹弓少女当前正式版，只读视觉复核",
+  "scope": {
+    "directions": [
+      "E",
+      "W",
+      "SW"
+    ],
+    "pngMutation": false,
+    "imageGeneration": false,
+    "previewRebuild": false,
+    "onlyWrittenFiles": [
+      "provenance/audit/bamboo_compare_sides_20261003.json",
+      "provenance/audit/bamboo_compare_sides_20261003.md"
+    ]
+  },
+  "manifestEvidence": {
+    "path": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\manifest.json",
+    "sha256": "08448f11fba80084d56aa5b27f66bdd9e3db59375019a84ea31049a02b5b9ee5",
+    "matchingSelectedRuntimeFrames": 48,
+    "selectedRuntimeFrames": 48
+  },
+  "method": [
+    "实际查看6张全16帧contact图；源绑定核对为本报告记录的正式PNG。",
+    "实际view_image放大查看19张关键PNG，逐图SHA见frames中的viewedAsIndividualPng=true。",
+    "依据足跟至趾尖轴、踝与小腿衔接、支撑与摆腿相位判断，不以腿距、鞋宽或同帧号判正确。",
+    "持盾/持杖和持弓/空手的动作职责不同，保留合理持物约束。"
+  ],
+  "timing": {
+    "userRequestedFrameMs": 75,
+    "userRequestedFrames": 16,
+    "userRequestedCycleMs": 1200,
+    "timingProfileFile": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\tools\\timing_profile.py",
+    "timingProfileSha256": "593dd054c2e8f9ed87ba14cfc4d2921590ba93348a76eecb5da96cd363411276",
+    "observed04FrameDurationsMs": [
+      75
+    ],
+    "observed09SequenceMsPerFrame": [
+      75
+    ],
+    "status": "本报告观察到当前记录为75ms均匀/1200ms。根代理负责动态产物和移除旧快档；本轮未播放动态预览。"
+  },
+  "findings": {
+    "E": {
+      "decision": "保留现有16帧；本轮无确定需AI修图项。",
+      "feet": "04承重靴与前摆靴鞋尖均朝屏右；02承重、06腾空和08/14摆腿的足背/鞋底显示可由踝背屈与跑步相位解释，没有确定侧向外撇。09 E02/E06支持同向足轴判断，不要求鞋宽或脚面角度一模一样。",
+      "hands": "04 E06/E08右手环握法杖，腕与前臂连续；E14盾背握把与手可读。盾臂的摆幅及遮挡按持盾结构保留，不以弓手空手摆臂强行替换。",
+      "phaseAndGround": "全16格可读两侧交替、支撑/腾空/回摆；承重靴的平底姿态成立。静态图不证明世界坐标不滑步。",
+      "definiteCorrectionFrames": []
+    },
+    "W": {
+      "decision": "保留现有16帧；W03已修稿维持，不扩大重画。",
+      "feet": "04 W03近腿平底承重、远腿回收；W06前靴朝左，露底属于背屈；W11支撑与W13抬膝回摆的鞋尖仍沿左向，没有明确外八字。",
+      "hands": "握杖的手腕与杆件连接清楚，盾面遮住持盾手属合理遮挡；没有因09的空手动作而成立的断手问题。",
+      "phaseAndGround": "09 W11与04 W11不是同一相位：09为抬膝/后腿下伸，04前腿支撑、另一腿折回。按姿态类别与完整序列对照，不按同帧号互换。W03当前SHA为9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da。",
+      "definiteCorrectionFrames": []
+    },
+    "SW": {
+      "decision": "保留现有16帧；此前04–11鞋尖修正有效，本轮不继续改窄腿距或鞋宽。",
+      "feet": "04 SW02前支撑靴朝左下；SW07前伸靴露底且足轴沿左下/向观者，符合该斜向与背屈；SW10前支撑靴足跟在右上、趾尖朝左下。与09 SW02/07/10同向姿态对照未见仍需修的横向外撇。",
+      "hands": "04 SW02/07/10均可见右手握杖且与袖口连续；盾臂保持盾牌固定连接，盾遮手不等于缺手。手臂前后量需受重型盾杖约束，不复制竹弓少女。",
+      "phaseAndGround": "接触、前摆露底、换侧支撑与回收可从16格读出。前伸露底帧不要求贴地；近远靴大小与高度差不应强制消除。",
+      "definiteCorrectionFrames": []
+    }
+  },
+  "limits": [
+    "仅离线静态视觉和当前来源/时长记录核对，不是客户端世界位移/足底滑步验收。",
+    "没有测量固定虚拟根点，未把512,928布局目标或角色间不同鞋底Y坐标当成接地证据。",
+    "19张放大PNG之外的帧通过全16格contact观察；不声称每帧均单独放大。",
+    "未把其他方向或09角色的每个动作细节当成可机械照抄的模板。"
+  ],
+  "conclusion": "三向未发现新增确定外撇、断腕或持物脱离问题；保留48张当前正式PNG。动态接地与客户端滑步需由整体预览/后续接入另验。",
+  "validationFailures": [],
+  "contactSheets": [
+    {
+      "character": "04",
+      "direction": "E",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_E_contact.png",
+      "sha256": "f34aa2c9c7e57f912850c6f815aebfad718a58de313abb47c1ae314a255546aa",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_E_contact.png.generation.json",
+      "sourceRecordSha256": "c7fb12cd5a250381ed8b4116774db29e02c32cd5755da5aa27064dfd719f6555",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "frames/run/E/frame_01.png",
+          "recordedSha256": "af843cb1a784c704d7ca0f1a8b08a0892a86e8fe75dac028832c9a6a6e530fa1",
+          "currentSha256": "af843cb1a784c704d7ca0f1a8b08a0892a86e8fe75dac028832c9a6a6e530fa1",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_02.png",
+          "recordedSha256": "a0d7bb9102637b377f5949f43e0992226d021f7d5132d29d399084b647635ac9",
+          "currentSha256": "a0d7bb9102637b377f5949f43e0992226d021f7d5132d29d399084b647635ac9",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_03.png",
+          "recordedSha256": "2b99f86c21e716a2232f159729605fabe62acc73ebe9c771907d40d0454f29fe",
+          "currentSha256": "2b99f86c21e716a2232f159729605fabe62acc73ebe9c771907d40d0454f29fe",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_04.png",
+          "recordedSha256": "45468a7a8bc51e08e8b03c5f5bcf6954be6478e53a40e05f001d278c32432ce6",
+          "currentSha256": "45468a7a8bc51e08e8b03c5f5bcf6954be6478e53a40e05f001d278c32432ce6",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_05.png",
+          "recordedSha256": "0e6cb4374d2d364f995d5d6fb2af944d070440466ecd4fb9c420c8876c852a62",
+          "currentSha256": "0e6cb4374d2d364f995d5d6fb2af944d070440466ecd4fb9c420c8876c852a62",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_06.png",
+          "recordedSha256": "32c92ebe1182741bddcce07d37c1d294cb548177941173ee730944c28778c85a",
+          "currentSha256": "32c92ebe1182741bddcce07d37c1d294cb548177941173ee730944c28778c85a",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_07.png",
+          "recordedSha256": "383efa52a1806079545e6fe32b9eef4ca7336f310ec6adcbc91523e395dd8660",
+          "currentSha256": "383efa52a1806079545e6fe32b9eef4ca7336f310ec6adcbc91523e395dd8660",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_08.png",
+          "recordedSha256": "eb8d20a2486c86c9ad70268848bdc1fac09ef6bed4e9416c74d78572bbadd0f5",
+          "currentSha256": "eb8d20a2486c86c9ad70268848bdc1fac09ef6bed4e9416c74d78572bbadd0f5",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_09.png",
+          "recordedSha256": "a8f78c4d2db097bd66c2edda6a5100148f01c67ef7d76bdfde10c920e1bf0ea3",
+          "currentSha256": "a8f78c4d2db097bd66c2edda6a5100148f01c67ef7d76bdfde10c920e1bf0ea3",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_10.png",
+          "recordedSha256": "57e0279d93946e0660d6db00d7dbf0e253718e98b16ac5eace089c9746069de5",
+          "currentSha256": "57e0279d93946e0660d6db00d7dbf0e253718e98b16ac5eace089c9746069de5",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_11.png",
+          "recordedSha256": "bd20c0d15e8850432421e22fe07756e18be58de972ea05f8375633a11fafd2bb",
+          "currentSha256": "bd20c0d15e8850432421e22fe07756e18be58de972ea05f8375633a11fafd2bb",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_12.png",
+          "recordedSha256": "8b35e1c3396592ce4c5bc3785b5ef608bf8cce39c7e4504913d3cfd0aec2f0ec",
+          "currentSha256": "8b35e1c3396592ce4c5bc3785b5ef608bf8cce39c7e4504913d3cfd0aec2f0ec",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_13.png",
+          "recordedSha256": "dad3d3d602d452a3fb6cb7b740a2a4b2bc40f7ec4a9022ffc9278b9b731be826",
+          "currentSha256": "dad3d3d602d452a3fb6cb7b740a2a4b2bc40f7ec4a9022ffc9278b9b731be826",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_14.png",
+          "recordedSha256": "7e569fcc77f9a89f8747f6277d625608806e79c0f0b750f3cdc20ae57e170c10",
+          "currentSha256": "7e569fcc77f9a89f8747f6277d625608806e79c0f0b750f3cdc20ae57e170c10",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_15.png",
+          "recordedSha256": "76f216d8fc5b99bcb6b4fe23611919e7bd27498d2e0b3132d0f3b6cc1a6724d0",
+          "currentSha256": "76f216d8fc5b99bcb6b4fe23611919e7bd27498d2e0b3132d0f3b6cc1a6724d0",
+          "match": true
+        },
+        {
+          "file": "frames/run/E/frame_16.png",
+          "recordedSha256": "110410599c5d28c109b9bc9887e4ec2bc33ee5dba98ae6fb5ed02d711a1d64ec",
+          "currentSha256": "110410599c5d28c109b9bc9887e4ec2bc33ee5dba98ae6fb5ed02d711a1d64ec",
+          "match": true
+        }
+      ]
+    },
+    {
+      "character": "09",
+      "direction": "E",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-E-contact.png",
+      "sha256": "c649ad15864c35511577368dd4e7915c43e48cc5b98ba82c3e313d903d975bd8",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-E-preview.sources.json",
+      "sourceRecordSha256": "d702648adc0f33fafba7199eed8b0ae13f98b3c9f815254b419134f7a383eba9",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "runtime/run/E/01.png",
+          "recordedSha256": "38b9284df923a9b0541fb16436fd69e9170e4cb93de2c8ac52d3d2fc8d9eef4f",
+          "currentSha256": "38b9284df923a9b0541fb16436fd69e9170e4cb93de2c8ac52d3d2fc8d9eef4f",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/02.png",
+          "recordedSha256": "b7c0a4e7954d2212099c349f31fb9643e7d66aed0d834d1d7294252fa9477585",
+          "currentSha256": "b7c0a4e7954d2212099c349f31fb9643e7d66aed0d834d1d7294252fa9477585",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/03.png",
+          "recordedSha256": "4c49268fe605da2a76da19ef2d6ee7225fca097851de065c1926e9bb3e361005",
+          "currentSha256": "4c49268fe605da2a76da19ef2d6ee7225fca097851de065c1926e9bb3e361005",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/04.png",
+          "recordedSha256": "67704e4a447fe3cb46d750da0d9d97a80a9f3a947fd04964785e4e0aed80a505",
+          "currentSha256": "67704e4a447fe3cb46d750da0d9d97a80a9f3a947fd04964785e4e0aed80a505",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/05.png",
+          "recordedSha256": "0e85534b0f6b1a8befe8ea91c482155a64df849c1491498b3e14037304b53d09",
+          "currentSha256": "0e85534b0f6b1a8befe8ea91c482155a64df849c1491498b3e14037304b53d09",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/06.png",
+          "recordedSha256": "3a8324a055fb32c08f11426782f4ef89fb7698d14c684f38356c17378abfe71d",
+          "currentSha256": "3a8324a055fb32c08f11426782f4ef89fb7698d14c684f38356c17378abfe71d",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/07.png",
+          "recordedSha256": "28e982b1b2105585f5550543f604f927f041088682cc8c894523d43aaf8431b6",
+          "currentSha256": "28e982b1b2105585f5550543f604f927f041088682cc8c894523d43aaf8431b6",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/08.png",
+          "recordedSha256": "3ba0039caa85bebe614945c06d1167161c42cb49bece1f2c0dd9c070b13b476c",
+          "currentSha256": "3ba0039caa85bebe614945c06d1167161c42cb49bece1f2c0dd9c070b13b476c",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/09.png",
+          "recordedSha256": "5a271b7bc9e8d667105ecb1d4173d40e4d50c82a38711aaac80fa5f85855caac",
+          "currentSha256": "5a271b7bc9e8d667105ecb1d4173d40e4d50c82a38711aaac80fa5f85855caac",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/10.png",
+          "recordedSha256": "35a4b368e953381d3ac994f5ca2872bb0129db3bb90d422bc0490c642c3c7028",
+          "currentSha256": "35a4b368e953381d3ac994f5ca2872bb0129db3bb90d422bc0490c642c3c7028",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/11.png",
+          "recordedSha256": "533fa9436cbefcc8d7b520cc38c42806e0342820f4df79c5a5090f9b677f464b",
+          "currentSha256": "533fa9436cbefcc8d7b520cc38c42806e0342820f4df79c5a5090f9b677f464b",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/12.png",
+          "recordedSha256": "948a2150e702c95cd0df8117b9ecb851971fb47168fcc16457770ae811160304",
+          "currentSha256": "948a2150e702c95cd0df8117b9ecb851971fb47168fcc16457770ae811160304",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/13.png",
+          "recordedSha256": "dead614709ac1fd03101a7fa20a112ea4b53a9240211d94fee307585f0acdb1b",
+          "currentSha256": "dead614709ac1fd03101a7fa20a112ea4b53a9240211d94fee307585f0acdb1b",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/14.png",
+          "recordedSha256": "7f095014d04af3be5addf853ebdaa40d3572c339f0b401cdf5812f5409391a84",
+          "currentSha256": "7f095014d04af3be5addf853ebdaa40d3572c339f0b401cdf5812f5409391a84",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/15.png",
+          "recordedSha256": "e3ad0de63fc553fb3cccd783af9cc756f36f6854d06763105aacf88037a4e4c7",
+          "currentSha256": "e3ad0de63fc553fb3cccd783af9cc756f36f6854d06763105aacf88037a4e4c7",
+          "match": true
+        },
+        {
+          "file": "runtime/run/E/16.png",
+          "recordedSha256": "19d4edb41b0c08e22e8994819c48aff0d675b71bd74cce543876c8511f2652cc",
+          "currentSha256": "19d4edb41b0c08e22e8994819c48aff0d675b71bd74cce543876c8511f2652cc",
+          "match": true
+        }
+      ]
+    },
+    {
+      "character": "04",
+      "direction": "W",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_W_contact.png",
+      "sha256": "f1860cbb4ec60443fc6cab5720b8d45d176555a5acc85cd175907540dc9e8d77",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_W_contact.png.generation.json",
+      "sourceRecordSha256": "d56834b3e4bbf98e137efcf82cd7d7b90ac085383dfb36986d47f88b39ad5ade",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "frames/run/W/frame_01.png",
+          "recordedSha256": "2ec1e0db978986f53eb92c7f1234eada498887acbee28f63257d18533612bca8",
+          "currentSha256": "2ec1e0db978986f53eb92c7f1234eada498887acbee28f63257d18533612bca8",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_02.png",
+          "recordedSha256": "ca04d33bcc8e856903e14d9763312174b3fe3071758b6c9cc75d4ddf77c6e910",
+          "currentSha256": "ca04d33bcc8e856903e14d9763312174b3fe3071758b6c9cc75d4ddf77c6e910",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_03.png",
+          "recordedSha256": "9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da",
+          "currentSha256": "9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_04.png",
+          "recordedSha256": "ecd3c2a3ff4630e0fe183324cbda07a413bb4961d021447d248bd6871037b9c3",
+          "currentSha256": "ecd3c2a3ff4630e0fe183324cbda07a413bb4961d021447d248bd6871037b9c3",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_05.png",
+          "recordedSha256": "bdc0982b11a73951215da9e64bf7a67498c6865d7580726652b51d95b1ca2eb1",
+          "currentSha256": "bdc0982b11a73951215da9e64bf7a67498c6865d7580726652b51d95b1ca2eb1",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_06.png",
+          "recordedSha256": "33d5ed065922c2c75b30203e7f8ca7315f65d7a655ef9bc6a35733fabce6a868",
+          "currentSha256": "33d5ed065922c2c75b30203e7f8ca7315f65d7a655ef9bc6a35733fabce6a868",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_07.png",
+          "recordedSha256": "240f29d6c61002ebed244f88636789d7810360eb0f6881ca84e83d763a1f6e54",
+          "currentSha256": "240f29d6c61002ebed244f88636789d7810360eb0f6881ca84e83d763a1f6e54",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_08.png",
+          "recordedSha256": "86fadc8d1fb7f63e44e29199423f67351d772d61ae8c4d174f2d5b58a44c43bf",
+          "currentSha256": "86fadc8d1fb7f63e44e29199423f67351d772d61ae8c4d174f2d5b58a44c43bf",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_09.png",
+          "recordedSha256": "2817b17410c856523ed94aa654a326cf6d0e8643dc6455eb6522e78d58c38351",
+          "currentSha256": "2817b17410c856523ed94aa654a326cf6d0e8643dc6455eb6522e78d58c38351",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_10.png",
+          "recordedSha256": "42805fce7d71bd3725466c8ed90cf9d3eb6d794887b9b0f78a29befc17472191",
+          "currentSha256": "42805fce7d71bd3725466c8ed90cf9d3eb6d794887b9b0f78a29befc17472191",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_11.png",
+          "recordedSha256": "420e26bec8b26b0eaa7a07df5b760a78dcac870c96d508201ec1bf3153953fe6",
+          "currentSha256": "420e26bec8b26b0eaa7a07df5b760a78dcac870c96d508201ec1bf3153953fe6",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_12.png",
+          "recordedSha256": "ec79f976ca27fac715d738cc994f7051dd79a997c5bfcf9dcb96567e8a3ee6d8",
+          "currentSha256": "ec79f976ca27fac715d738cc994f7051dd79a997c5bfcf9dcb96567e8a3ee6d8",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_13.png",
+          "recordedSha256": "2a350f3d30ab834eaf6f934c7b10bd356fdf50d39e53f82b7854db5836713fa0",
+          "currentSha256": "2a350f3d30ab834eaf6f934c7b10bd356fdf50d39e53f82b7854db5836713fa0",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_14.png",
+          "recordedSha256": "53ecff91755b552acc8a663845de84160cbd5922ec20db17588fd9de527fb9b7",
+          "currentSha256": "53ecff91755b552acc8a663845de84160cbd5922ec20db17588fd9de527fb9b7",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_15.png",
+          "recordedSha256": "fadf30864ae76cc170807f82bfb899753e29921439c258dbfff2a671e6ebbb78",
+          "currentSha256": "fadf30864ae76cc170807f82bfb899753e29921439c258dbfff2a671e6ebbb78",
+          "match": true
+        },
+        {
+          "file": "frames/run/W/frame_16.png",
+          "recordedSha256": "2169625d61d662b4e98c653d972fc03a5bd40901fc2cbfd640cc55df66856884",
+          "currentSha256": "2169625d61d662b4e98c653d972fc03a5bd40901fc2cbfd640cc55df66856884",
+          "match": true
+        }
+      ]
+    },
+    {
+      "character": "09",
+      "direction": "W",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-W-contact.png",
+      "sha256": "f4554ce3cbf86ca949e70a0d9f72be7ccbf70c333d2ccbd51baae971b6db5636",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-W-preview.sources.json",
+      "sourceRecordSha256": "cdc58bbfff3ed907a0896d86e60e1c0d558396cbdf7b9a3bf05df6428a107f4a",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "runtime/run/W/01.png",
+          "recordedSha256": "4e6337ac903aaac956240d7c36f624e0b17c6def33990076fa711f2401233624",
+          "currentSha256": "4e6337ac903aaac956240d7c36f624e0b17c6def33990076fa711f2401233624",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/02.png",
+          "recordedSha256": "4d7d9d7f50bcec0e2c55663dd4124bcc4a6f24dd521f839ed37463d0ae0a604c",
+          "currentSha256": "4d7d9d7f50bcec0e2c55663dd4124bcc4a6f24dd521f839ed37463d0ae0a604c",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/03.png",
+          "recordedSha256": "42b07d98d16ba6a36c87ef859b84dcd8c9eb0054a896b7804e8595a330dc798a",
+          "currentSha256": "42b07d98d16ba6a36c87ef859b84dcd8c9eb0054a896b7804e8595a330dc798a",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/04.png",
+          "recordedSha256": "41fac05c60b5d9a4f609ebc0ae73cfc86c004ac6820018bcd0eed346fd4dfd39",
+          "currentSha256": "41fac05c60b5d9a4f609ebc0ae73cfc86c004ac6820018bcd0eed346fd4dfd39",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/05.png",
+          "recordedSha256": "d1a55e337551da1bd3fcd17d6d820fa4e5e3b77dab2b8bb85d73f66bd5e4c1a3",
+          "currentSha256": "d1a55e337551da1bd3fcd17d6d820fa4e5e3b77dab2b8bb85d73f66bd5e4c1a3",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/06.png",
+          "recordedSha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+          "currentSha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/07.png",
+          "recordedSha256": "ed3a2fb2307abeb147cdccaf44d65ecff39914b15cfb18d826aac17d115bf8d1",
+          "currentSha256": "ed3a2fb2307abeb147cdccaf44d65ecff39914b15cfb18d826aac17d115bf8d1",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/08.png",
+          "recordedSha256": "50e2d03573744737badc6dc9238c8e9517b791e63ad9ea0490a8615396c1d5df",
+          "currentSha256": "50e2d03573744737badc6dc9238c8e9517b791e63ad9ea0490a8615396c1d5df",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/09.png",
+          "recordedSha256": "a183b780a7879d7b4434fe3d264c0a160fad3b1f1bc2c769bacc95f4e7c55976",
+          "currentSha256": "a183b780a7879d7b4434fe3d264c0a160fad3b1f1bc2c769bacc95f4e7c55976",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/10.png",
+          "recordedSha256": "3e6b37d40901d6e7995758de3cdaa6d9f2a929b8c664472fda12645ae269e90c",
+          "currentSha256": "3e6b37d40901d6e7995758de3cdaa6d9f2a929b8c664472fda12645ae269e90c",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/11.png",
+          "recordedSha256": "55ee6790708d5e047abaa7abc222958c0a316ec0c4244a6971084a67c8598f64",
+          "currentSha256": "55ee6790708d5e047abaa7abc222958c0a316ec0c4244a6971084a67c8598f64",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/12.png",
+          "recordedSha256": "c2a76da30d418ef872e517cf4a7c1acb3057c05696a19dcf7d64068dc21ba0eb",
+          "currentSha256": "c2a76da30d418ef872e517cf4a7c1acb3057c05696a19dcf7d64068dc21ba0eb",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/13.png",
+          "recordedSha256": "c083d05e6a9f2f16d7dc796bbaac67ba77cd90a619a1556cbe1a81cb110761b1",
+          "currentSha256": "c083d05e6a9f2f16d7dc796bbaac67ba77cd90a619a1556cbe1a81cb110761b1",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/14.png",
+          "recordedSha256": "b543abef636fb2738461f1545f1109c2b2328daabebba76e1b7b1f3d59ea6210",
+          "currentSha256": "b543abef636fb2738461f1545f1109c2b2328daabebba76e1b7b1f3d59ea6210",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/15.png",
+          "recordedSha256": "da2953b3a36b9c52c18aeab9fb32fbfdd6da98f5733d52eb7418b7844841b84a",
+          "currentSha256": "da2953b3a36b9c52c18aeab9fb32fbfdd6da98f5733d52eb7418b7844841b84a",
+          "match": true
+        },
+        {
+          "file": "runtime/run/W/16.png",
+          "recordedSha256": "81bd6619e2dc2c008c76be3b8da70c329108923aa3b51ba7421259f0e6310a01",
+          "currentSha256": "81bd6619e2dc2c008c76be3b8da70c329108923aa3b51ba7421259f0e6310a01",
+          "match": true
+        }
+      ]
+    },
+    {
+      "character": "04",
+      "direction": "SW",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_SW_contact.png",
+      "sha256": "9ca2e6c2a3515541177af33ebb379cb070571fff001295ef870770c2544f5648",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\preview\\run_SW_contact.png.generation.json",
+      "sourceRecordSha256": "7f1d635b5304e20a436dbe9de33522fcd1ab01ca0b180f6e2bc8cee93bc82831",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "frames/run/SW/frame_01.png",
+          "recordedSha256": "b821e8413ed1ef8482024c4cd22d9606525c8cf2738f3e2208b1ef0ddd32e246",
+          "currentSha256": "b821e8413ed1ef8482024c4cd22d9606525c8cf2738f3e2208b1ef0ddd32e246",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_02.png",
+          "recordedSha256": "abab89c75c98e7384286d664c50ab1b685fd82678f66e0a201fc2aebe1e38bbb",
+          "currentSha256": "abab89c75c98e7384286d664c50ab1b685fd82678f66e0a201fc2aebe1e38bbb",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_03.png",
+          "recordedSha256": "67ba4759678fa4943b77f984758fb8465645f7f99c68c222b5869e53fb460dea",
+          "currentSha256": "67ba4759678fa4943b77f984758fb8465645f7f99c68c222b5869e53fb460dea",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_04.png",
+          "recordedSha256": "844f3e2b245c45a242a426c36600006fee87a5e3686a7cd72bec1d9b06b122be",
+          "currentSha256": "844f3e2b245c45a242a426c36600006fee87a5e3686a7cd72bec1d9b06b122be",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_05.png",
+          "recordedSha256": "d3c9c24067b52e23ff2afaa298bb1135846b7d924ef7d077c3d672763e22b8cc",
+          "currentSha256": "d3c9c24067b52e23ff2afaa298bb1135846b7d924ef7d077c3d672763e22b8cc",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_06.png",
+          "recordedSha256": "af02154c83e1b8c0f0726a059721bfabac8475d9148ce309efa87029fc551ad4",
+          "currentSha256": "af02154c83e1b8c0f0726a059721bfabac8475d9148ce309efa87029fc551ad4",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_07.png",
+          "recordedSha256": "ca32beb81ea35b515f435070cfcebdb589b79195b563702b5756d6b56cc2f872",
+          "currentSha256": "ca32beb81ea35b515f435070cfcebdb589b79195b563702b5756d6b56cc2f872",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_08.png",
+          "recordedSha256": "6991b839b352ba11e2fa79070a53deb2bffeb95f1096ae2c68ce75cab5542090",
+          "currentSha256": "6991b839b352ba11e2fa79070a53deb2bffeb95f1096ae2c68ce75cab5542090",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_09.png",
+          "recordedSha256": "96e32aa77ac4fd02bb67993cd088697400167921052323d4e9c20610fa2a0e2a",
+          "currentSha256": "96e32aa77ac4fd02bb67993cd088697400167921052323d4e9c20610fa2a0e2a",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_10.png",
+          "recordedSha256": "d5d8605ba44bb017cbea457939b53c312336c82d3c1e26f5896fbd8ded69ee32",
+          "currentSha256": "d5d8605ba44bb017cbea457939b53c312336c82d3c1e26f5896fbd8ded69ee32",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_11.png",
+          "recordedSha256": "cccefb62c87ce7e9eb787ac645c536a9844ec47407e414ce4c46c1583c38c740",
+          "currentSha256": "cccefb62c87ce7e9eb787ac645c536a9844ec47407e414ce4c46c1583c38c740",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_12.png",
+          "recordedSha256": "76172ed1c0ec92fe73b3b8131d78d35259a375a3aa66a86b5c02f2c35c72a791",
+          "currentSha256": "76172ed1c0ec92fe73b3b8131d78d35259a375a3aa66a86b5c02f2c35c72a791",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_13.png",
+          "recordedSha256": "a4a03e62bfd399965db1215a1149389b6da58ad09b5e06a167a332fdad4ac7f2",
+          "currentSha256": "a4a03e62bfd399965db1215a1149389b6da58ad09b5e06a167a332fdad4ac7f2",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_14.png",
+          "recordedSha256": "a14b85e680a5e075f65d9a1b92276e31f654b4e8b38224b2c64a743f46a7a29a",
+          "currentSha256": "a14b85e680a5e075f65d9a1b92276e31f654b4e8b38224b2c64a743f46a7a29a",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_15.png",
+          "recordedSha256": "7273b6eaab1c7ea1c27529f5cadaed488f7833a946ad87257ee4488f8cad0fdd",
+          "currentSha256": "7273b6eaab1c7ea1c27529f5cadaed488f7833a946ad87257ee4488f8cad0fdd",
+          "match": true
+        },
+        {
+          "file": "frames/run/SW/frame_16.png",
+          "recordedSha256": "1e7abbc21e93c72ed52d87ed43b8510db8b7b79b8f113ccabc70d7df9db93b87",
+          "currentSha256": "1e7abbc21e93c72ed52d87ed43b8510db8b7b79b8f113ccabc70d7df9db93b87",
+          "match": true
+        }
+      ]
+    },
+    {
+      "character": "09",
+      "direction": "SW",
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-SW-contact.png",
+      "sha256": "20ac4b86f51acf02ff0cfcf7ffd611fd29eae1e2c282eeb8bcaecdbd13273bd2",
+      "actuallyViewed": true,
+      "sourceRecord": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\preview\\qa\\run-SW-preview.sources.json",
+      "sourceRecordSha256": "1aa09290701eb38158e6d285053a861a50747aefc2803fe203116fe5298d6e2a",
+      "sourceFrameCount": 16,
+      "allFrameBindingsCurrent": true,
+      "outputShaMatchesWhereDeclared": true,
+      "bindings": [
+        {
+          "file": "runtime/run/SW/01.png",
+          "recordedSha256": "3da787a28be4124dad86634d49bcdd3dbeaedeb8b19300f944a0659b5ceaa831",
+          "currentSha256": "3da787a28be4124dad86634d49bcdd3dbeaedeb8b19300f944a0659b5ceaa831",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/02.png",
+          "recordedSha256": "23846e882682edce2f054abf3b82bb500aacee1e219a74dbdf396739e8b69f1e",
+          "currentSha256": "23846e882682edce2f054abf3b82bb500aacee1e219a74dbdf396739e8b69f1e",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/03.png",
+          "recordedSha256": "9724a88392b1df4f4a42cbbf22a62b85fcfddb94bc9371ecf05933529d8058e6",
+          "currentSha256": "9724a88392b1df4f4a42cbbf22a62b85fcfddb94bc9371ecf05933529d8058e6",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/04.png",
+          "recordedSha256": "52d05748db7822c9dda539d7bb839a7f3b07ffe582cdcc2f51e57398238aa67c",
+          "currentSha256": "52d05748db7822c9dda539d7bb839a7f3b07ffe582cdcc2f51e57398238aa67c",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/05.png",
+          "recordedSha256": "2f93cb02d3437f3fd1951aecfcca7c5d9374a2a1a42944881429d9c6ad4f08e8",
+          "currentSha256": "2f93cb02d3437f3fd1951aecfcca7c5d9374a2a1a42944881429d9c6ad4f08e8",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/06.png",
+          "recordedSha256": "914e300883339c31bfa09aca84132631dc6ed6b9e3c857d47260841e155ff157",
+          "currentSha256": "914e300883339c31bfa09aca84132631dc6ed6b9e3c857d47260841e155ff157",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/07.png",
+          "recordedSha256": "718f0a83daef1852f690eff048f137493b7493dfb3f8625265d7cb1fd938d4c1",
+          "currentSha256": "718f0a83daef1852f690eff048f137493b7493dfb3f8625265d7cb1fd938d4c1",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/08.png",
+          "recordedSha256": "bc3a2149024503235c43968f43754ec53765e06abf08e78d3aaac623629b6f5c",
+          "currentSha256": "bc3a2149024503235c43968f43754ec53765e06abf08e78d3aaac623629b6f5c",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/09.png",
+          "recordedSha256": "4d3479c1b472e779b79c726f07ecfca395573e2b4e62e5e1da2e0b832a1e437d",
+          "currentSha256": "4d3479c1b472e779b79c726f07ecfca395573e2b4e62e5e1da2e0b832a1e437d",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/10.png",
+          "recordedSha256": "9067f6c67f2c012937a6c85f7fa17e9e7be4593e115f995a0381ea9c961660cd",
+          "currentSha256": "9067f6c67f2c012937a6c85f7fa17e9e7be4593e115f995a0381ea9c961660cd",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/11.png",
+          "recordedSha256": "3090e42b6b82afde2823c23c7a47173143a0fa9a0f1eac7635fa73cbd98e3ec6",
+          "currentSha256": "3090e42b6b82afde2823c23c7a47173143a0fa9a0f1eac7635fa73cbd98e3ec6",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/12.png",
+          "recordedSha256": "482b2f64fcf282b4a27cdb78ce6036a6321e01c2cfc783444cd68c483d720ff1",
+          "currentSha256": "482b2f64fcf282b4a27cdb78ce6036a6321e01c2cfc783444cd68c483d720ff1",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/13.png",
+          "recordedSha256": "0224d3c13ec2f5b8666500c80474b9159d8061ccf61c62ea5d0cc09fa82af840",
+          "currentSha256": "0224d3c13ec2f5b8666500c80474b9159d8061ccf61c62ea5d0cc09fa82af840",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/14.png",
+          "recordedSha256": "d1e08cb9658aaa7907dd446f5d2e5db0be1a8fd6398f3d99acd378f1e87d5672",
+          "currentSha256": "d1e08cb9658aaa7907dd446f5d2e5db0be1a8fd6398f3d99acd378f1e87d5672",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/15.png",
+          "recordedSha256": "68ef107c57594b76e32ee7308130a5a57b86ffad31843056f7681d023f7e539e",
+          "currentSha256": "68ef107c57594b76e32ee7308130a5a57b86ffad31843056f7681d023f7e539e",
+          "match": true
+        },
+        {
+          "file": "runtime/run/SW/16.png",
+          "recordedSha256": "0997cc5be4b0d1157462707d84f5ef6f96b2c33d615fbdcd1e0522ffdbf508bd",
+          "currentSha256": "0997cc5be4b0d1157462707d84f5ef6f96b2c33d615fbdcd1e0522ffdbf508bd",
+          "match": true
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\01.png",
+      "sha256": "38b9284df923a9b0541fb16436fd69e9170e4cb93de2c8ac52d3d2fc8d9eef4f",
+      "manifestSha256": "38b9284df923a9b0541fb16436fd69e9170e4cb93de2c8ac52d3d2fc8d9eef4f",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\02.png",
+      "sha256": "b7c0a4e7954d2212099c349f31fb9643e7d66aed0d834d1d7294252fa9477585",
+      "manifestSha256": "b7c0a4e7954d2212099c349f31fb9643e7d66aed0d834d1d7294252fa9477585",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\03.png",
+      "sha256": "4c49268fe605da2a76da19ef2d6ee7225fca097851de065c1926e9bb3e361005",
+      "manifestSha256": "4c49268fe605da2a76da19ef2d6ee7225fca097851de065c1926e9bb3e361005",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\04.png",
+      "sha256": "67704e4a447fe3cb46d750da0d9d97a80a9f3a947fd04964785e4e0aed80a505",
+      "manifestSha256": "67704e4a447fe3cb46d750da0d9d97a80a9f3a947fd04964785e4e0aed80a505",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\05.png",
+      "sha256": "0e85534b0f6b1a8befe8ea91c482155a64df849c1491498b3e14037304b53d09",
+      "manifestSha256": "0e85534b0f6b1a8befe8ea91c482155a64df849c1491498b3e14037304b53d09",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\06.png",
+      "sha256": "3a8324a055fb32c08f11426782f4ef89fb7698d14c684f38356c17378abfe71d",
+      "manifestSha256": "3a8324a055fb32c08f11426782f4ef89fb7698d14c684f38356c17378abfe71d",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\07.png",
+      "sha256": "28e982b1b2105585f5550543f604f927f041088682cc8c894523d43aaf8431b6",
+      "manifestSha256": "28e982b1b2105585f5550543f604f927f041088682cc8c894523d43aaf8431b6",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\08.png",
+      "sha256": "3ba0039caa85bebe614945c06d1167161c42cb49bece1f2c0dd9c070b13b476c",
+      "manifestSha256": "3ba0039caa85bebe614945c06d1167161c42cb49bece1f2c0dd9c070b13b476c",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\09.png",
+      "sha256": "5a271b7bc9e8d667105ecb1d4173d40e4d50c82a38711aaac80fa5f85855caac",
+      "manifestSha256": "5a271b7bc9e8d667105ecb1d4173d40e4d50c82a38711aaac80fa5f85855caac",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\10.png",
+      "sha256": "35a4b368e953381d3ac994f5ca2872bb0129db3bb90d422bc0490c642c3c7028",
+      "manifestSha256": "35a4b368e953381d3ac994f5ca2872bb0129db3bb90d422bc0490c642c3c7028",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\11.png",
+      "sha256": "533fa9436cbefcc8d7b520cc38c42806e0342820f4df79c5a5090f9b677f464b",
+      "manifestSha256": "533fa9436cbefcc8d7b520cc38c42806e0342820f4df79c5a5090f9b677f464b",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\12.png",
+      "sha256": "948a2150e702c95cd0df8117b9ecb851971fb47168fcc16457770ae811160304",
+      "manifestSha256": "948a2150e702c95cd0df8117b9ecb851971fb47168fcc16457770ae811160304",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\13.png",
+      "sha256": "dead614709ac1fd03101a7fa20a112ea4b53a9240211d94fee307585f0acdb1b",
+      "manifestSha256": "dead614709ac1fd03101a7fa20a112ea4b53a9240211d94fee307585f0acdb1b",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\14.png",
+      "sha256": "7f095014d04af3be5addf853ebdaa40d3572c339f0b401cdf5812f5409391a84",
+      "manifestSha256": "7f095014d04af3be5addf853ebdaa40d3572c339f0b401cdf5812f5409391a84",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\15.png",
+      "sha256": "e3ad0de63fc553fb3cccd783af9cc756f36f6854d06763105aacf88037a4e4c7",
+      "manifestSha256": "e3ad0de63fc553fb3cccd783af9cc756f36f6854d06763105aacf88037a4e4c7",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "E",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\E\\16.png",
+      "sha256": "19d4edb41b0c08e22e8994819c48aff0d675b71bd74cce543876c8511f2652cc",
+      "manifestSha256": "19d4edb41b0c08e22e8994819c48aff0d675b71bd74cce543876c8511f2652cc",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_01.png",
+      "sha256": "af843cb1a784c704d7ca0f1a8b08a0892a86e8fe75dac028832c9a6a6e530fa1",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_01.generation.json",
+      "generationSidecarSha256": "7e97c75d60ff2c176b6aa123d938fa508aa92f7c9270b68d3207cc9b640cb81f",
+      "registeredSha256": "af843cb1a784c704d7ca0f1a8b08a0892a86e8fe75dac028832c9a6a6e530fa1",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_02.png",
+      "sha256": "a0d7bb9102637b377f5949f43e0992226d021f7d5132d29d399084b647635ac9",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_02.generation.json",
+      "generationSidecarSha256": "c4ba6cb0dedd19e3450d6ddeede24946d5fecbda1809db74140b36d29453033b",
+      "registeredSha256": "a0d7bb9102637b377f5949f43e0992226d021f7d5132d29d399084b647635ac9",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_03.png",
+      "sha256": "2b99f86c21e716a2232f159729605fabe62acc73ebe9c771907d40d0454f29fe",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_03.generation.json",
+      "generationSidecarSha256": "bbbfbf578610b0a262765dfb3a00edf0e0f55ba856b75561a53aa9940368df6f",
+      "registeredSha256": "2b99f86c21e716a2232f159729605fabe62acc73ebe9c771907d40d0454f29fe",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_04.png",
+      "sha256": "45468a7a8bc51e08e8b03c5f5bcf6954be6478e53a40e05f001d278c32432ce6",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_04.generation.json",
+      "generationSidecarSha256": "809ec580272834b653250e1aea2201db407dfb07662706ca634b23916f0cdd1f",
+      "registeredSha256": "45468a7a8bc51e08e8b03c5f5bcf6954be6478e53a40e05f001d278c32432ce6",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_05.png",
+      "sha256": "0e6cb4374d2d364f995d5d6fb2af944d070440466ecd4fb9c420c8876c852a62",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_05.generation.json",
+      "generationSidecarSha256": "f2f1af26760faec228cb56fd1179742a8f66e19ca9a48cecc6187b410dbd9c03",
+      "registeredSha256": "0e6cb4374d2d364f995d5d6fb2af944d070440466ecd4fb9c420c8876c852a62",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_06.png",
+      "sha256": "32c92ebe1182741bddcce07d37c1d294cb548177941173ee730944c28778c85a",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_06.generation.json",
+      "generationSidecarSha256": "2821a5bff929bf4c872203195d786162012c1f8079180912730c00fd780cc0ea",
+      "registeredSha256": "32c92ebe1182741bddcce07d37c1d294cb548177941173ee730944c28778c85a",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_07.png",
+      "sha256": "383efa52a1806079545e6fe32b9eef4ca7336f310ec6adcbc91523e395dd8660",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_07.generation.json",
+      "generationSidecarSha256": "4775a04ae57f95b2eb5f7f2fc31aacbd7d88ad7ee3bea0a0ef3cc22a6794ed0e",
+      "registeredSha256": "383efa52a1806079545e6fe32b9eef4ca7336f310ec6adcbc91523e395dd8660",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_08.png",
+      "sha256": "eb8d20a2486c86c9ad70268848bdc1fac09ef6bed4e9416c74d78572bbadd0f5",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_08.generation.json",
+      "generationSidecarSha256": "4e81dd1e4a2abf0254aa48a07c9808fb12e95f3ff3b0c4d8eb8c33c36acc2518",
+      "registeredSha256": "eb8d20a2486c86c9ad70268848bdc1fac09ef6bed4e9416c74d78572bbadd0f5",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_09.png",
+      "sha256": "a8f78c4d2db097bd66c2edda6a5100148f01c67ef7d76bdfde10c920e1bf0ea3",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_09.generation.json",
+      "generationSidecarSha256": "8dbc8e7c1b10a56a9804cdac8bb184eafb31b3f70ae1bdd58cd116d2e34da603",
+      "registeredSha256": "a8f78c4d2db097bd66c2edda6a5100148f01c67ef7d76bdfde10c920e1bf0ea3",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_10.png",
+      "sha256": "57e0279d93946e0660d6db00d7dbf0e253718e98b16ac5eace089c9746069de5",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_10.generation.json",
+      "generationSidecarSha256": "faabd2f29a055b258093498f2b0042b90d62aa073b0e70cb45ad6a76e32157f4",
+      "registeredSha256": "57e0279d93946e0660d6db00d7dbf0e253718e98b16ac5eace089c9746069de5",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_11.png",
+      "sha256": "bd20c0d15e8850432421e22fe07756e18be58de972ea05f8375633a11fafd2bb",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_11.generation.json",
+      "generationSidecarSha256": "58e6aefc60924dde0fe92a0e71bfc66ff3075d78c47b16a284ba6e34800221e1",
+      "registeredSha256": "bd20c0d15e8850432421e22fe07756e18be58de972ea05f8375633a11fafd2bb",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_12.png",
+      "sha256": "8b35e1c3396592ce4c5bc3785b5ef608bf8cce39c7e4504913d3cfd0aec2f0ec",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_12.generation.json",
+      "generationSidecarSha256": "c14d114c457024611c4049b98fc32cf16aabbe685e202c3b3e9e339a5bea5079",
+      "registeredSha256": "8b35e1c3396592ce4c5bc3785b5ef608bf8cce39c7e4504913d3cfd0aec2f0ec",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_13.png",
+      "sha256": "dad3d3d602d452a3fb6cb7b740a2a4b2bc40f7ec4a9022ffc9278b9b731be826",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_13.generation.json",
+      "generationSidecarSha256": "e33d6c9737432e2ea275ada0bbbd253868234186b7cf38791f405c6c86539e65",
+      "registeredSha256": "dad3d3d602d452a3fb6cb7b740a2a4b2bc40f7ec4a9022ffc9278b9b731be826",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_14.png",
+      "sha256": "7e569fcc77f9a89f8747f6277d625608806e79c0f0b750f3cdc20ae57e170c10",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_14.generation.json",
+      "generationSidecarSha256": "6ef3c1fe26e53219833cc1fcaccaa5dac48292204a05bd471ea53aa141d4fd06",
+      "registeredSha256": "7e569fcc77f9a89f8747f6277d625608806e79c0f0b750f3cdc20ae57e170c10",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_15.png",
+      "sha256": "76f216d8fc5b99bcb6b4fe23611919e7bd27498d2e0b3132d0f3b6cc1a6724d0",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_15.generation.json",
+      "generationSidecarSha256": "2aab5f448d276fe5b2985ef1ba4114a9deffe66794c749bf2a91686eee070ec0",
+      "registeredSha256": "76f216d8fc5b99bcb6b4fe23611919e7bd27498d2e0b3132d0f3b6cc1a6724d0",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "E",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_16.png",
+      "sha256": "110410599c5d28c109b9bc9887e4ec2bc33ee5dba98ae6fb5ed02d711a1d64ec",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\E\\frame_16.generation.json",
+      "generationSidecarSha256": "d6be87c327122bd1fd969865e19e4fc0ca63119f7ae2d0c00054da8266e9227c",
+      "registeredSha256": "110410599c5d28c109b9bc9887e4ec2bc33ee5dba98ae6fb5ed02d711a1d64ec",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\01.png",
+      "sha256": "4e6337ac903aaac956240d7c36f624e0b17c6def33990076fa711f2401233624",
+      "manifestSha256": "4e6337ac903aaac956240d7c36f624e0b17c6def33990076fa711f2401233624",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\02.png",
+      "sha256": "4d7d9d7f50bcec0e2c55663dd4124bcc4a6f24dd521f839ed37463d0ae0a604c",
+      "manifestSha256": "4d7d9d7f50bcec0e2c55663dd4124bcc4a6f24dd521f839ed37463d0ae0a604c",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\03.png",
+      "sha256": "42b07d98d16ba6a36c87ef859b84dcd8c9eb0054a896b7804e8595a330dc798a",
+      "manifestSha256": "42b07d98d16ba6a36c87ef859b84dcd8c9eb0054a896b7804e8595a330dc798a",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\04.png",
+      "sha256": "41fac05c60b5d9a4f609ebc0ae73cfc86c004ac6820018bcd0eed346fd4dfd39",
+      "manifestSha256": "41fac05c60b5d9a4f609ebc0ae73cfc86c004ac6820018bcd0eed346fd4dfd39",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\05.png",
+      "sha256": "d1a55e337551da1bd3fcd17d6d820fa4e5e3b77dab2b8bb85d73f66bd5e4c1a3",
+      "manifestSha256": "d1a55e337551da1bd3fcd17d6d820fa4e5e3b77dab2b8bb85d73f66bd5e4c1a3",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\06.png",
+      "sha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+      "manifestSha256": "094581cf018b76366a5ae7db3127c35c8281f9143bbe6e2a839c5ea863612a13",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\07.png",
+      "sha256": "ed3a2fb2307abeb147cdccaf44d65ecff39914b15cfb18d826aac17d115bf8d1",
+      "manifestSha256": "ed3a2fb2307abeb147cdccaf44d65ecff39914b15cfb18d826aac17d115bf8d1",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\08.png",
+      "sha256": "50e2d03573744737badc6dc9238c8e9517b791e63ad9ea0490a8615396c1d5df",
+      "manifestSha256": "50e2d03573744737badc6dc9238c8e9517b791e63ad9ea0490a8615396c1d5df",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\09.png",
+      "sha256": "a183b780a7879d7b4434fe3d264c0a160fad3b1f1bc2c769bacc95f4e7c55976",
+      "manifestSha256": "a183b780a7879d7b4434fe3d264c0a160fad3b1f1bc2c769bacc95f4e7c55976",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\10.png",
+      "sha256": "3e6b37d40901d6e7995758de3cdaa6d9f2a929b8c664472fda12645ae269e90c",
+      "manifestSha256": "3e6b37d40901d6e7995758de3cdaa6d9f2a929b8c664472fda12645ae269e90c",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\11.png",
+      "sha256": "55ee6790708d5e047abaa7abc222958c0a316ec0c4244a6971084a67c8598f64",
+      "manifestSha256": "55ee6790708d5e047abaa7abc222958c0a316ec0c4244a6971084a67c8598f64",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\12.png",
+      "sha256": "c2a76da30d418ef872e517cf4a7c1acb3057c05696a19dcf7d64068dc21ba0eb",
+      "manifestSha256": "c2a76da30d418ef872e517cf4a7c1acb3057c05696a19dcf7d64068dc21ba0eb",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\13.png",
+      "sha256": "c083d05e6a9f2f16d7dc796bbaac67ba77cd90a619a1556cbe1a81cb110761b1",
+      "manifestSha256": "c083d05e6a9f2f16d7dc796bbaac67ba77cd90a619a1556cbe1a81cb110761b1",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\14.png",
+      "sha256": "b543abef636fb2738461f1545f1109c2b2328daabebba76e1b7b1f3d59ea6210",
+      "manifestSha256": "b543abef636fb2738461f1545f1109c2b2328daabebba76e1b7b1f3d59ea6210",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\15.png",
+      "sha256": "da2953b3a36b9c52c18aeab9fb32fbfdd6da98f5733d52eb7418b7844841b84a",
+      "manifestSha256": "da2953b3a36b9c52c18aeab9fb32fbfdd6da98f5733d52eb7418b7844841b84a",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "W",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\W\\16.png",
+      "sha256": "81bd6619e2dc2c008c76be3b8da70c329108923aa3b51ba7421259f0e6310a01",
+      "manifestSha256": "81bd6619e2dc2c008c76be3b8da70c329108923aa3b51ba7421259f0e6310a01",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_01.png",
+      "sha256": "2ec1e0db978986f53eb92c7f1234eada498887acbee28f63257d18533612bca8",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_01.generation.json",
+      "generationSidecarSha256": "f42e33c96e5b7be652d01ed5cebe4bdef27eaf0046bf64271d9aabd2dff79f22",
+      "registeredSha256": "2ec1e0db978986f53eb92c7f1234eada498887acbee28f63257d18533612bca8",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_02.png",
+      "sha256": "ca04d33bcc8e856903e14d9763312174b3fe3071758b6c9cc75d4ddf77c6e910",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_02.generation.json",
+      "generationSidecarSha256": "f6599e1ead4c2339b7aea76d48e5b3454c47bdf64fa3cfcfb813c320a01966fb",
+      "registeredSha256": "ca04d33bcc8e856903e14d9763312174b3fe3071758b6c9cc75d4ddf77c6e910",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_03.png",
+      "sha256": "9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_03.generation.json",
+      "generationSidecarSha256": "f3bd3a70e18ac2bd4092b9da33b90776de9bfb9af359f8c211dea66999ab4268",
+      "registeredSha256": "9bcc956c225500ba17610512db9585e94532aa735ee1f0b1f5f9967d0afb33da",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_04.png",
+      "sha256": "ecd3c2a3ff4630e0fe183324cbda07a413bb4961d021447d248bd6871037b9c3",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_04.generation.json",
+      "generationSidecarSha256": "74e1a4a728f95d5d66b373a43409de4e0d6782d397690acc80c44cf91721af82",
+      "registeredSha256": "ecd3c2a3ff4630e0fe183324cbda07a413bb4961d021447d248bd6871037b9c3",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_05.png",
+      "sha256": "bdc0982b11a73951215da9e64bf7a67498c6865d7580726652b51d95b1ca2eb1",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_05.generation.json",
+      "generationSidecarSha256": "9bb494cc5bc296d9a4010c4146dfc877b90ba90df28de9006ea9d525cfeabca1",
+      "registeredSha256": "bdc0982b11a73951215da9e64bf7a67498c6865d7580726652b51d95b1ca2eb1",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_06.png",
+      "sha256": "33d5ed065922c2c75b30203e7f8ca7315f65d7a655ef9bc6a35733fabce6a868",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_06.generation.json",
+      "generationSidecarSha256": "454e82c880f1ea50109e4508f4bd53bb4076ea009b3eec442e67aff9f7ff9bb9",
+      "registeredSha256": "33d5ed065922c2c75b30203e7f8ca7315f65d7a655ef9bc6a35733fabce6a868",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_07.png",
+      "sha256": "240f29d6c61002ebed244f88636789d7810360eb0f6881ca84e83d763a1f6e54",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_07.generation.json",
+      "generationSidecarSha256": "8ce6aa47fb97b9cbd68f757dba356d1b10321941f4336287aba88b2301822ff2",
+      "registeredSha256": "240f29d6c61002ebed244f88636789d7810360eb0f6881ca84e83d763a1f6e54",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_08.png",
+      "sha256": "86fadc8d1fb7f63e44e29199423f67351d772d61ae8c4d174f2d5b58a44c43bf",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_08.generation.json",
+      "generationSidecarSha256": "4d9d27bbfab973824412cf380ebee5d90e05e74d87d281f60a554f2b0d18aae5",
+      "registeredSha256": "86fadc8d1fb7f63e44e29199423f67351d772d61ae8c4d174f2d5b58a44c43bf",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_09.png",
+      "sha256": "2817b17410c856523ed94aa654a326cf6d0e8643dc6455eb6522e78d58c38351",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_09.generation.json",
+      "generationSidecarSha256": "7e21f0c9c3256c59d420cc7be6685cffd932301bd5165b8b81ba1e9c62d0f183",
+      "registeredSha256": "2817b17410c856523ed94aa654a326cf6d0e8643dc6455eb6522e78d58c38351",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_10.png",
+      "sha256": "42805fce7d71bd3725466c8ed90cf9d3eb6d794887b9b0f78a29befc17472191",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_10.generation.json",
+      "generationSidecarSha256": "11cee0bef1bf4e5bce57dd95a4f5cdbd74f307f6044c3c86aa4306408a52aece",
+      "registeredSha256": "42805fce7d71bd3725466c8ed90cf9d3eb6d794887b9b0f78a29befc17472191",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_11.png",
+      "sha256": "420e26bec8b26b0eaa7a07df5b760a78dcac870c96d508201ec1bf3153953fe6",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_11.generation.json",
+      "generationSidecarSha256": "3273101744578797d92515f01456c27fc4fa3ab28566b41cc6f129913aa98e90",
+      "registeredSha256": "420e26bec8b26b0eaa7a07df5b760a78dcac870c96d508201ec1bf3153953fe6",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_12.png",
+      "sha256": "ec79f976ca27fac715d738cc994f7051dd79a997c5bfcf9dcb96567e8a3ee6d8",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_12.generation.json",
+      "generationSidecarSha256": "a505a3d458d04927ae085ffe252fff086f760141b88522795948b9675fd539ef",
+      "registeredSha256": "ec79f976ca27fac715d738cc994f7051dd79a997c5bfcf9dcb96567e8a3ee6d8",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_13.png",
+      "sha256": "2a350f3d30ab834eaf6f934c7b10bd356fdf50d39e53f82b7854db5836713fa0",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_13.generation.json",
+      "generationSidecarSha256": "fea773a9f3401291168d3da64e6f690264a3326da9dc62baf10253c8d7af5b6c",
+      "registeredSha256": "2a350f3d30ab834eaf6f934c7b10bd356fdf50d39e53f82b7854db5836713fa0",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_14.png",
+      "sha256": "53ecff91755b552acc8a663845de84160cbd5922ec20db17588fd9de527fb9b7",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_14.generation.json",
+      "generationSidecarSha256": "9b7d0e535ba8734ceca3dcd948c884cbd665189ce3b710e8bbdd8081f20619e3",
+      "registeredSha256": "53ecff91755b552acc8a663845de84160cbd5922ec20db17588fd9de527fb9b7",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_15.png",
+      "sha256": "fadf30864ae76cc170807f82bfb899753e29921439c258dbfff2a671e6ebbb78",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_15.generation.json",
+      "generationSidecarSha256": "5bc97ae6b7e11dfeb78099400cb08d0e5ddcbc6f017556268665105c4a154ada",
+      "registeredSha256": "fadf30864ae76cc170807f82bfb899753e29921439c258dbfff2a671e6ebbb78",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "W",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_16.png",
+      "sha256": "2169625d61d662b4e98c653d972fc03a5bd40901fc2cbfd640cc55df66856884",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\W\\frame_16.generation.json",
+      "generationSidecarSha256": "024cb74a6cb56c68b217ffb63725922e28789f966b8b51000f2c04cf4cacacfb",
+      "registeredSha256": "2169625d61d662b4e98c653d972fc03a5bd40901fc2cbfd640cc55df66856884",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\01.png",
+      "sha256": "3da787a28be4124dad86634d49bcdd3dbeaedeb8b19300f944a0659b5ceaa831",
+      "manifestSha256": "3da787a28be4124dad86634d49bcdd3dbeaedeb8b19300f944a0659b5ceaa831",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\02.png",
+      "sha256": "23846e882682edce2f054abf3b82bb500aacee1e219a74dbdf396739e8b69f1e",
+      "manifestSha256": "23846e882682edce2f054abf3b82bb500aacee1e219a74dbdf396739e8b69f1e",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\03.png",
+      "sha256": "9724a88392b1df4f4a42cbbf22a62b85fcfddb94bc9371ecf05933529d8058e6",
+      "manifestSha256": "9724a88392b1df4f4a42cbbf22a62b85fcfddb94bc9371ecf05933529d8058e6",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\04.png",
+      "sha256": "52d05748db7822c9dda539d7bb839a7f3b07ffe582cdcc2f51e57398238aa67c",
+      "manifestSha256": "52d05748db7822c9dda539d7bb839a7f3b07ffe582cdcc2f51e57398238aa67c",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\05.png",
+      "sha256": "2f93cb02d3437f3fd1951aecfcca7c5d9374a2a1a42944881429d9c6ad4f08e8",
+      "manifestSha256": "2f93cb02d3437f3fd1951aecfcca7c5d9374a2a1a42944881429d9c6ad4f08e8",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\06.png",
+      "sha256": "914e300883339c31bfa09aca84132631dc6ed6b9e3c857d47260841e155ff157",
+      "manifestSha256": "914e300883339c31bfa09aca84132631dc6ed6b9e3c857d47260841e155ff157",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\07.png",
+      "sha256": "718f0a83daef1852f690eff048f137493b7493dfb3f8625265d7cb1fd938d4c1",
+      "manifestSha256": "718f0a83daef1852f690eff048f137493b7493dfb3f8625265d7cb1fd938d4c1",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\08.png",
+      "sha256": "bc3a2149024503235c43968f43754ec53765e06abf08e78d3aaac623629b6f5c",
+      "manifestSha256": "bc3a2149024503235c43968f43754ec53765e06abf08e78d3aaac623629b6f5c",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\09.png",
+      "sha256": "4d3479c1b472e779b79c726f07ecfca395573e2b4e62e5e1da2e0b832a1e437d",
+      "manifestSha256": "4d3479c1b472e779b79c726f07ecfca395573e2b4e62e5e1da2e0b832a1e437d",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\10.png",
+      "sha256": "9067f6c67f2c012937a6c85f7fa17e9e7be4593e115f995a0381ea9c961660cd",
+      "manifestSha256": "9067f6c67f2c012937a6c85f7fa17e9e7be4593e115f995a0381ea9c961660cd",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\11.png",
+      "sha256": "3090e42b6b82afde2823c23c7a47173143a0fa9a0f1eac7635fa73cbd98e3ec6",
+      "manifestSha256": "3090e42b6b82afde2823c23c7a47173143a0fa9a0f1eac7635fa73cbd98e3ec6",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\12.png",
+      "sha256": "482b2f64fcf282b4a27cdb78ce6036a6321e01c2cfc783444cd68c483d720ff1",
+      "manifestSha256": "482b2f64fcf282b4a27cdb78ce6036a6321e01c2cfc783444cd68c483d720ff1",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\13.png",
+      "sha256": "0224d3c13ec2f5b8666500c80474b9159d8061ccf61c62ea5d0cc09fa82af840",
+      "manifestSha256": "0224d3c13ec2f5b8666500c80474b9159d8061ccf61c62ea5d0cc09fa82af840",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\14.png",
+      "sha256": "d1e08cb9658aaa7907dd446f5d2e5db0be1a8fd6398f3d99acd378f1e87d5672",
+      "manifestSha256": "d1e08cb9658aaa7907dd446f5d2e5db0be1a8fd6398f3d99acd378f1e87d5672",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\15.png",
+      "sha256": "68ef107c57594b76e32ee7308130a5a57b86ffad31843056f7681d023f7e539e",
+      "manifestSha256": "68ef107c57594b76e32ee7308130a5a57b86ffad31843056f7681d023f7e539e",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "09_bamboo_archer_girl",
+      "direction": "SW",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\09_bamboo_archer_girl\\runtime\\run\\SW\\16.png",
+      "sha256": "0997cc5be4b0d1157462707d84f5ef6f96b2c33d615fbdcd1e0522ffdbf508bd",
+      "manifestSha256": "0997cc5be4b0d1157462707d84f5ef6f96b2c33d615fbdcd1e0522ffdbf508bd",
+      "manifestMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "sequenceMsPerFrame": 75
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 1,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_01.png",
+      "sha256": "b821e8413ed1ef8482024c4cd22d9606525c8cf2738f3e2208b1ef0ddd32e246",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_01.generation.json",
+      "generationSidecarSha256": "06360194c9c63cb6e40dd225cd185fd5312a4bc55af4f7831a024600ad41b06a",
+      "registeredSha256": "b821e8413ed1ef8482024c4cd22d9606525c8cf2738f3e2208b1ef0ddd32e246",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 2,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_02.png",
+      "sha256": "abab89c75c98e7384286d664c50ab1b685fd82678f66e0a201fc2aebe1e38bbb",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_02.generation.json",
+      "generationSidecarSha256": "987395fb4057bc6ccb4892f7f7f6411742b23f4406d2a93f74d4b806f98921a9",
+      "registeredSha256": "abab89c75c98e7384286d664c50ab1b685fd82678f66e0a201fc2aebe1e38bbb",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 3,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_03.png",
+      "sha256": "67ba4759678fa4943b77f984758fb8465645f7f99c68c222b5869e53fb460dea",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_03.generation.json",
+      "generationSidecarSha256": "1eadb6f74e35615c135ce9c3a565e77f36eae92d2dd70f8bda3d21908a595088",
+      "registeredSha256": "67ba4759678fa4943b77f984758fb8465645f7f99c68c222b5869e53fb460dea",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 4,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_04.png",
+      "sha256": "844f3e2b245c45a242a426c36600006fee87a5e3686a7cd72bec1d9b06b122be",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_04.generation.json",
+      "generationSidecarSha256": "24936a793f92c5720434fd9053bdf5791c59464761b3647dcf81928a6401230c",
+      "registeredSha256": "844f3e2b245c45a242a426c36600006fee87a5e3686a7cd72bec1d9b06b122be",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 5,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_05.png",
+      "sha256": "d3c9c24067b52e23ff2afaa298bb1135846b7d924ef7d077c3d672763e22b8cc",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_05.generation.json",
+      "generationSidecarSha256": "076ddf1f8dbc8d47621429462216a9da3691c5323a630629be71b47233c962de",
+      "registeredSha256": "d3c9c24067b52e23ff2afaa298bb1135846b7d924ef7d077c3d672763e22b8cc",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 6,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_06.png",
+      "sha256": "af02154c83e1b8c0f0726a059721bfabac8475d9148ce309efa87029fc551ad4",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_06.generation.json",
+      "generationSidecarSha256": "e94bde510260424bceba4d64d464e572b68c09ea2ff1548be37f616dfea11939",
+      "registeredSha256": "af02154c83e1b8c0f0726a059721bfabac8475d9148ce309efa87029fc551ad4",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 7,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_07.png",
+      "sha256": "ca32beb81ea35b515f435070cfcebdb589b79195b563702b5756d6b56cc2f872",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_07.generation.json",
+      "generationSidecarSha256": "7e7c931162697130f131636b402265c3c19bdb994710d03debf9b9583aab9db1",
+      "registeredSha256": "ca32beb81ea35b515f435070cfcebdb589b79195b563702b5756d6b56cc2f872",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 8,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_08.png",
+      "sha256": "6991b839b352ba11e2fa79070a53deb2bffeb95f1096ae2c68ce75cab5542090",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_08.generation.json",
+      "generationSidecarSha256": "ca480f7ae18964c5501f41ab468d945f4f014d2d869ca454332d1fb9df3432fe",
+      "registeredSha256": "6991b839b352ba11e2fa79070a53deb2bffeb95f1096ae2c68ce75cab5542090",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 9,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_09.png",
+      "sha256": "96e32aa77ac4fd02bb67993cd088697400167921052323d4e9c20610fa2a0e2a",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_09.generation.json",
+      "generationSidecarSha256": "a7edc7a5562924a5ba132724769631636995382faa973534fc3a6b947b5abbb0",
+      "registeredSha256": "96e32aa77ac4fd02bb67993cd088697400167921052323d4e9c20610fa2a0e2a",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 10,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_10.png",
+      "sha256": "d5d8605ba44bb017cbea457939b53c312336c82d3c1e26f5896fbd8ded69ee32",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_10.generation.json",
+      "generationSidecarSha256": "392934600649406658ad44b285d6591874e56284bfac35c60906e087c9b66dd4",
+      "registeredSha256": "d5d8605ba44bb017cbea457939b53c312336c82d3c1e26f5896fbd8ded69ee32",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": true,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 11,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_11.png",
+      "sha256": "cccefb62c87ce7e9eb787ac645c536a9844ec47407e414ce4c46c1583c38c740",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_11.generation.json",
+      "generationSidecarSha256": "8af37c744772ce419de742e178d9f76d6b31e12be1cd6e09142d54a076a1b7f6",
+      "registeredSha256": "cccefb62c87ce7e9eb787ac645c536a9844ec47407e414ce4c46c1583c38c740",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 12,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_12.png",
+      "sha256": "76172ed1c0ec92fe73b3b8131d78d35259a375a3aa66a86b5c02f2c35c72a791",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_12.generation.json",
+      "generationSidecarSha256": "5493b03db6d3e30bb3619fcb782be0542b439096dbdce05a76212644c7c57e3c",
+      "registeredSha256": "76172ed1c0ec92fe73b3b8131d78d35259a375a3aa66a86b5c02f2c35c72a791",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 13,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_13.png",
+      "sha256": "a4a03e62bfd399965db1215a1149389b6da58ad09b5e06a167a332fdad4ac7f2",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_13.generation.json",
+      "generationSidecarSha256": "01a791538008b9a635effc87641e7de455072d70e57b45901fbd7d6e46212b7e",
+      "registeredSha256": "a4a03e62bfd399965db1215a1149389b6da58ad09b5e06a167a332fdad4ac7f2",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 14,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_14.png",
+      "sha256": "a14b85e680a5e075f65d9a1b92276e31f654b4e8b38224b2c64a743f46a7a29a",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_14.generation.json",
+      "generationSidecarSha256": "cfeac004fa2edec932ddc0e5a95f9c839cb33307a7d8ed0a87af7379eb9426e1",
+      "registeredSha256": "a14b85e680a5e075f65d9a1b92276e31f654b4e8b38224b2c64a743f46a7a29a",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 15,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_15.png",
+      "sha256": "7273b6eaab1c7ea1c27529f5cadaed488f7833a946ad87257ee4488f8cad0fdd",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_15.generation.json",
+      "generationSidecarSha256": "174d924cda5642fb91a5a8434268cfa6106050d84a7fbf690df160995f246e9d",
+      "registeredSha256": "7273b6eaab1c7ea1c27529f5cadaed488f7833a946ad87257ee4488f8cad0fdd",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    },
+    {
+      "character": "04_mountain_guardian_boy",
+      "direction": "SW",
+      "frame": 16,
+      "file": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_16.png",
+      "sha256": "1e7abbc21e93c72ed52d87ed43b8510db8b7b79b8f113ccabc70d7df9db93b87",
+      "generationSidecar": "D:\\work\\image\\qdao_original_roster_v14_hd\\action-remake-20261001\\characters\\04_mountain_guardian_boy\\frames\\run\\SW\\frame_16.generation.json",
+      "generationSidecarSha256": "9adca32e3d63ccb48f763660acf6b3a3491fab9f5875f5a642a2924b80852448",
+      "registeredSha256": "1e7abbc21e93c72ed52d87ed43b8510db8b7b79b8f113ccabc70d7df9db93b87",
+      "registeredMatch": true,
+      "viewedAsContact": true,
+      "viewedAsIndividualPng": false,
+      "frameDurationMs": 75,
+      "offlinePreviewDefaultLoopMs": 1200
+    }
+  ]
+}

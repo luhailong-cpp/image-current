@@ -1,0 +1,76 @@
+{
+  "tileId": "r03_c14",
+  "status": "capacity_gate_hold_no_new_artwork_requests",
+  "inFlightStatus": "none",
+  "coordinateNote": "Coordinates describe the current provisional raster grid only; shared world size, game units and 5000-player capacity remain unvalidated.",
+  "production": {
+    "successfulNativeImages": 16,
+    "failedImageToolAttempts": 2,
+    "selectedCoreCount": 13,
+    "selectedOverlayCount": 2,
+    "usableNativeCount": 13,
+    "complete4kCount": 0,
+    "formalAcceptedCount": 0
+  },
+  "risks": [
+    {
+      "severity": "capacity_sensitive",
+      "area": "r03_c14_p04_01 lower-left stone paving and balustrade",
+      "nativeWorldBox": [
+        53133,
+        11149,
+        54387,
+        12403
+      ],
+      "finding": "Visible ground is partially occluded by the oversized fish lantern and foliage. Neither its apparent image width nor the surrounding water establishes a traversable corridor or player capacity.",
+      "requiredValidation": "Root must establish gameplay world units, character footprint and collision masks, then check continuity with r03_c13 paving and the as-yet-unproduced southern neighbor. Do not infer crowd capacity from raster pixels."
+    },
+    {
+      "severity": "capacity_sensitive",
+      "area": "r03_c14 rows1–3 and row4 right side",
+      "finding": "Most generated pixels are sea. Exclude water, offshore rock, fish lantern, stone balustrade and foliage from any conservative walkable area. No house count or 5000-player claim follows from native coverage.",
+      "requiredValidation": "Use validated walkable masks; no design expansion while gate remains active."
+    },
+    {
+      "severity": "visual_pending",
+      "area": "internal cross at tile-local[1024,2048] and[2048,2048]",
+      "finding": "Small rectangular caustic/tone artifact remains in raw native p03_02 and p03_03. Requires local native repair after gate release.",
+      "currentAction": "Preserved candidates and 100% QA crops; no further generation submitted."
+    },
+    {
+      "severity": "coverage_pending",
+      "area": "r03_c14_p04_02,p04_03,p04_04",
+      "finding": "Three1024-square cores absent. p04_02 guide and actual attempted prompt exist, but tool failed before generating any output.",
+      "currentAction": "No output or complete4k count assigned."
+    },
+    {
+      "severity": "reference_unavailable",
+      "area": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+      "finding": "Original style reference was attached successfully to prior outputs with recorded SHA3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2, but is now missing from its path. It prevented p04_02 submission.",
+      "requiredValidation": "Restore or explicitly resolve this same approved reference through root before future production. Do not silently substitute artwork."
+    },
+    {
+      "severity": "configuration_unavailable",
+      "area": "D:/work/image/config/image-generation.json",
+      "finding": "File absent when p04_01 ingest ran. Native PNG had copied successfully before metadata failure.",
+      "currentAction": "Metadata reconstructed from the same batch snapshot in r03_c14_p03_04.png.generation.json, with explicit configSnapshotSource/note. All submitted and actual model/quality values remain null. No shared config was written."
+    }
+  ],
+  "evidence": {
+    "provenanceAudit": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c14-capacity-gate-provenance-audit.json",
+    "pixelReplay": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c14-existing-coverage-native.png.derivation.json",
+    "selection": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/selection-r03_c14.json",
+    "localProgress": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/qa/r03_c14-progress.json"
+  },
+  "pixelReplay": {
+    "nativeGuideReconstructions": 27,
+    "failedReconstructions": 0,
+    "coveredPixels": 13631488,
+    "missingPixels": 3145728,
+    "unregisteredArtworkPixels": 0,
+    "overlappingBasePixels": 0,
+    "resampling": false,
+    "feathering": false
+  },
+  "generationGate": "Await root release after capacity/layout/scale review. No self-release."
+}

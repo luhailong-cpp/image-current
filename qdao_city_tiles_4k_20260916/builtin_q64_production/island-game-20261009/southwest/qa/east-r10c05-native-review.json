@@ -1,0 +1,130 @@
+{
+  "tile": "r10_c05",
+  "reviewedAtUtc": "2026-10-13T01:25:53.212498+00:00",
+  "status": "complete native candidate; internal panel and shared outer edges still need repair",
+  "stablePrefix": "east-r10c05-eastjoint-v02-r10_c05",
+  "reviewedNativeStrips": 24,
+  "reviewedNativeJunctions": 9,
+  "rawReviewManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southwest\\qa\\c04-hardseam-east-r10c05-v01-native-QA-manifest.json",
+  "changes": [
+    {
+      "repair": "r10_c05_internal_westline_v01",
+      "adoptedRegion": "only first ROI [80,250,680,610]",
+      "result": "dangling seam joined; target and four native perimeters reviewed; passed"
+    },
+    {
+      "repair": "r10_c05_internal_eastjoint_v01",
+      "result": "paving seam dead-end removed; target and all four native perimeters passed"
+    }
+  ],
+  "rejectedTrials": [
+    {
+      "prefix": "east-r10c05-westline-v01",
+      "reason": "second ROI moved inset lower bevel and clipped it at the perimeter; use westline-v02 with first ROI only"
+    },
+    {
+      "prefix": "east-r10c05-eastjoint-v01",
+      "reason": "inherits rejected westline-v01 lower panel ROI; replayed unchanged east paving selection on westline-v02 as eastjoint-v02"
+    },
+    {
+      "prefix": "east-r10c05-panelbevel-v01",
+      "reason": "whole inset moved at bottom and bright wall lower edge acquires step; not adopted"
+    },
+    {
+      "prefix": "east-r10c05-panelbevel-v02",
+      "reason": "insufficient ROI misses upper panel changes; not adopted"
+    }
+  ],
+  "savedUnusedSources": [
+    "r10_c05_panelbevel_v01",
+    "r10_c05_panelbevel_v02"
+  ],
+  "remainingInternalIssues": [
+    {
+      "tileLocalBox": [
+        980,
+        1440,
+        1220,
+        1630
+      ],
+      "issue": "short doubled lower inset-panel line in original s02_02; do not claim internal pass"
+    }
+  ],
+  "remainingBoundaryIssues": [
+    {
+      "tileLocalBox": [
+        0,
+        1000,
+        240,
+        1650
+      ],
+      "issue": "western low wall cap height mismatch with c04; shared pair repair required, original initial group must not be overwritten"
+    },
+    {
+      "tileLocalBox": [
+        2900,
+        0,
+        3400,
+        200
+      ],
+      "issue": "northern wall corner retains softer guide texture; pair review with r09c05 required"
+    }
+  ],
+  "acceptedNotes": [
+    "Native paving brush texture varies across some joins; geometry and lantern/gold fish silhouettes remained connected in reviewed strips."
+  ],
+  "allInternalSeamsPassed": false,
+  "allOuterTileEdgesPassed": false,
+  "formalAccepted": false,
+  "validation": {
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "sameGlobalCoordinateExact": true,
+    "sourceIdPixelCounts": {
+      "1": 825370,
+      "2": 1070294,
+      "3": 916532,
+      "4": 953880,
+      "5": 1076309,
+      "6": 1019057,
+      "7": 921212,
+      "8": 1066609,
+      "9": 980665,
+      "10": 954665,
+      "11": 1160137,
+      "12": 1003247,
+      "13": 1190207,
+      "14": 1097482,
+      "15": 1017836,
+      "16": 1182765,
+      "17": 195468,
+      "18": 145481
+    },
+    "sourceInputsAndRecordsUnchanged": true,
+    "interpolation": false,
+    "feathering": false,
+    "colorAdjustment": false,
+    "displacement": false,
+    "unchangedOutsideRepairSelection": true,
+    "mandatoryCoreUsesRepairOnly": true,
+    "mandatoryTargetsUseRepairOnly": true,
+    "repairPixelCount": 145481,
+    "diskRoundtripExact": true,
+    "mandatoryCorePatchBoxes": [
+      [
+        190,
+        260,
+        650,
+        530
+      ]
+    ],
+    "mandatoryTargetPatchBoxes": [
+      [
+        220,
+        275,
+        550,
+        495
+      ]
+    ]
+  }
+}

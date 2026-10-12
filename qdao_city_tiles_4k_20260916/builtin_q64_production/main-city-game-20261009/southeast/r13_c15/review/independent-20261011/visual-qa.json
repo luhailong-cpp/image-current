@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-11T11:57:00.980443+00:00",
+  "reviewer": "seam_audit",
+  "tile": "r13_c15",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\candidate\\r13_c15-4k-candidate-34f6632df3f1d59e5f03.png",
+    "sha256": "809a98b43c7a31aa53f848ed5c0af2feaac21a411843a07cb9f0d010d2a0860d"
+  },
+  "westCore": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+    "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4"
+  },
+  "assemblyIdentitySha256": "34f6632df3f1d59e5f03d4c2737e95516c28fc15aa37662c0fd1b9c48bded8b9",
+  "method": "Visual inspection of all 24 consecutive 512x1024 or 1024x512 seam segments, all 9 native 900x900 junctions, and 4 core-only 800x1024 west joins. Images shown with original detail. Preview and layout used only for orientation.",
+  "coordinateConvention": "All boxes half-open [left,top,right,bottom] in 4096 r13_c15 core coordinates. Reported defect points are approximate visual locations. West join evidence has tile boundary at image x400.",
+  "coverage": {
+    "fullInternalVerticalSeams": [
+      1024,
+      2048,
+      3072
+    ],
+    "fullInternalHorizontalSeams": [
+      1024,
+      2048,
+      3072
+    ],
+    "internalJunctionCount": 9,
+    "westRangeY": [
+      0,
+      4096
+    ],
+    "otherExternalEdges": "not assessed against neighbors in this assignment"
+  },
+  "verdict": {
+    "internal": "failed",
+    "west": "failed",
+    "formalAccepted": false
+  },
+  "findings": [
+    {
+      "id": "I1",
+      "severity": "must_fix",
+      "scope": "internal",
+      "approximateDefectBoxIn4096": [
+        2960,
+        1780,
+        3080,
+        1995
+      ],
+      "approximateFeaturePoints": [
+        [
+          3001,
+          1809
+        ],
+        [
+          3023,
+          1941
+        ]
+      ],
+      "description": "The upper and lower diagonal edges of the same tabletop fascia both jump at the p02_03/p02_04 join: the upper highlight makes a roughly 30-pixel vertical step, while the lower silhouette forms a sharp unmatched notch. This is a silhouette/geometry discontinuity, not merely wood-grain variation.",
+      "sourcePatches": {
+        "p02_03": "p02_03_v20261011T084421_8392bfa6",
+        "p02_04": "p02_04_v20261011T095931_e51c60aa"
+      },
+      "evidence": [
+        "v3072-y1024-2048.png",
+        "j3072-2048.png",
+        "issue-I1-table-rim.png"
+      ],
+      "suggestedNative1254ContextBox": [
+        2400,
+        1260,
+        3654,
+        2514
+      ],
+      "repairIntent": "Keep both sides of the tabletop straight and continuous with one consistent thickness; retain rabbit paw, panel and floor positions. Review the entire perimeter afterward."
+    },
+    {
+      "id": "I2",
+      "severity": "must_fix",
+      "scope": "internal",
+      "approximateDefectBoxIn4096": [
+        390,
+        3175,
+        1100,
+        3230
+      ],
+      "approximateFeaturePoints": [
+        [
+          520,
+          3187
+        ],
+        [
+          1065,
+          3187
+        ]
+      ],
+      "description": "A nearly horizontal cut around y3187 abruptly terminates the diagonal floorboards beneath the table and switches to a differently oriented foreground strip. The same height also makes a rectangular color/grain step across the left face of the table leg. It reads as an assembly cutoff rather than a coherent physical board joint or step. y3187 is the lower extent of the previous-row native coverage.",
+      "sourcePatches": {
+        "p03_01": "p03_01_v20261011T080659_7d320751",
+        "p04_01": "p04_01_v20261011T083230_d7518a78",
+        "p03_02": "p03_02_v20261011T084422_12b67289",
+        "p04_02": "p04_02_v20261011T091643_c7e83880"
+      },
+      "evidence": [
+        "h3072-x0-1024.png",
+        "j1024-3072.png",
+        "issue-I2-floor-and-leg.png"
+      ],
+      "suggestedNative1254ContextBox": [
+        50,
+        2580,
+        1304,
+        3834
+      ],
+      "repairIntent": "Resolve the under-table floor transition and leg grain together; any intended transverse board needs coherent perspective and must not cut across the leg face. Preserve leg silhouette and footing."
+    },
+    {
+      "id": "W1",
+      "severity": "must_fix",
+      "scope": "external_west",
+      "approximateDefectBoxIn4096": [
+        0,
+        3650,
+        250,
+        4030
+      ],
+      "approximateFeaturePoints": [
+        [
+          0,
+          3674
+        ],
+        [
+          0,
+          3837
+        ],
+        [
+          0,
+          4005
+        ]
+      ],
+      "description": "Three foreground plank grooves on r13_c15 terminate exactly at x0. The immutable r13_c14 core on the left has continuous uncut wood at those heights, so all three appear as open-ended slots at the tile boundary. Minor tonal changes are present too, but the groove topology is the material defect.",
+      "sourcePatches": {
+        "p04_01": "p04_01_v20261011T083230_d7518a78"
+      },
+      "westSource": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+        "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4"
+      },
+      "evidence": [
+        "west-y3072-4096.png",
+        "issue-W1-floor-slots.png"
+      ],
+      "suggestedNative1254ContextBox": [
+        -625,
+        2842,
+        629,
+        4096
+      ],
+      "repairIntent": "Use only real r13_c14 core pixels as the immutable left anchor. Reconcile grooves within r13_c15 without changing the neighbor. The suggested box is in r13_c15 coordinates, with negative x selecting the adjacent core, not its halo. Review overlap with I2 repair and the bottom external edge afterward."
+    }
+  ],
+  "nonBlockingObservations": [
+    "West y0..1024 has small color/value changes in the wood rail and panel at x0; framing silhouette remains connected.",
+    "No additional substantial discontinuities observed in steamer rims, woven lid, rabbit silhouette, lattice framing, remaining tabletop spans, or the other reviewed floor seams.",
+    "Approved layout is a giant detail crop and does not establish world scale, character scale or capacity."
+  ],
+  "excludedByAssignment": [
+    "Added bell above p01_02; parent repairing separately.",
+    "Suspected extra white cap at bottom of p04_03; parent repairing separately."
+  ],
+  "reviewedEvidence": [
+    {
+      "evidence": "v1024-y0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h1024-x0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v1024-y1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h1024-x1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v1024-y2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h1024-x2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v1024-y3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I2"
+      ]
+    },
+    {
+      "evidence": "h1024-x3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v2048-y0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h2048-x0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v2048-y1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h2048-x1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v2048-y2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h2048-x2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I1"
+      ]
+    },
+    {
+      "evidence": "v2048-y3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h2048-x3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v3072-y0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h3072-x0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I2"
+      ]
+    },
+    {
+      "evidence": "v3072-y1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I1"
+      ]
+    },
+    {
+      "evidence": "h3072-x1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I2"
+      ]
+    },
+    {
+      "evidence": "v3072-y2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h3072-x2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "v3072-y3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "h3072-x3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j1024-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j2048-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j3072-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j2048-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j3072-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I1"
+      ]
+    },
+    {
+      "evidence": "j1024-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "I2"
+      ]
+    },
+    {
+      "evidence": "j2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "j3072-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "west-y0-1024.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "west-y1024-2048.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "west-y2048-3072.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "no_additional_material_discontinuity_observed",
+      "issueIds": []
+    },
+    {
+      "evidence": "west-y3072-4096.png",
+      "viewedAtNative100Percent": true,
+      "resized": false,
+      "result": "failed",
+      "issueIds": [
+        "W1"
+      ]
+    }
+  ],
+  "extraEvidenceManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\review\\independent-20261011\\issue-crop-provenance.json",
+  "immutableSourceRecheck": {
+    "candidateSha256": "809a98b43c7a31aa53f848ed5c0af2feaac21a411843a07cb9f0d010d2a0860d",
+    "westCoreSha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4"
+  },
+  "writesLimitedTo": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\review\\independent-20261011",
+  "generationCalls": 0,
+  "candidateMutation": false,
+  "activeMapMutation": false,
+  "progressMutation": false
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T12:02:21.953Z",
+  "reviewType": "native 100-percent cylinder/ground visual QA and prior-repair preservation",
+  "status": "local_cylinder_and_ground_visual_pass",
+  "adoptedPrefix": "c04-cylinder-join-v01-r09_c04",
+  "basePrefix": "c04-wall-join-v02-r09_c04",
+  "repair": "r09_c04_cylinder_join_v01",
+  "repairGlobalBox": [
+    14238,
+    35208,
+    15492,
+    36462
+  ],
+  "parameters": {
+    "repairRoi": [
+      270,
+      380,
+      830,
+      890
+    ],
+    "band": 70,
+    "mandatoryTarget": [
+      380,
+      540,
+      580,
+      700
+    ]
+  },
+  "candidate": {
+    "path": "qa/c04-cylinder-join-v01-r09_c04-candidate-4096.png",
+    "sha256": "da7647d3897b5c57ba1128203d768f30bea6618c3a28eb7e809efee005c24fa5",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "repairSourceId": 20,
+    "selectedRepairPixels": 218743,
+    "sourceCount": 20
+  },
+  "validation": {
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "sameGlobalCoordinateExact": true,
+    "diskRoundtripExact": true,
+    "allInputsUnchanged": true,
+    "interpolation": false,
+    "feathering": false,
+    "colorAdjustment": false,
+    "displacement": false,
+    "assemblyReport": "qa/c04-cylinder-join-v01-r09_c04-report.json"
+  },
+  "priorRepairs": {
+    "proof": "qa/c04-cylinder-v01-prior-repairs-preserved.json",
+    "boundary": {
+      "sourceId": 17,
+      "pixelCount": 653843,
+      "selectionAndArtExactUnchanged": true
+    },
+    "bamboo": {
+      "sourceId": 18,
+      "pixelCount": 1405525,
+      "selectionAndArtExactUnchanged": true
+    },
+    "wall": {
+      "sourceId": 19,
+      "pixelCount": 532791,
+      "selectionAndArtExactUnchanged": true
+    }
+  },
+  "visualResults": [
+    {
+      "area": "Cylinder gold side stripe",
+      "result": "pass",
+      "observation": "The old lateral step and break are removed; the stripe forms a continuous contour through the mandatory target.",
+      "evidence": "c04-cylinder-v01-target-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "Adjacent pavement",
+      "result": "pass",
+      "observation": "The previous jagged shade boundary and uneven stone-joint junction have been corrected. Ground shadow remains painterly and stone edges connect.",
+      "evidence": "c04-cylinder-v01-ground-join-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "All four ROI perimeters",
+      "result": "pass",
+      "observation": "Cylinder red/gold details, vessel body and foot ring, and pavement remain connected across the binary cut perimeter. No conspicuous new straight/rectangular color block or geometry break found.",
+      "evidence": [
+        "c04-cylinder-join-v01-roi1-top-base-first-candidate-second-100pct.png",
+        "c04-cylinder-join-v01-roi1-left-base-first-candidate-second-100pct.png",
+        "c04-cylinder-join-v01-roi1-right-base-first-candidate-second-100pct.png",
+        "c04-cylinder-join-v01-roi1-bottom-base-first-candidate-second-100pct.png"
+      ]
+    }
+  ],
+  "compositionChain": [
+    "c04-hardseam-v01",
+    "multi-boundary-v02-r09_c04",
+    "c04-bamboo-join-v02-r09_c04",
+    "c04-wall-join-v02-r09_c04",
+    "c04-cylinder-join-v01-r09_c04"
+  ],
+  "handoff": {
+    "candidate": "qa/c04-cylinder-join-v01-r09_c04-candidate-4096.png",
+    "mask": "qa/c04-cylinder-join-v01-r09_c04-source-id-mask.png",
+    "report": "qa/c04-cylinder-join-v01-r09_c04-report.json",
+    "manifest": "qa/c04-cylinder-join-v01-manifest.json",
+    "nextBasePrefix": "c04-cylinder-join-v01-r09_c04"
+  },
+  "limitations": [
+    "This passes the cylinder repair and retains earlier local repair approvals; full tile/neighborhood and map acceptance remain with root.",
+    "Minor painterly facet/texture variation remains in selected material areas.",
+    "Existing minor boundary-v02 door-molding tone note is unchanged."
+  ],
+  "sourceProgressIndexOrOutputDirectoryChanged": false
+}

@@ -1,0 +1,41 @@
+Independent geometry review, 2026-10-13
+Scope: r02_c02_s04_02_a02 and r02_c02_s04_03_a02. QA only. No generation, no source image edits, no formal acceptance.
+
+RESULT: BOTH HOLD FOR GEOMETRY REPAIR.
+
+Authoritative geometry
+The approved full layout shows ONE existing upright sword ornament. At its upper end is ONE vertically oval blue-white rim around a warm gold center. This round/oval pommel is the visible top end of the same blue-white grip below it. There is no narrow blade passing in front of this pommel, no separate sword, no floating rear medallion and no pole continuing above it. Preserve the exact existing identity. The adopted r03_c02 source anchors the lower grip, gold crossguard and blue-white material.
+
+Layout-derived approximate coordinates (not newly invented exact contours)
+Overview scale: 57344 / 1254 = 45.7288676236 world pixels per overview pixel.
+The oval rim is approximately overview x=133..145, y=154..169; hence global x~=6082..6631, y~=7042..7728. The lower neck joins the existing grip around global y~=7728..7900. These bounds come from the very small approved overview and should guide silhouette/identity only. The south native anchor is authoritative for the exact lower width and pixel alignment. Do not enlarge overview pixels into final art.
+Patch 02 halo origin: (5005,7053). Patch 03 halo origin: (6029,7053).
+The oval's left arc therefore crosses the east side of 02 and west side of 03; it must be solved across BOTH images. Above/along its upper-left outside contour is foliage, not a straight blue edge. The portion of the left arc within 02 bends out left and returns right toward the lower neck. It does not extend as a constant straight stripe to the top of 02.
+
+Observed defects
+1. 02 a02 extends a narrow blue edge all the way through its north edge. In the approved layout this area should approach the pommel's rounded upper-left arc and surrounding foliage. The falsely extended stripe was then pasted into the 03 layout guide as an exact west strip.
+2. 03 a02 preserves that incorrect west stripe and places the oval gold-centered pommel behind it. The 100-percent core-boundary composite makes the unwanted foreground blue bar and cropped/occluded left half of the pommel explicit. A different seam path cannot repair this object geometry.
+3. 03 a02 has a horizontal notch at the start of its south overlap, around local y=1022..1024 / global y=8075..8077. The pale right edge is x~=574 just above, then x~=521 below: about 53 pixels of horizontal displacement. The south anchor requires x~=521 at this level, gently reaching x~=525 at local y=1139 (global core join y=8192). Repair the right edge above the overlap to meet the anchor smoothly, without moving the anchor or extending the widened edge into it.
+4. The 03 guide itself includes both problematic hard constraints: wrong 02 west geometry and the valid south strip. A text-only request to preserve that guide's every edge perpetuates the defect. Rebuild the 03 reference guide from corrected 02 plus the same south anchor after 02 passes. Do not use old 02 a02 as a 'must preserve' west reference for the repair.
+
+Recommended sequence
+A. Repair 02 first, retaining accepted west 01 and adopted south anchor. Use the full approved layout or the small approved pommel crop as GEOMETRY reference; retain a separate source for native detail. Do not make the wrong east stripe immutable. Preserve lower south overlap coordinates and repair only its upper extension/shape, keeping the ring continuation planned at the shared 230-pixel overlap.
+B. Inspect 02's east crop at 100 percent against approved oval silhouette and the south width. If it passes, prepare a new 03 guide using corrected 02 as west and the same south anchor. Repair 03 into one visible continuous pommel and grip; fix the right-edge notch. No other identity/layout change.
+C. Check the full 230-pixel 02/03 overlap, the pommel silhouette across global x=6144, and the 03 right edge across global y=8077 and y=8192. Exact-pixel fractions in measurements.json are descriptive only; native AI overlap is not expected to be byte-identical. Geometry and natural continuity must pass visually.
+D. If the same point has two unsuccessful repair attempts, keep the best raw version, retain HOLD, and work independent gaps before another concentrated repair. Do not count either current a02 as passed because QA crops exist.
+
+Suggested patch 02 repair instruction
+Create a new native 1254x1254 opaque version of r02_c02_s04_02, global halo box [5005,7053,6259,8307], with a 1024 core at (115,115). Use the supplied approved island layout only to restore the exact existing sword ornament silhouette. This patch contains foliage and only the LEFT ARC / LEFT EDGE of the single gold-centered oval pommel near its EAST boundary. Replace the incorrect straight blue stripe in the upper east portion with the rounded blue-white outer arc of that ONE existing pommel and foliage outside it. The arc curves left through the upper-middle east portion and returns right toward the neck; it is NOT a long blade or pole. Above the arc is foliage. Continue the same blue-white grip only BELOW the pommel, joining the exact adopted south anchor. Preserve the accepted west neighbor and south-neighbor spatial alignment, foliage palette, leaf/flower scale and daylight. Preserve the current south overlap geometry; do not shift the sword, add a second sword, duplicate a circle, or insert a foreground blue bar. The ring's central and right portions lie in the adjacent eastern patch: keep the correct continuation at the east 230-pixel overlap. Use native hand-painted detail, no layout upscaling, no border, no text, no UI.
+
+Suggested patch 03 repair instruction (ONLY after corrected 02 is available)
+Create a new native 1254x1254 opaque version of r02_c02_s04_03, global halo box [6029,7053,7283,8307], with a 1024 core at (115,115). Use the CORRECTED west neighbor and the adopted south anchor. Restore ONE complete visible upright oval pommel: pale blue-white rounded rim, warm gold central boss, centered directly above the SAME blue-white grip below. Continue the rim naturally through the west overlap from corrected patch 02. Remove the erroneous separate vertical blue strip that currently passes in front of and hides the left side of the gold circle; that area becomes the proper rim/center/foliage according to the one-object silhouette. No second sword, separate rear disk, crossing blade, or extension above the pommel. Keep the lower grip at the exact adopted south-anchor width: its pale right contour must approach local x about 521 at y=1024 and about 525 at y=1139, continuously, with no 53-pixel ledge near y=1023. Reshape the right contour above the overlap to meet that width; never widen or move the fixed lower grip. Preserve all other foliage positions/material, daylight and painterly detail. Output only this native square, with no overview pixels, no UI, no text or frame.
+
+Evidence
+02-03-core-boundary-100pct.png: global [5900,7053,7100,8307], hard core ownership boundary global x=6144 (local x=244). Original source pixels, no resampling, no blending; not a final assembly.
+02-03-overlap-pair-100pct.png: the same global overlap [6029,7053,6259,8307] shown twice, 02 then 03, source pixels at 100 percent.
+03-south-step-100pct.png: exact source crop of the 53-pixel notch.
+03-south-overlap-pair-100pct.png: source03 bottom and adopted anchor top, same global box twice.
+approved-pommel-layout-native35x38.png: approved layout crop only, original 35x38 pixels.
+approved-pommel-layout-nearest20x-QA-ONLY.png: explicit QA enlargement to see geometry; NOT native artwork and forbidden from final assembly.
+evidence-manifest.json: source/output hashes, coordinates and derivation declarations.
+measurements.json: numerical step scan supporting the manual finding.

@@ -1,0 +1,110 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "four_projection_path_and_coordinate_replays",
+      "result": "pass"
+    },
+    {
+      "name": "public_validate_base_dispatch_four_sources_and_acyclic_records",
+      "result": "pass"
+    },
+    {
+      "name": "projection_preserves_explicit_own_tile_ancestry",
+      "result": "pass"
+    },
+    {
+      "name": "changed_projected_pixel",
+      "result": "rejected",
+      "reason": "Projected tile differs from its same-coordinate native source."
+    },
+    {
+      "name": "wrong_projection_crop",
+      "result": "rejected",
+      "reason": "Projection crop differs from the exact4K grid."
+    },
+    {
+      "name": "wrong_projection_predecessor",
+      "result": "rejected",
+      "reason": "Projection predecessor is not its own input tile."
+    },
+    {
+      "name": "wrong_projection_tile_id",
+      "result": "rejected",
+      "reason": "Projection changed tile identity."
+    },
+    {
+      "name": "cyclic_projection",
+      "result": "rejected",
+      "reason": "Cyclic or excessive repair provenance chain."
+    },
+    {
+      "name": "cyclic_cluster",
+      "result": "rejected",
+      "reason": "Cyclic or excessive connected provenance chain."
+    },
+    {
+      "name": "out_of_range_seam",
+      "result": "rejected",
+      "reason": "Connected seam path leaves its overlap or is discontinuous."
+    },
+    {
+      "name": "discontinuous_seam",
+      "result": "rejected",
+      "reason": "Connected seam path leaves its overlap or is discontinuous."
+    },
+    {
+      "name": "wrong_seam_axis",
+      "result": "rejected",
+      "reason": "Connected join axis/order differs."
+    },
+    {
+      "name": "wrong_source_position",
+      "result": "rejected",
+      "reason": "Connected source identity or order differs."
+    },
+    {
+      "name": "changed_root_hash",
+      "result": "rejected",
+      "reason": "Hash mismatch: connected rootAssembly"
+    },
+    {
+      "name": "manifest_snapshot_drift",
+      "result": "rejected",
+      "reason": "Connected manifest snapshot differs."
+    },
+    {
+      "name": "source_outside_manifest",
+      "result": "rejected",
+      "reason": "Connected source differs from pinned manifest."
+    },
+    {
+      "name": "ownership_disagrees_with_seam_paths",
+      "result": "rejected",
+      "reason": "Projected ownership differs from recorded connected seam paths."
+    },
+    {
+      "name": "unassigned_ownership_value",
+      "result": "rejected",
+      "reason": "Invalid connected ownership archive."
+    },
+    {
+      "name": "source_footprint_violation",
+      "result": "rejected",
+      "reason": "Projection selects a source outside its native footprint."
+    }
+  ],
+  "production2x2Assembled": false,
+  "artFilesWritten": false,
+  "fixtureLimit": "8x8 array projections; raw/halo validation boundary is mocked, public record/hash/path validation is real.",
+  "tools": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\assemble_connected_tiles.py",
+      "sha256": "4fa591a6b55067df8630975656c8847fa4b6bfa676f80bb153345e30e41ad75e"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\apply_native_tile_repair.py",
+      "sha256": "b635d121276d5fd6831f130a232431bb69ecb0e2a8f25bba17d756abbe92ff8e"
+    }
+  ]
+}

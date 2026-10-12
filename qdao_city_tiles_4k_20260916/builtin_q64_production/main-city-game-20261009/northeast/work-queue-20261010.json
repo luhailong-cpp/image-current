@@ -1,0 +1,55 @@
+{
+  "zone": "northeast",
+  "scope": "Only this zone. Existing approved layout, native 4096 candidates, connected production.",
+  "runtimeWorkRequested": false,
+  "builtinOnly": true,
+  "paidApiAllowed": false,
+  "completedConnectedGroups": [
+    [
+      "r05_c13",
+      "r05_c14",
+      "r06_c13",
+      "r06_c14"
+    ]
+  ],
+  "currentConnectedGroup": [
+    "r07_c13",
+    "r07_c14",
+    "r08_c13",
+    "r08_c14"
+  ],
+  "owners": [
+    {
+      "agent": "root",
+      "scope": "r07_c13 candidate QA closure and r08_c14 all16 cores after actual north/west availability; zone records"
+    },
+    {
+      "agent": "native_quality",
+      "scope": "r08_c13 all16 cores, internal/north checks"
+    },
+    {
+      "agent": "east_tile_resume",
+      "scope": "r07_c14 all16 cores, internal/north/west checks; r07_c13 p24 complete"
+    },
+    {
+      "agent": "coordinate_audit",
+      "scope": "r07_c13 read-only independent seam review"
+    }
+  ],
+  "nextConnectedGroupAfterReview": [],
+  "nextGroupIsNotStarted": false,
+  "noRemoteIndependentCoordinateClaim": true,
+  "progressSource": "progress.json generated from actual native records and candidate pixels",
+  "seamReviewTool": "inspect_connected_2x2.py",
+  "candidateAwareContextTool": "tile_worker.py",
+  "notes": [
+    "No completed source should be regenerated just because a session was interrupted.",
+    "No old source evidence is rewritten to claim a newer actual model or quality.",
+    "Generated, covered, internally reviewed and fully seam-reviewed counts remain separate.",
+    "Complete each connected group before opening the next group.",
+    "Within the active adjacent group, rows may run as a dependency pipeline; every north/west required native must exist before generation.",
+    "r08_c13 actively drawing; r08_c14 remains in fixed group, not yet started. Existing acceleration assignment exclusions were checked and do not intersect this northeast group.",
+    "r08_c14 prepared once on2026-10-11, owner root, no native generated yet."
+  ],
+  "updatedAt": "2026-10-11T07:00:33.224379+00:00"
+}

@@ -1,0 +1,63 @@
+{
+  "tileId": "r05_c13",
+  "cores": [
+    [
+      "r05_c13_p01_01_v2",
+      "r05_c13_p01_02_v2",
+      "r05_c13_p01_03_v2",
+      "r05_c13_p01_04"
+    ],
+    [
+      "r05_c13_p02_01",
+      "r05_c13_p02_02",
+      "r05_c13_p02_03_v3",
+      "r05_c13_p02_04_v2"
+    ],
+    [
+      "r05_c13_p03_01",
+      "r05_c13_p03_02",
+      "r05_c13_p03_03_v2",
+      "r05_c13_p03_04"
+    ],
+    [
+      "r05_c13_p04_01",
+      "r05_c13_p04_02_v2",
+      "r05_c13_p04_03_v2",
+      "r05_c13_p04_04"
+    ]
+  ],
+  "overlays": [
+    "r05_c13_cross_02_03_gold_repair_v2",
+    "r05_c13_cross_02_01_repair",
+    "r05_c13_cross_03_window_repair_v3"
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "updatedAtUtc": "2026-10-11T18:42:56.937939+00:00",
+  "pendingIssues": [
+    {
+      "id": "r05_c13-roof-gold-join",
+      "status": "native_repair_selected_pending_full_tile_QA",
+      "affectedCoordinates": [
+        "p02_03",
+        "p02_04"
+      ],
+      "candidateIds": [
+        "r05_c13_p02_03_v3",
+        "r05_c13_p02_04_v2"
+      ],
+      "finding": "gold edging height discontinuity between two cores; p02_03_v2 selected earlier but not final accepted",
+      "selectedRepair": "r05_c13_cross_02_03_gold_repair_v2"
+    },
+    {
+      "id": "r05_c13-p01_01-external-corner",
+      "status": "requires_cross_tile_native_repair",
+      "finding": "upper left native anchor conflict; v2 removes clipped roof but moves left edge"
+    },
+    {
+      "id": "r05c13-internal-cross-02-01",
+      "status": "full_tile_cross_repair_needed",
+      "finding": "top-right gray wall anchor color boundary where upper/left/right native crops meet"
+    }
+  ]
+}

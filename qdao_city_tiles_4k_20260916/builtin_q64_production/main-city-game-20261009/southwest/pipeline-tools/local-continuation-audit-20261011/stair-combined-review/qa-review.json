@@ -1,0 +1,220 @@
+{
+  "createdAtUtc": "2026-10-11T10:03:18.341689+00:00",
+  "reviewer": "resume_crossedge_audit",
+  "status": "accept_as_provisional_improvement_not_complete_edge_pass",
+  "sourceProposal": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-combined\\proposal.json",
+    "sha256": "61a34cf03dbd1f92a3d5fabce2f0343a65481184aaac00ef3cfd31a588fe712e"
+  },
+  "visualReview": {
+    "viewed": [
+      "input.png",
+      "premixed.png",
+      "top-before.png",
+      "top-after.png",
+      "middle-before.png",
+      "middle-after.png",
+      "bottom-before.png",
+      "bottom-after.png"
+    ],
+    "improvement": "Long artificial vertical color divider at world x20480 is substantially reduced through most stair faces and tread surfaces. Stair count and large horizontal geometry remain coherent.",
+    "geometry": "No new gross staircase geometry defect seen in proposal. Two inherited protected bevel bands still show clear localized height/color discontinuities.",
+    "material": "Local cross-edge color transition improves, while dense scalloped/crosshatched stone material remains inconsistent with approved calm broad stone faces. Mild texture-density changes persist around the sparse mask perimeter."
+  },
+  "mechanicalChecks": {
+    "manifestProposalHashMatches": true,
+    "manifestVisualQAHashMatches": true,
+    "inputHashMatches": true,
+    "premixedHashMatches": true,
+    "alphaHashMatches": true,
+    "copyMaskHashMatches": true,
+    "sourceInputReplayExact": true,
+    "nativeAlphaReplayExact": true,
+    "singleCopyMaskReplayExact": true,
+    "copyMaskEqualsAlphaNonzero": true,
+    "outsideMaskChangedPixels": 0,
+    "woodRows0to194Unchanged": true,
+    "rightContextFromX915Unchanged": true,
+    "last50RowsUnchanged": true,
+    "changedPixels": 567480,
+    "maskPixels": 573196,
+    "actualChangedWorldBox": [
+      20267,
+      39515,
+      20766,
+      40908
+    ],
+    "sourceChecks": [
+      {
+        "tile": "r10_c05",
+        "sourceHashVerified": true,
+        "contextHashVerified": true,
+        "coreMatchesContext": true,
+        "v3CandidateSamePixels": true
+      },
+      {
+        "tile": "r10_c06",
+        "sourceHashVerified": true,
+        "contextHashVerified": true,
+        "coreMatchesContext": true,
+        "v3CandidateSamePixels": true
+      }
+    ]
+  },
+  "protectedOriginalBands": [
+    {
+      "worldBox": [
+        19853,
+        40499,
+        21107,
+        40516
+      ],
+      "exactSourcePixelsPreserved": true,
+      "alphaZero": true
+    },
+    {
+      "worldBox": [
+        19853,
+        40726,
+        21107,
+        40743
+      ],
+      "exactSourcePixelsPreserved": true,
+      "alphaZero": true
+    }
+  ],
+  "nativeProvenance": [
+    {
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\generation.json",
+      "recordHashVerified": true,
+      "nativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\native.png",
+      "nativeSha256": "e2fddc2b7d72b517ca09d0948f5205fe407c51405534f67be3c2340cc28c309f",
+      "nativeHashVerified": true,
+      "pixels": [
+        1254,
+        1254
+      ],
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\generation.json",
+      "recordHashVerified": true,
+      "nativeFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\native.png",
+      "nativeSha256": "c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0",
+      "nativeHashVerified": true,
+      "pixels": [
+        1254,
+        1254
+      ],
+      "actualModel": null,
+      "actualQuality": null
+    }
+  ],
+  "remainingIssues": [
+    {
+      "id": "STAIR-BEVEL-40507",
+      "priority": "P2",
+      "scope": "local_geometry_and_color",
+      "worldInspectionBox": [
+        20280,
+        40437,
+        20680,
+        40577
+      ],
+      "finding": "Inherited short bevel-color/height discontinuity at x20480 within protected original strip y40499-40516; still visible after material patch.",
+      "nextStep": "Keep pending; future tiny native geometry repair should align bevel across the tile boundary and preserve surrounding stair level."
+    },
+    {
+      "id": "STAIR-BEVEL-40734",
+      "priority": "P2",
+      "scope": "local_geometry_and_color",
+      "worldInspectionBox": [
+        20280,
+        40664,
+        20680,
+        40804
+      ],
+      "finding": "Clear short bright-edge offset at x20480 within protected original strip y40726-40743, visually roughly3-4px. It is preserved baseline, not a new improvement.",
+      "nextStep": "Keep pending; repair the short bright bevel/join when generation becomes available, without moving the whole step."
+    },
+    {
+      "id": "STAIR-MATERIAL-GLOBAL",
+      "priority": "P1",
+      "scope": "broad_existing_surface_style",
+      "worldBox": [
+        19853,
+        39320,
+        21107,
+        40960
+      ],
+      "finding": "Dense overlapping scaly/woven marks remain over stair stone; local color smoothing does not meet approved quiet material reference.",
+      "nextStep": "Coordinate material treatment with adjacent stone surfaces after a representative style pilot; do not mark this native return as a complete material fix."
+    },
+    {
+      "id": "STAIR-MASK-PERIMETER",
+      "priority": "P2",
+      "scope": "local_material",
+      "affectedWorldBox": [
+        20267,
+        39515,
+        20766,
+        40908
+      ],
+      "finding": "Some mild density transitions remain near left/right sparse mask edges; re-review within merged4K context.",
+      "nextStep": "Assess after parent integration; do not create extra artificial joints to hide it."
+    }
+  ],
+  "mergeRecommendation": {
+    "mayMergeAsImprovement": true,
+    "sourceCompatibility": "Both affected v3 source candidates remain pixel-identical to recorded v2, independently verified.",
+    "method": "Validate source input under copy-mask, then copy premixed exactly once where mask is nonzero; no second alpha blend.",
+    "retainPendingEdge": "north_vertical",
+    "formalAccepted": false
+  },
+  "cropEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\stair-combined-review\\bevel-40507-before.png",
+      "worldBox": [
+        20280,
+        40437,
+        20680,
+        40577
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\stair-combined-review\\bevel-40507-after.png",
+      "worldBox": [
+        20280,
+        40437,
+        20680,
+        40577
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\stair-combined-review\\bevel-40734-before.png",
+      "worldBox": [
+        20280,
+        40664,
+        20680,
+        40804
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\stair-combined-review\\bevel-40734-after.png",
+      "worldBox": [
+        20280,
+        40664,
+        20680,
+        40804
+      ],
+      "resized": false
+    }
+  ],
+  "networkRequests": 0,
+  "newImageGenerationCalls": 0,
+  "sourceArtworkModified": false
+}

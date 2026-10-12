@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T07:04:53.214706+00:00",
+  "batch": "island-east-residences",
+  "status": "prepared_waiting_for_original_owner_reservation_ack",
+  "tiles": [
+    "r01_c10",
+    "r01_c11",
+    "r01_c12",
+    "r02_c10",
+    "r02_c11",
+    "r02_c12"
+  ],
+  "targetCoreCount": 96,
+  "generatedNativeCount": 0,
+  "selectedCoreCount": 0,
+  "complete4096CandidateCount": 0,
+  "formalAcceptedCount": 0,
+  "mapComplete": false,
+  "ownerGate": {
+    "checkedAtUtc": "2026-10-13T07:04:53.212037+00:00",
+    "rootAGENTS": "AGENTS.md",
+    "rootAGENTSSha256": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+    "rootAGENTSReadCharacters": 2624,
+    "ownerAck": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/coordination/island-east-residences.owner-ack.json",
+    "exists": false,
+    "ready": false,
+    "conflictsEmpty": false,
+    "reservedTilesCoverAllSix": false,
+    "allowed": false
+  },
+  "plan": {
+    "file": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/island-east-residences/plans/plan-v001.json",
+    "sha256": "b8fcf86335adf9a0680a946ae69de79fa04d03c42a9cd6524b5f6944a7268437"
+  },
+  "firstCorePreparedInputs": {
+    "file": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/island-east-residences/prepared/r02_c12_p04_04_v01/inputs.json",
+    "sha256": "ad582d82f1dc9ec441028c2c865b932c8326b8fb21f31345ee6ac7ac475b2be8"
+  },
+  "sourcePreflights": [
+    {
+      "file": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/island-east-residences/boundary-south-preflight-v1.json",
+      "sha256": "32be8eba6591bf0b924ac7191dc4f69234f53b7c8a7489ab1402f69abf0fe9ba"
+    },
+    {
+      "file": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/island-east-residences/boundary-east-preflight-v1.json",
+      "sha256": "6627a5302de5007ab5eb26fbfd041afa7a87652f9d096b9c2a8a305177e72a90"
+    }
+  ],
+  "productionUtility": {
+    "file": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/island-east-residences/production_work.py",
+    "sha256": "874c9881883aec011b2fb99fdb81319807bcebf94e07e76ef5856b29f1c76713"
+  },
+  "resumeAction": "Read root AGENTS.md, then actual owner-ack JSON. Require ready:true, activeConflicts:[], reservedTiles covering all six. Revalidate current first-core neighbor hashes with production_work.py prepared(), then begin existing built-in image generation without asking the user for another approval. If neighbors changed, prepare a new version.",
+  "firstCore": "r02_c12_p04_04_v01",
+  "imageCallsPerformed": false,
+  "sourceOrSharedProgressModified": false,
+  "gitOperationsPerformed": false,
+  "otherChatsContacted": false,
+  "paidApiUsed": false,
+  "modelRule": "Existing/free 2.5 preferred; existing builtin 2.0 allowed. Actual returned model remains unreturned. Current waiting condition is owner reservation only."
+}

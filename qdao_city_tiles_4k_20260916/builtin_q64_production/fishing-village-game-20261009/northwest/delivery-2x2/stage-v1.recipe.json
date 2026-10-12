@@ -1,0 +1,83 @@
+{
+  "output": "delivery-2x2/stage-v1",
+  "tiles": {
+    "r03_c03": {
+      "base": {
+        "assembly": "work-r03_c03/joint-final/joint-assembly.json"
+      }
+    },
+    "r03_c04": {
+      "base": {
+        "assembly": "work-r03_c04/joint-south-resume/proposal-v1/joint-assembly.json"
+      },
+      "overlays": [
+        {
+          "assembly": "work-r03_c04/paving-fresh/r03_c04.paving-proposal-v1.assembly.json",
+          "globalBox": [
+            12288,
+            8192,
+            16384,
+            12288
+          ],
+          "mask": "work-r03_c04/paving-fresh/r03_c04.paving-proposal-v1.mask.png",
+          "maskTileOffset": [
+            350,
+            420
+          ],
+          "expectedUnchangedBase": "work-r03_c04/tiles/r03_c04.candidate.png"
+        }
+      ]
+    },
+    "r04_c03": {
+      "base": {
+        "assembly": "work-r04_c04/joint-west/final-v3/joint-assembly.json"
+      }
+    },
+    "r04_c04": {
+      "base": {
+        "assembly": "work-r03_c04/joint-south-resume/proposal-v1/joint-assembly.json"
+      }
+    }
+  },
+  "boundaries": [
+    [
+      "v",
+      12288,
+      8192,
+      12288,
+      "north-column"
+    ],
+    [
+      "v",
+      12288,
+      12288,
+      16384,
+      "south-column"
+    ],
+    [
+      "h",
+      12288,
+      8192,
+      12288,
+      "west-row"
+    ],
+    [
+      "h",
+      12288,
+      12288,
+      16384,
+      "east-row"
+    ]
+  ],
+  "extraCrops": [
+    [
+      "center",
+      [
+        11776,
+        11776,
+        12800,
+        12800
+      ]
+    ]
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\native\\s02_03_repair01.png",
+  "sha256": "951e2d36c4300ba0681a48098e34496abf070881f0256e576d7e279b7106bd84",
+  "generatedAt": "2026-10-12T15:35:15.080030+00:00",
+  "tile": "r07_c05",
+  "logicalPatch": "s02_03",
+  "generationId": "s02_03_repair01",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG",
+  "tool": "image_gen.imagegen",
+  "route": "builtin",
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-10",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+      "quality": "https://developers.openai.com/api/reference/resources/images/methods/generate"
+    }
+  },
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "prompt": "Use case: precise-object-edit.\nAsset: one existing opaque native1254x1254 game-map patch; edit IMAGE1 without reframing or changing resolution.\nIMAGE1 is the edit target. IMAGE2 is an exact-coordinate layout-only guide whose TOP230, LEFT230, RIGHT230 and BOTTOM230 are current real neighbor pixels. Its unfinished interior is not artwork. IMAGE3 is the current western native neighbor; its RIGHT230 strip corresponds exactly to IMAGE1 LEFT230 and is authoritative for western grout intersections.\nRepair only the broken pale paving lattice on the LEFT side x0..504 of IMAGE1. The current diagonal grout lattice in IMAGE1 disagrees with the actual western neighbor: in the assembled map several diagonal lines end inside one slab at x115, and the northwest four-patch corner also has an orphan line. Reconcile those lines at their exact existing neighbor coordinates, make every visible grout branch meet another real slab edge, and close complete paving slabs. Repair the transition across x115 and x230; neither is a real slab boundary and neither may remain as a straight cutoff. Do not retain the wrong left-side lattice simply because it is in the edit target. Use IMAGE2 exact top, west and bottom neighboring intersections to form continuous closed slabs, preserving those anchored intersections rather than moving them.\nAbsolutely preserve all existing road geometry and road stone joints: blue road x584..936, cream curbs x504..584 and x936..1045, existing slight southwest turn at the very bottom. Preserve road, curb and paving geometry throughout x504..1254 including the current right-neighbor continuation. Preserve current north and south road connections. Keep the same broad daylight shading and pale material colors, same fine native detail; variations of grain by complete closed slab are acceptable. The needed change is grout geometry, not recoloring or a new surface style. Do not blur, feather, resize, shift, warp, enlarge, add objects, labels, borders or new shadows. Exact1254square opaque native PNG. The surrounding art is finished; change only the faulty left-side slab/grout transitions.",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r07_c05/native/s02_03.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r07_c05/layout-only/s02_03_repair01.continuation-guide.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r07_c05/native/s02_02.png"
+    ],
+    "transparent_background": false
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "unverifiedReason": "Built-in tool exposes no model/quality selectors and discloses no verified backend values.",
+  "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\prompts\\s02_03_repair01.txt",
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\native\\s02_03.png",
+      "sha256": "e33e7b8f34d785ac595e42f32fb4e11643cc9e1e863353008749349b18f363b2",
+      "role": "edit target: original native s02_03, keep road and curb unchanged"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\layout-only\\s02_03_repair01.continuation-guide.png",
+      "sha256": "ca35f25217a738e3226cc9d2f47c8b055accaea161e6a5ea3e92f8ef7926f2d1",
+      "role": "layout-only exact same-world current neighbor overlap guide; never production art"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\native\\s02_02.png",
+      "sha256": "4f941b6bd6e59a7c4a690179bc8fd35d35a69a5b62bba469ac8852e796d588f2",
+      "role": "western native neighbor geometry authority; its right230 matches target left230"
+    }
+  ],
+  "evidence": {
+    "request": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\receipts\\s02_03_repair01.request.json",
+    "requestSha256": "d5e9aee7a0d1108c3229c9e64418c5c27b4cf93859437d5815d308a0bdf4e46d",
+    "promptSha256": "f274f17bf9e497e007aa5390643a3c9cb9776544dc3534c34ad1b2dca9a51e51",
+    "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\receipts\\s02_03_repair01.result.json",
+    "receiptSha256": "a49fe01df5dab50419a9d51d091cda38c6f40b81091d2ecca3eaa826af3c00d1",
+    "pngInfo": {},
+    "hostOutputPath": "C:\\Users\\luyua\\.codex\\generated_images\\01a13002-ce96-7743-9ab4-d0bf2d74b79e\\exec-186c6726-6b5b-421d-92d1-974a5476a182.png"
+  },
+  "worldBoxWithHalo": [
+    18317,
+    25485,
+    19571,
+    26739
+  ],
+  "coreWorldBox": [
+    18432,
+    25600,
+    19456,
+    26624
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "nativeDimensionsMatchPlan": true,
+  "opaque": true,
+  "resizedAfterGeneration": false,
+  "finalArtUpscaled": false,
+  "status": "native_candidate_pending_seam_review"
+}

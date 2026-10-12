@@ -1,0 +1,92 @@
+{
+  "tile": "r04_c04",
+  "patch": "s04_01",
+  "newNativeGenerations": 6,
+  "versions": [
+    {
+      "version": "fix03",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix03\\generated.png",
+      "sha256": "ff0cfa6075522b3b0bc429fd2a8c4cb7cb1a24595f5581438a292b63e53aa23a",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    },
+    {
+      "version": "fix04",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix04\\generated.png",
+      "sha256": "b7731fc202c767e594b3872d9f54aea5b1978040708d89e3e836cd2095eefd3b",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    },
+    {
+      "version": "fix05",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix05\\generated.png",
+      "sha256": "8b049f1cf87ff70ec08db64498fa5c9f9c8f06ce0b0524cb64aa4c4bc5dc334b",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    },
+    {
+      "version": "fix06",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix06\\generated.png",
+      "sha256": "a561df4be8abc6e4550757275f72a75a6f0178e9c9fe8f40f3e52b4d52427f83",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    },
+    {
+      "version": "fix07",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix07\\generated.png",
+      "sha256": "75e913f8cd8eea834edb1fcd51fde384dfad1d6867d6004245ca0abbf421db80",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    },
+    {
+      "version": "fix08",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\repair-s04_01\\fix08\\generated.png",
+      "sha256": "93d7e71d8b7315e1af72d5c1540fe3e8c8711713e58ba344c36398fc519434c5",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "originalHostBytesVerified": true
+    }
+  ],
+  "bestAvailableVersion": "fix08",
+  "originalRepairRequested": "Restore native south-boundary continuity with northwest/r05_c04/native/s01_01.png",
+  "taskOutcome": "Substantial geometry improvement but visible residual seam defects remain; repair is not complete",
+  "passedFormalAcceptance": false,
+  "ingestedBySubagent": false,
+  "sharedProgressModified": false,
+  "selectionModified": false,
+  "observedViews": [
+    "All six generated full native outputs",
+    "Individual native rail-boundary crops for fix03/04/06/07/08; full native hard-boundary strips for fix07/08; fix05 rejected from its full generated image",
+    "fix07/fix08 minimum-error native boundary pairs"
+  ],
+  "rejectedRevisions": {
+    "fix03": "Imported the southern rail ornamental end panel into the wrong world coordinate",
+    "fix04": "Rail right outside boundary remains about32px too far right",
+    "fix05": "Rail became substantially too narrow instead of matching fixed edge",
+    "fix06": "Right rail boundary retains11-16px offset and the y1024splice remains"
+  },
+  "bestAvailable": {
+    "fix07": "Right outside edge is0-3px from actual neighbor in representative overlap rows; left groove and shade still jump",
+    "fix08": "Same improved right outside edge; overlapMAE6.8775 versus original fix02MAE15.6509; left-side improvement but right inset has visible small kink near local y1024 and hard-core seam still shows a shade/groove step"
+  },
+  "minimumErrorQA": "Both fix07 and fix08 still show visible jagged source-selection boundaries at native scale; binary seam optimization does not grant continuity acceptance.",
+  "practicalLimitation": "Repeated built-in edits did not honor exact preservation of the real230pxanchor despite direct native context, cropped edge references, and explicit edit-mask guides. Do not claim the fixed border was unchanged.",
+  "nextStep": "Parent may ingest fix08 as explicitly unaccepted improvement, or retain the current selection; root-controlled coordinated boundary repair remains required before formal acceptance."
+}

@@ -1,0 +1,86 @@
+{
+  "status": "offline_material_reviewed_client_not_integrated",
+  "indexBase": 1,
+  "root": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "designReference": [
+      512,
+      920
+    ],
+    "clientCalibrated": false,
+    "operation": "整画布原生导出，不按最低脚或bbox配准"
+  },
+  "actions": {
+    "run": {
+      "directions": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "framesPerDirection": 16,
+      "frameMs": 60,
+      "adoptedCycleMs": 960,
+      "uniform": true,
+      "clientConfirmed": false,
+      "phaseReviews": [
+        "reviews/run-position-pairs-final-20261004.json",
+        "reviews/video-axis-final-20261004.json",
+        "reviews/full-limb-final-20261005.json"
+      ],
+      "events": "逐方向同脚连续8帧；4个相对位置各2张独立姿态，支撑相位见逐向SHA复核表"
+    },
+    "hit": {
+      "directions": [
+        "E",
+        "W"
+      ],
+      "framesPerDirection": 6,
+      "frameMs": 40,
+      "totalMs": 240,
+      "event": {
+        "frame": 1,
+        "offsetMs": 0,
+        "name": "受击开始",
+        "status": "设计触发标记，未接客户端"
+      }
+    },
+    "attack": {
+      "directions": [
+        "E",
+        "W"
+      ],
+      "framesPerDirection": 12,
+      "frameMs": 30,
+      "totalMs": 360,
+      "event": {
+        "frame": 6,
+        "offsetMs": 150,
+        "name": "命中候选",
+        "status": "出手峰值候选，未接客户端判定"
+      }
+    },
+    "cast": {
+      "directions": [
+        "E",
+        "W"
+      ],
+      "framesPerDirection": 16,
+      "frameMs": 45,
+      "totalMs": 720,
+      "event": {
+        "frame": 9,
+        "offsetMs": 360,
+        "name": "释放候选",
+        "status": "离线设计标记，未接客户端技能"
+      }
+    }
+  }
+}

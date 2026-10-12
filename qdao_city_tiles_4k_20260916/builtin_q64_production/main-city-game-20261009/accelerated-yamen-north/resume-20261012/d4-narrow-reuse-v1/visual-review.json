@@ -1,0 +1,31 @@
+{
+  "createdAt": "2026-10-12T12:06:19.963266+00:00",
+  "kind": "local existing native source reuse trial, not new generation",
+  "candidateChanged": false,
+  "selected": false,
+  "verdict": "REJECT_NOT_ADOPTED",
+  "views": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\resume-20261012\\d4-narrow-reuse-v1\\qa-native-1.png",
+      "sha256": "bf448fc3fc5592d0bbf30d3a79e9fcf54f506a7f60b95afb00ba818f058638b2",
+      "actuallyViewed": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\resume-20261012\\d4-narrow-reuse-v1\\qa-native-2.png",
+      "sha256": "5d1d12ce74cb2e1cc1f7fdae5b24bb55eeef9ed5fe4402e953e043ae331acc80",
+      "actuallyViewed": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\resume-20261012\\d4-narrow-reuse-v1\\qa-native-3.png",
+      "sha256": "255cc8f97b23f77117a0ada40cb91e76e848732a7ddf36f8c8c3b56296c13b81",
+      "actuallyViewed": true
+    }
+  ],
+  "findings": [
+    "The saved source repair still changes tile geometry enough to prevent a clean return to original lower rows.",
+    "Narrow binary return removes alpha ghosts but introduces visible sawtooth material edges and groove interruptions.",
+    "Left transition near strip x580 has a rectangular cutoff; source join and return are not acceptable."
+  ],
+  "nextAction": "Future builtin edit must anchor lower-row geometry and join return before adoption. Prepared contexts retained.",
+  "formalAccepted": false
+}

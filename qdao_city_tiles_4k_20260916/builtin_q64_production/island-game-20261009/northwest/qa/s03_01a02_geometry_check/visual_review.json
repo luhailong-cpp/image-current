@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "status": "requires_localized_right_beam_repaint_not_selected",
+  "reviewer": "bottom_qa",
+  "native": "r03_c03_s03_01_a02",
+  "measurementAndJoinRecord": "geometry_and_joins.json",
+  "inspection": {
+    "newNativeViewed": true,
+    "upperAndLowerNativesViewed": true,
+    "upperRightReferenceNativeViewed": true,
+    "upperAndLowerHardSeamCropsViewedAt100Percent": true,
+    "guideWithNewLeftTopAndBottomConstraintsViewed": true
+  },
+  "beamConclusion": {
+    "newSlope": -0.38006390161562587,
+    "referenceSlope": -0.20841810269330874,
+    "newActualSampleEndpoints": [[1110, 227], [1253, 173]],
+    "referenceProjectedTargets": [[1100, 245.6625348621012], [1254, 213.5661470473317]],
+    "newRightEndpointPixelsAboveReference": 40.96996744887542,
+    "decision": "Do not preserve this beam slope when extending s03_02. Repaint only the exposed right beam to the reference's straight direction; preserve pillar, base and floor.",
+    "reason": "Smoothly bending or kinking s03_02 to meet both slopes would deform a straight architectural member. Any alternative that discards the conflicting beam pixels through coordinated overlap repaint is still a repair, not acceptance of a02 as-is."
+  },
+  "upperJoin": {
+    "file": "upper_seam100pct.png",
+    "geometry": "Minimum-error source selection can retain continuous pillar sides and the visible right-beam edge; raw overlap disagreement alone does not prove the chosen composite has a broken edge.",
+    "materialIssue": "A visible irregular wood-value transition remains across the pillar face. This is not corrected by the vertical join.",
+    "acceptance": "not formally accepted; beam direction still conflicts with s02_02"
+  },
+  "lowerJoin": {
+    "file": "lower_seam100pct.png",
+    "geometry": "Stone joints and the red paper cluster remain continuous without a duplicated cluster or added obstacle.",
+    "acceptance": "usable candidate for this local join only"
+  },
+  "sourcePixelProcessing": {
+    "registration": false,
+    "resizing": false,
+    "feathering": false,
+    "colorCorrection": false,
+    "pixelSynthesis": false
+  },
+  "nativeModified": false,
+  "progressModified": false,
+  "selectedModified": false
+}

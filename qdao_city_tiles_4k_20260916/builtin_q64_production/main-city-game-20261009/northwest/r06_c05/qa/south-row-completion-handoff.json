@@ -1,0 +1,78 @@
+{
+  "tile": "r06_c05",
+  "scope": "Completed bottom row source production plus local pair QA",
+  "selectedSources": [
+    "native/s04_01_fix01.png",
+    "native/s04_02.png",
+    "native/s04_03_roadalign02.png",
+    "native/s04_04.png"
+  ],
+  "allNativePixels": [
+    1254,
+    1254
+  ],
+  "sourceCount": 4,
+  "generationVersionCount": 6,
+  "actualModel": null,
+  "actualQuality": null,
+  "builtinOnly": true,
+  "progressWritten": false,
+  "northAnchors": "qa/south-row-handoff.json",
+  "localQA": {
+    "report": "qa/south-row-audit-report.json",
+    "actuallyViewedFullBoundaryCount": 4,
+    "sourcePairOverridesNeeded": [
+      {
+        "orientation": "vertical boundary",
+        "leftTile": "r06_c05",
+        "leftPatch": "s04_02",
+        "rightTile": "r06_c05",
+        "rightPatch": "s04_03",
+        "tileLocalRow1Based": 4,
+        "boundaryAfterColumn1Based": 2,
+        "tileLocalSourceRow0Based": 3,
+        "leftColumn0Based": 1,
+        "rightColumn0Based": 2,
+        "worldSeamX": 18432,
+        "worldFullPairYRange": [
+          23437,
+          24691
+        ],
+        "formalCoreYRange": [
+          23552,
+          24576
+        ],
+        "coreCut": {
+          "leftNativeExclusiveStopX": 1139,
+          "rightNativeInclusiveStartX": 115
+        },
+        "fullCanvasPatchGrid1Based": {
+          "row": 24,
+          "leftColumn": 18,
+          "rightColumn": 19
+        },
+        "fullCanvasPatchGrid0Based": {
+          "row": 23,
+          "leftColumn": 17,
+          "rightColumn": 18
+        },
+        "actualDefectCoreWorldYApprox": [
+          23877,
+          24297
+        ],
+        "diagnosticComparison": "qa/south-row-audit-internal-c2-c3.png",
+        "comparisonSha256": "dd665637e37b8e2ada2ef55d372521e59e1b6a376a8caeb3dc326427e1a600b9",
+        "method": "fixed core-center binary native source selection; no redraw/warp/color edit",
+        "passScope": "hardcut pair visually continuous; final tile and row-junction evaluation pending"
+      }
+    ],
+    "otherPairs": [
+      "c01/c02",
+      "c03/c04",
+      "r06_c04:s04_04 to r06_c05:s04_01"
+    ],
+    "otherPairsStatus": "no major structural discontinuities observed in local pairs"
+  },
+  "formalAccepted": false,
+  "fullTileAcceptance": false
+}

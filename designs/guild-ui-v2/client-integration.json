@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-09-13T09:30:47.705398-04:00",
+  "status": "passed",
+  "scope": "Native Unity guild UI and offline verification; production server availability not verified.",
+  "clientProject": "E:/work/mmorpg-client",
+  "unity": "6000.6.0f1",
+  "entry": {
+    "location": "主城左侧，组队下方",
+    "button": "帮会 [G]",
+    "keyboard": "G 打开；Escape 先关弹窗再关窗口"
+  },
+  "nativePages": [
+    "总览",
+    "成员",
+    "排行",
+    "捐献",
+    "活动",
+    "商店"
+  ],
+  "browserPages": [
+    "总览",
+    "成员",
+    "捐献",
+    "任务",
+    "活动",
+    "商店"
+  ],
+  "browserScope": "本地样例状态与交互，不能代表生产业务成功；单独见 browser-delivery.json。",
+  "connectedRpcs": [
+    "GetPlayerGuild",
+    "GetGuildRank",
+    "CreateGuild",
+    "JoinGuild",
+    "SetAnnouncement",
+    "LeaveGuild",
+    "DisbandGuild"
+  ],
+  "notAvailableWithoutServerContracts": [
+    "帮会捐献",
+    "帮会活动",
+    "帮会商店"
+  ],
+  "unsupportedBehavior": "原生页面显示暂未开放并禁用相应操作。",
+  "liveServerVerified": false,
+  "serverModifiedOrDeployed": false,
+  "connectionRecovery": "未确认请求在同一连接保持隔离；真实 Gate 更换或断开才解除。旧回包同时校验角色、请求代次和连接身份。",
+  "verification": {
+    "editMode": {
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0,
+      "report": "qa/unity/editmode-results.xml"
+    },
+    "nativeScreenshots": {
+      "count": 20,
+      "resolutions": [
+        [
+          2560,
+          1080
+        ],
+        [
+          1920,
+          1080
+        ]
+      ],
+      "manifest": "qa/unity/screenshots.json",
+      "finalTargetedRecapture": [
+        "08-empty",
+        "09-long-name-confirmation"
+      ]
+    },
+    "resources": {
+      "count": 9,
+      "byteIdentical": true,
+      "manifest": "qa/unity/resource-sync.json"
+    },
+    "nativeReport": "qa/unity/validation.json",
+    "compileImportRuntimeExceptionMatches": 0,
+    "logNote": "Unity licensing service emitted access-token/404 entitlement diagnostics; tests and both screenshot batches completed successfully. No matched compiler, YAML/import or runtime exception errors.",
+    "rootVisualReview": [
+      "总览的太极帮徽与公告安全内距",
+      "成员搜索/行文本",
+      "排行",
+      "公告编辑",
+      "空状态最终内距",
+      "24字帮名确认",
+      "需重新连接提示"
+    ],
+    "independentVisualReview": [
+      "捐献/活动/商店，各在两种分辨率实看通过"
+    ]
+  },
+  "clientDocumentation": "E:/work/mmorpg-client/Docs/GuildUI.md",
+  "archivedDocumentation": "qa/unity/GuildUI.md",
+  "verifiedClientFiles": {
+    "Assets/Scripts/Game/Guild/GuildClient.cs": "d32a83189605a38119c1a9fdd45e0cf9c24627f7d7e58c8c3f610fd1efe376c2",
+    "Assets/Scripts/UI/Ugui/Guild/GuildWindow.cs": "f22c156514a51b79ca876c96220aed69fea0a28e0d84101d1cac59f127284e5d",
+    "Assets/Scripts/UI/Ugui/Guild/GuildUiRoot.cs": "545d1b8e7e10ec5d34b6368676361bdaeffe812a7a4b443f51b35987a6f54962",
+    "Assets/Scripts/Game/GameClient.cs": "03ba79450c7b290df61cc6cb9c05f4f1ea9930e3b926f89faf121eb1c440196e",
+    "Assets/Scripts/Net/MessageIds.cs": "6e9214b475e77f61813398b67b1f93373b58abd73522d683f8131ed67014b6ae",
+    "Assets/Tests/EditMode/Guild/GuildUiTests.cs": "02b041f75fd241152595d91a4a61ddde108121e8a4e3905922b19a25c71105ed",
+    "Assets/Editor/Guild/GuildUiVerification.cs": "42f10cdf910bb52721cd846f6b727a18805aaf4e63dd349696b376d598d8cfec",
+    "tools/gen_proto.ps1": "8584d1601e714f5e7afd151f71d454101d62df646dd6e568820c0faf4597cbc0",
+    "tools/gen_messageids.ps1": "fd6c9371d8319374d8958f0919edeb118e9013012f881ba12ef31c39b8a06aba"
+  },
+  "archivedReports": {
+    "qa/unity/capture-empty-final.log": "79d3c815324bd7069aa847a4185e09b5b897d52cf5735cc5892809fd19d2f076",
+    "qa/unity/capture.json": "800081632f6155effaa5d7fbf76d21942c561b2e940740fae836a078cdef5369",
+    "qa/unity/capture.log": "c2fbafba1005187362b998344cb50577e3fb6b6512aa6b90be0ccc15d5d86736",
+    "qa/unity/editmode-results.xml": "f629736547b475e0386a937b46fa4ce941dad254d3187649704edcfb0c17e1db",
+    "qa/unity/editmode.log": "5ec7f7485f303f4cb43452c46dcf105282dd652139ea745b109561759e9111e1",
+    "qa/unity/GuildUI.md": "b7136af9ffe036e6442e3e8523b9ee67babcf542ab8ae3ca3bd04043c703cffe",
+    "qa/unity/resource-sync.json": "e807425a16fcfd43d274399bf6139cb4a8880a72ffa59b729f1b4f02fc018b3c",
+    "qa/unity/screenshots.json": "3aafb0e01df544c5cdde3bccabdf6b2c66cd4d82d3549f5117abc827735dbbe7",
+    "qa/unity/validation.json": "dec2c8f52064848ea6a20678dcbb18cb98860a9b4944889fcbf44950a909755b"
+  },
+  "latestOfficialMcpRecord": "official-mcp-client-20260914.json"
+}

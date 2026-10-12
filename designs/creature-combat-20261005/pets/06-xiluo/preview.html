@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>汐螺 · 三动作六组预览</title>
+<style>
+:root{color-scheme:dark;--panel:380px;--ink:#e9eee8;--muted:#b9c5bf;--bg:#101c20;--box:#1a2b31;--line:#415452}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+header{padding:24px 28px 16px;border-bottom:1px solid var(--line)}h1{font-size:24px;margin:0 0 8px;color:#eee0ba}p{margin:6px 0;color:var(--muted)}
+.toolbar{padding:14px 28px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line)}
+button,select{padding:7px 13px;background:#24413e;color:var(--ink);border:1px solid #61776d;border-radius:6px;font:inherit;cursor:pointer}button:hover{background:#335650}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #e9cd86}
+label{display:flex;align-items:center;gap:8px}input{accent-color:#b6d5b3}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--panel)),1fr));gap:18px;padding:22px 28px}
+article{background:var(--box);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}h2{font-size:18px;margin:0 0 7px}
+.stage{width:100%;max-width:var(--panel);aspect-ratio:1;margin:auto;position:relative;overflow:hidden;border:1px solid #53625f;border-radius:5px;background-color:#1e2b31;background-image:linear-gradient(45deg,#26383e 25%,transparent 25%),linear-gradient(-45deg,#26383e 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#26383e 75%),linear-gradient(-45deg,transparent 75%,#26383e 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+.light .stage{background-color:#efece0;background-image:linear-gradient(45deg,#dadfce 25%,transparent 25%),linear-gradient(-45deg,#dadfce 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dadfce 75%),linear-gradient(-45deg,transparent 75%,#dadfce 75%)}
+.stage img{position:absolute;width:100%;height:100%;inset:0;object-fit:contain}.missing{position:absolute;inset:0;display:grid;place-items:center;color:#ef8178;background:#243033}.missing[hidden]{display:none}
+.anchor{position:absolute;left:50%;top:91.992%;width:14px;height:14px;margin:-7px;border:1px solid #ff7575;border-radius:50%;display:none;pointer-events:none}.anchors .anchor{display:block}
+.controls{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}.controls button{padding:5px 10px}.controls input{flex:1;min-width:70px}
+.info{display:flex;justify-content:space-between;gap:5px;margin:8px 0;font-size:13px;color:#bfcdc6}.event{color:#f2d493;font-weight:600}
+.links{font-size:12px;display:flex;gap:15px}a{color:#a3d5be}.audit{padding:0 28px 25px}footer{padding:15px 28px;color:#a9bab2;border-top:1px solid var(--line)}
+body.single main{grid-template-columns:minmax(300px,760px);justify-content:center}body.single article:not(.selected){display:none}body.single .stage{max-width:760px}
+</style>
+<header><h1>汐螺 · 受击、普攻、施法</h1>
+<p>E 斜前朝右下 · W 真斜后朝左上 · 每张 1024 × 1024 透明 PNG</p>
+<p>正常时长：受击 6 × 40ms、普攻 12 × 30ms、施法 16 × 45ms。可暂停逐帧检查；滑动某组滑条会暂停该组。</p></header>
+<div class="toolbar">
+<button id="play">全部暂停</button><button id="restart">全部从头</button>
+<label>速度<select id="speed"><option value="1">正常 1×</option><option value=".25">慢放 0.25×</option></select></label>
+<label>背景<select id="background"><option value="dark">深色棋盘</option><option value="light">浅色棋盘</option></select></label>
+<label>预览宽度<input id="size" type="range" min="256" max="700" value="380" step="8"></label>
+<label><input id="anchor" type="checkbox">显示锚点</label>
+<label>查看<select id="focus"><option value="all">六组</option></select></label>
+</div><main id="groups"></main>
+<div class="audit"><p id="loadstate">正在读取图片…</p><p>页面直接读取相对 PNG，无网络请求接口，无帧复制、插值、缩放对齐或补帧。缺失图片显示缺帧标记。</p>
+<a href="manifest.json">帧清单与来源</a> · <a href="qa/technical-validation.json">技术检查</a> · <a href="cast-W-status.md">W 施法审阅</a></div>
+<footer>预览仅用于美术审阅。文件齐全、尺寸或 SHA 通过不代表连播通过；本包未验证游戏接入。动画计时受浏览器刷新率与后台节流影响。</footer>
+<script>
+const specs=[['hit','受击',6,40,2],['attack','普攻',12,30,7],['cast','施法',16,45,10]];
+const groups=[];let speed=1,globalPlaying=true,last=performance.now(),loaded=0,failed=0;
+const root=document.getElementById('groups'),focus=document.getElementById('focus');
+function loading(){document.getElementById('loadstate').textContent='已载入 '+loaded+'/68 张；缺失或读取失败 '+failed+' 张。';}
+for(const [action,title,count,ms,event] of specs) for(const dir of ['E','W']){
+ const id=action+'-'+dir;
+ const a=document.createElement('article');a.id=id;
+ a.innerHTML='<h2>'+title+' · '+dir+'</h2><div class="info"><span>'+count+' 帧 · '+ms+'ms/帧 · '+(count*ms)+'ms</span><span class="event"></span></div><div class="stage"><img alt="汐螺 '+title+' '+dir+'"><div class="missing" hidden>该帧缺失</div><i class="anchor"></i></div><div class="controls"><button class="toggle">暂停</button><button class="prev" aria-label="'+id+' 上一帧">←</button><input class="frame" aria-label="'+id+' 帧" type="range" min="1" max="'+count+'" value="1"><button class="next" aria-label="'+id+' 下一帧">→</button><output>01 / '+count+'</output></div><div class="links"><a class="png" target="_blank">当前 PNG</a><a class="record" target="_blank">逐图记录</a></div>';
+ root.appendChild(a);
+ const g={id,action,dir,count,ms,event,frame:0,elapsed:0,playing:true,images:[],node:a};
+ groups.push(g);
+ const option=document.createElement('option');option.value=id;option.textContent=title+' '+dir;focus.appendChild(option);
+ for(let i=0;i<count;i++){const im=new Image();im.onload=()=>{loaded++;loading();if(i===g.frame)draw(g)};im.onerror=()=>{failed++;loading();if(i===g.frame)draw(g)};im.src='runtime/'+action+'/'+dir+'/'+String(i+1).padStart(2,'0')+'.png';g.images.push(im);}
+ a.querySelector('.toggle').onclick=()=>{g.playing=!g.playing;g.elapsed=0;draw(g)};
+ a.querySelector('.frame').oninput=e=>{g.frame=+e.target.value-1;g.playing=false;g.elapsed=0;draw(g)};
+ a.querySelector('.prev').onclick=()=>step(g,-1);a.querySelector('.next').onclick=()=>step(g,1);
+ draw(g);
+}
+function draw(g){const n=String(g.frame+1).padStart(2,'0'),p='runtime/'+g.action+'/'+g.dir+'/'+n+'.png';const im=g.node.querySelector('.stage img');if(im.getAttribute('src')!==p)im.src=p;
+ const missing=g.images[g.frame]?.complete&&!g.images[g.frame]?.naturalWidth;g.node.querySelector('.missing').hidden=!missing;
+ g.node.querySelector('.frame').value=g.frame+1;g.node.querySelector('output').textContent=n+' / '+g.count;
+ g.node.querySelector('.toggle').textContent=g.playing?'暂停':'播放';g.node.querySelector('.event').textContent=g.frame+1===g.event?'事件帧':'';
+ g.node.querySelector('.png').href=p;g.node.querySelector('.record').href='records/'+g.action+'/'+g.dir+'/'+n+'.json';
+}
+function step(g,d){g.frame=(g.frame+d+g.count)%g.count;g.playing=false;g.elapsed=0;draw(g)}
+document.getElementById('play').onclick=()=>{globalPlaying=!globalPlaying;for(const g of groups){g.playing=globalPlaying;g.elapsed=0;draw(g)}document.getElementById('play').textContent=globalPlaying?'全部暂停':'全部播放';};
+document.getElementById('restart').onclick=()=>{for(const g of groups){g.frame=0;g.elapsed=0;draw(g)}};
+document.getElementById('speed').onchange=e=>{speed=+e.target.value;for(const g of groups)g.elapsed=0};
+document.getElementById('background').onchange=e=>document.body.classList.toggle('light',e.target.value==='light');
+document.getElementById('size').oninput=e=>document.documentElement.style.setProperty('--panel',e.target.value+'px');
+document.getElementById('anchor').onchange=e=>document.body.classList.toggle('anchors',e.target.checked);
+focus.onchange=()=>{document.body.classList.toggle('single',focus.value!=='all');for(const g of groups)g.node.classList.toggle('selected',g.id===focus.value)};
+const initial=location.hash.slice(1);if(groups.some(g=>g.id===initial)){focus.value=initial;focus.onchange();}
+function tick(now){const dt=Math.min(now-last,100);last=now;for(const g of groups){if(!g.playing)continue;g.elapsed+=dt*speed;if(g.elapsed>=g.ms){const steps=Math.floor(g.elapsed/g.ms);g.elapsed%=g.ms;g.frame=(g.frame+steps)%g.count;draw(g)}}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script>
+</html>

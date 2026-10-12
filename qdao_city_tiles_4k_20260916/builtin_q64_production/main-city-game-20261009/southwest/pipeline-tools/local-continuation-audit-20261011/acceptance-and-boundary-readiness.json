@@ -1,0 +1,342 @@
+{
+  "createdAtUtc": "2026-10-11T09:03:06.389661+00:00",
+  "sourceContract": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\production-contract.json",
+    "sha256": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac"
+  },
+  "scope": {
+    "tiles": 64,
+    "rows": [
+      9,
+      16
+    ],
+    "columns": [
+      1,
+      8
+    ],
+    "acceleratedSouthwestExclusions": [],
+    "internalSharedEdges": 112,
+    "internalFourTileJunctions": 49,
+    "crossZoneEdgeSegments": 16,
+    "worldCanvasBoundarySegments": 16
+  },
+  "approvedReferenceVerification": [
+    {
+      "role": "layoutReference",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "exists": true,
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "matchesContract": true
+    },
+    {
+      "role": "detailStyleReference",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "exists": true,
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "matchesContract": true
+    },
+    {
+      "role": "primaryStyleReference",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "exists": true,
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "matchesContract": true
+    }
+  ],
+  "acceptanceGates": [
+    {
+      "id": "provenance",
+      "requirement": "Real native detail, verified source hashes and dimensions, prompts and approved references; preserve original tool receipts. Actual model/quality remain null when undisclosed. Config targets are not evidence."
+    },
+    {
+      "id": "assembly",
+      "requirement": "Each delivered tile is 4096x4096 fully covered at native resolution; source 1254 crops/1024 core and 115 halo are verified, no enlarged overview or seed pixels presented as final. Context crop must equal tile, masks replay exactly and preserve outside pixels."
+    },
+    {
+      "id": "layout",
+      "requirement": "Match approved v9 layout at correct world coordinates and scale. Preserve buildings, routes, steps, corners, stone/wood edge geometry and sparse prop placement. Do not add roofs, cracks, branches or objects to conceal a seam."
+    },
+    {
+      "id": "internal_visual",
+      "requirement": "Inspect all 16 patch areas, internal joins and intersections using actual-size crops, plus whole-tile material view. Reject broken geometry, duplicated outlines, accidental branches/stubs, guide fragments, repeated texture bands or implausible prop support/shadows. Numerical continuity alone never passes visual QA."
+    },
+    {
+      "id": "material",
+      "requirement": "Natural pale grey/blue-grey stone and approved near-view illustration style. Consistent light direction, scale, texture density and wood/stone colors across patches and tiles. Repetitive scaly texture and broad brightness/color bands remain open even when joins are pixel-continuous."
+    },
+    {
+      "id": "shared_edges",
+      "requirement": "Visually review 112 interior 4096-pixel shared edges and 49 four-tile junctions at native scale. An edge pass refers to both current source hashes; re-review changed strips after repair. Both sides and outer halos must be coherent."
+    },
+    {
+      "id": "cross_zone",
+      "requirement": "Review 16 SW-to-NW/SE boundary segments against recorded actual neighboring native artwork; approved overview can guide placement but cannot substitute for missing native neighbors."
+    },
+    {
+      "id": "world_boundary",
+      "requirement": "Review 16 true exterior canvas segments against approved layout; preserve short north/south exit indication where applicable, without extending exterior panorama. No imaginary outside tile is required."
+    },
+    {
+      "id": "formal",
+      "requirement": "Formal tile acceptance requires all applicable evidence, internal layout/material/prop checks and neighboring edges passed. Local geometry pass, full pixel coverage, exact hash or low seam error alone is insufficient."
+    }
+  ],
+  "externalNeighborAvailability": {
+    "searchRoot": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009",
+    "tileAddressedNeighborImagesFound": 0,
+    "availableNeighborSegments": 0,
+    "limitations": "Availability inventory covers saved tile-addressed artwork in current main-city production; excludes unrelated older map variants and scaled overview as native neighbor evidence.",
+    "segments": [
+      {
+        "tile": "r09_c01",
+        "edge": "north",
+        "neighbor": "r08_c01",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c02",
+        "edge": "north",
+        "neighbor": "r08_c02",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c03",
+        "edge": "north",
+        "neighbor": "r08_c03",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c04",
+        "edge": "north",
+        "neighbor": "r08_c04",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c05",
+        "edge": "north",
+        "neighbor": "r08_c05",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c06",
+        "edge": "north",
+        "neighbor": "r08_c06",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c07",
+        "edge": "north",
+        "neighbor": "r08_c07",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c08",
+        "edge": "north",
+        "neighbor": "r08_c08",
+        "neighborZone": "northwest",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c08",
+        "edge": "east",
+        "neighbor": "r09_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r10_c08",
+        "edge": "east",
+        "neighbor": "r10_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r11_c08",
+        "edge": "east",
+        "neighbor": "r11_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r12_c08",
+        "edge": "east",
+        "neighbor": "r12_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r13_c08",
+        "edge": "east",
+        "neighbor": "r13_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r14_c08",
+        "edge": "east",
+        "neighbor": "r14_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r15_c08",
+        "edge": "east",
+        "neighbor": "r15_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r16_c08",
+        "edge": "east",
+        "neighbor": "r16_c09",
+        "neighborZone": "southeast",
+        "tileAddressedImageFiles": [],
+        "availableNativeOrFullNeighbor": false,
+        "status": "needs_neighbor_artwork_and_cross_zone_native_visual_review"
+      },
+      {
+        "tile": "r09_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r10_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r11_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r12_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r13_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r14_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r15_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c01",
+        "edge": "west",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c01",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c02",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c03",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c04",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c05",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c06",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c07",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      },
+      {
+        "tile": "r16_c08",
+        "edge": "south",
+        "neighbor": null,
+        "status": "world_canvas_boundary_review_against_approved_layout"
+      }
+    ]
+  },
+  "currentReadiness": {
+    "fullCandidates": 4,
+    "formalAccepted": 0,
+    "fourCurrentSharedEdges": {
+      "pass": 2,
+      "pending": 2
+    },
+    "eightCurrent2x2OuterSegments": "all pending complete neighbors and visual review"
+  },
+  "scopeExclusions": "No client/runtime/capacity work. No old AGENTS gating applied. Restored network is not a present blocker."
+}

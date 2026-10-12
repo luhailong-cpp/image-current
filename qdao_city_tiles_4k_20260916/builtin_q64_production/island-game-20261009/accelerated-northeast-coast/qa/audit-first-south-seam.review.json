@@ -1,0 +1,91 @@
+{
+  "reviewer": "audit_geometry_subagent",
+  "reviewedAtUtc": "2026-10-10T10:32:09.470341+00:00",
+  "sources": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/native/r02_c13_p04_01.png",
+      "sha256": "bf365efee91a2bb2c30f41632f4f90fe98078f4111aff4c74c1a301b36255100",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northeast/native/r03_c13_p01_01.png",
+      "sha256": "92efddeed7ca787f98f54d7d36219473f1dc12246bb7ec3a24764a65e270cd23",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "scope": "south core seam and230px native overlap, exact unscaled pixel crops",
+  "coreSeamWorldBox": [
+    49152,
+    7936,
+    50176,
+    8448
+  ],
+  "coreSeamY": 8192,
+  "coreSeamAssessment": "No conspicuous horizontal break within1024px core span; seam is almost entirely within gold gourd surface. This does not establish halo continuity.",
+  "overlapWorldBox": [
+    49037,
+    8077,
+    50291,
+    8307
+  ],
+  "overlapAssessment": "fail_contour_shift_requires_imagegen_repair",
+  "measurements": [
+    {
+      "worldY": 8077,
+      "newNativeY": 1024,
+      "southNativeY": 0,
+      "newLeftGoldBoundaryX": 96,
+      "southLeftGoldBoundaryX": 240,
+      "offsetPixels": -144
+    },
+    {
+      "worldY": 8191,
+      "newNativeY": 1138,
+      "southNativeY": 114,
+      "newLeftGoldBoundaryX": 4,
+      "southLeftGoldBoundaryX": 110,
+      "offsetPixels": -106
+    }
+  ],
+  "measurementMethod": "Visual inspection plus approximate RGB gold-edge threshold: R>1.15G, G>1.25B, R>160; threshold is supporting evidence only.",
+  "requiredRepair": {
+    "tool": "image_gen.imagegen",
+    "targetNativeBox": [
+      0,
+      900,
+      1254,
+      1254
+    ],
+    "preserveSouthSourceCrop": [
+      0,
+      0,
+      1254,
+      230
+    ],
+    "targetAnchorBox": [
+      0,
+      1024,
+      1254,
+      1254
+    ],
+    "instruction": "Rebuild gourd silhouette transition above anchored overlap. Preserve exact southern native230px band; no scaling, no copy-only final repair, no external-zone mutation."
+  },
+  "evidence": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/qa/audit-first-south-seam-100pct.png",
+      "operation": "new native crop115,883,1139,1139 above south native115,115,1139,371; no resizing"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/accelerated-northeast-coast/qa/audit-first-south-overlap-pair-100pct.png",
+      "operation": "new native0,1024,1254,1254 then southern native0,0,1254,230; two rows comparison, no resizing"
+    }
+  ],
+  "formalAccepted": false,
+  "sourceFilesModified": false
+}

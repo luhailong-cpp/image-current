@@ -1,0 +1,31 @@
+{
+  "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s03_s01_v04.png",
+  "sha256": "c5622d5ef4993706a8063ef0609e600f6eecccf53dfe2660919bb0d89a7dd741",
+  "reviewedAt": "2026-10-09T16:40:17.771967+00:00",
+  "nativePixels": [
+    1254,
+    1254
+  ],
+  "northNeighbor": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s01_v01.png",
+    "sha256": "368ae7073faeb4bec0dff41fb324d51d35e91594845722d19ddbbe89ef7a566c"
+  },
+  "qaImage": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03_s03_s01_v04.north-seam-100pct.png",
+    "sha256": "6b1646e3efdd5476cfe3360d81e5bb0f2f58d0c16cbfbc9b945768df39702f45",
+    "operation": "Top 200px = north source y939:1139; bottom200px = candidate y115:315. Native integer crops; horizontal seam at y200."
+  },
+  "findings": [
+    "Native1254x1254 verified; no resizing or resampling of generated art.",
+    "North source230px actually supplied in positional guide; crop source [0,1024,1254,1254], destination [0,0,1254,230].",
+    "100% hard-cut seam inspection across complete1254px width; no feather or hidden geometry.",
+    "Window hallucination removed by builtin generation; y230 internal wood seam repaired by builtin generation.",
+    "Erroneous green leaves corrected to cloth bolts by builtin generation.",
+    "Northern column and wall geometry continuous, but a subtle horizontal texture/color transition remains visible. Candidate only; not formal accepted."
+  ],
+  "status": "candidate-pending-final-seams",
+  "formalAccepted": false,
+  "allEdgesReviewed": false,
+  "resizeApplied": false,
+  "featherApplied": false
+}

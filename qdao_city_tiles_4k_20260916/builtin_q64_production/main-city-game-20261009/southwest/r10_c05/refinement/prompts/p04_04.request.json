@@ -1,0 +1,76 @@
+{
+  "prompt": "CRITICAL TARGET CHECK: Image1 is ONLY a VERY CLOSE CROP of SIX HORIZONTAL STONE STAIR TREADS, filling the entire square. The output MUST still show ONLY these six cropped horizontal stairs, nothing else. No buildings, no city, no courtyard, no complete staircase scene. Do not output image2 (the whole-city style reference). Keep exactly the first image camera/crop/six tread boundaries. The requested change is simply reduce the surface texture on these stairs.\n\nUse case: precise-object-edit. Edit ONLY image1, a finished 1254x1254 native cropped map patch p04_04. This is a MATERIAL CLEANUP, not scene generation. Keep the exact camera, crop, object silhouettes, every stair tread/riser boundary, bevel, wall joint, post outline, wood grain, metal fitting, shadows and lighting. Do not move or resize any object. Images2/3/4 are approved context/style references; image3 sets the CLEAN stone surface target.\nONLY CHANGE: replace the dense cellular/flaky/stippled stone pattern and obvious marbled vein network on all pale/grey STONE surfaces with calm smooth hand-painted natural grey limestone. Stone must have broad subtle tonal planes and very sparse faint brush variation, like the quiet clean steps around the temple in image3. Remove the tiny overlapping flake shapes, scalloped dots, pebbled/speckled pattern, crack networks and sparkly crystalline texture. It must NOT look like terrazzo, marble, fish scales, rough granite, foam, or sponge. Preserve crisp edges and dimensional shading; do not blur the whole image. Keep original stone lightness and grey-beige tint, no global recoloring.\nKeep every non-stone pixel (wood, red lacquer, gold, foliage) unchanged. Do not add objects, ornament, grout lines, cracks, wear, dirt, people, text, labels, border, watermark or grid. Do not zoom or recenter. Produce the same opaque 1254x1254 native crop.\nThe already-cleaned native LEFT/TOP overlap strips in image1 are fixed continuity anchors. Match their smooth stone finish and preserve their geometry; no visible boundary at the strip edge.\n",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\refinement\\guides\\p04_04.native-edit-seed.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+    "D:/work/image/designs/mail-ui-v1/01-mail-event.png"
+  ],
+  "transparent_background": false,
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\refinement\\guides\\p04_04.native-edit-seed.png",
+      "sha256": "dec914d258503ccdc98713bbe2a198cad39e60f59f69dd0c102a2b7a03458b7e",
+      "role": "native edit target; all geometry already final, only reduce stone texture density"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "whole-city geometry reference only"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "mandatory clean natural grey stone material target"
+    },
+    {
+      "file": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+      "sha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+      "role": "primary refined Daoist chibi painting style"
+    }
+  ],
+  "neighborSources": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\refinement\\native\\p04_03.png",
+      "sha256": "78f5ffb63f258d805ec05fefd4fef0978ee634488ff4f8dfab3814c6647393c2",
+      "role": "already-cleaned left neighbor; exact 230px shared strip"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\refinement\\native\\p03_04.png",
+      "sha256": "dd21da34e5756819f2a683fb7ff07e135cfc8012459cf457c07d93222c0a9096",
+      "role": "already-cleaned top neighbor; exact 230px shared strip"
+    }
+  ],
+  "coordinates": {
+    "id": "p04_04",
+    "row": 4,
+    "column": 4,
+    "coreWorldBox": [
+      19456,
+      39936,
+      20480,
+      40960
+    ],
+    "contextWorldBox": [
+      19341,
+      39821,
+      20595,
+      41075
+    ],
+    "nativeCoreBox": [
+      115,
+      115,
+      1139,
+      1139
+    ]
+  },
+  "editSource": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\native\\p04_04.png",
+    "sha256": "845e7783efc0102a06b5435850a20f5fdf528fac4a5f982a85b686b7233c8206",
+    "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\native\\p04_04.png.generation.json"
+  },
+  "submittedParameters": {
+    "model": null,
+    "quality": null
+  }
+}

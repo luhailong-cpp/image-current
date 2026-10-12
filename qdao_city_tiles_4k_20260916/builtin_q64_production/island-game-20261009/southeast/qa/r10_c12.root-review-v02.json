@@ -1,0 +1,35 @@
+{
+  "reviewer": "root",
+  "reviewedAt": "2026-10-10T00:02:55.145173+00:00",
+  "tile": "r10_c12",
+  "candidate": "tiles/r10_c12.candidate-v02.png",
+  "sha256": "464b608619d2faf6694faad4c7406aca09a678f4fa117551da9830ae77a0e569",
+  "formalAccepted": false,
+  "internalSeams": {
+    "count": 24,
+    "status": "root_visual_pass_after_h12_native_repair",
+    "evidence": "qa/r10_c12-v01/seams.json plus qa/r10_c12-v02/h12.png and repair insertion QA",
+    "notes": "All24 actual candidate seam crops viewed at native resolution. h12 v01 rejected for vertical color cut/short truncated joint; v02 repairs it with a native512x1024 insert. Other23 seam areas not changed."
+  },
+  "junctions": {
+    "count": 9,
+    "status": "root_visual_pass",
+    "evidence": "qa/r10_c12.junction_11-v01.png through33, updated12-v02 rechecked"
+  },
+  "repairEdges": {
+    "status": "root_visual_pass",
+    "evidence": "qa/r10_c12_h12-repair_v01.hard-insert.png",
+    "notes": "All four hard-insert edges checked in original1254 target context; no obvious color/geometry step observed."
+  },
+  "northSharedEdge": {
+    "status": "root_visual_pass",
+    "neighbor": "tiles/r09_c12.candidate-v02.png",
+    "evidence": "qa/r09_c12-v02-r10_c12-v02.south-border-1..4.png",
+    "notes": "Native1024x512 strips cover full4096 seam. Border1/4 unchanged fromv01;2/3 rechecked afterrepair."
+  },
+  "remaining": [
+    "independent review",
+    "other three neighboring4k edges"
+  ],
+  "pixelProvenance": "17 rectangles, coverage exactly once, source pixel-exact assertions passed"
+}

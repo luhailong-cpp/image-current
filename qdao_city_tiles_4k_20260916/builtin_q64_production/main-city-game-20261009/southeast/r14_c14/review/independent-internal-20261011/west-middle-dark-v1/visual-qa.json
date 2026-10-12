@@ -1,0 +1,105 @@
+{
+  "reviewedAt": "2026-10-11T18:42:38.037271+00:00",
+  "scope": "Independent local review of composite left crossing, T connection and selection transitions. All coordinates in1254 crop with seam x640 and core y1600.",
+  "composite": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-dark-selected-v1-20261011\\review-composed-1254.png",
+    "sha256": "e4bab8de622a1267d4e83b4aa8f29b996e1822b3b5823320d069e173d425e2a5"
+  },
+  "manifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-dark-selected-v1-20261011\\composition.json",
+    "sha256": "be030d2aa3b2a6be48a39039c8eb6dcc88be268b875cd20c77d125cfeb6fe75f"
+  },
+  "native": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\repairs\\west-middle-dark-structure-20261011T175254-b437917d\\native.png",
+    "sha256": "970d6e160c53e511e072a76ba87dd01a23519fc46f7373e8bf732921bed45431"
+  },
+  "immutableWest640PixelsExact": true,
+  "leftCrossing": {
+    "continuity": "pass",
+    "darkestLeft": [
+      639,
+      857
+    ],
+    "darkestRight": [
+      640,
+      857
+    ],
+    "darkBandsThreshold100": {
+      "639": [
+        856,
+        857
+      ],
+      "640": [
+        853,
+        854,
+        855,
+        856,
+        857
+      ]
+    },
+    "finding": "Actual dark pixel bands overlap; the former32px seam discontinuity is resolved. A small thickness/profile step remains but there is no open gap."
+  },
+  "Tjunction": {
+    "darkCoreContinuity": "fail",
+    "geometryNote": "The broad transverse grout reaches the existing diagonal bevel, but a bright cap separates its dark core from the main diagonal dark core. It is not a floating endpoint in a stone face, but should not be recorded as fully connected dark grout.",
+    "closestDarkPixelPairsThreshold100": [
+      {
+        "branch": [
+          911,
+          670
+        ],
+        "main": [
+          916,
+          665
+        ]
+      },
+      {
+        "branch": [
+          912,
+          671
+        ],
+        "main": [
+          917,
+          666
+        ]
+      },
+      {
+        "branch": [
+          915,
+          675
+        ],
+        "main": [
+          920,
+          670
+        ]
+      }
+    ],
+    "closestEuclideanDistance": 7.071,
+    "brightCapApproxBounds": [
+      911,
+      664,
+      924,
+      679
+    ],
+    "exampleBrightPixels": "At y670, x915..919 have meanRGB about230..252, forming a real bright barrier.",
+    "suggestedTightRepairRectangle": [
+      895,
+      648,
+      945,
+      698
+    ],
+    "suggestedScope": "Remove only the bright cap joining the three existing native dark-grout branches; preserve existing stone faces and all validated seam/transition anchors."
+  },
+  "transitionReview": {
+    "status": "pass continuity",
+    "inspected": [
+      "upper-transition.png",
+      "right-transition.png",
+      "lower-transition.png"
+    ],
+    "finding": "No hard truncation found around the upper600, right1085 or lower930 selection transitions. Existing main diagonal and finer lower joint remain connected."
+  },
+  "localAcceptance": false,
+  "remainingBlocker": "T bright cap only within this inspected repair; no full tile or external seam acceptance claimed.",
+  "mutations": "Only independent QA crops and JSON under this review folder."
+}

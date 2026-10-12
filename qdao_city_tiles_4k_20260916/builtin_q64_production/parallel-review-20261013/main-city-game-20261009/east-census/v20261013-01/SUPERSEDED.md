@@ -1,0 +1,1 @@
+Use ../v20261013-02/ for native slot counts. v01 incorrectly treated northeast selected-native.json overrides as the full selection; 4K candidate hashes and the independent pixel-validity checks remain valid at their recorded capture times. No production files were changed.

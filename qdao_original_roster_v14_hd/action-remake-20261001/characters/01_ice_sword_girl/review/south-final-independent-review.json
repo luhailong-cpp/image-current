@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "characterId": "01_ice_sword_girl",
+  "reviewer": "independent_subagent_recover_nne",
+  "reviewedAt": "2026-10-04T20:58:16.5882680Z",
+  "agentVisualReviewPassed": true,
+  "requiresFurtherImageRepair": false,
+  "hardIssues": [],
+  "modifications": "Review JSON only; images, candidate exports and selection manifests unchanged.",
+  "scope": {
+    "inspectedNativeFrames": [
+      "drafts/run/SW/04-v1.png",
+      "drafts/run/SW/05-v2.png",
+      "drafts/run/SW/06-v3.png",
+      "drafts/run/S/07-v4.png",
+      "drafts/run/S/08-v4.png",
+      "drafts/run/S/15-v3.png",
+      "drafts/run/S/16-v7.png",
+      "drafts/run/SE/16-v3.png",
+      "drafts/run/SW/04-v2.png"
+    ],
+    "checks": [
+      "SW04→05→06 right sword / left talisman ownership under hair and sleeve occlusion",
+      "Extra hands, limbs, floating or duplicate sword detection",
+      "Requested S rear push poses: lowered rear support shin, toe axis, visible swing sole distinction",
+      "SE16-v3 rear forefoot support readability"
+    ],
+    "notClaimed": [
+      "Full 48-frame south re-audit",
+      "Continuous real-time motion perception",
+      "Game world-space contact/no-slip verification"
+    ]
+  },
+  "findings": [
+    {
+      "direction": "SW",
+      "frames": [
+        4,
+        5,
+        6
+      ],
+      "sources": [
+        "04-v2",
+        "05-v2",
+        "06-v3"
+      ],
+      "passed": true,
+      "handOwnershipVerified": true,
+      "extraHandOrWeapon": false,
+      "observation": "最新04-v2已实看：远右剑腕收向腰前、剑身更竖，替代旧04-v1的外伸剑臂。05-v2右剑手进一步收至腰后，袖口—握柄手在头发下可见；同一剑身被发束局部遮挡后在上方露出。近左符臂独立向前，06-v3右剑臂再向后展开、左符臂跨胸向前。整段保持右剑左符，没有多手、断手或第二把剑。04→05仍有集中后摆，但已能由前收—腰后—展开的运动顺序解释，不是反向摆回硬错。",
+      "nonBlocking": "最新04-v2剑腕内收、剑轴更竖，减轻旧04-v1→05-v2角度突变；由躯干前到身后的遮挡变化仍集中于04→05，作为节奏特征记录。"
+    },
+    {
+      "direction": "S",
+      "frames": [
+        7,
+        8
+      ],
+      "sources": [
+        "07-v4",
+        "08-v4"
+      ],
+      "passed": true,
+      "supportSide": "anatomical_right_rear",
+      "observation": "右后小腿向下伸、鞋面朝S，鞋前部可读为后侧支撑；08比07腿进一步下伸。左前摆鞋底朝视线露出，能区别于后脚支撑。纯正前视角遮住后跟，使提跟不如侧视夸张；未见后腿高收、双脚同处回收或鞋轴外八的明确硬错。",
+      "readability": "support leg and forward swing distinguishable; heel lift subtle in frontal projection"
+    },
+    {
+      "direction": "S",
+      "frames": [
+        15,
+        16
+      ],
+      "sources": [
+        "15-v3",
+        "16-v7"
+      ],
+      "passed": true,
+      "supportSide": "anatomical_left_rear",
+      "observation": "左后腿均已向下伸，后靴鞋面正向S且前部低置；右前靴分别露出明显底面/抬头底边，仍为前摆。16后左腿并非缩到裙下的高回收形状，前后脚职责可区分。前視图不显示清楚的后跟空隙，不能据单一最低像素断言腾空。",
+      "readability": "rear support shin and toe readable; exact heel clearance not measurable from front view"
+    },
+    {
+      "direction": "SE",
+      "frames": [
+        16
+      ],
+      "sources": [
+        "16-v3"
+      ],
+      "passed": true,
+      "supportSide": "anatomical_left_rear",
+      "observation": "左后小腿伸至靴口，后靴前掌压低、鞋跟明显高于前掌，朝SE轴向连续；右前靴前伸、鞋底边可见，准备下一步。此视角前掌支撑比S正面更清楚。两手仍右剑左符，一剑一符无复制。",
+      "readability": "rear forefoot and heel-up relation clearly visible"
+    }
+  ],
+  "integrationNote": {
+    "scope": "selection only, not an artwork repair requirement",
+    "observation": "Initial selection read still referenced SW05-v1. recover_south subsequently confirmed final plan SW04-v2,05-v2,06-v3 and is updating selection/export. This reviewer inspected both04-v1 and new04-v2; final local verdict uses04-v2→05-v2→06-v3. No selection edits made by reviewer."
+  },
+  "remainingRequiredImageRepairs": [],
+  "clientRuntimeVerified": false,
+  "worldGroundVerified": false,
+  "worldGroundNotRequiredForImageRepairPass": true
+}

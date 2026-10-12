@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T15:30:34.125Z",
+  "reviewer": "/root/resume_r06_c03_fullqa/r06_c03_pending_qa",
+  "status": "passed_local_binary_repair",
+  "localRepairAccepted": true,
+  "formalAccepted": false,
+  "fullTileAccepted": false,
+  "scope": "Changed right native-selection boundary and repaired circle/leaf geometry only. This does not accept the whole 4096 tile.",
+  "candidate": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v03-binary-seam/candidate.png",
+    "sha256": "8f5a11d3485f5de417696d12f641a51f1caf3118e2a3ecddafbcc25dcc13ce6a",
+    "hashVerifiedAgainstManifest": true
+  },
+  "nativeSource": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/native.png",
+    "sha256": "f29c433dd18b3e879dbc5b5a80ab15ebc96a16d97f4ef1745a905e7cce1df484",
+    "hashVerifiedAgainstManifest": true,
+    "reviewReusedFrom": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v02/independent-review.json"
+  },
+  "actuallyViewed": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v03-binary-seam/right-perimeter.png",
+      "sha256": "8f7637b994d4c2d7ed2d25439148b23f410757e09dde8cab2c8ccb3a073557fc",
+      "detail": "original",
+      "tileCropLTRB": [
+        3340,
+        1675,
+        3664,
+        2475
+      ],
+      "exactCandidateCropVerified": true,
+      "verdict": "pass",
+      "notes": "The previous straight vertical paper/wood/shadow material boundary is substantially improved. The selected path is not visibly traceable as a hard seam at native scale. Gold highlight, timber grain, lower fascia and cast-shadow edge remain continuous without new displaced contours."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v03-binary-seam/trial-frame.png",
+      "sha256": "b52d3e94101001399128874e69bc62b9c6bbd18047b8478342fe4bc8eadfe741",
+      "detail": "original",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "tileCropLTRB": [
+        2330,
+        1470,
+        3584,
+        2724
+      ],
+      "exactCandidateCropVerified": true,
+      "verdict": "pass",
+      "notes": "The repaired circular wooden/gold rim remains smoothly connected, the leaf rectangular split remains removed, and the chosen right boundary introduces no new visible geometry or material defect in this native frame."
+    }
+  ],
+  "priorReview": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v02/independent-review.json",
+    "sha256": "b4e4cc9ec70e6d3f35ff0851959d9d19da770928480cd0091d94136e0c592339"
+  },
+  "perimeterReuse": [
+    {
+      "side": "left",
+      "wholeCropPixelIdentical": true,
+      "changedPixelCount": 0,
+      "verdict": "pass",
+      "method": "Reused prior actually-viewed pass by verified exact pixel identity."
+    },
+    {
+      "side": "top",
+      "wholeCropPixelIdentical": false,
+      "changedPixelCount": 11825,
+      "changedTileBoundsLTRB": [
+        3430,
+        1755,
+        3584,
+        1835
+      ],
+      "verdict": "pass",
+      "method": "Unchanged portion reuses prior pass. Changed right end is wholly inside the actually-viewed new right perimeter crop and is passed in this review."
+    },
+    {
+      "side": "bottom",
+      "wholeCropPixelIdentical": false,
+      "changedPixelCount": 12310,
+      "changedTileBoundsLTRB": [
+        3420,
+        2315,
+        3584,
+        2395
+      ],
+      "verdict": "pass",
+      "method": "Unchanged portion reuses prior pass. Changed right end is wholly inside the actually-viewed new right perimeter crop and is passed in this review."
+    }
+  ],
+  "pixelValidation": {
+    "maskFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c03/repair-batches/circular-anchor-02/trials/v03-binary-seam/native-mask.png",
+    "maskSha256": "d630c604077a4679ae5cebb75fdf55eea6dbffde4176e6c8f2e040f7301926ad",
+    "maskShaVerified": true,
+    "maskUniqueValues": [
+      0,
+      255
+    ],
+    "selectedNativePixelCount": 456593,
+    "sameWorldBinarySelectionExact": true,
+    "trialFrameExactCandidateCrop": true,
+    "operation": "For each native coordinate, candidate pixel equals native.png when mask=255, otherwise edit-target.png. Equality verified over all 1254x1254 pixels."
+  },
+  "comparisonToV02": "Improved sufficiently for local pass. The previously rejected straight right material line is no longer a blocking visible seam; repaired geometry is preserved.",
+  "sourceResampled": false,
+  "sourceRecolored": false,
+  "feathering": false,
+  "interpolation": false,
+  "imagesModifiedByReviewer": false
+}

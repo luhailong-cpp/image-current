@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "character": "14_short_hair_snow_summoner_girl",
+  "reviewedAtUtc": "2026-10-05T06:06:30.539092+00:00",
+  "scope": "Independent static peer check of repaired run/SW/06 against current SW05 and SW07",
+  "status": "static_pass_pending_root_playback",
+  "before": {
+    "file": "run/SW/06.png",
+    "sha256": "47508e8d45dfa02301e40cb5df22ffecbc959801adc2b475f2f3607d3e02e0c4",
+    "diagnosisRecord": "audit/straight-axis-S-SE-SW-review.json",
+    "diagnosisUnmodified": true,
+    "issue": "Rear left support boot was nearly S-facing instead of SW-facing."
+  },
+  "after": {
+    "file": "run/SW/06.png",
+    "sha256": "1003c3d69b59f5fac3dad52acbe21f0013469ebdcc71c87761f62a7f6e1ab832",
+    "size": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "fullImageActuallyViewed": true
+  },
+  "actuallyViewed": [
+    {
+      "file": "run/SW/05.png",
+      "sha256": "1810f5e55bcc027f57ceed6ba56a3de5a491d89a4ec4323a1f4a9db4d7166bfa",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "fullImageActuallyViewed": true
+    },
+    {
+      "file": "run/SW/06.png",
+      "sha256": "1003c3d69b59f5fac3dad52acbe21f0013469ebdcc71c87761f62a7f6e1ab832",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "fullImageActuallyViewed": true
+    },
+    {
+      "file": "run/SW/07.png",
+      "sha256": "05ffce3f34c5ddd954bac88fdfa6905e56a33ddb735f2db7776ae24e07aa3121",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "fullImageActuallyViewed": true
+    }
+  ],
+  "checks": {
+    "supportLegAxis": {
+      "result": "pass",
+      "observation": "The anatomical left rear support boot at lower screen right now has its toe visibly to the left of its ankle/heel and shows the SW side contour. The shin still runs into the same ankle; the prior isolated frontal/S toe projection in 05-06-07 is removed. Knee position and rear support role remain unchanged in the visual comparison."
+    },
+    "oppositeLeg": {
+      "result": "pass",
+      "observation": "The anatomical right knee remains folded in recovery, with a single attached shoe; no copied neighbor pose, new extra foot or knee reversal is visible."
+    },
+    "handsFoxCrystal": {
+      "result": "pass",
+      "observation": "Exactly two character hands remain attributable to two sleeves: left hand cradles one fox at chest; right hand holds one blue crystal. Shoulder-to-sleeve and wrist connections are intact; no extra cuff or floating hand appears."
+    },
+    "headBodyScale": {
+      "result": "pass_static",
+      "observation": "Compared at full 1024 canvas with SW05 and SW07, face width, eye spacing and hair-skull mass remain in the same character size range. No new whole-body shrink/enlargement or large head-size jump is visible. This is a visual comparison, not a claim of exact pixel identity."
+    },
+    "registration": {
+      "result": "pass_current_frame_record",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "currentGenerationRecord": "run/SW/06.png.generation.json",
+      "method": "direct_registered_canvas_redraw",
+      "globalScale": 1.0,
+      "inheritedCharacterScale": 0.8,
+      "sourceRoot": [
+        512,
+        942
+      ],
+      "targetRoot": [
+        512,
+        942
+      ],
+      "outputShaMatchesCurrentFile": true,
+      "observation": "Current frame record uses identity registration on an already registered canvas, with whole-canvas native1254 to formal1024 downsample and no second0.8 transform. Visually, pelvis/shoulder level and head scale fit adjacent frames; support contact remains at the rear support band. Historical SW registration.applied.json still describes the earlier transform and is not presented as the current repair transform."
+    }
+  },
+  "remainingConfirmedDefects": [],
+  "boundary": "Static full-image/neighbor review only. Root owns normal and quarter-speed playback and final status. This reviewer changed no formal PNG, original diagnosis, contact, manifest, registration or shared review/status file.",
+  "processImageRetention": {
+    "verifiedAt": "2026-10-05T06:57:45.161498+00:00",
+    "removedProcessImages": 27,
+    "records": [
+      "audit/straight-axis-cleanup.json",
+      "audit/straight-axis-attack-qa-cleanup.json",
+      "audit/straight-axis-cast-qa-cleanup.json"
+    ],
+    "formalFramesRetained": 196,
+    "previewFilesRetained": 42,
+    "textualGenerationEvidenceRetained": true,
+    "note": "Process-image paths in historical visual evidence identify files viewed before cleanup; their SHA256 and disposition are preserved in the cleanup records."
+  }
+}

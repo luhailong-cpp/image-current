@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path(__file__).with_name('finalize_current.py')
+s=p.read_text(encoding='utf-8-sig')
+s=s.replace("'robustBefore':3.876736119389534,'robustAfter':.7747395820915699,'maximumChannelChange':16", "'robustBefore':float(np.mean([x['before']['robustSegmentMeanAbsRgb'] for x in m['seams']])),'robustAfter':float(np.mean([x['after']['robustSegmentMeanAbsRgb'] for x in m['seams']])),'maximumChannelChange':max(x['maximumChannelChange'] for x in checks)")
+s=s.replace('Rail horizontal beams and stone wall courses remain continuous across cuts.','Rounded boulder silhouettes, crack lines and shaded mineral surfaces remain continuous across cuts.').replace('Dock post and deck have no visible geometry step.','White foam ribbons and blue water caustic shapes have no blocking geometry step.')
+s=s.replace('Rock contours, crevices, foliage and foam remain continuous; low-frequency boundary brightness offsets corrected.','Rock contours, crevices and foam remain continuous; low-frequency boundary brightness offsets corrected.')
+s=s.replace('north raw source boundary independent review passed; final color selection needs refresh, other exterior edges pending neighbors','north boundary final color selection pending refreshed four-segment review; other exterior edges pending neighbors')
+s=s.replace('12 historical references use missing old style PNG. Original prompt/request/receipt/source hashes preserved and verified; new 4 generations use present contract JPG. No historic hashes rewritten.','All 16 generation records and 64 attached reference hashes verified; all use present contract JPG. Original prompt/request/receipt/source hashes preserved.')
+s=s.replace("'generatedNativeCount':17", "'generatedNativeCount':16")
+p.write_text(s,encoding='utf-8')

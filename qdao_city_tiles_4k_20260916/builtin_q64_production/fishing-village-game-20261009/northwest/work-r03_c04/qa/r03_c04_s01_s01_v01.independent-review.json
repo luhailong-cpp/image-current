@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s01_s01_v01",
+  "reviewedAt": "2026-10-09T21:56:00.152163+00:00",
+  "decision": "usable-for-selection",
+  "repairRequested": false,
+  "formalAccepted": false,
+  "viewedNativeAt100Percent": true,
+  "sources": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s04_v01.png",
+      "sha256": "7a974e31af00445b7376dc5415fd7538b4d6ba341f9e2b106dfa1c31cc782d89"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s04_v01.png",
+      "sha256": "38018a9c8a12e83d66e20ecd69486234141a0944b8541c719feff16022314609"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s01_s01.layout-and-native-overlap.png",
+      "sha256": "bd8468a03a29e0b4a6138f5598abe254197b961834fe2dd1dabf359f13d06591"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v5.png",
+      "sha256": "01cc33b6fac4a1a233ef908c709b307cd3597d42aee521f355d3d935b52adea1"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.seams.json",
+      "sha256": "2d127cd356e4ccfaba5f3024060d28448656e4c28fe9aad03501f3c2bc8e11ff"
+    }
+  ],
+  "diagnostic": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s01_v01.hardcut-diagnostic.json",
+    "sha256": "480c436aaf36365aff8966ce0759fafadce96c3f3373fff2923236e1d09bec4f",
+    "overlapPixels": 230,
+    "method": "unmodified assemble_r03_c03.append_hard and minimum_vertical_seam; sum squared RGB DP; no feather/resample",
+    "westActualHorizontalCut": "Replayed row-strip1_to_2 from west assembly across c4; intersecting final eastmost115px exactly verified against v5.",
+    "diagnosticSourceIds": {
+      "4": "west s01_s04_v01",
+      "8": "southwest s02_s04_v01",
+      "21": "incoming r03_c04_s01_s01_v01"
+    }
+  },
+  "visualFindings": [
+    {
+      "scope": "whole native vs layout guide and west",
+      "result": "pass",
+      "finding": "Continues close-up pale blue-grey stone field with consistent slab width, diagonal directions and painterly material; no complete miniature scene, introduced props or local scale change."
+    },
+    {
+      "scope": "same-row west230px hardcut, full1254px height",
+      "result": "pass",
+      "finding": "Stone joints and bevel highlights continue through actual adaptive cut; no visible severed or doubled joint, slab geometry jump or conspicuous cut-shaped color patch."
+    },
+    {
+      "scope": "actual west row crossing, incoming y1024..1254",
+      "result": "pass",
+      "finding": "Viewed true west horizontal seam reconstruction with incoming adaptive vertical seam; corner has continuous stone topology without dropped or duplicated joint."
+    },
+    {
+      "scope": "material variation",
+      "result": "acceptable",
+      "finding": "Minor texture/brightness differences are within native painterly stone variation and do not warrant another generation."
+    }
+  ],
+  "metricsForContextOnly": [
+    {
+      "label": "same-row",
+      "overlapMAE": 3.8909610983981695,
+      "pathXRange": [
+        18,
+        126
+      ],
+      "maxAdjacentStep": 1
+    },
+    {
+      "label": "actual-west-row-intersection",
+      "overlapMAE": 3.903800013868664,
+      "pathXRange": [
+        18,
+        126
+      ],
+      "maxAdjacentStep": 1
+    }
+  ],
+  "reviewLimits": [
+    "Only the current west overlap and southwest crossing are assessed. North/east/south incoming neighbors remain unavailable.",
+    "Diagnostic adaptive cut x18..126 spans the native overlap and can take incoming pixels west of fixed tile boundaryx115. Final external seam acceptance requires coordinated cross-tile composition; fixed core crops were not used as proof.",
+    "Selection usability does not establish internal tile or formal cross-tile acceptance."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "tile": "r10_c08",
+  "reviewer": "seam_review",
+  "candidateSha256": "ac4577423fe2402849358fe7fa0d7c4b77bdd91f34e93d34a9fcfefc1700e33d",
+  "scope": "Both new AI repair adoption boundaries and their affected native core crossings; does not repeat unrelated unchanged earlier QA",
+  "status": "repair_geometry_pass",
+  "structuralBlockers": [],
+  "bench": {
+    "status": "pass",
+    "checked": ["top adoption full span in two unscaled strips", "left adoption", "right adoption", "left and right core joins from pre-color candidate", "affected p33/p34/p43/p44 crossing on final candidate"],
+    "observations": "One coherent blue cloth bench and rim; supports, plank gaps and rails enter adoption boundaries without an observed positional step. Top boundary fabric seams and plank gaps remain connected."
+  },
+  "canopy": {
+    "status": "pass",
+    "checked": ["top adoption", "bottom adoption", "left adoption", "right adoption", "affected p23/p24/p33/p34 crossing on final candidate"],
+    "observations": "Canvas edge and stitching are sharp, and full wooden beam contours connect across the repair. No confirmed geometric break."
+  },
+  "colorOnlyRisks": [
+    {"severity": "minor_nonblocking", "globalX": 32371, "globalYRange": [40700,40960], "observation": "A small residual material/shadow tone transition remains near the right bench adoption border. Wood plank gap positions and structural contours remain continuous; no additional AI geometry repair is justified by this evidence alone."}
+  ],
+  "exactCropEvidence": "manifest.json",
+  "fullTileInternalReady": "owner may combine this repair-specific pass with unchanged previous internal seam QA and verified color derivation",
+  "formalAccepted": false,
+  "externalEdges": "pending separate current-neighbor checks"
+}

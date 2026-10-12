@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent native 100-percent visual QA",
+  "createdAtUtc": "2026-10-10T11:26:55.192Z",
+  "status": "local_boundary_visual_pass_with_minor_texture_note",
+  "scope": "Only multi-boundary-v02 repair and all four repair perimeters; not formal acceptance of full tiles or map.",
+  "repairGlobalBox": [
+    11660,
+    33940,
+    12914,
+    35194
+  ],
+  "repairImage": "native/r09_c03_c04_boundary_tone_v01.png",
+  "candidatePrefixes": [
+    "multi-boundary-v02-r09_c03",
+    "multi-boundary-v02-r09_c04"
+  ],
+  "selectionParameters": {
+    "repairRoi": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "band": 110,
+    "mandatoryTarget": [
+      620,
+      130,
+      750,
+      991
+    ]
+  },
+  "method": "Viewed all four native perimeter before/after images and six additional unresampled crops including the previous v01 failure areas. Existing assembly provenance validation was not rerun.",
+  "resolved": [
+    {
+      "id": "original_black_rectangle",
+      "result": "pass",
+      "description": "The original dark rectangle is removed in the native repair; v02 retains its selection in the mandatory center region."
+    },
+    {
+      "id": "original_tile_join_tone",
+      "result": "pass",
+      "description": "The original straight tile-boundary color change through blue roof tiles and wooden beam remains corrected; no new large silhouette break appears at that tile join."
+    },
+    {
+      "id": "v01_left_beam_patch_boundary",
+      "result": "pass",
+      "description": "The v01 wavy vertical brightness boundary and small stepped bevel transitions are absent after moving the selection perimeter to the whole repair extent.",
+      "evidence": "multi-boundary-v02-independent-former-v01-left-beam-defect-base-left-candidate-right-100pct.png"
+    },
+    {
+      "id": "v01_bottom_door_color_contour",
+      "result": "pass",
+      "description": "The v01 curved/jagged patch edge above/right of the red diamond is absent.",
+      "evidence": "multi-boundary-v02-independent-former-v01-bottom-panel-defect-base-left-candidate-right-100pct.png"
+    }
+  ],
+  "perimeterReview": [
+    {
+      "edge": "top",
+      "result": "pass",
+      "description": "Blue-tile slopes/rims and gold roof ornament retain connected contours; no conspicuous new straight or rectangular edge seen.",
+      "evidence": "multi-boundary-v02-roi1-top-base-first-candidate-second-100pct.png"
+    },
+    {
+      "edge": "left",
+      "result": "pass",
+      "description": "Roof tile, wooden bracket, long gold-trimmed beam and door panel transition continuously across this perimeter; no v01-level brightness seam or bevel step seen.",
+      "evidence": [
+        "multi-boundary-v02-roi1-left-base-first-candidate-second-100pct.png",
+        "multi-boundary-v02-independent-left-beam-perimeter-base-left-candidate-right-100pct.png",
+        "multi-boundary-v02-independent-left-roof-perimeter-base-left-candidate-right-100pct.png"
+      ]
+    },
+    {
+      "edge": "right",
+      "result": "pass",
+      "description": "Wall texture and red/gold framed decoration remain continuous; no conspicuous external edge or misaligned frame observed.",
+      "evidence": [
+        "multi-boundary-v02-roi1-right-base-first-candidate-second-100pct.png",
+        "multi-boundary-v02-independent-right-wall-perimeter-base-left-candidate-right-100pct.png"
+      ]
+    },
+    {
+      "edge": "bottom",
+      "result": "pass_with_minor_texture_note",
+      "description": "The broad door-panel patch boundary is gone. The red diamond edge remains connected. A short low-amplitude wood-tone change near the vertical door molding remains visible on close inspection, without a corresponding silhouette break.",
+      "evidence": [
+        "multi-boundary-v02-roi1-bottom-base-first-candidate-second-100pct.png",
+        "multi-boundary-v02-independent-bottom-panel-perimeter-base-left-candidate-right-100pct.png"
+      ]
+    }
+  ],
+  "minorNotes": [
+    {
+      "id": "bottom_molding_small_tone_turn",
+      "severity": "minor_not_blocking_local_pass",
+      "approximateRepairBox": [
+        735,
+        1190,
+        810,
+        1220
+      ],
+      "approximateGlobalBox": [
+        12395,
+        35130,
+        12470,
+        35160
+      ],
+      "description": "Short wood-tone turn close to an existing vertical door molding; much smaller and lower contrast than v01's patch boundary. Does not justify further full-object repaint based on this review."
+    }
+  ],
+  "recommendation": "Use v02 instead of v01 for this local boundary repair. Retain the minor texture note. Continue normal wider tile and neighbor QA; do not equate this local pass with formal tile/map acceptance.",
+  "prohibitedOperationsPerformed": false,
+  "sourceFilesChanged": false,
+  "indexOrProgressChanged": false,
+  "limitations": [
+    "Visual review is local to the repair and its perimeters.",
+    "No actual-game or runtime validation.",
+    "Approximate diagnostic defect bounds do not alter art coordinates."
+  ],
+  "qaOnly": true
+}

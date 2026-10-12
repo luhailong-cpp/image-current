@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灵玥 · 战斗动作检查</title>
+<style>
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#193b35;background:#efeadd;color-scheme:light}*{box-sizing:border-box}body{margin:0}header{padding:24px max(24px,calc((100vw - 1440px)/2));background:#173f37;color:#fff6de;border-bottom:3px solid #bfa56c}h1{font-family:Georgia,"STSong",serif;margin:0 0 10px;font-size:28px}p{margin:8px 0;line-height:1.6}.muted{font-size:13px;opacity:.8}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:14px}button,select,input{font:inherit}button,select{border:1px solid #b7a270;border-radius:9px;background:#fff9e9;color:#21443b;min-height:36px;padding:5px 12px;cursor:pointer}button:hover{background:#e9e5cf}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #bc687b;outline-offset:2px}button[aria-pressed=true]{background:#d8dec9}main{max-width:1440px;margin:0 auto;padding:20px}.summary{padding:14px 18px;background:#fff9e9;border:1px solid #ccb984;border-radius:14px;margin-bottom:18px}.summary strong{display:block;margin-bottom:4px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fff9e9;border:1px solid #cbb681;border-radius:16px;overflow:hidden;box-shadow:0 3px 9px #173f370a}.card h2{margin:0;padding:12px 16px;background:#e0e7d7;font-size:18px}.stage{position:relative;aspect-ratio:1;overflow:hidden;background-color:#f1f1ed;background-image:linear-gradient(45deg,#c9cdc7 25%,transparent 25%),linear-gradient(-45deg,#c9cdc7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c9cdc7 75%),linear-gradient(-45deg,transparent 75%,#c9cdc7 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}.stage.dark{background:#263934}.stage.light{background:#fff}.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:none}.stage img.visible{display:block}.missing{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:20px;color:#7d3444;background:#fff5e6dc}.missing[hidden]{display:none}.anchor{position:absolute;left:50%;top:92%;width:18px;height:18px;transform:translate(-50%,-50%);pointer-events:none;opacity:.7}.anchor:before,.anchor:after{content:"";position:absolute;background:#d63556}.anchor:before{height:1px;width:18px;top:8px}.anchor:after{height:18px;width:1px;left:8px}.anchor.off{display:none}.cardBody{padding:12px 15px}.frameInfo{font-variant-numeric:tabular-nums;font-size:14px;min-height:24px}.card .controls{margin:8px 0}.range{width:100%;accent-color:#33614a}.path{font-size:12px;word-break:break-all}.path a{color:#376448}.issue{color:#9c3144;font-size:12px;min-height:18px}.technical{margin-top:22px;padding:16px;background:#fff9e9;border:1px solid #ccb984;border-radius:14px}.technical ul{max-height:260px;overflow:auto;padding-left:24px;font-size:13px;line-height:1.6}footer{margin:18px 0;color:#56685e;font-size:12px}@media(max-width:1020px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.grid{grid-template-columns:1fr}header{padding:20px}main{padding:12px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+<header>
+  <h1>灵玥 · 三种战斗动作</h1>
+  <p>雪白九尾灵狐　／　E 右下斜正面 · W 左上真正斜背面</p>
+  <p class="muted">独立检查工具。每组全部帧加载并解码后才允许播放；Canvas 始终使用完整 1024 画布，不移动角色或重新定位脚点。初始暂停，逐帧检查请用下方滑条。</p>
+  <div class="controls">
+    <button id="playAll">全部播放</button><button id="pauseAll">全部暂停</button><button id="resetAll">回到首帧</button>
+    <label>全局速度 <select id="globalSpeed"><option value="1">1× 原时间</option><option value="0.25">0.25× 慢放</option></select></label>
+    <label>背景 <select id="background"><option value="checker">透明网格</option><option value="dark">深色</option><option value="light">白色</option></select></label>
+    <button id="anchors" aria-pressed="true">合同锚点：显示</button>
+  </div>
+</header>
+<main>
+  <section class="summary"><strong id="summary"></strong><span id="scope"></span><p class="muted" id="timestamp"></p></section>
+  <div class="grid" id="grid"></div>
+  <details class="technical"><summary id="technicalTitle">技术问题</summary><ul id="errors"></ul></details>
+  <footer>pivot [0.5, 0.08]（左下原点），约定顶部脚点 [512, 942]。十字只是合同坐标参考；不能证明脚已落在此处，也不能证明动作、九尾或方向正确。技术通过不等于美术、动态或客户端通过。</footer>
+</main>
+<script id="deliveryData" type="application/json">/*__DELIVERY_DATA__*/</script>
+<script>
+"use strict";
+const {manifest, report} = JSON.parse(document.getElementById("deliveryData").textContent);
+const names={hit:"受击",attack:"普攻",cast:"施法"};
+const frameMap=new Map(manifest.frames.map(frame=>[frame.file,frame]));
+const players=[];
+const playAll=document.getElementById("playAll");playAll.disabled=true;
+const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
+document.getElementById("summary").textContent=`真实帧 ${report.presentCount} / ${report.expectedCount} · 技术检查${report.technicalPassed?"通过":"未通过"} · ${report.errorCount} 项错误 / ${report.warningCount} 项提示`;
+document.getElementById("scope").textContent="美术与动态：本工具未验收。客户端：未接入。缺失、读取失败或重复帧会显示提示，绝不跳过缺帧补齐动画。";
+document.getElementById("timestamp").textContent=`检查时间 ${manifest.generatedAt}。图像变化后请重跑 tools/build_delivery.py 并刷新。`;
+document.getElementById("technicalTitle").textContent=`技术问题与提示（${report.errorCount+report.warningCount}）`;
+for(const item of [...report.errors,...report.warnings]) document.getElementById("errors").append(el("li",`${item.file} · ${item.code} · ${item.message}`));
+for(const seq of manifest.sequences){
+  const card=el("section",undefined,"card");card.append(el("h2",`${names[seq.action]} ${seq.direction} · ${seq.directionDescription}`));
+  const stage=el("div",undefined,"stage");const missing=el("div",undefined,"missing");const anchor=el("div",undefined,"anchor");anchor.title="合同锚点：本工具不对帧定位";
+  const body=el("div",undefined,"cardBody"), info=el("div",undefined,"frameInfo"), controls=el("div",undefined,"controls");
+  const play=el("button","播放"),prev=el("button","上一帧"),next=el("button","下一帧"),speed=el("select");
+  speed.setAttribute("aria-label",`${names[seq.action]} ${seq.direction} 播放速度`);
+  for(const [value,text] of [["1","1× 原时间"],["0.25","0.25× 慢放"]]){const option=el("option",text);option.value=value;speed.append(option);}
+  const range=el("input",undefined,"range");range.type="range";range.min="0";range.max=String(seq.frameCount-1);range.value="0";range.step="1";range.setAttribute("aria-label",`${names[seq.action]} ${seq.direction} 逐帧`);
+  const path=el("div",undefined,"path"), issue=el("div",undefined,"issue");
+  const canvas=el("canvas");canvas.width=1024;canvas.height=1024;canvas.style.cssText="position:absolute;inset:0;width:100%;height:100%";canvas.setAttribute("role","img");
+  const context=canvas.getContext("2d");stage.append(canvas);
+  const player={seq,index:0,playing:false,ready:false,speed:1,elapsed:0,images:[],loaded:[],stage,anchor};
+  const preload=[];
+  for(let i=0;i<seq.frames.length;i++){
+    const frame=frameMap.get(seq.frames[i]);const image=el("img");image.alt=`灵玥 ${names[seq.action]} ${seq.direction} 第${i+1}帧`;image.decoding="async";
+    player.loaded[i]=frame.present?"loading":"missing";
+    player.images.push(image);
+    preload.push(new Promise(resolve=>{
+      if(!frame.present){resolve(false);return;}
+      image.onload=async()=>{try{await image.decode();if(image.naturalWidth!==1024||image.naturalHeight!==1024)throw Error("wrong dimensions");player.loaded[i]="ok";resolve(true);}catch{player.loaded[i]="error";resolve(false);}render();};
+      image.onerror=()=>{player.loaded[i]="error";resolve(false);render();};
+      image.src=frame.file+"?sha="+encodeURIComponent(frame.sha256||manifest.generatedAt);
+    }));
+  }
+  stage.append(anchor,missing);controls.append(prev,play,next,speed);body.append(info,range,controls,path,issue);card.append(stage,body);document.getElementById("grid").append(card);
+  function render(){
+    const i=player.index,frame=frameMap.get(seq.frames[i]),state=player.loaded[i];
+    if(state==="ok"){context.clearRect(0,0,1024,1024);context.drawImage(player.images[i],0,0,1024,1024);canvas.setAttribute("aria-label",`灵玥 ${names[seq.action]} ${seq.direction} 第${i+1}帧`);}
+    const loaded=player.loaded.filter(value=>value==="ok").length;
+    const failed=player.loaded.some(value=>value==="error"||value==="missing");
+    missing.hidden=state==="ok";
+    missing.textContent=state==="loading"?`正在解码 ${loaded} / ${seq.frameCount} 帧`:state==="error"?`第 ${i+1} 帧读取或解码失败`: `第 ${i+1} 帧缺失 · 未生成占位图`;
+    info.textContent=`${String(i+1).padStart(2,"0")} / ${seq.frameCount} · ${seq.durationMs} ms/帧 · 原动作 ${seq.totalDurationMs} ms · ${player.speed}×`;
+    range.value=String(i);play.textContent=player.playing?"暂停":player.ready?"播放":failed?"本组不完整":"正在加载";play.disabled=!player.ready;play.setAttribute("aria-pressed",String(player.playing));
+    path.replaceChildren();if(frame.present){const link=el("a",frame.file);link.href=frame.file;link.target="_blank";link.rel="noopener";path.append(link);}else path.textContent=frame.file;
+    issue.textContent=[...frame.issues.map(item=>item.code),...(player.ready?[]:[`解码 ${loaded}/${seq.frameCount}；本组全部成功前禁止播放`])].join(" · ");
+  }
+  player.setPlaying=value=>{player.playing=Boolean(value&&player.ready);player.elapsed=0;render();};
+  player.jump=value=>{player.index=(value+seq.frameCount)%seq.frameCount;player.elapsed=0;render();};
+  player.setSpeed=value=>{player.speed=value;speed.value=String(value);player.elapsed=0;render();};
+  player.tick=delta=>{if(!player.playing||!player.ready)return;player.elapsed+=delta*player.speed;if(player.elapsed>=seq.durationMs){player.elapsed-=seq.durationMs;player.index=(player.index+1)%seq.frameCount;render();}};
+  play.onclick=()=>player.setPlaying(!player.playing);prev.onclick=()=>{player.setPlaying(false);player.jump(player.index-1);};next.onclick=()=>{player.setPlaying(false);player.jump(player.index+1);};
+  range.oninput=()=>{player.setPlaying(false);player.jump(Number(range.value));};speed.onchange=()=>player.setSpeed(Number(speed.value));
+  players.push(player);render();
+  Promise.all(preload).then(results=>{player.ready=results.every(Boolean);render();playAll.disabled=!players.every(item=>item.ready);});
+}
+document.getElementById("playAll").onclick=()=>players.forEach(player=>player.setPlaying(true));
+document.getElementById("pauseAll").onclick=()=>players.forEach(player=>player.setPlaying(false));
+document.getElementById("resetAll").onclick=()=>players.forEach(player=>{player.setPlaying(false);player.jump(0);});
+document.getElementById("globalSpeed").onchange=event=>players.forEach(player=>player.setSpeed(Number(event.target.value)));
+document.getElementById("background").onchange=event=>players.forEach(player=>{player.stage.classList.toggle("dark",event.target.value==="dark");player.stage.classList.toggle("light",event.target.value==="light");});
+document.getElementById("anchors").onclick=event=>{const visible=event.currentTarget.getAttribute("aria-pressed")!=="true";event.currentTarget.setAttribute("aria-pressed",String(visible));event.currentTarget.textContent=`合同锚点：${visible?"显示":"隐藏"}`;players.forEach(player=>player.anchor.classList.toggle("off",!visible));};
+let previous;
+function tick(now){if(previous!==undefined){const delta=now-previous;players.forEach(player=>player.tick(delta));}previous=now;requestAnimationFrame(tick);}
+document.addEventListener("visibilitychange",()=>{previous=undefined;});requestAnimationFrame(tick);
+</script>
+</html>

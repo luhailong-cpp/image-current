@@ -1,0 +1,1142 @@
+{
+  "characterId": "00_reference_topright_boy",
+  "action": "run",
+  "direction": "E",
+  "reviewedAt": "2026-10-03T12:25:20.350567+00:00",
+  "reviewMethod": "实际逐帧查看selected-new对应16张原生PNG（view_image original）；图像形状先行，未以旧phase-plan/提示词相位替代观察。补读alpha>=128诊断边界但未改动任何PNG。",
+  "selectionFile": "selected-new.json",
+  "userFeedbackSource": "../../RUN_GROUNDING_REVIEW_20261003.md",
+  "dynamicReviewed": false,
+  "clientValidated": false,
+  "imagesModified": false,
+  "selectionModified": true,
+  "scope": "E向16帧实际观察，保留旧SHA快照并更新已采用修订。",
+  "summary": "已采用E08-v2与E11-v2：08超低伸脚已修正，11形成平底中撑及空手腰部过渡。02/03/10/11可读承重；07至08细小回提、10至12遮挡、整圈左右腿追踪与接地观感仍待动态。",
+  "groundReference": {
+    "nominalNativeY": 1163.56,
+    "nominalExportRoot": [
+      512,
+      942
+    ],
+    "source": "本角色review/scale-audit.md记录的固定901/1254缩放与(61,106)偏移，仅历史候选映射",
+    "trustedGroundConfirmed": false,
+    "warning": "固定地面不是提示词写过就已成立；应由当前导出映射、可用接触帧及透视一起核对。不能按最低像素逐帧贴地。"
+  },
+  "timingCandidate": {
+    "status": "offline_trial_only_not_adopted",
+    "totalMs": 720,
+    "uniformComparisonMsPerFrame": 45,
+    "durationsMs": [
+      50,
+      60,
+      65,
+      35,
+      35,
+      35,
+      40,
+      40,
+      50,
+      60,
+      60,
+      40,
+      35,
+      35,
+      40,
+      40
+    ],
+    "primaryDwellFrames": [
+      2,
+      3,
+      10,
+      11
+    ],
+    "secondaryContactFrames": [
+      1,
+      9
+    ],
+    "doNotApplyMidstanceBoostTo": [],
+    "rationale": "基于新版E11平底中撑调整第二半圈，10/11各60ms；不复制其他角色权重。",
+    "testingOrder": "先比480/640/720/800均匀节奏；再与此720非均匀候选比较。优先修E08/E11后再审加权是否有必要。",
+    "afterRepair": "已更新为08-v2/11-v2的试播参数，最终时长未采用。"
+  },
+  "mustRedraw": [
+    {
+      "id": "E-G01",
+      "frames": [
+        8
+      ],
+      "source": "generation/run/E/08-v1.png",
+      "priority": "P1",
+      "certainty": "high for discontinuity; contact-plane placement still requires calibration",
+      "finding": "E08前鞋alpha下缘1175，E09为1152；实际前鞋近水平、最低处均来自该前鞋。08→09上身下降（头顶136→182）时，同一前鞋却抬高23px，鞋角变化不足以解释整只前鞋逆向上提。",
+      "correction": "保留E08人物比例、右空臂前摆与左抱葫芦，原生重画前伸摆动脚为真正接触前姿态，使08→09沿同一可信地面下降/滚动接触。不要移动整个人物，也不要把E09复制过去。",
+      "sha256": "19d79e26a792eb779ed632858b804066553d21ad01b9d31845720c48d4ffc507",
+      "historicalIssueStatus": "superseded_by_v2_static_repair_dynamic_pending"
+    },
+    {
+      "id": "E-G02",
+      "frames": [
+        11
+      ],
+      "source": "generation/run/E/11-v1.png",
+      "priority": "P1",
+      "certainty": "medium-high for missing clear midstance",
+      "finding": "E11低鞋在髋后，鞋跟抬高且前掌向下，支撑形状已经接近后段前掌支撑；当前10→11→12缺一张清楚的左脚平底中撑/受力过程。",
+      "correction": "原生补正E11：确认解剖左腿为支撑腿，鞋在髋下，膝踝自然屈曲、足底或较宽前掌稳定受力；右膝从后向前穿过，右空臂经过中间摆幅。保持两腿遮挡可持续追踪，12再后伸蹬离。",
+      "sha256": "81778ac672cd810d8a87fca17147e3b2c5001ee025981f6926a7678ab644a1d4",
+      "historicalIssueStatus": "superseded_by_v2_static_repair_dynamic_pending"
+    }
+  ],
+  "conditionalReviewOnly": [
+    {
+      "frames": [
+        2,
+        10
+      ],
+      "finding": "两帧确有平底支撑和膝收回，不应称完全没有接地姿态；踝弯和髋/头的压低幅度偏弱。E10头顶较09反向上升12px，需结合头形与骨盆轨迹判断，不凭单个发尖作重画依据。",
+      "action": "先慢播比较。若仍无承重感，才局部重画膝踝屈曲与骨盆下压；现阶段不列必修。"
+    }
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "observedPhase": "接触候选／轻支撑",
+      "contactFoot": "前伸近侧脚，较可能解剖右脚",
+      "contactFootConfidence": "medium",
+      "sole": "前鞋鞋底接近平行地面，脚尖轻翘，脚跟和前掌接触感都较轻；后鞋向后折起。",
+      "kneeAnkle": "前膝已略屈，踝部较直；尚不是清楚的压低承重。",
+      "phaseConfidence": "medium",
+      "durationReason": "可比45ms略多停留，使16→01落脚事件可读；接触位置仍待地线核实。",
+      "source": "generation/run/E/01-v5.png",
+      "sourceVersion": "01-v5",
+      "candidateDurationMs": 50,
+      "worldGroundContactConfirmed": false,
+      "sha256": "0335d08d84cd367c85a43fb72dd69980a45befd970d9ab1de1a1758a315b4dc6",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        308,
+        170,
+        911,
+        1152
+      ]
+    },
+    {
+      "frame": 2,
+      "observedPhase": "加载／轻度缓冲支撑",
+      "contactFoot": "沿01延续的前伸脚，较可能解剖右脚",
+      "contactFootConfidence": "medium-high",
+      "sole": "前鞋呈较完整平底，较01向身体下方收回；后鞋仍抬起。",
+      "kneeAnkle": "前膝比01更收向髋下，膝屈可见；踝弯和后腿穿过动作幅度不大，不能夸为强压缩。",
+      "phaseConfidence": "high for support, medium for loading strength",
+      "durationReason": "平底与膝部收回都有实际图像依据，适合适度延长至60ms观察承重。",
+      "source": "generation/run/E/02-v1.png",
+      "sourceVersion": "02-v1",
+      "candidateDurationMs": 60,
+      "worldGroundContactConfirmed": false,
+      "sha256": "953d6eb9cc82e9ce0f2a7609e67eaa6ee39b0d1650a7f0ea1c2781b3abe4df77",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        329,
+        186,
+        927,
+        1148
+      ]
+    },
+    {
+      "frame": 3,
+      "observedPhase": "中撑／另一膝前摆",
+      "contactFoot": "身体下方近侧支撑脚，较可能解剖右脚",
+      "contactFootConfidence": "medium-high",
+      "sole": "靠画面左下的鞋整底较平，踝在髋下；另一鞋在前上方抬起。",
+      "kneeAnkle": "支撑大腿和小腿有屈曲关系，前摆膝与支撑腿分离；是第一半圈最清楚的中撑轮廓。",
+      "phaseConfidence": "high",
+      "durationReason": "第一半圈优先延长的稳定支撑帧；65ms用于观察髋通过支撑脚，不代表姿态已动态通过。",
+      "source": "generation/run/E/03-v1.png",
+      "sourceVersion": "03-v1",
+      "candidateDurationMs": 65,
+      "worldGroundContactConfirmed": false,
+      "sha256": "c9a743e8e8b68eaee439e039820c661a02dd67cbd3fd90dc84857b253a389499",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        384,
+        171,
+        930,
+        1158
+      ]
+    },
+    {
+      "frame": 4,
+      "observedPhase": "后脚前掌支撑／蹬离候选",
+      "contactFoot": "后置脚，沿03轨迹较可能解剖右脚",
+      "contactFootConfidence": "medium",
+      "sole": "后鞋斜竖、脚跟抬起且脚尖向下；前鞋翘起并伸出。",
+      "kneeAnkle": "后腿向后伸但膝仍弯，能读出推离意图；真实鞋尖是否触地未由透明图证明。",
+      "phaseConfidence": "medium",
+      "durationReason": "过渡帧保持较短，避免长停留在疑似悬空蹬地姿势。",
+      "source": "generation/run/E/04-v2.png",
+      "sourceVersion": "04-v2",
+      "candidateDurationMs": 35,
+      "worldGroundContactConfirmed": false,
+      "sha256": "b3b083b2f528ac84d861ae2dd3268d943a4b1241512b81d9c33357eb86ddae2d",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        315,
+        158,
+        950,
+        1146
+      ]
+    },
+    {
+      "frame": 5,
+      "observedPhase": "双脚已离地的早期腾空",
+      "contactFoot": "无",
+      "contactFootConfidence": "high",
+      "sole": "前鞋上翘，后鞋脚尖下垂但整体已高于先前接触鞋带；两鞋都无平底承重轮廓。",
+      "kneeAnkle": "前膝向前、后腿回收，未见有效支撑链。",
+      "phaseConfidence": "high",
+      "durationReason": "35ms，保留腾空但不在此加重停留。",
+      "source": "generation/run/E/05-v2.png",
+      "sourceVersion": "05-v2",
+      "candidateDurationMs": 35,
+      "worldGroundContactConfirmed": false,
+      "sha256": "ae934fe11d80336be35286e450308fe44ae16047a956a357d6d17f9d036aefbf",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        331,
+        155,
+        959,
+        1122
+      ]
+    },
+    {
+      "frame": 6,
+      "observedPhase": "腾空伸展段",
+      "contactFoot": "无",
+      "contactFootConfidence": "high",
+      "sole": "前鞋伸向前上，后鞋折回，两脚离开承重带明显。",
+      "kneeAnkle": "双腿展开，后跟回收；上身也较前帧升高。",
+      "phaseConfidence": "high",
+      "durationReason": "35ms，腾空视觉已经突出，无需额外停留。",
+      "source": "generation/run/E/06-v1.png",
+      "sourceVersion": "06-v1",
+      "candidateDurationMs": 35,
+      "worldGroundContactConfirmed": false,
+      "sha256": "95a5041e8eba8968b0e28ec439f01da8507e7854ca5398379eb6a9d59b630f42",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        350,
+        105,
+        1007,
+        1095
+      ]
+    },
+    {
+      "frame": 7,
+      "observedPhase": "腾空下降／前脚下伸",
+      "contactFoot": "无明确接触，前伸脚较可能解剖左脚",
+      "contactFootConfidence": "medium",
+      "sole": "前鞋由翘起转为接近平底并向下伸；后鞋持续后折。",
+      "kneeAnkle": "前小腿伸出，尚无髋压到该脚的承重链。",
+      "phaseConfidence": "medium-high",
+      "durationReason": "40ms，连接伸展和落脚；不计入已确认承重时长。",
+      "source": "generation/run/E/07-v2.png",
+      "sourceVersion": "07-v2",
+      "candidateDurationMs": 40,
+      "worldGroundContactConfirmed": false,
+      "sha256": "b9e2da3ea80b45b9d9ec3a5b944d4692c75953b5d61b08dcf73e78c55d61c287",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        339,
+        105,
+        991,
+        1137
+      ]
+    },
+    {
+      "frame": 8,
+      "observedPhase": "接触前左脚下降候选",
+      "contactFoot": "前伸脚，较可能解剖左脚",
+      "contactFootConfidence": "low-medium",
+      "sole": "新版前鞋微翘，下缘1130；比09落地鞋1152高22px，旧版低过地面的逆跳已修正。",
+      "kneeAnkle": "前膝略弯，后脚折回；07至08鞋底有7px回提，需在整段中分辨鞋角与轨迹。",
+      "phaseConfidence": "medium-high",
+      "durationReason": "新版40ms作为短接触前过渡，不作承重停留。",
+      "source": "generation/run/E/08-v2.png",
+      "sourceVersion": "08-v2",
+      "candidateDurationMs": 40,
+      "worldGroundContactConfirmed": false,
+      "sha256": "4ae05bf0ae96943d78ce9df2ca92269793511c61ea145f58333107c7154449ea",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        312,
+        167,
+        939,
+        1130
+      ]
+    },
+    {
+      "frame": 9,
+      "observedPhase": "前脚接触候选／轻加载",
+      "contactFoot": "前伸脚，较可能解剖左脚；需继续沿髋部遮挡确认",
+      "contactFootConfidence": "medium",
+      "sole": "前鞋跟低、脚尖轻翘，接触候选；新版08至09鞋底由1130下降至1152。",
+      "kneeAnkle": "前膝略弯，后腿后折；需结合10加载与11中撑核实承重。",
+      "phaseConfidence": "medium",
+      "durationReason": "50ms显示另一脚接触，仍为离线试验。",
+      "source": "generation/run/E/09-v4.png",
+      "sourceVersion": "09-v4",
+      "candidateDurationMs": 50,
+      "worldGroundContactConfirmed": false,
+      "sha256": "7e51047c8ca0ad07087dbfeb0834cad4389a3a80d6d74f5eb5c52c388625bb01",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        315,
+        182,
+        918,
+        1152
+      ]
+    },
+    {
+      "frame": 10,
+      "observedPhase": "平底加载／支撑",
+      "contactFoot": "沿09延续的支撑脚，较可能解剖左脚",
+      "contactFootConfidence": "medium",
+      "sole": "前鞋比09转平并收向身体下方，鞋跟与前掌方向合理；后鞋仍抬起。",
+      "kneeAnkle": "支撑膝屈曲可辨，踝较直；上身没有对应明显再压低。它仍是第二半圈最清楚的平底支撑。",
+      "phaseConfidence": "high for support, medium for loading strength",
+      "durationReason": "新版11已补平底中撑；10改60ms加载，不再单独承担第二半圈停留。",
+      "source": "generation/run/E/10-v1.png",
+      "sourceVersion": "10-v1",
+      "candidateDurationMs": 60,
+      "worldGroundContactConfirmed": false,
+      "sha256": "8ca326eabe532d21811444e76bf4177c661707c74a4e4157df0d2dfd87468d43",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        361,
+        170,
+        911,
+        1154
+      ]
+    },
+    {
+      "frame": 11,
+      "observedPhase": "平底中撑／右膝前摆",
+      "contactFoot": "后置低鞋，较可能解剖左脚；身份可信度受髋部遮挡影响",
+      "contactFootConfidence": "medium-low",
+      "sole": "新11-v2低鞋整底近水平，下缘1157，与10的1154、12的1158接近；摆动鞋独立分离。",
+      "kneeAnkle": "支撑膝踝屈曲、右膝前摆；空右拳经过腰旁中间位。",
+      "phaseConfidence": "high for static support",
+      "durationReason": "60ms中撑试播有新版平底承重形状依据；动态未通过。",
+      "source": "generation/run/E/11-v2.png",
+      "sourceVersion": "11-v2",
+      "candidateDurationMs": 60,
+      "worldGroundContactConfirmed": false,
+      "sha256": "01982b81f21e1f128fb434624f1f292d12335a9303f1ab1fb491b85ff18db7a2",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        418,
+        168,
+        919,
+        1157
+      ]
+    },
+    {
+      "frame": 12,
+      "observedPhase": "后脚前掌蹬离候选",
+      "contactFoot": "后置低鞋，沿11较可能解剖左脚",
+      "contactFootConfidence": "medium",
+      "sole": "后鞋更竖、脚尖朝下且脚跟抬高；前鞋随前膝抬起。",
+      "kneeAnkle": "后腿后伸、前膝前送的推离意图较清楚；脚尖实际支撑仍须用可信地面核对。",
+      "phaseConfidence": "medium-high",
+      "durationReason": "40ms短过渡，不在鞋尖接触未核实前延长。",
+      "source": "generation/run/E/12-v1.png",
+      "sourceVersion": "12-v1",
+      "candidateDurationMs": 40,
+      "worldGroundContactConfirmed": false,
+      "sha256": "3c07b0132dd6eb438341468a453ffaa56333b28bf9de45b03f7a8b80f99c1860",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        314,
+        173,
+        895,
+        1158
+      ]
+    },
+    {
+      "frame": 13,
+      "observedPhase": "双脚腾空／后腿回收",
+      "contactFoot": "无",
+      "contactFootConfidence": "high",
+      "sole": "两鞋高于接触带，前鞋翘起后鞋后折；无平底支撑。",
+      "kneeAnkle": "双腿已经展开，后跟快速收回。",
+      "phaseConfidence": "high",
+      "durationReason": "35ms，不加长腾空。",
+      "source": "generation/run/E/13-v1.png",
+      "sourceVersion": "13-v1",
+      "candidateDurationMs": 35,
+      "worldGroundContactConfirmed": false,
+      "sha256": "2d2e8d04c0ed350786fd8818f2ac4a75234599b6835e5148280a9a1de64c9963",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        331,
+        181,
+        950,
+        1108
+      ]
+    },
+    {
+      "frame": 14,
+      "observedPhase": "腾空伸展段",
+      "contactFoot": "无",
+      "contactFootConfidence": "high",
+      "sole": "前鞋上翘并前伸，后鞋明显抬高；两脚高度都不支持接地解读。",
+      "kneeAnkle": "两腿展开，前膝尚屈，后膝回收。",
+      "phaseConfidence": "high",
+      "durationReason": "35ms；图像腾空清楚，停留无需比承重长。",
+      "source": "generation/run/E/14-v4.png",
+      "sourceVersion": "14-v4",
+      "candidateDurationMs": 35,
+      "worldGroundContactConfirmed": false,
+      "sha256": "9579191f98a7abd5b88bf4e93e853986d09df7866f6e2ff5ea4632466266e831",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        324,
+        154,
+        1014,
+        1074
+      ]
+    },
+    {
+      "frame": 15,
+      "observedPhase": "腾空下降／前脚前伸",
+      "contactFoot": "无",
+      "contactFootConfidence": "high",
+      "sole": "前鞋仍翘起并向前下伸，后鞋折回，两脚尚无承重。",
+      "kneeAnkle": "前腿延伸增加，后腿继续回收。",
+      "phaseConfidence": "high",
+      "durationReason": "40ms衔接下降，保留落脚准备。",
+      "source": "generation/run/E/15-v1.png",
+      "sourceVersion": "15-v1",
+      "candidateDurationMs": 40,
+      "worldGroundContactConfirmed": false,
+      "sha256": "92ca68534687ae1dea1abeabcf0249fedccb368740c18434c9dacf990d6571ff",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        302,
+        175,
+        1032,
+        1117
+      ]
+    },
+    {
+      "frame": 16,
+      "observedPhase": "前脚预接触候选",
+      "contactFoot": "无明确接触；前伸近侧脚较可能解剖右脚",
+      "contactFootConfidence": "medium",
+      "sole": "前鞋较15收回，仍脚跟低脚尖翘；01随后转近平底，后鞋仍折起。",
+      "kneeAnkle": "前膝略弯但无压重；右臂后摆与前腿相反。",
+      "phaseConfidence": "medium-high",
+      "durationReason": "40ms接触前过渡，无额外末帧停留。",
+      "source": "generation/run/E/16-v2.png",
+      "sourceVersion": "16-v2",
+      "candidateDurationMs": 40,
+      "worldGroundContactConfirmed": false,
+      "sha256": "a281ecafc35e4dbc8b963aedbcd7f7b89c76bd205faef6a97e32baeb7fa21319",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "alpha128DiagnosticBounds": [
+        317,
+        171,
+        935,
+        1137
+      ]
+    }
+  ],
+  "selectionSha256": "5f4dd2f28ad54124375745121d1c4f481b964f2dc524d1ca8ad8f0ad35769474",
+  "sourceReviewHistory": [
+    {
+      "reviewedAt": "2026-10-03T11:24:04.239Z",
+      "reportSha256BeforeRepairAppend": "4470d9326f6cea6ca37545c29132cc3f3343c224852db4fc6437ef138eb8213d",
+      "selectionSha256": "8b9f4e6c27b5d5814d2199bad10a2a8cd49e460401c7614d133d2bbb86fdd991",
+      "frames": [
+        {
+          "frame": 1,
+          "source": "generation/run/E/01-v5.png",
+          "sha256": "0335d08d84cd367c85a43fb72dd69980a45befd970d9ab1de1a1758a315b4dc6"
+        },
+        {
+          "frame": 2,
+          "source": "generation/run/E/02-v1.png",
+          "sha256": "953d6eb9cc82e9ce0f2a7609e67eaa6ee39b0d1650a7f0ea1c2781b3abe4df77"
+        },
+        {
+          "frame": 3,
+          "source": "generation/run/E/03-v1.png",
+          "sha256": "c9a743e8e8b68eaee439e039820c661a02dd67cbd3fd90dc84857b253a389499"
+        },
+        {
+          "frame": 4,
+          "source": "generation/run/E/04-v2.png",
+          "sha256": "b3b083b2f528ac84d861ae2dd3268d943a4b1241512b81d9c33357eb86ddae2d"
+        },
+        {
+          "frame": 5,
+          "source": "generation/run/E/05-v2.png",
+          "sha256": "ae934fe11d80336be35286e450308fe44ae16047a956a357d6d17f9d036aefbf"
+        },
+        {
+          "frame": 6,
+          "source": "generation/run/E/06-v1.png",
+          "sha256": "95a5041e8eba8968b0e28ec439f01da8507e7854ca5398379eb6a9d59b630f42"
+        },
+        {
+          "frame": 7,
+          "source": "generation/run/E/07-v2.png",
+          "sha256": "b9e2da3ea80b45b9d9ec3a5b944d4692c75953b5d61b08dcf73e78c55d61c287"
+        },
+        {
+          "frame": 8,
+          "source": "generation/run/E/08-v1.png",
+          "sha256": "19d79e26a792eb779ed632858b804066553d21ad01b9d31845720c48d4ffc507"
+        },
+        {
+          "frame": 9,
+          "source": "generation/run/E/09-v4.png",
+          "sha256": "7e51047c8ca0ad07087dbfeb0834cad4389a3a80d6d74f5eb5c52c388625bb01"
+        },
+        {
+          "frame": 10,
+          "source": "generation/run/E/10-v1.png",
+          "sha256": "8ca326eabe532d21811444e76bf4177c661707c74a4e4157df0d2dfd87468d43"
+        },
+        {
+          "frame": 11,
+          "source": "generation/run/E/11-v1.png",
+          "sha256": "81778ac672cd810d8a87fca17147e3b2c5001ee025981f6926a7678ab644a1d4"
+        },
+        {
+          "frame": 12,
+          "source": "generation/run/E/12-v1.png",
+          "sha256": "3c07b0132dd6eb438341468a453ffaa56333b28bf9de45b03f7a8b80f99c1860"
+        },
+        {
+          "frame": 13,
+          "source": "generation/run/E/13-v1.png",
+          "sha256": "2d2e8d04c0ed350786fd8818f2ac4a75234599b6835e5148280a9a1de64c9963"
+        },
+        {
+          "frame": 14,
+          "source": "generation/run/E/14-v4.png",
+          "sha256": "9579191f98a7abd5b88bf4e93e853986d09df7866f6e2ff5ea4632466266e831"
+        },
+        {
+          "frame": 15,
+          "source": "generation/run/E/15-v1.png",
+          "sha256": "92ca68534687ae1dea1abeabcf0249fedccb368740c18434c9dacf990d6571ff"
+        },
+        {
+          "frame": 16,
+          "source": "generation/run/E/16-v2.png",
+          "sha256": "a281ecafc35e4dbc8b963aedbcd7f7b89c76bd205faef6a97e32baeb7fa21319"
+        }
+      ],
+      "note": "原始16帧观察保留不改写；其E08/E11必修判断对应旧source/SHA。"
+    }
+  ],
+  "repairObservations": [
+    {
+      "reviewedAt": "2026-10-03T11:41:30.490Z",
+      "status": "E11_static_target_resolved_E08_precontact_candidate_with_residual_transition",
+      "scope": "本次原生AI编辑；选帧和manifest均未修改。",
+      "calls": 3,
+      "modelEvidence": "同批目标gpt-image-2.5-sunburst/max；宿主管理实际型号及质量未披露，仍未确认。",
+      "replacements": [
+        {
+          "frame": 8,
+          "oldSource": "generation/run/E/08-v1.png",
+          "oldSha256": "19d79e26a792eb779ed632858b804066553d21ad01b9d31845720c48d4ffc507",
+          "candidateSource": "generation/run/E/08-v2.png",
+          "status": "preferred_precontact_candidate_pending_sequence_review",
+          "observedPhase": "接触前姿态可辨；前鞋高于下一接触帧",
+          "contactFoot": "尚无明确接触；前左脚悬起、后右腿折回",
+          "sole": "前鞋微翘，alpha下缘1130，对比09-v4的1152高22px；旧08-v1低于09的23px超低伸脚已消除。",
+          "body": "头顶167，对比09的182高15px；头脸葫芦未见明显尺度跳档。",
+          "remaining": "07-v2前鞋下缘1137→本候选1130有7px回提，局部鞋角也变化；可能影响07→08下降连续性，需要原图序列/实播判断。实际不是精确10px抬脚，不声称精确轨迹已修好。",
+          "confidence": "medium",
+          "candidateSha256": "4ae05bf0ae96943d78ce9df2ca92269793511c61ea145f58333107c7154449ea",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "generationRecord": "generation/run/E/08-v2.png.generation.json"
+        },
+        {
+          "frame": 11,
+          "oldSource": "generation/run/E/11-v1.png",
+          "oldSha256": "81778ac672cd810d8a87fca17147e3b2c5001ee025981f6926a7678ab644a1d4",
+          "candidateSource": "generation/run/E/11-v2.png",
+          "status": "static_midstance_target_resolved_dynamic_pending",
+          "observedPhase": "左脚平底中撑，右膝前经过",
+          "contactFoot": "髋下左支撑脚；右腿前摆抬起",
+          "sole": "支撑鞋整底接近水平，鞋跟不再高抬；下缘1157，与10-v1的1154和12-v1的1158接近。",
+          "body": "头脸葫芦保持10-v1尺寸，右拳在腰旁中间位，与12后摆形成连续意图；两鞋分离，没有明显多余肢体。",
+          "remaining": "膝踝压缩、10→11→12近远腿遮挡及正常尺寸观感仍待动态；透明图不等于世界地面已确认。",
+          "confidence": "high for flat-sole midstance; medium for full-loop leg identity",
+          "candidateSha256": "01982b81f21e1f128fb434624f1f292d12335a9303f1ab1fb491b85ff18db7a2",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "generationRecord": "generation/run/E/11-v2.png.generation.json"
+        }
+      ],
+      "otherAttempt": {
+        "source": "generation/run/E/08-v3.png",
+        "status": "not_recommended_for_airborne_precontact",
+        "observation": "第二次只请求前鞋下降约12px，但实际下缘从1130降到1156，并且头顶由167下移至178。前鞋仍比09的1152低4px，空中预接触间隙不足；没有谎称其满足10px目标。",
+        "attemptLimitReached": true,
+        "sha256": "c04d4f1a2990def4590ccb4c3d8efd4a200d9ba86ee55944ebf2719d0ee60b98",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "alpha128DiagnosticBounds": [
+          312,
+          178,
+          935,
+          1156
+        ]
+      },
+      "candidateTimingOnlyIfAdopted": {
+        "status": "trial_only_not_applied",
+        "totalMs": 720,
+        "durationsMs": [
+          50,
+          60,
+          65,
+          35,
+          35,
+          35,
+          40,
+          40,
+          50,
+          60,
+          60,
+          40,
+          35,
+          35,
+          40,
+          40
+        ],
+        "reason": "若统筹采用11-v2并确认08候选，第二半圈可以由10的70ms转为10/11各60ms，让平底中撑获得时间；本数组不是正式选择，不修改manifest。"
+      },
+      "noPostprocessing": "所有PNG为内置原生返回直接复制；未裁切/缩放/平移/逐帧最低脚对齐。",
+      "dynamicReviewed": false,
+      "clientValidated": false,
+      "selectedModified": false
+    }
+  ],
+  "priorObservationSnapshots": [
+    {
+      "reviewedAt": "2026-10-03T11:24:04.239Z",
+      "frames": [
+        {
+          "frame": 1,
+          "observedPhase": "接触候选／轻支撑",
+          "contactFoot": "前伸近侧脚，较可能解剖右脚",
+          "contactFootConfidence": "medium",
+          "sole": "前鞋鞋底接近平行地面，脚尖轻翘，脚跟和前掌接触感都较轻；后鞋向后折起。",
+          "kneeAnkle": "前膝已略屈，踝部较直；尚不是清楚的压低承重。",
+          "phaseConfidence": "medium",
+          "durationReason": "可比45ms略多停留，使16→01落脚事件可读；接触位置仍待地线核实。",
+          "source": "generation/run/E/01-v5.png",
+          "sourceVersion": "01-v5",
+          "candidateDurationMs": 50,
+          "worldGroundContactConfirmed": false,
+          "sha256": "0335d08d84cd367c85a43fb72dd69980a45befd970d9ab1de1a1758a315b4dc6",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            308,
+            170,
+            911,
+            1152
+          ]
+        },
+        {
+          "frame": 2,
+          "observedPhase": "加载／轻度缓冲支撑",
+          "contactFoot": "沿01延续的前伸脚，较可能解剖右脚",
+          "contactFootConfidence": "medium-high",
+          "sole": "前鞋呈较完整平底，较01向身体下方收回；后鞋仍抬起。",
+          "kneeAnkle": "前膝比01更收向髋下，膝屈可见；踝弯和后腿穿过动作幅度不大，不能夸为强压缩。",
+          "phaseConfidence": "high for support, medium for loading strength",
+          "durationReason": "平底与膝部收回都有实际图像依据，适合适度延长至60ms观察承重。",
+          "source": "generation/run/E/02-v1.png",
+          "sourceVersion": "02-v1",
+          "candidateDurationMs": 60,
+          "worldGroundContactConfirmed": false,
+          "sha256": "953d6eb9cc82e9ce0f2a7609e67eaa6ee39b0d1650a7f0ea1c2781b3abe4df77",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            329,
+            186,
+            927,
+            1148
+          ]
+        },
+        {
+          "frame": 3,
+          "observedPhase": "中撑／另一膝前摆",
+          "contactFoot": "身体下方近侧支撑脚，较可能解剖右脚",
+          "contactFootConfidence": "medium-high",
+          "sole": "靠画面左下的鞋整底较平，踝在髋下；另一鞋在前上方抬起。",
+          "kneeAnkle": "支撑大腿和小腿有屈曲关系，前摆膝与支撑腿分离；是第一半圈最清楚的中撑轮廓。",
+          "phaseConfidence": "high",
+          "durationReason": "第一半圈优先延长的稳定支撑帧；65ms用于观察髋通过支撑脚，不代表姿态已动态通过。",
+          "source": "generation/run/E/03-v1.png",
+          "sourceVersion": "03-v1",
+          "candidateDurationMs": 65,
+          "worldGroundContactConfirmed": false,
+          "sha256": "c9a743e8e8b68eaee439e039820c661a02dd67cbd3fd90dc84857b253a389499",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            384,
+            171,
+            930,
+            1158
+          ]
+        },
+        {
+          "frame": 4,
+          "observedPhase": "后脚前掌支撑／蹬离候选",
+          "contactFoot": "后置脚，沿03轨迹较可能解剖右脚",
+          "contactFootConfidence": "medium",
+          "sole": "后鞋斜竖、脚跟抬起且脚尖向下；前鞋翘起并伸出。",
+          "kneeAnkle": "后腿向后伸但膝仍弯，能读出推离意图；真实鞋尖是否触地未由透明图证明。",
+          "phaseConfidence": "medium",
+          "durationReason": "过渡帧保持较短，避免长停留在疑似悬空蹬地姿势。",
+          "source": "generation/run/E/04-v2.png",
+          "sourceVersion": "04-v2",
+          "candidateDurationMs": 35,
+          "worldGroundContactConfirmed": false,
+          "sha256": "b3b083b2f528ac84d861ae2dd3268d943a4b1241512b81d9c33357eb86ddae2d",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            315,
+            158,
+            950,
+            1146
+          ]
+        },
+        {
+          "frame": 5,
+          "observedPhase": "双脚已离地的早期腾空",
+          "contactFoot": "无",
+          "contactFootConfidence": "high",
+          "sole": "前鞋上翘，后鞋脚尖下垂但整体已高于先前接触鞋带；两鞋都无平底承重轮廓。",
+          "kneeAnkle": "前膝向前、后腿回收，未见有效支撑链。",
+          "phaseConfidence": "high",
+          "durationReason": "35ms，保留腾空但不在此加重停留。",
+          "source": "generation/run/E/05-v2.png",
+          "sourceVersion": "05-v2",
+          "candidateDurationMs": 35,
+          "worldGroundContactConfirmed": false,
+          "sha256": "ae934fe11d80336be35286e450308fe44ae16047a956a357d6d17f9d036aefbf",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            331,
+            155,
+            959,
+            1122
+          ]
+        },
+        {
+          "frame": 6,
+          "observedPhase": "腾空伸展段",
+          "contactFoot": "无",
+          "contactFootConfidence": "high",
+          "sole": "前鞋伸向前上，后鞋折回，两脚离开承重带明显。",
+          "kneeAnkle": "双腿展开，后跟回收；上身也较前帧升高。",
+          "phaseConfidence": "high",
+          "durationReason": "35ms，腾空视觉已经突出，无需额外停留。",
+          "source": "generation/run/E/06-v1.png",
+          "sourceVersion": "06-v1",
+          "candidateDurationMs": 35,
+          "worldGroundContactConfirmed": false,
+          "sha256": "95a5041e8eba8968b0e28ec439f01da8507e7854ca5398379eb6a9d59b630f42",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            350,
+            105,
+            1007,
+            1095
+          ]
+        },
+        {
+          "frame": 7,
+          "observedPhase": "腾空下降／前脚下伸",
+          "contactFoot": "无明确接触，前伸脚较可能解剖左脚",
+          "contactFootConfidence": "medium",
+          "sole": "前鞋由翘起转为接近平底并向下伸；后鞋持续后折。",
+          "kneeAnkle": "前小腿伸出，尚无髋压到该脚的承重链。",
+          "phaseConfidence": "medium-high",
+          "durationReason": "40ms，连接伸展和落脚；不计入已确认承重时长。",
+          "source": "generation/run/E/07-v2.png",
+          "sourceVersion": "07-v2",
+          "candidateDurationMs": 40,
+          "worldGroundContactConfirmed": false,
+          "sha256": "b9e2da3ea80b45b9d9ec3a5b944d4692c75953b5d61b08dcf73e78c55d61c287",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            339,
+            105,
+            991,
+            1137
+          ]
+        },
+        {
+          "frame": 8,
+          "observedPhase": "接地边界不清：可能已提前触地",
+          "contactFoot": "前伸脚，较可能解剖左脚",
+          "contactFootConfidence": "low-medium",
+          "sole": "前鞋很低，鞋底近水平；alpha实心下边界1175，比下一帧09的1152低23原生像素。后鞋仍折起。",
+          "kneeAnkle": "前腿伸得较长，缺少膝踝吸收；当前图像不能可靠标为仍在腾空。",
+          "phaseConfidence": "low-medium",
+          "durationReason": "先维持45ms供诊断，不加承重权重；须先解决08→09鞋底先低后高。",
+          "source": "generation/run/E/08-v1.png",
+          "sourceVersion": "08-v1",
+          "candidateDurationMs": 45,
+          "worldGroundContactConfirmed": false,
+          "sha256": "19d79e26a792eb779ed632858b804066553d21ad01b9d31845720c48d4ffc507",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            340,
+            136,
+            982,
+            1175
+          ]
+        },
+        {
+          "frame": 9,
+          "observedPhase": "前脚接触候选／轻加载",
+          "contactFoot": "前伸脚，较可能解剖左脚；需继续沿髋部遮挡确认",
+          "contactFootConfidence": "medium",
+          "sole": "前鞋跟较低、脚尖略翘，像刚触地；相比08整只前鞋反向升高。",
+          "kneeAnkle": "前膝开始弯，后腿仍折回；头部比08明显下沉，但鞋底同时上提，接地轨迹不自洽。",
+          "phaseConfidence": "medium",
+          "durationReason": "候选50ms强调另一侧落脚，但08→09未修前不能把加时当作接地解决。",
+          "source": "generation/run/E/09-v4.png",
+          "sourceVersion": "09-v4",
+          "candidateDurationMs": 50,
+          "worldGroundContactConfirmed": false,
+          "sha256": "7e51047c8ca0ad07087dbfeb0834cad4389a3a80d6d74f5eb5c52c388625bb01",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            315,
+            182,
+            918,
+            1152
+          ]
+        },
+        {
+          "frame": 10,
+          "observedPhase": "平底加载／支撑",
+          "contactFoot": "沿09延续的支撑脚，较可能解剖左脚",
+          "contactFootConfidence": "medium",
+          "sole": "前鞋比09转平并收向身体下方，鞋跟与前掌方向合理；后鞋仍抬起。",
+          "kneeAnkle": "支撑膝屈曲可辨，踝较直；上身没有对应明显再压低。它仍是第二半圈最清楚的平底支撑。",
+          "phaseConfidence": "high for support, medium for loading strength",
+          "durationReason": "暂取70ms，让唯一清楚的第二半圈平底承重有读图时间；不能因此略过11的缺失中撑。",
+          "source": "generation/run/E/10-v1.png",
+          "sourceVersion": "10-v1",
+          "candidateDurationMs": 70,
+          "worldGroundContactConfirmed": false,
+          "sha256": "8ca326eabe532d21811444e76bf4177c661707c74a4e4157df0d2dfd87468d43",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            361,
+            170,
+            911,
+            1154
+          ]
+        },
+        {
+          "frame": 11,
+          "observedPhase": "较晚的前掌支撑／提前蹬离，非稳定平底中撑",
+          "contactFoot": "后置低鞋，较可能解剖左脚；身份可信度受髋部遮挡影响",
+          "contactFootConfidence": "medium-low",
+          "sole": "低鞋明显斜向下，鞋跟在后上、鞋尖在前下，触点接近前掌，整底没有贴平；另一鞋抬在前方。",
+          "kneeAnkle": "低鞋已处髋后，重心偏向其前方，支撑链像晚支撑；右空臂也已明显后摆。不能把它与03当作完全对称的中撑。",
+          "phaseConfidence": "medium-high",
+          "durationReason": "仅40ms过渡，禁止复制07的中撑加权；应先原生重画一个清楚的左脚中撑。",
+          "source": "generation/run/E/11-v1.png",
+          "sourceVersion": "11-v1",
+          "candidateDurationMs": 40,
+          "worldGroundContactConfirmed": false,
+          "sha256": "81778ac672cd810d8a87fca17147e3b2c5001ee025981f6926a7678ab644a1d4",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            396,
+            168,
+            908,
+            1165
+          ]
+        },
+        {
+          "frame": 12,
+          "observedPhase": "后脚前掌蹬离候选",
+          "contactFoot": "后置低鞋，沿11较可能解剖左脚",
+          "contactFootConfidence": "medium",
+          "sole": "后鞋更竖、脚尖朝下且脚跟抬高；前鞋随前膝抬起。",
+          "kneeAnkle": "后腿后伸、前膝前送的推离意图较清楚；脚尖实际支撑仍须用可信地面核对。",
+          "phaseConfidence": "medium-high",
+          "durationReason": "40ms短过渡，不在鞋尖接触未核实前延长。",
+          "source": "generation/run/E/12-v1.png",
+          "sourceVersion": "12-v1",
+          "candidateDurationMs": 40,
+          "worldGroundContactConfirmed": false,
+          "sha256": "3c07b0132dd6eb438341468a453ffaa56333b28bf9de45b03f7a8b80f99c1860",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            314,
+            173,
+            895,
+            1158
+          ]
+        },
+        {
+          "frame": 13,
+          "observedPhase": "双脚腾空／后腿回收",
+          "contactFoot": "无",
+          "contactFootConfidence": "high",
+          "sole": "两鞋高于接触带，前鞋翘起后鞋后折；无平底支撑。",
+          "kneeAnkle": "双腿已经展开，后跟快速收回。",
+          "phaseConfidence": "high",
+          "durationReason": "35ms，不加长腾空。",
+          "source": "generation/run/E/13-v1.png",
+          "sourceVersion": "13-v1",
+          "candidateDurationMs": 35,
+          "worldGroundContactConfirmed": false,
+          "sha256": "2d2e8d04c0ed350786fd8818f2ac4a75234599b6835e5148280a9a1de64c9963",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            331,
+            181,
+            950,
+            1108
+          ]
+        },
+        {
+          "frame": 14,
+          "observedPhase": "腾空伸展段",
+          "contactFoot": "无",
+          "contactFootConfidence": "high",
+          "sole": "前鞋上翘并前伸，后鞋明显抬高；两脚高度都不支持接地解读。",
+          "kneeAnkle": "两腿展开，前膝尚屈，后膝回收。",
+          "phaseConfidence": "high",
+          "durationReason": "35ms；图像腾空清楚，停留无需比承重长。",
+          "source": "generation/run/E/14-v4.png",
+          "sourceVersion": "14-v4",
+          "candidateDurationMs": 35,
+          "worldGroundContactConfirmed": false,
+          "sha256": "9579191f98a7abd5b88bf4e93e853986d09df7866f6e2ff5ea4632466266e831",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            324,
+            154,
+            1014,
+            1074
+          ]
+        },
+        {
+          "frame": 15,
+          "observedPhase": "腾空下降／前脚前伸",
+          "contactFoot": "无",
+          "contactFootConfidence": "high",
+          "sole": "前鞋仍翘起并向前下伸，后鞋折回，两脚尚无承重。",
+          "kneeAnkle": "前腿延伸增加，后腿继续回收。",
+          "phaseConfidence": "high",
+          "durationReason": "40ms衔接下降，保留落脚准备。",
+          "source": "generation/run/E/15-v1.png",
+          "sourceVersion": "15-v1",
+          "candidateDurationMs": 40,
+          "worldGroundContactConfirmed": false,
+          "sha256": "92ca68534687ae1dea1abeabcf0249fedccb368740c18434c9dacf990d6571ff",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            302,
+            175,
+            1032,
+            1117
+          ]
+        },
+        {
+          "frame": 16,
+          "observedPhase": "前脚预接触候选",
+          "contactFoot": "无明确接触；前伸近侧脚较可能解剖右脚",
+          "contactFootConfidence": "medium",
+          "sole": "前鞋较15收回，仍脚跟低脚尖翘；01随后转近平底，后鞋仍折起。",
+          "kneeAnkle": "前膝略弯但无压重；右臂后摆与前腿相反。",
+          "phaseConfidence": "medium-high",
+          "durationReason": "45ms保持16→01自然衔接；未见需要在末帧停顿加倍的依据。",
+          "source": "generation/run/E/16-v2.png",
+          "sourceVersion": "16-v2",
+          "candidateDurationMs": 45,
+          "worldGroundContactConfirmed": false,
+          "sha256": "a281ecafc35e4dbc8b963aedbcd7f7b89c76bd205faef6a97e32baeb7fa21319",
+          "nativeSize": [
+            1254,
+            1254
+          ],
+          "alpha128DiagnosticBounds": [
+            317,
+            171,
+            935,
+            1137
+          ]
+        }
+      ],
+      "timingCandidate": {
+        "status": "offline_trial_only_not_adopted",
+        "totalMs": 720,
+        "uniformComparisonMsPerFrame": 45,
+        "durationsMs": [
+          50,
+          60,
+          65,
+          35,
+          35,
+          35,
+          40,
+          45,
+          50,
+          70,
+          40,
+          40,
+          35,
+          35,
+          40,
+          45
+        ],
+        "primaryDwellFrames": [
+          2,
+          3,
+          10
+        ],
+        "secondaryContactFrames": [
+          1,
+          9
+        ],
+        "doNotApplyMidstanceBoostTo": [
+          11
+        ],
+        "rationale": "从00实图挑平底承重帧，未复制07的1.65权重。第二半圈缺稳定中撑，所以暂给10较多时间、11只作短过渡；时长不能替代重画。",
+        "testingOrder": "先比480/640/720/800均匀节奏；再与此720非均匀候选比较。优先修E08/E11后再审加权是否有必要。",
+        "afterRepair": "E11补成真实左脚中撑后，应重新分配09–12时长，不能继续机械沿用当前70ms给10。"
+      },
+      "summary": "E02/E03/E10有可读的平底支撑；E11更像提前到前掌晚支撑，不能直接作为与03对称的中撑加权。E08鞋比E09低23原生像素，落脚先低后高需修。解剖左右脚按实际髋/裤腿遮挡跟踪仍有中等不确定，未宣称全圈交替已通过。"
+    }
+  ],
+  "adoptedRepairSnapshot": {
+    "at": "2026-10-03T12:25:20.350567+00:00",
+    "sources": [
+      "generation/run/E/08-v2.png",
+      "generation/run/E/11-v2.png"
+    ],
+    "selected": true,
+    "exported": true,
+    "dynamicApproved": false
+  }
+}

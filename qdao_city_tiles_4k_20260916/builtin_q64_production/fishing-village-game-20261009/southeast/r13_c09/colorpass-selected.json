@@ -1,0 +1,6031 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T23:26:38.612632+00:00",
+  "status": "color_candidate_pending_visual_and_geometry_QA",
+  "originalSelection": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native-selected-before-color.json",
+    "sha256": "563ce559f6e6c7bf3952f404076bb6abe3d036d00d93b6d417190e10ea79b0d9"
+  },
+  "tile": "r13_c09",
+  "patches": {
+    "p11": "processed\\colorpass\\p11-colorpass.png",
+    "p12": "processed\\colorpass\\p12-colorpass.png",
+    "p13": "processed\\colorpass\\p13-colorpass.png",
+    "p14": "processed\\colorpass\\p14-colorpass.png",
+    "p21": "processed\\colorpass\\p21-colorpass.png",
+    "p22": "processed\\colorpass\\p22-colorpass.png",
+    "p23": "processed\\colorpass\\p23-colorpass.png",
+    "p24": "processed\\colorpass\\p24-colorpass.png",
+    "p31": "processed\\colorpass\\p31-colorpass.png",
+    "p32": "processed\\colorpass\\p32-colorpass.png",
+    "p33": "processed\\colorpass\\p33-colorpass.png",
+    "p34": "processed\\colorpass\\p34-colorpass.png",
+    "p41": "processed\\colorpass\\p41-colorpass.png",
+    "p42": "processed\\colorpass\\p42-colorpass.png",
+    "p43": "processed\\colorpass\\p43-colorpass.png",
+    "p44": "processed\\colorpass\\p44-colorpass.png"
+  },
+  "parameters": {
+    "corePixels": 1024,
+    "haloPixels": 115,
+    "nativePixels": 1254,
+    "correctionLimit": 40.0,
+    "inwardSupportPixels": 384,
+    "fieldGridStep": 16,
+    "overlapStatisticHalfWidth": 20,
+    "profileGaussianSigma": 24,
+    "cornerStatisticHalfWidth": 24,
+    "cornerEndpointTransition": 96,
+    "incompatibleCornerPolicy": "disable corner correction when any RGB spread exceeds 80; do not conceal material/geometry discrepancy",
+    "harmonicSolver": "red-black successive over-relaxation",
+    "sorRelaxation": 1.8,
+    "solverTolerance": 2e-05,
+    "solverMaxIterations": 3000,
+    "coordinateShift": [
+      0,
+      0
+    ],
+    "pixelResampling": false,
+    "imageBlur": false,
+    "imagePixelBlending": false,
+    "colorSpace": "encoded 8-bit RGB additive",
+    "fieldInterpolation": "bilinear, correction field only",
+    "boundaryExtension": "clamp field to core boundary through 115px halo",
+    "smoothSurfaceSamplingPolicy": "Geometry-reviewed inputs; every seam uses smooth same-coordinate pixel samples only; RGB gradient<6 and difference<65, at least8/40 samples per profile row",
+    "geometrySafety": "No color correction used to conceal geometry; all 24 seams and 9 crossings inspected; current sources need color equalization only"
+  },
+  "algorithm": "robust paired overlap half-difference; 24px profile smoothing; shared four-source corner target when feasible, otherwise zero corner correction pending source review; bounded harmonic correction-field extension within 384px; no source pixel interpolation",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+    "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "operation": "16 unscaled 1024 cores, no blending",
+    "pixelCoverage": 16777216
+  },
+  "qaPreview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-QA-preview-1024.png",
+  "comparisonPreview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\before-left-after-right-QA-1024.png",
+  "cornerEvidence": [
+    {
+      "row": 1,
+      "column": 1,
+      "sources": [
+        "p11",
+        "p12",
+        "p21",
+        "p22"
+      ],
+      "sourceMedianRgb": [
+        [
+          103.0,
+          121.0,
+          147.0
+        ],
+        [
+          112.0,
+          123.0,
+          145.0
+        ],
+        [
+          115.0,
+          125.0,
+          145.0
+        ],
+        [
+          122.0,
+          131.0,
+          145.0
+        ]
+      ],
+      "commonTargetRgb": [
+        113.0,
+        125.0,
+        145.5
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          10.0,
+          4.0,
+          -1.5
+        ],
+        [
+          1.0,
+          2.0,
+          0.5
+        ],
+        [
+          -2.0,
+          0.0,
+          0.5
+        ],
+        [
+          -9.0,
+          -6.0,
+          0.5
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          10.0,
+          4.0,
+          -1.5
+        ],
+        [
+          1.0,
+          2.0,
+          0.5
+        ],
+        [
+          -2.0,
+          0.0,
+          0.5
+        ],
+        [
+          -9.0,
+          -6.0,
+          0.5
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "sources": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "sourceMedianRgb": [
+        [
+          105.0,
+          119.0,
+          151.0
+        ],
+        [
+          104.0,
+          117.0,
+          150.0
+        ],
+        [
+          123.0,
+          133.0,
+          159.0
+        ],
+        [
+          105.0,
+          124.0,
+          158.0
+        ]
+      ],
+      "commonTargetRgb": [
+        109.25,
+        123.25,
+        154.5
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          4.25,
+          4.25,
+          3.5
+        ],
+        [
+          5.25,
+          6.25,
+          4.5
+        ],
+        [
+          -13.75,
+          -9.75,
+          -4.5
+        ],
+        [
+          4.25,
+          -0.75,
+          -3.5
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          4.25,
+          4.25,
+          3.5
+        ],
+        [
+          5.25,
+          6.25,
+          4.5
+        ],
+        [
+          -13.75,
+          -9.75,
+          -4.5
+        ],
+        [
+          4.25,
+          -0.75,
+          -3.5
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "sources": [
+        "p13",
+        "p14",
+        "p23",
+        "p24"
+      ],
+      "sourceMedianRgb": [
+        [
+          75.0,
+          78.0,
+          98.5
+        ],
+        [
+          80.0,
+          80.0,
+          93.0
+        ],
+        [
+          84.0,
+          83.0,
+          93.5
+        ],
+        [
+          89.0,
+          87.0,
+          95.0
+        ]
+      ],
+      "commonTargetRgb": [
+        82.0,
+        82.0,
+        95.0
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          7.0,
+          4.0,
+          -3.5
+        ],
+        [
+          2.0,
+          2.0,
+          2.0
+        ],
+        [
+          -2.0,
+          -1.0,
+          1.5
+        ],
+        [
+          -7.0,
+          -5.0,
+          0.0
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          7.0,
+          4.0,
+          -3.5
+        ],
+        [
+          2.0,
+          2.0,
+          2.0
+        ],
+        [
+          -2.0,
+          -1.0,
+          1.5
+        ],
+        [
+          -7.0,
+          -5.0,
+          0.0
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "sources": [
+        "p21",
+        "p22",
+        "p31",
+        "p32"
+      ],
+      "sourceMedianRgb": [
+        [
+          0.0,
+          184.0,
+          248.0
+        ],
+        [
+          0.0,
+          179.0,
+          247.0
+        ],
+        [
+          1.0,
+          171.0,
+          242.0
+        ],
+        [
+          1.0,
+          168.0,
+          245.0
+        ]
+      ],
+      "commonTargetRgb": [
+        0.5,
+        175.5,
+        245.5
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          0.5,
+          -8.5,
+          -2.5
+        ],
+        [
+          0.5,
+          -3.5,
+          -1.5
+        ],
+        [
+          -0.5,
+          4.5,
+          3.5
+        ],
+        [
+          -0.5,
+          7.5,
+          0.5
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          0.5,
+          -8.5,
+          -2.5
+        ],
+        [
+          0.5,
+          -3.5,
+          -1.5
+        ],
+        [
+          -0.5,
+          4.5,
+          3.5
+        ],
+        [
+          -0.5,
+          7.5,
+          0.5
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "sources": [
+        "p22",
+        "p23",
+        "p32",
+        "p33"
+      ],
+      "sourceMedianRgb": [
+        [
+          3.0,
+          206.0,
+          252.0
+        ],
+        [
+          3.0,
+          198.0,
+          252.0
+        ],
+        [
+          11.0,
+          189.0,
+          249.0
+        ],
+        [
+          2.0,
+          181.0,
+          250.0
+        ]
+      ],
+      "commonTargetRgb": [
+        4.75,
+        193.5,
+        250.75
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          1.75,
+          -12.5,
+          -1.25
+        ],
+        [
+          1.75,
+          -4.5,
+          -1.25
+        ],
+        [
+          -6.25,
+          4.5,
+          1.75
+        ],
+        [
+          2.75,
+          12.5,
+          0.75
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          1.75,
+          -12.5,
+          -1.25
+        ],
+        [
+          1.75,
+          -4.5,
+          -1.25
+        ],
+        [
+          -6.25,
+          4.5,
+          1.75
+        ],
+        [
+          2.75,
+          12.5,
+          0.75
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "sources": [
+        "p23",
+        "p24",
+        "p33",
+        "p34"
+      ],
+      "sourceMedianRgb": [
+        [
+          21.5,
+          200.0,
+          252.0
+        ],
+        [
+          8.5,
+          190.0,
+          251.0
+        ],
+        [
+          11.0,
+          183.0,
+          252.0
+        ],
+        [
+          9.0,
+          186.0,
+          252.0
+        ]
+      ],
+      "commonTargetRgb": [
+        12.5,
+        189.75,
+        251.75
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          -9.0,
+          -10.25,
+          -0.25
+        ],
+        [
+          4.0,
+          -0.25,
+          0.75
+        ],
+        [
+          1.5,
+          6.75,
+          -0.25
+        ],
+        [
+          3.5,
+          3.75,
+          -0.25
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          -9.0,
+          -10.25,
+          -0.25
+        ],
+        [
+          4.0,
+          -0.25,
+          0.75
+        ],
+        [
+          1.5,
+          6.75,
+          -0.25
+        ],
+        [
+          3.5,
+          3.75,
+          -0.25
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "sources": [
+        "p31",
+        "p32",
+        "p41",
+        "p42"
+      ],
+      "sourceMedianRgb": [
+        [
+          1.0,
+          184.0,
+          253.0
+        ],
+        [
+          4.0,
+          182.0,
+          252.0
+        ],
+        [
+          2.0,
+          188.0,
+          253.0
+        ],
+        [
+          4.0,
+          181.0,
+          252.0
+        ]
+      ],
+      "commonTargetRgb": [
+        2.75,
+        183.75,
+        252.5
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          1.75,
+          -0.25,
+          -0.5
+        ],
+        [
+          -1.25,
+          1.75,
+          0.5
+        ],
+        [
+          0.75,
+          -4.25,
+          -0.5
+        ],
+        [
+          -1.25,
+          2.75,
+          0.5
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          1.75,
+          -0.25,
+          -0.5
+        ],
+        [
+          -1.25,
+          1.75,
+          0.5
+        ],
+        [
+          0.75,
+          -4.25,
+          -0.5
+        ],
+        [
+          -1.25,
+          2.75,
+          0.5
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "sources": [
+        "p32",
+        "p33",
+        "p42",
+        "p43"
+      ],
+      "sourceMedianRgb": [
+        [
+          0.0,
+          176.0,
+          250.0
+        ],
+        [
+          0.0,
+          165.0,
+          247.0
+        ],
+        [
+          1.0,
+          175.0,
+          251.0
+        ],
+        [
+          1.0,
+          166.0,
+          249.0
+        ]
+      ],
+      "commonTargetRgb": [
+        0.5,
+        170.5,
+        249.25
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          0.5,
+          -5.5,
+          -0.75
+        ],
+        [
+          0.5,
+          5.5,
+          2.25
+        ],
+        [
+          -0.5,
+          -4.5,
+          -1.75
+        ],
+        [
+          -0.5,
+          4.5,
+          0.25
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          0.5,
+          -5.5,
+          -0.75
+        ],
+        [
+          0.5,
+          5.5,
+          2.25
+        ],
+        [
+          -0.5,
+          -4.5,
+          -1.75
+        ],
+        [
+          -0.5,
+          4.5,
+          0.25
+        ]
+      ],
+      "status": "shared_target_used"
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "sources": [
+        "p33",
+        "p34",
+        "p43",
+        "p44"
+      ],
+      "sourceMedianRgb": [
+        [
+          0.0,
+          182.0,
+          245.0
+        ],
+        [
+          1.0,
+          167.0,
+          234.0
+        ],
+        [
+          1.0,
+          173.0,
+          245.0
+        ],
+        [
+          1.0,
+          163.0,
+          233.0
+        ]
+      ],
+      "commonTargetRgb": [
+        0.75,
+        171.25,
+        239.25
+      ],
+      "commonTargetFeasibleWithinLimit": [
+        true,
+        true,
+        true
+      ],
+      "proposedAdditiveCorrectionsRgb": [
+        [
+          0.75,
+          -10.75,
+          -5.75
+        ],
+        [
+          -0.25,
+          4.25,
+          5.25
+        ],
+        [
+          -0.25,
+          -1.75,
+          -5.75
+        ],
+        [
+          -0.25,
+          8.25,
+          6.25
+        ]
+      ],
+      "additiveCorrectionsRgb": [
+        [
+          0.75,
+          -10.75,
+          -5.75
+        ],
+        [
+          -0.25,
+          4.25,
+          5.25
+        ],
+        [
+          -0.25,
+          -1.75,
+          -5.75
+        ],
+        [
+          -0.25,
+          8.25,
+          6.25
+        ]
+      ],
+      "status": "shared_target_used"
+    }
+  ],
+  "samplingEvidence": [
+    {
+      "seam": "p11-p12-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-p12-sampling-mask.npz",
+      "maskSha256": "3d272e8680b9b19bf4142a1ea7fb8533765076a2eac12573f20f99b2b5054dd8",
+      "acceptedPixelCount": 25522,
+      "acceptedRowCount": 1201,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p11-p21-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-p21-sampling-mask.npz",
+      "maskSha256": "43bbaab496c51e5aa3252b52fa45cb8db92d9e7da8e6c1bc1ffc31c629c1aec7",
+      "acceptedPixelCount": 21753,
+      "acceptedRowCount": 1037,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p12-p13-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-p13-sampling-mask.npz",
+      "maskSha256": "f9c739d9826bab62f15d46a5e1d5740d8c02607f976ba7a90299295009d4b0dc",
+      "acceptedPixelCount": 24858,
+      "acceptedRowCount": 1235,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p12-p22-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-p22-sampling-mask.npz",
+      "maskSha256": "01a8dd895b1a9ab1392e28585e26dc671ee31d19bc0fe4b63d42ab749eaf0f07",
+      "acceptedPixelCount": 26524,
+      "acceptedRowCount": 1201,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p13-p14-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-p14-sampling-mask.npz",
+      "maskSha256": "a36e36ecb20abc198f16fad85c72c929f4fc38f34460b880da3ccfab9167869e",
+      "acceptedPixelCount": 22061,
+      "acceptedRowCount": 1213,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p13-p23-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-p23-sampling-mask.npz",
+      "maskSha256": "188b1c69456ecf23858a85ff68065dd09ee847e3a0a40d26e5c1ea65bf8859b5",
+      "acceptedPixelCount": 21761,
+      "acceptedRowCount": 1177,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p14-p24-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p14-p24-sampling-mask.npz",
+      "maskSha256": "c21fe71b931fecdb6d44d1a7ab7132288bc8b01db65a4732884af97ce3225fdb",
+      "acceptedPixelCount": 14764,
+      "acceptedRowCount": 781,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p21-p22-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-p22-sampling-mask.npz",
+      "maskSha256": "f384d5d085d81dc29de1e2e17184161b8bb3dc80e7f78d59fa0da000a8092582",
+      "acceptedPixelCount": 29395,
+      "acceptedRowCount": 1147,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p21-p31-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-p31-sampling-mask.npz",
+      "maskSha256": "65c1fc8879f2eed1d2add50eab8a5113c42d01b460907cd59a9d57d3d5b70861",
+      "acceptedPixelCount": 37384,
+      "acceptedRowCount": 1228,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p22-p23-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-p23-sampling-mask.npz",
+      "maskSha256": "5dc37b2bdfbfac63e10000e7543442d9984fd40fc5a0e028a26315a13ba24588",
+      "acceptedPixelCount": 25547,
+      "acceptedRowCount": 1150,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p22-p32-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-p32-sampling-mask.npz",
+      "maskSha256": "915a18f40b19048a1581b0080e66069aae6c10335027f89a77cfa07077ccd072",
+      "acceptedPixelCount": 34755,
+      "acceptedRowCount": 1200,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p23-p24-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-p24-sampling-mask.npz",
+      "maskSha256": "4670c21c21546b5a039881833f064e4f090e9ea6a2877b67e802f241a6b4e5f9",
+      "acceptedPixelCount": 25336,
+      "acceptedRowCount": 1112,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p23-p33-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-p33-sampling-mask.npz",
+      "maskSha256": "0fe48425876432268ef49b4df2612915453c09402c60b3db331f31a0c1bcdbb1",
+      "acceptedPixelCount": 35588,
+      "acceptedRowCount": 1235,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p24-p34-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p24-p34-sampling-mask.npz",
+      "maskSha256": "1659b0ea2d14940383c8d6623f291031f6f5a63c7d653af5d541dc042b78a56f",
+      "acceptedPixelCount": 20347,
+      "acceptedRowCount": 1076,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p31-p32-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-p32-sampling-mask.npz",
+      "maskSha256": "400a5677c514b46e6ad178789a56a62fc3c275acc79dfabe42ac55e2893c2ca3",
+      "acceptedPixelCount": 33999,
+      "acceptedRowCount": 1219,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p31-p41-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-p41-sampling-mask.npz",
+      "maskSha256": "cd80b4da559e774e19f62876ddc85ecda3edf7bb6665a1dd78607431d2157518",
+      "acceptedPixelCount": 36490,
+      "acceptedRowCount": 1248,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p32-p33-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-p33-sampling-mask.npz",
+      "maskSha256": "24a824af11c41f26a45a8e4fee1e8838d619007e914a081bffd24fab8838cde7",
+      "acceptedPixelCount": 34235,
+      "acceptedRowCount": 1190,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p32-p42-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-p42-sampling-mask.npz",
+      "maskSha256": "b189b03cb45992273d87d70e7d3e8e878ba9d36ae67f26c434c2f7df1933a4eb",
+      "acceptedPixelCount": 36579,
+      "acceptedRowCount": 1244,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p33-p34-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-p34-sampling-mask.npz",
+      "maskSha256": "b9ade9ff734f55fd95b11de857f6d69319d1c2d3786cd8419318c3e39d8ea18c",
+      "acceptedPixelCount": 28979,
+      "acceptedRowCount": 1158,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p33-p43-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-p43-sampling-mask.npz",
+      "maskSha256": "3c1ecbcee59fae7263022a8f79a88611404b9eaa708c346eda17ba95b77f0850",
+      "acceptedPixelCount": 35082,
+      "acceptedRowCount": 1242,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p34-p44-vertical",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p34-p44-sampling-mask.npz",
+      "maskSha256": "0b159197e10d17bb9ab4e8c2f42dbab99ced166807762ac75554c1ee1de98398",
+      "acceptedPixelCount": 33405,
+      "acceptedRowCount": 1243,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p41-p42-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p41-p42-sampling-mask.npz",
+      "maskSha256": "93829811784b6fd3826dedf460db8d155fd43bf6b87b75243b448a5446446583",
+      "acceptedPixelCount": 38834,
+      "acceptedRowCount": 1228,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p42-p43-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p42-p43-sampling-mask.npz",
+      "maskSha256": "e18564e8e37c0f246338f05edefd70f91a2761324b1689193c90b9080327bd25",
+      "acceptedPixelCount": 35044,
+      "acceptedRowCount": 1211,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    },
+    {
+      "seam": "p43-p44-horizontal",
+      "maskFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p43-p44-sampling-mask.npz",
+      "maskSha256": "2c16b11498835da7f188186285841c3de4677527cd2fb8a200ba5ec9bf472a54",
+      "acceptedPixelCount": 32533,
+      "acceptedRowCount": 1157,
+      "excluded": "RGB gradient>=6 or same-coordinate RGB difference>=65; profiles with effective valid weight<0.15 disabled",
+      "sampleWidth": 40
+    }
+  ],
+  "sources": [
+    {
+      "patch": "p11",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p11-v1.png",
+      "sha256": "7a2a64b819b2e7e6348747ad7fc7046c8cca140b6a48053967f5c2f08c1b7e73",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p11-v1.png.generation.json"
+    },
+    {
+      "patch": "p12",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p12-v1.png",
+      "sha256": "c39c62ff14279ba35a42275c312e42f905dc1917e0c750d1514cf8883ea4c956",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p12-v1.png.generation.json"
+    },
+    {
+      "patch": "p13",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p13-v1.png",
+      "sha256": "b0015158fc9f18fefce8c67b487e592e75455e74988fe844ed741c83ccc9ebca",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p13-v1.png.generation.json"
+    },
+    {
+      "patch": "p14",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p14-v1.png",
+      "sha256": "6c5fa9165ee64089da79e164cfcaa4d57dfac4a325e4a96c10394ebfb9b3bc08",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p14-v1.png.generation.json"
+    },
+    {
+      "patch": "p21",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p21-v1.png",
+      "sha256": "b0db579670a1e1bae08d2b007822bb8bca50c9c09620782f269f0b0d6aa484f8",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p21-v1.png.generation.json"
+    },
+    {
+      "patch": "p22",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p22-v1.png",
+      "sha256": "6ef7eb8a81fc3eb05f6003e7938eb1afe1c3e5763071ab96c167dc061331ff07",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p22-v1.png.generation.json"
+    },
+    {
+      "patch": "p23",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p23-v1.png",
+      "sha256": "4fc7e957c7db874841045f46a5948ef2b6e01a073db90ae41cee7db8a47b5945",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p23-v1.png.generation.json"
+    },
+    {
+      "patch": "p24",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p24-v1.png",
+      "sha256": "781ed905b97efdb7d7547c14d8c5f8d1a25fa7462158d4c32355e37098d1aa6b",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p24-v1.png.generation.json"
+    },
+    {
+      "patch": "p31",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p31-v1.png",
+      "sha256": "969344d30748a446452237e1c01cdeccac9fb910c8496bc6ba6ef52add8a3a8e",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p31-v1.png.generation.json"
+    },
+    {
+      "patch": "p32",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p32-v1.png",
+      "sha256": "e005bfe21d0d454e593f7ade9dd98a7b1f3e0b27d280c6a0b2c9906b4e8196c3",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p32-v1.png.generation.json"
+    },
+    {
+      "patch": "p33",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p33-v1.png",
+      "sha256": "a6a8f93cfbaf7835145751f510734040c714632f07487074c28989bd6feb76ea",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p33-v1.png.generation.json"
+    },
+    {
+      "patch": "p34",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p34-v1.png",
+      "sha256": "72655e5981b286e48653711816dc77309725475150e671471552bc96fd3027f4",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p34-v1.png.generation.json"
+    },
+    {
+      "patch": "p41",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p41-v1.png",
+      "sha256": "578788a1366a8a3f42c84547babfe1a1c0619a393f24e442bf2ee2db77ad2b17",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p41-v1.png.generation.json"
+    },
+    {
+      "patch": "p42",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p42-v1.png",
+      "sha256": "4400bac3e2cdaf7a1cb0686b059c1b2214051eeb5a82521a6a85142966cda6ff",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p42-v1.png.generation.json"
+    },
+    {
+      "patch": "p43",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p43-v1.png",
+      "sha256": "d124240af04877754a7c8bd9ebb7af42fedd5e2599f3b9fcc9f5245c4976b2be",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p43-v1.png.generation.json"
+    },
+    {
+      "patch": "p44",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p44-v1.png",
+      "sha256": "19ae2d01b4a8537c6fe07003b658329813fa608855f297adb2ae98d96aff9f96",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\native\\p44-v1.png.generation.json"
+    }
+  ],
+  "outputRecords": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-colorpass.png",
+      "sha256": "2e2c7fce25a055d6b0ce29a089857c6dd8c26fea590f4ce97bd772a38393cd65",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-colorpass.png",
+      "sha256": "f12fd3601fd22a6b8aeadcc999b08eb873ba07e41e5040266a32cd141af0e800",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-colorpass.png",
+      "sha256": "51a010340d8564e6e605c6200e785ae728b1b0a0628a1a43a1bcbf584fbc423d",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p14-colorpass.png",
+      "sha256": "37ae4cca0e3f587266f9a4f75d7426e249718252343727590ba97a339ffa4405",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p14-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-colorpass.png",
+      "sha256": "f7f0e1b7fcf8635dfe34cdd1bbeaff119991d71e758f5036ad8229d5b4bee16c",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-colorpass.png",
+      "sha256": "1829f5105bc101b61cdba95d6c8c16d10b15abb663af139e1d6a8e69c0b3d4a4",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-colorpass.png",
+      "sha256": "13b4bad92ba2442e9aba0fa3d8d5cd05359c1cf367ac5adab2177f0a889ad6d9",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p24-colorpass.png",
+      "sha256": "24360f2eb71ddff271981094ff8604754fc702e9be34b9785f772beb1c94e171",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p24-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-colorpass.png",
+      "sha256": "3b717670c76129036dc5ff1a09c760586d992fd5ee8ebac4256ab6c20ccd0f95",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-colorpass.png",
+      "sha256": "33e75b55a6ee464f6f283c8356b47397e9e6cb2a945e0c317fe7af4b5c075505",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-colorpass.png",
+      "sha256": "0e73a4f3bddb63ec596009d2d427181814c4ce706dabdbdd050ba21b529225a3",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p34-colorpass.png",
+      "sha256": "5583d63f8eecf0d15a2cc8f8b3fda41403bf49eee7800b07970904e0f05f32d3",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p34-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p41-colorpass.png",
+      "sha256": "2436819d40e38e7929e3a8d12002989b8bca80117e847c41ee0234049d410c20",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p41-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p42-colorpass.png",
+      "sha256": "a23ced2083db7d6666a16eba8021f6464d78e8ad1858a5c185c15b260e7010b7",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p42-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p43-colorpass.png",
+      "sha256": "841d7bb65f425a3fd915aa9e0773914056b36575721e49122b2eac7dcd4f1e9e",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p43-colorpass.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p44-colorpass.png",
+      "sha256": "e460a0d0704f1abcd71cbfdfcbcf049cfb346745f1aafc0611881806dcbb6e9a",
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p44-colorpass.png.derivation.json"
+    }
+  ],
+  "seams": [
+    {
+      "id": "p11-p12-horizontal",
+      "a": "p11",
+      "b": "p12",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 4.859375,
+        "segmentMedianBMinusARgb": [
+          [
+            -9.75,
+            11.0,
+            6.0
+          ],
+          [
+            -4.25,
+            18.0,
+            8.0
+          ],
+          [
+            -6.5,
+            -6.5,
+            -5.75
+          ],
+          [
+            -7.0,
+            -6.0,
+            -3.5
+          ],
+          [
+            -6.5,
+            -6.0,
+            -3.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.5,
+            1.5,
+            0.0
+          ],
+          [
+            -3.0,
+            -5.0,
+            -4.5
+          ],
+          [
+            -6.5,
+            -9.0,
+            -9.5
+          ],
+          [
+            0.5,
+            -2.5,
+            -4.0
+          ],
+          [
+            -2.0,
+            -4.0,
+            -4.0
+          ],
+          [
+            2.25,
+            -0.75,
+            -2.0
+          ],
+          [
+            5.0,
+            1.0,
+            -1.0
+          ],
+          [
+            -4.0,
+            -7.0,
+            -8.5
+          ],
+          [
+            -1.0,
+            -6.5,
+            -9.0
+          ],
+          [
+            11.5,
+            5.5,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.948893547058105,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.1666666269302368,
+        "segmentMedianBMinusARgb": [
+          [
+            -4.0,
+            0.0,
+            0.0
+          ],
+          [
+            2.0,
+            3.0,
+            2.0
+          ],
+          [
+            -0.5,
+            -3.0,
+            -2.0
+          ],
+          [
+            -1.0,
+            -0.5,
+            0.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            -0.5
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            1.5,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -2.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            0.5,
+            1.5,
+            0.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.25,
+            -0.5,
+            -0.5
+          ],
+          [
+            2.0,
+            1.0,
+            0.25
+          ],
+          [
+            -1.5,
+            -2.0,
+            -1.5
+          ],
+          [
+            -2.0,
+            -2.0,
+            -2.75
+          ],
+          [
+            2.5,
+            3.0,
+            1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.097330570220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-p12-horizontal-after-100pct.png",
+      "tileBox": [
+        896,
+        0,
+        1152,
+        1024
+      ],
+      "sha256": "284abbfe2a3e88d718d9316c91c742d345219c768f364e65809b2e83fa6722b2",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p11-p21-vertical",
+      "a": "p11",
+      "b": "p21",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 5.130208492279053,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -10.75,
+            0.0
+          ],
+          [
+            0.0,
+            -12.0,
+            -11.0
+          ],
+          [
+            -3.0,
+            -10.75,
+            -5.0
+          ],
+          [
+            1.0,
+            -0.75,
+            -0.5
+          ],
+          [
+            -8.75,
+            -7.5,
+            -1.0
+          ],
+          [
+            0.0,
+            -12.5,
+            -6.0
+          ],
+          [
+            0.0,
+            -4.0,
+            -1.0
+          ],
+          [
+            0.0,
+            5.5,
+            3.0
+          ],
+          [
+            12.75,
+            -3.5,
+            -15.25
+          ],
+          [
+            25.75,
+            1.5,
+            -13.5
+          ],
+          [
+            3.0,
+            0.0,
+            -0.5
+          ],
+          [
+            1.0,
+            -6.5,
+            -13.25
+          ],
+          [
+            -0.5,
+            -2.75,
+            -0.5
+          ],
+          [
+            1.5,
+            -3.0,
+            -4.5
+          ],
+          [
+            5.5,
+            -0.5,
+            -4.5
+          ],
+          [
+            14.5,
+            5.0,
+            -3.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 14.962239265441895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.7447916269302368,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            2.0,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          [
+            -1.0,
+            -0.5,
+            1.0
+          ],
+          [
+            2.0,
+            2.5,
+            2.0
+          ],
+          [
+            -2.5,
+            2.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            -0.25,
+            0.0
+          ],
+          [
+            0.0,
+            4.75,
+            3.5
+          ],
+          [
+            2.5,
+            0.0,
+            -3.5
+          ],
+          [
+            12.0,
+            2.0,
+            -2.5
+          ],
+          [
+            -1.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            -4.5,
+            -9.5
+          ],
+          [
+            -0.5,
+            -0.25,
+            2.0
+          ],
+          [
+            -0.5,
+            0.0,
+            -1.5
+          ],
+          [
+            -1.5,
+            -1.25,
+            -1.75
+          ],
+          [
+            3.5,
+            1.0,
+            -0.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 13.553059577941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p11-p21-vertical-after-100pct.png",
+      "tileBox": [
+        0,
+        896,
+        1024,
+        1152
+      ],
+      "sha256": "d558985c524d9bc7f46a3abd8d5aeac04c3627d9c3bf88db0fa46a1d684b8612",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p12-p13-horizontal",
+      "a": "p12",
+      "b": "p13",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 3.6927082538604736,
+        "segmentMedianBMinusARgb": [
+          [
+            -12.25,
+            -6.5,
+            0.0
+          ],
+          [
+            -20.0,
+            -10.0,
+            2.0
+          ],
+          [
+            -25.0,
+            -13.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.0,
+            -3.25
+          ],
+          [
+            0.0,
+            0.5,
+            -1.5
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            -2.0
+          ],
+          [
+            -1.75,
+            -2.0,
+            -2.0
+          ],
+          [
+            -2.25,
+            -1.0,
+            3.0
+          ],
+          [
+            -3.0,
+            -1.0,
+            4.0
+          ],
+          [
+            -10.0,
+            -7.0,
+            -2.0
+          ],
+          [
+            -2.5,
+            0.0,
+            5.0
+          ],
+          [
+            -3.5,
+            -2.0,
+            1.25
+          ],
+          [
+            -3.75,
+            -4.0,
+            -3.5
+          ],
+          [
+            -2.0,
+            -3.0,
+            -2.5
+          ],
+          [
+            -1.5,
+            -2.5,
+            -1.75
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.691731452941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.78125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.25,
+            -0.25,
+            -2.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            -0.75
+          ],
+          [
+            -4.75,
+            -4.0,
+            -1.0
+          ],
+          [
+            2.0,
+            0.0,
+            -0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          [
+            -0.25,
+            -1.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.25,
+            1.0
+          ],
+          [
+            -1.0,
+            -1.0,
+            -0.5
+          ],
+          [
+            2.0,
+            2.0,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            -1.0,
+            -1.25,
+            -0.75
+          ],
+          [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          [
+            -0.5,
+            -0.75,
+            -0.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.675455570220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-p13-horizontal-after-100pct.png",
+      "tileBox": [
+        1920,
+        0,
+        2176,
+        1024
+      ],
+      "sha256": "ea97412fe3aaed4551f4583a93f2f3ea88b1ea15f7c04aa4afbfc4a7f6af9700",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p12-p22-vertical",
+      "a": "p12",
+      "b": "p22",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 9.1875,
+        "segmentMedianBMinusARgb": [
+          [
+            8.25,
+            6.5,
+            4.0
+          ],
+          [
+            6.25,
+            4.0,
+            2.0
+          ],
+          [
+            6.0,
+            2.5,
+            0.0
+          ],
+          [
+            7.75,
+            3.25,
+            -1.0
+          ],
+          [
+            16.0,
+            11.0,
+            6.0
+          ],
+          [
+            12.0,
+            7.25,
+            3.0
+          ],
+          [
+            13.0,
+            8.5,
+            4.5
+          ],
+          [
+            16.0,
+            11.0,
+            4.25
+          ],
+          [
+            21.0,
+            16.75,
+            10.0
+          ],
+          [
+            26.75,
+            20.0,
+            9.0
+          ],
+          [
+            19.5,
+            14.0,
+            7.0
+          ],
+          [
+            20.0,
+            14.75,
+            8.0
+          ],
+          [
+            17.5,
+            10.5,
+            2.25
+          ],
+          [
+            3.0,
+            2.0,
+            1.0
+          ],
+          [
+            7.5,
+            6.0,
+            4.5
+          ],
+          [
+            17.0,
+            12.0,
+            7.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 10.970051765441895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.7760416865348816,
+        "segmentMedianBMinusARgb": [
+          [
+            -0.75,
+            -1.0,
+            2.25
+          ],
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -0.5,
+            -2.0
+          ],
+          [
+            2.0,
+            1.5,
+            1.0
+          ],
+          [
+            -0.25,
+            -1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.5,
+            0.5
+          ],
+          [
+            -0.25,
+            -0.5,
+            -1.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.25
+          ],
+          [
+            1.25,
+            0.75,
+            -1.25
+          ],
+          [
+            -1.5,
+            -1.25,
+            -1.5
+          ],
+          [
+            0.0,
+            -0.25,
+            0.5
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -3.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            -0.5,
+            -0.5,
+            0.25
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 6.013020992279053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p12-p22-vertical-after-100pct.png",
+      "tileBox": [
+        1024,
+        896,
+        2048,
+        1152
+      ],
+      "sha256": "6f08f53754e4526afee0dc1fe905a68533bf9929c187aa87e98f15b38c45b70c",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p13-p14-horizontal",
+      "a": "p13",
+      "b": "p14",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 4.65625,
+        "segmentMedianBMinusARgb": [
+          [
+            6.5,
+            -1.0,
+            0.5
+          ],
+          [
+            8.75,
+            -5.25,
+            -7.0
+          ],
+          [
+            -1.0,
+            -1.25,
+            3.25
+          ],
+          [
+            -1.0,
+            1.0,
+            7.0
+          ],
+          [
+            -2.0,
+            -5.0,
+            -7.0
+          ],
+          [
+            -1.75,
+            -4.0,
+            -6.0
+          ],
+          [
+            0.0,
+            -1.5,
+            -2.5
+          ],
+          [
+            -1.0,
+            -3.0,
+            -5.0
+          ],
+          [
+            7.0,
+            1.5,
+            -2.0
+          ],
+          [
+            16.0,
+            9.0,
+            1.75
+          ],
+          [
+            14.0,
+            5.5,
+            -3.0
+          ],
+          [
+            15.0,
+            6.0,
+            -3.0
+          ],
+          [
+            12.5,
+            5.5,
+            -2.0
+          ],
+          [
+            8.0,
+            2.0,
+            -5.0
+          ],
+          [
+            4.0,
+            -1.5,
+            -7.0
+          ],
+          [
+            2.0,
+            -2.0,
+            -6.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 9.637370109558105,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.4114583730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            4.0,
+            1.0,
+            2.25
+          ],
+          [
+            2.5,
+            -0.25,
+            -2.75
+          ],
+          [
+            -1.0,
+            0.5,
+            1.25
+          ],
+          [
+            -1.0,
+            1.0,
+            3.0
+          ],
+          [
+            -1.0,
+            -1.5,
+            -3.0
+          ],
+          [
+            0.0,
+            -0.5,
+            -1.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            6.75,
+            3.25,
+            2.0
+          ],
+          [
+            6.0,
+            4.5,
+            3.0
+          ],
+          [
+            0.0,
+            -0.5,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          [
+            -1.0,
+            -1.0,
+            -1.25
+          ],
+          [
+            -2.75,
+            -3.5,
+            -1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.5556640625,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-p14-horizontal-after-100pct.png",
+      "tileBox": [
+        2944,
+        0,
+        3200,
+        1024
+      ],
+      "sha256": "8d24ddff7d04ff2df60ac7709aba896667de568993afb1b327f4a7aa073ec99e",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p13-p23-vertical",
+      "a": "p13",
+      "b": "p23",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 13.416666984558105,
+        "segmentMedianBMinusARgb": [
+          [
+            -3.25,
+            3.0,
+            5.0
+          ],
+          [
+            -0.25,
+            5.5,
+            6.75
+          ],
+          [
+            5.0,
+            10.0,
+            9.0
+          ],
+          [
+            8.25,
+            13.0,
+            11.25
+          ],
+          [
+            10.5,
+            17.5,
+            17.75
+          ],
+          [
+            17.5,
+            23.0,
+            22.25
+          ],
+          [
+            13.75,
+            20.75,
+            17.5
+          ],
+          [
+            15.25,
+            24.5,
+            23.5
+          ],
+          [
+            1.0,
+            19.5,
+            21.0
+          ],
+          [
+            -0.75,
+            8.25,
+            14.5
+          ],
+          [
+            6.5,
+            16.0,
+            20.0
+          ],
+          [
+            2.0,
+            13.0,
+            20.0
+          ],
+          [
+            12.0,
+            20.5,
+            22.0
+          ],
+          [
+            6.75,
+            17.5,
+            23.0
+          ],
+          [
+            23.5,
+            24.5,
+            21.0
+          ],
+          [
+            9.5,
+            10.75,
+            6.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 17.3095703125,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.6510416269302368,
+        "segmentMedianBMinusARgb": [
+          [
+            -3.5,
+            -2.5,
+            -1.75
+          ],
+          [
+            -0.25,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0,
+            -0.5
+          ],
+          [
+            0.5,
+            1.0,
+            -0.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5,
+            0.5,
+            0.0
+          ],
+          [
+            -1.5,
+            -1.25,
+            -2.5
+          ],
+          [
+            4.0,
+            2.0,
+            1.0
+          ],
+          [
+            -2.25,
+            0.5,
+            1.5
+          ],
+          [
+            -3.0,
+            -4.0,
+            -2.75
+          ],
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            -1.0,
+            -1.25,
+            -0.5
+          ],
+          [
+            2.5,
+            3.0,
+            0.0
+          ],
+          [
+            -1.5,
+            0.0,
+            1.5
+          ],
+          [
+            6.0,
+            5.25,
+            2.0
+          ],
+          [
+            0.5,
+            3.25,
+            7.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 10.513997077941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p13-p23-vertical-after-100pct.png",
+      "tileBox": [
+        2048,
+        896,
+        3072,
+        1152
+      ],
+      "sha256": "a244d3f1a65dd297288e08cca3c47326f59235788986932b51ead949bd08dfe4",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p14-p24-vertical",
+      "a": "p14",
+      "b": "p24",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 21.80729103088379,
+        "segmentMedianBMinusARgb": [
+          [
+            24.75,
+            17.25,
+            4.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -5.25,
+            8.0,
+            4.75
+          ],
+          [
+            -7.0,
+            4.0,
+            5.5
+          ],
+          [
+            9.5,
+            4.0,
+            1.0
+          ],
+          [
+            13.5,
+            4.5,
+            0.0
+          ],
+          [
+            24.25,
+            15.75,
+            2.25
+          ],
+          [
+            32.0,
+            25.0,
+            16.0
+          ],
+          [
+            24.0,
+            26.0,
+            26.5
+          ],
+          [
+            24.25,
+            26.0,
+            24.0
+          ],
+          [
+            41.0,
+            19.25,
+            -22.75
+          ],
+          [
+            38.75,
+            31.5,
+            12.0
+          ],
+          [
+            20.0,
+            14.0,
+            6.75
+          ],
+          [
+            85.25,
+            67.0,
+            39.0
+          ],
+          [
+            51.0,
+            46.5,
+            28.5
+          ],
+          [
+            71.75,
+            53.5,
+            18.25
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 25.72525978088379,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 12.411458015441895,
+        "segmentMedianBMinusARgb": [
+          [
+            15.75,
+            9.0,
+            2.25
+          ],
+          [
+            2.0,
+            -2.0,
+            0.0
+          ],
+          [
+            1.0,
+            2.0,
+            1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            9.0,
+            0.0,
+            -2.0
+          ],
+          [
+            5.75,
+            -1.25,
+            0.0
+          ],
+          [
+            3.0,
+            1.25,
+            -1.0
+          ],
+          [
+            5.0,
+            4.0,
+            2.0
+          ],
+          [
+            3.0,
+            3.5,
+            4.25
+          ],
+          [
+            2.0,
+            2.0,
+            1.75
+          ],
+          [
+            29.75,
+            5.0,
+            -28.25
+          ],
+          [
+            29.0,
+            19.25,
+            7.0
+          ],
+          [
+            1.5,
+            1.0,
+            1.0
+          ],
+          [
+            84.25,
+            66.5,
+            38.75
+          ],
+          [
+            48.75,
+            45.0,
+            27.5
+          ],
+          [
+            42.5,
+            28.25,
+            5.75
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 19.74446678161621,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p14-p24-vertical-after-100pct.png",
+      "tileBox": [
+        3072,
+        896,
+        4096,
+        1152
+      ],
+      "sha256": "d39b4e3f753e45d89da262e80d8d1ba9cfc3dcb7677ac7e3412a5cfa8a21eced",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p21-p22-horizontal",
+      "a": "p21",
+      "b": "p22",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 3.6302082538604736,
+        "segmentMedianBMinusARgb": [
+          [
+            8.75,
+            7.5,
+            4.0
+          ],
+          [
+            8.5,
+            7.25,
+            8.5
+          ],
+          [
+            9.5,
+            0.5,
+            -9.75
+          ],
+          [
+            0.0,
+            -4.0,
+            -2.25
+          ],
+          [
+            0.0,
+            -7.5,
+            -4.0
+          ],
+          [
+            0.0,
+            -9.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -9.0,
+            -3.0
+          ],
+          [
+            -1.0,
+            -9.0,
+            -1.5
+          ],
+          [
+            -2.25,
+            -2.75,
+            -0.5
+          ],
+          [
+            -1.0,
+            -1.25,
+            0.0
+          ],
+          [
+            -5.0,
+            -7.75,
+            -1.0
+          ],
+          [
+            0.0,
+            -8.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -6.0,
+            0.0
+          ],
+          [
+            0.0,
+            -7.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -5.0,
+            0.0
+          ],
+          [
+            0.0,
+            -4.25,
+            -1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 9.573893547058105,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.6770833134651184,
+        "segmentMedianBMinusARgb": [
+          [
+            1.5,
+            1.25,
+            3.0
+          ],
+          [
+            1.0,
+            1.0,
+            3.5
+          ],
+          [
+            0.5,
+            -1.0,
+            -3.25
+          ],
+          [
+            0.0,
+            0.5,
+            2.0
+          ],
+          [
+            0.0,
+            -0.75,
+            0.25
+          ],
+          [
+            0.0,
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            1.0
+          ],
+          [
+            -0.5,
+            -1.5,
+            1.0
+          ],
+          [
+            0.5,
+            -0.75,
+            0.0
+          ],
+          [
+            1.5,
+            1.0,
+            0.0
+          ],
+          [
+            -0.25,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.75,
+            0.0
+          ],
+          [
+            0.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.289387702941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-p22-horizontal-after-100pct.png",
+      "tileBox": [
+        896,
+        1024,
+        1152,
+        2048
+      ],
+      "sha256": "497c197b2ffa2efc1dec360a6205faf4f19e5bcc1bdb754832c9c1094efdc27f",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p21-p31-vertical",
+      "a": "p21",
+      "b": "p31",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 4.291666507720947,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -5.75,
+            -3.25
+          ],
+          [
+            0.5,
+            -7.5,
+            -7.0
+          ],
+          [
+            0.0,
+            -7.5,
+            -7.0
+          ],
+          [
+            0.0,
+            -6.75,
+            -6.0
+          ],
+          [
+            0.0,
+            -9.5,
+            -7.5
+          ],
+          [
+            0.0,
+            -10.0,
+            -7.0
+          ],
+          [
+            0.5,
+            -10.0,
+            -5.5
+          ],
+          [
+            1.0,
+            -11.0,
+            -7.0
+          ],
+          [
+            0.0,
+            -10.0,
+            -6.75
+          ],
+          [
+            0.0,
+            -8.0,
+            -5.0
+          ],
+          [
+            0.75,
+            -7.0,
+            -6.0
+          ],
+          [
+            1.0,
+            -6.25,
+            -4.0
+          ],
+          [
+            2.0,
+            -4.25,
+            -2.0
+          ],
+          [
+            0.25,
+            -6.0,
+            -3.0
+          ],
+          [
+            0.5,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -6.5,
+            -3.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.173502445220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.7708333134651184,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.5
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.75,
+            0.75,
+            0.0
+          ],
+          [
+            0.5,
+            1.0,
+            2.0
+          ],
+          [
+            0.0,
+            3.0,
+            2.0
+          ],
+          [
+            0.0,
+            2.0,
+            2.5
+          ],
+          [
+            0.5,
+            4.0,
+            3.0
+          ],
+          [
+            0.0,
+            4.0,
+            1.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 5.223958492279053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p21-p31-vertical-after-100pct.png",
+      "tileBox": [
+        0,
+        1920,
+        1024,
+        2176
+      ],
+      "sha256": "e7d931ead2480e8339a274b6c77d108b28fe35d1b9232290633aeaae63441b5e",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p22-p23-horizontal",
+      "a": "p22",
+      "b": "p23",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 5.130208492279053,
+        "segmentMedianBMinusARgb": [
+          [
+            -22.0,
+            -11.0,
+            -3.25
+          ],
+          [
+            -21.25,
+            -8.75,
+            4.0
+          ],
+          [
+            -11.0,
+            -3.25,
+            3.5
+          ],
+          [
+            21.0,
+            14.75,
+            4.0
+          ],
+          [
+            19.75,
+            10.0,
+            -0.5
+          ],
+          [
+            15.0,
+            11.0,
+            2.0
+          ],
+          [
+            4.5,
+            3.0,
+            -2.5
+          ],
+          [
+            2.0,
+            -2.5,
+            -11.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            -2.5,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.0,
+            1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            -1.5,
+            -3.0,
+            0.0
+          ],
+          [
+            0.0,
+            -7.25,
+            -2.0
+          ],
+          [
+            0.0,
+            -5.0,
+            -2.0
+          ],
+          [
+            0.0,
+            -5.0,
+            -1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 11.227213859558105,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.9583333134651184,
+        "segmentMedianBMinusARgb": [
+          [
+            -3.25,
+            -2.0,
+            -2.0
+          ],
+          [
+            -3.0,
+            -1.5,
+            1.0
+          ],
+          [
+            -2.5,
+            -0.75,
+            0.25
+          ],
+          [
+            4.0,
+            0.5,
+            0.5
+          ],
+          [
+            1.75,
+            -1.5,
+            -2.5
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -3.5
+          ],
+          [
+            -0.75,
+            0.0,
+            2.0
+          ],
+          [
+            -1.5,
+            -0.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.75,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            -0.25,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            -0.75
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.8388671875,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-p23-horizontal-after-100pct.png",
+      "tileBox": [
+        1920,
+        1024,
+        2176,
+        2048
+      ],
+      "sha256": "b35f397f6210571a51475b847f08df38622c3bb79693f048507fb06bb868af3b",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p22-p32-vertical",
+      "a": "p22",
+      "b": "p32",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 5.703125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -16.75,
+            -6.0
+          ],
+          [
+            0.0,
+            -19.25,
+            -6.0
+          ],
+          [
+            0.0,
+            -5.75,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.25
+          ],
+          [
+            0.0,
+            -9.0,
+            0.0
+          ],
+          [
+            0.0,
+            -15.5,
+            -4.0
+          ],
+          [
+            0.0,
+            -10.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -9.5,
+            -3.5
+          ],
+          [
+            0.0,
+            -17.0,
+            -10.0
+          ],
+          [
+            0.25,
+            -13.0,
+            -9.25
+          ],
+          [
+            5.25,
+            -0.5,
+            -1.0
+          ],
+          [
+            0.0,
+            -21.0,
+            -10.75
+          ],
+          [
+            -1.0,
+            -21.5,
+            -8.0
+          ],
+          [
+            -1.75,
+            -2.5,
+            0.0
+          ],
+          [
+            -13.25,
+            -11.5,
+            -5.0
+          ],
+          [
+            0.0,
+            -10.75,
+            -2.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 9.410481452941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.4895833730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -4.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.25
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.25,
+            1.5
+          ],
+          [
+            0.0,
+            2.75,
+            2.0
+          ],
+          [
+            0.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -0.75,
+            0.0
+          ],
+          [
+            3.25,
+            8.5,
+            3.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.25
+          ],
+          [
+            1.0,
+            -3.0,
+            0.0
+          ],
+          [
+            2.75,
+            3.0,
+            2.0
+          ],
+          [
+            -4.5,
+            -3.5,
+            -1.5
+          ],
+          [
+            -2.0,
+            4.75,
+            1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 6.720377445220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p22-p32-vertical-after-100pct.png",
+      "tileBox": [
+        1024,
+        1920,
+        2048,
+        2176
+      ],
+      "sha256": "9b212bb1110d30737742faa31e401fbf35aec33c03d3dbf3f531157a3f7d89bb",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p23-p24-horizontal",
+      "a": "p23",
+      "b": "p24",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 5.494791507720947,
+        "segmentMedianBMinusARgb": [
+          [
+            12.0,
+            5.75,
+            0.25
+          ],
+          [
+            22.75,
+            13.25,
+            4.0
+          ],
+          [
+            39.5,
+            18.0,
+            0.0
+          ],
+          [
+            3.0,
+            3.25,
+            1.0
+          ],
+          [
+            0.0,
+            -0.5,
+            -4.75
+          ],
+          [
+            1.0,
+            0.75,
+            0.0
+          ],
+          [
+            -3.25,
+            -1.0,
+            -0.75
+          ],
+          [
+            -7.5,
+            -11.25,
+            -0.5
+          ],
+          [
+            -5.25,
+            -12.5,
+            -5.0
+          ],
+          [
+            0.0,
+            3.75,
+            -1.0
+          ],
+          [
+            0.0,
+            5.75,
+            0.0
+          ],
+          [
+            0.0,
+            10.75,
+            -8.5
+          ],
+          [
+            0.0,
+            18.0,
+            3.0
+          ],
+          [
+            0.0,
+            11.25,
+            0.0
+          ],
+          [
+            0.0,
+            18.25,
+            6.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.25
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 14.0048828125,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 2.4375,
+        "segmentMedianBMinusARgb": [
+          [
+            5.0,
+            2.5,
+            -0.5
+          ],
+          [
+            7.0,
+            5.75,
+            4.75
+          ],
+          [
+            19.0,
+            6.25,
+            0.0
+          ],
+          [
+            -0.25,
+            -3.75,
+            0.75
+          ],
+          [
+            0.5,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.5,
+            3.0
+          ],
+          [
+            -1.25,
+            1.75,
+            1.5
+          ],
+          [
+            -2.5,
+            -2.5,
+            1.5
+          ],
+          [
+            -1.0,
+            -3.5,
+            -1.0
+          ],
+          [
+            1.0,
+            3.0,
+            1.0
+          ],
+          [
+            0.0,
+            -0.5,
+            2.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.5
+          ],
+          [
+            0.0,
+            1.0,
+            2.0
+          ],
+          [
+            0.0,
+            -2.5,
+            -2.0
+          ],
+          [
+            0.0,
+            3.0,
+            2.5
+          ],
+          [
+            6.5,
+            6.5,
+            1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 11.453125,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-p24-horizontal-after-100pct.png",
+      "tileBox": [
+        2944,
+        1024,
+        3200,
+        2048
+      ],
+      "sha256": "4fcba17882622f8cc304b5c4b6752e202801ec42be432c1d1b04f0257d0c95d7",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p23-p33-vertical",
+      "a": "p23",
+      "b": "p33",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 6.3125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -14.0,
+            -3.5
+          ],
+          [
+            0.0,
+            -15.0,
+            -5.0
+          ],
+          [
+            0.0,
+            -16.0,
+            -6.0
+          ],
+          [
+            0.0,
+            -16.5,
+            -3.25
+          ],
+          [
+            0.0,
+            -19.0,
+            -4.0
+          ],
+          [
+            0.0,
+            -18.0,
+            0.0
+          ],
+          [
+            -8.0,
+            -18.0,
+            0.75
+          ],
+          [
+            -0.5,
+            -16.0,
+            0.5
+          ],
+          [
+            0.0,
+            -17.0,
+            0.0
+          ],
+          [
+            0.0,
+            -16.0,
+            -5.0
+          ],
+          [
+            0.0,
+            -15.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -15.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -13.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -13.75,
+            -4.0
+          ],
+          [
+            0.0,
+            -12.25,
+            -4.0
+          ],
+          [
+            0.0,
+            -15.0,
+            -2.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.8388671875,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.4791666567325592,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5,
+            1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            -1.0,
+            0.75,
+            0.75
+          ],
+          [
+            0.5,
+            2.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.25,
+            1.0
+          ],
+          [
+            1.0,
+            0.5,
+            -1.25
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 4.62109375,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p23-p33-vertical-after-100pct.png",
+      "tileBox": [
+        2048,
+        1920,
+        3072,
+        2176
+      ],
+      "sha256": "f141a9ab49eab5fc6efd835032461a213f7f064d31e95cd4536e9b6a73f12d44",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p24-p34-vertical",
+      "a": "p24",
+      "b": "p34",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 17.32291603088379,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            -4.5,
+            -2.0,
+            -1.0
+          ],
+          [
+            -1.0,
+            -1.75,
+            0.0
+          ],
+          [
+            6.75,
+            2.5,
+            0.0
+          ],
+          [
+            5.0,
+            1.5,
+            -6.75
+          ],
+          [
+            13.25,
+            7.75,
+            -1.5
+          ],
+          [
+            18.0,
+            12.5,
+            6.5
+          ],
+          [
+            31.0,
+            24.0,
+            17.0
+          ],
+          [
+            46.75,
+            36.5,
+            24.0
+          ],
+          [
+            53.5,
+            38.5,
+            24.5
+          ],
+          [
+            68.0,
+            53.0,
+            34.5
+          ],
+          [
+            31.25,
+            24.75,
+            16.5
+          ],
+          [
+            30.25,
+            24.0,
+            16.0
+          ],
+          [
+            27.0,
+            21.0,
+            14.0
+          ],
+          [
+            17.75,
+            14.75,
+            12.0
+          ],
+          [
+            17.5,
+            17.25,
+            3.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 20.62076759338379,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 2.1458332538604736,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            2.0,
+            -1.0
+          ],
+          [
+            -0.75,
+            0.0,
+            -1.0
+          ],
+          [
+            -1.25,
+            -0.5,
+            0.0
+          ],
+          [
+            -0.5,
+            -0.5,
+            1.0
+          ],
+          [
+            -2.0,
+            -1.0,
+            -2.5
+          ],
+          [
+            -1.0,
+            -0.25,
+            -1.5
+          ],
+          [
+            -2.0,
+            -2.0,
+            -1.75
+          ],
+          [
+            1.5,
+            2.0,
+            1.75
+          ],
+          [
+            3.75,
+            3.75,
+            2.75
+          ],
+          [
+            3.0,
+            1.75,
+            1.5
+          ],
+          [
+            17.75,
+            14.75,
+            9.75
+          ],
+          [
+            -1.0,
+            -0.25,
+            -0.25
+          ],
+          [
+            1.25,
+            0.75,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            -0.25
+          ],
+          [
+            0.0,
+            -1.0,
+            -0.5
+          ],
+          [
+            3.75,
+            5.0,
+            -2.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.90625,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p24-p34-vertical-after-100pct.png",
+      "tileBox": [
+        3072,
+        1920,
+        4096,
+        2176
+      ],
+      "sha256": "e7b1f1d4fd254abc5860b9755cd64128b501a3f318c1829be6950237229d66d9",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p31-p32-horizontal",
+      "a": "p31",
+      "b": "p32",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 5.354166507720947,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            4.0,
+            3.0
+          ],
+          [
+            1.0,
+            -6.25,
+            1.0
+          ],
+          [
+            0.0,
+            -21.0,
+            -5.5
+          ],
+          [
+            0.25,
+            -16.5,
+            -11.0
+          ],
+          [
+            3.0,
+            -9.25,
+            -7.0
+          ],
+          [
+            1.25,
+            -4.75,
+            -3.25
+          ],
+          [
+            0.0,
+            -9.75,
+            -8.5
+          ],
+          [
+            2.0,
+            1.0,
+            -1.5
+          ],
+          [
+            0.0,
+            -10.0,
+            -11.0
+          ],
+          [
+            1.0,
+            -9.0,
+            -9.0
+          ],
+          [
+            2.0,
+            -5.0,
+            -4.0
+          ],
+          [
+            0.0,
+            -9.5,
+            -9.0
+          ],
+          [
+            0.0,
+            -11.0,
+            -9.0
+          ],
+          [
+            0.25,
+            -10.5,
+            -11.0
+          ],
+          [
+            1.0,
+            -6.0,
+            -7.25
+          ],
+          [
+            0.0,
+            -5.0,
+            -4.75
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.609375,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.1927083730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            5.0,
+            0.0
+          ],
+          [
+            1.0,
+            2.0,
+            1.0
+          ],
+          [
+            0.0,
+            -2.0,
+            1.0
+          ],
+          [
+            0.0,
+            -0.75,
+            -1.25
+          ],
+          [
+            1.0,
+            2.5,
+            1.0
+          ],
+          [
+            -0.5,
+            4.0,
+            3.0
+          ],
+          [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            -1.0,
+            4.0,
+            3.0
+          ],
+          [
+            -0.5,
+            -1.0,
+            -1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            2.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.5
+          ],
+          [
+            -0.5,
+            -1.25,
+            -1.0
+          ],
+          [
+            -1.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -2.0,
+            -1.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 5.181966304779053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-p32-horizontal-after-100pct.png",
+      "tileBox": [
+        896,
+        2048,
+        1152,
+        3072
+      ],
+      "sha256": "82578f349c2b4793ced582ca44458d9635073163ee4290e83985aa900880c9ac",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p31-p41-vertical",
+      "a": "p31",
+      "b": "p41",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 2.578125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -2.25,
+            0.0
+          ],
+          [
+            1.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.75,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            10.75,
+            6.5
+          ],
+          [
+            0.0,
+            9.0,
+            11.0
+          ],
+          [
+            1.0,
+            5.25,
+            8.75
+          ],
+          [
+            1.0,
+            4.0,
+            8.0
+          ],
+          [
+            0.25,
+            1.5,
+            5.0
+          ],
+          [
+            0.5,
+            2.5,
+            3.5
+          ],
+          [
+            1.0,
+            9.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            9.0,
+            0.0
+          ],
+          [
+            1.0,
+            4.75,
+            0.0
+          ],
+          [
+            0.0,
+            -5.0,
+            -1.0
+          ],
+          [
+            1.0,
+            -0.5,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 6.487630367279053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.734375,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            -1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            3.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            -0.75,
+            0.0
+          ],
+          [
+            0.25,
+            -1.0,
+            -0.75
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.75,
+            2.5,
+            -2.0
+          ],
+          [
+            0.0,
+            -1.75,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.75,
+            0.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.75,
+            0.0
+          ],
+          [
+            0.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -3.25,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 5.060872554779053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p31-p41-vertical-after-100pct.png",
+      "tileBox": [
+        0,
+        2944,
+        1024,
+        3200
+      ],
+      "sha256": "63fc4d2dca3e586e904a8dd37ff3e255363d8050451e672a027ea93e88d57b00",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p32-p33-horizontal",
+      "a": "p32",
+      "b": "p33",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 4.328125,
+        "segmentMedianBMinusARgb": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -4.0,
+            -3.25,
+            -1.0
+          ],
+          [
+            0.0,
+            -11.25,
+            -4.0
+          ],
+          [
+            0.0,
+            -10.25,
+            -5.0
+          ],
+          [
+            0.0,
+            -10.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -9.0,
+            -4.75
+          ],
+          [
+            0.0,
+            -8.5,
+            -3.0
+          ],
+          [
+            0.0,
+            -10.0,
+            -3.5
+          ],
+          [
+            0.0,
+            -9.25,
+            -5.0
+          ],
+          [
+            0.0,
+            -9.0,
+            -4.25
+          ],
+          [
+            0.0,
+            -8.5,
+            -5.0
+          ],
+          [
+            0.0,
+            -11.0,
+            -4.25
+          ],
+          [
+            -1.25,
+            -9.0,
+            -2.75
+          ],
+          [
+            -0.5,
+            -13.0,
+            -4.0
+          ],
+          [
+            0.0,
+            -11.0,
+            -5.0
+          ],
+          [
+            0.0,
+            -11.0,
+            -2.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.103841304779053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.4739583432674408,
+        "segmentMedianBMinusARgb": [
+          [
+            3.75,
+            0.0,
+            -0.5
+          ],
+          [
+            -2.0,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            -1.5,
+            -0.5
+          ],
+          [
+            0.0,
+            -0.25,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.5,
+            -0.75
+          ],
+          [
+            0.0,
+            -0.25,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            -0.25
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5,
+            -0.5
+          ],
+          [
+            2.25,
+            -1.0,
+            -0.5
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 4.763020992279053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-p33-horizontal-after-100pct.png",
+      "tileBox": [
+        1920,
+        2048,
+        2176,
+        3072
+      ],
+      "sha256": "49450e99a1155e04823940527d7636ac89ac6d364396c347dc2743ee25a1ce7b",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p32-p42-vertical",
+      "a": "p32",
+      "b": "p42",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 0.8385416865348816,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.5,
+            -1.0
+          ],
+          [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          [
+            1.0,
+            -2.0,
+            -1.0
+          ],
+          [
+            0.25,
+            0.0,
+            -3.0
+          ],
+          [
+            1.0,
+            0.0,
+            -3.25
+          ],
+          [
+            1.0,
+            -0.5,
+            -2.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            2.0,
+            3.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.25,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            -1.5,
+            0.0
+          ],
+          [
+            0.5,
+            -0.5,
+            1.0
+          ],
+          [
+            1.0,
+            -1.0,
+            0.5
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.5,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 2.962890625,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.4166666567325592,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.25,
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            -0.5,
+            0.25
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.75,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.75,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.0
+          ],
+          [
+            1.0,
+            1.5,
+            -1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 2.7591145038604736,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p32-p42-vertical-after-100pct.png",
+      "tileBox": [
+        1024,
+        2944,
+        2048,
+        3200
+      ],
+      "sha256": "e7c46c14a4b0a819407cbca8afbf622fb77efd2bbd061bcbac11af79016c5335",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p33-p34-horizontal",
+      "a": "p33",
+      "b": "p34",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 8.494791984558105,
+        "segmentMedianBMinusARgb": [
+          [
+            -0.5,
+            -2.25,
+            -0.5
+          ],
+          [
+            -4.75,
+            -11.5,
+            -1.0
+          ],
+          [
+            -51.75,
+            -17.25,
+            -3.25
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -10.0,
+            -4.25
+          ],
+          [
+            0.0,
+            -11.75,
+            -13.0
+          ],
+          [
+            0.0,
+            -14.0,
+            -13.0
+          ],
+          [
+            -2.5,
+            -7.75,
+            -3.0
+          ],
+          [
+            -28.75,
+            -8.5,
+            -2.75
+          ],
+          [
+            -25.5,
+            -10.0,
+            -2.5
+          ],
+          [
+            -6.0,
+            -2.25,
+            -1.0
+          ],
+          [
+            -13.75,
+            -4.5,
+            -1.0
+          ],
+          [
+            -24.0,
+            -19.5,
+            -3.0
+          ],
+          [
+            0.0,
+            -19.0,
+            -11.0
+          ],
+          [
+            -6.0,
+            -14.5,
+            -3.25
+          ],
+          [
+            1.0,
+            -16.0,
+            -10.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 14.170573234558105,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.9739583730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            1.5,
+            -2.75,
+            0.0
+          ],
+          [
+            2.0,
+            -2.5,
+            1.0
+          ],
+          [
+            -20.0,
+            -5.0,
+            -1.0
+          ],
+          [
+            4.5,
+            3.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            1.0,
+            1.5,
+            2.75
+          ],
+          [
+            -2.25,
+            1.75,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            0.25,
+            2.75,
+            1.0
+          ],
+          [
+            -8.0,
+            -3.0,
+            1.0
+          ],
+          [
+            3.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            -1.75,
+            0.25,
+            2.75
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 10.681965827941895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-p34-horizontal-after-100pct.png",
+      "tileBox": [
+        2944,
+        2048,
+        3200,
+        3072
+      ],
+      "sha256": "79ec97b0ba76bf86fe84df73029d068a52d2790f28ab6e9f3ae22156e3fe6c84",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p33-p43-vertical",
+      "a": "p33",
+      "b": "p43",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 1.8802083730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            2.25,
+            1.0
+          ],
+          [
+            1.0,
+            2.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            2.0
+          ],
+          [
+            1.0,
+            -2.25,
+            1.0
+          ],
+          [
+            1.0,
+            -4.5,
+            0.0
+          ],
+          [
+            1.0,
+            -0.25,
+            0.0
+          ],
+          [
+            0.0,
+            3.0,
+            3.0
+          ],
+          [
+            0.0,
+            3.0,
+            5.0
+          ],
+          [
+            0.0,
+            3.75,
+            4.0
+          ],
+          [
+            0.0,
+            4.0,
+            4.0
+          ],
+          [
+            0.0,
+            -3.0,
+            2.0
+          ],
+          [
+            0.75,
+            -2.5,
+            2.0
+          ],
+          [
+            0.0,
+            -6.5,
+            1.0
+          ],
+          [
+            0.0,
+            -8.0,
+            0.5
+          ],
+          [
+            0.0,
+            -9.0,
+            1.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 5.536783695220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.5208333134651184,
+        "segmentMedianBMinusARgb": [
+          [
+            1.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            1.0,
+            1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.25,
+            -1.0
+          ],
+          [
+            1.0,
+            2.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          [
+            0.0,
+            1.0,
+            -0.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            1.5,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -0.75
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 4.901041507720947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p33-p43-vertical-after-100pct.png",
+      "tileBox": [
+        2048,
+        2944,
+        3072,
+        3200
+      ],
+      "sha256": "1b9271cc0edb38cdae4fc9000704e4b8811e801bed5bcd5cb12744c2600d3f41",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p34-p44-vertical",
+      "a": "p34",
+      "b": "p44",
+      "axis": "vertical",
+      "before": {
+        "robustSegmentMeanAbsRgb": 3.0677082538604736,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -6.0,
+            -2.0
+          ],
+          [
+            0.0,
+            -3.0,
+            -1.0
+          ],
+          [
+            0.5,
+            -4.0,
+            -2.0
+          ],
+          [
+            0.0,
+            -6.0,
+            -1.5
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          [
+            0.0,
+            -6.5,
+            -3.5
+          ],
+          [
+            0.0,
+            -1.25,
+            -2.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            2.0
+          ],
+          [
+            0.0,
+            37.5,
+            17.75
+          ],
+          [
+            1.0,
+            3.0,
+            0.0
+          ],
+          [
+            1.0,
+            21.0,
+            18.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 8.407551765441895,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 1.421875,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -1.5,
+            -0.5
+          ],
+          [
+            0.0,
+            0.25,
+            1.0
+          ],
+          [
+            0.5,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.5
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.25,
+            2.0,
+            0.0
+          ],
+          [
+            0.5,
+            1.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            3.0,
+            1.5
+          ],
+          [
+            0.0,
+            -0.5,
+            0.5
+          ],
+          [
+            0.0,
+            1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -3.0,
+            -2.0
+          ],
+          [
+            0.0,
+            24.0,
+            8.5
+          ],
+          [
+            1.0,
+            -2.0,
+            -3.0
+          ],
+          [
+            1.0,
+            1.5,
+            1.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 7.602864742279053,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p34-p44-vertical-after-100pct.png",
+      "tileBox": [
+        3072,
+        2944,
+        4096,
+        3200
+      ],
+      "sha256": "8faa5c417d5f7fdbafd885daf7176f4b8778afd0cf76c9a1847155d25b6d3096",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p41-p42-horizontal",
+      "a": "p41",
+      "b": "p42",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 1.4791666269302368,
+        "segmentMedianBMinusARgb": [
+          [
+            0.5,
+            -8.5,
+            -2.75
+          ],
+          [
+            0.0,
+            -7.0,
+            -10.0
+          ],
+          [
+            0.0,
+            -4.0,
+            -3.0
+          ],
+          [
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          [
+            0.0,
+            -3.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.0,
+            1.0
+          ],
+          [
+            0.0,
+            -3.0,
+            1.0
+          ],
+          [
+            0.0,
+            -4.25,
+            1.0
+          ],
+          [
+            0.0,
+            -4.25,
+            0.5
+          ],
+          [
+            0.0,
+            -2.0,
+            0.0
+          ],
+          [
+            0.5,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.5,
+            1.0
+          ],
+          [
+            0.0,
+            -2.0,
+            2.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 3.3209636211395264,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.28125,
+        "segmentMedianBMinusARgb": [
+          [
+            -1.0,
+            -1.0,
+            0.25
+          ],
+          [
+            0.0,
+            -0.5,
+            -1.5
+          ],
+          [
+            0.0,
+            -0.25,
+            1.0
+          ],
+          [
+            0.25,
+            0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            -0.25,
+            1.0
+          ],
+          [
+            0.0,
+            -0.25,
+            0.5
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 2.6666667461395264,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p41-p42-horizontal-after-100pct.png",
+      "tileBox": [
+        896,
+        3072,
+        1152,
+        4096
+      ],
+      "sha256": "8c3528d3efd3970bad47ce3ff6dd99bb078d6d430a69b03657ddb46102ec2f4e",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p42-p43-horizontal",
+      "a": "p42",
+      "b": "p43",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 1.3125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -7.5,
+            -0.5
+          ],
+          [
+            0.0,
+            -4.75,
+            -1.0
+          ],
+          [
+            0.0,
+            -2.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            -3.5,
+            0.0
+          ],
+          [
+            0.5,
+            -2.0,
+            0.0
+          ],
+          [
+            1.0,
+            -2.0,
+            0.0
+          ],
+          [
+            1.0,
+            -1.5,
+            0.0
+          ],
+          [
+            1.0,
+            -2.5,
+            0.0
+          ],
+          [
+            1.0,
+            -8.5,
+            0.0
+          ],
+          [
+            0.0,
+            -9.0,
+            0.0
+          ],
+          [
+            1.0,
+            -6.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.5,
+            -1.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 4.124674320220947,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.2447916716337204,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.25,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.5,
+            0.0
+          ],
+          [
+            0.75,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.5,
+            1.0,
+            0.0
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 3.6259765625,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p42-p43-horizontal-after-100pct.png",
+      "tileBox": [
+        1920,
+        3072,
+        2176,
+        4096
+      ],
+      "sha256": "370d85ff2761dd8e0895d47ce1cb503d61026817c944a8180ef7ca286f1d6f69",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "id": "p43-p44-horizontal",
+      "a": "p43",
+      "b": "p44",
+      "axis": "horizontal",
+      "before": {
+        "robustSegmentMeanAbsRgb": 1.9739583730697632,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -10.5,
+            -11.0
+          ],
+          [
+            0.0,
+            -13.75,
+            -3.0
+          ],
+          [
+            0.0,
+            -9.0,
+            0.0
+          ],
+          [
+            0.0,
+            -6.0,
+            0.0
+          ],
+          [
+            0.0,
+            -3.5,
+            0.0
+          ],
+          [
+            0.0,
+            -4.0,
+            0.0
+          ],
+          [
+            0.25,
+            -4.0,
+            0.0
+          ],
+          [
+            0.0,
+            -4.0,
+            0.0
+          ],
+          [
+            0.0,
+            -4.0,
+            0.0
+          ],
+          [
+            0.5,
+            -2.5,
+            1.0
+          ],
+          [
+            0.0,
+            -4.0,
+            1.0
+          ],
+          [
+            0.0,
+            -2.0,
+            1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.25
+          ],
+          [
+            1.0,
+            2.0,
+            1.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 4.5341796875,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "after": {
+        "robustSegmentMeanAbsRgb": 0.328125,
+        "segmentMedianBMinusARgb": [
+          [
+            0.0,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.5,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.75,
+            0.0
+          ],
+          [
+            0.5,
+            0.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -0.75
+          ],
+          [
+            1.0,
+            0.0,
+            -0.5
+          ]
+        ],
+        "actualAdjacentPixelMeanAbsRgb": 3.7571613788604736,
+        "note": "Color statistics only; neither value proves geometry or texture acceptance."
+      },
+      "afterStrip": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\p43-p44-horizontal-after-100pct.png",
+      "tileBox": [
+        2944,
+        3072,
+        3200,
+        4096
+      ],
+      "sha256": "8b8e093c83a677add3cee53b15af377265ac19340fcfbb733676255dcc073c59",
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    }
+  ],
+  "crossings": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r1-c1-after-100pct.png",
+      "sha256": "1de2eb154778575ea7fec868dbdaadb02d2f7837f17990bc3f33e8999254b84d",
+      "tileBox": [
+        768,
+        768,
+        1280,
+        1280
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r1-c2-after-100pct.png",
+      "sha256": "cd42754c0f4269db0a6aab063e6e69ebf8280ff34bc1e531a57b6153cf55527b",
+      "tileBox": [
+        1792,
+        768,
+        2304,
+        1280
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r1-c3-after-100pct.png",
+      "sha256": "97dd454b27d45e0a4a521ebc968fb7ceb8dab1a635853582bbfa41c768da4d55",
+      "tileBox": [
+        2816,
+        768,
+        3328,
+        1280
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r2-c1-after-100pct.png",
+      "sha256": "3d1b535b896aa629c2b462b2d624f9e6d4ad5dd95412401100c1fa1d015e817b",
+      "tileBox": [
+        768,
+        1792,
+        1280,
+        2304
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r2-c2-after-100pct.png",
+      "sha256": "3b177df78a140e0e2028bbf41aedb4eddc407e9e609b6327e9d909e92170cc2d",
+      "tileBox": [
+        1792,
+        1792,
+        2304,
+        2304
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r2-c3-after-100pct.png",
+      "sha256": "3b6f53a7b0551f581cf278f6f8a1bb3689f4e7622b010c1358e05e9d2088c916",
+      "tileBox": [
+        2816,
+        1792,
+        3328,
+        2304
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r3-c1-after-100pct.png",
+      "sha256": "eeebf33c3cbced7854ac5ea157df51f5593c00e1782c81c511651ea3fb7c246f",
+      "tileBox": [
+        768,
+        2816,
+        1280,
+        3328
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r3-c2-after-100pct.png",
+      "sha256": "23d961fd4a7cca46f110c18a80d7283d645dd46b8e5bc4b77af707a2ab21ead5",
+      "tileBox": [
+        1792,
+        2816,
+        2304,
+        3328
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\crossing-r3-c3-after-100pct.png",
+      "sha256": "dd78e731888df8981a50623926ea28744ce04405efb9a29c9ed19986880dc3f8",
+      "tileBox": [
+        2816,
+        2816,
+        3328,
+        3328
+      ],
+      "operation": "unscaled crop from colorpass candidate",
+      "derivedFrom": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r13_c09\\processed\\colorpass\\r13_c09-colorpass-candidate.png",
+        "sha256": "2956e9e6b93c43ecc7fea1aea3a5727a69325b75df97f3e4bbb18184ce2e524f"
+      }
+    }
+  ],
+  "visualReview": "pending",
+  "formalAccepted": false,
+  "complete4kCount": 0,
+  "all49TilesComplete": false,
+  "externalSeams": "unverified",
+  "capacity5000Validated": false,
+  "clientMappingValidated": false
+}

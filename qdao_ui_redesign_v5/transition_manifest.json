@@ -1,0 +1,92 @@
+{
+  "schema": "qdao.transition.v1",
+  "purpose": "battle entry / loading artwork; not battle arena or engine implementation",
+  "cloud_source": {
+    "path": "source/06_battle_entry_clouds_fg.png",
+    "size": [
+      1927,
+      816
+    ],
+    "mode": "RGBA",
+    "sha256": "49419e905e359a3b2f2de5b39a9a0bec53040d954500ca27fb23f0e101650366",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_pixels": 1145509,
+    "opaque_pixels": 182
+  },
+  "cloud_export": {
+    "path": "06_battle_entry_clouds_fg_2560x1080.png",
+    "size": [
+      2560,
+      1080
+    ],
+    "mode": "RGBA",
+    "sha256": "9b446c077f321d95f8dd762976563e0ad9a03567e3ae43cc66f4f85a40dcfa67",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "transparent_pixels": 2072553,
+    "opaque_pixels": 871
+  },
+  "cloud_processing": "generated true RGBA preserved; proportional centered LANCZOS cover; no color-key removal needed; alpha<=1 quantization speckles cleared",
+  "dim_overlay": {
+    "path": "../qdao_battle_dim_overlay_2560x1080_v1.png",
+    "size": [
+      2560,
+      1080
+    ],
+    "mode": "RGBA",
+    "sha256": "a6fb9e8cc3b521105a23c77034c0a7d2123b70b86044b1d678bae16e2e9e90f8",
+    "alpha_range": [
+      178,
+      178
+    ],
+    "transparent_pixels": 0,
+    "opaque_pixels": 0
+  },
+  "dim_code_equivalent": {
+    "color_rgb": [
+      0,
+      0,
+      0
+    ],
+    "alpha_8bit": 178,
+    "opacity": 0.6980392156862745,
+    "blend": "straight alpha source-over"
+  },
+  "replacement_map": [
+    {
+      "old": "../qdao_battle_entry_loading_2560x1080_v2.png",
+      "new": "06_battle_entry_loading_2560x1080.png",
+      "policy": "same-size compatibility copy"
+    },
+    {
+      "old": "../qdao_battle_entry_clouds_fg_2560x1080_v2.png",
+      "new": "06_battle_entry_clouds_fg_2560x1080.png",
+      "policy": "replace old hero-bearing overlay with pure clouds"
+    },
+    {
+      "old": "../qdao_battle_dim_overlay_2560x1080_v1.png",
+      "new": "../qdao_battle_dim_overlay_2560x1080_v1.png",
+      "policy": "reuse exact uniform RGBA black mask"
+    }
+  ],
+  "suggested_composition": [
+    "entry artwork",
+    "optional animated pure cloud foreground",
+    "optional dim mask",
+    "client-owned dynamic text"
+  ],
+  "no_baked_loading_text": true,
+  "runtime_timing_or_progress_not_implemented": true,
+  "qa": {
+    "central_cloud_alpha_is_zero": true,
+    "cloud_contains_no_legacy_hero": true,
+    "entry_nine_tail_tips_visually_counted": 9,
+    "original_accepted_v5_screens_preserved": true
+  },
+  "metadata_refresh": "2026-09-11: update cloud file SHA after earlier artwork revisions; dimensions, mode, alpha histogram, alias equality and all image pixels are unchanged by this metadata-only update."
+}

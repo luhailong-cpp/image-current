@@ -1,0 +1,12 @@
+from workflow import *
+import re
+natives=list((ROOT/'native').glob('*.png'));state=read(ROOT/'production-state.json')
+coords=read(ROOT/'coordinate-plan.json')['tiles'];missing=[]
+for tile in coords:
+ tid=tile.get('id') or tile.get('tile')
+ for p in tile['patches']:
+  if not list((ROOT/'native').glob(p['id']+'_v*.png')):missing.append(p['id'])
+first=read(ROOT/'progress-r11_c11.json').get('firstActualNativeAfterNetworkRestore')
+write(ROOT/'local-continuation-20261011.json',{'updatedAt':now(),'scope':'southeast rows8-14 columns8-14,49 assigned4K tiles','latestOutputs':state['tiles'],'counts':state['counts'],'generatedNativeCount':len(natives),'recentLocalMerges':[{'tile':'r10_c11','candidate':'tiles/r10_c11.candidate-v04.png','status':'internal independently passed; exact native replay','review':'qa/r10_c11-independent-v04/root-independent-review.json'},{'tile':'r11_c12','candidate':'tiles/r11_c12.candidate-v02.png','status':'internal independently passed','review':'qa/r11_c12-left-independent-v02/review.json'},{'tile':'r10_c12','candidate':'tiles/r10_c12.candidate-v02.png','status':'four external sides passed, two southern diagonal junctions pending','review':'qa/center-r10c12-external-20261011/review.json'}],'roofPending':'E/F02/G complete-object binary source ownership final boundary review; all native files already saved. No repeat generation needed.','missingNativeCoreCoordinates':missing,'missingNativeCoreCount':len(missing),'formalAcceptanceBlockedBy':'Incomplete remaining assigned tiles and unreviewed outer connections; candidates are not entire-map completion.','network':{'priorFailure':'Fatal error: application network permission was revoked','userRestoredPermission':True,'firstActualNativeAfterRestore':first,'noPaidAPI':True,'status':'new builtin output verified after restore' if first else 'authorized_restored_waiting_actual_output_record'},'migration':{'gitCommitPushOwnerThread':'01a11b5e-158a-77d0-8c02-e8e503b7abe4','productionThreadGitMutationAllowed':False,'localGitAutomationOwned':False,'preserveAllOriginalsPreviewsAndScripts':True,'isolatedMigrationIndexUntouched':True},'nextStep':'Promote visually passed roof ownership candidate, finish r11c11 and r11c13 missing native cores, close southern four-tile junctions; continue contiguous assigned area.'})
+print({'nativeFiles':len(natives),'missingCores':len(missing),'firstRestoredOutputRecorded':bool(first)})
+

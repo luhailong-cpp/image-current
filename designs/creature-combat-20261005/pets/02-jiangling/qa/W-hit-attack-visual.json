@@ -1,0 +1,75 @@
+{
+  "pet": "02-jiangling",
+  "direction": "W",
+  "actions": {
+    "hit": {
+      "frames": 6,
+      "durationMs": 40
+    },
+    "attack": {
+      "frames": 12,
+      "durationMs": 30
+    }
+  },
+  "reviewedAt": "2026-10-05T20:45:05.884Z",
+  "reviewer": "jiangling_w subagent",
+  "stillReview": "reviewed_all_18_final_exported_PNGs_individually",
+  "continuousPlayback": "not_observed",
+  "continuousPlaybackReason": "Parent reports browser safety rejection of local-file preview with explicit prohibition of workaround; no alternate path attempted by this subagent.",
+  "clientReview": "not_tested",
+  "scope": "W hit and attack only; W cast produced and reviewed separately",
+  "checks": {
+    "identity": "Original short black bob, gold-leaf white-flower ornaments, ivory/crimson folded-petal dress, jade accessories preserved",
+    "direction": "True rear three-quarter NW; rear hair and back collar/costume dominate throughout",
+    "anatomy": "Two arms/two hands, two floating legs/two rear shoes; no tail or wings; no outward ankle inversion identified",
+    "propOwnership": "Same anatomical right hand owns fan; left hand empty. During attack06-09 right forearm naturally occluded by head/body while fan moves ahead; separate empty left hand remains visible.",
+    "bellCount": "Three fan-rim jade-gold bells remain visible in all accepted final frames",
+    "phases": "Hit anticipation, peak recoil03, rebound04 and recovery05-06; attack windup02-04, forward arc05-06, strike07, follow-through08, retract09-10 and settling11-12",
+    "canvas": "Full subject visible. Technical edge check finds only alpha below8 at some borders, no subject clipping at alpha8+.",
+    "fixedExport": "Every frame native1254square to1024square uniform full-canvas Lanczos; no translation, mirror, interpolation or individual foot alignment."
+  },
+  "repairs": [
+    {
+      "frame": "runtime/hit/W/04.png",
+      "reason": "Initial left arm opened too early in rebound",
+      "result": "Independent AI repair r2 keeps elbow bent during rebound",
+      "rejectedRecord": "records/hit-W-04-rejected-v1.json"
+    },
+    {
+      "frame": "runtime/attack/W/05.png",
+      "reason": "Initial forward swing swapped fan into left hand",
+      "result": "Independent AI repair r2 preserves fan in right arm at start of swing",
+      "rejectedRecord": "records/attack-W-05-rejected-v1.json"
+    }
+  ],
+  "networkFailures": [
+    {
+      "frame": "attack/W/01",
+      "receipt": "receipts/attack-W-01-failed-network-1.json",
+      "result": "No output on first network failure;20second backoff and same built-in tool retry succeeded"
+    }
+  ],
+  "technicalReport": "qa/W-hit-attack-technical.json",
+  "edgeReport": "qa/W-edge-check.json",
+  "files": [
+    "runtime/hit/W/01.png",
+    "runtime/hit/W/02.png",
+    "runtime/hit/W/03.png",
+    "runtime/hit/W/04.png",
+    "runtime/hit/W/05.png",
+    "runtime/hit/W/06.png",
+    "runtime/attack/W/01.png",
+    "runtime/attack/W/02.png",
+    "runtime/attack/W/03.png",
+    "runtime/attack/W/04.png",
+    "runtime/attack/W/05.png",
+    "runtime/attack/W/06.png",
+    "runtime/attack/W/07.png",
+    "runtime/attack/W/08.png",
+    "runtime/attack/W/09.png",
+    "runtime/attack/W/10.png",
+    "runtime/attack/W/11.png",
+    "runtime/attack/W/12.png"
+  ],
+  "remaining": "Continuous normal/slow playback remains not observed; client not integrated."
+}

@@ -1,0 +1,103 @@
+{
+  "reviewedAt": "2026-10-05T19:51:17.713Z",
+  "timezone": "America/New_York",
+  "reviewer": "cast_w subagent",
+  "scope": [
+    {
+      "group": "hit/E",
+      "expectedFrames": 6,
+      "normal": {
+        "requestedSpeed": 1,
+        "status": "not-observed"
+      },
+      "slow": {
+        "requestedSpeed": 0.25,
+        "status": "not-observed"
+      },
+      "frameByFrame": {
+        "status": "not-observed"
+      }
+    },
+    {
+      "group": "hit/W",
+      "expectedFrames": 6,
+      "normal": {
+        "requestedSpeed": 1,
+        "status": "not-observed"
+      },
+      "slow": {
+        "requestedSpeed": 0.25,
+        "status": "not-observed"
+      },
+      "frameByFrame": {
+        "status": "not-observed"
+      }
+    },
+    {
+      "group": "cast/W",
+      "expectedFrames": 16,
+      "normal": {
+        "requestedSpeed": 1,
+        "status": "not-observed"
+      },
+      "slow": {
+        "requestedSpeed": 0.25,
+        "status": "not-observed"
+      },
+      "frameByFrame": {
+        "status": "not-observed-in-browser",
+        "priorStaticReview": "All 16 native frames and contact sheet visually inspected during generation; this is not dynamic playback approval."
+      }
+    }
+  ],
+  "status": "blocked-browser-unavailable",
+  "passed": false,
+  "actualPlaybackObserved": false,
+  "browserVisibleFrameCoverage": [],
+  "supportContinuityConclusion": "No dynamic conclusion: browser playback could not be opened or observed. No numeric counts used as a substitute.",
+  "browserAttempts": [
+    {
+      "tool": "cua.createBrowserTab",
+      "browser": "iab",
+      "result": "Browser is not available: iab"
+    },
+    {
+      "tool": "cua.listBrowsers",
+      "result": []
+    },
+    {
+      "tool": "cua.createBrowserTab",
+      "browser": "chrome",
+      "result": "Browser is not available: chrome"
+    },
+    {
+      "tool": "mcp__codex_app__open_in_codex",
+      "result": "queued",
+      "threadId": "01a10bbb-27de-7160-a680-f706e90b3136"
+    }
+  ],
+  "server": {
+    "url": "http://127.0.0.1:8111/preview/index.html",
+    "bind": "127.0.0.1",
+    "port": 8111,
+    "pid": 32168,
+    "root": "D:/work/image/designs/creature-combat-20261005/pets/11-xiajiaolu",
+    "command": "python -m http.server 8111 --bind 127.0.0.1 --directory D:/work/image/designs/creature-combat-20261005/pets/11-xiajiaolu",
+    "windowStyle": "Hidden",
+    "leftRunningForRoot": true
+  },
+  "exportRefresh": {
+    "script": "build_delivery.py",
+    "result": {
+      "frames": 61,
+      "expected": 68,
+      "missing": 7,
+      "errors": 0,
+      "warnings": 47
+    },
+    "note": "Snapshot of all-six-group build during ongoing work; root will run again after remaining images finish."
+  },
+  "imageFilesModified": false,
+  "visualReviewAggregateModified": false,
+  "requiredFollowup": "Use an available browser session at server URL; visually observe normal, 0.25x and every frame for each of the three groups before marking dynamic QA passed."
+}

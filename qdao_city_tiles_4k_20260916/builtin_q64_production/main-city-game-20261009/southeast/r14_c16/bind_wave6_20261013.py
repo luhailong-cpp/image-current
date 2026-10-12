@@ -1,0 +1,10 @@
+from pathlib import Path
+import json
+T=Path(__file__).resolve().parent
+p=T/'local-content.json';d=json.loads(p.read_text(encoding='utf-8-sig'))
+d.update({
+ 'p02_04':'Quiet turquoise pond fills nearly all of crop; native green lotus leaf edge remains cropped across top. Only ONE existing upturned gold roof-ridge tip enters lower-left/center, connected to the inherited gold ridge from native left. Pale cream-grey masonry/wall is cropped at bottom-right per guide. Tiny muted-gold floating fleck near middle is only a small indistinct fallen leaf, not a fish or creature. No new flower, leaf pad, architecture, decorative finial or furnishing. Far-right black115px is outside guide: extend natural artwork, no black frame.',
+ 'p03_03':'Cropped teal roof planes with the exact existing gold rib network: gold rib from top around x550 curves down to x850 y820, joins the horizontal gold band from left around y820 and then continues toward x1000 bottom; an existing return curve comes from far-right around y550. Match top/left native gold and tile courses. All teal regions are roof tiles, never pond. No added ornament, clasps, finial, ridge line, tier, complete roof edge or terminal end caps. Cropped surfaces continue beyond edges as drawn.',
+ 'p04_01':'EXACT GUIDE GEOMETRY; do not create a miniature complete tower view. Blue roof upper-right; the SINGLE plain gold edge descends from native top x650 and simply curves toward far-right y650, with NO new curled hook near x450. Plain vermilion structural wall/column strip cropped along far-right and bottom-right. Small pale grey-tan stone post fragment near x550 y900, naturally extends beyond bottom; plain stone/water background as guide. Continue existing lotus leaf shapes from native left/top. ABSOLUTELY NO lantern, tassel, gold medallion, flower cap, extra scroll, brackets, new red-paper scraps, bush or new railing. Inherited stone post is the only post. Keep partial objects at guide scale without finishing them.'
+})
+p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')

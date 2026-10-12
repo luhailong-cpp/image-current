@@ -1,0 +1,109 @@
+{
+  "timestampUtc": "2026-10-09T16:45:39.797034+00:00",
+  "operation": "unscaled native mechanical crop and hard join; no feather or art edit",
+  "sourceA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s02_v03.png",
+    "sha256": "6ad7bd3da1d837bb700b301b93fa1ab6ef3c9372964eb0a2511f9918e1afb7e6",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "sourceB": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s02_v03.png",
+    "sha256": "d8e73fa6641ee51d18e132af3f4f1383ac82e2ce98c9def97fc32d721ef741cf",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "axis": "y",
+  "overlapSourceBoxes": {
+    "A": [
+      0,
+      1024,
+      1254,
+      1254
+    ],
+    "B": [
+      0,
+      0,
+      1254,
+      230
+    ]
+  },
+  "globalOverlapBox": [
+    9101,
+    9101,
+    10355,
+    9331
+  ],
+  "globalCoreSeam": {
+    "y": 9216
+  },
+  "coreSeamPreviewCoordinate": 384,
+  "metrics": {
+    "rgbMAE": 5.707737558652891,
+    "rgbRMSE": 8.900413609001458,
+    "pixelMeanChannelDifferenceP95": 14.666666666666666,
+    "coreSeamMeanAbsoluteChannelJump": 7.220377604166667,
+    "immediateBeforeNaturalPixelJump": 3.88671875,
+    "immediateAfterNaturalPixelJump": 2.1575520833333335
+  },
+  "qaArtifacts": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s02_s02_v03-core-seam-100pct.png",
+      "sha256": "336a7e6015a2f4f480a0622ad56f0060d10057c26f641e34dd1957254826ec31",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s02_s02_v03-core-stitch-100pct.png",
+      "sha256": "1b732879ca0411d16b402d1e6416d77cd93fe984cb18e2cf17d0aac43e6ca890",
+      "size": [
+        1024,
+        2048
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s02_s02_v03-overlap-absolute-rgb-difference.png",
+      "sha256": "bffd2071e34386b75f1bc1510be2b795ee4b48c8c77f0ffd4d3feb10fb85cd6f",
+      "size": [
+        1254,
+        230
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s02_s02_v03-overlap-pair-100pct.png",
+      "sha256": "c88ceb9416bb5428f075efb112aaa599cf5062676e2a247bb1a77111cc06a62c",
+      "size": [
+        1254,
+        460
+      ]
+    }
+  ],
+  "review": {
+    "status": "repair-required-B-northeast-sand-material",
+    "formalAccepted": false,
+    "aiRepairRequiredForReviewedSeam": true,
+    "findings": [
+      "Wood post, wall, lamp lower ring and tassels retain their vertical geometry at the reviewed north join.",
+      "B northeast ground still carries the old prominent grit/pebbles while A now has clean fine sand. A visible horizontal texture stripe begins on the right at core preview y384; this is a material mismatch rather than navigation geometry."
+    ],
+    "repair": {
+      "image": "r03_c03_s02_s02_v03.png",
+      "nativeBoundingBox": [
+        900,
+        0,
+        1254,
+        730
+      ],
+      "scope": "visible sandy ground only, including north230px; exclude lamp/tassels, fence and cloth",
+      "action": "builtin local redraw to match latest A clean painterly fine sand; remove individually prominent pebble clusters and dense grit; preserve lighting and ground hue",
+      "lock": "building/wood/cloth structure and west230px must remain unchanged as much as tool permits",
+      "recheck": "north join plus west neighbor after edit"
+    }
+  }
+}

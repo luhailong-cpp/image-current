@@ -1,0 +1,46 @@
+{
+  "status": "static_review_complete_parent_sequence_review_pending",
+  "reviewedDirections": [
+    "W",
+    "NW",
+    "SW"
+  ],
+  "reviewedRuntimeFrames": 48,
+  "selectedEdits": 7,
+  "selection": "provenance/axis-20261004/west-selection.json",
+  "inspectedReferences": [
+    "C:/Users/luyua/AppData/Local/Temp/codex-clipboard-7cc4bf22-e4cf-4c35-8ac6-a37fd85f4037.png",
+    "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/character-detail.jpg",
+    "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/video-contact.jpg",
+    "provenance/axis-20261004/video-sequence-0.00.jpg",
+    "provenance/axis-20261004/video-sequence-6.15.jpg",
+    "provenance/axis-20261004/video-sequence-11.80.jpg",
+    "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/NW/06.png"
+  ],
+  "referenceLimits": "Video character small/partly occluded; continuous phases guide consistent leg/foot axis, not precise per-frame toe pixel matching.",
+  "findings": [
+    "W all16 preserved: side-view knee flex and heel lift valid; no material outward yaw found.",
+    "NW06/07 had excessive lateral toe bulge on rear supporting shoe; corrected to narrow back-quarter shoe aligned under shin, kept opposite leg and support phase.",
+    "NW14/15 rear supporting shoe lateral flare reduced. NW14-v4 starts from original runtime pose with v2 shoe-yaw reference only. Sole bottom936 vs original931 restores previous contact plane; v2 discarded.",
+    "SW13/14/15 front boot was oversized/front-on sole and abrupt yaw. Edits align boot under knee, keep lifted foot, preserve opposite support positions.",
+    "All7 normalized whole canvas to1024 for review; upper alpha IoU0.98338–0.99149, no bboxfit or global shift used.",
+    "All front/back cauldron and bottle remain held by original anatomical hands. Boots retain original style.",
+    "Natural knee bend, heel lift and oblique sole visibility remain. Not all feet forced flat.",
+    "Second review viewed both8-frame half cycles and whole original/v4 image. NW14 calf and knee return near original registration; shoe keeps natural forefoot contact and lifted heel, no flattening. Other6 selected files unchanged."
+  ],
+  "minorResiduals": [
+    "NW14-v4 support bottom936 vs original931 (5/1024,1.25px at256 preview); upperbody IoU0.98490. Small generated drawing differences remain; parent final sequence playback pending."
+  ],
+  "rejectedCandidates": {
+    "generation/axis-20261004/NW/14-v1.png": "Support too high, loses previous contact depth.",
+    "generation/axis-20261004/NW/14-v3.png": "Local shortening overshot upward; keep v2.",
+    "generation/axis-20261004/NW/14-v2.png": "Parent rejected extra downward dip: support944 vs original931. Superseded by v4 at936."
+  },
+  "timing": "untouched16x75ms1200ms, each support location2 independentposes",
+  "writes": "Only generation/axis-20261004 NW SW and provenance/axis-20261004 west-*; runtime/manifest untouched",
+  "toolRoute": "builtin image_gen",
+  "actualModel": null,
+  "actualQuality": null,
+  "configTarget": "gpt-image-2.5-sunburst/max",
+  "browserPreviewChecked": false
+}

@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "reportType": "concrete-neighboring-missing-core-queue",
+  "sampledAtUtc": "2026-10-13T04:47:22.083194+00:00",
+  "scope": "Immediate southeast r14_c08 5-core chain only; additional zone-level missing inventory is in the independent provenance reports.",
+  "input": {
+    "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r14_c08/selected-patches.json",
+    "sha256": "7fb7a0a1130c66ead8098d94078ef1d3df5dcc745c5ece281bf18cf3ee5bed3d",
+    "selectedCoreCount": 11,
+    "selectedPatches": [
+      "p11",
+      "p12",
+      "p13",
+      "p14",
+      "p21",
+      "p22",
+      "p23",
+      "p24",
+      "p31",
+      "p32",
+      "p33"
+    ]
+  },
+  "batch": {
+    "id": "SE-r14_c08-bottom-closure",
+    "unit": "native 1024-core patches, not 4K tiles",
+    "count": 5,
+    "tiles": [
+      "r14_c08"
+    ],
+    "connectedBySharedCoreEdges": true,
+    "order": [
+      "p34",
+      "p44",
+      "p43",
+      "p42",
+      "p41"
+    ],
+    "anchorAlreadySelected": "p33",
+    "notMissing": "p33"
+  },
+  "queue": [
+    {
+      "priority": 1,
+      "tile": "r14_c08",
+      "patch": "p34",
+      "status": "proposed_for_existing_owner_only",
+      "ownerZone": "southeast",
+      "ownerThreadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+      "coreGlobalBox": [
+        31744,
+        55296,
+        32768,
+        56320
+      ],
+      "tilePasteAt": [
+        3072,
+        2048
+      ],
+      "expectedNativeDimensions": [
+        1254,
+        1254
+      ],
+      "expectedSourceCoreCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "reason": "Absent from current selected-patches; completes the remaining contiguous lower-right/bottom cores.",
+      "prerequisite": "Existing owner rechecks this input hash and its in-flight coordinate before work; queue does not claim coordinate."
+    },
+    {
+      "priority": 2,
+      "tile": "r14_c08",
+      "patch": "p44",
+      "status": "proposed_for_existing_owner_only",
+      "ownerZone": "southeast",
+      "ownerThreadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+      "coreGlobalBox": [
+        31744,
+        56320,
+        32768,
+        57344
+      ],
+      "tilePasteAt": [
+        3072,
+        3072
+      ],
+      "expectedNativeDimensions": [
+        1254,
+        1254
+      ],
+      "expectedSourceCoreCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "reason": "Absent from current selected-patches; completes the remaining contiguous lower-right/bottom cores.",
+      "prerequisite": "Existing owner rechecks this input hash and its in-flight coordinate before work; queue does not claim coordinate."
+    },
+    {
+      "priority": 3,
+      "tile": "r14_c08",
+      "patch": "p43",
+      "status": "proposed_for_existing_owner_only",
+      "ownerZone": "southeast",
+      "ownerThreadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+      "coreGlobalBox": [
+        30720,
+        56320,
+        31744,
+        57344
+      ],
+      "tilePasteAt": [
+        2048,
+        3072
+      ],
+      "expectedNativeDimensions": [
+        1254,
+        1254
+      ],
+      "expectedSourceCoreCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "reason": "Absent from current selected-patches; completes the remaining contiguous lower-right/bottom cores.",
+      "prerequisite": "Existing owner rechecks this input hash and its in-flight coordinate before work; queue does not claim coordinate."
+    },
+    {
+      "priority": 4,
+      "tile": "r14_c08",
+      "patch": "p42",
+      "status": "proposed_for_existing_owner_only",
+      "ownerZone": "southeast",
+      "ownerThreadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+      "coreGlobalBox": [
+        29696,
+        56320,
+        30720,
+        57344
+      ],
+      "tilePasteAt": [
+        1024,
+        3072
+      ],
+      "expectedNativeDimensions": [
+        1254,
+        1254
+      ],
+      "expectedSourceCoreCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "reason": "Absent from current selected-patches; completes the remaining contiguous lower-right/bottom cores.",
+      "prerequisite": "Existing owner rechecks this input hash and its in-flight coordinate before work; queue does not claim coordinate."
+    },
+    {
+      "priority": 5,
+      "tile": "r14_c08",
+      "patch": "p41",
+      "status": "proposed_for_existing_owner_only",
+      "ownerZone": "southeast",
+      "ownerThreadId": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+      "coreGlobalBox": [
+        28672,
+        56320,
+        29696,
+        57344
+      ],
+      "tilePasteAt": [
+        0,
+        3072
+      ],
+      "expectedNativeDimensions": [
+        1254,
+        1254
+      ],
+      "expectedSourceCoreCrop": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "reason": "Absent from current selected-patches; completes the remaining contiguous lower-right/bottom cores.",
+      "prerequisite": "Existing owner rechecks this input hash and its in-flight coordinate before work; queue does not claim coordinate."
+    }
+  ],
+  "executionAuthorization": {
+    "thisTaskMayGenerate": false,
+    "ownerProductionContinues": true,
+    "existingFreeBuiltin2_0PermittedIf2_5Unavailable": true,
+    "paidApiAuthorized": false,
+    "reservationOrOwnershipChanges": false
+  },
+  "staleIf": "Input SHA256 changes or existing owner adopts/in-flights any queued coordinate. Refresh from current owner record before using this queue.",
+  "mapComplete": false
+}

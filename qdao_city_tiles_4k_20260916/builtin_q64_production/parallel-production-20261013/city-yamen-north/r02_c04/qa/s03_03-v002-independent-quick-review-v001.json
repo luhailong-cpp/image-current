@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "createdAtUTC": "2026-10-13T13:06:20.419725+00:00",
+  "reviewer": "production_helper",
+  "tile": "r02_c04",
+  "patch": "s03_03",
+  "source": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_03-v002.png",
+    "sha256": "39f1440791d4eaf8603fa6e9136cec2049ce1f314f3ba3cb4e30e88bd8fcf28d",
+    "pixels": [
+      1254,
+      1254
+    ]
+  },
+  "receipt": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_03-v002.png.generation.json",
+    "sha256": "253c9ae8d088f85786efce2f2ea61acb0cce030595647296c27e3c20e3abb1f5"
+  },
+  "generationRequest": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/city-yamen-north/requests/r02_c04/s03_03-v003-material-repair.json",
+    "sha256": "ae7d98cbfc55b3877976f34bd0fddcf679fdf4052c8620d38356f339c44979b8"
+  },
+  "actuallyViewed": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_03-v002.png",
+      "sha256": "39f1440791d4eaf8603fa6e9136cec2049ce1f314f3ba3cb4e30e88bd8fcf28d",
+      "detail": "original",
+      "role": "native full image"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\requests\\r02_c04\\s03_03-v001.layout-and-native-reference.png",
+      "sha256": "c2dfaf8b5fa4b6300df665326cf6afdd389024da07ae84ac938a972fcbb4a956",
+      "detail": "original",
+      "role": "local enlarged layout guide with native south context; reference only"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\references\\yamen-roof-north-identity-guide-v001.png",
+      "sha256": "29ba51a75ec2837f1ba13bd593eb2c0a37072798b1d88d2125cef93b842f0f9b",
+      "detail": "original",
+      "role": "wider approved-layout identity guide; enlarged reference only"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\qa\\s03_03-v002-south-native100-v001.png",
+      "sha256": "7a79d9247ab1589168755b634d527eae7b00fdb68c166005b977c4140d8ab7f9",
+      "detail": "original",
+      "role": "1024x320 exact core-edge hard splice; native scale1; y160 boundary"
+    }
+  ],
+  "quickVisualPassed": true,
+  "formalAccepted": false,
+  "wholeTileAccepted": false,
+  "checks": {
+    "layoutAndCrossPatchObject": "PASS: large gold left wing begins in the expected middle/right part of this patch and continues through the right crop. It is not a complete ornament reduced to fit this patch. Horizontal gold ridge and teal roof remain below, pale stone wall behind.",
+    "upperRightIdentity": "PASS after explicit coordinate mapping against wider reference: visible cropped gold petal portions belong to the ornament left/upper body. They are not the farther-right tree crown.",
+    "materialAndClarity": "PASS: rounded hand-painted gold/stone/teal materials; no dense decorative engraving/noise or blank enlarged-guide blur visible.",
+    "localSouthSeam": "PASS by actual1:1 view: diagonal grooves, tile lips, highlights and row cadence continue across y160 with no visible large geometric jump or duplicated/compressed row."
+  },
+  "spatialCheck": {
+    "overviewPixels": 1254,
+    "worldPixels": 65536,
+    "targetOverviewBox": [
+      272.112,
+      115.362,
+      296.1067,
+      139.3567
+    ],
+    "contextOverviewCrop": [
+      275,
+      95,
+      340,
+      150
+    ],
+    "note": "Wider-context regions were located using world coordinates before judging material identity. Low-resolution overview interpolation does not establish exact per-pixel object edges."
+  },
+  "unresolvedDependencies": {
+    "southNeighbor": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_03-v001.png",
+    "southNeighborSHA256": "3eac44bdf5aca14a9adfe8f4b42afd7e3666062ce61145a60df9652fb0ecfc7f",
+    "southNeighborRemoteSouthSeamPending": true,
+    "southNeighborOverallQuickVisualPassed": false,
+    "localPassDoesNotApproveRemoteSeam": true,
+    "eastNeighborLayoutRepairPending": true,
+    "missingOtherNeighborsAndWholeTileQA": "pending"
+  },
+  "scope": "Current patch layout/identity/material and its local south seam. Future north/west/east seams require review when their actual neighboring sources exist.",
+  "acceptanceNotBasedOnNumericSeamScore": true
+}

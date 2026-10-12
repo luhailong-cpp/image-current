@@ -1,0 +1,586 @@
+{
+  "reviewedAtUtc": "2026-10-04T22:07:11.214128+00:00",
+  "reviewer": "finish_south",
+  "action": "run",
+  "direction": "SE",
+  "latestRequirement": "同脚连续8帧承重，四个逐步改变地面位置的阶段，每阶段两张独立姿态；左右交替。",
+  "staticPairedGroundStatus": "passed_with_perspective_limits",
+  "frameMs": 75,
+  "cycleMs": 1200,
+  "positionMs": 150,
+  "segments": [
+    {
+      "foot": "left",
+      "continuousFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "positions": [
+        {
+          "frames": [
+            1,
+            2
+          ],
+          "position": "前位落地和加载",
+          "evidence": "远侧左脚前位承重，近侧右腿后屈；完整弓固定于左手。；远侧左脚继续前位加载，右腿回收，鞋轴朝右下运动方向。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            3,
+            4
+          ],
+          "position": "身下偏前承重",
+          "evidence": "左支撑进入身下，近侧右膝向前经过；本轮按髋连接和遮挡独立重画。；同一左支撑继续，右膝抬起；支撑链不凭裤口屏幕位置单独认定。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            5,
+            6
+          ],
+          "position": "身体经过后的中后支撑",
+          "evidence": "左支撑移动到身后中段，近侧右腿前摆遮挡上段支撑腿，右鞋底可见。；左支撑仍在身后中段，右摆脚已抬高并露底，消除双脚像同时落地的读感。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            7,
+            8
+          ],
+          "position": "后侧延伸与下一步准备",
+          "evidence": "左支撑继续向后侧延伸，近侧右腿在前方抬起；两个髋到膝的遮挡有连续性。；左后位支撑继续，右摆腿前伸更开、鞋底可见；与07独立姿态。",
+          "independentPoses": true,
+          "durationMs": 150
+        }
+      ]
+    },
+    {
+      "foot": "right",
+      "continuousFrames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "positions": [
+        {
+          "frames": [
+            9,
+            10
+          ],
+          "position": "前位落地和加载",
+          "evidence": "换为近侧右腿前位承重，左腿折后；鞋尖保持右下轴。；右脚前位加载，左腿回收，右手空拳开始反向回摆。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            11,
+            12
+          ],
+          "position": "身下偏前承重",
+          "evidence": "右腿进入身体下方支撑，左腿抬起，髋膝踝链可追踪。；右腿同一支撑到中位，远侧左膝前摆；本轮已替换旧腾空稿。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            13,
+            14
+          ],
+          "position": "身体经过后的中后支撑",
+          "evidence": "右支撑向身后中段延伸，左摆腿抬起，非两脚腾空。；右脚继续中后位，左摆脚展开并露鞋底；完整长弓不缺端。",
+          "independentPoses": true,
+          "durationMs": 150
+        },
+        {
+          "frames": [
+            15,
+            16
+          ],
+          "position": "后侧延伸与下一步准备",
+          "evidence": "右支撑进入后位，左摆脚抬起，空手与持弓手方向关系保持。；右后位支撑末段，左脚前伸准备下一循环，弓和箭筒方向一致。",
+          "independentPoses": true,
+          "durationMs": 150
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "slot": "run/SE/01",
+      "frame": 1,
+      "file": "runtime/run/SE/01.png",
+      "sha256": "562b723a7b6b3f8a5676102ec47b0b72503e651daf1b504ab8990f5b7e42fb0f",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "远侧左脚前位承重，近侧右腿后屈；完整弓固定于左手。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "562b723a7b6b3f8a5676102ec47b0b72503e651daf1b504ab8990f5b7e42fb0f",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "562b723a7b6b3f8a5676102ec47b0b72503e651daf1b504ab8990f5b7e42fb0f",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/02",
+      "frame": 2,
+      "file": "runtime/run/SE/02.png",
+      "sha256": "e000dbe35737064be3ac437444afc383ad7f3963c1ddb95787cb9941dc1e147a",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "远侧左脚继续前位加载，右腿回收，鞋轴朝右下运动方向。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "e000dbe35737064be3ac437444afc383ad7f3963c1ddb95787cb9941dc1e147a",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "e000dbe35737064be3ac437444afc383ad7f3963c1ddb95787cb9941dc1e147a",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/03",
+      "frame": 3,
+      "file": "runtime/run/SE/03.png",
+      "sha256": "6f420f491d709146a6b6ed411c15d69f4c7571230fb168537a031a65da0cb52a",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "左支撑进入身下，近侧右膝向前经过；本轮按髋连接和遮挡独立重画。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "6f420f491d709146a6b6ed411c15d69f4c7571230fb168537a031a65da0cb52a",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "6f420f491d709146a6b6ed411c15d69f4c7571230fb168537a031a65da0cb52a",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/04",
+      "frame": 4,
+      "file": "runtime/run/SE/04.png",
+      "sha256": "502d5a8aa0f1650fe5c8cebf3c9fdb5bd08a05ec1eb6fb969adacaff8d44524a",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "同一左支撑继续，右膝抬起；支撑链不凭裤口屏幕位置单独认定。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "502d5a8aa0f1650fe5c8cebf3c9fdb5bd08a05ec1eb6fb969adacaff8d44524a",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "502d5a8aa0f1650fe5c8cebf3c9fdb5bd08a05ec1eb6fb969adacaff8d44524a",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/05",
+      "frame": 5,
+      "file": "runtime/run/SE/05.png",
+      "sha256": "99adbc138358d961ee1cf446a702533f788563be07fc5f44de44b9611c640237",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "左支撑移动到身后中段，近侧右腿前摆遮挡上段支撑腿，右鞋底可见。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "99adbc138358d961ee1cf446a702533f788563be07fc5f44de44b9611c640237",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "99adbc138358d961ee1cf446a702533f788563be07fc5f44de44b9611c640237",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/06",
+      "frame": 6,
+      "file": "runtime/run/SE/06.png",
+      "sha256": "73e14626fc906c0de548d3e2c289ab0abdb646440057ca19be898791d42bb92e",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "左支撑仍在身后中段，右摆脚已抬高并露底，消除双脚像同时落地的读感。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "73e14626fc906c0de548d3e2c289ab0abdb646440057ca19be898791d42bb92e",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "73e14626fc906c0de548d3e2c289ab0abdb646440057ca19be898791d42bb92e",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/07",
+      "frame": 7,
+      "file": "runtime/run/SE/07.png",
+      "sha256": "8acfeb0ef0fcc222d3e43740603bc48d327ec0f1d8f40e6fbc830398e7f6ed49",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "左支撑继续向后侧延伸，近侧右腿在前方抬起；两个髋到膝的遮挡有连续性。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "8acfeb0ef0fcc222d3e43740603bc48d327ec0f1d8f40e6fbc830398e7f6ed49",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "8acfeb0ef0fcc222d3e43740603bc48d327ec0f1d8f40e6fbc830398e7f6ed49",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/08",
+      "frame": 8,
+      "file": "runtime/run/SE/08.png",
+      "sha256": "15015f4d0100d374a9184ebfa58e8f7eb86aca9c831c30c462c0c4f34d309d3d",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "左后位支撑继续，右摆腿前伸更开、鞋底可见；与07独立姿态。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "acba7a4f29d374d936a1cff4d9dae4de61dbd288bb92589c1c0cfc67634d138e",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "acba7a4f29d374d936a1cff4d9dae4de61dbd288bb92589c1c0cfc67634d138e",
+        "retained": false,
+        "dynamicVisualAcceptance": false,
+        "repairReview": "audit/full-limb-root-repair-review.json",
+        "confirmedIssue": "旧SE08右拳突然收至前腰，07/09右手均后摆。",
+        "afterEvidence": "新08右拳改到屏左后髋方向，袖肘腕连续，与07/09保持后摆而每帧姿态独立。原08前伸靴、后支撑腿、髋膝与左手竹弓、整体画幅目视保留。",
+        "staticCorrectionReviewed": true,
+        "footPoseRetention": "Legs and boot axes visually rechecked after arm repair; prior foot observation retained, not a claim of identical pixels."
+      }
+    },
+    {
+      "slot": "run/SE/09",
+      "frame": 9,
+      "file": "runtime/run/SE/09.png",
+      "sha256": "95792b2c81018c5a37ec71e0c2f93c04022edb7d65c8726f88608dbcb13669fd",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "换为近侧右腿前位承重，左腿折后；鞋尖保持右下轴。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "95792b2c81018c5a37ec71e0c2f93c04022edb7d65c8726f88608dbcb13669fd",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "95792b2c81018c5a37ec71e0c2f93c04022edb7d65c8726f88608dbcb13669fd",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/10",
+      "frame": 10,
+      "file": "runtime/run/SE/10.png",
+      "sha256": "efa0ba79ba5670af7995ca5f383092353eec0f090af169922a06c5b2bc03f7a4",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右脚前位加载，左腿回收，右手空拳开始反向回摆。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "efa0ba79ba5670af7995ca5f383092353eec0f090af169922a06c5b2bc03f7a4",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "efa0ba79ba5670af7995ca5f383092353eec0f090af169922a06c5b2bc03f7a4",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/11",
+      "frame": 11,
+      "file": "runtime/run/SE/11.png",
+      "sha256": "fce811c84e699eb11dbb33d980956998c6a0c6a03fa4dc2bc67743edcfeb924c",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右腿进入身体下方支撑，左腿抬起，髋膝踝链可追踪。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "fce811c84e699eb11dbb33d980956998c6a0c6a03fa4dc2bc67743edcfeb924c",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "fce811c84e699eb11dbb33d980956998c6a0c6a03fa4dc2bc67743edcfeb924c",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/12",
+      "frame": 12,
+      "file": "runtime/run/SE/12.png",
+      "sha256": "0f1b77b29bb01da34330103d10ea9f75d3b785986ae442a4a395115bd1831fd0",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右腿同一支撑到中位，远侧左膝前摆；本轮已替换旧腾空稿。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "0f1b77b29bb01da34330103d10ea9f75d3b785986ae442a4a395115bd1831fd0",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "0f1b77b29bb01da34330103d10ea9f75d3b785986ae442a4a395115bd1831fd0",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/13",
+      "frame": 13,
+      "file": "runtime/run/SE/13.png",
+      "sha256": "094e6cce671df15cd81d35c58c017494fbb76e5e37feea8cbed38dc4a0bd9b5d",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右支撑向身后中段延伸，左摆腿抬起，非两脚腾空。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "094e6cce671df15cd81d35c58c017494fbb76e5e37feea8cbed38dc4a0bd9b5d",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "094e6cce671df15cd81d35c58c017494fbb76e5e37feea8cbed38dc4a0bd9b5d",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/14",
+      "frame": 14,
+      "file": "runtime/run/SE/14.png",
+      "sha256": "e4cf335343acc4a1526217f9f79bd399e46b552a4454cfb34390a5e5329b2f56",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右脚继续中后位，左摆脚展开并露鞋底；完整长弓不缺端。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "e4cf335343acc4a1526217f9f79bd399e46b552a4454cfb34390a5e5329b2f56",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "e4cf335343acc4a1526217f9f79bd399e46b552a4454cfb34390a5e5329b2f56",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/15",
+      "frame": 15,
+      "file": "runtime/run/SE/15.png",
+      "sha256": "7010574d0f03890a83d2f5d3fd5fbb0426816d9150b82d9cd206ef66ba4b8359",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右支撑进入后位，左摆脚抬起，空手与持弓手方向关系保持。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "7010574d0f03890a83d2f5d3fd5fbb0426816d9150b82d9cd206ef66ba4b8359",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "7010574d0f03890a83d2f5d3fd5fbb0426816d9150b82d9cd206ef66ba4b8359",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    },
+    {
+      "slot": "run/SE/16",
+      "frame": 16,
+      "file": "runtime/run/SE/16.png",
+      "sha256": "f3f1b1a7f898f84f06e23f1395a07016665f2b27b4dcfb1e13ff04c77e633183",
+      "status": "passed",
+      "staticAnatomy": "passed",
+      "dynamicApproval": false,
+      "evidence": "右后位支撑末段，左脚前伸准备下一循环，弓和箭筒方向一致。",
+      "footOrientation": "支撑/摆动鞋长轴随膝胫与运动纵深，未见双脚向左右横撇；不以最低像素判断承重。",
+      "visualEvidence": "preview/qa/run-SE-contact.png",
+      "reviewBasis": "当前16帧接触表及本轮局部修改原生图实际查看；只确认静态解剖和分组，未声明实播动态通过。",
+      "videoAxisInspection": {
+        "beforeReview": "audit/video-axis-S-SE-review.json",
+        "beforeSha256": "f3f1b1a7f898f84f06e23f1395a07016665f2b27b4dcfb1e13ff04c77e633183",
+        "retained": true
+      },
+      "fullLimbInspection": {
+        "beforeReview": "audit/full-limb-run-S-SE-SW-W-review.json",
+        "beforeSha256": "f3f1b1a7f898f84f06e23f1395a07016665f2b27b4dcfb1e13ff04c77e633183",
+        "retained": true,
+        "dynamicVisualAcceptance": false
+      }
+    }
+  ],
+  "method": "当前原图/修图原生输出与完整16帧接触表实看；脚尖轴、髋膝踝、承重底及同脚遮挡联合判断。坐标用于指导和复核，不作为生成成功证据。",
+  "remainingIssues": [
+    "尚未完成正常速度和慢速整段实播视觉验收；本审阅不是游戏内无滑步保证。",
+    "斜视下两腿交叉遮挡随摆动改变，按裆部/髋膝连接和前后层次追踪，不仅凭裤口屏左/右位置或最低脚像素。"
+  ],
+  "dynamicVisualAcceptance": false,
+  "clientIntegration": "not_integrated",
+  "technicalVerification": {
+    "rgba1024": 16,
+    "uniqueFrameHashes": 16,
+    "selectionAndGenerationShaMatch": 16,
+    "nativeMin1024": 16,
+    "previewSourceShaMatch": 16,
+    "normalFrameDurationsMs": [
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75,
+      75
+    ],
+    "slowFrameDurationsMs": [
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300
+    ]
+  },
+  "currentEvidenceFiles": [
+    "preview/qa/run-SE-contact.png",
+    "preview/qa/run-SE-paired-contact.png",
+    "preview/qa/run-SE-normal.apng",
+    "preview/qa/run-SE-slow.apng"
+  ],
+  "inspectionImageRetention": "Canonical preview/qa retained; working inspection images replaced by current equivalent and deletion SHA ledger, per user material retention rule.",
+  "latestVideoAxisRevision": {
+    "reviewedAtUtc": "2026-10-05T03:45:20.768168+00:00",
+    "repairSlots": [],
+    "beforeReview": "audit/video-axis-S-SE-review.json",
+    "currentRepairReview": "audit/video-axis-root-repair-review.json",
+    "dynamicVisualAcceptance": false
+  },
+  "latestFullLimbRevision": {
+    "reviewedAtUtc": "2026-10-05T10:05:37.828777+00:00",
+    "currentRepairReview": "audit/full-limb-root-repair-review.json",
+    "repairSlots": [
+      "run/SE/08"
+    ],
+    "dynamicVisualAcceptance": false
+  }
+}

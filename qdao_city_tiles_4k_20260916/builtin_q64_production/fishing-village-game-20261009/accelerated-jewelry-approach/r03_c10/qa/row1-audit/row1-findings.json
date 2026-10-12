@@ -1,0 +1,22 @@
+{
+  "reviewScope": "Selected p11-v1, p12-v1, p13-v1, p14-v1 center 1024 cores; native 512x1024 seam crops visually inspected",
+  "nativeCoreAssembly": "r03_c10/row1-4096x1024-native.png",
+  "formalAcceptance": false,
+  "geometryFindings": "No visible broken silhouette or duplicated object on the three first-row seams. Fence rail/post, parasol rim, spokes, and foliage form a coherent continuous strip. This does not assess later row seams or tile boundaries.",
+  "issues": [
+    {
+      "severity": "minor",
+      "seam": "p12-p13 / tile x2048",
+      "location": "yellow parasol, approximately tile y384-1024",
+      "description": "Subtle straight tonal transition: p13 side is slightly warmer/more saturated yellow. The spokes and outer rim line up; this is a color/material continuity issue rather than a geometric break.",
+      "evidence": "At the central boundary of the native crop, mean absolute channel jump is 5.263/255 vs 1.344/255 in nearby 32-column band. For tile y512-640, right-minus-left mean RGB is [-3.23,-7.25,-9.98]. Numeric difference is supporting evidence, not a pass/fail threshold.",
+      "recommendedAction": "Include this exact x2048 parasol band in the tile's later imagegen seam repair/review; preserve current rim and spoke geometry. Inspect against the completed next row before choosing repair extent."
+    }
+  ],
+  "otherSeams": [
+    {"seam":"p11-p12","result":"No material geometry fault observed; natural foliage/wood texture changes at the cut are small."},
+    {"seam":"p13-p14","result":"Parasol rim/spokes and background vertical timber continue; no concrete repair justified from this crop."}
+  ],
+  "sourceWriteOperations": false,
+  "reusableScript": "qa_native_seams.py; without arguments audits available selected cores of r03_c10, --all audits all four tiles, always writes only below this QA folder"
+}

@@ -1,0 +1,110 @@
+{
+  "timestampUtc": "2026-10-09T16:45:38.470037+00:00",
+  "operation": "unscaled native mechanical crop and hard join; no feather or art edit",
+  "sourceA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s02_v03.png",
+    "sha256": "6ad7bd3da1d837bb700b301b93fa1ab6ef3c9372964eb0a2511f9918e1afb7e6",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "sourceB": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s03_v02.png",
+    "sha256": "899114d0303477dfda0dc039e88c0bcfc6d7fb572d7b69e356673c2e9f733e33",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "axis": "x",
+  "overlapSourceBoxes": {
+    "A": [
+      1024,
+      0,
+      1254,
+      1254
+    ],
+    "B": [
+      0,
+      0,
+      230,
+      1254
+    ]
+  },
+  "globalOverlapBox": [
+    10125,
+    8077,
+    10355,
+    9331
+  ],
+  "globalCoreSeam": {
+    "x": 10240
+  },
+  "coreSeamPreviewCoordinate": 384,
+  "metrics": {
+    "rgbMAE": 5.401489725631602,
+    "rgbRMSE": 11.487257688352882,
+    "pixelMeanChannelDifferenceP95": 11.333333333333334,
+    "coreSeamMeanAbsoluteChannelJump": 4.482747395833333,
+    "immediateBeforeNaturalPixelJump": 1.5052083333333333,
+    "immediateAfterNaturalPixelJump": 0.9410807291666666
+  },
+  "qaArtifacts": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s01_s03_v02-core-seam-100pct.png",
+      "sha256": "5b91dcf040575b21eb5194b3aca4c11b5a3157c5c3177553ffcf830d58aee4c9",
+      "size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s01_s03_v02-core-stitch-100pct.png",
+      "sha256": "9b0a0815b1379482cac8e2f4358f4c3e005cf85e1cec01bee9c5cee631c0d09e",
+      "size": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s01_s03_v02-overlap-absolute-rgb-difference.png",
+      "sha256": "2d976a72b3081deed6cf3f650370ad2953cef699294e07ed5369aa5cceba15ff",
+      "size": [
+        230,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s02_v03--s01_s03_v02-overlap-pair-100pct.png",
+      "sha256": "5c39cb4938139b495402ad0dc44b48a8e6419955d74d3eb20e83991b0bdb9566",
+      "size": [
+        460,
+        1254
+      ]
+    }
+  ],
+  "review": {
+    "status": "repair-required-B-west-road-defocus",
+    "formalAccepted": false,
+    "aiRepairRequiredForReviewedSeam": true,
+    "findings": [
+      "New A background has clean native stone joints and fine painterly sand. Sand now matches B much better and no longer has the prior gravel discontinuity.",
+      "B retains its old defocused road on the west side. At 100%, stone edges go from A clear to B soft, then become clearer farther east. This creates a narrow soft road band rather than a global color problem.",
+      "Road/sand split, slab pattern and building/lamp geometry remain broadly continuous; targeted material redraw should preserve them."
+    ],
+    "repair": {
+      "image": "r03_c03_s01_s03_v02.png",
+      "nativeBoundingBox": [
+        0,
+        70,
+        330,
+        600
+      ],
+      "scope": "road pixels only; exclude eave, lamp and sand; preserve road/sand boundary and stone joint paths",
+      "action": "builtin local redraw to match A native joint precision and fine clean painted stone, with no defocus, extra cracks or coarse mottling; no programmatic sharpening or feathering",
+      "lock": "remaining B ground and east230px should stay as accepted context for patch4",
+      "recheck": "west join and right join after edit"
+    }
+  }
+}

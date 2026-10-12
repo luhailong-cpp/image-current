@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-10T16:53:59.062657+00:00",
+  "tile": "r06_c13",
+  "baseline": {
+    "assembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\assembly.json",
+    "assemblySha256": "3ce2ad3a64351031ba31560031a68563a31f23fe70c17effece0f18a8a90f1ed",
+    "createdAt": "2026-10-10T15:09:05.179030+00:00",
+    "inputSignature": "6c2e5c13cfbe255b4af650b7c82d1925c44748fcae4550717ebd0bdcbb9c20f2",
+    "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\r06_c13-core-baseline.candidate.png",
+    "candidateSha256": "da1798cebb6cc5ed7f15bc7fe5625dc0c9b4861dfc11a2b5eec271b913840cc6",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "reviewScope": "all 24 native-pixel seam joins and all 9 native-pixel intersections from the named baseline",
+  "method": "read existing original-resolution crops, compare geometry/material continuity; focused crops are exact integer subcrops only",
+  "coordinateConvention": "[x0,y0,x1,y1), right/bottom exclusive; world refers to art-canvas pixels",
+  "counts": {
+    "seamJoinsReviewed": 24,
+    "intersectionsReviewed": 9,
+    "knownP2": 1,
+    "newP2": 2,
+    "P3IncludingPreviouslyKnown": 2
+  },
+  "allReviewedCropHashesMatchManifest": true,
+  "baselineCandidateHashVerified": true,
+  "findings": [
+    {
+      "id": "FULL-01",
+      "priority": "P2",
+      "status": "present in this baseline; parent is repairing separately",
+      "sourceIds": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "title": "p23 左上花叶形成矩形硬断口",
+      "description": "四角原生 core 直接拼接时，p23 左上花簇形成矩形块：左侧在 world x=51200 与 p22 绿叶截断，底侧在 world y=21619 从粉花硬切到绿叶。不是正常的枝叶遮挡轮廓。",
+      "primarySource": "p23",
+      "primaryNativeBox": [
+        115,
+        115,
+        230,
+        230
+      ],
+      "primaryWorldBox": [
+        51200,
+        21504,
+        51315,
+        21619
+      ],
+      "inspectionNativeBox": [
+        60,
+        130,
+        365,
+        365
+      ],
+      "inspectionWorldBox": [
+        51145,
+        21519,
+        51450,
+        21754
+      ],
+      "recommendedContextWorldBox": [
+        51020,
+        21370,
+        51400,
+        21730
+      ],
+      "recommendation": "在上述四图角点用同一花叶结构做局部原生修复，保护红柱和屋瓦；同时处理左侧与底侧的断物体，不能只模糊横线。修复后重新核对两个接缝与四角。",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p23-mixed-flower-leaf-100pct.png",
+          "sha256": "2be0e0788a05d34d56f49acd7fead98475605de2e907aaa7b9dd0e3aff68fab5",
+          "pixels": [
+            305,
+            235
+          ],
+          "resized": false,
+          "blurred": false
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\intersection-r1-c2-100pct.png",
+          "sha256": "b06c18c26b424921bc8a2d348fc261b45f5041ec1e7ff26fa7cb929bfb326787",
+          "pixels": [
+            600,
+            600
+          ],
+          "resized": false,
+          "blurred": false
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\vertical-p22-p23-join-100pct.png",
+          "sha256": "1e2e318ff7f4bfd8145b0d1d4b2a53fae2512863bc3e2d75929623bbc83d6d4d",
+          "pixels": [
+            384,
+            1024
+          ],
+          "resized": false,
+          "blurred": false
+        }
+      ],
+      "knownBeforeThisReview": true
+    },
+    {
+      "id": "FULL-02",
+      "priority": "P2",
+      "status": "repair-required",
+      "title": "p43 前后檐口在连续瓦坡上突然形成台阶",
+      "sourceIds": [
+        "p42",
+        "p43"
+      ],
+      "primarySource": "p43",
+      "primaryNativeBox": [
+        200,
+        225,
+        545,
+        515
+      ],
+      "primaryWorldBox": [
+        51285,
+        23662,
+        51630,
+        23952
+      ],
+      "description": "p43 约 x=230 处，左侧瓦当/红檐梁的退后终止线突然跳到右侧更靠前的檐口；上方却是连续同坡瓦列，没有脊、谷或屋面折角解释深度变化。基线四角中呈明显前后两层阶梯。",
+      "recommendation": "按同一檐线统一末排瓦长与红檐梁，保留蓝瓦圆头花纹和梁下结构；修复时纳入左邻末排瓦当。修后复核p42/p43竖接缝及p33/p43横接缝。",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\complete-p43-eave-step-100pct.png",
+          "sha256": "bdc45dc5e3c28f0b9db3d71fc13e9abf498acb5c6867d810aa70479c4dbbe15f",
+          "sourceArtifact": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r3-c2-100pct.png",
+          "sourceArtifactSha256": "448bed22eb60a9293d3d9ee3bda6ec82fd041bf9794ca7b7500cd6948939acc7",
+          "sourceCrop": [
+            480,
+            500,
+            880,
+            850
+          ],
+          "tileBox": [
+            2078,
+            3122,
+            2478,
+            3472
+          ],
+          "worldBox": [
+            51230,
+            23602,
+            51630,
+            23952
+          ],
+          "nativePixels": [
+            400,
+            350
+          ],
+          "resized": false
+        }
+      ],
+      "parentRequestedCheck": "Confirmed visible eave step near p43 native x=230; final intended architecture is for parent to resolve."
+    },
+    {
+      "id": "FULL-03",
+      "priority": "P2",
+      "status": "repair-required",
+      "title": "左下两排屋瓦沿 x=50176 形成明显颜色断层",
+      "sourceIds": [
+        "p31",
+        "p32",
+        "p41",
+        "p42"
+      ],
+      "primaryWorldSeamX": 50176,
+      "primaryWorldBoxes": [
+        [
+          50136,
+          22528,
+          50216,
+          22978
+        ],
+        [
+          50136,
+          23552,
+          50216,
+          23902
+        ]
+      ],
+      "nativeBoxes": [
+        {
+          "source": "p31",
+          "box": [
+            1099,
+            115,
+            1139,
+            565
+          ]
+        },
+        {
+          "source": "p32",
+          "box": [
+            115,
+            115,
+            155,
+            565
+          ]
+        },
+        {
+          "source": "p41",
+          "box": [
+            1099,
+            115,
+            1139,
+            465
+          ]
+        },
+        {
+          "source": "p42",
+          "box": [
+            115,
+            115,
+            155,
+            465
+          ]
+        }
+      ],
+      "description": "屋瓦轮廓多数对齐，但色温/亮度在固定拼片竖线突然变化，且跨多条瓦列维持矩形边界；r2-c1与r3-c1四角均明显。",
+      "recommendation": "在不移动瓦列、不模糊边缘的前提下统一相邻屋瓦材质与光照；需要覆盖这条竖线的上下连续范围，并在四角复核。",
+      "measurements": [
+        {
+          "artifact": "intersection-r2-c1-100pct.png",
+          "axis": "vertical",
+          "coordinate": 450,
+          "span": [
+            480,
+            850
+          ],
+          "adjacentPixelMeanSignedRGBStep": [
+            12.6757,
+            38.2351,
+            38.7324
+          ],
+          "adjacentPixelMeanAbsoluteRGBStep": 35.1333,
+          "interpretation": "diagnostic supporting visible straight discontinuity; not an independent acceptance criterion"
+        },
+        {
+          "artifact": "intersection-r3-c1-100pct.png",
+          "axis": "vertical",
+          "coordinate": 450,
+          "span": [
+            80,
+            750
+          ],
+          "adjacentPixelMeanSignedRGBStep": [
+            -2.9224,
+            19.7463,
+            27.3388
+          ],
+          "adjacentPixelMeanAbsoluteRGBStep": 19.2652,
+          "interpretation": "diagnostic supporting visible straight discontinuity; not an independent acceptance criterion"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\complete-roof-color-r2-c1-100pct.png",
+          "sha256": "1392dfcc56b94fd9c4b051f32b452186bd64b97cef50745028902df0788d0079",
+          "sourceArtifact": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r2-c1-100pct.png",
+          "sourceArtifactSha256": "d391ac1c1b66f48b7b9ac771f99cad56ee6837d1c5ba6fda535a50a1255a2cc3",
+          "sourceCrop": [
+            350,
+            430,
+            600,
+            850
+          ],
+          "tileBox": [
+            924,
+            2028,
+            1174,
+            2448
+          ],
+          "worldBox": [
+            50076,
+            22508,
+            50326,
+            22928
+          ],
+          "nativePixels": [
+            250,
+            420
+          ],
+          "resized": false
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\complete-roof-color-r3-c1-100pct.png",
+          "sha256": "c1044d3497c3e3803704aa1827988798e81d417fb61955d926515daebb6fee85",
+          "sourceArtifact": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r3-c1-100pct.png",
+          "sourceArtifactSha256": "0dab0f7af22a1dba050eeaec9ba27e7982717e59d54a5325d053f0f403677e18",
+          "sourceCrop": [
+            350,
+            50,
+            600,
+            800
+          ],
+          "tileBox": [
+            924,
+            2672,
+            1174,
+            3422
+          ],
+          "worldBox": [
+            50076,
+            23152,
+            50326,
+            23902
+          ],
+          "nativePixels": [
+            250,
+            750
+          ],
+          "resized": false
+        }
+      ]
+    },
+    {
+      "id": "FULL-04",
+      "priority": "P3",
+      "status": "minor-material-continuity",
+      "title": "y=22528 墙面和红柱的轻微水平色阶",
+      "sourceIds": [
+        "p22",
+        "p23",
+        "p24",
+        "p32",
+        "p33",
+        "p34"
+      ],
+      "primaryWorldSeamY": 22528,
+      "inspectionWorldBoxes": [
+        [
+          51030,
+          22428,
+          51470,
+          22628
+        ],
+        [
+          51904,
+          22428,
+          52074,
+          22628
+        ]
+      ],
+      "description": "r2-c2及r2-c3四角可见沿核心区横切线的细浅明暗边，墙体/窗棂/柱线几何连续；程度低于左下屋瓦竖直色阶。",
+      "recommendation": "局部统一墙灰纹理和红柱光照，不改变窗格、柱边或阴影几何；无需因此整块重画。",
+      "measurements": [
+        {
+          "artifact": "intersection-r2-c3-100pct.png",
+          "axis": "horizontal",
+          "coordinate": 450,
+          "span": [
+            170,
+            260
+          ],
+          "adjacentPixelMeanSignedRGBStep": [
+            4.7111,
+            9.3889,
+            11.0
+          ],
+          "adjacentPixelMeanAbsoluteRGBStep": 8.3741,
+          "interpretation": "diagnostic supporting visible straight discontinuity; not an independent acceptance criterion"
+        }
+      ],
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\complete-wall-horizontal-tone-100pct.png",
+          "sha256": "4d5763c35c37431078ae970527876054f9f2ff63b427c9acc5f55663f6045877",
+          "sourceArtifact": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r2-c3-100pct.png",
+          "sourceArtifactSha256": "482dc953a3d6254443711f32b1fca98dbef9092ae59a100ee2dcf805343c5d5c",
+          "sourceCrop": [
+            130,
+            350,
+            300,
+            550
+          ],
+          "tileBox": [
+            2752,
+            1948,
+            2922,
+            2148
+          ],
+          "worldBox": [
+            51904,
+            22428,
+            52074,
+            22628
+          ],
+          "nativePixels": [
+            170,
+            200
+          ],
+          "resized": false
+        }
+      ]
+    },
+    {
+      "id": "FULL-05",
+      "priority": "P3",
+      "status": "minor-local-softness",
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "title": "p12 左上继承花簇局部偏软",
+      "description": "小花的花心、花瓣轮廓明显比同一裁片下方大花柔软，但花枝方向连续，没有发现重复、错位或断裂。此项为局部清晰度建议，不认定整张原生图被放大。",
+      "primarySource": "p12",
+      "primaryNativeBox": [
+        115,
+        115,
+        280,
+        245
+      ],
+      "primaryWorldBox": [
+        50176,
+        20480,
+        50341,
+        20610
+      ],
+      "inspectionNativeBox": [
+        80,
+        80,
+        360,
+        370
+      ],
+      "inspectionWorldBox": [
+        50141,
+        20445,
+        50421,
+        20735
+      ],
+      "recommendation": "若继续统一花簇清晰度，只处理这些小花的花心和轮廓，同时保持左邻已有花枝位置。",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa\\p12-upper-flower-softness-100pct.png",
+          "sha256": "10be6f9c6f84895376b649daa987fafdb3631795a7d25f3e2c2835c21c55ad7e",
+          "pixels": [
+            280,
+            290
+          ],
+          "resized": false,
+          "blurred": false
+        }
+      ],
+      "knownBeforeThisReview": true
+    }
+  ],
+  "reviewedArtifacts": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p11-p12-join-100pct.png",
+      "sha256": "ac2fe45f31f4828cf933c1b36d3540ad9fd6792b6105430e1ce6122ba63c813e",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        832,
+        0,
+        1216,
+        1024
+      ],
+      "worldBox": [
+        49984,
+        20480,
+        50368,
+        21504
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p11",
+        "p12"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-05"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p12-p13-join-100pct.png",
+      "sha256": "d5b1b257ecd0b44b97b34fb966360f22003fdf1ffefae2ac0f50ad06ad308bd7",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1856,
+        0,
+        2240,
+        1024
+      ],
+      "worldBox": [
+        51008,
+        20480,
+        51392,
+        21504
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p12",
+        "p13"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p13-p14-join-100pct.png",
+      "sha256": "cc90229ae14f1a59e3336d0c87302d1382fbdcc5d8b5653acd74cd46a549be89",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2880,
+        0,
+        3264,
+        1024
+      ],
+      "worldBox": [
+        52032,
+        20480,
+        52416,
+        21504
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p13",
+        "p14"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p21-p22-join-100pct.png",
+      "sha256": "c7b75eafb6decac8d5b0519f3241782ecf12777def31f0bd5fca5ec32c9e1f2d",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        832,
+        1024,
+        1216,
+        2048
+      ],
+      "worldBox": [
+        49984,
+        21504,
+        50368,
+        22528
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p21",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p22-p23-join-100pct.png",
+      "sha256": "1e2e318ff7f4bfd8145b0d1d4b2a53fae2512863bc3e2d75929623bbc83d6d4d",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1856,
+        1024,
+        2240,
+        2048
+      ],
+      "worldBox": [
+        51008,
+        21504,
+        51392,
+        22528
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p22",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-01"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p23-p24-join-100pct.png",
+      "sha256": "63d475164871e0677f674dc5f4880ae5c81cc7dfa218902a5501961d356f16c7",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2880,
+        1024,
+        3264,
+        2048
+      ],
+      "worldBox": [
+        52032,
+        21504,
+        52416,
+        22528
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p23",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p31-p32-join-100pct.png",
+      "sha256": "3bfbb1e90ef3a22c883f94b3c23d5be9a52fd9b918588ad51c76109fd3b2af87",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        832,
+        2048,
+        1216,
+        3072
+      ],
+      "worldBox": [
+        49984,
+        22528,
+        50368,
+        23552
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p31",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-03"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p32-p33-join-100pct.png",
+      "sha256": "d0d91654fec44f321520944ea5b95d6ae8e380eb76bf2190ccc91cc05fca7448",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1856,
+        2048,
+        2240,
+        3072
+      ],
+      "worldBox": [
+        51008,
+        22528,
+        51392,
+        23552
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p32",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p33-p34-join-100pct.png",
+      "sha256": "97a7f6baaf6feab412d1aedc7050467c4b71315d8396c121fcdb3743c2a0a4f8",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2880,
+        2048,
+        3264,
+        3072
+      ],
+      "worldBox": [
+        52032,
+        22528,
+        52416,
+        23552
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p33",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p41-p42-join-100pct.png",
+      "sha256": "606e62e322f61e3b8f62bf153c025460e01c0783126ae05d77968f88af33dfe9",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        832,
+        3072,
+        1216,
+        4096
+      ],
+      "worldBox": [
+        49984,
+        23552,
+        50368,
+        24576
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p41",
+        "p42"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-03"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p42-p43-join-100pct.png",
+      "sha256": "f72d133cb52a9b499b6e7f1e009c97d2ddf39fcc5f93b67984340ce1b9ccf0cf",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1856,
+        3072,
+        2240,
+        4096
+      ],
+      "worldBox": [
+        51008,
+        23552,
+        51392,
+        24576
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p42",
+        "p43"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-02"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\vertical-p43-p44-join-100pct.png",
+      "sha256": "3c9ef38600294c9810a72a89d78670a444b9c1795a4f6690dc588a911a617c57",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2880,
+        3072,
+        3264,
+        4096
+      ],
+      "worldBox": [
+        52032,
+        23552,
+        52416,
+        24576
+      ],
+      "pixels": [
+        384,
+        1024
+      ],
+      "sourceIds": [
+        "p43",
+        "p44"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p11-p21-join-100pct.png",
+      "sha256": "51d99b86f179178c87d5e4d3b0faa73d1f5a4ba098eab2da0217140f1b84c52d",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        0,
+        832,
+        1024,
+        1216
+      ],
+      "worldBox": [
+        49152,
+        21312,
+        50176,
+        21696
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p11",
+        "p21"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p12-p22-join-100pct.png",
+      "sha256": "8d4ea470e0ef89379e53126099ca41363e58a78858d9495d932ea67430b91ec7",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1024,
+        832,
+        2048,
+        1216
+      ],
+      "worldBox": [
+        50176,
+        21312,
+        51200,
+        21696
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p12",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p13-p23-join-100pct.png",
+      "sha256": "93aa719a9e8251794ba30b95e8371e676c6f30abb7f0ebe0aeff7e1c1f0ddcb7",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2048,
+        832,
+        3072,
+        1216
+      ],
+      "worldBox": [
+        51200,
+        21312,
+        52224,
+        21696
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p13",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-01"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p14-p24-join-100pct.png",
+      "sha256": "26f209ad83e18957fd545d31e9b439a0c7b98c2f6dab0103e63c6291d80cf917",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        3072,
+        832,
+        4096,
+        1216
+      ],
+      "worldBox": [
+        52224,
+        21312,
+        53248,
+        21696
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p14",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p21-p31-join-100pct.png",
+      "sha256": "02aa5ae0ae6d6e052451d343263d50d10f5c88d3e07f0d2cac975226c26fe53c",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        0,
+        1856,
+        1024,
+        2240
+      ],
+      "worldBox": [
+        49152,
+        22336,
+        50176,
+        22720
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p21",
+        "p31"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p22-p32-join-100pct.png",
+      "sha256": "1577821b43953f80084024c7d30531fe7a669e32513380329ce5c213849748c1",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1024,
+        1856,
+        2048,
+        2240
+      ],
+      "worldBox": [
+        50176,
+        22336,
+        51200,
+        22720
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p22",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-03",
+        "FULL-04"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p23-p33-join-100pct.png",
+      "sha256": "9cabb2985936d328b0d487b6db02ddbb0d61ea560aa664d05a5fa78ab87ceeff",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2048,
+        1856,
+        3072,
+        2240
+      ],
+      "worldBox": [
+        51200,
+        22336,
+        52224,
+        22720
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p23",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-04"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p24-p34-join-100pct.png",
+      "sha256": "a64b75e1a45224474c2fffe59e25a6f1b4d4adb17a79e76c0c7ab10c9ba8ce1b",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        3072,
+        1856,
+        4096,
+        2240
+      ],
+      "worldBox": [
+        52224,
+        22336,
+        53248,
+        22720
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p24",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-04"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p31-p41-join-100pct.png",
+      "sha256": "4fcb935705efbef35d4a5a9f849e0cf645c66f056fdf0576505bfef39cd40d6e",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        0,
+        2880,
+        1024,
+        3264
+      ],
+      "worldBox": [
+        49152,
+        23360,
+        50176,
+        23744
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p31",
+        "p41"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p32-p42-join-100pct.png",
+      "sha256": "6fe304591616911684109bd947ecc1e6195c806051e82ef126037230641ce0ec",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        1024,
+        2880,
+        2048,
+        3264
+      ],
+      "worldBox": [
+        50176,
+        23360,
+        51200,
+        23744
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p32",
+        "p42"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p33-p43-join-100pct.png",
+      "sha256": "7f47a28f72c3fddfc3fe335cf7a21d5fdf7c3f06633ec8287a733a26cb97681c",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        2048,
+        2880,
+        3072,
+        3264
+      ],
+      "worldBox": [
+        51200,
+        23360,
+        52224,
+        23744
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p33",
+        "p43"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-02"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\horizontal-p34-p44-join-100pct.png",
+      "sha256": "51415f0a19a5f26c43f26d9cc9d4075550f130d1432fd9fa3d4326636c9ac801",
+      "kind": "native-pixel-seam-crop",
+      "tileBox": [
+        3072,
+        2880,
+        4096,
+        3264
+      ],
+      "worldBox": [
+        52224,
+        23360,
+        53248,
+        23744
+      ],
+      "pixels": [
+        1024,
+        384
+      ],
+      "sourceIds": [
+        "p34",
+        "p44"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r1-c1-100pct.png",
+      "sha256": "601ccfca0fc250fc5f15c62e1c124548f57227be3a15e47fad92d62640f8a654",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        574,
+        574,
+        1474,
+        1474
+      ],
+      "worldBox": [
+        49726,
+        21054,
+        50626,
+        21954
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p11",
+        "p12",
+        "p21",
+        "p22"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r1-c2-100pct.png",
+      "sha256": "8205a9abeecae155b71040beaba621092f8cbfab77251dc6358625bb5ee72548",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        1598,
+        574,
+        2498,
+        1474
+      ],
+      "worldBox": [
+        50750,
+        21054,
+        51650,
+        21954
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p12",
+        "p13",
+        "p22",
+        "p23"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-01"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r1-c3-100pct.png",
+      "sha256": "7306b20e563c778e21f2efc570bee34ae495d3480aff2c3ab81be61ca9d887a9",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        2622,
+        574,
+        3522,
+        1474
+      ],
+      "worldBox": [
+        51774,
+        21054,
+        52674,
+        21954
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p13",
+        "p14",
+        "p23",
+        "p24"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r2-c1-100pct.png",
+      "sha256": "d391ac1c1b66f48b7b9ac771f99cad56ee6837d1c5ba6fda535a50a1255a2cc3",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        574,
+        1598,
+        1474,
+        2498
+      ],
+      "worldBox": [
+        49726,
+        22078,
+        50626,
+        22978
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p21",
+        "p22",
+        "p31",
+        "p32"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-03"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r2-c2-100pct.png",
+      "sha256": "a7a84ff8487f0e76a2e2162b9deab602b563f08a5bcb61b2bfc90762611a25d6",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        1598,
+        1598,
+        2498,
+        2498
+      ],
+      "worldBox": [
+        50750,
+        22078,
+        51650,
+        22978
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p22",
+        "p23",
+        "p32",
+        "p33"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-04"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r2-c3-100pct.png",
+      "sha256": "482dc953a3d6254443711f32b1fca98dbef9092ae59a100ee2dcf805343c5d5c",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        2622,
+        1598,
+        3522,
+        2498
+      ],
+      "worldBox": [
+        51774,
+        22078,
+        52674,
+        22978
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p23",
+        "p24",
+        "p33",
+        "p34"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-04"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r3-c1-100pct.png",
+      "sha256": "0dab0f7af22a1dba050eeaec9ba27e7982717e59d54a5325d053f0f403677e18",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        574,
+        2622,
+        1474,
+        3522
+      ],
+      "worldBox": [
+        49726,
+        23102,
+        50626,
+        24002
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p31",
+        "p32",
+        "p41",
+        "p42"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-03"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r3-c2-100pct.png",
+      "sha256": "448bed22eb60a9293d3d9ee3bda6ec82fd041bf9794ca7b7500cd6948939acc7",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        1598,
+        2622,
+        2498,
+        3522
+      ],
+      "worldBox": [
+        50750,
+        23102,
+        51650,
+        24002
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p32",
+        "p33",
+        "p42",
+        "p43"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [
+        "FULL-02"
+      ],
+      "status": "see linked finding; some defects lie inside context crop rather than exactly on core cut"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\core-baseline\\6c2e5c13cfbe255b4af6\\intersection-r3-c3-100pct.png",
+      "sha256": "889f6b336454bd78d5d6fb75f148f2a9ec3787d1f655ca4b2a81e527574b56eb",
+      "kind": "native-pixel-intersection-crop",
+      "tileBox": [
+        2622,
+        2622,
+        3522,
+        3522
+      ],
+      "worldBox": [
+        51774,
+        23102,
+        52674,
+        24002
+      ],
+      "pixels": [
+        900,
+        900
+      ],
+      "sourceIds": [
+        "p33",
+        "p34",
+        "p43",
+        "p44"
+      ],
+      "viewedAtOriginalPixels": true,
+      "findingIds": [],
+      "status": "no additional P2 geometry or color defect identified in this crop"
+    }
+  ],
+  "decision": "Do not mark this baseline internally accepted until FULL-01/FULL-02/FULL-03 are repaired and rechecked.",
+  "limits": [
+    "Parent p23 repair is not included or awaited.",
+    "External tile borders are outside this review.",
+    "No runtime, client or model research performed."
+  ],
+  "writes": {
+    "directory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\upper-existing-qa",
+    "productionFilesModified": false,
+    "nativeModified": false,
+    "selectionModified": false,
+    "candidateModified": false,
+    "progressModified": false,
+    "imageGenerationCalls": 0
+  }
+}

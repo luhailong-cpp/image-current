@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "status": "provisional_manual_direction_calibration_dynamic_pending",
+  "targetRoot": [
+    512,
+    942
+  ],
+  "default": {
+    "scaledCanvas": [
+      901,
+      901
+    ],
+    "offset": [
+      61,
+      106
+    ],
+    "nativeRoot": [
+      628,
+      1164
+    ]
+  },
+  "directions": {
+    "W": {
+      "scaledCanvas": [
+        901,
+        901
+      ],
+      "offset": [
+        41,
+        118
+      ],
+      "nativeRoot": [
+        655,
+        1147
+      ]
+    },
+    "S": {
+      "scaledCanvas": [
+        825,
+        825
+      ],
+      "offset": [
+        100,
+        163
+      ],
+      "nativeRoot": [
+        627,
+        1184
+      ]
+    },
+    "SE": {
+      "scaledCanvas": [
+        835,
+        835
+      ],
+      "offset": [
+        46,
+        146
+      ],
+      "nativeRoot": [
+        700,
+        1195
+      ]
+    },
+    "SW": {
+      "scaledCanvas": [
+        901,
+        901
+      ],
+      "offset": [
+        61,
+        140
+      ],
+      "nativeRoot": [
+        628,
+        1116
+      ]
+    }
+  },
+  "method": "完整原生画布按每方向一组固定参数缩放平移。S/SE以头颅、脸、衣服及落地母版人工比较做候选校准，不逐帧包围盒拟合，不逐帧贴地。方向参数仍待完整动态确认。",
+  "basis": [
+    "S: generation/run/S/01-v1.png 与09-v1.png的落地参考；头脸占幅较E母版大约一档，整组统一825/1254。",
+    "SE: generation/run/SE/01-v4.png、09-v2.png落地母版，骨盆投影约x700、落地约y1195，整组统一835/1254。",
+    "E/W沿review旧combat原生母版固定901/1254，跨动作整体相同。",
+    "SW: 实看01-v1、02-v2、03-v4、09-v4、10-v2、11-v2平底/接触候选，支撑带约1102–1138；以01-v1接触与该带中段1116设名义根高。固定901/1254整组偏移(61,140)，纠正误用E的1164原生根高导致整组偏悬；未对任何帧单独贴地，真实世界地面和相位仍待动态。"
+  ],
+  "framewiseFit": false,
+  "artApproved": false,
+  "calibrationUpdatedAt": "2026-10-03T13:15:46.781830+00:00"
+}

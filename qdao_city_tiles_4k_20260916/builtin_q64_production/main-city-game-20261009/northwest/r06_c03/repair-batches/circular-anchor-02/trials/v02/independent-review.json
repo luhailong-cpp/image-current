@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T14:52:31.572Z",
+  "reviewer": "/root/resume_r06_c03_fullqa/r06_c03_pending_qa",
+  "status": "needs_repair_right_perimeter_material",
+  "scope": "Independent visual review of circular-anchor-02 native source, edit target and exactly the four v02 native perimeter crops. The 4096 candidate was hash-checked; no overview substituted for perimeter review.",
+  "input": {
+    "editTarget": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\edit-target.png",
+      "sha256": "38a84b78aa2604f2e7b77822db1f31c21035f5a86ab2a244450c58fb4a06ba9a",
+      "actuallyViewed": true
+    },
+    "nativeSource": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\native.png",
+      "sha256": "f29c433dd18b3e879dbc5b5a80ab15ebc96a16d97f4ef1745a905e7cce1df484",
+      "actuallyViewed": true,
+      "nativePixels": [
+        1254,
+        1254
+      ]
+    },
+    "candidate": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\trials\\v02\\candidate.png",
+      "sha256": "fe7335ffbb72053207f9a0d3db824902af56674cecf82ab3f0568d560b0ad9af",
+      "actuallyViewed": false,
+      "hashVerifiedAgainstManifest": true
+    }
+  },
+  "sourceROI": [
+    390,
+    285,
+    1254,
+    925
+  ],
+  "tileROI": [
+    2720,
+    1755,
+    3584,
+    2395
+  ],
+  "sourceReview": {
+    "geometryVerdict": "pass",
+    "materialInsideRepairVerdict": "pass",
+    "notes": "The original huge vertical truncation of the circular rim and the rectangular split in the leaf are removed. Native source now has a continuous rounded wooden/gold frame, coherent cast shadow and an uninterrupted leaf/vein. This source-level success does not automatically pass its binary-paste perimeter."
+  },
+  "perimeters": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\trials\\v02\\top.png",
+      "tileCropLTRB": [
+        2640,
+        1675,
+        3664,
+        1835
+      ],
+      "sha256": "30a8d20b36749fbfe8b57765ae831f424e6a966ff6ad83979aa76980b7f1339a",
+      "side": "top",
+      "actuallyViewed": true,
+      "viewMethod": "view_image detail=original",
+      "geometryVerdict": "pass",
+      "materialVerdict": "pass",
+      "verdict": "pass",
+      "notes": "Paper grain, leaf stem and gold rim contours meet across the horizontal patch boundary. No definite new cut or straight tonal step in the native perimeter crop."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\trials\\v02\\bottom.png",
+      "tileCropLTRB": [
+        2640,
+        2315,
+        3664,
+        2475
+      ],
+      "sha256": "653ef50b732be761f46ae5d9bdc77f6cbc101e46beb08fa57e0567ffb3f6ec80",
+      "side": "bottom",
+      "actuallyViewed": true,
+      "viewMethod": "view_image detail=original",
+      "geometryVerdict": "pass",
+      "materialVerdict": "pass",
+      "verdict": "pass",
+      "notes": "Cream plaster grain and lower timber top remain continuous across the horizontal patch boundary. No definite new seam requiring repair."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\trials\\v02\\left.png",
+      "tileCropLTRB": [
+        2640,
+        1675,
+        2800,
+        2475
+      ],
+      "sha256": "13e4ac689c964acaf90bf25a17d2e49d36f181755f4b5b39d94caf6622dd0603",
+      "side": "left",
+      "actuallyViewed": true,
+      "viewMethod": "view_image detail=original",
+      "geometryVerdict": "pass",
+      "materialVerdict": "pass",
+      "verdict": "pass",
+      "notes": "Gold/wood rim curves and its shadow remain continuous across the vertical patch boundary; no clipped silhouette or definite new hard material seam."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\circular-anchor-02\\trials\\v02\\right.png",
+      "tileCropLTRB": [
+        3504,
+        1675,
+        3664,
+        2475
+      ],
+      "sha256": "f140ab91dea6cf3175c4b71c9e9e5313937f1a2d8dcb6962c255000f1a7743df",
+      "side": "right",
+      "actuallyViewed": true,
+      "viewMethod": "view_image detail=original",
+      "geometryVerdict": "pass",
+      "materialVerdict": "needs_repair",
+      "verdict": "needs_repair",
+      "notes": "Geometry of paper/rim/gold fascia connects, but a faint straight vertical change of paper/wood brush texture and lower shadow is visible at crop x80 (tile x3584), most apparent through the diagonal wood rim around crop y350..535 and shadow/plaster around y610..700. Keep this local material perimeter not passed; it is much smaller than the original geometry defect."
+    }
+  ],
+  "passedPerimeterCount": 3,
+  "needsRepairPerimeterCount": 1,
+  "geometryFixed": true,
+  "formalAccepted": false,
+  "fullTileAccepted": false,
+  "adoptionRecommendation": "Keep native source as a useful repair candidate; v02 rectangle should not be recorded as fully accepted while right-edge material boundary remains. No images were changed during this independent review.",
+  "imagesModified": false,
+  "sourceResampled": false,
+  "sourceRecolored": false,
+  "binaryNativeSelectionAsManifest": true
+}

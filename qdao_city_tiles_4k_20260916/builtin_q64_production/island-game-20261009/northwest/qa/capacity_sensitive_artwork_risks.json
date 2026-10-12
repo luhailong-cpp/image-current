@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "zone": "northwest",
+  "purpose": "Read-only observations for the parent capacity/layout gate; not a navigation or population validation.",
+  "layoutAuthority": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+  "layoutSha256": "e7a06f547274a29a01cc4e20223637e99c0fab534d4982361e824147c800b34f",
+  "worldSize": null,
+  "characterFootprint": null,
+  "walkableAreaMeasured": false,
+  "navigationValidated": false,
+  "capacity5000Validated": false,
+  "artCanvasUnchanged": [57344, 57344],
+  "formalGridUnchanged": [14, 14],
+  "zoneTileTargetUnchanged": 49,
+  "currentCoverageLimit": "Only one 4096 tile fully covered; remaining generated coordinates are partial neighboring tiles. This is not enough to infer whole-zone usable area or a 5000-player capacity.",
+  "risks": [
+    {
+      "id": "first_residence_entry",
+      "tiles": ["r03_c03", "r03_c04"],
+      "observed": "Roof, wall, doorway and steps occupy the intended first residence region. r03_c03 v5 has continuous local steps and front paving after native repairs. Full stair width and courtyard exit extend into unfinished r03_c04.",
+      "capacityImplication": "Do not infer complete entry connectivity or an effective doorway/step width from the finished portion.",
+      "requiredBeforeRelease": "Parent footprint and passage check against approved layout; complete cross-tile edge checks when allowed to resume."
+    },
+    {
+      "id": "front_firework_footprints",
+      "tiles": ["r03_c03", "r04_c03"],
+      "observed": "r03_c03 preserves the two existing wall-side firework tubes. r04_c03 s01_02 a01 mistakenly made flat red paper into another upright tube; a02 restores flat paper. Do not select the erroneous added tube.",
+      "capacityImplication": "Interpreting flat decoration as a standing object can create an artificial obstacle or narrow a route.",
+      "requiredBeforeRelease": "Use explicit corrected candidate selections and inspect object identity/footprint from larger layout context."
+    },
+    {
+      "id": "courtyard_fence_posts",
+      "tiles": ["r04_c03"],
+      "observed": "Right fence post in initial s01_03 a02 / s01_04 a01 was shifted left. New s01_03 a03 / s01_04 a02 moves it toward approved coordinates, pending full row check. s02_01 a01 contains an invented or displaced full left ball-topped post; the real post is mostly outside the left crop.",
+      "capacityImplication": "A shifted or invented fence post changes the apparent courtyard opening, so this region remains unsuitable for route/area acceptance.",
+      "requiredBeforeRelease": "Keep flagged versions unaccepted; after gate release remove the wrong post according to actual layout, without adding an upper post to accommodate it.",
+      "evidence": "qa/r04_c03_left_pillar_independent_review.json"
+    },
+    {
+      "id": "roof_intrusion",
+      "tiles": ["r04_c03"],
+      "observed": "s02_04 a01 adds an extra curled roof corner and lowers a railing foot. s02_01 a01 has roof-ridge location concerns. Both remain unaccepted.",
+      "capacityImplication": "Extra roof/rail geometry can visually conceal an intended route and distort later obstacle interpretation.",
+      "requiredBeforeRelease": "Evaluate full roof object and corridor boundary before any further generation; no repair during the active gate."
+    },
+    {
+      "id": "sword_residence_west_side",
+      "tiles": ["r03_c02"],
+      "observed": "s01_04 a02 restores angular sword-guard fragment and removes invented secondary roof curl. s01_03 a01 has right-overlap paving discontinuities and a shifted stone column, so it is not a usable finished join.",
+      "capacityImplication": "The sword courtyard's exact side passage boundary has not yet been established by finished native coverage.",
+      "requiredBeforeRelease": "Keep the source and risk record; do not count unfinished side paving toward verified walkable area.",
+      "evidence": "qa/r03_c02_row1/current_review.json"
+    },
+    {
+      "id": "external_core_boundaries",
+      "tiles": ["r03_c03", "r03_c04", "r04_c03", "r03_c02"],
+      "observed": "Several native-neighbor pairs are continuous under same-coordinate minimum-error source selection but retain visible tonal or roof-edge changes at the fixed core115 cut.",
+      "capacityImplication": "Native pair continuity is not equivalent to accepted shared4096 edges. Full shared boundaries and four-tile junction are unverified.",
+      "requiredBeforeRelease": "After scale/layout validation, close the existing contiguous 2x2 sample and verify all shared boundaries using native source selection. Do not enlarge, warp, recolor or infer navigation acceptance."
+    }
+  ],
+  "policy": "Preserve existing artwork. No new imagegen or new coordinates while parent gate remains active. This zone must not release the gate or alter world size, character scale, canvas or tile count."
+}

@@ -1,0 +1,140 @@
+{
+  "reviewedAtUtc": "2026-10-10T11:07:36.380522+00:00",
+  "tile": "r09_c04",
+  "candidate": "qa/c04-hardseam-v01-candidate-4096.png",
+  "candidateSha256": "fd5bf3006c1da205dd09b3befdb46c954523e972ad5d196dd5d40bcefc581673",
+  "reviewStatus": "needs-local-repair; not formal acceptance",
+  "coordinateConvention": "local [x0,y0,x1,y1], c04 origin global [12288,32768]; negative local x refers to actual c03 neighbor",
+  "nativeVisualCoverage": {
+    "allNineInternalCrosses": true,
+    "allTwelveVerticalSeamStrips": true,
+    "allTwelveHorizontalSeamStrips": true,
+    "actualLeftJoinAll4096Pixels": true,
+    "rightAndBottomBoundaryStripsAll4096Pixels": true,
+    "cropsAreIntegerCoordinateNoResample": true
+  },
+  "provenance": "qa/c04-independent-provenance-check.json; 16 source hashes match and 16777216 pixels independently match same-coordinate selected source pixels, zero mismatches",
+  "issues": [
+    {
+      "id": "left-edge-black-rectangle",
+      "severity": "must-fix",
+      "localBox": [
+        0,
+        2048,
+        120,
+        2163
+      ],
+      "globalBox": [
+        12288,
+        34816,
+        12408,
+        34931
+      ],
+      "evidence": [
+        "c04-independent-left-edge-3.png",
+        "c04-independent-horiz-2048-col1.png"
+      ],
+      "finding": "Door wood has an unmistakable dark rectangular source-color block. Top and right boundaries are straight and unrelated to architecture.",
+      "repairAdvice": "Repair coherent surrounding door/beam area; preserve the red diamond placard and vertical wood geometry."
+    },
+    {
+      "id": "left-edge-color-cut",
+      "severity": "must-fix-for-cross-tile-finish",
+      "localBox": [
+        -150,
+        1300,
+        220,
+        2048
+      ],
+      "globalBox": [
+        12138,
+        34068,
+        12508,
+        34816
+      ],
+      "evidence": [
+        "c04-independent-left-edge-2.png"
+      ],
+      "finding": "The actual c03-v04/c04 join at x=0 carries a long vertical color break through blue tiles and wood beams, while all outline geometry is continuous.",
+      "repairAdvice": "Use actual c03-v04 pixels as the left anchor when repairing c04. A narrow rectangle-only correction below does not eliminate this upper seam."
+    },
+    {
+      "id": "bamboo-light-cut",
+      "severity": "must-fix",
+      "localBox": [
+        2700,
+        900,
+        3360,
+        1150
+      ],
+      "globalBox": [
+        14988,
+        33668,
+        15648,
+        33918
+      ],
+      "evidence": [
+        "c04-independent-cross-3072-1024.png",
+        "c04-independent-horiz-1024-col3.png",
+        "c04-independent-horiz-1024-col4.png"
+      ],
+      "finding": "A diagonal and zigzag tonal source boundary crosses background bamboo around the first horizontal join. Contours mostly agree, but the sudden dark/light region is visibly a mosaic cut at native scale.",
+      "repairAdvice": "Treat the bamboo junction as one coherent patch and preserve stalk positions and leaf clusters; no layout redesign."
+    },
+    {
+      "id": "cylinder-gold-and-pavement-step",
+      "severity": "must-fix",
+      "localBox": [
+        2330,
+        2980,
+        2530,
+        3140
+      ],
+      "globalBox": [
+        14618,
+        35748,
+        14818,
+        35908
+      ],
+      "evidence": [
+        "c04-independent-cylinder-gold-step-100pct.png",
+        "c04-independent-horiz-3072-col3.png"
+      ],
+      "finding": "At about local x=2374,y=3052, the red cylinder right gold strip and silhouette step right by roughly 5-7 pixels. The same join runs into an artificial jagged lighting boundary on the pavement toward the urn.",
+      "repairAdvice": "Repair cylinder right outline and immediately adjacent pavement together. Keep urn belly/foot and cylinder ornament positions."
+    },
+    {
+      "id": "white-wall-tone",
+      "severity": "recommended-polish",
+      "localBox": [
+        960,
+        1430,
+        1135,
+        1760
+      ],
+      "globalBox": [
+        13248,
+        34198,
+        13423,
+        34528
+      ],
+      "evidence": [
+        "c04-independent-vert-1024-row2.png"
+      ],
+      "finding": "A narrow jagged vertical light/color boundary in the ivory wall follows the source join. It is weaker than the above defects and does not break geometry.",
+      "repairAdvice": "If polishing, cover connected wall shadow under the beam. Do not repaint or shift the framed red placard."
+    }
+  ],
+  "acceptable": [
+    "Urn lid knob, cover rim, shoulder band, body, side handles and foot ring are coherent across internal seams. Existing gently faceted paint and faint value variation do not justify whole-object redrawing.",
+    "Lantern rim, flower motif, hanger and tassel connect; small changes in paint sheen are acceptable at current review.",
+    "Roof curl, blue tiles and gold eaves have continuous shape. No redesign requested from low-resolution overview uncertainty.",
+    "All stairs, side cheek, column base, paving joints and existing green-gold instrument support remain coherent at bottom and right boundaries.",
+    "Bamboo leaf and stalk shapes generally agree; the named light-cut area requires tone continuity work, not moving stalks."
+  ],
+  "limitations": [
+    "Right and bottom were inspected as current-tile boundary content only; adjacent c05/r10 images were not available for full neighbor acceptance.",
+    "This is art and native pixel QA only; no game/capacity/runtime tests performed.",
+    "No generation, source images, progress, or index modified. Only qa/c04-independent-* artifacts were created."
+  ]
+}

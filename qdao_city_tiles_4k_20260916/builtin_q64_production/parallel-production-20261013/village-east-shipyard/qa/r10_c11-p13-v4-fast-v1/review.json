@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T16:05:52.539683+00:00",
+  "reviewType": "independent_fast_recheck_east_geometry_and_west_seam",
+  "tile": "r10_c11",
+  "patch": "p13",
+  "version": 4,
+  "status": "anchor_ready_pending_consolidated_QA",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p13-v4.png",
+    "sha256": "7087fb9728a86d30eff91882a0688f1332f6196107e3e511bd40f96b7edc9586",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p13-v2-layout-only.png",
+    "sha256": "6765ca14ae5bee8d991d72c056f3bb48176e12fc31c405230355483e85f0b2b8",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "westAnchor": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p12-v2.png",
+    "sha256": "f41ddaae2b885f152c23298e88903abf65b1325b642bfc6afff32d49ffc5e1ea",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "canAnchor": {
+    "p14_east": true,
+    "p23_south": true
+  },
+  "decision": "Allow p14 east and p23 south continuation. The elevated rear beam is back in the intended guide band; the candidate retains one existing rack support and no additional bottom post cap or lower-left rail. The west core seam is continuous.",
+  "previousBlockerRecheck": [
+    {
+      "id": "B1_east_rack_beams_too_high",
+      "status": "major_offset_resolved_for_anchor_use",
+      "sharedCoreX": 1139,
+      "observed": "Rear beam and grey inset now meet the intended east guide region. The front beam has a smaller downward residual rather than the former upward displacement; its coherent diagonal course can continue without an abrupt geometric step."
+    },
+    {
+      "id": "v3_extra_bottom_post",
+      "status": "absent_in_v4",
+      "observed": "The south region is open deck; the unwanted v3 bottom cap/rail does not exist in v4."
+    }
+  ],
+  "quickChecks": [
+    {
+      "check": "west_true_core_join",
+      "status": "no_blocker_observed",
+      "sourceBoundaryX": 1139,
+      "candidateBoundaryX": 115,
+      "evidence": "west-core-seam-100pct.png"
+    },
+    {
+      "check": "south_outgoing_area",
+      "status": "no_blocker_observed",
+      "observed": "Full native image shows continuous open-deck south overlap without a new object crossing the edge."
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_front_beam_small_vertical_residual",
+      "status": "pending_consolidated_QA",
+      "nativeRegionApprox": [
+        1024,
+        550,
+        1254,
+        900
+      ],
+      "observed": "Front beam appears about 40-70 px below the blurred guide center/contour estimate at the eastern outlet. Keep this recorded for consolidated tile QA. The guide has soft boundaries, and the remaining offset is insufficient here to justify halting continuous production."
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidence": [
+    {
+      "file": "east-native-guide-100pct.png",
+      "size": [
+        460,
+        850
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            1024,
+            100,
+            1254,
+            950
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "guide",
+          "crop": [
+            1024,
+            100,
+            1254,
+            950
+          ],
+          "paste": [
+            230,
+            0
+          ]
+        }
+      ],
+      "pixelExactCropCompositionVerified": true,
+      "sha256": "74ef7300580c9caf15ddf0f892d5a0c9fe11d320f51d4283e66572d4c4c32dd1"
+    },
+    {
+      "file": "west-core-seam-100pct.png",
+      "size": [
+        512,
+        1024
+      ],
+      "segments": [
+        {
+          "input": "west",
+          "crop": [
+            883,
+            115,
+            1139,
+            1139
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "candidate",
+          "crop": [
+            115,
+            115,
+            371,
+            1139
+          ],
+          "paste": [
+            256,
+            0
+          ]
+        }
+      ],
+      "pixelExactCropCompositionVerified": true,
+      "sha256": "72df9c2837ebe013b084f4967f850823bfb12a2bd2a56567a572832461bb5931"
+    }
+  ],
+  "candidateViewedAt100Percent": true,
+  "evidenceViewedAt100Percent": true,
+  "evidenceReusedFromProducerAndPixelVerified": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateChanged": false,
+    "sourcesChanged": false,
+    "gitTouched": false,
+    "overviewRebuilt": false,
+    "formalFullTileAcceptance": false
+  },
+  "recommendedNextStep": "Continue p14 and p23 from this exact native version; keep pending front-beam residual for consolidated QA, not formal acceptance."
+}

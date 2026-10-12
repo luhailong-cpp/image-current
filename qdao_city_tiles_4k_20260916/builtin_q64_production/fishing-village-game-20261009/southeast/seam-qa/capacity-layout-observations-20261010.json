@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T07:27:15.749003+00:00",
+  "reviewer": "layout_audit",
+  "scope": "Read-only layout risks in four existing southeast tile candidates",
+  "gateFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\capacity-layout-gate-20261010.json",
+  "gateSha256": "fcb0af12c95cf35963ef82ac304093e876d8078651a9866203eb758fe30f56ae",
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c08\\qa\\root-pass\\overview-QA-only-1024.png",
+      "sha256": "ebdc8cd637a003daead14e3c76bd2a0c7b870c7d9bbc7bccbe8017b3a20412e4",
+      "viewedWith": "view_image",
+      "purpose": "Existing 1024 QA preview for layout observations only, not native seam signoff or a walkable mask"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c09\\processed\\clothpass\\r10_c09-clothpass-QA-preview-1024.png",
+      "sha256": "461cf3d5f6f18e13a0b3af53b29f28f8c88a84dc3383521cbb2460b381a0a49d",
+      "viewedWith": "view_image",
+      "purpose": "Existing 1024 QA preview for layout observations only, not native seam signoff or a walkable mask"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\overview-QA-only-1024.png",
+      "sha256": "78082ca69a54ee19908d0b4bfd00c424b44583a25ba432a006c2aace367a8351",
+      "viewedWith": "view_image",
+      "purpose": "Existing 1024 QA preview for layout observations only, not native seam signoff or a walkable mask"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c09\\processed\\colorpass\\r11_c09-colorpass-QA-preview-1024.png",
+      "sha256": "ac2543725cc6717964fc362434c08b1c8e4dbbd6cc2e8bb1155f1b3b54394109",
+      "viewedWith": "view_image",
+      "purpose": "Existing 1024 QA preview for layout observations only, not native seam signoff or a walkable mask"
+    }
+  ],
+  "observations": [
+    {
+      "id": "C08_STORAGE_ENTRANCE",
+      "tile": "r10_c08",
+      "tileObservationBox": [
+        1450,
+        0,
+        3400,
+        1550
+      ],
+      "risk": "Storage shelving, large barrel, posts and wall/bench occupy the building frontage. Visible stone fragments behind them must not automatically count as a continuous passage.",
+      "requiredCheck": "Build collision footprints at the feet of the barrel, shelves and posts, then test entry approach and the route around the barrel with the actual actor radius.",
+      "globalObservationBox": [
+        30122,
+        36864,
+        32072,
+        38414
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    },
+    {
+      "id": "C08_BOAT",
+      "tile": "r10_c08",
+      "tileObservationBox": [
+        0,
+        1500,
+        4096,
+        4096
+      ],
+      "risk": "Large boat hull, ribs, canopy and interior benches dominate the lower region. Rendered timber surface is not evidence of traversable town ground; several apparent channels stop at ribs or gunwales.",
+      "requiredCheck": "Declare whether boat interior is accessible and on which navigation elevation, with explicit boarding connection. Otherwise exclude hull/canopy/boat interior from the town walkable mask.",
+      "globalObservationBox": [
+        28672,
+        38364,
+        32768,
+        40960
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    },
+    {
+      "id": "C09_FRONTAGE",
+      "tile": "r10_c09",
+      "tileObservationBox": [
+        0,
+        650,
+        4096,
+        3200
+      ],
+      "risk": "Two worktables, barrels, projecting column bases and building frontage narrow the wooden deck into local passages. A broad image area includes vertical facade and furniture, not only free ground.",
+      "requiredCheck": "Preserve an uninterrupted route in front of the furniture after radius erosion; verify doorway reachability rather than treating table undersides or occluded backdrop as clear floor.",
+      "globalObservationBox": [
+        32768,
+        37514,
+        36864,
+        40064
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    },
+    {
+      "id": "C09_DECK_EDGE",
+      "tile": "r10_c09",
+      "tileObservationBox": [
+        0,
+        2550,
+        4096,
+        4096
+      ],
+      "risk": "Diagonal deck/boat edge and a small timber pile constrain the lower route. Art continuity across the tile border does not establish navigation between elevated deck and ground below.",
+      "requiredCheck": "Mark deck edge as an elevation/obstacle boundary unless a defined staircase or ramp connects it. Include loose timber in collision if actors cannot pass through it.",
+      "globalObservationBox": [
+        32768,
+        39414,
+        36864,
+        40960
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    },
+    {
+      "id": "C10_TABLE_AISLES",
+      "tile": "r10_c10",
+      "tileObservationBox": [
+        1100,
+        1500,
+        4096,
+        3770
+      ],
+      "risk": "Multiple tables, canopy posts, column bases and the right net barrier form short narrow passages. Canopy/table pixels are visually large and must not inflate free-area estimates; route bottlenecks matter more than aggregate ground area.",
+      "requiredCheck": "Use footprint geometry and actor radius to measure minimum clear widths around each base/table and between the front/back tables. Explicitly reserve a through route instead of assuming all visible wooden gaps connect.",
+      "globalObservationBox": [
+        37964,
+        38364,
+        40960,
+        40634
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    },
+    {
+      "id": "C11_SUPPORTS",
+      "tile": "r11_c09",
+      "tileObservationBox": [
+        0,
+        0,
+        4096,
+        3560
+      ],
+      "risk": "Boat hull, angled supports, stools, bucket and rack cover much of the ground. Small visible stone pockets under hull/furniture may be disconnected or too narrow after collision clearance.",
+      "requiredCheck": "Exclude under-hull/support pockets unless intentionally navigable; verify a continuous route along the foreground and connections to neighboring tiles at the same ground level.",
+      "globalObservationBox": [
+        32768,
+        40960,
+        36864,
+        44520
+      ],
+      "boxMeaning": "Approximate visual review envelope; not a measured minimum width, polygon mask or proposed repaint boundary."
+    }
+  ],
+  "interpretation": "These are local candidate-art observations. Existing road/floor projection alone cannot establish physical walking width or 5000-player capacity. Root latest gate records a trial of 5000 static feet positions with corridor reservation, but also states worldSizeApproved=false and fullRuntimePassed=false; this report does not override or release that gate.",
+  "missingForMetricWidth": [
+    "Approved worldSize and map-to-world ground-plane mapping",
+    "Actor collision footprint/radius and required path clearance",
+    "Explicit ground-level and deck-level navigation/collision polygons",
+    "Confirmed doorway/boarding connections and reserved through routes"
+  ],
+  "capacity5000Validated": false,
+  "worldSizeApprovedByThisReview": false,
+  "runtimePassedByThisReview": false,
+  "capacityGateReleased": false,
+  "generationPerformed": false,
+  "formalAccepted": false,
+  "recommendedNextDecision": "Root should validate actor-cleared paths at the listed frontage/boat/table bottlenecks against the approved layout before authorizing expansion. Do not infer a whole-map enlargement or a repaint solely from raster resolution."
+}

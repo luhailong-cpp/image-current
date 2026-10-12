@@ -1,0 +1,31 @@
+{
+  "patch": "r03_c03_s03_04_a03",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "checkedAt": "2026-10-09T20:18:15.557Z",
+  "method": "Unscaled hard horizontal cuts; no blending, repair, resampling or postpaint.",
+  "top": {
+    "neighbor": "r03_c03_s02_04_a02",
+    "cutInOverlap": 115,
+    "status": "candidate visually continuous",
+    "findings": "Column base and both stair stone edges continue without obvious silhouette jump."
+  },
+  "bottom": {
+    "neighbor": "r03_c03_s04_04_a01",
+    "cutInOverlapChecked": [
+      30,
+      115,
+      148,
+      200
+    ],
+    "status": "not accepted at these straight cuts",
+    "findings": "Visible horizontal material/value shift; some stone joint offsets about 10–20px. Cut148 minimizes raw per-row RGB MAE but still visibly discontinuous.",
+    "bestRawRow": 148,
+    "maeAtBest": 17.7605,
+    "maeAt115": 22.0771
+  },
+  "geometry": "Stair footprint restored within about 20–30px of blurred layout; sidewall bottom~900 vs guide~930, right ground line~600 vs guide~620. Green detail confined to original green footprint.",
+  "candidateUsability": "Do not increment usable from this check. Root hard seam selection or further native correction required before acceptance. No spread into missing left patch yet."
+}

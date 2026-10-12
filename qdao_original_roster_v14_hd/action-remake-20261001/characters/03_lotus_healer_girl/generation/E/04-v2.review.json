@@ -1,0 +1,90 @@
+{
+  "reviewedOn": "2026-10-03",
+  "native": [
+    1254,
+    1254
+  ],
+  "method": "image_gen result plus direct original saved view_image; read-only native pixel alpha measurements",
+  "generationAttemptsThisAssignment": 1,
+  "operation": "AI local redraw through builtin image_gen, not programmatic pixel scaling or whole-image transformation",
+  "actualModel": null,
+  "actualQuality": null,
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "globalImageTransformApplied": false,
+  "virtualRoot": {
+    "native": [
+      800,
+      1164
+    ],
+    "nativeCanvas": 1254,
+    "status": "same provisional diagnostic world root, client not verified"
+  },
+  "dynamicAcceptance": false,
+  "clientVerified": false,
+  "status": "improved_support_reach_candidate_pending_sequence",
+  "sha256": "b757661d187457dcf5feb683e31e97f0828fa786cab19a15a50a9b5c21046709",
+  "editedFrom": {
+    "file": "generation/E/04-v1.png",
+    "sha256": "a4f8bef240c477eab7e85d09545952ff221a7ce11d890a2dc7d6f93dade0bb35",
+    "generationRecord": "generation/E/04-v1.png.generation.json"
+  },
+  "observations": [
+    "右后支撑鞋向右收近骨盆，膝踝重新连接，heel-up/forefoot-down姿态保留。右支撑后伸幅度比04-v1缩小。",
+    "远侧前抬膝和鞋、头脸/主要躯干、双臂与灯瓶位置目视大体保持。未做全图位移或包围盒配准。",
+    "鞋尖外轮廓最右端视觉约x590，但最接近地面的实心轮廓没有到x580–600；提示目标不能等同于实际接触点。",
+    "y1164像素行中，支撑鞋实心范围由04-v1的x466–523变为x523–561；实际接近地面轮廓位移约40–60px，并非精确70px。",
+    "仍需E03→E04→E05串帧确认支撑脚沿地面向后运动、膝踝伸展和身体重心连续性。"
+  ],
+  "measurements": {
+    "alphaGt8Bounds": [
+      98,
+      77,
+      1234,
+      1167
+    ],
+    "shoeRegion": {
+      "roiXYXY": [
+        350,
+        1040,
+        640,
+        1200
+      ],
+      "alphaThreshold": 128,
+      "before": {
+        "lowestY": 1168,
+        "lowestRowXRange": [
+          494,
+          501
+        ],
+        "floorRow1164XRange": [
+          466,
+          523
+        ]
+      },
+      "after": {
+        "lowestY": 1165,
+        "lowestRowXRange": [
+          531,
+          553
+        ],
+        "floorRow1164XRange": [
+          523,
+          561
+        ]
+      },
+      "interpretation": "只读鞋区域像素描述，不进行最低Alpha贴地；曲线鞋底最低处不是自动物理接触标定"
+    },
+    "visualToeTipXApprox": 590
+  },
+  "remainingIssues": [
+    "目标前掌x580–600未被像素证据完整证实",
+    "地面1164附近尚有约1px实心轮廓低出及抗锯齿边缘",
+    "完整动态/客户端待审"
+  ],
+  "file": "generation/E/04-v2.png",
+  "prompt": "generation/E/04-v2.prompt.txt",
+  "receipt": "generation/E/04-v2.receipt.json"
+}

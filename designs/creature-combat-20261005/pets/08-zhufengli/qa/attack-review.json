@@ -1,0 +1,47 @@
+{
+  "action": "attack",
+  "reviewedAt": "2026-10-05T21:52:44.356166+00:00",
+  "adoptedFrames": 24,
+  "independentImageGenCalls": 28,
+  "rejectedFrames": [
+    {
+      "record": "receipts/attack-W-01-rejected-raised-paw.generation.json",
+      "reason": "Baseline frame incorrectly raised RF before anticipation",
+      "supersededBy": "runtime/attack/W/01.png"
+    },
+    {
+      "record": "receipts/attack-E-10-rejected-support-drift.generation.json",
+      "reason": "Recovery right forepaw landed behind baseline footprint, closure needed repair",
+      "supersededBy": "runtime/attack/E/10.png"
+    },
+    {
+      "record": "receipts/attack-E-11-rejected-support-drift.generation.json",
+      "reason": "Recovery right forepaw landed behind baseline footprint, closure needed repair",
+      "supersededBy": "runtime/attack/E/11.png"
+    },
+    {
+      "record": "receipts/attack-E-12-rejected-support-drift.generation.json",
+      "reason": "Recovery right forepaw landed behind baseline footprint, closure needed repair",
+      "supersededBy": "runtime/attack/E/12.png"
+    }
+  ],
+  "singleFrameReview": {
+    "inspectedAll24ReturnedImages": true,
+    "inspectedFinalExportContactSheets": [
+      "qa/attack-E-contact.jpg",
+      "qa/attack-W-contact.jpg"
+    ],
+    "direction": "E true front/down-right; W independently generated true rear/up-left; no front/back flips observed",
+    "anatomy": "Same anatomical right forepaw performs the entire attack. Four quadruped limbs preserved with natural occlusion of far support legs. No weapon, no humanoid hands. One ringed curled tail with two jade beads and one cream tassel; cape remains bamboo-leaf garment.",
+    "phases": "Visible anticipation, RF lift/flex, forward extension and strike on07, downward arc, RF recovery, grounded return. E10..12 specifically regenerated against E01 baseline footprint.",
+    "crop": "All effective body pixels inside canvas; sparse low-alpha edge pixels retained. No crop-to-feet or per-frame realignment.",
+    "remainingNotes": "Fine fur, leaf contours and support silhouettes have independent-generation variation. Static review does not certify perfect motion registration."
+  },
+  "playbackReview": {
+    "completedByThisAgent": false,
+    "reason": "CUA file URL preview rejected by browser URL security policy; no workaround attempted. Main agent must record any independently completed normal/0.25x playback review."
+  },
+  "clientIntegration": "Not performed; out of scope",
+  "technicalReport": "qa/attack-technical.json",
+  "production": "Builtin image_gen only. Exact original E/W identities and approved style image attached on every call. Config target gpt-image-2.5-sunburst/max; submitted/actual model and quality null because tool did not expose them."
+}

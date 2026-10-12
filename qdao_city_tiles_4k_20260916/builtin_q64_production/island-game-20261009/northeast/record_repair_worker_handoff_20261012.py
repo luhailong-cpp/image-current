@@ -1,0 +1,19 @@
+from native_work import *
+ident='r05_c12_p04_01_v3'
+p=ZONE/'selection-r05_c12.json'; s=read(p)
+s['cores'][3][0]=ident
+overlay='r05_c13_cross_left_p01_beam_repair-r05_c12'
+if overlay not in s['overlays']: s['overlays'].append(overlay)
+s['updatedAtUtc']=now(); write(p,s)
+for ident,status,note in [('r05_c12_p04_01','rejected_blurred_edge_object','Cropped red/gold left object had depth-of-field blur; retained historical output.'),('r05_c12_p04_01_v2','superseded_internal_anchor_cut','Sharp object restored but x1024 interior vertical cut interrupted paving seams; superseded by v3.'),('r05_c12_p04_01_v3','usable_native_candidate','Top/right native joins plus upper-right cross reviewed at native1:1. Straight anchor cut removed; small shallow stone hairline remains within slab, no joined contour discontinuity.')]:
+    p=ZONE/'native'/f'{ident}.png.generation.json'; q=read(p); q.update(status=status,internalSeams=note,reviewer='repair_resume_20261012',reviewedAtUtc=now()); write(p,q)
+for n in ['r05_c12_p03_01__r05_c12_p04_01_v3','r05_c12_p04_01_v3__r05_c12_p04_02_v2']:
+    p=ZONE/'qa'/f'{n}.json'; q=read(p); q.update(status='passed_internal_only',reviewedAtUtc=now(),reviewer='repair_resume_20261012',geometryChecks={'visibleContours':'pass'},scope='native1:1 current top/right join; not whole tile acceptance');write(p,q)
+for n in ['cross_r05_c12_p03_02','cross_r05_c12_p04_02_v2']:
+    p=ZONE/'qa'/f'{n}.json';q=read(p);q.update(status='passed_internal_only',reviewedAtUtc=now(),reviewer='repair_resume_20261012');write(p,q)
+record={'schemaVersion':1,'worker':'repair_resume_20261012','writtenAtUtc':now(),'state':'handoff_to_parent_requested_sol_ultra_replacement','inFlightImagegenCount':0,'unarchivedUniqueOutputs':[],'selection':(ZONE/'selection-r05_c12.json').as_posix(),'filledCoreCount':16,'passedCoreCount':14,'provisionalCoreCount':2,'tileAssembled':False,'formalAccepted':False,'adoptedNewCoreIds':['r05_c12_p03_01','r05_c12_p04_01_v3'],'newOutputsThisWorker':[],'adoptedExistingOverlay':overlay,'overlayIndependentReview':'existing native plus top/bottom/left/right exact perimeter crops visually checked. Red trim and gold fascia coherent, all perimeters continuous. Added existing passed partition record to selection, no image regeneration.','remaining':[{'action':'native cross repair','coordinates':['r05_c12_p03_02','r05_c12_p04_02_v2'],'approximateTileLocalFaultX':1933,'approximateTileLocalYRange':[2060,3300],'details':'p03_02 stair levels and cream foundation mismatch against c03. p04_02 top-right stair continuation inherits mismatch. Both provisional, NOT passed. Likely two native cross overlays.'},{'action':'assemble versioned 4096 candidate and full internal49crop QA','details':'selection now16 cores plus shared beam overlay, two cores provisional. No full tile exists yet; do not call internal passed until repairs and review.'},{'action':'check upper/right whole4096 tile boundaries','neighbors':['r04_c12','r05_c13'],'status':'pending'},{'action':'continue r05_c11 after c12 internally complete','status':'not started'}],'prohibitions':['no Git/.git/upload snapshot changes','no global progress/handoff writes','no history freeze/audit changes','never overwrite existing PNGs']}
+for i in ['r05_c12_p03_01','r05_c12_p04_01','r05_c12_p04_01_v2','r05_c12_p04_01_v3']:
+    p=ZONE/'native'/f'{i}.png'; q=read(p.with_suffix('.png.generation.json')); record['newOutputsThisWorker'].append({'id':i,'file':p.as_posix(),'sha256':sha(p),'size':[q['nativeWidth'],q['nativeHeight']],'status':q['status'],'prompt':q['prompt'],'receipt':q['evidence']['receipt'],'inputs':(ZONE/'prompts'/f'{i}.inputs.json').as_posix()})
+write(ZONE/'qa/repair-resume-worker-handoff-20261012.json',record)
+print({'handoff':(ZONE/'qa/repair-resume-worker-handoff-20261012.json').as_posix(),'filled':16,'passed':14,'provisional':2,'inFlight':0})
+

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "supersedesLocalReview": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c05/qa/s02_01_material02_fix01-review-20261011.json",
+  "reason": "Focused final vertical QA exposed geometry defects missed by the earlier eight-pair visual review. Prior passed conclusion for west pair is retracted.",
+  "candidate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c05/native/s02_01_material02_fix01.png",
+  "candidateSha256": "e32a4fe1cca0ee6ab0f5f2b59efb5eeac57a9d25872a39e9efe3cc166f4f85fc",
+  "findings": [
+    {
+      "severity": "blocking",
+      "nativeRegion": [
+        0,
+        456,
+        232,
+        466
+      ],
+      "description": "Mid-road horizontal grout in left anchor is very faint and abruptly changes to black at x230, producing an apparent open endpoint in the assembled seam."
+    },
+    {
+      "severity": "blocking",
+      "nativeRegion": [
+        222,
+        580,
+        241,
+        596
+      ],
+      "description": "Small red paper fragment is clipped at x230. Earlier stonefix01 source has a complete irregular diamond at the same coordinate."
+    }
+  ],
+  "mechanicalAttempt": {
+    "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r06_c05/qa/material-fix01-overlap-diagnosis/mechanical-evidence.json",
+    "result": "rejected",
+    "description": "Selecting west source throughout blue-body y348:604 to maximum native overlap x230 retains the abrupt line contrast and cannot recover the clipped paper, whose missing half is not in the west source."
+  },
+  "nextAction": "Minimal native edit restricted to continuous mid-road grout and the complete small red paper fragment. Preserve existing left/right blue material, geometry, foliage, and all other paper.",
+  "finalJointAccepted": false,
+  "newArtGenerated": false
+}

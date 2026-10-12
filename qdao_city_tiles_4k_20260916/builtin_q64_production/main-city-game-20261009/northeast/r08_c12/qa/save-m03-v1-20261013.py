@@ -1,0 +1,12 @@
+from pathlib import Path
+from PIL import Image
+import json,hashlib,shutil
+from datetime import datetime,timezone
+p=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r08_c12');q=p/'qa/repair-resume-20261013';src=Path(r'C:/Users/luyua/.codex/generated_images/01a1345a-d695-7ea3-9410-7bee96f26ed0/exec-8e640f92-a5a3-4db8-a1b0-42a444b0a91a.png');dst=p/'native/repairs/m03-context-lines-v1.png';assert not dst.exists();shutil.copy2(src,dst)
+im=Image.open(dst).convert('RGB');assert im.size==(1254,1254)
+base=p/'candidates/r08_c12.m01-v1.png';can=Image.open(base).convert('RGB');can.paste(im,(1933,1933));out=p/'candidates/r08_c12.m03-v1.png';assert not out.exists();can.save(out)
+record={'tool':'image_gen','route':'builtin','sourceOutputPath':str(src),'repairNative':str(dst),'repairSha256':hashlib.sha256(dst.read_bytes()).hexdigest(),'nativeSize':[1254,1254],'actualModel':None,'actualQuality':None,'baseCandidate':str(base),'baseSha256':hashlib.sha256(base.read_bytes()).hexdigest(),'targetBoxInTile':[1933,1933,3187,3187],'operation':'exact integer AI-native crop paste; no resizing, feathering or drawn pixels','output':str(out),'outputSha256':hashlib.sha256(out.read_bytes()).hexdigest(),'prompt':str(p/'prompts/m03-context-lines-v1.prompt.txt'),'request':str(p/'prompts/m03-context-lines-v1.request.json'),'evidence':str(p/'receipts/m03-context-lines-v1.receipt.json'),'status':'rectangular context lines removed; outer repair boundaries awaiting review'}
+(q/'m03-context-lines-v1-composition.json').write_text(json.dumps(record,indent=2),encoding='utf-8');Path(str(dst)+'.generation.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
+boxes={'m01-boundary-top':[0,1200,1254,1400],'m01-boundary-bottom':[0,2454,1254,2654],'m01-boundary-right':[1154,1300,1354,2554],'m03-boundary-top':[1933,1833,3187,2033],'m03-boundary-bottom':[1933,3087,3187,3287],'m03-boundary-left':[1833,1933,2033,3187],'m03-boundary-right':[3087,1933,3287,3187]}
+for n,b in boxes.items():o=q/(n+'.png');assert not o.exists();can.crop(b).save(o)
+v=json.loads((p/'tile-progress.json').read_text(encoding='utf-8-sig'));v.update(updatedAt=datetime.now(timezone.utc).isoformat(),workingRepairCandidate=str(out),workingRepairCandidateSha256=record['outputSha256']);(p/'tile-progress.json').write_text(json.dumps(v,indent=2),encoding='utf-8');print(json.dumps(record))

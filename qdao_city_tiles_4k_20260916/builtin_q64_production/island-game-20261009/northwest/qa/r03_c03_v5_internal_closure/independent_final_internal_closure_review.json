@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T05:34:08.493884+00:00",
+  "reviewer": "audit_contract",
+  "status": "internal_visual_and_exact_repair_preservation_pass_current_full_provenance_replay_blocked",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/tiles/r03_c03_candidate-v5_4096.png",
+    "sha256": "f928ee8687876492bb3446d02632b5db57ccd0eb0dd39a42ca180dc093ec9e8d"
+  },
+  "candidateRecord": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/tiles/r03_c03_candidate-v5_4096.native-repair.json",
+    "sha256": "f17412cab9bfd14f4727caf2d7949e20e32b6a3af49967b4c718c6c19d6c2793"
+  },
+  "decision": {
+    "internalArtworkUsableCandidate": true,
+    "internalVisualClosurePassed": true,
+    "fourRepairPixelPreservationPassed": true,
+    "freshFullProvenanceReplayPassed": false,
+    "freshFullProvenanceReplayBlockedByMissingReference": true,
+    "externalFourEdgesFullyAccepted": false,
+    "formalAcceptedCount": 0,
+    "capacity5000Validated": false
+  },
+  "scope": "Final four repair regions, full final preview, upper-beam/window final contexts, and exact v1-to-v5 repair replay. Unchanged v1 seam coverage is inherited from the existing review package; all33 seams were not re-inspected during this delta review.",
+  "visualFindings": [
+    {
+      "role": "upper_beam",
+      "result": "pass",
+      "finding": "The old jagged cross-beam tonal step is removed. Beam face, white-wall edge, blue-tile contact and right structural joint remain continuous; no new isolated bright strip was found in final100% contexts."
+    },
+    {
+      "role": "window_wall",
+      "result": "pass",
+      "finding": "The rectangular bright wall strip at the window upper-right remains removed. Frame corner and painted wall are continuous, and the complete previously accepted v3 wall crop is unchanged in v5."
+    },
+    {
+      "role": "second_cylinder",
+      "result": "pass",
+      "finding": "The top ellipse, side outline, gold motif, lower band, ground contact and shadow are coherent in the final1254 crop. The raw selected cylinder pixels survive all later revisions."
+    },
+    {
+      "role": "paving",
+      "result": "pass",
+      "finding": "Both repaired joints remain connected, with no repeated diamond/double-node or new grid endpoint cut at the two selected repair areas. Nearby plant/steps/stone field retain their placement."
+    }
+  ],
+  "nonblockingExistingObservation": {
+    "tileBoxApprox": [
+      1758,
+      3050,
+      2010,
+      3220
+    ],
+    "type": "localized hard polygonal tonal boundary on paving left of second cylinder",
+    "basis": "Side-by-side real ancestor target/final/mask probe shows it already in v1, mainly outside the cylinder repair selection; not caused by v5 and not a rollback. It does not produce a road, object silhouette or grout-line disconnection. Recorded as minor painterly/material unevenness, not a required new repair in this closure."
+  },
+  "pixelEvidence": {
+    "proof": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_repair_preservation.json",
+      "sha256": "ee46b421c144a07d2662555976040bcdd3c197b9b8f6568f9a26b785c378eb1a"
+    },
+    "repairSelectedCounts": [
+      549770,
+      171462,
+      105029,
+      158903
+    ],
+    "totalRepairSelectedPixels": 985164,
+    "allFourMasksMutuallyDisjoint": true,
+    "allFinalPixelsExactlyReplayedFromV1PlusFourRawMasks": true,
+    "allMaskZeroPixelsPreserveTheirCurrentBase": true,
+    "outsideAllRepairMasksExactlyV1": true,
+    "entireV3WindowCropUnchangedInV5": true,
+    "upperBeamCropAncestorVsApplicationDifferentPixels": 117925,
+    "upperBeamSelectedChangedPixels": 0,
+    "upperBeamAllAncestorDifferencesOutsideMask": true
+  },
+  "fullProvenanceReplay": {
+    "commandMode": "apply_native_tile_repair.py --validate-base-only",
+    "executionCount": 1,
+    "exitCode": 1,
+    "missingRequiredFile": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "stderr": {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_validate_base_only.stderr.txt",
+      "sha256": "348d14e3c3e8a3bc01a363b89d2a551d7069289af3cdc90f8770ab772ce0ff97"
+    },
+    "historicalRecordsOrReferencesChanged": false,
+    "note": "The original strict replay was not bypassed or marked successful. The focused exact repair replay proves final pixel selection/preservation, not current availability of all historical image references. Root must resolve the reference lifecycle before claiming a fresh full provenance pass."
+  },
+  "visualEvidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/PREVIEW_NOT_FOR_GAME_1024.png",
+      "sha256": "ee99851174272ea2369cbcc42f2fab70b8dbe53a37b7be5c8a095ce480828c18"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/upper_beam_final_context100pct.png",
+      "sha256": "ab4d7978cec2d005ca632f149c6839df7d70897e65cea82b5b7b7bf824a1d1ad"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/window_wall_final_context100pct.png",
+      "sha256": "2524c09543aa090ce27700b62a8c077ed903b6ac5fc95a7957e620f4bbde403f"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_second_cylinder_final_crop100pct.png",
+      "sha256": "02981336c582b5417298ff1f033627746d256ba77b4641c95e991c3983c26ecd"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_paving_final_crop100pct.png",
+      "sha256": "2187c0e48bea0d86f4d8a679658e90e4b8cb919b0c1bfc44addf59b1ce163454"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_upper_beam_final_crop100pct.png",
+      "sha256": "0c7feb332bdb71edd7e818f69786e5f632c766b5559ba79cca4c00b8fccdd922"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_window_wall_final_crop100pct.png",
+      "sha256": "dfa9f004bd36065f4d8dc1caa45c38585d5603ab99c1df56a2cc873bd4bdb83b"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r03_c03_v5_internal_closure/independent_cylinder_shadow_probe_target_final_mask100pct.png",
+      "sha256": "4775fe1d43fd01f4dc589eb97f04ce755710c8b785099e71a6fc34ad9e02b3ec"
+    }
+  ],
+  "inheritedReviewEvidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/assembly_r03_c03_candidate-v1_4096/audit_contract_review.json",
+      "sha256": "3cdb8fd0dd49b76cc28076f7466aed8230194b443836f4d9678e0450eec810f0"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/assembly_r03_c03_candidate-v1_4096/review_continue_native.json",
+      "sha256": "edf3ac5f5ce9f836a42daddc70c385ad7f8cd9d7e692432a02077cb1b74c6bc8"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_second_cylinder_a01_independent_review/visual_review.json",
+      "sha256": "9d121702e4749f86a8187c46ca639b19f21cd6eb691e36ec246a5915ae84ebcf"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_visual_review.json",
+      "sha256": "9ea7109f96289be40d7f7cb5a86a6c1ddede93c9ced11137ad81feb1ac49bfe1"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_paving_a02_union_mask-v1/visual_review.json",
+      "sha256": "1009a698787f8a5649929794075d2379cbdf2fcc0d053c1324ee88e9214c49b3"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_upper_beam_a02_mask-v3/visual-review-continue-native.json",
+      "sha256": "3a505da302bc27d5036c5f472cb8ce44c2bf91d510c627f7254a71b496f09d90"
+    }
+  ],
+  "gate": {
+    "capacityGateMaintained": true,
+    "imageGenerationPerformed": false,
+    "inFlightStatus": "none",
+    "newCoordinatesCreated": false
+  },
+  "modifications": "QA scripts, exact100% crops and QA records only; no native/tile/mask/progress/selected/history edits.",
+  "limits": [
+    "External top/right/bottom/left4K joins remain incomplete and formal count stays0.",
+    "No client integration, walking/navigation, world-size or5000-player capacity acceptance is implied.",
+    "Preview is for orientation only; native repair review used exact unscaled crops."
+  ]
+}

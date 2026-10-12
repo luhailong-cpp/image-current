@@ -1,0 +1,23 @@
+{
+  "status": "active_artwork_revision",
+  "userRequirement": "直脚着地两帧，再旁边点两帧，再旁边点两帧，再旁边点俩帧，依次类推",
+  "interpretation": "同一脚持续支撑，接地点相对身体沿运动方向逐段变化；每段两张独立姿态，后与另一脚交替。不是鞋掌外撇或重复同图。",
+  "framesPerDirection": 16,
+  "frameMs": 75,
+  "cycleMs": 1200,
+  "segments": [
+    {"frames":[1,2],"supportLeg":"RIGHT","positionSegment":1,"description":"前部直向接触与接受负荷"},
+    {"frames":[3,4],"supportLeg":"RIGHT","positionSegment":2,"description":"重心经过的早承重位置"},
+    {"frames":[5,6],"supportLeg":"RIGHT","positionSegment":3,"description":"髋下向后过渡的晚承重位置"},
+    {"frames":[7,8],"supportLeg":"RIGHT","positionSegment":4,"description":"身体后侧前掌蹬地位置"},
+    {"frames":[9,10],"supportLeg":"LEFT","positionSegment":1,"description":"前部直向接触与接受负荷"},
+    {"frames":[11,12],"supportLeg":"LEFT","positionSegment":2,"description":"重心经过的早承重位置"},
+    {"frames":[13,14],"supportLeg":"LEFT","positionSegment":3,"description":"髋下向后过渡的晚承重位置"},
+    {"frames":[15,16],"supportLeg":"LEFT","positionSegment":4,"description":"身体后侧前掌蹬地位置"}
+  ],
+  "pairDurationMs":150,
+  "sourceInvariant":"Each selected image unique; reuse correct source art with its lineage or draw an independent new pose.",
+  "pixelInvariant":"All frames same globalScale 0.65 and constant per-sequence registration, no per-frame normalization/translation, no geometric limb edits.",
+  "clientValidated":false,
+  "supersedes":["distribution-proposal.json","original four-consecutive-frame window proposal"]
+}

@@ -1,0 +1,60 @@
+{
+  "reviewedAt": "2026-10-10T05:58:51.774Z",
+  "mode": "read-only existing final and partial tile pixels; true fixed tile boundaries at native 100%",
+  "sourceCrops": "true-boundary-crops.json",
+  "reviewedAll14Crops": true,
+  "internalCandidateStatusesPreserved": true,
+  "boundaries": [
+    {
+      "pair": "r03_c03 -> r04_c03",
+      "globalBoundary": {
+        "axis": "y",
+        "coordinate": 12288,
+        "span": [
+          8192,
+          12288
+        ]
+      },
+      "status": "not-accepted",
+      "findings": [
+        "Cloth/wood silhouettes largely align; no large building displacement identified.",
+        "Short paving-joint discontinuity around x10240..10752 needs joint boundary selection.",
+        "Stone faces across x11264..12288 show horizontal material/brightness step at fixed crop boundary."
+      ],
+      "nextAction": "Joint native overlap hard-cut diagnostic using same global path for both output tiles; if remaining geometry fails twice, redraw complete crossed object after gate release."
+    },
+    {
+      "pair": "r04_c03 -> partial r04_c04",
+      "globalBoundary": {
+        "axis": "x",
+        "coordinate": 12288,
+        "span": [
+          12288,
+          15360
+        ]
+      },
+      "status": "not-accepted",
+      "findings": [
+        "Visible vertical sand material/color line in fixed boundary crops1..5.",
+        "Support rope in crop6 crosses continuously; adjacent sand still changes.",
+        "Southern1024px of r04_c04 are absent, so whole4096px boundary cannot be accepted."
+      ],
+      "nextAction": "Joint boundary selection plus remaining row only after gate release; no formal acceptance."
+    }
+  ],
+  "partialTile": {
+    "tile": "r04_c04",
+    "size": [
+      4096,
+      3072
+    ],
+    "knownDefects": [
+      "Blue net upper-left support rope has dangling cut end before main post.",
+      "Beige net upper cord has a clipped protruding join.",
+      "Sand repeated fine texture drifts from organic native brushwork; inspect full4K before targeted material bridge.",
+      "Upper-right corner of s03s03 contains copied guide texture boundary; final4way review required."
+    ],
+    "internalAccepted": false
+  },
+  "capacityInference": "No scale, collision, walkable area or 5000-player capacity claim; artwork seams are distinct from world capacity."
+}

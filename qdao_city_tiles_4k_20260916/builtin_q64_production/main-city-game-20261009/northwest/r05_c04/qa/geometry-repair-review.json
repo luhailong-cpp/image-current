@@ -1,0 +1,38 @@
+{
+  "patch": "s02_01",
+  "targetBottomY": {
+    "left": 710,
+    "pedestal": 740,
+    "stairs": 740
+  },
+  "selected": "s02_01.png",
+  "attempts": [
+    {
+      "file": "s02_01_fix01.png",
+      "selected": false,
+      "reason": "Insufficient geometry movement"
+    },
+    {
+      "file": "s02_01_fix02.png",
+      "selected": false,
+      "annotationSource": "layout-only/s02_01.fix02.geometry-guide.png",
+      "observedBottomTransitionY": {
+        "left": [
+          660,
+          662
+        ],
+        "pedestal": [
+          673,
+          675
+        ],
+        "stairs": [
+          690,
+          693
+        ]
+      },
+      "method": "Visual inspection plus strongest mean-luminance row gradients in x ranges250:550,680:950,1070:1220; transition values approximate, not semantic segmentation",
+      "reason": "Only partial downward movement; new bottom remains above target, existing adjacent stair patch edges unchanged"
+    }
+  ],
+  "nextStep": "Correct s02_01 target geometry with native image generation, then update s02_02 through s02_04 coherently before selecting or reassembling any row2 revisions"
+}

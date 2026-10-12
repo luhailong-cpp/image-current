@@ -1,0 +1,59 @@
+{
+  "status": "recommended_composite_pending_parent_integration",
+  "candidate": {
+    "context": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\output\\v5\\r11-p01.repaired.context.png",
+      "sha256": "94357b406df7050e4b33b5cf1adec8103eba31204c84062cfdf7c66bc5fa5285",
+      "pixels": [
+        4326,
+        1254
+      ]
+    },
+    "core": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\output\\v5\\r11-p01.repaired.core.png",
+      "sha256": "2bd2985ceac9cb62a66b1d052e68b3d702e5174e641db989cfd495f635190288",
+      "pixels": [
+        4096,
+        1024
+      ]
+    },
+    "contextWorldBox": [
+      16269,
+      40845,
+      20595,
+      42099
+    ],
+    "coveredCoreWorldBox": [
+      16384,
+      40960,
+      20480,
+      41984
+    ]
+  },
+  "integration": {
+    "method": "override assembled first-row context; do not switch raw native selection alone",
+    "optionA": "Use candidate context as the first native row strip before vertical joining with the lower rows. Its bottom230 exactly matches the prior first-row strip, so existing lower-row overlap ownership remains compatible.",
+    "optionB": "If the existing full native context was assembled using the unchanged original first-row sources, replace only context box [0,0,4326,1024] from candidate context. Keep rows y>=1024 from the existing full context, including the existing row1/row2 blend. Then crop the full context normally.",
+    "doNotOverlayFull4096x1024CoreOntoAlreadyAssembledFullTile": true,
+    "reason": "The last115 pixels of the 1024px row core overlap the next-row blend. Overwriting a full core strip could replace that established join.",
+    "originalFirstRowContext": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\borders\\r11-p01.original.context.png",
+      "sha256": "a84f35e7d127e2155a5cb1f75d0fba6773b24fadf96447edbaa405504cfbb82c"
+    },
+    "northAnchor": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\borders\\r10-south-native-overlap.png",
+      "sha256": "5ca1f96d7b7e380d01469945cc211b4dbae951db27163a5a6838de84dea5d02d"
+    },
+    "bottom230Exact": true
+  },
+  "directNativeContributors": [
+    "p01_01",
+    "p01_02.edge-v2",
+    "p01_03",
+    "p01_04.edge-v2",
+    "p01_04.groove-v3"
+  ],
+  "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\qa\\final-visual-review.json",
+  "formalAccepted": false,
+  "changesAlreadyAppliedToOfficialSelection": false
+}

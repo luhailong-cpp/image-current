@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T09:16:32.195537+00:00",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/tiles/r06_c04_candidate-v9_4096.png",
+    "sha256": "a45d84d3b309017aee26e86ae6f8ff323577ea0c9c1bfd1f46a469a9744f19be"
+  },
+  "record": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/tiles/r06_c04_candidate-v9_4096.native-repair.json",
+    "sha256": "cfbe8d2f91985213c786e2872caa9bf463806ae6920fc17ac2a926ffcbb7b93f"
+  },
+  "strictReplay": {
+    "command": "apply_native_tile_repair.py --base tiles/r06_c04_candidate-v9_4096.png --base-record tiles/r06_c04_candidate-v9_4096.native-repair.json --validate-base-only",
+    "exitCode": 0,
+    "verifiedPixelCount": 16777216,
+    "originalRawSourceCount": 16,
+    "priorRepairCount": 8,
+    "fullNativeCoverage": true
+  },
+  "localReviews": [
+    {
+      "image": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r06_c04_southmid_lower_tip_a01_mask_v1/combined_native_crop.png",
+        "sha256": "b4ff41429a1357c952ff6d8fafab92adef0ffd075ad8b98f887b3a55ff71f80f"
+      },
+      "status": "local_coarse_grout_geometry_pass",
+      "owner": "/root/right_resume",
+      "independentReviewer": "/root",
+      "independentMessage": "lower diagonal coarse grout continuous and T-junction closed; old upper bands pending; not whole-tile pass"
+    },
+    {
+      "image": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r06_c04_southmid_top_join_a01_union_mask_v1/combined_native_crop.png",
+        "sha256": "73dd8711d4929ea9115b51da7dacd2be191ccf5f177f21311a1d99af96151590"
+      },
+      "status": "rejected_not_adopted",
+      "reason": "Left selection creates double parallel grout and blind endpoint local x560..650 y530..630; right area retained as separately inspectable."
+    },
+    {
+      "image": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/r06_c04_southmid_top_join_a01_left_mask_v2/combined_native_crop.png",
+        "sha256": "dd14ee0573ed6d06cf5b36f2bba8a6fca2571e8c396815f500d895b162ef725b"
+      },
+      "status": "rejected_not_adopted",
+      "reason": "Expanded selection exposes source-shifted horizontal band and blind ends local x400 y550 and x840 y830. Preserve best v9; no more same-point attempt now."
+    }
+  ],
+  "internalClosurePassed": false,
+  "formalAccepted": false,
+  "pausedRepairPoint": "r06_c04 southmid upper grout join; two mask variants did not improve; proceed independent r07_c04 native cores",
+  "unarchivedReturnedImages": 0,
+  "inFlightGeneration": 0,
+  "crossTopFrozenFor": "/root/connected_resume",
+  "crossTopScope": [
+    0,
+    0,
+    2850,
+    1800
+  ]
+}

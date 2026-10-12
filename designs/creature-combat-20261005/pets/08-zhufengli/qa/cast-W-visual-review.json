@@ -1,0 +1,58 @@
+{
+  "action": "cast",
+  "direction": "W",
+  "reviewedAt": "2026-10-05T22:13:20.371Z",
+  "frames": 16,
+  "individualReview": "All sixteen final frames viewed, plus rejected frame13 r1 and final frame13 r2.",
+  "contactSheet": "qa/cast-W-contact.png",
+  "contactSheetReviewed": true,
+  "anatomy": {
+    "direction": "true rear three-quarter facing upper-left throughout; back of head and back shawl stay visible",
+    "limbs": "quadruped; far forepaw is frequently anatomically occluded, no extra limbs or conversion to hands",
+    "tail": "one inward-curled striped tail, two jade beads and one cream tassel retained",
+    "shawl": "gold-veined jade bamboo-leaf garment, no wings"
+  },
+  "motion": {
+    "phases": "crouch01-04; rise/charge05-08; release09-10; fade11-12; recover13-16",
+    "targetedRepair": "Frame13 r2 independently AI redrawn using12/14 after r1 recovery appeared abrupt",
+    "remainingObservation": "Small generative paw-contact and torso-placement variation remains. No code translation, crop alignment or interpolation used. Do not equate contact-sheet review with playback acceptance."
+  },
+  "technical": {
+    "report": "qa/cast-W-technical.json",
+    "uniqueSHA": 16,
+    "all1024RGBA": true,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "edgeCheck": "All alpha>=8 bounding boxes inside canvas. Alpha1 touches edges in several frames as very low-alpha residual noise; body/tail/tassel silhouettes visually intact."
+  },
+  "playback": {
+    "status": "not reviewed: browser control unavailable",
+    "attempts": [
+      {
+        "tool": "cua.createBrowserTab",
+        "browser": "iab",
+        "result": "Browser is not available: iab"
+      },
+      {
+        "tool": "cua.getState",
+        "result": {
+          "apps": [],
+          "browsers": []
+        }
+      }
+    ],
+    "preview": "qa/cast-W-preview.html",
+    "modes": [
+      "1x at45ms",
+      "0.25x at180ms",
+      "frame stepping"
+    ],
+    "clientIntegration": "out of scope / not performed"
+  },
+  "sourceRetention": {
+    "workspaceRejectedImage": "Frame13r1 overwritten after r2 persisted; textual rejected receipt/prompt/generation record retained",
+    "hostNativeOutputs": "Stored under C:/Users/luyua/.codex/generated_images/01a10bb8-8e12-72d0-b72a-c294ef02eacf. Not deleted because this agent is write-limited to pet folder; parent final cleanup to honor user retention rule."
+  }
+}

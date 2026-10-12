@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-11T08:17:26.874022+00:00",
+  "passed": true,
+  "repository": "D:\\work\\image",
+  "current_head": "87c6fb5e3bcab3bdc4d68f8ac6d85f48aaee77e6",
+  "verified_head": "87c6fb5e3bcab3bdc4d68f8ac6d85f48aaee77e6",
+  "isolated_git_dir": "D:\\work\\image\\.git\\migration-sync-20261011\\isolated-lfs",
+  "isolated_tip": "449bb7e22503e2d04a0527d440a248518938f6a2",
+  "protected_image_count": 6516,
+  "protected_image_bytes": 6226604811,
+  "authorized_screenshot_deletion_count": 186,
+  "checks": {
+    "expected_protected_count": true,
+    "expected_deleted_count": true,
+    "baseline_receipt_sha_matches": 6516,
+    "head_oid_matches": 6516,
+    "isolated_tip_oid_matches": 6516,
+    "disk_exists": 6516,
+    "disk_size_matches": 6516,
+    "deleted_receipt_matches": 186,
+    "deleted_absent_disk": 186,
+    "deleted_absent_head": 186,
+    "deleted_absent_isolated_tip": 186
+  },
+  "errors": [],
+  "disk_mtime_changed_since_precleanup_count": 0,
+  "disk_mtime_changed_paths": [],
+  "method": [
+    "Select 6,516 protected images by subtracting the exact 186 approved screenshot paths from the Oct11 6,702-image precleanup audit.",
+    "Compare each protected image SHA-256 and size in precleanup audit against its Oct10 restoration receipt.",
+    "Compare Git blob OID, mode and byte size against the restoration receipt in both explicit committed trees, without reading the live index. Equal blob OID means the committed file bytes and therefore original SHA-256 are unchanged.",
+    "Check disk file existence and size only, as requested. Do not claim a new disk SHA-256 verification.",
+    "Verify the 186 exact approved screenshot paths are absent from disk and both committed trees, and match original restore plus deletion receipts."
+  ],
+  "evidence": [
+    {
+      "path": ".git/asset-recovery-20261010/restore-receipt.jsonl",
+      "sha256": "8c48871a43b3871230a6eab994808c5a37789a4d0edebc5bdfa31234af6b562b"
+    },
+    {
+      "path": ".git/asset-recovery-20261011/images-before-cleanup.json",
+      "sha256": "c51b598ba86b09d11864f44772bee8c1165f71e1fb37929229ff7dbb29bded21"
+    },
+    {
+      "path": ".git/asset-recovery-20261011/approved-screenshots-plan.json",
+      "sha256": "fee58b1b9977c308536be11afa90e7ae11af46058f7c8e6a9b57584eada72314"
+    },
+    {
+      "path": ".git/asset-recovery-20261011/deleted-screenshots.jsonl",
+      "sha256": "b348086458f87d940bc7d8f40641abc1c7d9b0d895eceb360a4c858753f06f9a"
+    },
+    {
+      "path": ".git/asset-recovery-20261011/images-after-cleanup.json",
+      "sha256": "a3f88b757bd0f44ef5d91217a8d8dcbed254f22eccf5212ba17c8e6b4ca82bb3"
+    }
+  ],
+  "limitations": [
+    "Disk bytes were not rehashed during this audit; the previous post-cleanup audit verified all 6,516 disk SHA-256 values. This check revalidates committed content OIDs and disk presence/size.",
+    "No live Git index was used. No Git refs, index or asset files were modified."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "patchId": "f4-stair-tone",
+  "status": "ready-for-parent-integration",
+  "contextTileBox": [
+    2449,
+    2413,
+    3703,
+    3667
+  ],
+  "contextWorldBox": [
+    14737,
+    14701,
+    15991,
+    15955
+  ],
+  "rawFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\f4-stair-tone\\raw-generated.png",
+  "rawHash": "871a87f150de0b89568b9b7691b3e6d6cc1a3596274f9ed7cc9b88cc307ddebe",
+  "rawHostFile": "C:\\Users\\luyua\\.codex\\generated_images\\01a125ff-4fa6-7862-8988-5b5b0eb2c7e4\\exec-f5f1dea5-94ac-4a5f-8353-a8372fd793cb.png",
+  "rawDimensions": [
+    1254,
+    1254
+  ],
+  "baseFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\candidate\\r04_c04-pipeline-minimum-error-fbb8f7edb616-fe50f8.png",
+  "baseHash": "d2a7884de15f115597edc3ba27007a2ccfe1cba0b0935c239679d6a9abf0db1b",
+  "sourceFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\f4-stair-tone\\source-context.png",
+  "sourceHash": "0e91cebbb0c3266258ea04f511b241e364f472c04fc6b0522fa67187252cc41f",
+  "guideFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\f4-stair-tone\\guide-native.png",
+  "guideHash": "0e91cebbb0c3266258ea04f511b241e364f472c04fc6b0522fa67187252cc41f",
+  "alphaFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\f4-stair-tone\\alpha.png",
+  "alphaHash": "56881a81ac7c0bf75424f22b15f2ffc85dfa6231f33ae9f67510f0ba2fd12751",
+  "alphaMode": "L",
+  "alphaDimensions": [
+    1254,
+    1254
+  ],
+  "alphaScale": 255,
+  "alphaInnerBox": [
+    603,
+    574,
+    652,
+    682
+  ],
+  "alphaOuterBox": [
+    555,
+    542,
+    700,
+    714
+  ],
+  "alphaFormula": "At pixel centers X=x+0.5,Y=y+0.5: S(t)=3*t^2-2*t^3 with t clamped to [0,1]. W=S((X-outer.left)/(inner.left-outer.left)) * (1-S((X-inner.right)/(outer.right-inner.right))) * S((Y-outer.top)/(inner.top-outer.top)) * (1-S((Y-inner.bottom)/(outer.bottom-inner.bottom))). alpha= floor(255*W+0.5).",
+  "blendFormula": "Per-channel sRGB byte arithmetic at identical coordinates: floor((base*(255-alpha)+raw*alpha+127)/255). No resampling, warp, blur, color correction or hand-painted content.",
+  "derivedFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\f4-stair-tone\\derived-context.png",
+  "derivedHash": "7514d2ab52bb68753c08d2b70d3a62fb35f3f2fa3ac63d0375c2682cdbc4f31e",
+  "derivedDimensions": [
+    1254,
+    1254
+  ],
+  "derivationType": "same-coordinate alpha composite of native base and native built-in generated repair; not a single-source native image",
+  "actualChangedContextBox": [
+    559,
+    548,
+    697,
+    709
+  ],
+  "actualChangedTileBox": [
+    3008,
+    2961,
+    3146,
+    3122
+  ],
+  "changedPixels": 17730,
+  "verifiedUnchangedOutsideAlpha": true,
+  "verifiedHostRawByteIdentical": true,
+  "visualReview": {
+    "result": "PASS for the assigned local defect",
+    "views": [
+      "guide-native.png",
+      "comparison-before-raw-derived-native.png",
+      "derived-context.png"
+    ],
+    "nativeScaleReviewed": true,
+    "finding": "Central hard tonal seam is removed with continuous stone texture. Tread/riser boundary and lower dark joint remain visually continuous without visible step or ghost edge. No visible patch border. Other pre-existing features outside the alpha region remain byte-identical to base.",
+    "scope": "Local assigned defect only; not a whole-tile approval.",
+    "generationCount": 1
+  },
+  "integrationInstructions": "Verify baseHash. Replace only pixels where alpha>0 in contextTileBox with already-composited derived-context pixels at the same coordinates; do not apply alpha again. Patches F3 and F4 have disjoint actual changed regions."
+}

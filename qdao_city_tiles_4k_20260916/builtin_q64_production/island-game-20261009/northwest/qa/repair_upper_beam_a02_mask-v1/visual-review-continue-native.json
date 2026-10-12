@@ -1,0 +1,59 @@
+{
+  "reviewer": "continue_native",
+  "reviewedAt": "2026-10-10T00:01:50.823Z",
+  "status": "not accepted as final mask; retain successful raw repair for improved same-coordinate selection",
+  "inputs": [
+    "combined_native_crop.png",
+    "source_selection_mask.png",
+    "mask_selection.json"
+  ],
+  "nativeReviewScale": "100%",
+  "evidence": "right_boundary_before_combined_repair_100pct.png",
+  "evidenceLocalBox": [
+    580,
+    90,
+    740,
+    340
+  ],
+  "evidenceOrder": [
+    "target before",
+    "combined mask-v1",
+    "raw a02 repair"
+  ],
+  "findings": [
+    {
+      "type": "material_boundary",
+      "localApproxBox": [
+        625,
+        140,
+        695,
+        285
+      ],
+      "tileApproxBox": [
+        1175,
+        140,
+        1245,
+        285
+      ],
+      "assessment": "Original large jagged M1 seam removed. Right mask edge still reads as a connected oblique tonal boundary through the upper dark band and beam face; lower contrast than original but does not follow normal along-beam grain."
+    },
+    {
+      "type": "contour",
+      "localApproxPoint": [
+        681,
+        144
+      ],
+      "tileApproxPoint": [
+        1231,
+        144
+      ],
+      "assessment": "Tiny roughly2-3px dark tooth at white wall/beam contact. No open white gap, major silhouette displacement or missing wood."
+    },
+    {
+      "type": "preserved",
+      "assessment": "Lower beam outline, blue tiles, gold eave and other crop geometry remain intact. Out-of-scope lower-beam relighting from raw repair was correctly excluded by mask."
+    }
+  ],
+  "recommendation": "No new generation. Keep a02 and extend right repair selection to a real beam end/join, instead of ending in the middle of the continuous plane. Keep upper/lower mask edges at existing white-wall contact and roof-shadow/beam contour, while protecting blue tiles, gold eave and unrelated lower beam. Inspect new mask at100% before integration.",
+  "mutations": "Only this visual-review record and100% comparison crop saved. No native/tile/progress/script changes."
+}

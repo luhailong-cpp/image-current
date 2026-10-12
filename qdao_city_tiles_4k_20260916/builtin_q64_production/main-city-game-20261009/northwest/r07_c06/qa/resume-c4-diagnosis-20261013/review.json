@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-13T02:47:30.945225+00:00",
+  "tile": "r07_c06",
+  "status": "read-only-diagnosis",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\candidate\\r07_c06-candidate-native-roi-v05.png",
+    "sha256": "8c69a55323bfbc354dc284e0f95711734206a34a2d79d082e44b444f6e99449a",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "actuallyViewed": [
+    "native/s03_04_resume01.png",
+    "native/s04_04_resume01.png",
+    "qa/final-candidate-20261012/v-r3-c3.png",
+    "qa/final-candidate-20261012/v-r4-c3.png",
+    "qa/final-candidate-20261012/j-r3-c3.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-1.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-2.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-3.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-4.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-1.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-2.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-3.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-1.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-2.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-3.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-4.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-1.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-2.png",
+    "qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-3.png",
+    "qa\\resume-c4-diagnosis-20261013\\v05-c4-r3-complete-anchor-context.png",
+    "qa\\resume-c4-diagnosis-20261013\\v05-c4-r4-complete-anchor-context.png",
+    "qa\\resume-c4-diagnosis-20261013\\v05-j-r3-c3-complete-context.png"
+  ],
+  "proof": {
+    "wholeRow3Column4CoreMatchesNative": true,
+    "wholeRow4Column4CoreMatchesNative": true,
+    "allThreeOldQaCropsPixelExactToV05": true
+  },
+  "coordinates": {
+    "sourceCore": [
+      115,
+      115,
+      1139,
+      1139
+    ],
+    "actualVerticalCoreSeamCandidateX": 3072,
+    "anchorFillBoundaryNativeX": 230,
+    "anchorFillBoundaryCandidateX": 3187,
+    "r3NativeToCandidateOffset": [
+      2957,
+      1933
+    ],
+    "r4NativeToCandidateOffset": [
+      2957,
+      2957
+    ],
+    "r3NativeToWorldOffset": [
+      23437,
+      26509
+    ],
+    "r4NativeToWorldOffset": [
+      23437,
+      27533
+    ]
+  },
+  "findings": [
+    {
+      "id": "r3-upper-dangling-joint",
+      "source": "s03_04_resume01.png",
+      "point": [
+        230,
+        232
+      ],
+      "relatedAnchorTip": [
+        229,
+        148
+      ],
+      "sourceROI": [
+        200,
+        135,
+        350,
+        300
+      ],
+      "finding": "The lower-right anchor joint ends at native x229/y146-149; generated diagonal starts at x230/y231-233. The gap is visible in complete context and is unrelated to the diagnostic crop edge.",
+      "candidateROI": [
+        3157,
+        2068,
+        3307,
+        2233
+      ],
+      "worldROI": [
+        23637,
+        26644,
+        23787,
+        26809
+      ],
+      "purpose": "Proposed inspection/repair envelope only; no repair generated or selected. Final ROI must pass native perimeter and joint continuity review."
+    },
+    {
+      "id": "r3-middle-misaligned-joint",
+      "source": "s03_04_resume01.png",
+      "point": [
+        230,
+        465
+      ],
+      "relatedAnchorTip": [
+        229,
+        486
+      ],
+      "sourceROI": [
+        200,
+        440,
+        290,
+        515
+      ],
+      "finding": "Up-right anchor branch reaches x229/y484-487, while the generated branch begins at x230/y464-466. Approximately 20 px offset; lower-right branch at y551 connects and should be preserved.",
+      "candidateROI": [
+        3157,
+        2373,
+        3247,
+        2448
+      ],
+      "worldROI": [
+        23637,
+        26949,
+        23727,
+        27024
+      ],
+      "purpose": "Proposed inspection/repair envelope only; no repair generated or selected. Final ROI must pass native perimeter and joint continuity review."
+    },
+    {
+      "id": "r3-lower-orphan-and-cusp",
+      "source": "s03_04_resume01.png",
+      "point": [
+        230,
+        937
+      ],
+      "relatedAnchorTip": [
+        229,
+        880
+      ],
+      "sourceROI": [
+        180,
+        850,
+        330,
+        975
+      ],
+      "finding": "The old up-right branch from the junction near (196,910) reaches x229/y878-881 and persists briefly beyond x230 as a thin stub. New up-right diagonal begins at x230/y935-938. Lower-right continuation also makes a small cusp at x230/y947-950.",
+      "candidateROI": [
+        3137,
+        2783,
+        3287,
+        2908
+      ],
+      "worldROI": [
+        23617,
+        27359,
+        23767,
+        27484
+      ],
+      "purpose": "Proposed inspection/repair envelope only; no repair generated or selected. Final ROI must pass native perimeter and joint continuity review."
+    },
+    {
+      "id": "r4-upper-clipped-branch",
+      "source": "s04_04_resume01.png",
+      "point": [
+        229,
+        258
+      ],
+      "sourceROI": [
+        180,
+        230,
+        335,
+        355
+      ],
+      "finding": "Upper-right branch from junction near (206,280) ends at x229/y257-260; there is no dark continuation at x230. Lower-right branch at y303-308 connects to the generated junction near (262,334), so it is not the clipped branch.",
+      "candidateROI": [
+        3137,
+        3187,
+        3292,
+        3312
+      ],
+      "worldROI": [
+        23617,
+        27763,
+        23772,
+        27888
+      ],
+      "purpose": "Proposed inspection/repair envelope only; no repair generated or selected. Final ROI must pass native perimeter and joint continuity review."
+    }
+  ],
+  "materialBoundaries": [
+    {
+      "source": "s03_04_resume01.png",
+      "boundary": "x230 through the visible column-four core; abrupt lattice/material and paper transition",
+      "candidateX": 3187,
+      "suggestedCorridorSourceROI": [
+        195,
+        115,
+        285,
+        1139
+      ],
+      "meaning": "The grout loci alone will not remove the entire visible texture rectangle. This corridor is a separate proposed envelope, not an accepted overlay."
+    },
+    {
+      "source": "s04_04_resume01.png",
+      "boundary": "x230, with strongest rectangular corner at (230,230)",
+      "candidateX": 3187,
+      "suggestedCorridorSourceROI": [
+        195,
+        230,
+        285,
+        1139
+      ],
+      "meaning": "Texture boundary remains visible between local joint repairs; exact final extraction depends on the edited native perimeter."
+    }
+  ],
+  "nonBlockers": [
+    {
+      "source": "s04_04_resume01.png",
+      "locus": [
+        230,
+        650
+      ],
+      "finding": "Dark joint connects across x230 with a tiny kink; not a detached stub."
+    },
+    {
+      "source": "s04_04_resume01.png",
+      "locus": [
+        230,
+        1042
+      ],
+      "finding": "Up-right dark joint continues across x230."
+    },
+    {
+      "candidate": "actual c3/c4 seam x3072 and r3/r4 seam y3072 in complete junction context",
+      "finding": "Connected diagonal grout and bevels. Preserve these existing core seams."
+    }
+  ],
+  "constraints": {
+    "noGeneration": true,
+    "noSelectionChanges": true,
+    "noEdits": true,
+    "diagnosticCropResize": false,
+    "writesOnlyInsideAssignedQaFolder": true,
+    "sourceROIsAvoidActualCoreSeamX115": true,
+    "r2c4WorkUntouched": true,
+    "formalAccepted": false
+  },
+  "diagnosticFiles": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-1.png",
+      "sha256": "551c0b87a624d5bdd4d17a51c12e526d2bb04b225270bb84e7b4a771ce214422",
+      "size": [
+        310,
+        300
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-2.png",
+      "sha256": "3981441911894e4ea280d71f9d30bc0c7222f67ddf3648920f42c63c15356b8a",
+      "size": [
+        310,
+        300
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-3.png",
+      "sha256": "f3fdac302fafb87fac69336b0ca33f0137b2bf747884b683554c1054c1ff6b17",
+      "size": [
+        310,
+        350
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-cut-x230-context-4.png",
+      "sha256": "0c0126cb693ded14049504ea72eec80d09748f5a81b015329a64c275628fbdc0",
+      "size": [
+        310,
+        224
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-1.png",
+      "sha256": "f2f2abdecc0b31aa2e2539bcbca3556e2a0c7170e5a7a26311b54ca3c8505cba",
+      "size": [
+        150,
+        180
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-2.png",
+      "sha256": "0e7ff5346d758b00756b83a8ee629a83276fd81ef5409eb7069b8d7e2a4f3907",
+      "size": [
+        160,
+        130
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r3-intersection-detail-3.png",
+      "sha256": "c749baa8cecaff505a555165a7d248240bb3ebbbcd573f0fa6305eaba2d19739",
+      "size": [
+        185,
+        160
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-1.png",
+      "sha256": "2dab6a1c8c534599b11e0c18b8f74ec05ca83802afce925a1f25dc9521f763c6",
+      "size": [
+        310,
+        300
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-2.png",
+      "sha256": "be68f1f2acc26fc34a95bdbfa42dbfc5432d1fcca15f35d61d19b774c1430ae3",
+      "size": [
+        310,
+        300
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-3.png",
+      "sha256": "dc00ac2782df093e887c849871138772592b649d275e50b136f53ec86494996e",
+      "size": [
+        310,
+        350
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-cut-x230-context-4.png",
+      "sha256": "7f53946944cdb1c8058cbc6d900a0a87a78e7e4e3671e01c923726ce2855166c",
+      "size": [
+        310,
+        224
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-1.png",
+      "sha256": "16e3bccdd5a77d56d3c9a94df94ed8368ee1456fbf300d0aa8447af123e73b06",
+      "size": [
+        170,
+        150
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-2.png",
+      "sha256": "09ada5ad913bc0401edab8d55e0ce81b52ff8dc0efda54ada5349c4790eaf7fe",
+      "size": [
+        160,
+        145
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\native-r4-intersection-detail-3.png",
+      "sha256": "d6eb236c7c510800089fb503e8d7312e6010e317395ebd27816b683540fd358e",
+      "size": [
+        180,
+        160
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\v05-c4-r3-complete-anchor-context.png",
+      "sha256": "b2de51779d0c149e31f50c4c7e713303ca7179a3694225ab38942e126b49ff94",
+      "size": [
+        445,
+        1024
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\v05-c4-r4-complete-anchor-context.png",
+      "sha256": "874e713263a16f37adcffbd971ea4213ceb212dd77ff3c8965b0806a15296a46",
+      "size": [
+        445,
+        1024
+      ],
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\qa\\resume-c4-diagnosis-20261013\\v05-j-r3-c3-complete-context.png",
+      "sha256": "21d25c865face7a8cafa3944c91b372623b5b56b63b06ee7beabf8df5966e33c",
+      "size": [
+        576,
+        576
+      ],
+      "resized": false
+    }
+  ]
+}

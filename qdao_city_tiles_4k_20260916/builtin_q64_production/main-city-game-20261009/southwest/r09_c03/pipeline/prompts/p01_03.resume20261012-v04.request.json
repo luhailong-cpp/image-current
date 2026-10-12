@@ -1,0 +1,119 @@
+{
+  "prompt": "Use case: precise-object-edit. Repaint ONLY Image 1 into native finished game-map detail at the SAME 1254x1254 canvas, preserving its exact close framing and object outlines. Its left 230 pixels are sharp actual native paving and roof artwork, preserve this anchor. Its remaining pixelated area is the authoritative approved local geometry, preserve the blue-grey street band's actual position, width and slope rather than inventing a different paving layout. This is a BROAD blue-grey paving band, approximately 500 pixels of vertical width, mostly crossing the upper half: its lower border must run from approximately x230,y240 to x1254,y650, with shallow diagonal slope about 0.4. The upper border is mostly above the crop until the top-right. Do NOT make a narrow single row of blue tiles that reaches the bottom-right. Both adjoining areas are quiet pale grey paving at the same flat ground level. Continue the ground plane's projected slab lines in the approved guide orientation, sparse restrained brush texture and soft rounded bevels, no dense mottling.\nThe only building fragment is the warm golden roof tip at bottom-left. Preserve its EXACT guide silhouette: a single simple upturned roof hook with rounded tip near x290,y650, broad outside curve to x570,y850, dark recessed return near x350,y800, and base joined to the left gold ridge near y1000. Follow the pixelated outline, no spiral disk, carved emblem or collar. Blue native roof tiles remain clipped below it. Image 5 is only whole-building geometry context showing this existing roof corner; do not add anything from elsewhere in that context.\nImages 2-4 are the required whole-city geometry, natural daylight stone finish and rounded Daoist chibi style references. Output only the exact crop with newly painted native detail. Keep the existing native left roof band, lighting and blue tile scale. No new objects, wall, steps, smoke, chimney, plant, people, labels, grids, UI or added ornament. No artificial vertical strip divider. The coarse guide is not final art and must not be returned as upscaled pixels.\n",
+  "promptFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c03\\pipeline\\prompts\\p01_03.resume20261012-v04.prompt.txt",
+  "promptSha256": "3ec121a8d3cae2daa38e4319dc2722882d5b2fbc40b4495a5f484cfefe40110e",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c03\\pipeline\\guides\\p01_03.resume20261012-v01.continuity-seed.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c02\\pipeline\\guides\\r09c02-smith-semantic-layout-context.png"
+  ],
+  "transparent_background": false,
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c03\\pipeline\\guides\\p01_03.resume20261012-v01.continuity-seed.png",
+      "sha256": "5cd27b1b14e252477e0c507ffb62ba09b2f83cf04f1dcf5463b741b421576775",
+      "role": "actual builtin native output to edit; preserve fixed crop and explicitly stated invariants"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved whole-city geometry only; no full scene output"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved clean grey stone, daylight and material finish"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "current primary Daoist chibi style; copy no UI"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c02\\pipeline\\guides\\r09c02-smith-semantic-layout-context.png",
+      "sha256": "1d946a700f312a3b157fbae36ec2d3e3ffa61d429601f97e76923adb619a1c6c",
+      "role": "whole-building master geometry context only, not native art"
+    }
+  ],
+  "neighborSources": [],
+  "cornerTreatment": {
+    "bothSourcesPresent": false,
+    "reason": "Actual native edit target; preserve exact approved geometry except explicitly requested corrections."
+  },
+  "coordinates": {
+    "id": "p01_03",
+    "row": 1,
+    "column": 3,
+    "coreWorldBox": [
+      10240,
+      32768,
+      11264,
+      33792
+    ],
+    "contextWorldBox": [
+      10125,
+      32653,
+      11379,
+      33907
+    ],
+    "nativeCoreBox": [
+      115,
+      115,
+      1139,
+      1139
+    ]
+  },
+  "tile": "r09_c03",
+  "requestedNativePixels": [
+    1254,
+    1254
+  ],
+  "submittedParameters": {
+    "model": null,
+    "quality": null
+  },
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-10",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+      "quality": "https://developers.openai.com/api/reference/resources/images/methods/generate"
+    }
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "preparedAtUtc": "2026-10-12T21:03:12.844357+00:00",
+  "productionResumeEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\resume-production-20261010\\production-resume.json",
+    "sha256": "57dc445fc3cd921dd9aa15e9cda1977f4192786d17a0240e06ac415597ef9a04"
+  },
+  "warnings": [
+    {
+      "kind": "cross_tile_neighbor_unavailable",
+      "sourceTile": "r08_c03",
+      "patch": "p04_03",
+      "side": "top"
+    },
+    {
+      "kind": "global_config_absent_using_previous_request_metadata",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\image-generation.last-request-snapshot-20261012.json",
+      "sha256": "180ab671b30d5c54c440c9d96e095045ce16db8d25e1b8f63448713b61083fba",
+      "actualModel": null,
+      "actualQuality": null,
+      "note": "Exact historical request metadata only; builtin actual model/quality remain undisclosed, no parameters or global configuration changed."
+    }
+  ],
+  "requiresActualVisualInspectionBeforeToolCall": true,
+  "editBaseRequest": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c03\\pipeline\\prompts\\p01_03.resume20261012-v01.request.json",
+    "sha256": "5ea2a84f79516ef57c2a67ae0d77b678da79fe436f3e2445a24d8e74bf4341a0"
+  }
+}

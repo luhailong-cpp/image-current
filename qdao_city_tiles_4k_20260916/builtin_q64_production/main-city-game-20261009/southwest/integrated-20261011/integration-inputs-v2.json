@@ -1,0 +1,66 @@
+{
+  "version": "v2",
+  "tiles": {
+    "r10_c05": {
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\repairs\\output\\r10_c05.repaired.candidate.png",
+      "sha256": "f228d0e07c4ed329bdcce87a46abb0ddeb48c9688dab1d86b33456051797ecad"
+    },
+    "r10_c06": {
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c06\\repairs-20261011\\output\\r10_c06.repaired.candidate.png",
+      "sha256": "e8b8bd239307b23b611867173e4705552a31558b6e9e4d083f81cc7bcebbb60c",
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c06\\repairs-20261011\\output\\r10_c06.repaired.candidate.context.png",
+      "contextSha256": "917fb2b620e36c7788a7923459fa5ec45a7f4d1031ed51b86a912f1cf3d7eb6e"
+    },
+    "r11_c05": {
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\repairs-material-20261011\\output\\r11_c05.material-repaired.candidate.png",
+      "sha256": "b81d72c36f2472c277c202340cf644c63262a1161baaff784345f2d98c0d5955",
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\repairs-material-20261011\\output\\r11_c05.material-repaired.candidate.context.png",
+      "contextSha256": "24529598723c7a3f5678a734064291968f4d4000c7dfda5b8dea66eb16c5fe63"
+    },
+    "r11_c06": {
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-resume20261011\\delivery\\r11_c06.internal-repaired.candidate.png",
+      "sha256": "75710531adabe4a5c11761343c69a833f6a935d650ac0bfa7147091b5c46315c",
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-resume20261011\\delivery\\r11_c06.internal-repaired.context.png",
+      "contextSha256": "c2e843d8e48417a3ea81885c9771f46eed01b684d6225a600b27e8b22e2c47df"
+    }
+  },
+  "overlays": [
+    {
+      "kind": "geometry",
+      "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-repair-20261011\\overlay-proposal-v2.json"
+    },
+    {
+      "kind": "color",
+      "id": "wood",
+      "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-color-repair-20261011\\wood-combined\\proposal.json"
+    },
+    {
+      "kind": "color",
+      "id": "east-stone",
+      "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-color-repair-20261011\\east-combined\\proposal.json"
+    }
+  ],
+  "intentionalRebases": {
+    "east-stone:r11_c06": {
+      "baselineCandidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-resume20261011\\08-stone-foot-tone\\r11_c06.repaired.candidate.png",
+      "sha256": "39619b8cd2327b44f377f88ff0b8af0723400d4a3efbf07b317adef84679d42e",
+      "allowedCandidateBox": [
+        2700,
+        0,
+        3954,
+        1254
+      ],
+      "reason": "09-top-right-tone changed the same colour band. Prefer the native cross-boundary stone repair within its sparse mask; retain 09 everywhere outside that mask and preserve the other four internal repairs."
+    }
+  },
+  "remainingIssues": [
+    "r11_c06 G01 stair terminal length remains incorrect after four rejected native attempts.",
+    "north_vertical lower stone stair light/dark splice remains pending.",
+    "r11_c05 broad repetitive stone microtexture remains pending; similar style concerns exist elsewhere.",
+    "r10_c06 south guide object fragment and red sliver require coordinated layout review.",
+    "External perimeter of this 2x2 block is not accepted.",
+    "60 southwest tiles still lack complete 4K candidates.",
+    "r11_c06 G02/G06 remaining paving layout deviations documented in delivery/visual-qa.json.",
+    "All four internal boundaries require renewed visual review after merging."
+  ]
+}

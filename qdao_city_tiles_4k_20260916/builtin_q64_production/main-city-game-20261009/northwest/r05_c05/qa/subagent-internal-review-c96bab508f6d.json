@@ -1,0 +1,1048 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10 17:13:17 UTC",
+  "reviewer": "assemble_2x2_tooling",
+  "tile": "r05_c05",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\candidate\\r05_c05-candidate-minimum-error-c96bab508f6d.png",
+    "sha256": "55d87a0874a9f3820ea6e1fdec135be634a3913929850b583edad92388960448",
+    "pixels": [
+      4096,
+      4096
+    ],
+    "mode": "RGB"
+  },
+  "assemblyManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/candidate/r05_c05-candidate-minimum-error-c96bab508f6d.assembly.json",
+  "status": "needs_material_review",
+  "internalQA": {
+    "status": "needs_repair",
+    "actuallyViewed": true,
+    "seamSegments": 24,
+    "junctions": 9,
+    "nativeScaleViews": true,
+    "geometryStatus": "passed",
+    "materialStatus": "one_clear_binary_cut_transition_and_one_lighter_transition"
+  },
+  "hashVerification": {
+    "checked": 34,
+    "allMatch": true,
+    "mismatches": []
+  },
+  "reviewMethod": "Opened all 24 seam segments and all9 junction PNGs individually with view_image detail=original, at stored native resolution. No overview thumbnail was used to replace a seam view. Compared s02_04, s04_03 and s02_02 native source images to interpret doubtful shading. Read recorded seam-path coordinates for the two material transitions.",
+  "findings": [
+    {
+      "id": "QA-02",
+      "severity": "material_repair_recommended",
+      "summary": "Scalloped/sawtooth dark-to-light material boundary across one unbroken paving slab matches the binary source cut.",
+      "qaFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/qa/r05_c05-candidate-minimum-error-c96bab508f6d/internal-y3072-segment03.png",
+      "qaCoordinates": {
+        "system": "native PNG pixel x,y",
+        "boxLTRB": [
+          0,
+          80,
+          1024,
+          220
+        ],
+        "examples": [
+          [
+            202,
+            120
+          ],
+          [
+            502,
+            174
+          ],
+          [
+            652,
+            141
+          ]
+        ]
+      },
+      "candidateCoordinates": {
+        "system": "tile-local native pixel x,y",
+        "regionLTRB": [
+          2048,
+          2992,
+          3072,
+          3132
+        ],
+        "verifiedSeamExamples": [
+          [
+            2250,
+            3032
+          ],
+          [
+            2550,
+            3086
+          ],
+          [
+            2700,
+            3053
+          ]
+        ]
+      },
+      "sourcePair": [
+        "s03_03_material01.png",
+        "s04_03.png"
+      ],
+      "recommendedRepair": {
+        "nativePatch": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s04_03.png",
+        "scope": "Match the upper overlap's pale-grey tone and grain to s03_03_material01 at the same world coordinates, preserving all joints. Inspect the rest of this patch for a new boundary before selecting.",
+        "reference": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s03_03_material01.png"
+      },
+      "geometryAffected": false,
+      "confirmedAgainstRecordedSeam": true
+    },
+    {
+      "id": "QA-03",
+      "severity": "minor_material_review",
+      "summary": "A weaker darker/coarser-to-lighter/finer transition appears in the right-hand paving slab across the row3 cut. Stone joints remain continuous.",
+      "qaFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/qa/r05_c05-candidate-minimum-error-c96bab508f6d/internal-y2048-segment02.png",
+      "qaCoordinates": {
+        "system": "native PNG pixel x,y",
+        "boxLTRB": [
+          640,
+          150,
+          1024,
+          260
+        ],
+        "examples": [
+          [
+            776,
+            180
+          ],
+          [
+            876,
+            221
+          ]
+        ]
+      },
+      "candidateCoordinates": {
+        "system": "tile-local native pixel x,y",
+        "regionLTRB": [
+          1664,
+          2038,
+          2048,
+          2148
+        ],
+        "verifiedSeamExamples": [
+          [
+            1800,
+            2068
+          ],
+          [
+            1900,
+            2109
+          ],
+          [
+            2000,
+            2109
+          ]
+        ]
+      },
+      "sourcePair": [
+        "s02_02.png",
+        "s03_02_material01.png"
+      ],
+      "recommendedRepair": {
+        "nativePatch": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s02_02.png",
+        "scope": "If root judges this transition too visible, adjust only lower paving material near native y1080..1254 to the selected s03_02 material; preserve stairs, base, paper and all joints.",
+        "reference": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s03_02_material01.png"
+      },
+      "geometryAffected": false,
+      "confirmedAgainstRecordedSeam": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "OBS-01",
+      "summary": "The straight brightness edge near candidate x3187 is largely a genuine wall-face turn, with matching ledge, cloud band and plinth geometry. Do not flatten or blur this corner.",
+      "source": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s02_04.png",
+      "realCornerNativeRegionLTRB": [
+        210,
+        110,
+        270,
+        580
+      ],
+      "minorCapTextureObservation": {
+        "nativeRegionLTRB": [
+          215,
+          0,
+          250,
+          55
+        ],
+        "candidateRegionLTRB": [
+          3172,
+          909,
+          3207,
+          964
+        ],
+        "assessment": "Subtle cap-top texture truncation; non-blocking on this audit. A material-only touch-up may be considered, while retaining the cap fascia turn below y55."
+      },
+      "supersedesPreliminaryMessage": "The earlier broad claim that candidate x3187,y964..1184 was all an erroneous guide strip was withdrawn after full native-source comparison."
+    },
+    {
+      "id": "OBS-02",
+      "summary": "Mild faceted changes in stair surface grain are visible near junction-x1024-y1024 and in the corresponding source style. Stair noses, riser edges and slab joints stay connected; no geometry repair recommended."
+    },
+    {
+      "id": "OBS-03",
+      "summary": "A tiny paving-edge nick near internal-x3072-segment03 crop(843,190) does not sever the joint. No layout repair recommended."
+    },
+    {
+      "id": "OBS-04",
+      "summary": "internal-y3072-segment04 has a weaker coarse-to-fine material transition adjoining QA-02; review its appearance if the neighboring top-overlap material is repaired.",
+      "source": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c05/native/s04_04.png"
+    }
+  ],
+  "qa": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x1024-segment01.png",
+      "sha256": "55e1bd8dedcbe6e9c51a437b32ba1dd504701e0f12db5a57a077e5712aa7a5e1",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        0,
+        1184,
+        1024
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: stair noses, riser shading and slab cuts continue across join; broad facet shading follows the steps."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x1024-segment02.png",
+      "sha256": "f0e7d222ca6cbb54bdaca42881d04fee5633df3d68c6970db5369306a3579d7b",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        1024,
+        1184,
+        2048
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: stair-to-paving transition and staggered joints remain connected; no visible cut edge through scraps."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x1024-segment03.png",
+      "sha256": "fe40c911d45a07dab0eccaf0ab73efbe2d14cc070df8466e91b68e99d39d5730",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        2048,
+        1184,
+        3072
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: three paving joints and the upper T junction are connected; no hard material strip."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x1024-segment04.png",
+      "sha256": "9ddacb95cae625e9ef560cf1223aa83ff93085920168fda3f8cc79440382999c",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        3072,
+        1184,
+        4096
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: thin paving joints continue; no dead ends or distinct color band."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x2048-segment01.png",
+      "sha256": "9da215c79999431ae54d51034e88f60696d1d0d9315fa0b9911568ad4da66690",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        0,
+        2208,
+        1024
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: jade cloud relief contours and pale stone frame remain continuous across join."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x2048-segment02.png",
+      "sha256": "2713db060d7111658d839c9a7a408bced7d7559cd42f971002a3db9fb1d9ee6d",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        1024,
+        2208,
+        2048
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: firework boxes, cylinder edges, cast shadows and paving joints are coherent; no chopped prop contour."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x2048-segment03.png",
+      "sha256": "6959c4bfcbffec4569bb7aa76a8bc196401d56c124ce9a9c0f43b412a2bc5a20",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        2048,
+        2208,
+        3072
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: red scraps remain intact and paving joints continue without an obvious material boundary."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x2048-segment04.png",
+      "sha256": "10c80ad72f298febd427f120a8c27513bc9ddbdd8b81c5030ab523d408506b48",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        3072,
+        2208,
+        4096
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: paving joints and fine pale-grey material continue across join."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x3072-segment01.png",
+      "sha256": "7d4660be71ee148f136a8d19f1832b349aac246c218b478b8f1c22439b2623be",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        0,
+        3232,
+        1024
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: jade relief grooves, frame and diagonal building shadow continue."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x3072-segment02.png",
+      "sha256": "99ddce1e1886ddfe5461cdfae1aac16f531a2a267eee872e34d109ec3ca96be2",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        1024,
+        3232,
+        2048
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed geometry. Source comparison resolves most apparent tone boundary as a genuine wall-face corner; preserve the wall and plinth turn. Only cap-top material truncation remains a minor observation."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x3072-segment03.png",
+      "sha256": "1832c07de1649dfbf450aeaf7c28254b40b1014b705acb18952f95f12dfe2910",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        2048,
+        3232,
+        3072
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed with observation: paving joints and red scraps connect; a tiny edge nick near rotated QA(843,190) needs no layout repair unless further views show a gap."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-x3072-segment04.png",
+      "sha256": "50e22f5f5fe239e78587beccf5fb88103b66365423a2f4fd1f09f31c7db486eb",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        3072,
+        3232,
+        4096
+      ],
+      "rotationCCW90": true,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: long thin paving joints and stone tone remain continuous."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y1024-segment01.png",
+      "sha256": "f415d0f34dc4e6dbaaca18959248402344bfa9634bdc04174dc745b7b9f492ba",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        0,
+        864,
+        1024,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: stair risers and tread bevels continue across horizontal assembly join."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y1024-segment02.png",
+      "sha256": "c46608be664f03303f21fedb474357c77b0aaeb177497c320564a71f34b1c91b",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1024,
+        864,
+        2048,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: stair edges, balustrade foot, bevel and shadow are coherent."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y1024-segment03.png",
+      "sha256": "4cdb985b92517705be1e535cba55f9ad84bdfa2af23dd631c0161f8ad66b238b",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2048,
+        864,
+        3072,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: wall courses and projecting corner/plinth retain consistent geometry."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y1024-segment04.png",
+      "sha256": "dc3602d94f8b0c24682759c384515e6f37235a1b8e0c9a13611195e5fc8f52ac",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        3072,
+        864,
+        4096,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed geometry. The boundary at crop x115 below y~110 corresponds to the true wall corner. Withdraw preliminary whole-wall guide-band classification. Minor cap-top texture cutoff is confined to native s02_04 y0..55."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y2048-segment01.png",
+      "sha256": "4036d687285902ebc5027fb60827c6fdf7c69f48a9a2e2b3332390f3bddb8c24",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        0,
+        1888,
+        1024,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: paving joints are connected; surface grain varies mildly between source regions without a strong hard band."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y2048-segment02.png",
+      "sha256": "63c98fac7cc5f56b0164eb419a3163a000743243370fdd794ea22667b6be5e5e",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1024,
+        1888,
+        2048,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "minor_review",
+      "note": "Material finding QA-03: gentle but visible darker/coarser-to-lighter/finer surface transition in the right half follows the recorded row3 seam; joints remain intact."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y2048-segment03.png",
+      "sha256": "b671db316d32268398773a109024293cf38da3fb286429300feaa72cb01e898b",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2048,
+        1888,
+        3072,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: crossing paving joints and original red scraps remain coherent; no strong hard band."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y2048-segment04.png",
+      "sha256": "7dd2bdf1d52c1e57a0884bbe181ea5aa639c0c88ba59f2c70bddf68f9bfacf4c",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        3072,
+        1888,
+        4096,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: paving joints and spent fireworks remain coherent; texture is more mottled than adjoining repaired ground but no obvious straight cutoff here."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y3072-segment01.png",
+      "sha256": "86e22f3651e2f3a7febef43f67098d92362f77b694a0598a364d465d3aa7220d",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        0,
+        2912,
+        1024,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: uninterrupted fine paving material; no joint crosses this segment and no strong artificial band."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y3072-segment02.png",
+      "sha256": "70cc9912cdfbb362d877dc7f7a88591a28b165a36bf6c8abbb947dc0bf6319a5",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        1024,
+        2912,
+        2048,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: single vertical paving joint continues across the join, with mild material variation."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y3072-segment03.png",
+      "sha256": "574565fd90a9c0d5375451ed086b317d45c350e6990fa292fa034c120f28a2fc",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        2048,
+        2912,
+        3072,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "repair_recommended",
+      "note": "Material finding QA-02: visible sawtooth dark-to-light surface transition coincides with the recorded row4 binary cut; no slab joint occurs here to explain it."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\internal-y3072-segment04.png",
+      "sha256": "91062de40ed5db86e8c719e1468b58743aa2e301f7a38b1ba1939ae62883a10f",
+      "pixels": [
+        1024,
+        320
+      ],
+      "cropLTRB": [
+        3072,
+        2912,
+        4096,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Observation: denser/flakier upper stone transitions into finer lower stone; less pronounced than segment03, inspect corresponding sources if repairing adjacent material."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x1024-y1024.png",
+      "sha256": "1e7b98a52c3e3a8563b3d9778f6b74cfacc1fa03caa8cc28b91abdcde1d7b0f8",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        864,
+        1184,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Geometry passes; diagonal/faceted change in stair surface grain is visible near the intersection, requiring source comparison before labeling it artificial."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x2048-y1024.png",
+      "sha256": "74fc4dff368490f1271c229f8766080555245bafb8687119d5b454b5ca8baf1b",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        864,
+        2208,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Geometry passes: jade base, stone ledge and T-joint connect. Mild change in grain across source regions."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x3072-y1024.png",
+      "sha256": "dd3018667c1f023f337fb76917c862665ac345a0bbfa72b5aefc28f508cb2895",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        864,
+        3232,
+        1184
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed geometry after source comparison: wall, ledge and plinth all turn consistently at candidate x~3187; the lower face brightness change is physical."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x1024-y2048.png",
+      "sha256": "896daf95af609346e43c4cbb627d68eb70d3e88b4f244e936c0cb553ee9bd565",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        1888,
+        1184,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: paving T joint and vertical line connect; no blank or broken edge."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x2048-y2048.png",
+      "sha256": "d7252170a5048dc2b1e0792e58676ef5efb6179e513258ab14f4429ca0f78450",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        1888,
+        2208,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Geometry passes; mild surface contrast transition corresponds to nearby QA-03 material observation."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x3072-y2048.png",
+      "sha256": "f61189c85aef9a3aa0debe3973c9d8d2c68ca5e28b3b5296f59e6598c7ec25d7",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        1888,
+        3232,
+        2208
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: horizontal paving line and right vertical line connect; no cut paper silhouette."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x1024-y3072.png",
+      "sha256": "00bec6d7021b3d5246a7872a1a9bc7ef740152ff9a9c91500a427ae4da917ec1",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        864,
+        2912,
+        1184,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "Passed: continuous stone face, no geometrical seam or strong color strip."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x2048-y3072.png",
+      "sha256": "637536f62c607be40ee5af340da58e524ee06309922f99549832cc507463a4ba",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        1888,
+        2912,
+        2208,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "No geometry failure; faint material boundary approaches the QA-02 row4 segment."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\qa\\r05_c05-candidate-minimum-error-c96bab508f6d\\junction-x3072-y3072.png",
+      "sha256": "325083c85bde9a1d12df66d30e088f77d302ad6c24fb5d77135b2b3e0b115100",
+      "pixels": [
+        320,
+        320
+      ],
+      "cropLTRB": [
+        2912,
+        2912,
+        3232,
+        3232
+      ],
+      "rotationCCW90": false,
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "nativePixelScale": 1,
+      "geometryVerdict": "passed",
+      "materialVerdict": "passed_or_nonblocking_observation",
+      "note": "No geometry failure; upper material is more mottled than lower. Secondary material observation adjoining QA-02."
+    }
+  ],
+  "candidateNativeSources": [
+    {
+      "id": "s01_01",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s01_01.png",
+      "sha256": "c8267078e9def632bc158338b86573a533e76473e82f2e276863e4077a0ab288",
+      "tileCorePasteXY": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "s01_02",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s01_02_fix02.png",
+      "sha256": "af7266d49e724029312848798901c3f4a4e5e545886bfce4a7da52cee28d61ce",
+      "tileCorePasteXY": [
+        1024,
+        0
+      ]
+    },
+    {
+      "id": "s01_03",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s01_03_fix01.png",
+      "sha256": "18269477c5e9e42ae2a2e3f66666687039b07cb4d5ee35212accf1b5798db5dc",
+      "tileCorePasteXY": [
+        2048,
+        0
+      ]
+    },
+    {
+      "id": "s01_04",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s01_04.png",
+      "sha256": "95707bd4e14faefbd77e7bb538fd7ac15382f40ffafce06f27d2e0103697758e",
+      "tileCorePasteXY": [
+        3072,
+        0
+      ]
+    },
+    {
+      "id": "s02_01",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s02_01.png",
+      "sha256": "e6efc40158cc39eb8f7d226375c4215ffc232d33464e3410f930e91b622138d9",
+      "tileCorePasteXY": [
+        0,
+        1024
+      ]
+    },
+    {
+      "id": "s02_02",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s02_02.png",
+      "sha256": "79d62f3cf72d60abd9162a0f8641c665a1df2bb49cdcbcc3da8ccd10ee0fae43",
+      "tileCorePasteXY": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": "s02_03",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s02_03_fix01.png",
+      "sha256": "a689e9deb2ad50e10f1e2210376e754dfda115086b10e6d044be87e77dbf885a",
+      "tileCorePasteXY": [
+        2048,
+        1024
+      ]
+    },
+    {
+      "id": "s02_04",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s02_04.png",
+      "sha256": "4dd549ff5756f03d607e500b23b26e6b247da0ecb314b7470d79539c57a722cf",
+      "tileCorePasteXY": [
+        3072,
+        1024
+      ]
+    },
+    {
+      "id": "s03_01",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s03_01_material01.png",
+      "sha256": "21a0f310f46e3d669a17fa77d31ef80f90a795a5357f18a67cb1865470782276",
+      "tileCorePasteXY": [
+        0,
+        2048
+      ]
+    },
+    {
+      "id": "s03_02",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s03_02_material01.png",
+      "sha256": "7a95171f54971b55a40e18707553562bf0e9c9ce3714fbccf732c56c93ca2900",
+      "tileCorePasteXY": [
+        1024,
+        2048
+      ]
+    },
+    {
+      "id": "s03_03",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s03_03_material01.png",
+      "sha256": "3dabc1963fc3c222bfe546c9ce40f9e6e2b4e643e3dc063cdb635a888beaaa70",
+      "tileCorePasteXY": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "id": "s03_04",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s03_04.png",
+      "sha256": "ca528b39f8666b42a01bd0ea067e43cea40e982e24688364dbfc7f2b3bdd4cd0",
+      "tileCorePasteXY": [
+        3072,
+        2048
+      ]
+    },
+    {
+      "id": "s04_01",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s04_01_material01.png",
+      "sha256": "7152c096ac8d6f044752187d1d3482c06be4dbf6f167bd74c19aaea46ec707b2",
+      "tileCorePasteXY": [
+        0,
+        3072
+      ]
+    },
+    {
+      "id": "s04_02",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s04_02.png",
+      "sha256": "cef8d68d06bacf35cdc5f85752947dcb93aa10f7c9ca86a0166acf6a9504595b",
+      "tileCorePasteXY": [
+        1024,
+        3072
+      ]
+    },
+    {
+      "id": "s04_03",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s04_03.png",
+      "sha256": "be5772963f6df9c23ab475d2aa49fbff51d4b87cf1ab1670037efd02cfb6f8af",
+      "tileCorePasteXY": [
+        2048,
+        3072
+      ]
+    },
+    {
+      "id": "s04_04",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c05\\native\\s04_04.png",
+      "sha256": "1be3a0f9e87204001e1220bf5ca23f53e0a40ded70021876478f3ef06dc66a96",
+      "tileCorePasteXY": [
+        3072,
+        3072
+      ]
+    }
+  ],
+  "formalAccepted": false,
+  "externalQA": {
+    "status": "not_reviewed"
+  },
+  "imagesModified": false,
+  "selectionModified": false,
+  "acceptanceModified": false,
+  "progressModified": false,
+  "nextStep": "Root decides material repairs; rebuild if any selected source changes. This report applies only to the bound candidate SHA and does not grant formal acceptance."
+}

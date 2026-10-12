@@ -1,0 +1,75 @@
+Reviewed missing-file restoration only
+
+Script: restore_missing_selected.py
+No arguments or --help perform no writes. Only restore with both the input SHA
+and reviewed script SHA starts work. Root reviews the selected exact paths; the
+script does not infer authorization from names, missing directories, or old logs.
+
+Input schema (draft approved=false; root changes only after reviewing):
+{
+  "schema_version": 1,
+  "approved": true,
+  "repository": "D:/work/image",
+  "source_commit": "26f1df45fff54098dc593ae7a005c3f9a9871ac3",
+  "source_audit_file": "D:/work/image/.git/history-prune-image2-20261012/missing-oldflow-available-git-objects.json",
+  "source_audit_sha256": "actual SHA256",
+  "entries": [
+    {
+      "path": "exact/repository/relative/path.png",
+      "mode": "100644",
+      "oid": "exact 40-hex source Git blob",
+      "git_blob_bytes": 123,
+      "reason": "Required protected image / retained preview / current map dependency",
+      "expected_payload_sha256": "optional ordinary blob proof; mandatory for LFS",
+      "expected_payload_bytes": 123
+    }
+  ],
+  "lfs_sources": [
+    {"sha256": "64-hex original payload", "size": 123,
+     "storage_path": "D:/work/image/.git/.../verified-local-cache-file"}
+  ]
+}
+
+The two expected_payload fields must occur together. They are recommended for
+ordinary protected images using the original restoration receipt. For ordinary
+blobs, verified Git SHA1 + header size already proves exact immutable source
+bytes. For canonical LFS pointers, both fields MUST agree with the pointer and
+an explicitly supplied private cache entry; raw pointer text is never restored
+as an image. Noncanonical pointer-like text is rejected. No network hydration.
+
+Every row must match the hash-pinned source audit's exact path/mode/OID/size and
+source commit. The script also independently checks membership in that commit's
+actual full tree. Duplicate/case-colliding targets, traversal, alternate data
+streams, .git paths, symlinks, junctions and other reparse ancestors are refused.
+Existing targets fail the entire initial preflight. O_EXCL also prevents a
+concurrent new file from being overwritten after preflight.
+
+Data flow
+1. Read the original Git blob through explicit read-only cat-file --batch.
+2. Stream into a unique private spool, verifying full Git object SHA1 and size.
+3. If it is an LFS pointer, stream the reviewed local cache into another spool,
+   verifying stable source identity, original SHA256 and size.
+4. Create the missing target exclusively, copy verified bytes, fsync, and read
+   the resulting file again to confirm its SHA256. Keep live Git index mode.
+5. Append each before-create/restored-verification event to a durable journal.
+
+No live refs/index/config or existing workfiles are written. Hooks, Git filters,
+LFS smudge/fetch and networking are not invoked. Source Git metadata fingerprints
+must still match after restoration. Any concurrent Git change causes a failed
+report; successfully restored files are preserved for review, never rolled back.
+
+Failure / recovery
+The exact run directory under .git/history-prune-image2-20261012 contains the
+journal, failure.json, any remaining private spool and attempted-file list.
+Partial target files are preserved and never overwritten on a retry. Root must
+inspect them and produce a newly reviewed missing-only list; the script does
+not automatically remove or repair partial files. Foreign locks are preserved.
+An abrupt process death may leave the own lock, requiring root inspection.
+
+Invocation after root review (placeholders are not executable approval):
+python restore_missing_selected.py restore --input <reviewed-json> 
+  --input-sha256 <reviewed-input-sha> --reviewed-script-sha256 <reviewed-script-sha>
+
+This restores the last committed bytes from F, not otherwise unrecorded latest
+work. The separate complete-current capture must run and verify restored assets
+plus all remaining working files before creating the new current-only root.

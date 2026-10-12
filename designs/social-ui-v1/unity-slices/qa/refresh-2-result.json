@@ -1,0 +1,13 @@
+{
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"success\": false,\n  \"error\": \"COMPILATION_FAILED: Code failed to compile.\",\n  \"data\": {\n    \"isCompilationSuccessful\": false,\n    \"isExecutionSuccessful\": false,\n    \"compilationLogs\": \"- Error Error CS0029: Cannot implicitly convert type 'System.Action' to 'UnityEditor.EditorApplication.CallbackFunction' (Line: 15)\\r\\n- Error Error CS0029: Cannot implicitly convert type 'System.Action' to 'UnityEditor.EditorApplication.CallbackFunction' (Line: 18)\\r\\n\",\n    \"localFixedCode\": \"using UnityEditor;\\r\\n\\r\\nnamespace Unity.AI.Assistant.Agent.Dynamic.Extension.Editor\\r\\n{\\r\\n    internal class CommandScript : IRunCommand\\r\\n    {\\r\\n        public void Execute(ExecutionResult result)\\r\\n        {\\r\\n            double at = EditorApplication.timeSinceStartup + 2;\\r\\n            System.Action refresh = null;\\r\\n            refresh = () =>\\r\\n            {\\r\\n                if (EditorApplication.timeSinceStartup < at)\\r\\n                    return;\\r\\n                EditorApplication.update -= refresh;\\r\\n                AssetDatabase.Refresh();\\r\\n            };\\r\\n            EditorApplication.update += refresh;\\r\\n            result.Log(\\\"Queued source refresh after MCP response; inspect compiler output after reload.\\\");\\r\\n        }\\r\\n    }\\r\\n}\"\n  }\n}"
+      }
+    ],
+    "isError": true
+  },
+  "jsonrpc": "2.0",
+  "id": 2
+}

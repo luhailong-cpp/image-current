@@ -1,0 +1,2618 @@
+{
+  "schemaVersion": 1,
+  "auditedAtUtc": "2026-10-12T03:32:08.082791+00:00",
+  "owner": "freeze_verify_main_city",
+  "scope": "Five main-city migration-freeze checkpoints; read-only worker-material audit. No Git changes, image generation, worker edits, deletions, or candidate acceptance changes.",
+  "rounds": 3,
+  "readyZoneCount": 5,
+  "totalZoneCount": 5,
+  "zones": [
+    {
+      "zone": "northwest",
+      "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\migration-freeze-20261011.json",
+      "checkpointSha256": "a814d9f7a577f40affeb40b3f7aa2ca4ff06f151e6c457e4d6a9b1149cf9fe02",
+      "ready": true,
+      "blockers": [],
+      "evidence": {
+        "checkpointSavedAt": "2026-10-12T03:29:55.943628+00:00",
+        "generationStopped": true,
+        "rootInFlightRequests": [],
+        "inFlightRequests": [],
+        "unsavedSuccessfulOutputPaths": [],
+        "checkpointComplete": true,
+        "allWorkerStatesConfirmed": true,
+        "allWorkersAcknowledged": false,
+        "acknowledgementInterpretation": "r05_c03 and r07_c06 workers confirmed final checkpoint directly. Root independently confirmed r05_c07 after observing successful last-output ingestion and interrupting the remaining local-save turn; no child-authored final acknowledgement is claimed.",
+        "childCheckpointChecks": [
+          {
+            "tile": "r05_c03",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c03\\migration-freeze-20261011.json",
+            "checkpointSha256": "c61729e99d1f2b1961925304bc1e5472d43279998ea1f9fc083c944d98cef1d7",
+            "acknowledgement": "saved",
+            "confirmationActor": "child",
+            "childAuthoredFinalAcknowledgement": true,
+            "inFlight": {
+              "imageGeneration": false,
+              "shellCommands": false,
+              "functionsExecCells": false,
+              "pendingReceiptIngest": false,
+              "knownUnreturnedRequests": []
+            },
+            "unsavedSuccessfulOutputs": [],
+            "savedAndQuiescent": true,
+            "auditBasis": null
+          },
+          {
+            "tile": "r05_c07",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\migration-freeze-20261011.json",
+            "checkpointSha256": "8fb2a5201e80b2443b27ec2a9629a0319a4287870c1b50424b842abd8031967b",
+            "acknowledgement": "independently_confirmed_by_root_after_worker_saved_output",
+            "confirmationActor": "root_independent_local_audit",
+            "childAuthoredFinalAcknowledgement": false,
+            "inFlight": {
+              "imageGeneration": false,
+              "shellCommands": false,
+              "functionsExecCells": false,
+              "pendingReceiptIngest": false,
+              "knownUnreturnedRequests": []
+            },
+            "unsavedSuccessfulOutputs": [],
+            "savedAndQuiescent": true,
+            "auditBasis": [
+              "Worker stated no in-flight generation and last successful s03_01 needed saving.",
+              "Read-thread status showed s03_01 receipt written and ingest command completed successfully with exit0; last command was a completed read of selection.json.",
+              "Root observed saved s03_01 native, generation record and receipt and compared native/cache SHA256 exactly.",
+              "Root interrupted remaining worker turn before writing this independent checkpoint; no new generation or QA was started."
+            ]
+          },
+          {
+            "tile": "r07_c06",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\migration-freeze-20261011.json",
+            "checkpointSha256": "85484a8cf65b3ff6353ad627212f0b46b64f82b0ee3fd0b73ceb534a3db0b17c",
+            "acknowledgement": "saved",
+            "confirmationActor": "child",
+            "childAuthoredFinalAcknowledgement": true,
+            "inFlight": {
+              "activeImagegenRequests": 0,
+              "pendingExecCells": 0,
+              "pendingToolResults": 0,
+              "details": []
+            },
+            "unsavedSuccessfulOutputs": [],
+            "savedAndQuiescent": true,
+            "auditBasis": null
+          }
+        ],
+        "allCurrentChildPins": [
+          {
+            "field": "tiles[30].workerFreeze",
+            "tile": "r05_c03",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c03\\migration-freeze-20261011.json",
+            "expectedSha256": "c61729e99d1f2b1961925304bc1e5472d43279998ea1f9fc083c944d98cef1d7",
+            "actualSha256": "c61729e99d1f2b1961925304bc1e5472d43279998ea1f9fc083c944d98cef1d7",
+            "matches": true
+          },
+          {
+            "field": "tiles[34].workerFreeze",
+            "tile": "r05_c07",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\migration-freeze-20261011.json",
+            "expectedSha256": "8fb2a5201e80b2443b27ec2a9629a0319a4287870c1b50424b842abd8031967b",
+            "actualSha256": "8fb2a5201e80b2443b27ec2a9629a0319a4287870c1b50424b842abd8031967b",
+            "matches": true
+          },
+          {
+            "field": "tiles[48].workerFreeze",
+            "tile": "r07_c05",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c05\\migration-freeze-20261011.json",
+            "expectedSha256": "31226ef39798ba3825ad592f94b9f52f2dc4500053cd27685132f5143d6e7ac8",
+            "actualSha256": "31226ef39798ba3825ad592f94b9f52f2dc4500053cd27685132f5143d6e7ac8",
+            "matches": true
+          },
+          {
+            "field": "tiles[49].workerFreeze",
+            "tile": "r07_c06",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\migration-freeze-20261011.json",
+            "expectedSha256": "85484a8cf65b3ff6353ad627212f0b46b64f82b0ee3fd0b73ceb534a3db0b17c",
+            "actualSha256": "85484a8cf65b3ff6353ad627212f0b46b64f82b0ee3fd0b73ceb534a3db0b17c",
+            "matches": true
+          },
+          {
+            "field": "workerCheckpoints[0].freeze",
+            "tile": "r05_c03",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c03\\migration-freeze-20261011.json",
+            "expectedSha256": "c61729e99d1f2b1961925304bc1e5472d43279998ea1f9fc083c944d98cef1d7",
+            "actualSha256": "c61729e99d1f2b1961925304bc1e5472d43279998ea1f9fc083c944d98cef1d7",
+            "matches": true
+          },
+          {
+            "field": "workerCheckpoints[1].freeze",
+            "tile": "r05_c07",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\migration-freeze-20261011.json",
+            "expectedSha256": "8fb2a5201e80b2443b27ec2a9629a0319a4287870c1b50424b842abd8031967b",
+            "actualSha256": "8fb2a5201e80b2443b27ec2a9629a0319a4287870c1b50424b842abd8031967b",
+            "matches": true
+          },
+          {
+            "field": "workerCheckpoints[2].freeze",
+            "tile": "r07_c06",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c06\\migration-freeze-20261011.json",
+            "expectedSha256": "85484a8cf65b3ff6353ad627212f0b46b64f82b0ee3fd0b73ceb534a3db0b17c",
+            "actualSha256": "85484a8cf65b3ff6353ad627212f0b46b64f82b0ee3fd0b73ceb534a3db0b17c",
+            "matches": true
+          }
+        ],
+        "independentFinalChildRuntime": {
+          "threadId": "01a1296f-0cd8-7711-9a55-449d999d8eeb",
+          "status": {
+            "type": "idle"
+          },
+          "updatedAt": 1791775613,
+          "latestTurnStatus": "interrupted",
+          "lastProductionImage": {
+            "id": "exec-9c7e02b1-317b-461b-b52e-c41ec6f9ef34",
+            "status": "completed",
+            "savedPath": "C:\\Users\\luyua\\.codex\\generated_images\\01a1296f-0cd8-7711-9a55-449d999d8eeb\\exec-9c7e02b1-317b-461b-b52e-c41ec6f9ef34.png"
+          },
+          "lastSaveIngest": {
+            "status": "completed",
+            "exitCode": 0,
+            "output": {
+              "text": "{\r\n  \"file\": \"D:\\\\work\\\\image\\\\qdao_city_tiles_4k_20260916\\\\builtin_q64_production\\\\main-city-game-20261009\\\\northwest\\\\r05_c07\\\\native\\\\s03_01.png\",\r\n  \"size\": [\r\n    1254,\r\n    1254\r\n  ],\r\n  \"sha256\": \"9b54b2c2d41c145237f852cbafe0552c3fe8727909046cdc2542de3838a1021b\",\r\n  \"mechanicallyEligible\": true,\r\n  \"selectedExplicitly\": false,\r\n  \"formalAccepted\": false,\r\n  \"progressUpdated\": false\r\n}\r\n",
+              "truncated": false
+            }
+          },
+          "observationSource": "Independent read_thread during final incremental audit; no messages or mutations sent to worker."
+        },
+        "r05c07SelectionPinMatches": true,
+        "lastSavedMaterial": {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\native\\s03_01.png",
+          "sha256": "9b54b2c2d41c145237f852cbafe0552c3fe8727909046cdc2542de3838a1021b",
+          "hostOutputPath": "C:\\Users\\luyua\\.codex\\generated_images\\01a1296f-0cd8-7711-9a55-449d999d8eeb\\exec-9c7e02b1-317b-461b-b52e-c41ec6f9ef34.png",
+          "hostHashMatchesExactly": true,
+          "explicitlySelected": false,
+          "qaStatus": "not yet inspected or assembled after freeze",
+          "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\native\\s03_01.png.generation.json"
+        },
+        "nextMissingCoordinate": "r07_c05/s02_04",
+        "pendingRepairs": {
+          "r05_c03": {
+            "selectedLatestRepair": "s04_01_fix04",
+            "nativeWholeImageViewedBeforeFreeze": true,
+            "candidateSeamReviewPending": true,
+            "description": "fix04 native output repairs upper-right gold cloud start and adjacent teal groove. It has been saved and selected, but its assembled native seam delta has not been reviewed. Prior candidate had three related blocking crops: internal-x1024-segment04, internal-y3072-segment01, junction-x1024-y3072. Existing east boundary also still needs final candidate review; north/west/south neighbors do not yet exist. No more work is running."
+          },
+          "r05_c07": "Frozen after eight explicit selections. Last returned s03_01 saved without new QA or selection; continue only after migration. See child freeze for exact breakpoint.",
+          "r07_c05": "7 native cores saved, 6 explicitly selected; remaining9 absent. Latest s02_03 saved without new QA.",
+          "r07_c06": "First row4/16 saved and hard first-row/north checks passed; s02_01 waiting west r07_c05/s02_04. Do not launch while frozen."
+        },
+        "selectedCandidates": [
+          {
+            "tile": "r05_c04",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-2x2-r05_c04-r06_c05\\deeb69ed9f705a70\\tiles\\r05_c04-joint-4096.png",
+            "exists": true,
+            "reportedSha256": "ccd3167a0a9cade9dc2bc031c210d737615cbd29e804efb7c0cbbbdd2516a72b"
+          },
+          {
+            "tile": "r05_c05",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-2x2-r05_c04-r06_c05\\deeb69ed9f705a70\\tiles\\r05_c05-joint-4096.png",
+            "exists": true,
+            "reportedSha256": "54b64dae7d7cfa1a55744fbbb3cbb823e53d0b90d856a0d737508a6aeac8649c"
+          },
+          {
+            "tile": "r06_c04",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-2x2-r05_c04-r06_c05\\deeb69ed9f705a70\\tiles\\r06_c04-joint-4096.png",
+            "exists": true,
+            "reportedSha256": "493e896f75ebe6188bc83d8359af92267ec9084132ad5631392b5a074e097282"
+          },
+          {
+            "tile": "r06_c05",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-2x2-r05_c04-r06_c05\\deeb69ed9f705a70\\tiles\\r06_c05-joint-4096.png",
+            "exists": true,
+            "reportedSha256": "fe4e9a02cff87b2fa6f69dbba6de12eb9dc13923ff7ffe2288cd1f2999a69213"
+          },
+          {
+            "tile": "r05_c06",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c06\\candidate\\r05_c06-candidate-minimum-error-03d4dd9f7332.png",
+            "exists": true,
+            "reportedSha256": "beb936eca2c223bf30e9d34717d8fd0e2254ee06cc0e1e25e4835a4138f44e39"
+          },
+          {
+            "tile": "r06_c06",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c06\\candidate\\r06_c06-candidate-hard-077556c4fb59.png",
+            "exists": true,
+            "reportedSha256": "105ed0953773073a1b336660887ab78e4f8ef145ec74285ac0f1bc3ae0a77595"
+          },
+          {
+            "tile": "r07_c04",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c04\\candidate\\r07_c04-candidate-native-bridges-2268d482e68c2928\\candidate.png",
+            "exists": true,
+            "reportedSha256": "12a5ba0622b6ba365a7e89971a7d7682065f1194bdefe6c2d6141c28cece9a20"
+          },
+          {
+            "tile": "r05_c03",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c03\\candidate\\r05_c03-candidate-hard-80982c249bee.png",
+            "exists": true,
+            "reportedSha256": "8705aba979d280b2e3e90767b54882b8d867027f1242de4a452a214db0a61053",
+            "formalAccepted": false,
+            "qaStatus": "not_reviewed_after_latest_s04_01_fix04_selection; frozen before delta QA"
+          }
+        ],
+        "deliveryManifestChecks": [
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\joint-six-tile-review\\ac2031be4f9bb37b\\delivery-summary.json",
+            "expectedSha256": "d84b0cb631b1947d68561d7cbb0b8673a358c792e50e5c54b4d0b2f86cea79e9",
+            "actualSha256": "d84b0cb631b1947d68561d7cbb0b8673a358c792e50e5c54b4d0b2f86cea79e9",
+            "matches": true
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r07_c04\\delivery-summary.json",
+            "expectedSha256": "958c9a49df66e54164f0bbe6da0d8e523c55da8bdc9efc4d54939091d71612a7",
+            "actualSha256": "958c9a49df66e54164f0bbe6da0d8e523c55da8bdc9efc4d54939091d71612a7",
+            "matches": true
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c03\\candidate\\r05_c03-candidate-hard-80982c249bee.assembly.json",
+            "expectedSha256": "e90c6893ee41730845eb55ab9fa76d1c465e51f41dfd2e1bba06eccdc5c0eaae",
+            "actualSha256": "e90c6893ee41730845eb55ab9fa76d1c465e51f41dfd2e1bba06eccdc5c0eaae",
+            "matches": true
+          }
+        ],
+        "externalArchival": {
+          "referencedExternalCount": 228,
+          "missingPortableCopies": [],
+          "unarchivedExternalReferences": [],
+          "lastSuccessfulOutputIncluded": true,
+          "newCopyChecks": [
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c07\\native\\s03_01.png",
+              "expectedSha256": "9b54b2c2d41c145237f852cbafe0552c3fe8727909046cdc2542de3838a1021b",
+              "actualSha256": "9b54b2c2d41c145237f852cbafe0552c3fe8727909046cdc2542de3838a1021b",
+              "hostOutputPath": "C:\\Users\\luyua\\.codex\\generated_images\\01a1296f-0cd8-7711-9a55-449d999d8eeb\\exec-9c7e02b1-317b-461b-b52e-c41ec6f9ef34.png",
+              "hostActualSha256": "9b54b2c2d41c145237f852cbafe0552c3fe8727909046cdc2542de3838a1021b",
+              "hashMatches": true,
+              "verificationBasis": "Native and host source both directly SHA256-verified during this final incremental pass before writing audit; pre-existing raw images were not rehashed"
+            }
+          ],
+          "priorVerificationReused": "Prior 227 host-to-workspace copy inventory retained; new s03_01 separately hashed and indexed. No whole-map/4K image rehash or visual review."
+        },
+        "checkpointUnchangedDuringAudit": true,
+        "artworkAcceptanceClaimed": false
+      }
+    },
+    {
+      "zone": "northeast",
+      "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\migration-freeze-20261011.json",
+      "checkpointSha256": "8b05f70f58a3e4c989fc55d91299eb3ee52508c94a9be4787a732bfd65088104",
+      "ready": true,
+      "blockers": [],
+      "evidence": {
+        "checkpoint": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\migration-freeze-20261011.json",
+          "exists": true,
+          "lastWriteUtc": "2026-10-12T02:37:17.390137+00:00",
+          "bytes": 53929
+        },
+        "checkpointSavedAt": "2026-10-12T02:37:17.387550+00:00",
+        "generationStopped": true,
+        "unsavedSuccessfulOutputPaths": [],
+        "activeCoordinates": [],
+        "nextMissingCoordinate": null,
+        "pendingRepairs": [],
+        "repairBreakpoint": "Current two connected groups have no open P2. Unpainted outer-world edges remain unreviewed; never infer whole-zone completion.",
+        "checkpointSnapshotSha256": "8b05f70f58a3e4c989fc55d91299eb3ee52508c94a9be4787a732bfd65088104",
+        "inFlightCount": 0,
+        "childSaveEvidence": {
+          "liveChildTaskCount": 0,
+          "stopPropagation": "No child agents remain live; collaboration.list_agents returned root only. No child was restarted."
+        },
+        "lastCompletedCoordinates": [
+          "r05_c13",
+          "r05_c14",
+          "r06_c13",
+          "r06_c14",
+          "r07_c13",
+          "r07_c14",
+          "r08_c13",
+          "r08_c14"
+        ],
+        "selectedCandidates": [
+          {
+            "tile": "r05_c13",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-10T18:18:36.533125+00:00",
+            "bytes": 20857661,
+            "reportedSha256": "a130950d95d08674c325bec88caed4cd68744abf556fe12b9bc7c65d67db7673"
+          },
+          {
+            "tile": "r05_c14",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\candidates\\r05_c14.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-10T10:57:50.876925+00:00",
+            "bytes": 20922690,
+            "reportedSha256": "2a31de630103864093d9f7f7d5c61ca225b7453b5f8a7faf45184f7d1c092018"
+          },
+          {
+            "tile": "r06_c13",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\candidates\\r06_c13.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-11T01:56:44.648513+00:00",
+            "bytes": 23748465,
+            "reportedSha256": "7f8784be48316ee2083ceb420d97248f9143bdd274a6a381ef335214e7e64669"
+          },
+          {
+            "tile": "r06_c14",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c14\\candidates\\r06_c14.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-10T20:01:27.437202+00:00",
+            "bytes": 24246164,
+            "reportedSha256": "609ed58611561a612eec2f87ec95b21ca0c7a3712a2ef07585368f4287b99a66"
+          },
+          {
+            "tile": "r07_c13",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c13\\candidates\\r07_c13.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-11T15:25:21.732213+00:00",
+            "bytes": 24664130,
+            "reportedSha256": "179d0e44e3f8d0c49106ec088c18300f4fcfca8df6828fb871a7ede2a2e9957f"
+          },
+          {
+            "tile": "r07_c14",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r07_c14\\candidates\\r07_c14.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-11T14:56:09.633295+00:00",
+            "bytes": 26498431,
+            "reportedSha256": "9919624d9d05bda3b9db79b2e724f9d5d4dcb03ba3c3739c6d618b7ab1358bc6"
+          },
+          {
+            "tile": "r08_c13",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c13\\candidates\\r08_c13.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-11T16:32:09.571985+00:00",
+            "bytes": 28841786,
+            "reportedSha256": "dd20b4e0d2b73b7ff90ef24be9a8337f8e436a17f46ca0430a6240b75532333a"
+          },
+          {
+            "tile": "r08_c14",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\candidates\\r08_c14.candidate.png",
+            "exists": true,
+            "lastWriteUtc": "2026-10-11T16:32:15.313943+00:00",
+            "bytes": 28380005,
+            "reportedSha256": "f07aaa048c29eb8e8a4dfdf4c0bfce1dd7bd20592cc5ca2cd5173a93fd65abab"
+          }
+        ],
+        "externalArchival": {
+          "manifest": {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\migration-external-paths-20261011.json",
+            "exists": true,
+            "lastWriteUtc": "2026-10-12T02:37:16.808408+00:00",
+            "bytes": 302799
+          },
+          "manifestHashMatchesCheckpoint": true,
+          "referencedExternalCount": 177,
+          "newCopyChecks": [
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\migration-preserved-external-20261011\\exec-7e2f497a-4dae-49fb-9ade-956917f15f7b.png",
+              "expectedSha256": "289b29e44e3fa92a65abfab661b2bdbd9ef7fd672fd00b912a22a42d4943fd20",
+              "actualSha256": "289b29e44e3fa92a65abfab661b2bdbd9ef7fd672fd00b912a22a42d4943fd20",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\migration-preserved-external-20261011\\exec-f9496aad-f95f-4941-9e1d-8bb09a1f4437.png",
+              "expectedSha256": "a09c87f4edc4b8448661d632a8ab400f216cc8d9a7343093b9bf9b58c38dc569",
+              "actualSha256": "a09c87f4edc4b8448661d632a8ab400f216cc8d9a7343093b9bf9b58c38dc569",
+              "hashMatches": true
+            }
+          ],
+          "missingPortableCopies": [],
+          "missingExternalFiles": []
+        },
+        "checkpointUnchangedDuringAudit": true
+      }
+    },
+    {
+      "zone": "southwest",
+      "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-freeze-20261011.json",
+      "checkpointSha256": "41ee9dcb8e7319b409a371935c5e2f1bd85cb39f313e59389bc5ac950a383c05",
+      "ready": true,
+      "blockers": [],
+      "evidence": {
+        "checkpoint": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-freeze-20261011.json",
+          "exists": true,
+          "bytes": 169321,
+          "lastWriteUtc": "2026-10-12T03:20:52.753407+00:00"
+        },
+        "checkpointSavedAt": "2026-10-12T03:20:52.611670+00:00",
+        "generationStopped": true,
+        "unsavedSuccessfulOutputPaths": [],
+        "activeCoordinates": [
+          "r09_c06:p01_03 prepared but never submitted",
+          "r09_c01 pending worker frozen manifest",
+          "r09_c07 pending worker frozen manifest",
+          "r12_c05 pending repair frozen manifest"
+        ],
+        "nextMissingCoordinate": "r09_c06:p01_03",
+        "pendingRepairs": [
+          "r09_c05 full candidate 270f210e60b79873 has visible wood/taupe paint tone seams and ellipse/emblem geometry issues; see pipeline/qa/full-candidate-review-20261011.json.",
+          "r09_c06 p01_01 and p01_02 selected genuine native candidates only, stone/material and shared edges unaccepted; p01_03 viewed/prepared, never generated.",
+          "r12_c05 whole coverage exists; latest selected native versions and protected roof/stone proposals require final seam and macro QA; do not treat 48px historical feather proposal as selected.",
+          "Integrated v5 four candidates have open north/south seams, stone material, r11_c06 G02/G06 layout and r10_c06 red sliver/layout findings.",
+          "64-tile acceptance incomplete: 112 shared edges, 49 four-tile junctions and 16 cross-region neighbor checks outstanding; external r08 row and c09 neighboring files not yet verified."
+        ],
+        "repairBreakpoint": null,
+        "checkpointSnapshotSha256": "41ee9dcb8e7319b409a371935c5e2f1bd85cb39f313e59389bc5ac950a383c05",
+        "inFlightCount": 0,
+        "childSaveEvidence": {
+          "workerDrainStatus": "All three worker states verified drained: two direct final replies and one independent runtime inspection; freeze finalized",
+          "verificationSources": "Two direct final child replies recorded by parent; third independently verified by parent runtime/history and last successful output receipt."
+        },
+        "lastSavedMaterial": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c06\\native\\p01_02.png",
+          "exists": true,
+          "lastWriteUtc": "2026-10-11T20:44:26.673425+00:00",
+          "bytes": 1791118
+        },
+        "selectedCandidates": [
+          {
+            "tile": "r09_c05",
+            "versionSource": "latest-pipeline-assembly",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c05\\pipeline\\output\\270f210e60b79873\\r09_c05.candidate.png",
+            "exists": true,
+            "reportedSha256": "1b7f6106418b43ce0023ad2e8216a21f899862f14bf8cb4dbfdf2de8104ac1e0"
+          },
+          {
+            "tile": "r10_c05",
+            "versionSource": "integrated-v5",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v5\\r10_c05.candidate.png",
+            "exists": true,
+            "reportedSha256": "d62da64b0a0a54481f5231322c0fa6d035f63c664e0e9cab2452dfd0308f2106"
+          },
+          {
+            "tile": "r10_c06",
+            "versionSource": "integrated-v5",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v5\\r10_c06.candidate.png",
+            "exists": true,
+            "reportedSha256": "1253542fe8183ba2c18326ff785f2674bd35072cb3235ab3dc2a9c0fc347467f"
+          },
+          {
+            "tile": "r11_c05",
+            "versionSource": "integrated-v5",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v5\\r11_c05.candidate.png",
+            "exists": true,
+            "reportedSha256": "1761a7652cd0e5e93e62f01281e2192f9d4c9af08724a68930e8e2b05b0dca68"
+          },
+          {
+            "tile": "r11_c06",
+            "versionSource": "integrated-v5",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v5\\r11_c06.candidate.png",
+            "exists": true,
+            "reportedSha256": "6c00803b790f788eb888f3024c6582bb30a33db7e2397be09fbf1b05221ffc9d"
+          },
+          {
+            "tile": "r12_c05",
+            "versionSource": "latest-pipeline-assembly",
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\pipeline\\output\\14e348439418c1f6\\r12_c05.candidate.png",
+            "exists": true,
+            "reportedSha256": "535cba1a39efb50da05fb8b8469483fac88ecd84b892b5ab6f3481b052cf24cd"
+          }
+        ],
+        "externalArchival": {
+          "manifest": {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\manifest.json",
+            "exists": true,
+            "bytes": 343677,
+            "lastWriteUtc": "2026-10-12T03:18:59.524829+00:00"
+          },
+          "manifestHashMatchesCheckpoint": true,
+          "referencedExternalCount": 267,
+          "newCopyChecks": [
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\947e198a90b1cc742855a8661466d71371a6956e966ed82644e87d75959c28ca.png",
+              "expectedSha256": "947e198a90b1cc742855a8661466d71371a6956e966ed82644e87d75959c28ca",
+              "actualSha256": "947e198a90b1cc742855a8661466d71371a6956e966ed82644e87d75959c28ca",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\9657ae6cbdc80abda6f98ba1a9c852a1156b7d5e622f50723450d131bf1edd31.png",
+              "expectedSha256": "9657ae6cbdc80abda6f98ba1a9c852a1156b7d5e622f50723450d131bf1edd31",
+              "actualSha256": "9657ae6cbdc80abda6f98ba1a9c852a1156b7d5e622f50723450d131bf1edd31",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\bd3b8da2213b8ce6b74aeecf660ae250b8595b5e2b0f1cdd7a560aceebc7fb59.png",
+              "expectedSha256": "bd3b8da2213b8ce6b74aeecf660ae250b8595b5e2b0f1cdd7a560aceebc7fb59",
+              "actualSha256": "bd3b8da2213b8ce6b74aeecf660ae250b8595b5e2b0f1cdd7a560aceebc7fb59",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\78f5ffb63f258d805ec05fefd4fef0978ee634488ff4f8dfab3814c6647393c2.png",
+              "expectedSha256": "78f5ffb63f258d805ec05fefd4fef0978ee634488ff4f8dfab3814c6647393c2",
+              "actualSha256": "78f5ffb63f258d805ec05fefd4fef0978ee634488ff4f8dfab3814c6647393c2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\a173a41db64ed55f284888048fca73b8fd39effdfcfbf7d6d041959fd6d326ae.png",
+              "expectedSha256": "a173a41db64ed55f284888048fca73b8fd39effdfcfbf7d6d041959fd6d326ae",
+              "actualSha256": "a173a41db64ed55f284888048fca73b8fd39effdfcfbf7d6d041959fd6d326ae",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\845e7783efc0102a06b5435850a20f5fdf528fac4a5f982a85b686b7233c8206.png",
+              "expectedSha256": "845e7783efc0102a06b5435850a20f5fdf528fac4a5f982a85b686b7233c8206",
+              "actualSha256": "845e7783efc0102a06b5435850a20f5fdf528fac4a5f982a85b686b7233c8206",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3d0b894cd6531c943d0369e1e6d45bf040359dcec7559afdf67519ff54ba8d16.png",
+              "expectedSha256": "3d0b894cd6531c943d0369e1e6d45bf040359dcec7559afdf67519ff54ba8d16",
+              "actualSha256": "3d0b894cd6531c943d0369e1e6d45bf040359dcec7559afdf67519ff54ba8d16",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b2f783147ff878909d5dc7fb7bb45514f8516dcd80b4b9c5a87ea153947629b6.png",
+              "expectedSha256": "b2f783147ff878909d5dc7fb7bb45514f8516dcd80b4b9c5a87ea153947629b6",
+              "actualSha256": "b2f783147ff878909d5dc7fb7bb45514f8516dcd80b4b9c5a87ea153947629b6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d8e64b1630e79465529111564159f3f07d04bbc4d3c2bbd4024d258ce61bd23b.png",
+              "expectedSha256": "d8e64b1630e79465529111564159f3f07d04bbc4d3c2bbd4024d258ce61bd23b",
+              "actualSha256": "d8e64b1630e79465529111564159f3f07d04bbc4d3c2bbd4024d258ce61bd23b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\515a520a199100a53d155f2b3a0f0cc568141b4142b2d2734b6f89411a518ddf.png",
+              "expectedSha256": "515a520a199100a53d155f2b3a0f0cc568141b4142b2d2734b6f89411a518ddf",
+              "actualSha256": "515a520a199100a53d155f2b3a0f0cc568141b4142b2d2734b6f89411a518ddf",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1935f682c2df7fc433ab283ea2d2b856c3f5967d8a6f1aace9a1dfe1e5347faf.png",
+              "expectedSha256": "1935f682c2df7fc433ab283ea2d2b856c3f5967d8a6f1aace9a1dfe1e5347faf",
+              "actualSha256": "1935f682c2df7fc433ab283ea2d2b856c3f5967d8a6f1aace9a1dfe1e5347faf",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2983bdad0998ed6974fad37d48ba83a7ad090517c4b2b752db28417eaa0529e0.png",
+              "expectedSha256": "2983bdad0998ed6974fad37d48ba83a7ad090517c4b2b752db28417eaa0529e0",
+              "actualSha256": "2983bdad0998ed6974fad37d48ba83a7ad090517c4b2b752db28417eaa0529e0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ac529854b85b1567a5859f24db5cc204f61447e4cef61ef44cbde2326ef88cba.png",
+              "expectedSha256": "ac529854b85b1567a5859f24db5cc204f61447e4cef61ef44cbde2326ef88cba",
+              "actualSha256": "ac529854b85b1567a5859f24db5cc204f61447e4cef61ef44cbde2326ef88cba",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\70950de3e3c9be7ca3526ddd3b74adb33ee22f10e21f1f7461f9d4550407aa3a.png",
+              "expectedSha256": "70950de3e3c9be7ca3526ddd3b74adb33ee22f10e21f1f7461f9d4550407aa3a",
+              "actualSha256": "70950de3e3c9be7ca3526ddd3b74adb33ee22f10e21f1f7461f9d4550407aa3a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0fe20e78d356fcf078fafabd80f52f2c27a231402b5e85fe6db8f98ca61c5ce4.png",
+              "expectedSha256": "0fe20e78d356fcf078fafabd80f52f2c27a231402b5e85fe6db8f98ca61c5ce4",
+              "actualSha256": "0fe20e78d356fcf078fafabd80f52f2c27a231402b5e85fe6db8f98ca61c5ce4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\dbd1044fed93032ac0e28db4370f039a0c790d8340d1d1a1c648338716090e19.png",
+              "expectedSha256": "dbd1044fed93032ac0e28db4370f039a0c790d8340d1d1a1c648338716090e19",
+              "actualSha256": "dbd1044fed93032ac0e28db4370f039a0c790d8340d1d1a1c648338716090e19",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\51b6627a0fbad7c86ca4e455daeaed21faf521842388b573f5b7cdc0bf3fee18.png",
+              "expectedSha256": "51b6627a0fbad7c86ca4e455daeaed21faf521842388b573f5b7cdc0bf3fee18",
+              "actualSha256": "51b6627a0fbad7c86ca4e455daeaed21faf521842388b573f5b7cdc0bf3fee18",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e9128f2e82249f4e601907d1261ca936bb43517489aefe5381d0b9eba5f1f819.png",
+              "expectedSha256": "e9128f2e82249f4e601907d1261ca936bb43517489aefe5381d0b9eba5f1f819",
+              "actualSha256": "e9128f2e82249f4e601907d1261ca936bb43517489aefe5381d0b9eba5f1f819",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\321dba3d85f94f082594e60685dcf8cb3ec95d2c5b35de4dc0c6d2f0fdf5165b.png",
+              "expectedSha256": "321dba3d85f94f082594e60685dcf8cb3ec95d2c5b35de4dc0c6d2f0fdf5165b",
+              "actualSha256": "321dba3d85f94f082594e60685dcf8cb3ec95d2c5b35de4dc0c6d2f0fdf5165b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\4812700f863f08d1e1875bc62d9bbf049302e1396e2025833cd2ea111bc74d5b.png",
+              "expectedSha256": "4812700f863f08d1e1875bc62d9bbf049302e1396e2025833cd2ea111bc74d5b",
+              "actualSha256": "4812700f863f08d1e1875bc62d9bbf049302e1396e2025833cd2ea111bc74d5b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3416faf3876f446b814e39bf47e7cb1033d6f285bf6889e1684b05f93ac43b1b.png",
+              "expectedSha256": "3416faf3876f446b814e39bf47e7cb1033d6f285bf6889e1684b05f93ac43b1b",
+              "actualSha256": "3416faf3876f446b814e39bf47e7cb1033d6f285bf6889e1684b05f93ac43b1b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\37711af5043b2e30b67879948306bde2cd4ee57c36fe6b47ff3cbfe7e654a354.png",
+              "expectedSha256": "37711af5043b2e30b67879948306bde2cd4ee57c36fe6b47ff3cbfe7e654a354",
+              "actualSha256": "37711af5043b2e30b67879948306bde2cd4ee57c36fe6b47ff3cbfe7e654a354",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3c3d45ee04e87fffea72396d67848b5bfe7dce46a0b2285ca58d71ddf25dbe7e.png",
+              "expectedSha256": "3c3d45ee04e87fffea72396d67848b5bfe7dce46a0b2285ca58d71ddf25dbe7e",
+              "actualSha256": "3c3d45ee04e87fffea72396d67848b5bfe7dce46a0b2285ca58d71ddf25dbe7e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\48492961dc66110112ab8c9b816cf5c97e7769d4d39d8d67a77f72e52aa72435.png",
+              "expectedSha256": "48492961dc66110112ab8c9b816cf5c97e7769d4d39d8d67a77f72e52aa72435",
+              "actualSha256": "48492961dc66110112ab8c9b816cf5c97e7769d4d39d8d67a77f72e52aa72435",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\66371652feab1031162750c90ee5befbfeae73ae19bc789feb8b743096beead8.png",
+              "expectedSha256": "66371652feab1031162750c90ee5befbfeae73ae19bc789feb8b743096beead8",
+              "actualSha256": "66371652feab1031162750c90ee5befbfeae73ae19bc789feb8b743096beead8",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\16ca56cd1bb0f2b5278a7d6d20bd873b40956e3a616da68459a720cdbc6e2583.png",
+              "expectedSha256": "16ca56cd1bb0f2b5278a7d6d20bd873b40956e3a616da68459a720cdbc6e2583",
+              "actualSha256": "16ca56cd1bb0f2b5278a7d6d20bd873b40956e3a616da68459a720cdbc6e2583",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ccd8114461c8202c13dd15f084c1cf3cce6d227fcb204d72696d3774c37fe32c.png",
+              "expectedSha256": "ccd8114461c8202c13dd15f084c1cf3cce6d227fcb204d72696d3774c37fe32c",
+              "actualSha256": "ccd8114461c8202c13dd15f084c1cf3cce6d227fcb204d72696d3774c37fe32c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c45d0978c402b0a6f0815dc8d82f32c7ae709746a776b4ad313ae40ac824df74.png",
+              "expectedSha256": "c45d0978c402b0a6f0815dc8d82f32c7ae709746a776b4ad313ae40ac824df74",
+              "actualSha256": "c45d0978c402b0a6f0815dc8d82f32c7ae709746a776b4ad313ae40ac824df74",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\5500067cc3402a562dca17c3c08917a75170c50081aa0b866099016153762227.png",
+              "expectedSha256": "5500067cc3402a562dca17c3c08917a75170c50081aa0b866099016153762227",
+              "actualSha256": "5500067cc3402a562dca17c3c08917a75170c50081aa0b866099016153762227",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\060598905ce5991149e20aa140e3a9fce5ca3b15785a9a3bcc2e84a71a2270e2.png",
+              "expectedSha256": "060598905ce5991149e20aa140e3a9fce5ca3b15785a9a3bcc2e84a71a2270e2",
+              "actualSha256": "060598905ce5991149e20aa140e3a9fce5ca3b15785a9a3bcc2e84a71a2270e2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7c5d01b7f2ea78ceaf3b18e900647fb4edfdf45df61db0106a098588b346e019.png",
+              "expectedSha256": "7c5d01b7f2ea78ceaf3b18e900647fb4edfdf45df61db0106a098588b346e019",
+              "actualSha256": "7c5d01b7f2ea78ceaf3b18e900647fb4edfdf45df61db0106a098588b346e019",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1d87e7e0c552ec775df4e087feb900b26086e88ad18680ea7e98b24e5304501b.png",
+              "expectedSha256": "1d87e7e0c552ec775df4e087feb900b26086e88ad18680ea7e98b24e5304501b",
+              "actualSha256": "1d87e7e0c552ec775df4e087feb900b26086e88ad18680ea7e98b24e5304501b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c783ad4849e2c259ee0fdd7f9047e7a7c3d4926db2ecd84712fe4cb4daf15c44.png",
+              "expectedSha256": "c783ad4849e2c259ee0fdd7f9047e7a7c3d4926db2ecd84712fe4cb4daf15c44",
+              "actualSha256": "c783ad4849e2c259ee0fdd7f9047e7a7c3d4926db2ecd84712fe4cb4daf15c44",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6bca2761c6aa120185b31c4ccce7cadde68849399f75449d1a7a25879367f6aa.png",
+              "expectedSha256": "6bca2761c6aa120185b31c4ccce7cadde68849399f75449d1a7a25879367f6aa",
+              "actualSha256": "6bca2761c6aa120185b31c4ccce7cadde68849399f75449d1a7a25879367f6aa",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\efa72473ca6c7c85fb99a4b8c25ebf52b55bb8881dde3bd2328f0330a30e0b09.png",
+              "expectedSha256": "efa72473ca6c7c85fb99a4b8c25ebf52b55bb8881dde3bd2328f0330a30e0b09",
+              "actualSha256": "efa72473ca6c7c85fb99a4b8c25ebf52b55bb8881dde3bd2328f0330a30e0b09",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7f48d28575ea71be59fefbf3259f48c7f0a18a59235a809e2524c4b76b4cc9f1.png",
+              "expectedSha256": "7f48d28575ea71be59fefbf3259f48c7f0a18a59235a809e2524c4b76b4cc9f1",
+              "actualSha256": "7f48d28575ea71be59fefbf3259f48c7f0a18a59235a809e2524c4b76b4cc9f1",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\faa2e762f29e8669e072b04edc7ae943ae70b68f61bb23033aeeeea1919d656a.png",
+              "expectedSha256": "faa2e762f29e8669e072b04edc7ae943ae70b68f61bb23033aeeeea1919d656a",
+              "actualSha256": "faa2e762f29e8669e072b04edc7ae943ae70b68f61bb23033aeeeea1919d656a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\9b40bc7267c4f559d02480ec370ace687f2d615627bcd2a183c6e4d3fd71d0f5.png",
+              "expectedSha256": "9b40bc7267c4f559d02480ec370ace687f2d615627bcd2a183c6e4d3fd71d0f5",
+              "actualSha256": "9b40bc7267c4f559d02480ec370ace687f2d615627bcd2a183c6e4d3fd71d0f5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3fa51d6dc51359b6c87dc10a0acba182b1c1a69ea927d9e148e96c42d096976c.png",
+              "expectedSha256": "3fa51d6dc51359b6c87dc10a0acba182b1c1a69ea927d9e148e96c42d096976c",
+              "actualSha256": "3fa51d6dc51359b6c87dc10a0acba182b1c1a69ea927d9e148e96c42d096976c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1c707b8265a238d3d337082312341104db9c3f4e7a345fe89a581846bb7382f0.png",
+              "expectedSha256": "1c707b8265a238d3d337082312341104db9c3f4e7a345fe89a581846bb7382f0",
+              "actualSha256": "1c707b8265a238d3d337082312341104db9c3f4e7a345fe89a581846bb7382f0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\affc4a39fd15072d52ce3e6d292716e5fe4a569dcc4577482aca93602ac18c66.png",
+              "expectedSha256": "affc4a39fd15072d52ce3e6d292716e5fe4a569dcc4577482aca93602ac18c66",
+              "actualSha256": "affc4a39fd15072d52ce3e6d292716e5fe4a569dcc4577482aca93602ac18c66",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\225791aaa66060af4bcaf70ce72a37c88b6a263dded008a22194cf1cf233b457.png",
+              "expectedSha256": "225791aaa66060af4bcaf70ce72a37c88b6a263dded008a22194cf1cf233b457",
+              "actualSha256": "225791aaa66060af4bcaf70ce72a37c88b6a263dded008a22194cf1cf233b457",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\a5963a0771e34bcdecf83f8d9d38f776e9b30785ba61f08aaeac9958c6a11546.png",
+              "expectedSha256": "a5963a0771e34bcdecf83f8d9d38f776e9b30785ba61f08aaeac9958c6a11546",
+              "actualSha256": "a5963a0771e34bcdecf83f8d9d38f776e9b30785ba61f08aaeac9958c6a11546",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c8574f8e40299279768bfb5c15755f6b0f935850ca9c59fbbfbe21b77a1bdf6a.png",
+              "expectedSha256": "c8574f8e40299279768bfb5c15755f6b0f935850ca9c59fbbfbe21b77a1bdf6a",
+              "actualSha256": "c8574f8e40299279768bfb5c15755f6b0f935850ca9c59fbbfbe21b77a1bdf6a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8c77ea1d12a369c2a693abbc7b8a2d2150191ebeb6a40cccf56964904ce835ed.png",
+              "expectedSha256": "8c77ea1d12a369c2a693abbc7b8a2d2150191ebeb6a40cccf56964904ce835ed",
+              "actualSha256": "8c77ea1d12a369c2a693abbc7b8a2d2150191ebeb6a40cccf56964904ce835ed",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8dde5cbf38b766e5dc51af2535383035648462ceb5f228c37011c10b606ef267.png",
+              "expectedSha256": "8dde5cbf38b766e5dc51af2535383035648462ceb5f228c37011c10b606ef267",
+              "actualSha256": "8dde5cbf38b766e5dc51af2535383035648462ceb5f228c37011c10b606ef267",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\09f157326689bf2b53305c47768a4394c9d62868dd39ad722aa62359beb2c9c1.png",
+              "expectedSha256": "09f157326689bf2b53305c47768a4394c9d62868dd39ad722aa62359beb2c9c1",
+              "actualSha256": "09f157326689bf2b53305c47768a4394c9d62868dd39ad722aa62359beb2c9c1",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c6e72b33d9873bb7ceeba28a9eb49ac2fe550376710270f3ee2b61dbbb951807.png",
+              "expectedSha256": "c6e72b33d9873bb7ceeba28a9eb49ac2fe550376710270f3ee2b61dbbb951807",
+              "actualSha256": "c6e72b33d9873bb7ceeba28a9eb49ac2fe550376710270f3ee2b61dbbb951807",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f5faecdabb442dfbbad345bb129e946bafbf418953279b7187b0233fc9676a34.png",
+              "expectedSha256": "f5faecdabb442dfbbad345bb129e946bafbf418953279b7187b0233fc9676a34",
+              "actualSha256": "f5faecdabb442dfbbad345bb129e946bafbf418953279b7187b0233fc9676a34",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\096616d8110959cf5b423154a069a49ce81a008210daab8d182febcb65aafcfc.png",
+              "expectedSha256": "096616d8110959cf5b423154a069a49ce81a008210daab8d182febcb65aafcfc",
+              "actualSha256": "096616d8110959cf5b423154a069a49ce81a008210daab8d182febcb65aafcfc",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e5aa3279fcf2fdd594f58a2052e9c7f9c98b9d2c91961b7bfab4595507f32a77.png",
+              "expectedSha256": "e5aa3279fcf2fdd594f58a2052e9c7f9c98b9d2c91961b7bfab4595507f32a77",
+              "actualSha256": "e5aa3279fcf2fdd594f58a2052e9c7f9c98b9d2c91961b7bfab4595507f32a77",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\594b7e0f060f40ab7ccbf22b89273f6ae36be8c9d806b5fe6113882989ef81e4.png",
+              "expectedSha256": "594b7e0f060f40ab7ccbf22b89273f6ae36be8c9d806b5fe6113882989ef81e4",
+              "actualSha256": "594b7e0f060f40ab7ccbf22b89273f6ae36be8c9d806b5fe6113882989ef81e4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\aa8c4564b1690c77772867c2dc3741e2407164f01f249332e602eea8c2bb7400.png",
+              "expectedSha256": "aa8c4564b1690c77772867c2dc3741e2407164f01f249332e602eea8c2bb7400",
+              "actualSha256": "aa8c4564b1690c77772867c2dc3741e2407164f01f249332e602eea8c2bb7400",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\a1ae59cacaaf33e737f9029c6d85dff0d795b32f3f60c6e3732983183a8791fb.png",
+              "expectedSha256": "a1ae59cacaaf33e737f9029c6d85dff0d795b32f3f60c6e3732983183a8791fb",
+              "actualSha256": "a1ae59cacaaf33e737f9029c6d85dff0d795b32f3f60c6e3732983183a8791fb",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b7b330193d3bbfa8f399d8a9f29febf3b5135a96c107894f2c7e30bafa6f47ff.png",
+              "expectedSha256": "b7b330193d3bbfa8f399d8a9f29febf3b5135a96c107894f2c7e30bafa6f47ff",
+              "actualSha256": "b7b330193d3bbfa8f399d8a9f29febf3b5135a96c107894f2c7e30bafa6f47ff",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c9caf3dbaf419023a646245d914d23cd75835281ef999cf0cb5d4c169542fa4e.png",
+              "expectedSha256": "c9caf3dbaf419023a646245d914d23cd75835281ef999cf0cb5d4c169542fa4e",
+              "actualSha256": "c9caf3dbaf419023a646245d914d23cd75835281ef999cf0cb5d4c169542fa4e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3ef5cd798ceaef698065930d16ac70eed0bbbe1c8ac7538a2e2c1305175c837d.png",
+              "expectedSha256": "3ef5cd798ceaef698065930d16ac70eed0bbbe1c8ac7538a2e2c1305175c837d",
+              "actualSha256": "3ef5cd798ceaef698065930d16ac70eed0bbbe1c8ac7538a2e2c1305175c837d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ca363154a3733c431e836b66a819341351e5e8bc9d8728a54b63fd0c28e26438.png",
+              "expectedSha256": "ca363154a3733c431e836b66a819341351e5e8bc9d8728a54b63fd0c28e26438",
+              "actualSha256": "ca363154a3733c431e836b66a819341351e5e8bc9d8728a54b63fd0c28e26438",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d2268457d366a3bfc34ccc0aa6504ee579251f877b49a75331f208de3392241d.png",
+              "expectedSha256": "d2268457d366a3bfc34ccc0aa6504ee579251f877b49a75331f208de3392241d",
+              "actualSha256": "d2268457d366a3bfc34ccc0aa6504ee579251f877b49a75331f208de3392241d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\456eccb652946aac126ec9f4a4fce1f08399fbfd8cdb6f8a3041144fb759ab64.png",
+              "expectedSha256": "456eccb652946aac126ec9f4a4fce1f08399fbfd8cdb6f8a3041144fb759ab64",
+              "actualSha256": "456eccb652946aac126ec9f4a4fce1f08399fbfd8cdb6f8a3041144fb759ab64",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e0250543c66d3809740f9f4c832ea52fe24f6ca913c941532f158b3a1e14b0c2.png",
+              "expectedSha256": "e0250543c66d3809740f9f4c832ea52fe24f6ca913c941532f158b3a1e14b0c2",
+              "actualSha256": "e0250543c66d3809740f9f4c832ea52fe24f6ca913c941532f158b3a1e14b0c2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3b4fdf4fbbb061f7b42072f0c512faeac631a6fbceba1cbaa7e0aadb0336e2b9.png",
+              "expectedSha256": "3b4fdf4fbbb061f7b42072f0c512faeac631a6fbceba1cbaa7e0aadb0336e2b9",
+              "actualSha256": "3b4fdf4fbbb061f7b42072f0c512faeac631a6fbceba1cbaa7e0aadb0336e2b9",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\4cc942da7c9b0d475872c604779772f5f44844ff5027cf025fdcfbfc1bb8fc57.png",
+              "expectedSha256": "4cc942da7c9b0d475872c604779772f5f44844ff5027cf025fdcfbfc1bb8fc57",
+              "actualSha256": "4cc942da7c9b0d475872c604779772f5f44844ff5027cf025fdcfbfc1bb8fc57",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ac86205eded4f8318eb2d5356abf0b6f13361e682f8bbf84a9977968bdc08795.png",
+              "expectedSha256": "ac86205eded4f8318eb2d5356abf0b6f13361e682f8bbf84a9977968bdc08795",
+              "actualSha256": "ac86205eded4f8318eb2d5356abf0b6f13361e682f8bbf84a9977968bdc08795",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1f45aa8d6553558b194e09b03db40f575440d1f9eca2e6110ae4e717c88dab9b.png",
+              "expectedSha256": "1f45aa8d6553558b194e09b03db40f575440d1f9eca2e6110ae4e717c88dab9b",
+              "actualSha256": "1f45aa8d6553558b194e09b03db40f575440d1f9eca2e6110ae4e717c88dab9b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\870ef144b33f346d47b7e3e3e616eeae9dcf039f798e6c631dff13fa6640654c.png",
+              "expectedSha256": "870ef144b33f346d47b7e3e3e616eeae9dcf039f798e6c631dff13fa6640654c",
+              "actualSha256": "870ef144b33f346d47b7e3e3e616eeae9dcf039f798e6c631dff13fa6640654c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\387dd7edf386a12c1dfe60689c21bf2d1b70feae611cf4068b169aee1454033b.png",
+              "expectedSha256": "387dd7edf386a12c1dfe60689c21bf2d1b70feae611cf4068b169aee1454033b",
+              "actualSha256": "387dd7edf386a12c1dfe60689c21bf2d1b70feae611cf4068b169aee1454033b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f570e3d9ac1e519a8116afa64bad396d4eb7fc94a7b51b1f85a1f396eca9daa4.png",
+              "expectedSha256": "f570e3d9ac1e519a8116afa64bad396d4eb7fc94a7b51b1f85a1f396eca9daa4",
+              "actualSha256": "f570e3d9ac1e519a8116afa64bad396d4eb7fc94a7b51b1f85a1f396eca9daa4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3b5a9c68927ecb0fd660646e9931471dd1634c297855b719ff30fcec5d3ba72f.png",
+              "expectedSha256": "3b5a9c68927ecb0fd660646e9931471dd1634c297855b719ff30fcec5d3ba72f",
+              "actualSha256": "3b5a9c68927ecb0fd660646e9931471dd1634c297855b719ff30fcec5d3ba72f",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\77dfdc3a9ab51b9e8a4c8ccfecc04c56302be0a137d4757881509b1f0849720c.png",
+              "expectedSha256": "77dfdc3a9ab51b9e8a4c8ccfecc04c56302be0a137d4757881509b1f0849720c",
+              "actualSha256": "77dfdc3a9ab51b9e8a4c8ccfecc04c56302be0a137d4757881509b1f0849720c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\bfc1833728d91e9407d1befe8239ee47d3c5cb37b3e853f6e8dedf2c780011b3.png",
+              "expectedSha256": "bfc1833728d91e9407d1befe8239ee47d3c5cb37b3e853f6e8dedf2c780011b3",
+              "actualSha256": "bfc1833728d91e9407d1befe8239ee47d3c5cb37b3e853f6e8dedf2c780011b3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\abdc47155c9ca8c17cdadd094ac67dfe00795350e4ef018bc50f740d900a7970.png",
+              "expectedSha256": "abdc47155c9ca8c17cdadd094ac67dfe00795350e4ef018bc50f740d900a7970",
+              "actualSha256": "abdc47155c9ca8c17cdadd094ac67dfe00795350e4ef018bc50f740d900a7970",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\adb30411518278d011be7fe9d00d0c553c734cc2ed82c294382dc610c4e4ecd4.png",
+              "expectedSha256": "adb30411518278d011be7fe9d00d0c553c734cc2ed82c294382dc610c4e4ecd4",
+              "actualSha256": "adb30411518278d011be7fe9d00d0c553c734cc2ed82c294382dc610c4e4ecd4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e487408cfe04bd92e32a22f3554733be07ce95ab67a6cdb2b114d9fb181db461.png",
+              "expectedSha256": "e487408cfe04bd92e32a22f3554733be07ce95ab67a6cdb2b114d9fb181db461",
+              "actualSha256": "e487408cfe04bd92e32a22f3554733be07ce95ab67a6cdb2b114d9fb181db461",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6da3a2fcd2f14b5f836bc92a3b09d4e9e05f5302e03a16c2a1ec59202a58c466.png",
+              "expectedSha256": "6da3a2fcd2f14b5f836bc92a3b09d4e9e05f5302e03a16c2a1ec59202a58c466",
+              "actualSha256": "6da3a2fcd2f14b5f836bc92a3b09d4e9e05f5302e03a16c2a1ec59202a58c466",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f5472492b90266a870c572fda67136502df594da4f3102df35800abe0da12c06.png",
+              "expectedSha256": "f5472492b90266a870c572fda67136502df594da4f3102df35800abe0da12c06",
+              "actualSha256": "f5472492b90266a870c572fda67136502df594da4f3102df35800abe0da12c06",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3d8e68a47f90a96ab60face36d7dd26dcaa2079dd88eff15aea98f6b5f88845d.png",
+              "expectedSha256": "3d8e68a47f90a96ab60face36d7dd26dcaa2079dd88eff15aea98f6b5f88845d",
+              "actualSha256": "3d8e68a47f90a96ab60face36d7dd26dcaa2079dd88eff15aea98f6b5f88845d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f8a15ca9e8e96c7312777f0bf5ac58f0d48b19636c6846ee3f58e5a952aba41d.png",
+              "expectedSha256": "f8a15ca9e8e96c7312777f0bf5ac58f0d48b19636c6846ee3f58e5a952aba41d",
+              "actualSha256": "f8a15ca9e8e96c7312777f0bf5ac58f0d48b19636c6846ee3f58e5a952aba41d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b063df6d855c6a9031cff0536b5b48fdeef03ae0a9fd15e7f5d18f73bf3ce43c.png",
+              "expectedSha256": "b063df6d855c6a9031cff0536b5b48fdeef03ae0a9fd15e7f5d18f73bf3ce43c",
+              "actualSha256": "b063df6d855c6a9031cff0536b5b48fdeef03ae0a9fd15e7f5d18f73bf3ce43c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3bb261e107be72baf05eacd8e5ff910119d7e310cebd9fb081ddceb512b77d3c.png",
+              "expectedSha256": "3bb261e107be72baf05eacd8e5ff910119d7e310cebd9fb081ddceb512b77d3c",
+              "actualSha256": "3bb261e107be72baf05eacd8e5ff910119d7e310cebd9fb081ddceb512b77d3c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f2e4f3ec91add3c871de4252a2d8383652f032849109c796a6e1b739771b2f1d.png",
+              "expectedSha256": "f2e4f3ec91add3c871de4252a2d8383652f032849109c796a6e1b739771b2f1d",
+              "actualSha256": "f2e4f3ec91add3c871de4252a2d8383652f032849109c796a6e1b739771b2f1d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6ac3bf0eba5bad8eb53c1e89c9b2e85151f8a941a84d380cff3bc20dc68a08f6.png",
+              "expectedSha256": "6ac3bf0eba5bad8eb53c1e89c9b2e85151f8a941a84d380cff3bc20dc68a08f6",
+              "actualSha256": "6ac3bf0eba5bad8eb53c1e89c9b2e85151f8a941a84d380cff3bc20dc68a08f6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\bbf0165db29cd27ba152e83444b08e40785aaf65385c58a5596de9c845b917c3.png",
+              "expectedSha256": "bbf0165db29cd27ba152e83444b08e40785aaf65385c58a5596de9c845b917c3",
+              "actualSha256": "bbf0165db29cd27ba152e83444b08e40785aaf65385c58a5596de9c845b917c3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\eb9d6f1eedca54f0604efc2cc5f4d49f8592d1ee4cee5afa7f9b2211227398ed.png",
+              "expectedSha256": "eb9d6f1eedca54f0604efc2cc5f4d49f8592d1ee4cee5afa7f9b2211227398ed",
+              "actualSha256": "eb9d6f1eedca54f0604efc2cc5f4d49f8592d1ee4cee5afa7f9b2211227398ed",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\643aebccbfbb115ada6069ff99af61dabc2f7406f942f6d3a03ab5c5608dbc5a.png",
+              "expectedSha256": "643aebccbfbb115ada6069ff99af61dabc2f7406f942f6d3a03ab5c5608dbc5a",
+              "actualSha256": "643aebccbfbb115ada6069ff99af61dabc2f7406f942f6d3a03ab5c5608dbc5a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b487a43737da41f2043ec6026de286d7e54dae0558e50563bf584b4566a2a107.png",
+              "expectedSha256": "b487a43737da41f2043ec6026de286d7e54dae0558e50563bf584b4566a2a107",
+              "actualSha256": "b487a43737da41f2043ec6026de286d7e54dae0558e50563bf584b4566a2a107",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc.png",
+              "expectedSha256": "83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc",
+              "actualSha256": "83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6fe719694b49527a3b8bbab333e8039e99565f12c578f607de6ab8a686a50726.png",
+              "expectedSha256": "6fe719694b49527a3b8bbab333e8039e99565f12c578f607de6ab8a686a50726",
+              "actualSha256": "6fe719694b49527a3b8bbab333e8039e99565f12c578f607de6ab8a686a50726",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\dc5530da9e1c7cc483195b651e6640d3d15d25163cdc00a8240f0f92b8b8e45e.png",
+              "expectedSha256": "dc5530da9e1c7cc483195b651e6640d3d15d25163cdc00a8240f0f92b8b8e45e",
+              "actualSha256": "dc5530da9e1c7cc483195b651e6640d3d15d25163cdc00a8240f0f92b8b8e45e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\528b44a27f7929f02cb32d2b79c5e3dfe76917efca6df998a3060059aa038342.png",
+              "expectedSha256": "528b44a27f7929f02cb32d2b79c5e3dfe76917efca6df998a3060059aa038342",
+              "actualSha256": "528b44a27f7929f02cb32d2b79c5e3dfe76917efca6df998a3060059aa038342",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\dd21da34e5756819f2a683fb7ff07e135cfc8012459cf457c07d93222c0a9096.png",
+              "expectedSha256": "dd21da34e5756819f2a683fb7ff07e135cfc8012459cf457c07d93222c0a9096",
+              "actualSha256": "dd21da34e5756819f2a683fb7ff07e135cfc8012459cf457c07d93222c0a9096",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\5b3ded13e72362d031e9e14ce19319a43f8b47fef3d32eb844cc6bb0b7a98a34.png",
+              "expectedSha256": "5b3ded13e72362d031e9e14ce19319a43f8b47fef3d32eb844cc6bb0b7a98a34",
+              "actualSha256": "5b3ded13e72362d031e9e14ce19319a43f8b47fef3d32eb844cc6bb0b7a98a34",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e092fa7e92ba8f93a5a29708c53e61629c795880380bc017d689743b47c96945.png",
+              "expectedSha256": "e092fa7e92ba8f93a5a29708c53e61629c795880380bc017d689743b47c96945",
+              "actualSha256": "e092fa7e92ba8f93a5a29708c53e61629c795880380bc017d689743b47c96945",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b5fb09cf956e26df283e767c94cee33c49e9e31411237b0cd0ef72d0f4602feb.png",
+              "expectedSha256": "b5fb09cf956e26df283e767c94cee33c49e9e31411237b0cd0ef72d0f4602feb",
+              "actualSha256": "b5fb09cf956e26df283e767c94cee33c49e9e31411237b0cd0ef72d0f4602feb",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\52e058707bcb669fc709c6c931cca7b82ab5c3e869f2bfdad99aa7c4ce539452.png",
+              "expectedSha256": "52e058707bcb669fc709c6c931cca7b82ab5c3e869f2bfdad99aa7c4ce539452",
+              "actualSha256": "52e058707bcb669fc709c6c931cca7b82ab5c3e869f2bfdad99aa7c4ce539452",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\090bb7114d6733c7889b73217ca0051c0b2be67a55271ebd064085f2072480da.png",
+              "expectedSha256": "090bb7114d6733c7889b73217ca0051c0b2be67a55271ebd064085f2072480da",
+              "actualSha256": "090bb7114d6733c7889b73217ca0051c0b2be67a55271ebd064085f2072480da",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3c475dba234cf0f1906dff5df72e51acef99f3c9c70b747856c12a67b0358b2c.png",
+              "expectedSha256": "3c475dba234cf0f1906dff5df72e51acef99f3c9c70b747856c12a67b0358b2c",
+              "actualSha256": "3c475dba234cf0f1906dff5df72e51acef99f3c9c70b747856c12a67b0358b2c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6ef01ffecf550e93bc7f1cda4ae0393ba628a96b2cf60da3861cb8b5abda2236.png",
+              "expectedSha256": "6ef01ffecf550e93bc7f1cda4ae0393ba628a96b2cf60da3861cb8b5abda2236",
+              "actualSha256": "6ef01ffecf550e93bc7f1cda4ae0393ba628a96b2cf60da3861cb8b5abda2236",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1956e9dbfacffb2f16998beec9fcd6b305ea99b6a7a104bc71ff57a3420b0b01.png",
+              "expectedSha256": "1956e9dbfacffb2f16998beec9fcd6b305ea99b6a7a104bc71ff57a3420b0b01",
+              "actualSha256": "1956e9dbfacffb2f16998beec9fcd6b305ea99b6a7a104bc71ff57a3420b0b01",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\06b588f22d7d648d0f293005cf126e7a1875fdacf283b40bce97c44740729a21.png",
+              "expectedSha256": "06b588f22d7d648d0f293005cf126e7a1875fdacf283b40bce97c44740729a21",
+              "actualSha256": "06b588f22d7d648d0f293005cf126e7a1875fdacf283b40bce97c44740729a21",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6f4d857cece1ef25392e4d93d1e2285a6f4121b85e47a1509b54370f7a882f6e.png",
+              "expectedSha256": "6f4d857cece1ef25392e4d93d1e2285a6f4121b85e47a1509b54370f7a882f6e",
+              "actualSha256": "6f4d857cece1ef25392e4d93d1e2285a6f4121b85e47a1509b54370f7a882f6e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\05a8357f6f44f1735df308e82142fe971c9b01efbec107cef8cccf37134bf601.png",
+              "expectedSha256": "05a8357f6f44f1735df308e82142fe971c9b01efbec107cef8cccf37134bf601",
+              "actualSha256": "05a8357f6f44f1735df308e82142fe971c9b01efbec107cef8cccf37134bf601",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\95dfa174078ae4a568d3f5008b00836da7e6d2208229e428dc7472160832905a.png",
+              "expectedSha256": "95dfa174078ae4a568d3f5008b00836da7e6d2208229e428dc7472160832905a",
+              "actualSha256": "95dfa174078ae4a568d3f5008b00836da7e6d2208229e428dc7472160832905a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8ab53aebf5a88188f8e95a79bbb1b10974170945c5f99d9f173ed18929f5acec.png",
+              "expectedSha256": "8ab53aebf5a88188f8e95a79bbb1b10974170945c5f99d9f173ed18929f5acec",
+              "actualSha256": "8ab53aebf5a88188f8e95a79bbb1b10974170945c5f99d9f173ed18929f5acec",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c763e174d65b22574c7a36c5fdbe66dd337443c720a99da25929c0a70bf7be6a.png",
+              "expectedSha256": "c763e174d65b22574c7a36c5fdbe66dd337443c720a99da25929c0a70bf7be6a",
+              "actualSha256": "c763e174d65b22574c7a36c5fdbe66dd337443c720a99da25929c0a70bf7be6a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\36007a0d8cf268d351d5e8e8e6608411f28de2cfc2a2bb4e261a726f5e938330.png",
+              "expectedSha256": "36007a0d8cf268d351d5e8e8e6608411f28de2cfc2a2bb4e261a726f5e938330",
+              "actualSha256": "36007a0d8cf268d351d5e8e8e6608411f28de2cfc2a2bb4e261a726f5e938330",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\32869520b569560d857a6cdebf8f8fa52b5fe195c3f8f3ba8d732c67f80eb7a5.png",
+              "expectedSha256": "32869520b569560d857a6cdebf8f8fa52b5fe195c3f8f3ba8d732c67f80eb7a5",
+              "actualSha256": "32869520b569560d857a6cdebf8f8fa52b5fe195c3f8f3ba8d732c67f80eb7a5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d0fce2703cb3b06183382ec6d268a8122696ed727f879308e8d29067bb07c158.png",
+              "expectedSha256": "d0fce2703cb3b06183382ec6d268a8122696ed727f879308e8d29067bb07c158",
+              "actualSha256": "d0fce2703cb3b06183382ec6d268a8122696ed727f879308e8d29067bb07c158",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f4a5bf454f50343ab6aee0d1c51c48e8dad898046fac0232d05f52f3066f675a.png",
+              "expectedSha256": "f4a5bf454f50343ab6aee0d1c51c48e8dad898046fac0232d05f52f3066f675a",
+              "actualSha256": "f4a5bf454f50343ab6aee0d1c51c48e8dad898046fac0232d05f52f3066f675a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d1bb0d7e02243f80e2b721573573ab9ad2de3a52ab2fe77d35901aa8b97c9f3c.png",
+              "expectedSha256": "d1bb0d7e02243f80e2b721573573ab9ad2de3a52ab2fe77d35901aa8b97c9f3c",
+              "actualSha256": "d1bb0d7e02243f80e2b721573573ab9ad2de3a52ab2fe77d35901aa8b97c9f3c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d1ada9d3cdf482f8543e89ca8676a75608264345e59dcba0d1709a650d054aeb.png",
+              "expectedSha256": "d1ada9d3cdf482f8543e89ca8676a75608264345e59dcba0d1709a650d054aeb",
+              "actualSha256": "d1ada9d3cdf482f8543e89ca8676a75608264345e59dcba0d1709a650d054aeb",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\868847c8bd82f6b76ca2d39fcdc70f23d5133dd31c2df6aaf2e1f924f641ed3d.png",
+              "expectedSha256": "868847c8bd82f6b76ca2d39fcdc70f23d5133dd31c2df6aaf2e1f924f641ed3d",
+              "actualSha256": "868847c8bd82f6b76ca2d39fcdc70f23d5133dd31c2df6aaf2e1f924f641ed3d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7003c13329a1f5aac3e37e2225fe9eda992789980780ca43db58703570e93bfe.png",
+              "expectedSha256": "7003c13329a1f5aac3e37e2225fe9eda992789980780ca43db58703570e93bfe",
+              "actualSha256": "7003c13329a1f5aac3e37e2225fe9eda992789980780ca43db58703570e93bfe",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\71d76ac70e56ca5b7eb5c6c3c75a1018fabdbb6d0679c13b7c2d5add992eacba.png",
+              "expectedSha256": "71d76ac70e56ca5b7eb5c6c3c75a1018fabdbb6d0679c13b7c2d5add992eacba",
+              "actualSha256": "71d76ac70e56ca5b7eb5c6c3c75a1018fabdbb6d0679c13b7c2d5add992eacba",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\458171b4688cc117874466d89b063b67369be161b13bbebb96ff3a079c74b846.png",
+              "expectedSha256": "458171b4688cc117874466d89b063b67369be161b13bbebb96ff3a079c74b846",
+              "actualSha256": "458171b4688cc117874466d89b063b67369be161b13bbebb96ff3a079c74b846",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8346dd71de4a37545a0da166e3665214249838ed61b1218ab1842a65de7d9fc9.png",
+              "expectedSha256": "8346dd71de4a37545a0da166e3665214249838ed61b1218ab1842a65de7d9fc9",
+              "actualSha256": "8346dd71de4a37545a0da166e3665214249838ed61b1218ab1842a65de7d9fc9",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7103a625b82044004803773550f214ea556c31793850ed9a61e7e3cf4d3e2da5.png",
+              "expectedSha256": "7103a625b82044004803773550f214ea556c31793850ed9a61e7e3cf4d3e2da5",
+              "actualSha256": "7103a625b82044004803773550f214ea556c31793850ed9a61e7e3cf4d3e2da5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e7980145013781b91319f9818d5c721b9eccc101de3e3c171b727001e27e239a.png",
+              "expectedSha256": "e7980145013781b91319f9818d5c721b9eccc101de3e3c171b727001e27e239a",
+              "actualSha256": "e7980145013781b91319f9818d5c721b9eccc101de3e3c171b727001e27e239a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3b521958eabbb59069536cc4e775852a825eea585143678278305232e8723bfd.png",
+              "expectedSha256": "3b521958eabbb59069536cc4e775852a825eea585143678278305232e8723bfd",
+              "actualSha256": "3b521958eabbb59069536cc4e775852a825eea585143678278305232e8723bfd",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6557bbfe3280d7fe0809e9f9138edd7e3b2df305b640283d7084f0828c04dcc5.png",
+              "expectedSha256": "6557bbfe3280d7fe0809e9f9138edd7e3b2df305b640283d7084f0828c04dcc5",
+              "actualSha256": "6557bbfe3280d7fe0809e9f9138edd7e3b2df305b640283d7084f0828c04dcc5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e1c7d666e3145aa0dbc759dc3aa812d479f20525fae9a0b08008a589d3d4b9fa.png",
+              "expectedSha256": "e1c7d666e3145aa0dbc759dc3aa812d479f20525fae9a0b08008a589d3d4b9fa",
+              "actualSha256": "e1c7d666e3145aa0dbc759dc3aa812d479f20525fae9a0b08008a589d3d4b9fa",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\aabc93b57e14a7a92038998865e916bfd87f6c9b164abe9a05683fd7aa2f723a.png",
+              "expectedSha256": "aabc93b57e14a7a92038998865e916bfd87f6c9b164abe9a05683fd7aa2f723a",
+              "actualSha256": "aabc93b57e14a7a92038998865e916bfd87f6c9b164abe9a05683fd7aa2f723a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\860be38c93325f00b67a930914ae876cd1b642a64c044af095ba2459f2f7df96.png",
+              "expectedSha256": "860be38c93325f00b67a930914ae876cd1b642a64c044af095ba2459f2f7df96",
+              "actualSha256": "860be38c93325f00b67a930914ae876cd1b642a64c044af095ba2459f2f7df96",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\9fc194125c3dd16be6841359290a76c03f97c1d5c5290a5063fb05f9a8925fe7.png",
+              "expectedSha256": "9fc194125c3dd16be6841359290a76c03f97c1d5c5290a5063fb05f9a8925fe7",
+              "actualSha256": "9fc194125c3dd16be6841359290a76c03f97c1d5c5290a5063fb05f9a8925fe7",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0ce728c849e6af989056a4c0362263b4485852aef2b3e9c469dac5406e04b294.png",
+              "expectedSha256": "0ce728c849e6af989056a4c0362263b4485852aef2b3e9c469dac5406e04b294",
+              "actualSha256": "0ce728c849e6af989056a4c0362263b4485852aef2b3e9c469dac5406e04b294",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\107c56b66fcfc48be040c4049524de9c7c796fe639d8a10037b17d096284abba.png",
+              "expectedSha256": "107c56b66fcfc48be040c4049524de9c7c796fe639d8a10037b17d096284abba",
+              "actualSha256": "107c56b66fcfc48be040c4049524de9c7c796fe639d8a10037b17d096284abba",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8f7af2f65bfa8664d7e2c64caa2b3aa9af7a1d748e18d7a786acdd42dcf4e274.png",
+              "expectedSha256": "8f7af2f65bfa8664d7e2c64caa2b3aa9af7a1d748e18d7a786acdd42dcf4e274",
+              "actualSha256": "8f7af2f65bfa8664d7e2c64caa2b3aa9af7a1d748e18d7a786acdd42dcf4e274",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3e2b287aba464c57ab11efe4f52720782349586acaeb1df106148f79b95d4cd3.png",
+              "expectedSha256": "3e2b287aba464c57ab11efe4f52720782349586acaeb1df106148f79b95d4cd3",
+              "actualSha256": "3e2b287aba464c57ab11efe4f52720782349586acaeb1df106148f79b95d4cd3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6ba7465ab3a5fbf987b6ad1e8a6db55ac19bf3e5710befedbc68e669d9501ebd.png",
+              "expectedSha256": "6ba7465ab3a5fbf987b6ad1e8a6db55ac19bf3e5710befedbc68e669d9501ebd",
+              "actualSha256": "6ba7465ab3a5fbf987b6ad1e8a6db55ac19bf3e5710befedbc68e669d9501ebd",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\85dc405638de9817d0d51ec478557241aacfe20b28744a3b7df8aefa2531c3bd.png",
+              "expectedSha256": "85dc405638de9817d0d51ec478557241aacfe20b28744a3b7df8aefa2531c3bd",
+              "actualSha256": "85dc405638de9817d0d51ec478557241aacfe20b28744a3b7df8aefa2531c3bd",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1da3a3ccffc91193024553a31052b9bdd07187ee156d03ed00933036fe13348d.png",
+              "expectedSha256": "1da3a3ccffc91193024553a31052b9bdd07187ee156d03ed00933036fe13348d",
+              "actualSha256": "1da3a3ccffc91193024553a31052b9bdd07187ee156d03ed00933036fe13348d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ec56d58583f5d64b22a69b02399221f612c54984598baeb26f5c8e750abdb442.png",
+              "expectedSha256": "ec56d58583f5d64b22a69b02399221f612c54984598baeb26f5c8e750abdb442",
+              "actualSha256": "ec56d58583f5d64b22a69b02399221f612c54984598baeb26f5c8e750abdb442",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\86bbff6f40f34615fe341d06196b68638ffa87f196f06257e26cc47fe50b502e.png",
+              "expectedSha256": "86bbff6f40f34615fe341d06196b68638ffa87f196f06257e26cc47fe50b502e",
+              "actualSha256": "86bbff6f40f34615fe341d06196b68638ffa87f196f06257e26cc47fe50b502e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ebc2117b525ad281cf0c231ed210ddb5aa93fbf6975df977037dfbb66444cc64.png",
+              "expectedSha256": "ebc2117b525ad281cf0c231ed210ddb5aa93fbf6975df977037dfbb66444cc64",
+              "actualSha256": "ebc2117b525ad281cf0c231ed210ddb5aa93fbf6975df977037dfbb66444cc64",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6e73b37470882951562ce34bdd6d33e3a9220c6c4ad8c456ba3cc521b30869b5.png",
+              "expectedSha256": "6e73b37470882951562ce34bdd6d33e3a9220c6c4ad8c456ba3cc521b30869b5",
+              "actualSha256": "6e73b37470882951562ce34bdd6d33e3a9220c6c4ad8c456ba3cc521b30869b5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c18fb8a31bb547202d47566a9420f792468468e6b6be2f43375896e127eac154.png",
+              "expectedSha256": "c18fb8a31bb547202d47566a9420f792468468e6b6be2f43375896e127eac154",
+              "actualSha256": "c18fb8a31bb547202d47566a9420f792468468e6b6be2f43375896e127eac154",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2b7493be386e3f09d2f8cd4a6357b2a0f08f4c7a09563a9ad2ee29ae6ebcae43.png",
+              "expectedSha256": "2b7493be386e3f09d2f8cd4a6357b2a0f08f4c7a09563a9ad2ee29ae6ebcae43",
+              "actualSha256": "2b7493be386e3f09d2f8cd4a6357b2a0f08f4c7a09563a9ad2ee29ae6ebcae43",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0d9be4de33bba1ee06bf9b69084738046cb35da4956f562368e34a5554da6c55.png",
+              "expectedSha256": "0d9be4de33bba1ee06bf9b69084738046cb35da4956f562368e34a5554da6c55",
+              "actualSha256": "0d9be4de33bba1ee06bf9b69084738046cb35da4956f562368e34a5554da6c55",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\618fd970694d8690f7f3d64952672f7f27fa967d56d2d6eff29feac19e4a8e0e.png",
+              "expectedSha256": "618fd970694d8690f7f3d64952672f7f27fa967d56d2d6eff29feac19e4a8e0e",
+              "actualSha256": "618fd970694d8690f7f3d64952672f7f27fa967d56d2d6eff29feac19e4a8e0e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\30664cd243727970dd223619bb9df0a4d07065c1f3b729e784ea3e505de88eb6.png",
+              "expectedSha256": "30664cd243727970dd223619bb9df0a4d07065c1f3b729e784ea3e505de88eb6",
+              "actualSha256": "30664cd243727970dd223619bb9df0a4d07065c1f3b729e784ea3e505de88eb6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d0f9f56064d413943e712a12eb39f1ead9fadb334c05d43a8bd9a76e472745bd.png",
+              "expectedSha256": "d0f9f56064d413943e712a12eb39f1ead9fadb334c05d43a8bd9a76e472745bd",
+              "actualSha256": "d0f9f56064d413943e712a12eb39f1ead9fadb334c05d43a8bd9a76e472745bd",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7654729ec5ba0baae39a546767b68e075aeefac12ff83b389e9fb573f0c6e68b.png",
+              "expectedSha256": "7654729ec5ba0baae39a546767b68e075aeefac12ff83b389e9fb573f0c6e68b",
+              "actualSha256": "7654729ec5ba0baae39a546767b68e075aeefac12ff83b389e9fb573f0c6e68b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\a82250916265bf7a244417ac2d8334f3826b567c978db26a1b1391d54601e1a5.png",
+              "expectedSha256": "a82250916265bf7a244417ac2d8334f3826b567c978db26a1b1391d54601e1a5",
+              "actualSha256": "a82250916265bf7a244417ac2d8334f3826b567c978db26a1b1391d54601e1a5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\841d16520b1617ce50cf981091fd9ad1ffb984a99bbc5091bc1ddd5acc61f8fe.png",
+              "expectedSha256": "841d16520b1617ce50cf981091fd9ad1ffb984a99bbc5091bc1ddd5acc61f8fe",
+              "actualSha256": "841d16520b1617ce50cf981091fd9ad1ffb984a99bbc5091bc1ddd5acc61f8fe",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b4be06712464bcad0b88fb3697b8ee927ca19c04857cd7704dbe929301b14507.png",
+              "expectedSha256": "b4be06712464bcad0b88fb3697b8ee927ca19c04857cd7704dbe929301b14507",
+              "actualSha256": "b4be06712464bcad0b88fb3697b8ee927ca19c04857cd7704dbe929301b14507",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\9d308ad550bee5868fb1875bd7dcb4249c5282e0c9a7abb08398698b8c88e54a.png",
+              "expectedSha256": "9d308ad550bee5868fb1875bd7dcb4249c5282e0c9a7abb08398698b8c88e54a",
+              "actualSha256": "9d308ad550bee5868fb1875bd7dcb4249c5282e0c9a7abb08398698b8c88e54a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\262f15e5603637080f861b7fdab771b5e40797e4ef6f6a22e9776ea0a6abcdf4.png",
+              "expectedSha256": "262f15e5603637080f861b7fdab771b5e40797e4ef6f6a22e9776ea0a6abcdf4",
+              "actualSha256": "262f15e5603637080f861b7fdab771b5e40797e4ef6f6a22e9776ea0a6abcdf4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3147143b98115d4601715e221a9f5840ac70da2345edd54270162f5d317c6fc7.png",
+              "expectedSha256": "3147143b98115d4601715e221a9f5840ac70da2345edd54270162f5d317c6fc7",
+              "actualSha256": "3147143b98115d4601715e221a9f5840ac70da2345edd54270162f5d317c6fc7",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6fa7f9a010d8be37962130ec7a6e15f80f878a1cebad3d40eef9228168b8877e.png",
+              "expectedSha256": "6fa7f9a010d8be37962130ec7a6e15f80f878a1cebad3d40eef9228168b8877e",
+              "actualSha256": "6fa7f9a010d8be37962130ec7a6e15f80f878a1cebad3d40eef9228168b8877e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\9681c0c20f70c7b6f551c1f5f879cbe5115baf73d0fe630806ce33613695fb36.png",
+              "expectedSha256": "9681c0c20f70c7b6f551c1f5f879cbe5115baf73d0fe630806ce33613695fb36",
+              "actualSha256": "9681c0c20f70c7b6f551c1f5f879cbe5115baf73d0fe630806ce33613695fb36",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0ef695c0ee57e86bd4f70f24a6b4cc01e03688b7050de9c70d424112ccf759cc.png",
+              "expectedSha256": "0ef695c0ee57e86bd4f70f24a6b4cc01e03688b7050de9c70d424112ccf759cc",
+              "actualSha256": "0ef695c0ee57e86bd4f70f24a6b4cc01e03688b7050de9c70d424112ccf759cc",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c9a1dc53d04287ca5eb5db86570408ed5644598cd2891f7a6ab2024dbf8f4432.png",
+              "expectedSha256": "c9a1dc53d04287ca5eb5db86570408ed5644598cd2891f7a6ab2024dbf8f4432",
+              "actualSha256": "c9a1dc53d04287ca5eb5db86570408ed5644598cd2891f7a6ab2024dbf8f4432",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e1ba4510d651f2ece7fbd046fc7a72a4c94987ca36b82a7ce12c14eba24ed9bf.png",
+              "expectedSha256": "e1ba4510d651f2ece7fbd046fc7a72a4c94987ca36b82a7ce12c14eba24ed9bf",
+              "actualSha256": "e1ba4510d651f2ece7fbd046fc7a72a4c94987ca36b82a7ce12c14eba24ed9bf",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\899185f03d5b057ae8d8160397d2c4eda1cfb16ef2615bb807e74c81f15df0cc.png",
+              "expectedSha256": "899185f03d5b057ae8d8160397d2c4eda1cfb16ef2615bb807e74c81f15df0cc",
+              "actualSha256": "899185f03d5b057ae8d8160397d2c4eda1cfb16ef2615bb807e74c81f15df0cc",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1ff6899ab2d644c64b86fde0847839d58e8ee62ca4d55be8426b31e5c715f74a.png",
+              "expectedSha256": "1ff6899ab2d644c64b86fde0847839d58e8ee62ca4d55be8426b31e5c715f74a",
+              "actualSha256": "1ff6899ab2d644c64b86fde0847839d58e8ee62ca4d55be8426b31e5c715f74a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c615de04d5ce55b0c61635c280c3ce8f6f5302b9212506d8ef57b2f24b3aa54f.png",
+              "expectedSha256": "c615de04d5ce55b0c61635c280c3ce8f6f5302b9212506d8ef57b2f24b3aa54f",
+              "actualSha256": "c615de04d5ce55b0c61635c280c3ce8f6f5302b9212506d8ef57b2f24b3aa54f",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\79062e5e9627ae0e00f7209f92b87e1dc5f5bcc14d2d09195e84a2ec928906b7.png",
+              "expectedSha256": "79062e5e9627ae0e00f7209f92b87e1dc5f5bcc14d2d09195e84a2ec928906b7",
+              "actualSha256": "79062e5e9627ae0e00f7209f92b87e1dc5f5bcc14d2d09195e84a2ec928906b7",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\38f9c69053a976676e429972b6798242eac178272654a2e934322557b8a936c3.png",
+              "expectedSha256": "38f9c69053a976676e429972b6798242eac178272654a2e934322557b8a936c3",
+              "actualSha256": "38f9c69053a976676e429972b6798242eac178272654a2e934322557b8a936c3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ce55aefa7506bb9eb27f8a5e39180ef8ad52a654af866c4364b0f23fbb15f7af.png",
+              "expectedSha256": "ce55aefa7506bb9eb27f8a5e39180ef8ad52a654af866c4364b0f23fbb15f7af",
+              "actualSha256": "ce55aefa7506bb9eb27f8a5e39180ef8ad52a654af866c4364b0f23fbb15f7af",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7c609f2fe994ded2a7e2de4c5d75eb7cbec297d2b11374c899156d8f7c48ed26.png",
+              "expectedSha256": "7c609f2fe994ded2a7e2de4c5d75eb7cbec297d2b11374c899156d8f7c48ed26",
+              "actualSha256": "7c609f2fe994ded2a7e2de4c5d75eb7cbec297d2b11374c899156d8f7c48ed26",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\382b5df7b9d9cf1e0ede8ef0d7ffaea7db9377895bb07b9d7b495eafed258e9a.png",
+              "expectedSha256": "382b5df7b9d9cf1e0ede8ef0d7ffaea7db9377895bb07b9d7b495eafed258e9a",
+              "actualSha256": "382b5df7b9d9cf1e0ede8ef0d7ffaea7db9377895bb07b9d7b495eafed258e9a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\77057157ff7a53161a976ba83382171a255ba49d3ce3e3cff46290f084777848.png",
+              "expectedSha256": "77057157ff7a53161a976ba83382171a255ba49d3ce3e3cff46290f084777848",
+              "actualSha256": "77057157ff7a53161a976ba83382171a255ba49d3ce3e3cff46290f084777848",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2390b23afea8b7deb8581be8edbc6f2e159f91547e2b71582b5f7961b59ab0af.png",
+              "expectedSha256": "2390b23afea8b7deb8581be8edbc6f2e159f91547e2b71582b5f7961b59ab0af",
+              "actualSha256": "2390b23afea8b7deb8581be8edbc6f2e159f91547e2b71582b5f7961b59ab0af",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\db9e1b7115559afbccac231cf55ee64a7cadb87921438854a170aa51f217f87a.png",
+              "expectedSha256": "db9e1b7115559afbccac231cf55ee64a7cadb87921438854a170aa51f217f87a",
+              "actualSha256": "db9e1b7115559afbccac231cf55ee64a7cadb87921438854a170aa51f217f87a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8bb5535acc6655253fee767e90d189579dcc1cadceccac7401fefcd282aa4c04.png",
+              "expectedSha256": "8bb5535acc6655253fee767e90d189579dcc1cadceccac7401fefcd282aa4c04",
+              "actualSha256": "8bb5535acc6655253fee767e90d189579dcc1cadceccac7401fefcd282aa4c04",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6e250ca116eb50bb9b96e665f99ee64feb3aec45940fc7679b19e8c56287b39c.png",
+              "expectedSha256": "6e250ca116eb50bb9b96e665f99ee64feb3aec45940fc7679b19e8c56287b39c",
+              "actualSha256": "6e250ca116eb50bb9b96e665f99ee64feb3aec45940fc7679b19e8c56287b39c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e5507964bef2a49ba12bef8f7a70c1a6a458df8eb00efa6ee54116540b6b8413.png",
+              "expectedSha256": "e5507964bef2a49ba12bef8f7a70c1a6a458df8eb00efa6ee54116540b6b8413",
+              "actualSha256": "e5507964bef2a49ba12bef8f7a70c1a6a458df8eb00efa6ee54116540b6b8413",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\fc609f74b698ef821e86d907043f13110ca40ad008ccbdb4e87f257f10c66875.png",
+              "expectedSha256": "fc609f74b698ef821e86d907043f13110ca40ad008ccbdb4e87f257f10c66875",
+              "actualSha256": "fc609f74b698ef821e86d907043f13110ca40ad008ccbdb4e87f257f10c66875",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\162e2600861988ec163811297b2ffd7b187db9c2c5f29ed3173395690eb5b35b.png",
+              "expectedSha256": "162e2600861988ec163811297b2ffd7b187db9c2c5f29ed3173395690eb5b35b",
+              "actualSha256": "162e2600861988ec163811297b2ffd7b187db9c2c5f29ed3173395690eb5b35b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7af59b9ae5e8a62c993ec7cc036770d9f810b2975f7328c27b30f94b31af1f05.png",
+              "expectedSha256": "7af59b9ae5e8a62c993ec7cc036770d9f810b2975f7328c27b30f94b31af1f05",
+              "actualSha256": "7af59b9ae5e8a62c993ec7cc036770d9f810b2975f7328c27b30f94b31af1f05",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6063d7fd2a15e273d6158ab92c81ec8d6d0e5590762214241721827fbbe5a8f0.png",
+              "expectedSha256": "6063d7fd2a15e273d6158ab92c81ec8d6d0e5590762214241721827fbbe5a8f0",
+              "actualSha256": "6063d7fd2a15e273d6158ab92c81ec8d6d0e5590762214241721827fbbe5a8f0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7a2f4d43a343069e5de0f13c3ce093b5b73423b224ae8920277fc7cc726a8ba9.png",
+              "expectedSha256": "7a2f4d43a343069e5de0f13c3ce093b5b73423b224ae8920277fc7cc726a8ba9",
+              "actualSha256": "7a2f4d43a343069e5de0f13c3ce093b5b73423b224ae8920277fc7cc726a8ba9",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e78e6578099b6a22cace16a59f7df1d2606fe6b4b9de2e84bb93f809fc8451ef.png",
+              "expectedSha256": "e78e6578099b6a22cace16a59f7df1d2606fe6b4b9de2e84bb93f809fc8451ef",
+              "actualSha256": "e78e6578099b6a22cace16a59f7df1d2606fe6b4b9de2e84bb93f809fc8451ef",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\461d21fd57687ff683c507b36e28507ebe3c81d6c7f9c235787d4b717a87bf16.png",
+              "expectedSha256": "461d21fd57687ff683c507b36e28507ebe3c81d6c7f9c235787d4b717a87bf16",
+              "actualSha256": "461d21fd57687ff683c507b36e28507ebe3c81d6c7f9c235787d4b717a87bf16",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c4de90bf96e2b16bd1e5287320e45c56113d7fe2e3f0e6f17585feee5df09b55.png",
+              "expectedSha256": "c4de90bf96e2b16bd1e5287320e45c56113d7fe2e3f0e6f17585feee5df09b55",
+              "actualSha256": "c4de90bf96e2b16bd1e5287320e45c56113d7fe2e3f0e6f17585feee5df09b55",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\add6c5eff19380b68db5b0681828e062c1b4d4016809d2138e29476ead5adff6.png",
+              "expectedSha256": "add6c5eff19380b68db5b0681828e062c1b4d4016809d2138e29476ead5adff6",
+              "actualSha256": "add6c5eff19380b68db5b0681828e062c1b4d4016809d2138e29476ead5adff6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8a7d07fb2a1221793deaa52e657293f73119fc2ea82b8b8d2e9fd172286f568d.png",
+              "expectedSha256": "8a7d07fb2a1221793deaa52e657293f73119fc2ea82b8b8d2e9fd172286f568d",
+              "actualSha256": "8a7d07fb2a1221793deaa52e657293f73119fc2ea82b8b8d2e9fd172286f568d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\77812554fb0e6afd10724ceb6bb4e215e80af46032f7b99fe3a0a84088f0cfd2.png",
+              "expectedSha256": "77812554fb0e6afd10724ceb6bb4e215e80af46032f7b99fe3a0a84088f0cfd2",
+              "actualSha256": "77812554fb0e6afd10724ceb6bb4e215e80af46032f7b99fe3a0a84088f0cfd2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0.png",
+              "expectedSha256": "c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0",
+              "actualSha256": "c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3854d03b15ceaa7f7cbb4729d82ceed77fc8b077977acec0703f032470ebb004.png",
+              "expectedSha256": "3854d03b15ceaa7f7cbb4729d82ceed77fc8b077977acec0703f032470ebb004",
+              "actualSha256": "3854d03b15ceaa7f7cbb4729d82ceed77fc8b077977acec0703f032470ebb004",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\5b4cd5bab2072c485ebdb185b17553dd09932291fa3786efdaa05d3f9e446777.png",
+              "expectedSha256": "5b4cd5bab2072c485ebdb185b17553dd09932291fa3786efdaa05d3f9e446777",
+              "actualSha256": "5b4cd5bab2072c485ebdb185b17553dd09932291fa3786efdaa05d3f9e446777",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f9d21d4d1f59494a205f3a619cc432461691754e551e7bc218b1cde87a9ec4a2.png",
+              "expectedSha256": "f9d21d4d1f59494a205f3a619cc432461691754e551e7bc218b1cde87a9ec4a2",
+              "actualSha256": "f9d21d4d1f59494a205f3a619cc432461691754e551e7bc218b1cde87a9ec4a2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d963b18b9eef12bcdee242313304a0d755cfabbb9d3bb7501490a2ad8a64148e.png",
+              "expectedSha256": "d963b18b9eef12bcdee242313304a0d755cfabbb9d3bb7501490a2ad8a64148e",
+              "actualSha256": "d963b18b9eef12bcdee242313304a0d755cfabbb9d3bb7501490a2ad8a64148e",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f9fecbb5e0dd6fe21d7d17763e5dbee51aa774d18eb7306568448617344fe877.png",
+              "expectedSha256": "f9fecbb5e0dd6fe21d7d17763e5dbee51aa774d18eb7306568448617344fe877",
+              "actualSha256": "f9fecbb5e0dd6fe21d7d17763e5dbee51aa774d18eb7306568448617344fe877",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\92c2aa7b8ba9fc6620abb25c776b0dfe0a4de2dfe2c2cfe1b9903382884e68b4.png",
+              "expectedSha256": "92c2aa7b8ba9fc6620abb25c776b0dfe0a4de2dfe2c2cfe1b9903382884e68b4",
+              "actualSha256": "92c2aa7b8ba9fc6620abb25c776b0dfe0a4de2dfe2c2cfe1b9903382884e68b4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6d7e77e95ab4e07c99ee8470687a204f31ce67e7b35a7bbe6d0f714f8eceb192.png",
+              "expectedSha256": "6d7e77e95ab4e07c99ee8470687a204f31ce67e7b35a7bbe6d0f714f8eceb192",
+              "actualSha256": "6d7e77e95ab4e07c99ee8470687a204f31ce67e7b35a7bbe6d0f714f8eceb192",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1286a38ec5998111b90e6226846cf1563de2dd004b36122eb39d979063d10471.png",
+              "expectedSha256": "1286a38ec5998111b90e6226846cf1563de2dd004b36122eb39d979063d10471",
+              "actualSha256": "1286a38ec5998111b90e6226846cf1563de2dd004b36122eb39d979063d10471",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\4fbc6e4bfbdac065d058e549b92f17044f72cac571b4488fdd53704dac073d20.png",
+              "expectedSha256": "4fbc6e4bfbdac065d058e549b92f17044f72cac571b4488fdd53704dac073d20",
+              "actualSha256": "4fbc6e4bfbdac065d058e549b92f17044f72cac571b4488fdd53704dac073d20",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f6ae139f00d5f9ad93ade694ca941023707b3b4e7377e9f513af2b88bfc57bf7.png",
+              "expectedSha256": "f6ae139f00d5f9ad93ade694ca941023707b3b4e7377e9f513af2b88bfc57bf7",
+              "actualSha256": "f6ae139f00d5f9ad93ade694ca941023707b3b4e7377e9f513af2b88bfc57bf7",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b57fb8389538a9e6de8c58fbebd6c383322d2e97ca95fc58b60f0edb781c5f5a.png",
+              "expectedSha256": "b57fb8389538a9e6de8c58fbebd6c383322d2e97ca95fc58b60f0edb781c5f5a",
+              "actualSha256": "b57fb8389538a9e6de8c58fbebd6c383322d2e97ca95fc58b60f0edb781c5f5a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e2fddc2b7d72b517ca09d0948f5205fe407c51405534f67be3c2340cc28c309f.png",
+              "expectedSha256": "e2fddc2b7d72b517ca09d0948f5205fe407c51405534f67be3c2340cc28c309f",
+              "actualSha256": "e2fddc2b7d72b517ca09d0948f5205fe407c51405534f67be3c2340cc28c309f",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\873b3799180f77f6a3e37d0d7a30044efdf701b1c6c65082c387f11f3ba9083b.png",
+              "expectedSha256": "873b3799180f77f6a3e37d0d7a30044efdf701b1c6c65082c387f11f3ba9083b",
+              "actualSha256": "873b3799180f77f6a3e37d0d7a30044efdf701b1c6c65082c387f11f3ba9083b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0f8d0d6438113f4a598c1b0631e70d7ace6aaf5c534d683a59c5a1ac9af0223b.png",
+              "expectedSha256": "0f8d0d6438113f4a598c1b0631e70d7ace6aaf5c534d683a59c5a1ac9af0223b",
+              "actualSha256": "0f8d0d6438113f4a598c1b0631e70d7ace6aaf5c534d683a59c5a1ac9af0223b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1a5a2e2c9599cf15998b90085c6497f9a45b3fa521337925164f59effd57af6a.png",
+              "expectedSha256": "1a5a2e2c9599cf15998b90085c6497f9a45b3fa521337925164f59effd57af6a",
+              "actualSha256": "1a5a2e2c9599cf15998b90085c6497f9a45b3fa521337925164f59effd57af6a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d93d116a70e862a89d47fdd73b8516cdf4ad4a1b9e0e729b3d8aa5e844b98d13.png",
+              "expectedSha256": "d93d116a70e862a89d47fdd73b8516cdf4ad4a1b9e0e729b3d8aa5e844b98d13",
+              "actualSha256": "d93d116a70e862a89d47fdd73b8516cdf4ad4a1b9e0e729b3d8aa5e844b98d13",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\23182288f674851b6dd8c1eb29bd396f37f1c4ddb5c5c98d686102feb261f890.png",
+              "expectedSha256": "23182288f674851b6dd8c1eb29bd396f37f1c4ddb5c5c98d686102feb261f890",
+              "actualSha256": "23182288f674851b6dd8c1eb29bd396f37f1c4ddb5c5c98d686102feb261f890",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\615aa505aefcba5af55adf8ea9587ce967e88cfcd51ee191fddd4072c3cd1620.png",
+              "expectedSha256": "615aa505aefcba5af55adf8ea9587ce967e88cfcd51ee191fddd4072c3cd1620",
+              "actualSha256": "615aa505aefcba5af55adf8ea9587ce967e88cfcd51ee191fddd4072c3cd1620",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\03c8013a6479165673ca6f679243bd71c2d88a9d561d5cd6aabbd25e4b666a43.png",
+              "expectedSha256": "03c8013a6479165673ca6f679243bd71c2d88a9d561d5cd6aabbd25e4b666a43",
+              "actualSha256": "03c8013a6479165673ca6f679243bd71c2d88a9d561d5cd6aabbd25e4b666a43",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e4c1963629d834c1e74448b5ceefa6271fbd631a9fc943c0f9a801706d8637eb.png",
+              "expectedSha256": "e4c1963629d834c1e74448b5ceefa6271fbd631a9fc943c0f9a801706d8637eb",
+              "actualSha256": "e4c1963629d834c1e74448b5ceefa6271fbd631a9fc943c0f9a801706d8637eb",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ab9d19507287a5fbcfac336238b02ccaa64ac53ce062f9eded60e60bd2156bb0.png",
+              "expectedSha256": "ab9d19507287a5fbcfac336238b02ccaa64ac53ce062f9eded60e60bd2156bb0",
+              "actualSha256": "ab9d19507287a5fbcfac336238b02ccaa64ac53ce062f9eded60e60bd2156bb0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\face4c8061589ea01f1a19d9e7deaece8af909983fae53736f0f6a3b2669cc2d.png",
+              "expectedSha256": "face4c8061589ea01f1a19d9e7deaece8af909983fae53736f0f6a3b2669cc2d",
+              "actualSha256": "face4c8061589ea01f1a19d9e7deaece8af909983fae53736f0f6a3b2669cc2d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6f4bbbf33d3f1811c8435d97e4517bf3948bf09e8887b6f994f4d6f8e00a96b3.png",
+              "expectedSha256": "6f4bbbf33d3f1811c8435d97e4517bf3948bf09e8887b6f994f4d6f8e00a96b3",
+              "actualSha256": "6f4bbbf33d3f1811c8435d97e4517bf3948bf09e8887b6f994f4d6f8e00a96b3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\950f80d899463f6857db6b0d162d6e1f1eae828cc3479ce7a403e67eabbab233.png",
+              "expectedSha256": "950f80d899463f6857db6b0d162d6e1f1eae828cc3479ce7a403e67eabbab233",
+              "actualSha256": "950f80d899463f6857db6b0d162d6e1f1eae828cc3479ce7a403e67eabbab233",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\58ebf2c6251a62a84c74d06f78b2f77ab769b263ea4d3ff907076949e32899f9.png",
+              "expectedSha256": "58ebf2c6251a62a84c74d06f78b2f77ab769b263ea4d3ff907076949e32899f9",
+              "actualSha256": "58ebf2c6251a62a84c74d06f78b2f77ab769b263ea4d3ff907076949e32899f9",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\43a009455aafb004b3de78b293b4706f5e9cc5ee3ad8caa83ff9198e0447491b.png",
+              "expectedSha256": "43a009455aafb004b3de78b293b4706f5e9cc5ee3ad8caa83ff9198e0447491b",
+              "actualSha256": "43a009455aafb004b3de78b293b4706f5e9cc5ee3ad8caa83ff9198e0447491b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\bab6c7ac8e72b4855bde9665fd7443d823b9fd59137df2a92fe71f728b31cfee.png",
+              "expectedSha256": "bab6c7ac8e72b4855bde9665fd7443d823b9fd59137df2a92fe71f728b31cfee",
+              "actualSha256": "bab6c7ac8e72b4855bde9665fd7443d823b9fd59137df2a92fe71f728b31cfee",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2c602718b7b449f1e9de108b1d32833e7d4e359486eb75e9e19fedaf9bea54a8.png",
+              "expectedSha256": "2c602718b7b449f1e9de108b1d32833e7d4e359486eb75e9e19fedaf9bea54a8",
+              "actualSha256": "2c602718b7b449f1e9de108b1d32833e7d4e359486eb75e9e19fedaf9bea54a8",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502.png",
+              "expectedSha256": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+              "actualSha256": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502.png",
+              "expectedSha256": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+              "actualSha256": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\a1c995591f217d82f11b69bde5f511283420058c11234cca740e93051aa3e639.png",
+              "expectedSha256": "a1c995591f217d82f11b69bde5f511283420058c11234cca740e93051aa3e639",
+              "actualSha256": "a1c995591f217d82f11b69bde5f511283420058c11234cca740e93051aa3e639",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\26d7f15fb156e9dc461364b667a65f6a134edfc5bb84c41fd01927461a792cfe.png",
+              "expectedSha256": "26d7f15fb156e9dc461364b667a65f6a134edfc5bb84c41fd01927461a792cfe",
+              "actualSha256": "26d7f15fb156e9dc461364b667a65f6a134edfc5bb84c41fd01927461a792cfe",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\13ddd312782b2c739c02b05149d38d827324efa3fcd0a30e6ac4d43e725f3b52.png",
+              "expectedSha256": "13ddd312782b2c739c02b05149d38d827324efa3fcd0a30e6ac4d43e725f3b52",
+              "actualSha256": "13ddd312782b2c739c02b05149d38d827324efa3fcd0a30e6ac4d43e725f3b52",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b3e1a3f65ac6817c8e84e65bbdcc4bd64a5bf4124908fc8ece1f2fd7b3dfc38c.png",
+              "expectedSha256": "b3e1a3f65ac6817c8e84e65bbdcc4bd64a5bf4124908fc8ece1f2fd7b3dfc38c",
+              "actualSha256": "b3e1a3f65ac6817c8e84e65bbdcc4bd64a5bf4124908fc8ece1f2fd7b3dfc38c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\dafe2dbebce074ef0255f9b45788402edbf9cf32558f196d67669db91b7994f4.png",
+              "expectedSha256": "dafe2dbebce074ef0255f9b45788402edbf9cf32558f196d67669db91b7994f4",
+              "actualSha256": "dafe2dbebce074ef0255f9b45788402edbf9cf32558f196d67669db91b7994f4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\74320eb439d0be0ea278c2fe949e60b6866d3d237be39bfba7a4607e5b60f5e2.png",
+              "expectedSha256": "74320eb439d0be0ea278c2fe949e60b6866d3d237be39bfba7a4607e5b60f5e2",
+              "actualSha256": "74320eb439d0be0ea278c2fe949e60b6866d3d237be39bfba7a4607e5b60f5e2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e4d5a72bda353fc10dd5f0eb058fc43d03be5ceb0dd31cc559573d7a7f3ff0a2.png",
+              "expectedSha256": "e4d5a72bda353fc10dd5f0eb058fc43d03be5ceb0dd31cc559573d7a7f3ff0a2",
+              "actualSha256": "e4d5a72bda353fc10dd5f0eb058fc43d03be5ceb0dd31cc559573d7a7f3ff0a2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\faa74b25c3aef9753b9e3e4d766076b956ace084794aa295a799702103c556d5.png",
+              "expectedSha256": "faa74b25c3aef9753b9e3e4d766076b956ace084794aa295a799702103c556d5",
+              "actualSha256": "faa74b25c3aef9753b9e3e4d766076b956ace084794aa295a799702103c556d5",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ef76096be5f9601add6021fb99fcbf0c82cbabd1aa4e4b438ef4639a92b7b03b.png",
+              "expectedSha256": "ef76096be5f9601add6021fb99fcbf0c82cbabd1aa4e4b438ef4639a92b7b03b",
+              "actualSha256": "ef76096be5f9601add6021fb99fcbf0c82cbabd1aa4e4b438ef4639a92b7b03b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ceef29d6c3cc94bbc2a806fc482976c1fe8b02ff57b4628c706015904e817dcf.png",
+              "expectedSha256": "ceef29d6c3cc94bbc2a806fc482976c1fe8b02ff57b4628c706015904e817dcf",
+              "actualSha256": "ceef29d6c3cc94bbc2a806fc482976c1fe8b02ff57b4628c706015904e817dcf",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\64af9550fb900a42e92cbb77272aa3c1ada49c4ef396a215cfc0b58aff6f9bb8.png",
+              "expectedSha256": "64af9550fb900a42e92cbb77272aa3c1ada49c4ef396a215cfc0b58aff6f9bb8",
+              "actualSha256": "64af9550fb900a42e92cbb77272aa3c1ada49c4ef396a215cfc0b58aff6f9bb8",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\92c8efdb6ebc10e60696075ae2d5752a68064e74639b049f393c6639a240a9be.png",
+              "expectedSha256": "92c8efdb6ebc10e60696075ae2d5752a68064e74639b049f393c6639a240a9be",
+              "actualSha256": "92c8efdb6ebc10e60696075ae2d5752a68064e74639b049f393c6639a240a9be",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\d22ec094d95fe62a6ba263af33e0e87530e425b7148d1fa24f7c19fd38da968c.png",
+              "expectedSha256": "d22ec094d95fe62a6ba263af33e0e87530e425b7148d1fa24f7c19fd38da968c",
+              "actualSha256": "d22ec094d95fe62a6ba263af33e0e87530e425b7148d1fa24f7c19fd38da968c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\030fb3c636896a816728cfa30cd8513c916165fd18f4960526335b376c47ed7b.png",
+              "expectedSha256": "030fb3c636896a816728cfa30cd8513c916165fd18f4960526335b376c47ed7b",
+              "actualSha256": "030fb3c636896a816728cfa30cd8513c916165fd18f4960526335b376c47ed7b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2ba03c9eca2b859ab9736bcfd8716416115c161e8b5c1af13dd5b2c998822461.png",
+              "expectedSha256": "2ba03c9eca2b859ab9736bcfd8716416115c161e8b5c1af13dd5b2c998822461",
+              "actualSha256": "2ba03c9eca2b859ab9736bcfd8716416115c161e8b5c1af13dd5b2c998822461",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3ea6fb7f2b0caac6fe543b70b7250a39228fce888da83e811880d8c65086fc81.png",
+              "expectedSha256": "3ea6fb7f2b0caac6fe543b70b7250a39228fce888da83e811880d8c65086fc81",
+              "actualSha256": "3ea6fb7f2b0caac6fe543b70b7250a39228fce888da83e811880d8c65086fc81",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b2c4891a207e0bd86cc1b802f6c5167193427c77456a272c9b5f0332be48aed3.png",
+              "expectedSha256": "b2c4891a207e0bd86cc1b802f6c5167193427c77456a272c9b5f0332be48aed3",
+              "actualSha256": "b2c4891a207e0bd86cc1b802f6c5167193427c77456a272c9b5f0332be48aed3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\44c40f051be5ca849a567a2edcb560df7828681582262810b8fc732b27140ee6.png",
+              "expectedSha256": "44c40f051be5ca849a567a2edcb560df7828681582262810b8fc732b27140ee6",
+              "actualSha256": "44c40f051be5ca849a567a2edcb560df7828681582262810b8fc732b27140ee6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\dd526aa5ac2bdf63463303efe3f72809ce876038c140d7d7d095ec47fb4e9071.png",
+              "expectedSha256": "dd526aa5ac2bdf63463303efe3f72809ce876038c140d7d7d095ec47fb4e9071",
+              "actualSha256": "dd526aa5ac2bdf63463303efe3f72809ce876038c140d7d7d095ec47fb4e9071",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\c6543a47f33d54473e2dc13b0aea5e5eb1025ec0344852243d0e2c583641e100.png",
+              "expectedSha256": "c6543a47f33d54473e2dc13b0aea5e5eb1025ec0344852243d0e2c583641e100",
+              "actualSha256": "c6543a47f33d54473e2dc13b0aea5e5eb1025ec0344852243d0e2c583641e100",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3ad073555669a80fcb9577059f441e4f9ffc0042021b57f8f2222141be759813.png",
+              "expectedSha256": "3ad073555669a80fcb9577059f441e4f9ffc0042021b57f8f2222141be759813",
+              "actualSha256": "3ad073555669a80fcb9577059f441e4f9ffc0042021b57f8f2222141be759813",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\ae73cfc32ca0fa2081b13f71d18c4ac535a8c7fe3629583fd4f26a50f5d00ccc.png",
+              "expectedSha256": "ae73cfc32ca0fa2081b13f71d18c4ac535a8c7fe3629583fd4f26a50f5d00ccc",
+              "actualSha256": "ae73cfc32ca0fa2081b13f71d18c4ac535a8c7fe3629583fd4f26a50f5d00ccc",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6f0e22d926fe8a49c119d1b3f1b03df89f2ac19669e4838ded287ed7c8b0cbd6.png",
+              "expectedSha256": "6f0e22d926fe8a49c119d1b3f1b03df89f2ac19669e4838ded287ed7c8b0cbd6",
+              "actualSha256": "6f0e22d926fe8a49c119d1b3f1b03df89f2ac19669e4838ded287ed7c8b0cbd6",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\966571165a2c8757307a0bf1a662ada85ce35d1ae0b06bfbb03c76b20136ece8.png",
+              "expectedSha256": "966571165a2c8757307a0bf1a662ada85ce35d1ae0b06bfbb03c76b20136ece8",
+              "actualSha256": "966571165a2c8757307a0bf1a662ada85ce35d1ae0b06bfbb03c76b20136ece8",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1adb9bf84faff6f08bcfffef398e14aed4e84ddd180437c84380ecc83aa5d157.png",
+              "expectedSha256": "1adb9bf84faff6f08bcfffef398e14aed4e84ddd180437c84380ecc83aa5d157",
+              "actualSha256": "1adb9bf84faff6f08bcfffef398e14aed4e84ddd180437c84380ecc83aa5d157",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\3fdf62d8ef2e54ddb1c3df63150c124a4324e39f846a76401e10a92e523d84d2.png",
+              "expectedSha256": "3fdf62d8ef2e54ddb1c3df63150c124a4324e39f846a76401e10a92e523d84d2",
+              "actualSha256": "3fdf62d8ef2e54ddb1c3df63150c124a4324e39f846a76401e10a92e523d84d2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f9781d5b8979e2ccd2ab49357ba6524dde0274731ab7372bf3745a391d90604d.png",
+              "expectedSha256": "f9781d5b8979e2ccd2ab49357ba6524dde0274731ab7372bf3745a391d90604d",
+              "actualSha256": "f9781d5b8979e2ccd2ab49357ba6524dde0274731ab7372bf3745a391d90604d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\84451cd9932a4be97fb1d669646c7a84554bdf36067f74c58443ca034beae763.png",
+              "expectedSha256": "84451cd9932a4be97fb1d669646c7a84554bdf36067f74c58443ca034beae763",
+              "actualSha256": "84451cd9932a4be97fb1d669646c7a84554bdf36067f74c58443ca034beae763",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f147f731c7377a15a06062f60a773c5217cf3849691ea652854f9bfb63cd06aa.png",
+              "expectedSha256": "f147f731c7377a15a06062f60a773c5217cf3849691ea652854f9bfb63cd06aa",
+              "actualSha256": "f147f731c7377a15a06062f60a773c5217cf3849691ea652854f9bfb63cd06aa",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b8f30598f62f67fd345da6624e1365a4f14a08ed30ab01c853c9e29bb9b609c4.png",
+              "expectedSha256": "b8f30598f62f67fd345da6624e1365a4f14a08ed30ab01c853c9e29bb9b609c4",
+              "actualSha256": "b8f30598f62f67fd345da6624e1365a4f14a08ed30ab01c853c9e29bb9b609c4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\24a1d2e818800b9194b6b1c19a467e5229c17a5a7e17e112ee743f6158d87e64.png",
+              "expectedSha256": "24a1d2e818800b9194b6b1c19a467e5229c17a5a7e17e112ee743f6158d87e64",
+              "actualSha256": "24a1d2e818800b9194b6b1c19a467e5229c17a5a7e17e112ee743f6158d87e64",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\bf56685c2e0e4d54aec5a58a94f8eee35d2e6a0741f5c0fa835759f9edd6553a.png",
+              "expectedSha256": "bf56685c2e0e4d54aec5a58a94f8eee35d2e6a0741f5c0fa835759f9edd6553a",
+              "actualSha256": "bf56685c2e0e4d54aec5a58a94f8eee35d2e6a0741f5c0fa835759f9edd6553a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b8e62f36f56822881b6911fde18b77258085530f0d76a0254946b368974acf0b.png",
+              "expectedSha256": "b8e62f36f56822881b6911fde18b77258085530f0d76a0254946b368974acf0b",
+              "actualSha256": "b8e62f36f56822881b6911fde18b77258085530f0d76a0254946b368974acf0b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8af3aa48a7d9c6cc411d69309d7e7d8a03135859ffe0f5cb370d2163ebb08d42.png",
+              "expectedSha256": "8af3aa48a7d9c6cc411d69309d7e7d8a03135859ffe0f5cb370d2163ebb08d42",
+              "actualSha256": "8af3aa48a7d9c6cc411d69309d7e7d8a03135859ffe0f5cb370d2163ebb08d42",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\e1f24e09dea0b729f1efbe637ec3f35ff5147db8bed8ca465d3eb63e6ba4043a.png",
+              "expectedSha256": "e1f24e09dea0b729f1efbe637ec3f35ff5147db8bed8ca465d3eb63e6ba4043a",
+              "actualSha256": "e1f24e09dea0b729f1efbe637ec3f35ff5147db8bed8ca465d3eb63e6ba4043a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\1775a2963e8f8f4c9b2036b8fd74122ea720816fcc9dc6f739c816f713d2e342.png",
+              "expectedSha256": "1775a2963e8f8f4c9b2036b8fd74122ea720816fcc9dc6f739c816f713d2e342",
+              "actualSha256": "1775a2963e8f8f4c9b2036b8fd74122ea720816fcc9dc6f739c816f713d2e342",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0766422de244004f56765ea219f485a7937a392648bca4a92c736a4a6d332dac.png",
+              "expectedSha256": "0766422de244004f56765ea219f485a7937a392648bca4a92c736a4a6d332dac",
+              "actualSha256": "0766422de244004f56765ea219f485a7937a392648bca4a92c736a4a6d332dac",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\81c0a3b03dc6cc874a8142e4a1b6c899c5256e0670994ac7592a05c0961054d1.png",
+              "expectedSha256": "81c0a3b03dc6cc874a8142e4a1b6c899c5256e0670994ac7592a05c0961054d1",
+              "actualSha256": "81c0a3b03dc6cc874a8142e4a1b6c899c5256e0670994ac7592a05c0961054d1",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8803345302170600a507ce02330ccc8c47afa6854bd0b58050c24c2c372356a9.png",
+              "expectedSha256": "8803345302170600a507ce02330ccc8c47afa6854bd0b58050c24c2c372356a9",
+              "actualSha256": "8803345302170600a507ce02330ccc8c47afa6854bd0b58050c24c2c372356a9",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\73839caca0c5fae30b90cd03bd25852dd58055e6a6b4db5c6bb1f6416d2e6c74.png",
+              "expectedSha256": "73839caca0c5fae30b90cd03bd25852dd58055e6a6b4db5c6bb1f6416d2e6c74",
+              "actualSha256": "73839caca0c5fae30b90cd03bd25852dd58055e6a6b4db5c6bb1f6416d2e6c74",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\5f705994234fde0ab5a1dcf427b9c0b1835a5cb25c4668fe17c65fff551a0f72.png",
+              "expectedSha256": "5f705994234fde0ab5a1dcf427b9c0b1835a5cb25c4668fe17c65fff551a0f72",
+              "actualSha256": "5f705994234fde0ab5a1dcf427b9c0b1835a5cb25c4668fe17c65fff551a0f72",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\cbdca79e76bb019993b2025d9973af4d976544644ad1129f81e5665ee9945678.png",
+              "expectedSha256": "cbdca79e76bb019993b2025d9973af4d976544644ad1129f81e5665ee9945678",
+              "actualSha256": "cbdca79e76bb019993b2025d9973af4d976544644ad1129f81e5665ee9945678",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\f979c910c802eb40a13fd2a45cdbc11a93db7772cf45ebe4dd2ce5e6ae14986c.png",
+              "expectedSha256": "f979c910c802eb40a13fd2a45cdbc11a93db7772cf45ebe4dd2ce5e6ae14986c",
+              "actualSha256": "f979c910c802eb40a13fd2a45cdbc11a93db7772cf45ebe4dd2ce5e6ae14986c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\abb11afb1673d57272b48f25d18254f67ea52aa49667dfac2944ae75472fe651.png",
+              "expectedSha256": "abb11afb1673d57272b48f25d18254f67ea52aa49667dfac2944ae75472fe651",
+              "actualSha256": "abb11afb1673d57272b48f25d18254f67ea52aa49667dfac2944ae75472fe651",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2b27d4b6d8339d763f12e85faec3f99ceae6a0ae7219030ba6c965b6ac61dfc0.png",
+              "expectedSha256": "2b27d4b6d8339d763f12e85faec3f99ceae6a0ae7219030ba6c965b6ac61dfc0",
+              "actualSha256": "2b27d4b6d8339d763f12e85faec3f99ceae6a0ae7219030ba6c965b6ac61dfc0",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\0b2f313773e36c60ab38b9606dfe9de9e48c38849ad5492f4a66d4bf1f50e71b.png",
+              "expectedSha256": "0b2f313773e36c60ab38b9606dfe9de9e48c38849ad5492f4a66d4bf1f50e71b",
+              "actualSha256": "0b2f313773e36c60ab38b9606dfe9de9e48c38849ad5492f4a66d4bf1f50e71b",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\20feadeba518e6e67b11e0c4acd548923c94104d3a1768ff76d33f7d647ee04c.png",
+              "expectedSha256": "20feadeba518e6e67b11e0c4acd548923c94104d3a1768ff76d33f7d647ee04c",
+              "actualSha256": "20feadeba518e6e67b11e0c4acd548923c94104d3a1768ff76d33f7d647ee04c",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\165b02d09b5803cfa4a5be2b52c21e714150beba40f5be1bf149bd6760adaa9d.png",
+              "expectedSha256": "165b02d09b5803cfa4a5be2b52c21e714150beba40f5be1bf149bd6760adaa9d",
+              "actualSha256": "165b02d09b5803cfa4a5be2b52c21e714150beba40f5be1bf149bd6760adaa9d",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\8f33aa5369c95c9f7dfed0d1c443909165d3a2fe7b3fbcfe6e9a3c05923ff9d2.png",
+              "expectedSha256": "8f33aa5369c95c9f7dfed0d1c443909165d3a2fe7b3fbcfe6e9a3c05923ff9d2",
+              "actualSha256": "8f33aa5369c95c9f7dfed0d1c443909165d3a2fe7b3fbcfe6e9a3c05923ff9d2",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\6ba5789115696155541783b7654a960912fa226100e9faa6580c30226be2c3d8.png",
+              "expectedSha256": "6ba5789115696155541783b7654a960912fa226100e9faa6580c30226be2c3d8",
+              "actualSha256": "6ba5789115696155541783b7654a960912fa226100e9faa6580c30226be2c3d8",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b25eab74deaeb80e43675565835fe86a891131ceb9271908158489d83ace28bd.png",
+              "expectedSha256": "b25eab74deaeb80e43675565835fe86a891131ceb9271908158489d83ace28bd",
+              "actualSha256": "b25eab74deaeb80e43675565835fe86a891131ceb9271908158489d83ace28bd",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\efeb31fa7cba374be4d42caffff9264d934a9feb345e6a3052095fe9981c4a7a.png",
+              "expectedSha256": "efeb31fa7cba374be4d42caffff9264d934a9feb345e6a3052095fe9981c4a7a",
+              "actualSha256": "efeb31fa7cba374be4d42caffff9264d934a9feb345e6a3052095fe9981c4a7a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\88c40a2e9c39d76cceb21b9a57e67d6042ae96d573be20b4fb26f395196c60d1.png",
+              "expectedSha256": "88c40a2e9c39d76cceb21b9a57e67d6042ae96d573be20b4fb26f395196c60d1",
+              "actualSha256": "88c40a2e9c39d76cceb21b9a57e67d6042ae96d573be20b4fb26f395196c60d1",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\fbb5c7a1594c98f423517bbc6734c1a8fbdf05ed1c423299c7373ef968adb1b7.png",
+              "expectedSha256": "fbb5c7a1594c98f423517bbc6734c1a8fbdf05ed1c423299c7373ef968adb1b7",
+              "actualSha256": "fbb5c7a1594c98f423517bbc6734c1a8fbdf05ed1c423299c7373ef968adb1b7",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b334f23cfab6668c3c354e0146bf1da5fc7cef8effd54c071fa893a2c4a07d3f.png",
+              "expectedSha256": "b334f23cfab6668c3c354e0146bf1da5fc7cef8effd54c071fa893a2c4a07d3f",
+              "actualSha256": "b334f23cfab6668c3c354e0146bf1da5fc7cef8effd54c071fa893a2c4a07d3f",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\7dcbb558157e9ec8bf2a650eae4b6727177434c68cc8b28998407531260c8913.png",
+              "expectedSha256": "7dcbb558157e9ec8bf2a650eae4b6727177434c68cc8b28998407531260c8913",
+              "actualSha256": "7dcbb558157e9ec8bf2a650eae4b6727177434c68cc8b28998407531260c8913",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\2d91ea3bc3dbe949d74c57292905ff1f79feb47780eba6097bfd63bcd4d759fb.png",
+              "expectedSha256": "2d91ea3bc3dbe949d74c57292905ff1f79feb47780eba6097bfd63bcd4d759fb",
+              "actualSha256": "2d91ea3bc3dbe949d74c57292905ff1f79feb47780eba6097bfd63bcd4d759fb",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac.png",
+              "expectedSha256": "b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac",
+              "actualSha256": "b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac",
+              "hashMatches": true,
+              "verificationReusedFrom": "Explicit new-image hash tool verification at 2026-10-12T03:20 UTC; no previous images rehashed"
+            }
+          ],
+          "missingPortableCopies": [],
+          "unpreservedExternalImages": [],
+          "missingSourcePaths": [
+            "C:\\Users\\luyua\\.codex\\generated_images\\01a12971-38df-7791-a216-b3fcdd2b4460\\exec-3253350f-1689-4135-af85-421029d4f149.png"
+          ],
+          "missingExternalPathsRecoveredFromWorkspace": 1,
+          "hashResultsReusedFromPriorPass": true,
+          "manifestHashStillMatches": true,
+          "manifestSha256": "c7ca81ccaa2b65c6b569697eaa1048573096d0b229406d4b9897045cc20e25ab"
+        },
+        "checkpointUnchangedDuringAudit": true,
+        "latestCounts": {
+          "generatedNativeCount": 257,
+          "rejectedNativeCount": 41,
+          "failedBuiltinCallCount": 4,
+          "selectedNativePatchCount": 117,
+          "complete4kCandidateCount": 6,
+          "formalAcceptedCount": 0,
+          "partialTileCount": 3,
+          "untouchedTileCount": 55,
+          "remainingCorePatchCount": 907
+        },
+        "newChildPersistenceEvidence": [
+          {
+            "tile": "r09_c01",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\migration-freeze-20261011.json",
+            "checkpointSha256": "1ebd73f3c257f2d2f038003118367ba67dea7fac7fe6a19e6d67e3334b40e570",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Root independent runtime inspection after interrupt; not represented as a worker reply",
+            "workerPersonalFinalReplyReceived": false,
+            "runtimeEvidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\migration-runtime-evidence-20261011.json",
+            "lastOutputReceipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\receipts\\p03_02.v02.recovered-receipt.json",
+            "runtimeEvidenceSha256": "e38016824d4d1ee2cf7229b639f3781e6f0b5b947ea6e61f1f4edfacbe79323a",
+            "receiptRuntimePinMatches": true,
+            "lastOutputHashVerification": {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac.png",
+              "sha256": "b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac",
+              "verifiedEarlierThisRefresh": true,
+              "exists": true
+            }
+          },
+          {
+            "tile": "r09_c07",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c07\\migration-freeze-20261011.json",
+            "checkpointSha256": "77965b773a0cb6ce1a507ff5308f8cac677381e1c7d038a65892c934a823a2dc",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Direct collaboration worker final reply",
+            "workerPersonalFinalReplyReceived": true,
+            "runtimeEvidence": null,
+            "lastOutputReceipt": null
+          },
+          {
+            "tile": "r12_c05",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\migration-freeze-20261011.json",
+            "checkpointSha256": "6915c53c0a32699f354963fd256b975481f6e82c4ddf07e64fd4ae2f00159023",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Direct collaboration worker final reply",
+            "workerPersonalFinalReplyReceived": true,
+            "runtimeEvidence": null,
+            "lastOutputReceipt": null
+          }
+        ],
+        "childCheckpointChecks": [
+          {
+            "tile": "r09_c01",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\migration-freeze-20261011.json",
+            "checkpointSha256": "1ebd73f3c257f2d2f038003118367ba67dea7fac7fe6a19e6d67e3334b40e570",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Root independent runtime inspection after interrupt; not represented as a worker reply",
+            "workerPersonalFinalReplyReceived": false,
+            "runtimeEvidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\migration-runtime-evidence-20261011.json",
+            "lastOutputReceipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c01\\pipeline\\receipts\\p03_02.v02.recovered-receipt.json",
+            "runtimeEvidenceSha256": "e38016824d4d1ee2cf7229b639f3781e6f0b5b947ea6e61f1f4edfacbe79323a",
+            "receiptRuntimePinMatches": true,
+            "lastOutputHashVerification": {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\migration-preserved-external-20261011\\b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac.png",
+              "sha256": "b33cf79467237955cc34d65dbb759aa9ad5b0d2428bcd995f103007d4c353aac",
+              "verifiedEarlierThisRefresh": true,
+              "exists": true
+            }
+          },
+          {
+            "tile": "r09_c07",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r09_c07\\migration-freeze-20261011.json",
+            "checkpointSha256": "77965b773a0cb6ce1a507ff5308f8cac677381e1c7d038a65892c934a823a2dc",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Direct collaboration worker final reply",
+            "workerPersonalFinalReplyReceived": true,
+            "runtimeEvidence": null,
+            "lastOutputReceipt": null
+          },
+          {
+            "tile": "r12_c05",
+            "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\migration-freeze-20261011.json",
+            "checkpointSha256": "6915c53c0a32699f354963fd256b975481f6e82c4ddf07e64fd4ae2f00159023",
+            "hashMatchesRoot": true,
+            "savedAndQuiescent": true,
+            "recordedBy": "/root",
+            "confirmationSource": "Direct collaboration worker final reply",
+            "workerPersonalFinalReplyReceived": true,
+            "runtimeEvidence": null,
+            "lastOutputReceipt": null
+          }
+        ]
+      }
+    },
+    {
+      "zone": "southeast",
+      "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-freeze-20261011.json",
+      "checkpointSha256": "c10a272242b5940875196263aa8321082e40b8378cad2a1359d6a67260d57085",
+      "ready": true,
+      "blockers": [],
+      "evidence": {
+        "checkpoint": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-freeze-20261011.json",
+          "exists": true,
+          "bytes": 181479,
+          "lastWriteUtc": "2026-10-12T02:34:49.612509+00:00",
+          "sha256": "c10a272242b5940875196263aa8321082e40b8378cad2a1359d6a67260d57085"
+        },
+        "checkpointSavedAt": "2026-10-12T02:34:49.605726+00:00",
+        "generationStopped": true,
+        "inFlightCount": 0,
+        "unsavedSuccessfulOutputPaths": [],
+        "activeCoordinates": [
+          "r13_c13",
+          "r13_c14",
+          "r13_c15",
+          "r14_c13",
+          "r14_c14",
+          "r15_c13"
+        ],
+        "nextMissingCoordinate": {
+          "selection": "row-major inventory position; not a production assignment",
+          "tile": "r09_c09",
+          "nativePatch": "p01_01"
+        },
+        "pendingRepairs": [
+          {
+            "tile": "r13_c13",
+            "internalArtQA": "passed",
+            "externalNeighborSeamQA": null,
+            "resumeOnlyAfterMigration": "Historical core immutable; neighboring joint review remains pending.",
+            "remainingQA": []
+          },
+          {
+            "tile": "r13_c14",
+            "internalArtQA": "previous_full_internal_audit_pass_with_repair_perimeters_rechecked",
+            "externalNeighborSeamQA": "west_failed_parasol_remaining_root_corner_pending_other_edges_pending",
+            "resumeOnlyAfterMigration": "Resolve west parasol band tangent and bamboo endpoint while fixedwestcore remains unchanged; root owns corner and east-neighbor production.",
+            "remainingQA": []
+          },
+          {
+            "tile": "r13_c15",
+            "internalArtQA": "failed_remaining_structural_discontinuities",
+            "externalNeighborSeamQA": "west_failed_other_edges_pending",
+            "resumeOnlyAfterMigration": "Apply independently reviewed native repairs to table contour, lower-left board joint and three west plank groove ends; then repeat full seam and neighbor QA.",
+            "remainingQA": []
+          },
+          {
+            "tile": "r14_c13",
+            "internalArtQA": "passed_local_geometry_with_external_review_pending",
+            "externalNeighborSeamQA": "pending_root_corner_and_revised_east_neighbor_review",
+            "resumeOnlyAfterMigration": "Root four-tile corner repair; recheck complete east edge against revised r14_c14 before formal group acceptance; await assigned next coordinate",
+            "remainingQA": []
+          },
+          {
+            "tile": "r14_c14",
+            "internalArtQA": "internal_continuity_and_geometry_pass_minor_cosmetic_notes",
+            "externalNeighborSeamQA": "not_passed",
+            "resumeOnlyAfterMigration": "Known west grout breaks outside frozen630 corner repaired and locally reviewed. Whole-west continuous-tone audit plus frozen corner/north/other external review remain pending. No formal acceptance.",
+            "remainingQA": []
+          },
+          {
+            "tile": "r15_c13",
+            "internalArtQA": "structure_continuity_passed_with_minor_stone_relief_finish_pending",
+            "externalNeighborSeamQA": "north_material_band_pending; east_south_west_joint_pending",
+            "resumeOnlyAfterMigration": "Repair north texture band only on new tile side; complete small railing relief line; neighbor joint reviews pending.",
+            "remainingQA": [
+              {
+                "id": "north-material-band",
+                "status": "pending_not_passed",
+                "severity": "visible_material_discontinuity",
+                "tileBox": [
+                  0,
+                  0,
+                  3072,
+                  160
+                ],
+                "description": "Full north joint inspected in four native 1024x800 segments. Wood and cream-gold roof contours largely align, but a straight horizontal texture/value change is visible at tile y=0, particularly x0..70 and roof x1100..3000. Keep immutable r14_c13 v6 unchanged; repair new side only."
+              },
+              {
+                "id": "internal-stone-relief-termination",
+                "status": "minor_local_repair_pending",
+                "severity": "small_decorative_line_discontinuity",
+                "tileBox": [
+                  1840,
+                  3150,
+                  2080,
+                  3230
+                ],
+                "description": "At junction x2048/y3072, the shallow upper inset border on the stone railing panel fades/terminates near tile x1955,y3175. Major cap, post, walkway and structural contours remain continuous. Do not mark all internal finish passed."
+              },
+              {
+                "id": "other-neighbor-joints",
+                "status": "not_joint_reviewed",
+                "edges": [
+                  "east",
+                  "south",
+                  "west"
+                ],
+                "description": "All four standalone outer edges inspected at native pixels; east/south/west require neighboring current candidates for full joint acceptance."
+              }
+            ]
+          }
+        ],
+        "repairBreakpoints": {
+          "status": "failed_not_applied",
+          "immutableOldCoreSha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+          "latestAttempt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\corner-repair-20261011\\narrow-upper-joint-20261011T125355",
+          "reason": "Generated upper-right joint still requires moving fixed upper-left pixels; source rejected. Both attempts preserved."
+        },
+        "childSaveEvidence": {
+          "childRuntimeSnapshot": {
+            "observedAtUtc": "2026-10-12T02:28:55Z",
+            "liveAgents": [
+              "/root"
+            ],
+            "runningChildCount": 0,
+            "basis": "collaboration.list_agents returned only root before messages"
+          }
+        },
+        "selectedCandidates": [
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c13\\candidate\\r13_c13-4k-candidate-repaired.png",
+            "exists": true,
+            "bytes": 24213930,
+            "lastWriteUtc": "2026-10-09T15:52:34.903513+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+            "exists": true,
+            "bytes": 24469414,
+            "lastWriteUtc": "2026-10-11T09:04:35.879330+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\candidate\\r13_c15-4k-ornaments-removed-v1.png",
+            "exists": true,
+            "bytes": 22907967,
+            "lastWriteUtc": "2026-10-11T12:22:17.463266+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\candidate\\r14_c13-4k-north-v6.png",
+            "exists": true,
+            "bytes": 23527284,
+            "lastWriteUtc": "2026-10-11T06:56:35.410612+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\candidate\\r14_c14-4k-west-lower-complete-joint-v2-20261011.png",
+            "exists": true,
+            "bytes": 24881016,
+            "lastWriteUtc": "2026-10-11T19:29:16.921266+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-4k-candidate-e8d644ce11db9d4b4b84.png",
+            "exists": true,
+            "bytes": 22429283,
+            "lastWriteUtc": "2026-10-11T10:57:20.861218+00:00"
+          }
+        ],
+        "currentCandidateCount": 6,
+        "lastSavedMaterial": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\a93c128d2a4d9d9b-exec-f0f59203-8ab7-46ea-bba3-18adebb7e604.png",
+          "exists": true,
+          "bytes": 2334701,
+          "lastWriteUtc": "2026-10-12T02:32:27.036447+00:00"
+        },
+        "lastSavedMaterialBasis": "Newest on-disk native/raw/preserved PNG by filesystem mtime; no visual or candidate acceptance implied",
+        "externalArchival": {
+          "manifest": {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\external-image-preservation-index.json",
+            "exists": true,
+            "bytes": 112537,
+            "lastWriteUtc": "2026-10-12T02:34:49.605727+00:00"
+          },
+          "manifestHashMatchesCheckpoint": true,
+          "referencedExternalCount": 172,
+          "newCopiesCount": 4,
+          "originalsDeletedReported": false,
+          "unarchivedExternalReported": [],
+          "missingHistoricalExternalCount": 0,
+          "newCopyChecks": [
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\cbeb32cca84d2a31-exec-5fc0acc2-0f09-45c0-9087-523c948570cd.png",
+              "exists": true,
+              "bytes": 2391832,
+              "lastWriteUtc": "2026-10-12T02:32:26.691641+00:00",
+              "expectedSha256": "cbeb32cca84d2a3148a31bcd336144d327f19cbfdda4b516e8de18fa3a5021a4",
+              "actualSha256": "cbeb32cca84d2a3148a31bcd336144d327f19cbfdda4b516e8de18fa3a5021a4",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\e7bf74508ab7cb9c-exec-73278a61-8326-4eb2-ae54-ac93ee3e2b25.png",
+              "exists": true,
+              "bytes": 2238659,
+              "lastWriteUtc": "2026-10-12T02:32:26.747373+00:00",
+              "expectedSha256": "e7bf74508ab7cb9c9a98727ad23842e0daa152a340b6542a843be808416f7cc3",
+              "actualSha256": "e7bf74508ab7cb9c9a98727ad23842e0daa152a340b6542a843be808416f7cc3",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\c9e929654fd9991b-exec-a145c96e-a071-4340-9e1e-a839f601bc48.png",
+              "exists": true,
+              "bytes": 2465884,
+              "lastWriteUtc": "2026-10-12T02:32:26.832842+00:00",
+              "expectedSha256": "c9e929654fd9991b8872e06e0e9d8b8df94e6e0fca8d5e346db28e7c83add87a",
+              "actualSha256": "c9e929654fd9991b8872e06e0e9d8b8df94e6e0fca8d5e346db28e7c83add87a",
+              "hashMatches": true
+            },
+            {
+              "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\migration-preserved-20261011\\a93c128d2a4d9d9b-exec-f0f59203-8ab7-46ea-bba3-18adebb7e604.png",
+              "exists": true,
+              "bytes": 2334701,
+              "lastWriteUtc": "2026-10-12T02:32:27.036447+00:00",
+              "expectedSha256": "a93c128d2a4d9d9bb96346a4971b96896c846c20b1572bb09c46fb7d91f4775c",
+              "actualSha256": "a93c128d2a4d9d9bb96346a4971b96896c846c20b1572bb09c46fb7d91f4775c",
+              "hashMatches": true
+            }
+          ],
+          "missingPortableCopies": []
+        },
+        "independentRepairCheckpoint": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\repairs\\structure-checkpoint-20261011.json",
+          "workspaceRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r13_c15/repairs/structure-checkpoint-20261011.json",
+          "sha256": "36cc00a482f84888cfe043447fe16c5315b0747045d2294277387094164a7698",
+          "bytes": 8295
+        },
+        "independentRepairCheckpointVerification": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\repairs\\structure-checkpoint-20261011.json",
+          "exists": true,
+          "bytes": 8295,
+          "lastWriteUtc": "2026-10-11T15:14:19.256537+00:00",
+          "hashMatchesCheckpoint": true
+        },
+        "checkpointUnchangedDuringAudit": true
+      }
+    },
+    {
+      "zone": "accelerated-yamen-north",
+      "checkpointPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\migration-freeze-20261011.json",
+      "checkpointSha256": "9e9daa71be07406cfbd67f9c78f9d30cec107a07c24a01f187a84f841cf34ca4",
+      "ready": true,
+      "blockers": [],
+      "evidence": {
+        "checkpoint": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\migration-freeze-20261011.json",
+          "exists": true,
+          "bytes": 35370,
+          "lastWriteUtc": "2026-10-12T02:34:40.569652+00:00",
+          "sha256": "9e9daa71be07406cfbd67f9c78f9d30cec107a07c24a01f187a84f841cf34ca4"
+        },
+        "checkpointSavedAt": "2026-10-12T02:34:40.566515+00:00",
+        "generationStopped": true,
+        "inFlightCount": 0,
+        "unsavedSuccessfulOutputPaths": [],
+        "activeCoordinates": [
+          "r03_c04",
+          "r03_c05",
+          "r04_c04",
+          "r04_c05"
+        ],
+        "nextMissingCoordinate": null,
+        "pendingRepairs": [
+          "r03_c05: D1上层瓦行相位、D4重复窄瓦行、D5金梁接头仍待修；试修失败均未选入。",
+          "r03_c05/r03_c04西侧对接: 第3段材质色差、第4段瓦当/瓦沟错位仍在。",
+          "r03_c04: 左屋面两处回接待修，见既有final-candidate-review.json。",
+          "r04_c04: 栏板微小矩形色差仍在；r04_c05: 内部轻微材质/地面线残差及南侧第4段旧图狮脚绿色模糊带仍在。",
+          "6块外围邻图仍未提供所需24个原尺寸边界源，无法完成这些边界验收。",
+          "仅本分配四块候选；正式验收0/4，不代表整区或整图完成。"
+        ],
+        "repairBreakpoints": {
+          "r03_c05": [
+            "D1 roof phase row near tile y909,x0..2160",
+            "D4 thin duplicate row near tile y2960,x1900..4096; retain row trial raw outputs, do not adopt ghosted return",
+            "D5 gold joint; trial not selected",
+            "West E1 material step/E2 eave mismatch"
+          ],
+          "r03_c04": [
+            "Left roof returns at tile boxes[583,1008,943,1218]and[903,1008,1278,1218]"
+          ],
+          "r04_c04": [
+            "Minor rail-face rectangular material residual"
+          ],
+          "r04_c05": [
+            "Minor internal tone/floor line residuals",
+            "Inherited south segment4 green blur near lion foot"
+          ]
+        },
+        "childSaveEvidence": {
+          "childTasks": [
+            {
+              "name": "/root/boundary_audit",
+              "stopped": true,
+              "inFlightRequests": 0,
+              "unsavedSuccessfulOutputs": 0,
+              "freezeAudit": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\continuation-20261011\\assignment-neighbor-audit-freeze-20261011-8431c6a2.json"
+            }
+          ],
+          "allChildTasksStopped": true
+        },
+        "selectedCandidates": [
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\delivery-20261011-v2\\r03_c04.png",
+            "exists": true,
+            "bytes": 22017463,
+            "lastWriteUtc": "2026-10-11T13:30:41.477637+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\delivery-20261011-v2\\r03_c05.png",
+            "exists": true,
+            "bytes": 23066675,
+            "lastWriteUtc": "2026-10-11T13:30:43.056369+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\delivery-20261011-v2\\r04_c04.png",
+            "exists": true,
+            "bytes": 18185819,
+            "lastWriteUtc": "2026-10-11T13:30:44.529562+00:00"
+          },
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\delivery-20261011-v2\\r04_c05.png",
+            "exists": true,
+            "bytes": 21763161,
+            "lastWriteUtc": "2026-10-11T13:30:45.968167+00:00"
+          }
+        ],
+        "currentCandidateCount": 4,
+        "lastSavedMaterial": {
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\continuation-20261011\\roof-row02\\raw-v1.png",
+          "exists": true,
+          "bytes": 1980850,
+          "lastWriteUtc": "2026-10-11T12:46:23.082481+00:00"
+        },
+        "lastSavedMaterialBasis": "Newest on-disk native/raw/preserved PNG by filesystem mtime; no visual or candidate acceptance implied",
+        "childAuditChecks": [
+          {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\continuation-20261011\\assignment-neighbor-audit-freeze-20261011-8431c6a2.json",
+            "exists": true,
+            "bytes": 4301,
+            "lastWriteUtc": "2026-10-12T02:28:59.667052+00:00",
+            "freezeState": {
+              "imageGenerationRequestsInFlight": 0,
+              "otherToolRequestsInFlight": 0,
+              "unsavedSuccessfulGeneratedOutputs": 0,
+              "noFurtherScanning": true,
+              "noFurtherGenerationOrRepair": true,
+              "selectionOrProgressModified": false,
+              "activeRoofOrNorthSouthRepairTouched": false,
+              "gitOperations": false,
+              "deletions": false,
+              "writesOutsideAssignedArea": false
+            },
+            "savedAndQuiescent": true
+          }
+        ],
+        "externalArchival": {
+          "manifest": {
+            "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\migration-external-references-20261011.json",
+            "exists": true,
+            "bytes": 92129,
+            "lastWriteUtc": "2026-10-12T02:34:40.285329+00:00"
+          },
+          "manifestSha256": "1bdec402d076c4761de99826d48171192f0a606207f19894ba4ec7c7f561ceed",
+          "referencedExternalCount": 122,
+          "newCopiesCount": 0,
+          "missingPortableCopies": [],
+          "remainingExternalOnlyFiles": [],
+          "externalFilesStillRequiringSeparateCopy": [],
+          "newCopyChecks": []
+        },
+        "checkpointUnchangedDuringAudit": true
+      }
+    }
+  ],
+  "limits": [
+    "Readiness means checkpoint-supported local persistence only, not upload success, whole-map completion, or visual acceptance.",
+    "Rehashed only referenced archive manifests/checkpoints and newly copied external-only materials; pre-existing portable raw copies and selected 4K candidates checked for existence, not rehashed or visually reviewed.",
+    "Child stopped/save status is supported by checkpoint and child audit records; no messages sent to production chats.",
+    "Root migration-freeze directive hash is historical coordination evidence only and was not used as an artwork-loss blocker."
+  ],
+  "allReady": true,
+  "refreshPass": 8,
+  "finalized": true,
+  "freezeAuditMeaning": "All five main-city zones have local frozen persistence and portable-source evidence. This does not mean map artwork is complete or remote upload completed; uploader ownership is controlled by the user and parent handoff."
+}

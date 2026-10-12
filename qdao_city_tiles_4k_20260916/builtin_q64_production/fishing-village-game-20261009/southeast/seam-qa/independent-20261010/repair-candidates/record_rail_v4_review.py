@@ -1,0 +1,11 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+D=Path(__file__).resolve().parent;P=D/'r12c08-rail-v4-adoption-preview'
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+m=json.loads((P/'manifest.json').read_text())
+e=[{'file':str(P/(n+'.png')),'sha256':sha(P/(n+'.png')),'native100percent':True} for n in ['left','right','top','bottom','candidate']]
+r={'createdAtUtc':datetime.now(timezone.utc).isoformat(),'status':'geometry_pass_bounded_material_finish_pending','candidateUsableForGeometryAdoption':True,'formalAccepted':False,'selected':False,'candidateSource':{'file':str(D/'r12c08-rail-joint-v4.png'),'sha256':sha(D/'r12c08-rail-joint-v4.png'),'dimensions':[1254,1254],'actualModel':None,'actualQuality':None},'nativeAdoptionRect':m['nativeAdoptionRect'],'worldAdoptionRect':m['worldAdoptionRect'],'adoptionTouches':{'r12_c08':[32470,45066,32768,45491],'r12_c09':[32768,45066,32800,45491]},'reviewedEvidence':e,'findings':{'geometry':'Two separated parallel rails enter a compact stepped timber adapter attached to the existing post. No new free-standing post or third rail. Native left, right, top and bottom adopted silhouettes connect without displaced rail endpoints.','north':'Adoption starts at local y125 = world45066, ten pixels below r12 tile north core boundary; no r11 core changes required.','right':'Right cut at x650 avoids the earlier large rail jumps. Wood top faces, front faces and lower silhouettes continue.','colorAndTexture':'Left adoption crosses post grain and retains a visible narrow warm-tone/grain change; right highlight and material have slight differences. Bounded color pass and owner final review remain.','outsideScope':'Original stone wall x32768 color discontinuity, current p14 lower halo mismatch and background texture differences were not repaired by this rail candidate.'},'operation':'Exact crop adoption into current core QA assembly. No geometric warp, resampling, blur, feathering or pixel blend.','notes':'This is a proposed geometry adoption, not owner selection. The actual-core input includes explicitly unselected r12c08 p14-v2. All owner files remain unchanged.'}
+(P/'review.json').write_text(json.dumps(r,indent=2)+'\n')
+print(json.dumps({'status':r['status'],'worldAdoptionRect':m['worldAdoptionRect'],'sha256':r['candidateSource']['sha256']}))
+

@@ -1,0 +1,249 @@
+{
+  "reviewedAtUtc": "2026-10-09T21:24:13.183689+00:00",
+  "decision": "Rigid integer translation did not solve the cross-tile seam within the authorized +-60px search. Do not apply any tested translation to production sources.",
+  "search": {
+    "bounds": {
+      "dx": [
+        -60,
+        60
+      ],
+      "dy": [
+        -60,
+        60
+      ]
+    },
+    "step": 1,
+    "tested": 14641,
+    "method": "Exact squared-RGB correlation via NumPy FFT, normalized over true shifted intersection; top candidates verified by direct integer pixel SSD. Separate bands use identical fixed global evaluation pixels for every shift."
+  },
+  "nominalBox": {
+    "west": [
+      7053,
+      8077,
+      8307,
+      9331
+    ],
+    "east": [
+      8077,
+      8077,
+      9331,
+      9331
+    ]
+  },
+  "bestHypotheticalTranslation": {
+    "dx": 60,
+    "dy": 13,
+    "nominalBoxUnchanged": true,
+    "hypotheticalWestBox": [
+      7113,
+      8090,
+      8367,
+      9344
+    ],
+    "trueComparedIntersection": [
+      8077,
+      8090,
+      8367,
+      9331
+    ],
+    "overlapSize": [
+      290,
+      1241
+    ],
+    "maeBefore": 45.99359614451148,
+    "maeAfter": 26.01342447229246,
+    "acceptance": "fail-geometry"
+  },
+  "localBestTranslations": {
+    "all-common": {
+      "fixedReferenceCrop": [
+        60,
+        60,
+        170,
+        1194
+      ],
+      "dx": 60,
+      "dy": 12,
+      "mseRGB": 1778.6576078242745,
+      "maeRGB": 26.93053818609374
+    },
+    "roof": {
+      "fixedReferenceCrop": [
+        60,
+        60,
+        170,
+        650
+      ],
+      "dx": 60,
+      "dy": -3,
+      "mseRGB": 2197.8145197740114,
+      "maeRGB": 32.29120184899846
+    },
+    "caps-eave": {
+      "fixedReferenceCrop": [
+        60,
+        650,
+        170,
+        925
+      ],
+      "dx": 37,
+      "dy": 23,
+      "mseRGB": 593.2641212121213,
+      "maeRGB": 12.642170798898071
+    },
+    "timber": {
+      "fixedReferenceCrop": [
+        60,
+        925,
+        170,
+        1194
+      ],
+      "dx": 1,
+      "dy": 28,
+      "mseRGB": 84.76390672524502,
+      "maeRGB": 5.3412864706545005
+    }
+  },
+  "geometricInterpretation": "There is a positional component, but a single tested rigid shift does not align all roof tile joints, cap/eave edges and timber features. Roof optimum(+60,-3), eave/cap optimum(+37,+23), timber optimum(+1,+28) disagree; actual unscaled hard-cut comparisons retain distinct geometric breaks. This supports local shape/phase/placement drift beyond one shared translation within the tested domain.",
+  "domainLimit": "The x optimum hits +60, so this search does not establish a global optimum outside +-60 and does not claim mathematical impossibility for every translation. The requested domain is exhaustively tested and no verified usable rigid correction was found.",
+  "remainingPositionEvidence": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-true-overlap\\remaining-roof-cuts.100pct.png",
+    "sha256": "2b38d0be6a25410220f4afd4167af6c40dba1334d19f321bd4443566cc4cebe2",
+    "hypotheticalGlobalBox": [
+      8040,
+      8100,
+      8260,
+      8470
+    ],
+    "issue": "multiple barrel-tile joint ridge breaks and triangular splice gaps in best overall translated join"
+  },
+  "diagnosticResults": [
+    {
+      "name": "nominal",
+      "hypotheticalTranslation": {
+        "dx": 0,
+        "dy": 0
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\nominal\\record.json",
+      "recordSha256": "a722ab308a3d683188223a83848e64a615e797ee75f785ad1cf42686dd28b579",
+      "finding": "原坐标下筒瓦接头、瓦当、檐梁和木托均有明显错位。",
+      "eaveResidualY": [
+        -39,
+        -40,
+        -41,
+        -44,
+        -45
+      ]
+    },
+    {
+      "name": "best-true-overlap",
+      "hypotheticalTranslation": {
+        "dx": 60,
+        "dy": 13
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-true-overlap\\record.json",
+      "recordSha256": "e96a3b9244332e0dbf706b42d2982d3f6d9d3571462023c2a39a6550d0b1b962",
+      "finding": "全实际重叠MSE最低的(+60,+13)仍有上半部多处瓦关节截断/三角缺口；下方檐梁位置更接近但木纹与木托接口仍断接。全材质没有同时对齐。",
+      "eaveResidualY": [
+        1,
+        0,
+        -1,
+        -4,
+        -5
+      ]
+    },
+    {
+      "name": "best-all-common",
+      "hypotheticalTranslation": {
+        "dx": 60,
+        "dy": 12
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-all-common\\record.json",
+      "recordSha256": "a58409113d777525e53e1f228fd12eb8017500f8f51495d6bd90283f4b0fb3eb",
+      "finding": "固定共同评价区(+60,+12)与全重叠最优仅差1px；不能消除屋瓦周期/几何失配。此项与最优同族，判断结合最佳实际重叠证据。",
+      "eaveResidualY": [
+        0,
+        -1,
+        -2,
+        -5,
+        -6
+      ]
+    },
+    {
+      "name": "best-roof",
+      "hypotheticalTranslation": {
+        "dx": 60,
+        "dy": -3
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-roof\\record.json",
+      "recordSha256": "cb1d602e64b5d37e60a2fee8a3dbcbec22a3b57744b75b1e121b7caaf036d574",
+      "finding": "屋瓦独立最优(+60,-3)仍存在脊线断口，且瓦当和金檐出现大阶差、木托断开，无法作为整片校正。",
+      "eaveResidualY": [
+        -15,
+        -16,
+        -17,
+        -20,
+        -21
+      ]
+    },
+    {
+      "name": "best-caps-eave",
+      "hypotheticalTranslation": {
+        "dx": 37,
+        "dy": 23
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-caps-eave\\record.json",
+      "recordSha256": "504f6588c998e72e780c0da27173b689d3b20cedae693a63feed0e63c4cfcdbc",
+      "finding": "瓦当/檐梁独立最优(+37,+23)改善下方轮廓，但上方多道瓦关节重复截断，木托阴影仍错位。",
+      "eaveResidualY": [
+        1,
+        -1,
+        -2,
+        -4,
+        -5
+      ]
+    },
+    {
+      "name": "best-timber",
+      "hypotheticalTranslation": {
+        "dx": 1,
+        "dy": 28
+      },
+      "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\best-timber\\record.json",
+      "recordSha256": "31c8b7d009c83277499bb10cf379f1ee2f12075f0df51ff84a29fb0a8c78fc81",
+      "finding": "木托独立最优(+1,+28)使下部U形木托更接近，但屋瓦脊线与瓦当明显错位，金檐顶边仍有台阶。",
+      "eaveResidualY": [
+        -11,
+        -12,
+        -13,
+        -15,
+        -16
+      ]
+    }
+  ],
+  "secondaryS01S03ToS01S04Registration": "Not attempted: prerequisite that primary seam is solved by rigid matching was not satisfied. Avoid extending a failed correction rule.",
+  "restrictions": {
+    "nativeSourcesUnchanged": true,
+    "generationRecordsUnchanged": true,
+    "globalNativeBoxesUnchanged": true,
+    "mainAssemblyPlanUnchangedByThisTask": true,
+    "imageGenerationCalls": 0,
+    "integerTranslationOnly": true,
+    "scaling": false,
+    "rotation": false,
+    "warp": false,
+    "feather": false,
+    "colorEdit": false,
+    "allDiagnosticPixelsExactSourcePixels": true
+  },
+  "reproduce": {
+    "script": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\reproduce.py",
+    "sha256": "68a72dc4e0e3cf851f2a4571ad9783b04c7687d0eb0345647c573947113226c3",
+    "python": "C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "outputs": "QA script directory only"
+  },
+  "searchRecord": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c02\\qa\\integer-translation-registration\\search.json",
+    "sha256": "aa1a586d9aed1b76ee372d6f420e01dd92ea637c1a2dd2f5cc5b6868d68622ef"
+  }
+}

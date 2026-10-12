@@ -1,0 +1,46 @@
+{
+  "id": "p04_02-joint-v1",
+  "createdAtUtc": "2026-10-10T12:57:38.320888+00:00",
+  "prompt": "Use case: precise-object-edit.\nEdit the FIRST image only, preserving the exact original 1254 by 1254 pixel framing and stone texture. Images 2, 3 and 4 are approved layout/detail/style references only, never substitute their composition.\nSurgical paving-joint repair: the first image has a broken short diagonal grout groove in its lower-left quarter. It enters the left edge near (0,1174), runs upward-right through approximately (230,1000), then fades out around (370,895), falsely ending inside one stone slab. CONTINUE THIS SAME GROOVE in a straight upward-right path with matching existing width, recessed shadow and narrow bright stone bevel. It must naturally meet the ALREADY EXISTING long upper-left to lower-right diagonal main groove near (800,570), forming a clean believable T-junction. Preserve the main diagonal exactly; do not extend the new groove past the main diagonal. The repair is only between the fading end and that junction.\nAll coordinates are pixel positions on the original 1254 square image, origin top left. Match the slope of the lower-left groove already present. Keep the existing groove portion below-left fully intact. Keep the original texture and lighting on both sides; NO global material repaint, color correction, contrast change, new cracks, new vertical/horizontal lines, props, objects or text. Keep all other complete paving joints and their geometry unchanged.\nLOCK the entire outer 230 pixels on all FOUR edges of image 1 exactly. The only permitted change is the small interior continuation and T-junction approximately inside x=250..890,y=500..1010. All original surface detail elsewhere stays identical. Output exactly one native 1254 by 1254 image, same scale, same perspective and original crop. No resize or broad restyling.",
+  "promptPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\p04_02-local-joint\\prompts\\p04_02-joint-v1.prompt.txt",
+  "promptSha256": "a01a06c8620f11af905604eeed88d246374d55f8a43a758600fba10fd17ec4c9",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\native\\p04_02.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg"
+  ],
+  "references": [
+    {
+      "role": "edit-target",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\native\\p04_02.png",
+      "sha256": "77dfdc3a9ab51b9e8a4c8ccfecc04c56302be0a137d4757881509b1f0849720c"
+    },
+    {
+      "role": "approved-layout",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7"
+    },
+    {
+      "role": "approved-detail",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809"
+    },
+    {
+      "role": "approved-primary-style",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63"
+    }
+  ],
+  "expectedPixels": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "tool": "builtin image_gen",
+  "apiUsed": false,
+  "attemptLimit": 1,
+  "lockedEdgePixels": 230,
+  "geometryIntent": "continue existing incomplete lower-left groove to main diagonal inside frozen edges"
+}

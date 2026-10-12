@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "kind": "native_multi_source_alpha_derivation",
+  "tile": "r04_c04",
+  "designChange": "Local design alternative: a new horizontal beveled stone connector joins the vertical rail to the existing wall coping near worldY 16269..16372. The broad rail direction and immutable true southern artwork are retained. This is a disclosed design change, not an assertion of original-design identity; root must review and choose.",
+  "formalAccepted": false,
+  "alphaRule": {
+    "coordinates": "pixel-center coordinates x+0.5,y+0.5 in each native 1254 image",
+    "ramp": "s(v,a,b)=t*t*(3-2*t); t=clip((v-a)/(b-a),0,1)",
+    "scale": 255,
+    "quantization": "alpha=floor(255*w+0.5)",
+    "blend": "uint8((base*(255-alpha)+raw*alpha+127)//255), independently per RGB channel",
+    "spatialResampling": false,
+    "filtering": false,
+    "codedArtwork": false
+  },
+  "steps": [
+    {
+      "name": "stage4 rail taper",
+      "base": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\exported-native-v1\\s04_01-internal4-derived.png",
+        "sha256": "1b6d718bad8c34a10cb0dcbc0161d0d1e59adc82bb05adec41c6740c4d123b0a",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "raw": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\raw-v4.png",
+        "sha256": "9de36aaf972d4dec37c5d21796ce014c76a3cb7e3af18823c26086ec9bdec3d7",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage4-raw-alpha.png",
+        "sha256": "02c3a929c4c6f9ca005a7e112aaf72fd2852f6cd6d80f833e9a3c8a9e435b6ec",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "worldBox": [
+        12173,
+        15245,
+        13427,
+        16499
+      ],
+      "weight": "(s(y,420,484)*(1-s(x,810,870))+s(y,0,80)*s(x,810,870))*s(x,610,660)*(1-s(x,1090,1135))"
+    },
+    {
+      "name": "stage4 true south restoration",
+      "base": "previous step",
+      "source": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c04\\native\\s01_01.png",
+        "sha256": "7919f7f22ce30a0b79704adec2f6932b9c4a46c7677b526b8c4670d8a831fe8a",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage4-south-alpha.png",
+        "sha256": "fb06a79d4291b7e10b77264f2cbdb5ed19284129914b7ca79f839688c7216d8c",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "sourceWorldBox": [
+        12173,
+        16269,
+        13427,
+        17523
+      ],
+      "destinationWorldBox": [
+        12173,
+        15245,
+        13427,
+        16499
+      ],
+      "weight": "s(y,1024,1104); where active, source pixel is south[x,y-1024] at identical world coordinate",
+      "derived": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage4-derived-native.png",
+        "sha256": "fddb6b3f9873b03c5122b73871c641646a55645e8453b7b50a9204f17295e1ad",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "name": "stage5 intermediate joint surface",
+      "base": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\left-join-guide-v5.png",
+        "sha256": "56c21384632736c25e59c4c46f766877821a4d5f2c233da833e1ca42f2539140",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "raw": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\raw-v5.png",
+        "sha256": "eaacf6446c82da08b11079bbdbf10200a3a1a9f831e2a31cefcc8f2cc8836f4b",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage5-alpha.png",
+        "sha256": "a801051a9f07052e04064ac0c9a4442544f93b83ed08dc149156adc724e6b98c",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "worldBox": [
+        12173,
+        15757,
+        13427,
+        17011
+      ],
+      "weight": "s(x,610,660)*(1-s(x,1200,1254))*s(y,380,440)*(1-s(y,552,620))",
+      "derived": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage5-derived-context.png",
+        "sha256": "410a447d8050d309be01b6921ad2705ce96be05c0692be9b6769ebbbc4c41893",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "note": "Visible left ghosting in this intermediate is covered by the following generated connector."
+    },
+    {
+      "name": "alternative7 generated stone connector",
+      "base": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage5-derived-context.png",
+        "sha256": "410a447d8050d309be01b6921ad2705ce96be05c0692be9b6769ebbbc4c41893",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "raw": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\raw-v7.png",
+        "sha256": "7917efe063bf96a4b43fa2201d069e4475a4b379d0c71e43fb1a45d2f00f9268",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative7-alpha.png",
+        "sha256": "c4d69f6e70df5913350dbd423b8f0cf67504055766050bd233ed250263007311",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "worldBox": [
+        12173,
+        15757,
+        13427,
+        17011
+      ],
+      "weight": "s(x,600,640)*(1-s(x,1040,1100))*s(y,400,440)*(1-s(y,619,627))",
+      "derived": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative7-context.png",
+        "sha256": "113fd5893d963f80fbbcd365d996a13215b10513d56d3ba242bdba514e827e08",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "copyToNative": "context rows [0,627) replace native rows [512,1139); other native pixels retained from stage5-derived-native",
+      "designChange": "Local design alternative: a new horizontal beveled stone connector joins the vertical rail to the existing wall coping near worldY 16269..16372. The broad rail direction and immutable true southern artwork are retained. This is a disclosed design change, not an assertion of original-design identity; root must review and choose."
+    },
+    {
+      "name": "restore aligned adjacent staircase from saved stage4",
+      "base": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative7-native.png",
+        "sha256": "5ab5f1af9bc9ad824339bec69b233e95014e6de5f36a5229233ae2bea8ae3860",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "source": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\stage4-derived-native.png",
+        "sha256": "fddb6b3f9873b03c5122b73871c641646a55645e8453b7b50a9204f17295e1ad",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\restore-stairs-alpha.png",
+        "sha256": "c164011a85acabf8a41ce22eb1d35d799e3a9e65905ae4f1e78f857695f61109",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "worldBox": [
+        12173,
+        15245,
+        13427,
+        16499
+      ],
+      "weight": "s(x,1012,1044), using same pixel-center smoothstep and 255 quantization defined in alphaRule",
+      "purpose": "Undo the intermediate stage5 deletion of the existing stair front lip; preserve the generated stone rail connector.",
+      "derived": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative8-native.png",
+        "sha256": "b7a21a021506b15eb4622ff5964d04382e39014809841e58237c16a119569ce3",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "actualImagegenCallsAdded": 0
+    },
+    {
+      "name": "independent upper-overlap composite on actual s03_01 base",
+      "base": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\qa-repair-native\\exported-native-v1\\s03_01-internal4-derived.png",
+        "sha256": "68d0bf6771e0d9bf7e9e1938257d8fbd35e3cc9b4fcc56ee453f1d4f846ca743",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "raw": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\raw-v4.png",
+        "sha256": "9de36aaf972d4dec37c5d21796ce014c76a3cb7e3af18823c26086ec9bdec3d7",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "rawWorldBox": [
+        12173,
+        15245,
+        13427,
+        16499
+      ],
+      "alpha": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\upper-overlap-alpha.png",
+        "sha256": "13076e73b051fe408c500ef259621f39d0b7bb71ebb783505979fec459c68ff0",
+        "width": 1254,
+        "height": 1254,
+        "mode": "L",
+        "format": "PNG"
+      },
+      "destinationWorldBox": [
+        12173,
+        14221,
+        13427,
+        15475
+      ],
+      "weight": "Same stage4-raw-alpha values shifted by +1024 destination rows; zero outside rows 1024..1253.",
+      "purpose": "Blend against the actual s03_01 selected base instead of copying partly blended s04_01 pixels across its base-texture discontinuity.",
+      "sourceMapping": "destination(x,y) uses raw-v4(x,y-1024); identical world coordinate",
+      "derived": {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\upper-overlap-derived-native.png",
+        "sha256": "44e8270fa3e4bed255ebe89da4ff3db33340d326c4d36583a383545121268127",
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "actualImagegenCallsAdded": 0
+    }
+  ],
+  "generationReceipts": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v1.json",
+      "sha256": "798b2915c6e98f75e1ba244ca8198a15900f7690978dcd71f863687de1aa8429"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v2.json",
+      "sha256": "9856938e5ad749e7a892009eebe6c584f3cbd71774c4527aca83d459139fa465"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v3.json",
+      "sha256": "8130b68251e0147ac2a8c58d88e0aeae62cf1aa5467fd37f8eb3aeec480c577e"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v4.json",
+      "sha256": "b272dad0c40eed7ecf9df64d7b15f2b04f3da2f64fdbf44fe2a42edc9a686c3f"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v5.json",
+      "sha256": "eb5d157e1b6c29392a254c4855e5adba82454887771a3bd843883ae419e45f51"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v6.json",
+      "sha256": "e99603fd6e04507f35ca3fd2b64a43881e0591ff9870db429c34c1ef2024304d"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\receipt-v7.json",
+      "sha256": "42a5a24cddc79073a48af3b1020678a1f20628bcd7df6fdf739143d3094808ca"
+    }
+  ],
+  "finalNative": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative8-native.png",
+    "sha256": "b7a21a021506b15eb4622ff5964d04382e39014809841e58237c16a119569ce3",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "nativeWorldBox": [
+    12173,
+    15245,
+    13427,
+    16499
+  ],
+  "changedMask": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\alternative8-changed-mask.png",
+    "sha256": "14822dd76eb47f7deb2ca4faa44cbf54866203166af340dd94769d01d3d205af",
+    "width": 1254,
+    "height": 1254,
+    "mode": "L",
+    "format": "PNG"
+  },
+  "unchangedTrueSouth": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r05_c04\\native\\s01_01.png",
+    "sha256": "7919f7f22ce30a0b79704adec2f6932b9c4a46c7677b526b8c4670d8a831fe8a",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "verifiedSouthNativeHaloEqualsTrueSource": true,
+  "verifiedExistingF2PixelsUnchanged": true,
+  "southFormalBoundaryWorldY": 16384,
+  "operations": "Same-world-coordinate source copying and recorded alpha compositing only. No resize, warp, blur, color adjustment, or code-painted image content.",
+  "scripts": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\derive_stage4.py",
+      "sha256": "ff2abe6e72e1144041b910eb61a7b23c49ed8c1b8305fc67dfe7c848734fee6b"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\derive_stage5.py",
+      "sha256": "a01e5a127cf8d59d7f2962fb0ebb02b5a92588f0d133c51abefe25ac24ba6403"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\derive_alternative7.py",
+      "sha256": "f9d2b22a26bd2f87855e9f33f35d2cf93cc064f8a5aa1df992ec9481e01b7397"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\qa_restore_stairs.py",
+      "sha256": "c14f4942cceefbd50fcd31826182afda96bd58a51e99a1cf2a7efd6f35ead7f0"
+    }
+  ],
+  "finalContext": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r04_c04\\rail-final\\derived-context-native.png",
+    "sha256": "206f5780424e629be27d762ac9e7634ddfb1b6c91dd1680a8c91f32fd4fabaf8",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "format": "PNG"
+  },
+  "contextWorldBox": [
+    12173,
+    15757,
+    13427,
+    17011
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "createdAtUTC": "2026-10-13T10:14:05.930930+00:00",
+  "tile": "r02_c04",
+  "patch": "s03_04",
+  "source": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s03_04-v003.png",
+    "sha256": "da5a9be612d1582fdada249151f3852a95e023df85341240f9979c2de5c6ad53"
+  },
+  "supersedes": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\qa\\s03_04-v003-independent-quick-review-v001.json",
+    "sha256": "9d3c11e7ebe17887f78384d427c3fc764c5fd197b5ae180c3399e92a4787b235",
+    "scope": "Prior overall quick pass and composition/scale pass withdrawn; unchanged local south seam pass retained."
+  },
+  "quickVisualPassed": false,
+  "status": "pending_cross_patch_ornament_layout_scale_repair",
+  "formalAccepted": false,
+  "allowNeighborReference": false,
+  "reason": "Approved gold ornament spans s03_03 and s03_04. The v003 render shrank the complete ornament into s03_04, finishing its large left wing within this patch instead of letting it cross the left boundary. This is a cross-patch layout/scale error, not uncertainty in a blurred per-pixel outline.",
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\requests\\r02_c04\\s03_03-v001.layout-and-native-reference.png",
+      "sha256": "c2dfaf8b5fa4b6300df665326cf6afdd389024da07ae84ac938a972fcbb4a956",
+      "actuallyViewed": true,
+      "role": "Adjacent enlarged layout guide shows the large left ornament wing beginning around local x470 and continuing to the right edge; enlarged reference only, not native art."
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\references\\yamen-roof-north-identity-guide-v001.png",
+      "sha256": "29ba51a75ec2837f1ba13bd593eb2c0a37072798b1d88d2125cef93b842f0f9b",
+      "actuallyViewedPreviously": true,
+      "role": "Wide approved-layout identity context; parent supplied approximate original x284..311 ornament extent versus s03_04 source x291.7..315.7."
+    }
+  ],
+  "approximateLayoutEvidenceFromRoot": {
+    "overviewOrnamentXRange": [
+      284,
+      311
+    ],
+    "s03_04OverviewSourceXRange": [
+      291.7,
+      315.7
+    ],
+    "generatedOrnamentNativeWidthApprox": 550,
+    "numericValuesAreApproximate": true
+  },
+  "retainedSouthSeamFinding": {
+    "quickLocalSouthSeamPassed": true,
+    "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\qa\\s03_04-v003-south-native100-v001.png",
+    "evidenceSHA256": "adb5870237a9035bb50a5b77cf97ce72c2b73d679a154422e2e7b9f74d6881a1",
+    "priorReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\qa\\s03_04-v003-independent-quick-review-v001.json",
+    "rechecked": false,
+    "reuseReason": "Source and seam hashes unchanged; no need to repeat the completed local seam view."
+  },
+  "action": "Withdraw selection in a new version. Keep all originals and previous review/selection versions. Do not propagate as a passed neighbor or continue releasing this version."
+}

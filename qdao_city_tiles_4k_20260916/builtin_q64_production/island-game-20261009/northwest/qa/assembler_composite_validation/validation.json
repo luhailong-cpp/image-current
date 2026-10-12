@@ -1,0 +1,213 @@
+{
+  "createdAtUtc": "2026-10-09T21:04:23.618963+00:00",
+  "status": "numerical_provenance_validation_passed",
+  "assemblerSha256": "539d2d377ef13326b492e46a5b702ad4c17ad851e17bcb54b55664722b071cf5",
+  "checks": [
+    {
+      "name": "actual_two_raw_source_composite",
+      "result": "pass",
+      "sourceHash": "1d9b57fee7f27ffe56c58b8f4f92b419fd1a81f8970a12816a54b26ecebbfb62",
+      "originalNativePixelCounts": [
+        1535171,
+        37345
+      ]
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s01_01_a01",
+      "result": "pass",
+      "sha256": "e2c21a79cad0fc080bfff4aafa17117b144d562918463a83892d4091f9bd84e5"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s02_01_a01",
+      "result": "pass",
+      "sha256": "3d2f9091317e771ce7940ed5ebf46f70987e2563ff1b034d218f0c54c8de089b"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s03_01_a01",
+      "result": "pass",
+      "sha256": "b4747ab2ddbc341fff3f4f292df2127be23adfc087f6808281708e76cd857a88"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s04_01_a01",
+      "result": "pass",
+      "sha256": "bd72d8bcf7a72cfb5fb45af4caeef597ee7f278c2b617798b09bf4ec032db31f"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s04_02_a01",
+      "result": "pass",
+      "sha256": "19577147bfe0924f00399f31a6397e5eeafa3691dba1fdb9567605a07a13f18c"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s04_03_a01",
+      "result": "pass",
+      "sha256": "f34ce52676d606781917f4364a0140ff984397735333459bcf3e01c1c2cf6b69"
+    },
+    {
+      "name": "existing_raw_gate_r03_c03_s04_04_a01",
+      "result": "pass",
+      "sha256": "7ebbd010aef6d385474b580b03d57c4b13e381a0610855cf10d524d06d27cdf7"
+    },
+    {
+      "name": "ambiguous_raw_and_composite_entry",
+      "result": "rejected_as_required",
+      "reason": "Each cell must specify exactly one of generationRecord or nativeCompositeRecord."
+    },
+    {
+      "name": "composite_masquerading_as_raw",
+      "result": "rejected_as_required",
+      "reason": "Raw pixels must come from this zone's native directory: D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\s03_01_native_composite_a01_base_a04_beam\\candidate.png"
+    },
+    {
+      "name": "composite_pinned_candidate_hash_mismatch",
+      "result": "rejected_as_required",
+      "reason": "Hash mismatch for manifest composite."
+    },
+    {
+      "name": "wrong_global_box",
+      "result": "rejected_as_required",
+      "reason": "Composite global/native coordinates do not match the manifest cell."
+    },
+    {
+      "name": "third_raw_source",
+      "result": "rejected_as_required",
+      "reason": "Composite requires exactly two original raw native sources; recursive composites are forbidden."
+    },
+    {
+      "name": "nested_composite_leaf",
+      "result": "rejected_as_required",
+      "reason": "Composite leaves must be raw sourceIds 0,1 in order."
+    },
+    {
+      "name": "wrong_generation_record_hash",
+      "result": "rejected_as_required",
+      "reason": "Hash mismatch for composite leaf 0 generation record."
+    },
+    {
+      "name": "one_changed_candidate_channel",
+      "result": "rejected_as_required",
+      "reason": "Composite pixels differ from raw source 0 at identical coordinates."
+    },
+    {
+      "name": "nonbinary_mask_channel_128",
+      "result": "rejected_as_required",
+      "reason": "Composite mask must contain only 0 and 255, with both raw sources used."
+    },
+    {
+      "name": "raw_prompt_hash_mismatch",
+      "result": "rejected_as_required",
+      "reason": "Prompt hash mismatch: D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a01.png"
+    },
+    {
+      "name": "raw_receipt_route_mismatch",
+      "result": "rejected_as_required",
+      "reason": "Receipt route/tool does not match builtin generation: D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a01.png"
+    },
+    {
+      "name": "nested_padded_positions_and_counts",
+      "result": "pass",
+      "contributions": [
+        {
+          "compositeSourceId": 0,
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a01.png",
+          "sha256": "b4747ab2ddbc341fff3f4f292df2127be23adfc087f6808281708e76cd857a88",
+          "pixelCount": 1535171,
+          "outputBoundingBoxHalfOpen": [
+            0,
+            2048,
+            1254,
+            3302
+          ],
+          "nativeBoundingBoxHalfOpen": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "boundsContainOnlySelectedPixels": false,
+          "exactSelectedPositions": "cell source-index plane == 8 AND composite_source_08_native_mask[source y,source x] == 0",
+          "nativeCoordinateRule": "source x=output x+0-0; source y=output y+0-2048"
+        },
+        {
+          "compositeSourceId": 1,
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a04.png",
+          "sha256": "611518f8421fc920935e16cf8166670a24d7663d06c0a22a88f0e17629321bf5",
+          "pixelCount": 37345,
+          "outputBoundingBoxHalfOpen": [
+            1102,
+            2278,
+            1254,
+            2547
+          ],
+          "nativeBoundingBoxHalfOpen": [
+            1102,
+            230,
+            1254,
+            499
+          ],
+          "boundsContainOnlySelectedPixels": false,
+          "exactSelectedPositions": "cell source-index plane == 8 AND composite_source_08_native_mask[source y,source x] == 255",
+          "nativeCoordinateRule": "source x=output x+0-0; source y=output y+0-2048"
+        }
+      ]
+    },
+    {
+      "name": "nested_after_outer_crop_positions",
+      "result": "pass",
+      "contributions": [
+        {
+          "compositeSourceId": 0,
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a01.png",
+          "sha256": "b4747ab2ddbc341fff3f4f292df2127be23adfc087f6808281708e76cd857a88",
+          "pixelCount": 1390961,
+          "outputBoundingBoxHalfOpen": [
+            0,
+            1933,
+            1139,
+            3187
+          ],
+          "nativeBoundingBoxHalfOpen": [
+            115,
+            0,
+            1254,
+            1254
+          ],
+          "boundsContainOnlySelectedPixels": false,
+          "exactSelectedPositions": "cell source-index plane == 8 AND composite_source_08_native_mask[source y,source x] == 0",
+          "nativeCoordinateRule": "source x=output x+115-0; source y=output y+115-2048"
+        },
+        {
+          "compositeSourceId": 1,
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\native\\r03_c03_s03_01_a04.png",
+          "sha256": "611518f8421fc920935e16cf8166670a24d7663d06c0a22a88f0e17629321bf5",
+          "pixelCount": 37345,
+          "outputBoundingBoxHalfOpen": [
+            987,
+            2163,
+            1139,
+            2432
+          ],
+          "nativeBoundingBoxHalfOpen": [
+            1102,
+            230,
+            1254,
+            499
+          ],
+          "boundsContainOnlySelectedPixels": false,
+          "exactSelectedPositions": "cell source-index plane == 8 AND composite_source_08_native_mask[source y,source x] == 255",
+          "nativeCoordinateRule": "source x=output x+115-0; source y=output y+115-2048"
+        }
+      ]
+    },
+    {
+      "name": "repair_source_entirely_removed_by_later_seam",
+      "result": "pass"
+    }
+  ],
+  "full4KAssemblyRun": false,
+  "newArtFilesWritten": false,
+  "formalAcceptedCount": 0,
+  "limits": [
+    "No 16-cell manifest was selected or run.",
+    "These checks cannot establish visual seam acceptance."
+  ]
+}

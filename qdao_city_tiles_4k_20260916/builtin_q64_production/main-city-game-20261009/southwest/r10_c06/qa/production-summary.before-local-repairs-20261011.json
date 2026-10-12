@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "tile": "r10_c06",
+  "reviewedAtUtc": "2026-10-10T16:28:17.390Z",
+  "baselineNativeCount": 0,
+  "toolReturnedImages": 20,
+  "selectedNativeCount": 16,
+  "rejectedNativeCount": 4,
+  "failedCalls": 0,
+  "complete4kCandidate": true,
+  "formalAccepted": false,
+  "visualQaPassed": false,
+  "actualModel": null,
+  "actualQuality": null,
+  "nativePixels": [
+    1254,
+    1254
+  ],
+  "corePixels": [
+    1024,
+    1024
+  ],
+  "haloPixels": 115,
+  "sourceResampling": false,
+  "guidePixelsCompositedIntoFinal": false,
+  "output": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r10_c06/pipeline/output/5c4d9d81c6fcc1ca/r10_c06.candidate.png",
+  "outputSha256": "044a7c8f769e1006a8575951411f8bbf9f57582063d7c7ab09064e30458f94d8",
+  "inspection": [
+    "Whole candidate at fitted UI scale",
+    "All 3 horizontal and 3 vertical seam crops",
+    "intersection_x2048_y3072.png",
+    "intersection_x3072_y3072.png",
+    "intersection_x1024_y2048.png"
+  ],
+  "issues": [
+    {
+      "severity": "P2",
+      "location": "core y~3072, x~2100-3100",
+      "finding": "Visible scalloped gray stone tone/texture transition; needs local repair before acceptance."
+    },
+    {
+      "severity": "P2",
+      "location": "p04_03",
+      "finding": "Guide bottom-center red/brown fragment interpreted as pale stone base; added green-panel relief motif requires guide comparison and repair. Candidate only."
+    },
+    {
+      "severity": "P2",
+      "location": "p04_02 bottom red sliver",
+      "finding": "Soft/blurred detail requires cleanup."
+    },
+    {
+      "severity": "P3",
+      "location": "p02_04,p03_01,p03_02",
+      "finding": "Dense cellular stone and repetitive gold texture; material needs quieter planes."
+    }
+  ],
+  "externalSeamsReviewed": false,
+  "formalAcceptanceNote": "Candidate assembled without resizing. Visual QA is not passed. External seams and parent final review remain pending.",
+  "unusedPreparedRequest": "p01_01.v01 (not a generation)",
+  "rejectedAttempts": [
+    "p01_03.v01",
+    "p01_04.v01",
+    "p01_04.v02",
+    "p03_02.v01"
+  ],
+  "rejectedAssetsPreservationNote": "p01_04.v02 is also actual edit input for v03; preserve it."
+}

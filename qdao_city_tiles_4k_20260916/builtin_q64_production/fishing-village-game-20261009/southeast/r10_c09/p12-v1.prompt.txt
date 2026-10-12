@@ -1,0 +1,13 @@
+Use case: precise-object-edit, continuous game-map native detail expansion.
+OUTPUT ONE square 1254x1254 crop. Edit image 1 in-place. The leftmost 230 pixels already contain real native detail from the preceding piece: preserve those pixels and continue their wood beams, panels, threshold, light and projection seamlessly to the right. Do not recompose or zoom out. Redraw only the blurry remainder into crisp matching high-quality hand-painted Q Daoist detail. This exact crop is p12, immediately right of p11 in tile r10_c09. The previous image moved rightward by 1024 pixels, and the images overlap by 230.
+
+Input roles:
+1 EDIT TARGET: mechanical guide, precise native overlap x0..230 plus blurry layout-only remainder. Output matching its exact framing.
+2 Native left neighbor p11: consistency reference, its rightmost 230 pixels are the leftmost 230 of output. Copy unchanged geometry and color in overlap.
+3 Authoritative 1254 full village layout ONLY. Current output is overview rectangle [736.449463,803.628034,763.871966,831.050537], in the workshop front. Do not generate a whole map.
+4 Material/daylight detail reference ONLY, an independent temple close-up. Never copy its temple/lions/plaza into this crop.
+5 Primary approved rounded full Q Daoist painterly STYLE ONLY. Do not copy UI, people, text, or night.
+6 Larger tile context ONLY: output is just the upper second quarter of this crop, not the entire image.
+
+Visible crop: partial sloping cobalt-blue tiled eave clipped by top edge; continuous warm red-orange fascia diagonally descending right; the workshop wall and a large grey-blue inset panel/window framed in reddish wood; partial blue bench/work surface clipped by bottom edge; tiny partial red lantern intruding at extreme right edge. Preserve all silhouettes and exact positions from image 1. Resolve blurry surfaces as believable native wood, plaster, stone, painted tile with rounded clean contours, fine but restrained hand painting. Retain native left stripe exactly; continue beam slopes instead of restarting them. No complete door/building/lantern/boat, no extra scene framing.
+Global invariants: fixed map layout, original temple + 2 side houses, double-fish plaza, all shops, eastern quay and southeast unfinished boat retained, shipyard entrance and exit remain open, no exterior growth. Daylight only. Original Spring Festival red timber and sparse attached decorations, with a few Lantern/Mid-Autumn accents elsewhere; don't invent extras in this tiny crop. Natural grey stone/wood/sand, no red pavement. No people, HUD, lettering, watermark, grid, trees/planters, or independent props. Sharp native detail, no blur or noisy realistic texture.

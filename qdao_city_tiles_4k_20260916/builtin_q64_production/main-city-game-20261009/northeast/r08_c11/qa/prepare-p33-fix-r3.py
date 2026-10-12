@@ -1,0 +1,7 @@
+from pathlib import Path
+import json
+p=Path(__file__).resolve().parents[1];r=json.loads((p/'prompts/p33-v20261013-r3.request.json').read_text());r['referenced_image_paths'][0]=str(p/'native/p33-v20261013-r3.png')
+r['prompt']='Use case: precise-object-edit. Repair the interrupted stone joints in Image1. Output1254x1254. There are four dark diagonal bevels that incorrectly stop inside intact limestone: upper-left near(330,205), upper-right near(980,410), lower-left near(630,900), lower-right near(850,1040). Extend and connect these into a geometrically coherent network of large paving slabs. Every groove must run continuously to a canvas edge or meet another groove at a clean masonry T-junction; NO groove may taper out or stop in the middle of a slab. Specifically continue the upper-left rising groove toward the upper-right, and connect the upper-right/lower-left diagonal as a single descending groove through the middle. Preserve the existing visible outermost115px on ALL four sides exactly, and keep the same large slab scale, gray mineral texture, bevel thickness, camera and lighting. Adjust only the interior groove paths and adjacent narrow bevel pixels to make these connections; keep stone texture elsewhere unchanged. Supporting images2/3/4 only establish approved style. No objects, decoration, rectangular crop lines, blur or rescale.'
+v='p33-v20261013-r3fix1'
+for s,t in [('request.json',json.dumps(r,indent=2)),('prompt.txt',r['prompt'])]:
+ f=p/'prompts'/f'{v}.{s}';assert not f.exists();f.write_text(t,encoding='utf-8')

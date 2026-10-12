@@ -1,0 +1,55 @@
+跨 4096 边界的单张原生 1254 修补
+
+本工具只裁图和按已指定的二值 mask 选源，不调用 AI、不生成 mask、不缩放、
+不羽化、不自动验收、不改 progress/selected。生产调用仍需 builtin image_gen
+实际生成一张 1254 原图，并用 workflow.py ingest 保存原始来源证据。
+
+1. 写一个不可覆盖的显式当前版本 manifest：
+{
+  "schemaVersion": 1,
+  "tiles": [
+    {"tileId":"r03_c03","image":{"path":"绝对 PNG 路径","sha256":"64位"},
+                         "record":{"path":"绝对来源 JSON 路径","sha256":"64位"}},
+    {"tileId":"r03_c04","image":{"path":"...","sha256":"..."},"record":{"path":"...","sha256":"..."}},
+    {"tileId":"r04_c03","image":{"path":"...","sha256":"..."},"record":{"path":"...","sha256":"..."}},
+    {"tileId":"r04_c04","image":{"path":"...","sha256":"..."},"record":{"path":"...","sha256":"..."}}
+  ]
+}
+必须恰为相邻 2x2；四项顺序可以不同，工具会按坐标排序。路径及 hash 都必填。
+
+2. prepare：crop-box 用这个 2x2 的 8192 局部坐标，而非整岛坐标。
+例如 [3469,3469,4723,4723] 横跨四块中心交角；右侧横缝可用
+[5500,3469,6754,4723]。裁区必须是 1254 正方形，完整在 8192 内，
+确实横跨两块或四块。工具逐块 validate_base，全过程不创建 8192 像素数组。
+
+python cross_tile_native_repair.py prepare --manifest current.json --crop-box 3469 3469 4723 4723 --stem junction_a01 --references references.json --role "实际原生交角修补，保持目标外围不变"
+
+输出 guides/junction_a01.native-crop.png、derivation、input 和 references。
+references 参数文件应为 0..4 项 path/sha256 引用列表；实际 editTarget 自动放第一。
+prepare 的 input/derivation 固定全部当前 base、坐标、目标像素及输入引用。
+
+3. 查看原生 crop，再让 builtin image_gen 用 input.inputs 的确切顺序引用，
+只生成这一张共同修补图。保存完整 prompt 和 receipt。receipt 必须保留实际
+submitted.promptText、promptFile、referenced_image_paths、transparent_background:false。
+实际未披露的 model/quality 不可编造。随后 workflow ingest --no-progress。
+
+4. 查看原图并明确选好同尺寸 L 模式 PNG mask。0 保留当前 base，255 同坐标
+复制新生成原图。不能使用灰度/软边/缩放 mask。只含 mask=0 的图块不会写新版。
+
+python cross_tile_native_repair.py apply --manifest current.json --input guides/junction_a01.input.json --source native/junction_a01.png --generation-record native/junction_a01.png.generation.json --mask qa/junction_a01_mask.png --output-dir tiles/cross-junction-v1 --version cross-junction-v1
+
+可先加 --validate-only 做输入校验而不写文件，此时无需 output-dir/version。
+本版严格要求当前 manifest 与 prepare 时一致，且目标 crop 完全等于当前四块
+来源重建的像素；暂不支持祖先 crop 重用。需要不同当前版本时，重新 prepare。
+
+5. 每次 apply 输出唯一的共享 .cross-native-operation.json 和受影响图块的
+4096 PNG / .cross-native-repair.json。所有图块从同一原生 raw 同一 mask 取像素。
+每块新记录可用于 apply_native_tile_repair.py --validate-base-only，
+后续普通单块 native repair，以及通过保留 rootAssembly 使用 connected assembler。
+校验会从根来源重放当前 crop、输入/receipt/raw、二值 mask、每块交集偏移，
+并比较完整 4096 输出，未选像素也必须完全保留。仍需独立原生视觉 QA。
+
+验证说明：test_cross_tile_native_repair.py 使用 qa/cross_tile_native_validation
+下的真实 4096/1254 合成数组。仅原始 assembly 叶节点使用确定性像素 oracle；
+跨块 prepare/apply/projection/source/ref/receipt/完整像素重放均为真实函数。
+测试不调用 AI，不修改生产图块，也不代表艺术验收。

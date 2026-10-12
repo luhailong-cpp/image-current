@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "tile": "r03_c03",
+  "createdAt": "2026-10-09T19:46:07.462122+00:00",
+  "reviewType": "100 percent native-pixel visual QA of sand bridge, all four boundary lengths and four corners",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v3.png",
+    "sha256": "d569f0ce6a536e5cf886d5224558ed43c57e729e057028b53527597ad78690c2",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "assembly": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.repair-v3.assembly.json",
+    "sha256": "0e0a5d7b019688bb65b23910ce500784f7cc65d583ab88484a731169b2d99dce"
+  },
+  "sourceIdMap": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.source-id-repair-v3.png",
+    "sha256": "e5daa91c076d115364263f0bed49ba551f036e3f7352fc2fddce7c75f50b3436"
+  },
+  "nativeBox": [
+    1421,
+    397,
+    2675,
+    1651
+  ],
+  "globalNativeBox": [
+    9613,
+    8589,
+    10867,
+    9843
+  ],
+  "scope": "Sand bridge region and complete cut perimeter only, not formal acceptance of the entire tile or neighbor tiles.",
+  "formalAccepted": false,
+  "localVisualAccepted": false,
+  "status": "sand defect resolved; one residual rail step blocks local acceptance",
+  "checks": [
+    {
+      "feature": "old angular sand color junction",
+      "status": "pass",
+      "tileBox": [
+        1848,
+        824,
+        2248,
+        1224
+      ],
+      "observation": "Angular wedge/color split no longer visible at 100 percent; coherent painted sand remains."
+    },
+    {
+      "feature": "north full boundary",
+      "status": "pass",
+      "tileBox": [
+        1306,
+        282,
+        2790,
+        627
+      ],
+      "observation": "Lantern ribs, material and paving joints stay continuous; no obvious new color block or shape discontinuity."
+    },
+    {
+      "feature": "west full boundary",
+      "status": "pass",
+      "tileBox": [
+        1306,
+        282,
+        1651,
+        1766
+      ],
+      "observation": "Lantern/tassels, wood frame and blue cloth remain continuous; no obvious new hard edge."
+    },
+    {
+      "feature": "east full boundary",
+      "status": "pass",
+      "tileBox": [
+        2445,
+        282,
+        2790,
+        1766
+      ],
+      "observation": "Stone joints, sand and rope/post context remain continuous; no obvious new cut artifact."
+    },
+    {
+      "feature": "south full boundary",
+      "status": "conditional-fail",
+      "tileBox": [
+        1306,
+        1421,
+        2790,
+        1766
+      ],
+      "observation": "Sand, blue fabrics and rope area have no obvious new color/shape discontinuity; one old wood-highlight step remains below the repair cut."
+    },
+    {
+      "feature": "all four boundary corners",
+      "status": "pass",
+      "observation": "Each 400 square native-pixel corner crop inspected; no visible corner island, angular color patch, or geometry break."
+    }
+  ],
+  "findings": [
+    {
+      "id": "rail-front-bevel-step",
+      "severity": "visible residual geometry defect",
+      "tilePoint": [
+        2080,
+        1598
+      ],
+      "globalPoint": [
+        10272,
+        9790
+      ],
+      "tileDefectBox": [
+        2074,
+        1594,
+        2088,
+        1607
+      ],
+      "globalDefectBox": [
+        10266,
+        9786,
+        10280,
+        9799
+      ],
+      "suggestedInspectionBox": [
+        2065,
+        1588,
+        2100,
+        1618
+      ],
+      "description": "Front/lower bright bevel of the diagonal wooden rail has an approximately 4-6 pixel step at the old source6/source7 boundary. The rear/top rail step seen in base is fixed; the front bevel step remains.",
+      "causality": "Native bridge source17 has a straight front bevel here. The actual south cut at tile x=2080 is y=1585, so the visible step at y~1598 is outside source17 selection. It is retained from the old source6/source7 join, not a newly generated bridge deformation.",
+      "diagnosticPixelEvidence": {
+        "defectBoxIdenticalToBase": true,
+        "sourceIdsInDefectBox": [
+          6,
+          7
+        ],
+        "cutAtTileX2080": 1585,
+        "sourceBoundaryAtTileY1598": {
+          "source6EndsExclusive": 2080,
+          "source7Starts": 2080
+        }
+      },
+      "sources": [
+        "native/r03_c03_s02_s02_v05.png",
+        "native/r03_c03_s02_s03_v02.png",
+        "native/r03_c03_repair_sand_junction_v01.png"
+      ],
+      "repairRecommendation": "If adjusting source selection, require the existing straight native bridge to cover this small residual bevel and place the south cut below it within the allowed halo; recheck the full resulting boundary. Otherwise a focused native AI geometry repair is needed. Do not feather or recolor.",
+      "evidence": [
+        "qa/r03_c03-repair-v3-visual-rail-crossing-100pct.png",
+        "qa/r03_c03-repair-v3-rail-native-check-100pct.png",
+        "qa/r03_c03-repair-v3-rail-assembled-check-100pct.png",
+        "qa/r03_c03-repair-v3-rail-base-check-100pct.png"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-east-edge-100pct.png",
+      "sha256": "c219d20ec4f6c3e420080ebae0cd48bda0459ee8bc4ac1f8f1d4bf6c0e1dc007",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-east-edge-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-full-native-100pct.png",
+      "sha256": "ada482d6be5fce9a21c482334104904b1a87026059b6c8bfa1838e07976127b7",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-full-native-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-north-edge-100pct.png",
+      "sha256": "14801d1993323b0b5e65b02f10ccbc80f538d702d31984beb9c4c9fc3571847b",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-north-edge-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-northeast-corner-100pct.png",
+      "sha256": "e2bec53a0a53c7c76766f08fe41519baf7c7830e416dadd62f873b9fcbff7765",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-northeast-corner-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-northwest-corner-100pct.png",
+      "sha256": "95a3340dc581857eab146e048f2af5ce57854104829ea96e8d1821fa2b28b4d3",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-northwest-corner-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-original-sand-defect-100pct.png",
+      "sha256": "1b03be94cbb97b44c948ad8300a52a7dc263e6f3da34aa6c7637342cd2d07680",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-original-sand-defect-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-rail-crossing-100pct.png",
+      "sha256": "ec6bb4297bd58e6cc4287d23ebb34683b964d32b190067001401b6ad2dd9f2ee",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-rail-crossing-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-south-edge-100pct.png",
+      "sha256": "baaf636ea1b985b7f7a51a0c40c8431809b68417f65f17cb7eb12bbbd4e99eea",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-south-edge-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-southeast-corner-100pct.png",
+      "sha256": "ea48384781c9156c68934719d7de4665712347de5b8678e8a513357198ad809b",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-southeast-corner-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-southwest-corner-100pct.png",
+      "sha256": "00557b50ca98cf8e74e33ecbeeb848443f1e501d3e3543cd313530fb2c63af1f",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-southwest-corner-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-west-edge-100pct.png",
+      "sha256": "c94b555b2ea77940fff8f2128002b1b284705fc50ef768febb4121140347d635",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-visual-west-edge-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-assembled-check-100pct.png",
+      "sha256": "62b3ba2f8e3dd836dfbde86a53c18e7e02d12b5b03c6a1c6e746dc43e002f6b1",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-assembled-check-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-base-check-100pct.png",
+      "sha256": "069ef50ef00ad56fdc4783dc810f96d8446a66278c1ba2d1cd34288b1b1d8656",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-base-check-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-native-check-100pct.png",
+      "sha256": "90a583d3f15a7db9f271168fa8e24b937e3874945aefe4fefb59c733de2ed424",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v3-rail-native-check-100pct.png.derivation.json"
+    }
+  ],
+  "method": "All screenshots are integer crops of original pixels viewed at original detail. No resizing, interpolation, color alteration, painting or feathering. Source map inspected at the residual defect."
+}

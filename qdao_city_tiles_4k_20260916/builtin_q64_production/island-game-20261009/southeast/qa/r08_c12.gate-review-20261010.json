@@ -1,0 +1,136 @@
+{
+  "tile": "r08_c12",
+  "gateFile": "../capacity-layout-gate-20261010.json",
+  "gateStatus": "generation_held_by_root",
+  "inFlight": false,
+  "latestCandidate": "tiles/r08_c12.candidate-v3.png",
+  "latestSha256": "4bbd2f689b00db1ded09c34cad83a85aff76eed327ce4c5e5dc1f1eaa6bfa45e",
+  "coreGlobalBox": [
+    45056,
+    28672,
+    49152,
+    32768
+  ],
+  "generatedCoordinates": [
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p21",
+    "p22",
+    "p23",
+    "p24",
+    "p31",
+    "p32",
+    "p33",
+    "p34",
+    "p41",
+    "p42",
+    "p43",
+    "p44"
+  ],
+  "savedNativeCount": 26,
+  "unstartedNextTile": "r08_c11",
+  "formalAccepted": false,
+  "internalUsable": false,
+  "externalAccepted": false,
+  "provenanceReplay": {
+    "file": "qa/r08_c12.replay-v3.json",
+    "base16CoresPixelExact": true,
+    "current16CoresPlus2RepairOverlaysPixelExact": true,
+    "baseCoverageMin": 1,
+    "baseCoverageMax": 1,
+    "pixels": 16777216
+  },
+  "currentProvenanceAvailability": {
+    "file": "qa/r08_c12.source-audit-20261010.json",
+    "all26PNGPromptHostReceiptAndModelSeparationValid": true,
+    "missingReference": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "referenceSha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+    "historicalAudit": "22originalRecordsPassedBeforeReferenceDisappeared",
+    "restorationRequiredBeforeAnyFutureArtwork": true
+  },
+  "repairs": [
+    {
+      "file": "native/r08_c12_repair_j32_v02.png",
+      "appliedTo": "candidate-v2/v3",
+      "destinationBox": [
+        1536,
+        2560,
+        2560,
+        3584
+      ],
+      "status": "central_rectangular_splice_removed_but_profile_transition_requires_root_review",
+      "notes": "Keeps right two-level molding and left single broad cap; added a bevel/stone-joint transition. Overlay right side has subtle texture/shadow discontinuity requiring review."
+    },
+    {
+      "file": "native/r08_c12_repair_post_v01.png",
+      "appliedTo": "candidate-v3",
+      "destinationBox": [
+        2957,
+        2560,
+        3981,
+        3584
+      ],
+      "status": "candidate_internal_repair_pass",
+      "notes": "Post shaft corner and inset panel line continuous; leaves no longer have original horizontal torn splice. Four native perimeter strips checked, final formal remains0."
+    }
+  ],
+  "remainingInternalDefects": [
+    {
+      "where": "p42/p43 lower roof joint near tile x2048,y3890..4096",
+      "severity": "reject",
+      "detail": "Gold/red cap becomes blue rectangular ledge at abrupt vertical boundary. Existing gold curl remains correctly located. Needs native repair preserving real r09top edge."
+    },
+    {
+      "where": "row2/row3 around y2048,cols2..4",
+      "severity": "repair",
+      "detail": "Paving becomes visibly defocused and coarser below core seam; geometry mostly connects but sharpness jumps. No programmatic blur or sharpening permitted."
+    },
+    {
+      "where": "p41/p42 corner near tile x1024,y~3981",
+      "severity": "reject",
+      "detail": "Native-anchor rectangle produces a blue-over-red roof interruption above tile border; needs coupled seam repair."
+    }
+  ],
+  "realExternalReview": {
+    "neighbor": "tiles/r09_c12.candidate-v02.png",
+    "evidence": [
+      "qa/r08_c12-v3-to-r09c12-v02-col1.png",
+      "qa/r08_c12-v3-to-r09c12-v02-col2.png",
+      "qa/r08_c12-v3-to-r09c12-v02-col3.png",
+      "qa/r08_c12-v3-to-r09c12-v02-col4.png"
+    ],
+    "status": "not_accepted",
+    "notes": "Blue-channel phase is substantially improved relative to rejectedp41v01. This does not establish external usability: gold peg near col2 right is abruptly cut at exact candidate boundary and compound roof geometry remains unresolved. Col1blue channels and col4foliage broadly connect; re-review all edges after roof repair."
+  },
+  "capacitySensitiveObservations": [
+    {
+      "region": "Upper/central open courtyard",
+      "risk": "Do not infer world capacity from4096art pixels. Worldsize/avatarfootprint/clientmapping and walkablemask remain unvalidated.",
+      "required": "Map pixelcoordinates to worldunits and subtract collision/occlusion footprints before capacity claim."
+    },
+    {
+      "region": "South fence, flowerbed and goldroof",
+      "risk": "Decorative wall and roof occupy substantial lower tile area; should not be counted as walkable pavement merely because image covers them.",
+      "required": "Explicit wall/bed/roof nonwalkablemask and confirm circulation around fence ends with neighboring tiles."
+    },
+    {
+      "region": "Northeast stonebase, large spentcylinder and woodencrate",
+      "risk": "Objects intrude into paved area and may reduce turning/queuing space; closecrop lacks contextual road width.",
+      "required": "Validate actual collision footprints with mainlayout; preserve existing footprints until root validates5000layout."
+    },
+    {
+      "region": "Neighbor continuation",
+      "risk": "West/east/north roadconnections not validated by thissingle tile. Existing southeast49scope contains otherlockedarchitecture.",
+      "required": "Review wholeisland streetgraph before addingr08c11."
+    }
+  ],
+  "lastToolFailure": {
+    "request": "prompts/r08_c12_repair_roof_v01.request.json",
+    "error": "unable to read referenced image at D:\\work\\image\\designs\\mail-ui-v1\\01-mail-event.png: 系统找不到指定的路径。 (os error 3)",
+    "producedImage": false,
+    "retried": false
+  },
+  "nextAfterExplicitGateRelease": "Restore identical approved style reference or obtain authorized replacement; then native roof repair, paving sharpness repair, full currentcandidate boundaryQA, only then r08c11."
+}

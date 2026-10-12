@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-10T11:54:46.599Z",
+  "reviewType": "native 100-percent visual and protected-region QA",
+  "status": "local_wall_visual_pass",
+  "adoptedPrefix": "c04-wall-join-v02-r09_c04",
+  "basePrefix": "c04-bamboo-join-v02-r09_c04",
+  "repair": "r09_c04_wall_tone_v01",
+  "repairGlobalBox": [
+    12711,
+    33768,
+    13965,
+    35022
+  ],
+  "parameters": {
+    "repairRoi": [
+      250,
+      330,
+      925,
+      1254
+    ],
+    "band": 70,
+    "mandatoryTarget": [
+      540,
+      470,
+      675,
+      730
+    ]
+  },
+  "rejectedComposite": {
+    "prefix": "c04-wall-join-v01-r09_c04",
+    "roi": [
+      250,
+      420,
+      850,
+      1230
+    ],
+    "band": 50,
+    "reason": "Target fixed, but the upper-right wall corner retained a small polygonal color patch at the local ROI perimeter. v02 moves upper/right transitions onto surrounding timber while retaining x>=250 exclusion."
+  },
+  "candidate": {
+    "path": "qa/c04-wall-join-v02-r09_c04-candidate-4096.png",
+    "sha256": "7b72b7d273132e3c8948708051ff149d4986f3d85aebec6584da979cf0727be8",
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "repairSourceId": 19,
+    "selectedRepairPixels": 532791
+  },
+  "validation": {
+    "pixelCount": 16777216,
+    "mismatchedPixels": 0,
+    "sameGlobalCoordinateExact": true,
+    "diskRoundtripExact": true,
+    "interpolation": false,
+    "feathering": false,
+    "colorAdjustment": false,
+    "displacement": false,
+    "allInputsUnchanged": true,
+    "assemblyReport": "qa/c04-wall-join-v02-r09_c04-report.json"
+  },
+  "protectedRegion": {
+    "repairBox": [
+      0,
+      172,
+      213,
+      1254
+    ],
+    "tileLocalBox": [
+      423,
+      1172,
+      636,
+      2254
+    ],
+    "pixelCount": 230466,
+    "selectedRepairPixels": 0,
+    "artExactUnchanged": true,
+    "source17BoundaryMaskExactUnchanged": true,
+    "source18BambooMaskExactUnchanged": true,
+    "proof": "qa/c04-wall-v02-protected-region-check.json"
+  },
+  "visualResults": [
+    {
+      "area": "Mandatory wall target",
+      "result": "pass",
+      "observation": "The former vertical/curved color cut through the ivory wall shadow is removed; the diagonal shadow remains consistent with the roof and wall texture.",
+      "evidence": "c04-wall-v02-target-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "Upper/right corner",
+      "result": "pass",
+      "observation": "v01's small corner patch boundary is absent. The wall top and timber corner remain aligned.",
+      "evidence": "c04-wall-v02-upper-right-perimeter-base-left-candidate-right-100pct.png"
+    },
+    {
+      "area": "Top and left perimeter",
+      "result": "pass",
+      "observation": "Timber, wall texture and red/gold frame retain connected contours. No conspicuous new rectangular or high-contrast boundary observed.",
+      "evidence": [
+        "c04-wall-join-v02-roi1-top-base-first-candidate-second-100pct.png",
+        "c04-wall-join-v02-roi1-left-base-first-candidate-second-100pct.png"
+      ]
+    },
+    {
+      "area": "Right and bottom perimeter",
+      "result": "pass_with_minor_material_variation",
+      "observation": "Wood grain and paint facets vary slightly at native scale; no major color-block seam or new geometric break. Red/gold frame and wall shadow stay continuous.",
+      "evidence": [
+        "c04-wall-join-v02-roi1-right-base-first-candidate-second-100pct.png",
+        "c04-wall-join-v02-roi1-bottom-base-first-candidate-second-100pct.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "Local wall QA, not formal full-tile/map acceptance.",
+    "v02 uses part of adjacent timber to place perimeter outside the repaired wall; minor painterly texture changes remain.",
+    "Previously noted low-amplitude door-molding tone variation from boundary v02 is unchanged."
+  ],
+  "nextBasePrefix": "c04-wall-join-v02-r09_c04",
+  "progressIndexOrSourceMutated": false
+}

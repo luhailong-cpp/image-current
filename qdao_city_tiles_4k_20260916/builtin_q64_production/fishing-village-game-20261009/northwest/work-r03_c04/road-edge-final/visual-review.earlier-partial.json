@@ -1,0 +1,95 @@
+{
+  "createdAt": "2026-10-10T12:52:18.134Z",
+  "status": "north-perimeter-pass-west-geometry-still-failed",
+  "formalAccepted": false,
+  "taskFullyClosed": false,
+  "nativeScale": 1,
+  "reviewed": [
+    "stage-north/north.100pct.png",
+    "stage-north/south.100pct.png",
+    "stage-north/west.100pct.png",
+    "stage-north/east.100pct.png",
+    "stage-north/old-break-full.100pct.png",
+    "stage-north/full-new-region.100pct.png",
+    "west-mechanical-diagnostic/right.100pct.png",
+    "west-mechanical-diagnostic/left.100pct.png",
+    "west-mechanical-diagnostic/bottom.100pct.png"
+  ],
+  "findings": [
+    {
+      "scope": "north perimeter of northern continuation patch",
+      "result": "pass-local",
+      "globalBox": [
+        15130,
+        10860,
+        16384,
+        11200
+      ],
+      "detail": "Existing paving lines and red tassel remain continuous at the selected northern boundary."
+    },
+    {
+      "scope": "south perimeter of northern continuation patch",
+      "result": "pass-local",
+      "globalBox": [
+        15130,
+        11990,
+        16384,
+        12288
+      ],
+      "detail": "Road edge and golden sand join approved lower native source without a horizontal clip. Last59 tile rows are byte-for-byte unchanged."
+    },
+    {
+      "scope": "old north splice at y11490",
+      "result": "pass-local",
+      "globalBox": [
+        15130,
+        11360,
+        16384,
+        11820
+      ],
+      "detail": "Prior blue zigzag cutting through slab interiors is removed; paving transitions through complete coherent stone slabs."
+    },
+    {
+      "scope": "west perimeter of northern continuation patch",
+      "result": "fail",
+      "globalBox": [
+        15000,
+        11200,
+        15320,
+        11880
+      ],
+      "detail": "Old road outside patch remains too wide. Left side retains blue paving down to about global11780 while right corrected paving ends around11500 at x15130. Straight side boundary cannot be accepted."
+    },
+    {
+      "scope": "west v01/v02/v03 and mechanical diagnostic",
+      "result": "reject",
+      "globalBox": [
+        15550,
+        11550,
+        15800,
+        12160
+      ],
+      "detail": "All west outputs made a continuous outer road edge but its eastern endpoint is about180–220 pixels too low. Existing full-road width and slab-row phase conflict. Hard-cut recombination chops stones and creates a road notch, as visible in diagnostic/right.100pct.png."
+    },
+    {
+      "scope": "formal east neighbor",
+      "result": "pending-outside-assigned-neighbor",
+      "detail": "Patch reaches x16384. Neighbor tile is not part of this boundary review."
+    }
+  ],
+  "preservedApprovedBoundary": {
+    "globalY": 12288,
+    "expectedRoadX": [
+      16250,
+      16350
+    ],
+    "unchangedOriginalLast59Rows": true
+  },
+  "newNativeDisposition": {
+    "r03_c04_road_edge_north_v01": "rejected: wrong upper sand wedge and stepped road contour",
+    "r03_c04_road_edge_north_v02": "provisional northern contribution only; west perimeter unresolved",
+    "r03_c04_road_edge_west_v01": "rejected: road endpoint too low",
+    "r03_c04_road_edge_west_v02": "rejected: corrected row still overshoots right endpoint despite contour guide",
+    "r03_c04_road_edge_west_v03": "rejected: road endpoint too low; mechanical DP diagnostic fails"
+  }
+}

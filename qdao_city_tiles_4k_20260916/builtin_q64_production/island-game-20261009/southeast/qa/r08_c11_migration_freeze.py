@@ -1,0 +1,31 @@
+from pathlib import Path
+from PIL import Image
+import json,hashlib,os
+from datetime import datetime,timezone
+R=Path(__file__).resolve().parent.parent
+assert os.environ.get('ISLAND_PROGRESS_FILE')=='progress-r08_c11.json'
+def rd(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def wr(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def sh(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+now=datetime.now(timezone.utc).isoformat();selected=rd(R/'selected-native-r08_c11.json');overlays=rd(R/'selected-overlays-r08_c11.json');saved=[];outside=[];fail=[]
+for recfile in sorted((R/'native').glob('r08_c11_*.png.generation.json')):
+ rec=rd(recfile);f=Path(rec['file']);im=Image.open(f);entry={'file':str(f),'sha256':sh(f),'pixels':list(im.size),'generationRecord':str(recfile),'generationRecordSha256':sh(recfile),'prompt':rec['prompt'],'promptSha256':sh(rec['prompt']),'request':rec['request'],'requestSha256':sh(rec['request']),'receipt':rec['receipt'],'receiptSha256':sh(rec['receipt']),'actualModel':rec['actualModel'],'actualQuality':rec['actualQuality']}
+ assert entry['sha256']==rec['sha256'] and entry['pixels']==[1254,1254]
+ assert entry['promptSha256']==rec['promptSha256'] and entry['receiptSha256']==rec['receiptSha256'] and entry['requestSha256']==rec['requestSha256']
+ for z in rec['references']:assert Path(z['file']).exists() and sh(z['file'])==z['sha256']
+ saved.append(entry)
+ source=Path(rec['sourceOutputPath']);outside.append({'file':str(source),'exists':source.exists(),'sha256':sh(source) if source.exists() else None,'workspaceCopy':str(f),'workspaceCopySha256':entry['sha256'],'role':'Original builtin generated image output; retained, workspace native copy is byte-identical.'})
+pending=[]
+for req in sorted((R/'prompts').glob('r08_c11_*.request.json')):
+ stem=req.name.removesuffix('.request.json');n=R/'native'/f'{stem}.png';gr=Path(str(n)+'.generation.json')
+ if not(n.exists() and gr.exists()):pending.append(str(req))
+assert not pending
+allpatch=[f'r08_c11_p{r}{c}' for r in range(1,5) for c in range(1,5)]
+never=[p for p in allpatch if not list((R/'native').glob(p+'_v*.png'))]
+adopted=[]
+for fn in ['r08_c12.candidate-v15.png','r09_c11.candidate-v05.png','r09_c12.candidate-v09.png']:
+ f=R/'tiles'/fn;adopted.append({'file':str(f),'sha256':sh(f),'status':'previously promoted; preserved unchanged during migration freeze'})
+prog=rd(R/'progress-r08_c11.json');prog.update({'status':'frozen_for_migration','inFlight':False,'updatedAt':now,'nextStep':'FROZEN by user: no generation, repair, expansion, Git or cleanup. All successful results saved. Resume only after explicit new parent authorization; start by reading migration-freeze-coordinate-audit-20261011.json.'});wr(R/'progress-r08_c11.json',prog)
+report={'schemaVersion':1,'agent':'coordinate_audit','reason':'User migration freeze communicated by parent; all new image generation, repair and expansion stopped. Root/main controls Git.','generationStoppedConfirmedAt':'2026-10-12T02:42:25Z','freezeRecordSavedAt':now,'workspaceRoot':'D:/work/image','productionRoot':str(R),'noGitActionsPerformed':True,'allOriginalsAndWorkingFilesPreserved':True,'inFlight':False,'activeImageGenCalls':0,'uncollectedSuccessfulOutputs':[],'requestsWithoutSavedNative':pending,'lastCollected':{'file':str(R/'native/r08_c11_p14_v01.png'),'sha256':sh(R/'native/r08_c11_p14_v01.png'),'receipt':str(R/'receipts/r08_c11_p14_v01.json'),'status':'Saved1254 native and full source record; seam QA not performed and not selected. Do not regenerate this successful output.'},'currentAdoptedFinalCandidates':adopted,'currentTile':{'id':'r08_c11','completed4096Candidate':False,'candidate4kCount':0,'formalAccepted':False,'selectedNative':selected,'selectedOverlays':overlays,'nativeFilesSaved':len(saved),'selectedCoreCount':len(selected['selected']),'neverGeneratedPatches':never,'savedButUnacceptedCore':'r08_c11_p33 v01-v04 all rejected for actual wall border and/or layout defects; do not treat them as finished.','savedPendingQA':['r08_c11_p14_v01.png']},'repairBreakpoints':[{'id':'r08_c11_p33','status':'unresolved_major_wall_geometry','evidence':['qa/r08_c11-production/r08_c11_p33-v04-right-native.png','qa/r08_c11-production/wall-joint-right.png'],'description':'p33v04 complete wall overshoots true right bevel by about42px. Centered whole wall jointv01 removes original center break but moves wall upper/lower edges at its right core boundary by roughly60px. Neither is selected. No RGB alterations, warps or resized art were used.','nextApprovedStrategyBeforeFreeze':'A mechanically blurred entire close-up would remove the unaccepted old-left-line constraint, keeping only true right230/bottom230 anchors. Left neighbor is ungenerated and may follow corrected full wall. This strategy is NOT prepared/submitted and is prohibited during freeze.'},{'id':'r08_c11_p24','status':'selected_internal_candidate_pending_final_junction','description':'Paving and bottom wall edge reviewed. Small east lower coping/pillar contour transition needs final native junction review.'}],'scopedProgress':str(R/'progress-r08_c11.json'),'savedNatives':saved,'externalWorkspaceFiles':outside,'sharedReferences':rd(R/'references.json'),'externalDependencyNotes':['All active style/layout/material references are inside D:/work/image and their hashes were validated for each native record.','All14 current tile native host outputs were copied byte-identically into workspace/native and retained at the original external source paths.','Generation record absolute paths and sourceOutputPath remain original provenance; relocation may need path resolution on the new computer, not source image regeneration.','Python runtime outside workspace is a tooling dependency only: C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe.'],'noNewRequestAfterFreeze':True}
+f=R/'migration-freeze-coordinate-audit-20261011.json';assert not f.exists();wr(f,report)
+print(json.dumps({'freezeRecord':str(f),'sha256':sh(f),'inFlight':False,'savedNativeCount':len(saved),'uncollected':0,'selectedCoreCount':len(selected['selected']),'missingPatches':never,'lastNativeSha256':report['lastCollected']['sha256']}))

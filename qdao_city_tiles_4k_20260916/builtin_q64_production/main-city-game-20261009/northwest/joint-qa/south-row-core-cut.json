@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "joint-8x8-zero-based",
+  "description": "Explicitly requested core-center binary cut for the reviewed r06_c05 bottom-row c2/c3 source pair. This file is not auto-loaded.",
+  "overrides": [
+    {
+      "id": "r06-c05-s04-c2-c3-core-center",
+      "axis": "vertical",
+      "row": 7,
+      "leftColumn": 5,
+      "rightColumn": 6,
+      "mode": "core-center",
+      "worldSeamX": 18432,
+      "reason": "The native pair audit found that unconstrained minimum-error selection switches between offset diagonal slab-joint positions, creating doubled or disconnected lines. The fixed core-center comparison is continuous at those crossings. Apply only this row's full native-height vertical cut; preserve source pixels and all other minimum-error joins.",
+      "expectedSourceSha256": {
+        "left": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089",
+        "right": "6eba7413a1657a025e6fb0b29391d2a38d0bca4dc2f2d95b94b5c2beebdf96c6"
+      },
+      "evidence": [
+        {
+          "file": "r06_c05/qa/south-row-completion-handoff.json",
+          "sha256": "13cef27ac521f6c7be8ec7a65d7b62dbcede28f0d91fbeff8cc6be2a2e7e6cff"
+        },
+        {
+          "file": "r06_c05/qa/south-row-audit-report.json",
+          "sha256": "9f953ed42b1c8ea4ee9ab529f47cf936abb5541e2335eb5eabfb790a3c880d6b"
+        },
+        {
+          "file": "r06_c05/qa/south-row-audit-internal-c2-c3.png",
+          "sha256": "dd665637e37b8e2ada2ef55d372521e59e1b6a376a8caeb3dc326427e1a600b9"
+        }
+      ]
+    }
+  ]
+}

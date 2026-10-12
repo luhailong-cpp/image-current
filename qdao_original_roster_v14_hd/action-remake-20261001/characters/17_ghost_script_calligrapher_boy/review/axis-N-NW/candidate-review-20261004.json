@@ -1,0 +1,50 @@
+{
+  "reviewedAt": "2026-10-04",
+  "scope": "N16 and NW15 foot-axis local edits; no runtime mutation",
+  "timing": {
+    "framesPerDirection": 16,
+    "frameDurationMs": 75,
+    "cycleDurationMs": 1200,
+    "independentPosesPerSupportPosition": 2
+  },
+  "configVerification": {
+    "date": "2026-10-04",
+    "sources": [
+      "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    ],
+    "actualModel": null,
+    "actualQuality": null,
+    "reason": "Builtin tool has no model or quality selectors and returned no confirming fields."
+  },
+  "candidates": [
+    {
+      "key": "run-N-16-v6",
+      "file": "staging/run-N-16-v6.png",
+      "sha256": "d97d2b772377f61770099c3fccd34974d88ecb6f6ecc88f397d6ddd4a5eaa416",
+      "recommendation": "do_not_replace_runtime_yet",
+      "targetObservation": "Left support ankle/heel/forefoot has become substantially straighter in rear N view. Isolated sideways sole tilt is removed.",
+      "sideEffect": "Anatomical RIGHT airborne boot was also repainted: narrow sole edge / descending pre-contact heel in original N16 becomes a broad complete sole at a more flexed angle. The other-leg invariant was not met and this weakens the 16-to-01 pre-contact transition.",
+      "otherDrift": "Head and prop identity retained, no count/hand swap. Small outline and supporting-heel lateral changes remain; not a pixel-identical local patch.",
+      "formalAcceptance": false
+    },
+    {
+      "key": "run-NW-15-v4",
+      "file": "staging/run-NW-15-v4.png",
+      "sha256": "75d38f5e2c91f801ad7c0fb035c2dbb37359261d14af40bd94d56fe94cca0329",
+      "recommendation": "preferred_candidate_pending_parent_sequence_review",
+      "targetObservation": "Near anatomical LEFT airborne shoe no longer forms the isolated nearly horizontal side-kick silhouette. Heel-to-forefoot axis is diagonal and visually bridges NW14 and NW16 while retaining physically plausible sole exposure.",
+      "sideEffect": "No observed leg-side exchange or loss of opposite support phase. Right supporting boot retains forward-left toe direction and planted silhouette.",
+      "otherDrift": "Small head/arm/prop contour and placement changes visible on comparison, so not pixel-identical outside the target. Same right-brush/left-scroll, exactly two spirits, and same NW camera; no new large pose jump observed at 240px.",
+      "formalAcceptance": false
+    }
+  ],
+  "validation": "Both files native 1254x1254 RGBA. Alpha >128 pixels on top/right/bottom/left are all zero both native and after in-memory full-canvas1024x1024 LANCZOS; see candidate-file-check.json.",
+  "comparisonFiles": [
+    "N-candidate-full240.png",
+    "N-candidate-legs.png",
+    "NW-candidate-full240.png",
+    "NW-candidate-legs.png"
+  ],
+  "runtimeUnchanged": true
+}

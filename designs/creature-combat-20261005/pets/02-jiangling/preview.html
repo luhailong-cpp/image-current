@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>绛铃 · 战斗动作验收</title>
+<style>
+:root{color-scheme:light;--jade:#20584d;--jade-dark:#153e37;--paper:#f7f1e5;--gold:#b99b60;--ink:#243c33;--muted:#716b5b;--line:#d7c9a7;--danger:#923e31}
+*{box-sizing:border-box}body{margin:0;background:#eae5d8;color:var(--ink);font:15px/1.5 "Microsoft YaHei",system-ui,sans-serif}header{background:var(--jade);color:var(--paper);border-bottom:3px solid var(--gold);padding:26px max(24px,calc((100vw - 1580px)/2)) 24px}header small{color:#dfc998;letter-spacing:.16em}h1{font-size:29px;margin:5px 0 8px;font-weight:650}h1 span{font-size:17px;font-weight:400;margin-left:10px;color:#dfc998}p{margin:7px 0}.subtle{color:var(--muted);font-size:13px}header p{max-width:950px;color:#e6e8da;font-size:14px}.toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:18px 0}.toolbar label{display:flex;align-items:center;gap:6px}.separator{width:1px;height:26px;background:var(--line);margin:0 3px}main{max-width:1580px;margin:auto;padding:0 24px 35px}button,select{font:inherit;min-height:38px;border:1px solid var(--gold);border-radius:9px;padding:7px 12px;background:#fffaf0;color:var(--ink);cursor:pointer}button:hover{background:#ede3ca}button.primary{background:var(--jade);color:#fff8e6;border-color:var(--jade)}button.primary:hover{background:var(--jade-dark)}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #bf715b;outline-offset:3px}button:disabled{cursor:wait;opacity:.6}.summary{border:1px solid var(--line);border-radius:11px;padding:11px 15px;background:var(--paper);margin-bottom:18px;display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}.summary strong{font-size:14px}.summary .note{font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{min-width:0;border:1px solid var(--gold);border-radius:15px;overflow:hidden;background:var(--paper);box-shadow:0 4px 18px #3340320a}.card-head{padding:14px 17px 10px;display:flex;justify-content:space-between;gap:8px;align-items:start}.card h2{font-size:19px;margin:0}.direction{font-size:12px;color:var(--muted)}.badge{font-size:12px;padding:3px 8px;background:#e5dfca;border-radius:6px;white-space:nowrap}.stage{aspect-ratio:1;position:relative;background-color:#e1e2d9;background-image:linear-gradient(45deg,#cdd2c7 25%,transparent 25%),linear-gradient(-45deg,#cdd2c7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#cdd2c7 75%),linear-gradient(-45deg,transparent 75%,#cdd2c7 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0;border-block:1px solid var(--line)}body[data-bg="dark"] .stage{background:#20332d}body[data-bg="light"] .stage{background:#fff8e9}.frame-image{position:absolute;width:100%;height:100%;object-fit:contain;inset:0}.missing{position:absolute;inset:0;display:grid;align-content:center;justify-items:center;text-align:center;color:var(--danger);background:#f5f0e6cc;padding:20px}.missing[hidden]{display:none}.missing b{font-size:19px}.missing code{font-size:12px;word-break:break-all;margin-top:8px}.anchor{position:absolute;left:50%;top:92%;width:18px;height:18px;transform:translate(-50%,-50%);pointer-events:none;opacity:0}.anchor:before,.anchor:after{content:"";position:absolute;background:#a63e33}.anchor:before{width:18px;height:1px;top:8px}.anchor:after{width:1px;height:18px;left:8px}body.show-anchor .anchor{opacity:.85}.controls{padding:13px 15px 15px}.frame-info{display:flex;justify-content:space-between;gap:5px;min-height:24px;font-size:13px;font-variant-numeric:tabular-nums}.event{color:#935d2f;font-weight:650}.seek{display:block;accent-color:var(--jade);width:100%;margin:11px 0 12px}.row{display:flex;gap:6px;flex-wrap:wrap}.row button,.row select{font-size:13px;min-height:34px;padding:5px 9px}.row .play{min-width:60px}.foot{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12px;color:var(--muted)}.foot a{color:var(--jade)}.frame-errors{font-size:12px;color:var(--danger);min-height:18px;margin-top:7px}.disclaimer{border-top:1px solid var(--line);padding-top:17px;margin-top:24px;color:var(--muted);font-size:13px}.disclaimer a{color:var(--jade)}@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){main{padding:0 13px 25px}header{padding:20px 17px}h1{font-size:25px}h1 span{display:block;margin:3px 0 0}.grid{grid-template-columns:1fr}.toolbar{gap:7px}.separator{display:none}}
+</style>
+<body data-bg="checker">
+<header><small>五行奇谈 · 素材验收</small><h1>绛铃<span>受击 / 普攻 / 施法</span></h1><p>右手三铃折扇，左手空手。E 为斜前朝右下；W 为真正斜后朝左上。逐帧核对手足、扇铃、衣褶与回收，原地蓄力和反冲不应变为移动循环。</p></header>
+<main>
+<div class="toolbar" aria-label="全部动作控制">
+<button class="primary" id="play-all">全部播放</button><button id="pause-all">全部暂停</button><button id="restart-all">全部回首帧</button>
+<span class="separator"></span><button id="normal-all">正常 1×</button><button id="slow-all">慢放 0.25×</button>
+<label>背景 <select id="background"><option value="checker">透明棋盘</option><option value="dark">深玉绿</option><option value="light">浅米白</option></select></label>
+<label><input type="checkbox" id="anchor-toggle">锚点</label><button id="reload">重新读取帧</button>
+</div>
+<div class="summary" aria-live="polite"><strong id="loaded-status">正在检查 68 张正式帧…</strong><span class="note">技术检查、逐帧美术检查、连续播放与客户端验收分别记录。</span></div>
+<section class="grid" id="groups" aria-label="六组动画"></section>
+<div class="disclaimer"><p>每组可单独播放、暂停、慢放、逐帧前后查看；拖动滑块会暂停该组。受击每帧 40 ms，普攻 30 ms，施法 45 ms。按浏览器刷新周期显示，实际间隔可能受显示器与后台标签页影响；这里只做素材预览，未验证游戏客户端。</p><p>缺帧会保留对应帧位并显示路径，不会复制、镜像、跳过或补帧。页面只缩放显示 PNG；底锚点为左下 [0.5, 0.08]（顶部坐标约 [512, 942]），不自动对齐脚底。<a href="qa/technical-check.json" target="_blank">技术记录</a> · <a href="manifest.json" target="_blank">交付清单</a> · <a href="POSES.md" target="_blank">姿态合同</a></p></div>
+</main>
+<script>
+'use strict';
+const SPECS = [{action:'hit',name:'受击',count:6,ms:40,event:3,eventName:'受击点'}, {action:'attack',name:'普攻',count:12,ms:30,event:7,eventName:'主击点'}, {action:'cast',name:'施法',count:16,ms:45,event:10,eventName:'释放点'}];
+const groupRoot=document.querySelector('#groups'), groups=[];
+let reloadToken=0;
+function pathFor(group,index){return `runtime/${group.action}/${group.direction}/${String(index+1).padStart(2,'0')}.png`;}
+function setPlaying(group,value){group.playing=value;group.elapsed=0;group.playButton.textContent=value?'暂停':'播放';group.playButton.setAttribute('aria-pressed',String(value));}
+function setSpeed(group,value){group.speed=Number(value);group.speedSelect.value=String(value);group.elapsed=0;}
+function render(group){
+  const frame=group.frames[group.index],path=pathFor(group,group.index);
+  group.counter.textContent=`${String(group.index+1).padStart(2,'0')} / ${group.count} · ${group.ms} ms · ${group.speed}×`;
+  group.eventLabel.textContent=group.index+1===group.event?group.eventName:'';
+  group.slider.value=group.index;
+  group.original.href=path;
+  if(frame?.status==='ready'){
+    if(group.displayedSrc!==frame.image.src){group.display.src=frame.image.src;group.displayedSrc=frame.image.src;}
+    group.display.hidden=false;group.missing.hidden=true;
+    group.error.textContent=frame.image.naturalWidth===1024&&frame.image.naturalHeight===1024?'':`尺寸异常：${frame.image.naturalWidth} × ${frame.image.naturalHeight}`;
+  }else{
+    group.display.hidden=true;group.missing.hidden=false;group.missingTitle.textContent=frame?.status==='error'?'此帧缺失或无法读取':'正在读取此帧';
+    group.missingPath.textContent=path;group.error.textContent=frame?.status==='error'?'保留真实缺帧状态，请检查文件后重新读取。':'';
+  }
+  const ready=group.frames.filter(f=>f.status==='ready').length,failed=group.frames.filter(f=>f.status==='error').length;
+  group.availability.textContent=`可读 ${ready}/${group.count}${failed?` · 缺失 ${failed}`:''}`;
+}
+function summarize(){
+  const all=groups.flatMap(g=>g.frames),ready=all.filter(f=>f.status==='ready').length,failed=all.filter(f=>f.status==='error').length,pending=68-ready-failed;
+  document.querySelector('#loaded-status').textContent=`正式帧可读 ${ready}/68${failed?` · 缺失或读取失败 ${failed}`:''}${pending?` · 读取中 ${pending}`:''} · 验收状态见交付清单`;
+}
+function loadGroup(group,token){
+  group.frames=Array.from({length:group.count},(_,index)=>({status:'loading',image:new Image()}));
+  group.frames.forEach((frame,index)=>{
+    frame.image.onload=()=>{if(token!==reloadToken)return;frame.status='ready';render(group);summarize();};
+    frame.image.onerror=()=>{if(token!==reloadToken)return;frame.status='error';render(group);summarize();};
+    frame.image.src=pathFor(group,index)+(token?`?reload=${token}`:'');
+  });render(group);
+}
+function createGroup(spec,direction){
+  const id=`${spec.action}-${direction}`,directionText=direction==='E'?'斜前 · 朝右下':'斜后 · 朝左上';
+  const card=document.createElement('article');card.className='card';card.id=id;
+  card.innerHTML=`<div class="card-head"><div><h2>${spec.name} · ${direction}</h2><span class="direction">${directionText}</span></div><span class="badge">${spec.count} 帧 · ${spec.count*spec.ms} ms</span></div><div class="stage"><img class="frame-image" alt="${spec.name} ${direction} 当前帧" hidden><div class="missing"><b></b><code></code></div><span class="anchor" aria-hidden="true"></span></div><div class="controls"><div class="frame-info"><span class="counter"></span><span class="event"></span></div><input class="seek" type="range" min="0" max="${spec.count-1}" value="0" step="1" aria-label="${spec.name} ${direction} 帧选择"><div class="row"><button class="primary play" aria-pressed="false">播放</button><button class="prev" aria-label="${spec.name} ${direction} 上一帧">← 逐帧</button><button class="next" aria-label="${spec.name} ${direction} 下一帧">逐帧 →</button><select class="speed" aria-label="${spec.name} ${direction} 播放速度"><option value="1">正常 1×</option><option value="0.25">慢放 0.25×</option></select></div><div class="foot"><span class="availability"></span><a class="original" target="_blank">打开当前原帧 ↗</a></div><div class="frame-errors" aria-live="polite"></div></div>`;
+  groupRoot.append(card);
+  const group={...spec,direction,index:0,speed:1,playing:false,elapsed:0,frames:[],displayedSrc:'',card,
+    display:card.querySelector('.frame-image'),missing:card.querySelector('.missing'),missingTitle:card.querySelector('.missing b'),missingPath:card.querySelector('.missing code'),counter:card.querySelector('.counter'),eventLabel:card.querySelector('.event'),slider:card.querySelector('.seek'),playButton:card.querySelector('.play'),speedSelect:card.querySelector('.speed'),availability:card.querySelector('.availability'),error:card.querySelector('.frame-errors'),original:card.querySelector('.original')};
+  group.playButton.onclick=()=>setPlaying(group,!group.playing);
+  card.querySelector('.prev').onclick=()=>{setPlaying(group,false);group.index=(group.index-1+group.count)%group.count;render(group);};
+  card.querySelector('.next').onclick=()=>{setPlaying(group,false);group.index=(group.index+1)%group.count;render(group);};
+  group.slider.oninput=()=>{setPlaying(group,false);group.index=Number(group.slider.value);render(group);};
+  group.speedSelect.onchange=()=>{setSpeed(group,group.speedSelect.value);render(group);};
+  groups.push(group);
+}
+for(const spec of SPECS)for(const direction of ['E','W'])createGroup(spec,direction);
+function reload(){reloadToken=Date.now();groups.forEach(g=>{setPlaying(g,false);loadGroup(g,reloadToken);});summarize();}
+document.querySelector('#play-all').onclick=()=>groups.forEach(g=>setPlaying(g,true));
+document.querySelector('#pause-all').onclick=()=>groups.forEach(g=>setPlaying(g,false));
+document.querySelector('#restart-all').onclick=()=>groups.forEach(g=>{setPlaying(g,false);g.index=0;render(g);});
+document.querySelector('#normal-all').onclick=()=>groups.forEach(g=>{setSpeed(g,1);render(g);});
+document.querySelector('#slow-all').onclick=()=>groups.forEach(g=>{setSpeed(g,.25);render(g);});
+document.querySelector('#background').onchange=e=>document.body.dataset.bg=e.target.value;
+document.querySelector('#anchor-toggle').onchange=e=>document.body.classList.toggle('show-anchor',e.target.checked);
+document.querySelector('#reload').onclick=reload;
+let previous=performance.now();
+function tick(time){
+  const delta=Math.min(time-previous,100);previous=time;
+  for(const group of groups){if(!group.playing)continue;group.elapsed+=delta*group.speed;const steps=Math.floor(group.elapsed/group.ms);if(steps){group.elapsed-=steps*group.ms;group.index=(group.index+steps)%group.count;render(group);}}
+  requestAnimationFrame(tick);
+}
+document.addEventListener('visibilitychange',()=>{previous=performance.now();groups.forEach(g=>g.elapsed=0);});
+groups.forEach(g=>loadGroup(g,reloadToken));summarize();requestAnimationFrame(tick);
+</script>
+</body></html>

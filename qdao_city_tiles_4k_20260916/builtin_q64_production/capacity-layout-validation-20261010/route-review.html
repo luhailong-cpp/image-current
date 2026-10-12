@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三图容量复核 · 连续通路与人物比例</title>
+<style>
+:root{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#193e38;background:#edf2ed;line-height:1.55}*{box-sizing:border-box}body{margin:0}header{background:#fffdf5;padding:18px 24px;border-bottom:1px solid #cbd7cf}h1{font-size:23px;margin:0 0 4px}header p{margin:0;color:#5d7268;font-size:13px}main{max-width:1640px;margin:auto;padding:18px}.controls{display:flex;flex-wrap:wrap;gap:14px;align-items:end;background:white;border:1px solid #cfdbd2;padding:12px 15px;border-radius:9px}label{font-size:12px;color:#466257}select,button{font:inherit;min-height:36px;padding:5px 10px;border:1px solid #b9cbbf;border-radius:6px;background:white;color:#193e38;cursor:pointer}label select{display:block;font-size:14px}.checks{display:flex;align-items:center;gap:12px;align-self:center}.checks label{font-size:13px}input{accent-color:#19715b}button:focus-visible,select:focus-visible,input:focus-visible,canvas:focus-visible{outline:3px solid #bf983f;outline-offset:3px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.metric{padding:12px 16px;background:white;border:1px solid #cddbd0;border-radius:8px}.metric span{display:block;font-size:12px;color:#607369}.metric b{display:block;font-size:23px;font-variant-numeric:tabular-nums}.metric small{font-size:11px;color:#6b7e72}.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px}.stage{position:relative;background:#19382f;border-radius:9px;overflow:hidden;border:1px solid #b4c9b9}canvas{display:block;width:100%;height:clamp(500px,calc(100vh - 280px),1000px);touch-action:none;cursor:grab}.badge{position:absolute;top:10px;left:12px;background:#14392ede;color:white;font-size:12px;padding:5px 9px;border-radius:5px;pointer-events:none}.legend{display:flex;flex-wrap:wrap;gap:12px;background:#e1ebe0;padding:9px 12px;font-size:12px}.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.sidebar{background:#fffef8;border:1px solid #d2dccc;border-radius:8px;padding:14px;font-size:13px;max-height:calc(100vh - 240px);overflow:auto}.sidebar h2{font-size:15px;margin:2px 0 9px}.sidebar p{margin:6px 0 12px}.sidebar ul{padding-left:18px}.sidebar li{margin:7px 0}.notice{border-left:4px solid #af8741;padding:10px 14px;background:#fff8e6;margin:13px 0;font-size:13px}.note{font-size:12px;color:#607568}.alert{color:#98462a}a{color:#176b57}#error{background:#ffebe0;padding:14px;color:#a03922}#error[hidden]{display:none}footer{font-size:12px;color:#647869;margin-top:13px}@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{max-height:none}.metrics{grid-template-columns:1fr 1fr}main{padding:10px}canvas{height:65vh}}
+</style>
+</head>
+<body>
+<header><h1>三图容量复核 · 连续通路与人物比例</h1><p>同一地图分散活动 5000 人。先留路，再排脚点；下列尺寸与间距是比较方案，尚未修改正式地图。</p></header>
+<main>
+<div id="error" hidden role="alert"></div>
+<section class="controls" aria-label="复核选项">
+<label>地图<select id="map" aria-label="地图"><option value="main">主城</option><option value="village">渔村</option><option value="island" selected>八仙岛</option></select></label>
+<label>主城试验边长<select id="size" aria-label="主城试验边长"><option>300</option><option>400</option><option selected>500</option><option>600</option></select></label>
+<label>脚点间距（试验）<select id="spacing" aria-label="脚点间距"><option value="1">1</option><option value="1.5">1.5</option><option value="2">2</option><option value="2.5" selected>2.5</option><option value="3">3</option></select></label>
+<label>人物显示<select id="actors" aria-label="人物显示"><option value="points" selected>脚点</option><option value="sprites">真实角色</option><option value="none">隐藏人物</option></select></label>
+<div class="checks"><label><input id="routes" type="checkbox" checked>预留通路</label><label><input id="doors" type="checkbox">门框样本</label></div>
+<button id="fit">全图</button><button id="zoom">局部放大 ×4</button>
+</section>
+<section class="metrics" aria-live="polite">
+<div class="metric"><span>留路后可选脚点</span><b id="slots">—</b><small>目标 5000；只计算最大可见连通片</small></div>
+<div class="metric"><span>计划人数 / 画面实际点数</span><b id="count">—</b><small id="sample">载入中</small></div>
+<div class="metric"><span>有净空路径的功能锚点</span><b id="links">—</b><small>不能替代门洞、台阶与导航验收</small></div>
+<div class="metric"><span>当前地图试验边长</span><b id="world">—</b><small>村岛面积各为主城 75%</small></div>
+</section>
+<div class="layout">
+<section class="stage" aria-label="地图与通路"><canvas id="canvas" tabindex="0" aria-label="地图预览：滚轮缩放，拖拽平移，方向键平移"></canvas><div class="badge" id="badge">载入数据</div><div class="legend"><span><i style="background:#3edcb7"></i>连续预留通路</span><span><i style="background:#fff39b"></i>候选脚点</span><span><i style="background:#eb7152"></i>尚未连通的锚点</span></div></section>
+<aside class="sidebar"><h2>本次能说明什么</h2><p>5000 人可以分布在同一地图；人物绘制范围、网络同步和碰撞行为需要分别核验。</p><p id="ratio"></p><p id="routeNote"></p><h2>待核对入口</h2><ul id="issues"></ul><h2>制作决定</h2><p>保留现有美术。先核对这里标出的院口、门楼遮挡与连接处；上轮 5～6 单位的宽松排布不足，不构成整图重画的理由。</p><p class="note">红色表示当前保守图像标注未连通；不代表已经证实游戏里封路。宽度不足提示针对选中的路线，不能排除其他绕行路线。</p><a href="review.html">查看上一轮宽松间距实验</a></aside>
+</div>
+<p class="notice"><strong>当前状态：布局预检，未通过 5000 人游戏运行验收。</strong>脚点间距、3 单位预留路宽均为实验参数。站位圆盘不重叠不等于精灵、武器、名字互不遮挡；角色世界画框约 9.846，保持客户端原比例。此页没有改变原图、人物或世界尺寸。</p>
+<footer id="source"></footer>
+</main>
+<script src="results.js"></script><script src="population-probe.js"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),data=window.POPULATION_PROBE,art=window.CAPACITY_REVIEW;
+const canvas=$('canvas'),ctx=canvas.getContext('2d'),state={zoom:1,dx:0,dy:0,w:1,h:1,dpr:1,drag:null,map:null,scene:null,route:null,source:null};
+const images=new Map(),groundMasks=new Map(),routeLayers=new Map();
+const n=(v,d=0)=>Number(v).toLocaleString('zh-CN',{maximumFractionDigits:d});
+function fail(s){$('error').hidden=!s;$('error').textContent=s;}
+function getImage(url){if(images.has(url))return images.get(url);const im=new Image();im.onload=draw;im.onerror=()=>fail('有原图或角色图片无法解码，请勿按当前画面验收。');im.src=url;images.set(url,im);return im;}
+function camera(){const scale=Math.min(state.w/1254,state.h/1254)*state.zoom;return {s:scale,x:(state.w-1254*scale)/2+state.dx,y:(state.h-1254*scale)/2+state.dy};}
+function trace(c,points){if(!points?.length)return;c.beginPath();c.moveTo(points[0][0],points[0][1]);for(let i=1;i<points.length;i++)c.lineTo(points[i][0],points[i][1]);}
+function ground(){const id=state.map.map;if(groundMasks.has(id))return groundMasks.get(id);const o=document.createElement('canvas');o.width=o.height=1254;const c=o.getContext('2d'),a=state.source.annotation;c.fillStyle='white';for(const p of a.walkablePolygons){trace(c,p.points);c.closePath();c.fill();}c.globalCompositeOperation='destination-out';for(const p of a.obstaclePolygons){trace(c,p.points);c.closePath();c.fill();}groundMasks.set(id,o);return o;}
+function routes(){const key=state.map.map+':'+state.scene.mainWorldSide;if(routeLayers.has(key))return routeLayers.get(key);const o=document.createElement('canvas');o.width=o.height=1254;const c=o.getContext('2d');c.lineCap='round';c.lineJoin='round';c.strokeStyle='#36d7ad';c.globalAlpha=.55;c.lineWidth=3*1254/state.scene.mapWorldSide;for(const p of state.route.routePolylines||[]){trace(c,p.polyline||p.points||p);c.stroke();}c.globalAlpha=1;c.globalCompositeOperation='destination-in';c.drawImage(ground(),0,0);routeLayers.set(key,o);return o;}
+function update(){
+state.map=data.maps.find(m=>(m.map||m.id)===$('map').value);state.scene=state.map.scenarios.find(s=>s.mainWorldSide===Number($('size').value)&&s.spacing===Number($('spacing').value));state.route=state.map.routeScenarios.find(s=>s.mainWorldSide===Number($('size').value));state.source=art.maps.find(m=>m.id===$('map').value);
+if(!state.scene||!state.route){fail('当前组合缺少数据；不会推造站位。');return;}fail('');
+const s=state.scene,c=s.counts,un=state.route.unreachableAnchors||[],total=state.source.annotation.anchors.length;
+$('slots').textContent=n(c.afterCorridor);$('count').textContent=n(c.placed)+' / '+n(s.positions.length);$('sample').textContent=s.positionsAreSample?'画面仅含抽样，计划人数来自全量计算':'当前方案绘制全部实际选定脚点';$('links').textContent=(total-un.length)+' / '+total;$('world').textContent=n(s.mapWorldSide,2);
+$('ratio').textContent='当前角色画框约 '+n(9.846*1254/s.mapWorldSide,1)+' 原图像素。切换真实角色与门框样本，可检查建筑比例。';
+$('routeNote').textContent='先连接可达入口与中央广场，再排除通路及脚底缓冲区。'+(state.route.narrowSpots?.length?'部分路段的试验宽度尚未证实。':'');
+$('issues').replaceChildren();if(!un.length){const li=document.createElement('li');li.textContent='此标注中入口均可达；真实导航尚未验收。';$('issues').append(li);}for(const a of un){const li=document.createElement('li');li.textContent=a.label||a.id;$('issues').append(li);}
+$('source').textContent='本地数据：'+(data.generatedAt||'')+' · 原图 SHA 与文字来源记录保存在本目录 · 仅静态几何预检';getImage(state.source.annotation.imageUrl);draw();
+}
+function draw(){ctx.setTransform(state.dpr,0,0,state.dpr,0,0);ctx.fillStyle='#19382f';ctx.fillRect(0,0,state.w,state.h);if(!state.scene)return;const c=camera(),a=state.source.annotation,s=state.scene,im=getImage(a.imageUrl);ctx.save();ctx.translate(c.x,c.y);ctx.scale(c.s,c.s);if(im.complete&&im.naturalWidth)ctx.drawImage(im,0,0,1254,1254);if($('routes').checked)ctx.drawImage(routes(),0,0);const mode=$('actors').value;
+if(mode!=='none')for(let i=0;i<s.positions.length;i++){const [x,y]=s.positions[i];if(x*c.s+c.x<-50||x*c.s+c.x>state.w+50||y*c.s+c.y<-50||y*c.s+c.y>state.h+50)continue;if(mode==='sprites'){const actor=art.actors[i%art.actors.length],sprite=getImage(actor.imageUrl),size=actor.frameWorldHeight*1254/s.mapWorldSide;if(sprite.complete&&sprite.naturalWidth)ctx.drawImage(sprite,x-size*.5,y-size*.92,size,size);}else{ctx.fillStyle='#fff0a3';ctx.beginPath();ctx.arc(x,y,Math.max(.8,1/c.s),0,Math.PI*2);ctx.fill();}}
+const bad=new Set((state.route.unreachableAnchors||[]).map(a=>a.id));for(const anchor of a.anchors){const[x,y]=anchor.point;ctx.fillStyle=bad.has(anchor.id)?'#f17955':'#9ff8e6';ctx.strokeStyle='#19382f';ctx.lineWidth=1.2/c.s;ctx.beginPath();ctx.arc(x,y,(bad.has(anchor.id)?5:3)/c.s,0,Math.PI*2);ctx.fill();ctx.stroke();if(bad.has(anchor.id)&&state.zoom>=3){ctx.font=(12/c.s)+'px "Microsoft YaHei"';ctx.lineWidth=3/c.s;ctx.strokeText(anchor.label,x+7/c.s,y);ctx.fillStyle='white';ctx.fillText(anchor.label,x+7/c.s,y);}}
+if($('doors').checked){ctx.strokeStyle='#ffbafb';ctx.lineWidth=2/c.s;for(const d of a.doorSamples){const[l,t,r,b]=d.box;ctx.strokeRect(l,t,r-l,b-t);}}
+ctx.restore();$('badge').textContent='×'+state.zoom.toFixed(1)+' · '+(s.positionsAreSample?'抽样 ':'全部 ')+n(s.positions.length)+' 个脚点'+(mode==='none'?' · 人物隐藏':'');
+}
+function reset(z=1){state.zoom=z;state.dx=state.dy=0;draw();}
+function resize(){const r=canvas.getBoundingClientRect();state.w=r.width;state.h=r.height;state.dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*state.dpr);canvas.height=Math.round(r.height*state.dpr);draw();}
+canvas.addEventListener('wheel',e=>{e.preventDefault();const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,b=camera(),ix=(x-b.x)/b.s,iy=(y-b.y)/b.s;state.zoom=Math.max(.5,Math.min(12,state.zoom*Math.exp(-e.deltaY*.0015)));const a=camera();state.dx+=x-(a.x+ix*a.s);state.dy+=y-(a.y+iy*a.s);draw();},{passive:false});
+canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;state.drag={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});canvas.addEventListener('pointermove',e=>{const d=state.drag;if(!d||d.id!==e.pointerId)return;state.dx+=e.clientX-d.x;state.dy+=e.clientY-d.y;d.x=e.clientX;d.y=e.clientY;draw();});for(const event of ['pointerup','pointercancel'])canvas.addEventListener(event,e=>{state.drag=null;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);});canvas.addEventListener('keydown',e=>{const dirs={ArrowLeft:[40,0],ArrowRight:[-40,0],ArrowUp:[0,40],ArrowDown:[0,-40]};if(dirs[e.key]){e.preventDefault();state.dx+=dirs[e.key][0];state.dy+=dirs[e.key][1];draw();}});
+for(const id of ['map','size','spacing'])$(id).addEventListener('change',()=>{if(id==='map')reset();update();});for(const id of ['routes','doors','actors'])$(id).addEventListener('change',draw);$('fit').onclick=()=>reset();$('zoom').onclick=()=>reset(4);new ResizeObserver(resize).observe(canvas);
+if(!data?.maps||!art?.maps){fail('缺少静态计算数据，请检查 population-probe.js 和 results.js。');return;}update();resize();
+})();
+</script>
+</body></html>

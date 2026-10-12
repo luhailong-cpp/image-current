@@ -1,0 +1,43 @@
+{
+  "worker": "e_cast",
+  "status": "runtime-and-native-frozen; root owns final repairs, normalization, playback, cleanup",
+  "completedInitialFrames": 16,
+  "action": "cast",
+  "direction": "E",
+  "durationMs": 45,
+  "tool": "builtin image_gen",
+  "actualModel": null,
+  "actualQuality": null,
+  "lastCall": {
+    "cellId": "47",
+    "status": "completed",
+    "outputs": [
+      {
+        "frame": 5,
+        "exportSha256": "380fdd593134bf60c4374159d414e67027241cd19b0402fccc25d22e3f88e350",
+        "receipt": "records/cast-E-05.receipt.json",
+        "request": "records/cast-E-05.request.json"
+      },
+      {
+        "frame": 6,
+        "exportSha256": "6c513ab08159cf2956988a53256d144b9d38b8807cc0df04895175a1e1f5d7f7",
+        "receipt": "records/cast-E-06.receipt.json",
+        "request": "records/cast-E-06.request.json"
+      }
+    ]
+  },
+  "visualChecks": {
+    "eachGeneratedFrameViewed": true,
+    "sideBySideSupportViewed": true,
+    "repairs": "02 extra low forepaw removed by e_cast; support02/04 delegated; support05/06 had two revisions, root subsequently owns final selection; 16 retained per root",
+    "playback": "not claimed by this worker; root final review pending"
+  },
+  "safety": {
+    "noClientOrSiblingRepositoryReads": true,
+    "noGitWrites": true,
+    "noAPIOrCLIImageGeneration": true,
+    "noInterpolatedOrDuplicateFrames": true
+  },
+  "cleanup": "Not performed per root takeover message; .native currently under root ownership",
+  "completedAt": "2026-10-05T19:05:29.821Z"
+}

@@ -1,0 +1,56 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Inpaint only the temporary two-color annotation corridor in image1 at native1254x1254. Image2 approved city layout, image3 natural stone detail, image4 approved Daoist style; image5 is the unannotated original for unchanged texture, material, grout and roof.\nThe magenta and cyan are temporary inpainting labels, not art. Replace all MAGENTA pixels with the adjacent CREAM paving texture. Replace all CYAN pixels with the adjacent MUTED BLUE-GRAY paving texture. The exact straight interface between these two annotation colors is the required finished cream/blue boundary. Render a thin groove and cream bevel precisely on that interface, while respecting the exact existing marked coordinates: left endpoint(0,1080), right endpoint(1253,193). Cream above, blue below. Do not move the interface or shrink the cream band. The annotations fully cover the old disconnected fragments and notch; all of those old fragments must disappear in favor of this one boundary.\nKeep all unannotated source pixels exactly like image5, including upper gray/cream band, unrelated descending joints, roof gold/teal silhouette and its colors. The existing descending grout ends cleanly at the corrected cream/blue boundary, without moving the source joint elsewhere. Match the original natural brush texture, quiet stone, line weight and daylight. Preserve native pixel scale. Return exactly1254x1254; no magenta, cyan, red, guide line, rectangle, text, new object, layout shift or rescaling. The only change is natural painted cream/blue material and its continuous thin boundary within the temporary corridor.",
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\repairs-resume-20261012\\blue-infill-control-left-v06\\input.png",
+      "sha256": "002f5d43a69160ac0abeac2681b4304b297184edf0f4429045a675f9dd4d9048",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "dimensions": [
+        1932,
+        814
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\repairs-resume-20261012\\blue-infill-control-left-v06\\clean-original-support.png",
+      "sha256": "ae198fda076da29b4644bfaa1fe3748448472310629509af08fbe407df20ecd5",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "clean original protected materials and geometry"
+    }
+  ],
+  "transparent_background": false,
+  "actualModel": null,
+  "actualQuality": null,
+  "requestedSize": [
+    1254,
+    1254
+  ],
+  "maximumFeatherPixels": 2,
+  "preparedAtUtc": "2026-10-12T16:04:43.099591+00:00"
+}

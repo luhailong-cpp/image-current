@@ -1,0 +1,119 @@
+{
+  "name": "stair-lower-v01",
+  "prompt": "Use case: precise-object-edit. Edit Image 1 only, exactly native 1254x1254 opaque PNG. The image is a tightly cropped view of the lower pale-grey stairs. The artificial division at x=627 makes each horizontal stone riser suddenly darker on the right, and abruptly changes its tiny stone texture. Correct this one vertical division with a gentle continuous grey value and consistent subtle stone texture, limited to x=450..850. All stair edges are fixed at exactly the same coordinates. Preserve the current long horizontal illumination and distant right-side diagonal shadows; do not extend or create any diagonal shadow across the center, especially on the large lower risers. Keep the last 50 pixel rows exactly unchanged: they are an already approved intersection with adjacent world tiles. The right pale parapet remains exactly unchanged.\nImage 2 is the approved whole map layout only; do not reproduce its whole view. Image 3 is the approved daylight clean natural pale-grey stone finish. Image 4 gives polished Daoist chibi rendering only, not its UI, characters or nighttime framing. This is an extreme macro staircase crop. Keep all positions, perspective, number and depth of stairs, horizontal edges, narrow seams, rounded bevels and shadows exactly. Change ONLY the sharp vertical tonal/microtexture join near image x=627 into a natural gentle continuous material transition between the existing left and right grey stone surfaces. The faint stone material on both sides must continue through the join, without a seam, visible rectangular patch, abrupt color/texture divider, diagonal brush band or blurry patch. Match the same stone style, no new decorative detail. No extra stairs, lines, architecture, props or foliage. No resizing, reframing, photo blur or diagonal shadows.",
+  "promptFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\prompt.txt",
+  "promptSha256": "7a59eb746b387d6d3816737bdecff1bd4f56a6f0ab520ad70680cb6134e07e6f",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\input.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg"
+  ],
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\input.png",
+      "sha256": "3495fce3f43bb40714a10d26ef2ff2a2ae35306912d1f4da5c3fc16cafee68ed",
+      "role": "exact native edit target"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved overall layout"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved daylight materials"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "approved Daoist style"
+    }
+  ],
+  "worldBox": [
+    19853,
+    39706,
+    21107,
+    40960
+  ],
+  "maskWindowInPatch": [
+    410,
+    0,
+    915,
+    1210
+  ],
+  "sourceCrops": [
+    {
+      "tile": "r10_c05",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c05.candidate.png",
+      "sha256": "945692b4938ddf1f580ce454d0104ad650fe4474cc89a708b170386b37100fce",
+      "coreWorldBox": [
+        16384,
+        36864,
+        20480,
+        40960
+      ],
+      "sourceCrop": [
+        3469,
+        2842,
+        4096,
+        4096
+      ],
+      "destinationBox": [
+        0,
+        0,
+        627,
+        1254
+      ],
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c05.candidate.context.png",
+      "contextSha256": "e826705859294f6d51c4d0f693d2f900012d614999c6416e6343daf310008eb6",
+      "contextCoreEqualsCandidate": true
+    },
+    {
+      "tile": "r10_c06",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c06.candidate.png",
+      "sha256": "678ed629ba6fca8e3448574d312950bcfabc382e1fdd13fd88994c1b6c5914c9",
+      "coreWorldBox": [
+        20480,
+        36864,
+        24576,
+        40960
+      ],
+      "sourceCrop": [
+        0,
+        2842,
+        627,
+        4096
+      ],
+      "destinationBox": [
+        627,
+        0,
+        1254,
+        1254
+      ],
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c06.candidate.context.png",
+      "contextSha256": "69212cd4087c2639af0efbb24722fe7afe9a2190a26de4b2f1e9d6865f1030b2",
+      "contextCoreEqualsCandidate": true
+    }
+  ],
+  "requestedNativePixels": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "preparedAtUtc": "2026-10-11T08:57:44.352815+00:00",
+  "sourceResampling": false,
+  "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-lower-v01\\native.png",
+  "sha256": "c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0",
+  "sourceOutput": "C:/Users/luyua/.codex/generated_images/01a12970-a08f-7e92-bbb9-449640ed17be/exec-7b57e3a8-9436-4f6b-a3c0-2c5665b3bd24.png",
+  "sourceOutputSha256": "c61a7b87318ab953ac15a3f26e3ae10068acc1cb542d3727a3fa84d2e91892f0",
+  "actualNativePixels": [
+    1254,
+    1254
+  ],
+  "receivedAtUtc": "2026-10-11T09:13:39.431746+00:00",
+  "status": "returned_image",
+  "toolOutputHint": "Generated images are saved to C:\\Users\\luyua\\.codex\\generated_images\\01a12970-a08f-7e92-bbb9-449640ed17be as C:\\Users\\luyua\\.codex\\generated_images\\01a12970-a08f-7e92-bbb9-449640ed17be\\exec-7b57e3a8-9436-4f6b-a3c0-2c5665b3bd24.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

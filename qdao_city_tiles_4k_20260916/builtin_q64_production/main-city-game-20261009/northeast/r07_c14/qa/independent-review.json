@@ -1,0 +1,79 @@
+{
+  "tile": "r07_c14",
+  "reviewer": "/root/east_tile_resume/qa_r07",
+  "scope": "Independent visual review only; no native/candidate/progress edits",
+  "candidateSha256": "a842e94d3c8136292e3047e89fb2783a8e588f932e27daca8a38dec86a640a5a",
+  "viewedAtNativeResolution": true,
+  "resampling": false,
+  "reviewedFiles": [
+    "qa/final-review/v-row1-100pct.png",
+    "qa/final-review/v-row2-100pct.png",
+    "qa/final-review/v-row3-100pct.png",
+    "qa/final-review/v-row4-100pct.png",
+    "qa/final-review/h-col1-100pct.png",
+    "qa/final-review/h-col2-100pct.png",
+    "qa/final-review/h-col3-100pct.png",
+    "qa/final-review/h-col4-100pct.png",
+    "qa/final-review/north-1-100pct.png",
+    "qa/final-review/north-2-100pct.png",
+    "qa/final-review/north-3-100pct.png",
+    "qa/final-review/north-4-100pct.png",
+    "qa/final-review/west-1-100pct.png",
+    "qa/final-review/west-2-100pct.png",
+    "qa/final-review/west-3-100pct.png",
+    "qa/final-review/west-4-100pct.png"
+  ],
+  "montageInterpretation": "384 px joins between montage panels are not tile seams. True internal seam centers are 192, 576, and 960.",
+  "externalSourceShas": {
+    "north": "609ed58611561a612eec2f87ec95b21ca0c7a3712a2ef07585368f4287b99a66",
+    "west": "f6152184557308b5db907905cc9648e43fe06e9831d8c2a823a4b7fa2ad89a2c"
+  },
+  "status": "needs-shared-west-boundary-repair",
+  "newMustFix": [
+    {
+      "priority": "P2",
+      "area": "West shared stone wall, segments 3 and 4",
+      "candidateCoordinates": {
+        "x": 0,
+        "yApprox": 2208
+      },
+      "evidence": "west-3-100pct.png: right-hand diagonal mortar course starts at crop x=192, y≈160, while the left half remains uninterrupted stone. Similar uncoupled stone courses occur in west-4. This is a topology discontinuity, not only cream color difference.",
+      "suggestion": "Reconcile mortar geometry across actual final candidates on both sides of the shared edge; preserve architectural scale."
+    },
+    {
+      "priority": "P2",
+      "area": "West shared foliage, segment 4",
+      "candidateCoordinates": {
+        "x": 0,
+        "yRange": [
+          3567,
+          4095
+        ]
+      },
+      "evidence": "west-4-100pct.png: from crop y≈495 downward, leaves and dark foliage mass are abruptly clipped at crop x=192 (the shared tile edge), with cream wall immediately to the left.",
+      "suggestion": "Repair shared boundary to give foliage continuous leaf silhouettes, or move foliage silhouette off the exact seam using a native local repair."
+    }
+  ],
+  "knownIssueOwnedByParent": {
+    "priority": "P2",
+    "candidateApprox": [
+      3230,
+      1750
+    ],
+    "description": "Long eave height step inside p24; parent already repairing, not a newly raised duplicate."
+  },
+  "otherChecks": {
+    "internal24": "No additional structural discontinuity observed in the 24 seam strips represented by the eight montages.",
+    "north4": "Pass for structural continuity.",
+    "west1and2": "Pass for structural continuity.",
+    "lanternDoorGrillesColumnBases": "No additional structural break seen in reviewed windows.",
+    "hard230GuideBoundary": "No additional straight 230 px guide boundary identified in reviewed windows."
+  },
+  "minorObservations": [
+    {
+      "priority": "P3",
+      "description": "Small differences in blue glaze, cream stone and wood grain/lighting are cosmetic; do not expand repairs for these alone."
+    }
+  ],
+  "limitations": "Covers listed seam windows, not an exhaustive scan of every interior pixel. Existing P2 eave issue and shared west repairs remain for parent to close."
+}

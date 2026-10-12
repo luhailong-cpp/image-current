@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-10",
+  "scope": {
+    "clientRoot": "D:/work/mmorpg-client/",
+    "serverRoot": "D:/work/mmorpg/",
+    "mode": "read-only source review",
+    "runningBuildVerified": false,
+    "largeLoadTestRun": false,
+    "productionFilesModified": false
+  },
+  "conclusion": {
+    "gridSpacing5Or6RequiredByCode": false,
+    "gridFailureImpliesMapExpansion": false,
+    "map5000MeansAllVisibleAtOnce": false,
+    "capacity5000Validated": false,
+    "worldSizeApproved": false,
+    "wholeArtworkRedrawJustifiedByGridFailure": false,
+    "summary": "5/6 间距、1.45 检测半径、20% 留空属于自选静态视觉实验；不能据其失败推导扩大或重画地图。5000 同图分散人口、附近显示、静态通行及运行性能需要分别验证。"
+  },
+  "experimentalParameters": {
+    "spacingWorld": [
+      5,
+      6
+    ],
+    "clearanceRadiusWorld": 1.45,
+    "reservedFraction": 0.2,
+    "requirementStatus": "self-selected visual experiment, not client/server occupancy rule",
+    "firstTestedScaleMeaning": "first discrete tested scale that passed this selected grid experiment; not minimum map requirement"
+  },
+  "collision": {
+    "local": {
+      "type": "CharacterController",
+      "radiusWorld": 0.38,
+      "heightWorld": 1.8,
+      "skinWidthWorld": 0.057,
+      "rootPrimitiveColliderDisabled": true,
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg-client/Assets/Resources/World/Tianyong/TianyongMapConfig.asset",
+          "line": 24
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/TianyongPlayerController.cs",
+          "line": 145
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/TianyongPlayerController.cs",
+          "line": 159
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/TianyongPlayerController.cs",
+          "line": 468
+        }
+      ]
+    },
+    "remote": {
+      "createdAs": "default Unity Cube",
+      "assumedDefaultBoxSizeWorld": [
+        1,
+        1,
+        1
+      ],
+      "sourceRootLocalScale": [
+        1,
+        1,
+        1
+      ],
+      "boxColliderRetained": "source inference, not yet independently run",
+      "movement": "direct Transform interpolation",
+      "spriteSetup": "disables MeshRenderer; does not explicitly disable Collider",
+      "playerPassThroughGuaranteed": false,
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/ActorWorld.cs",
+          "line": 105
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/ActorWorld.cs",
+          "line": 169
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/ActorWorld.cs",
+          "line": 393
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+          "line": 180
+        }
+      ]
+    },
+    "server": {
+      "inspectedMovement": "velocity integration and static navmesh ValidateMove raycast",
+      "pairwisePlayerBlockingFoundInInspectedPath": false,
+      "legacyCrowdRadiusWorld": 0.6,
+      "legacyCrowdConfirmedActive": false,
+      "legacyCrowdSearch": "DtCrowdPtr creation/update not found in searched production scene source; do not infer active avoidance",
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/movement.cpp",
+          "line": 53
+        },
+        {
+          "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/nav_query.cpp",
+          "line": 86
+        },
+        {
+          "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/scene_crowd.cpp",
+          "line": 23
+        },
+        {
+          "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/constants/dt_crowd.h",
+          "line": 5
+        }
+      ]
+    }
+  },
+  "visual": {
+    "shadow": {
+      "renderer": "SpriteRenderer",
+      "widthWorld": 2.9,
+      "aspect": 0.66,
+      "heightWorld": 1.914,
+      "collisionDiameter": false,
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+          "line": 80
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+          "line": 669
+        }
+      ]
+    },
+    "sprite": {
+      "frameWorldHeight": 9.846153846153847,
+      "sourceFrameOptions": [
+        {
+          "pixels": 512,
+          "ppu": 52
+        },
+        {
+          "pixels": 1024,
+          "ppu": 104
+        }
+      ],
+      "frameIncludesTransparentArea": true,
+      "spriteOverlapMeansIllegalFeet": false,
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/QdaoBoySpriteAnimator.cs",
+          "line": 40
+        }
+      ]
+    },
+    "name": {
+      "defaultEmWorldHeight": 1.25,
+      "wrapping": "NoWrap",
+      "overflow": "Overflow",
+      "width": "actual text bounds; not a constant 5/6-world-unit width",
+      "closeZoomAdaptive": true,
+      "evidence": [
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/WorldNameplate.cs",
+          "line": 35
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/WorldNameplate.cs",
+          "line": 82
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/WorldNameplate.cs",
+          "line": 255
+        },
+        {
+          "path": "D:/work/mmorpg-client/Assets/Scripts/World/WorldLabelBillboard.cs",
+          "line": 101
+        }
+      ]
+    }
+  },
+  "aoi": {
+    "sourceDefaultInterestCapacity": 100,
+    "sourceMinInterestCapacity": 20,
+    "sourceMaxInterestCapacity": 200,
+    "sourcePlayerViewRadiusWorld": 10,
+    "liveClientGameObjectHardLimitProven": false,
+    "liveRuntimeConfigVerified": false,
+    "clientExtraNumericActorCapFoundInReceivePath": false,
+    "outstanding": [
+      "AOI priority replacement must send matching destroy notification",
+      "same-grid distance changes and reverse direction notifications need end-to-end checks",
+      "client-desired-capacity setter and scene-pressure runtime feed not verified"
+    ],
+    "evidence": [
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/constants/aoi_priority.h",
+        "line": 97
+      },
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/interest.cpp",
+        "line": 39
+      },
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/interest.cpp",
+        "line": 98
+      },
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/player/system/player_lifecycle.cpp",
+        "line": 2409
+      },
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/aoi.cpp",
+        "line": 62
+      },
+      {
+        "path": "D:/work/mmorpg/cpp/libs/services/scene/spatial/system/aoi.cpp",
+        "line": 158
+      },
+      {
+        "path": "D:/work/mmorpg-client/Assets/Scripts/Game/GameClient.cs",
+        "line": 1777
+      }
+    ]
+  },
+  "serverPopulation": {
+    "constantsFound": {
+      "maxPlayersPerScene": 1000,
+      "maxServerPlayerSize": 2000
+    },
+    "productionEnforcementOfTheseConstantsFound": false,
+    "searchObservation": "references found at definitions and scene tests; not enough to assert admission caps",
+    "sourceAutoscaleThreshold": 2000,
+    "sourceAutoscaleEnabledDefault": false,
+    "autoscaleThresholdIsAdmissionCap": false,
+    "evidence": [
+      {
+        "path": "D:/work/mmorpg/cpp/libs/engine/core/node/constants/node_constants.h",
+        "line": 5
+      },
+      {
+        "path": "D:/work/mmorpg/go/scene_manager/internal/config/config.go",
+        "line": 293
+      }
+    ]
+  },
+  "world": {
+    "oldPaintingPixels": [
+      6144,
+      6144
+    ],
+    "oldWorldRect": [
+      50,
+      0,
+      300,
+      300
+    ],
+    "oldPixelsPerWorldUnit": 20.48,
+    "oldNavigationCellWorld": 2,
+    "networkMapping": "server(x,y,z) -> Unity(y,z,x), no scale",
+    "newArtPixels": [
+      65536,
+      65536
+    ],
+    "newWorldSize": null,
+    "newDensityConfirmed": false,
+    "artPixelsAloneIncreaseCapacity": false,
+    "villageIslandWorldAreaRatioToMain": 0.75,
+    "evidence": [
+      {
+        "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/TianyongPaintedCity.cs",
+        "line": 31
+      },
+      {
+        "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/TianyongPaintedCity.cs",
+        "line": 58
+      },
+      {
+        "path": "D:/work/mmorpg-client/Assets/Scripts/World/WorldCoordinateConverter.cs",
+        "line": 28
+      },
+      {
+        "path": "D:/work/mmorpg-client/Assets/Scripts/World/Tianyong/CityTileStreaming.cs",
+        "line": 90
+      },
+      {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-contract.json",
+        "line": 23
+      },
+      {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/production-contract.json",
+        "line": 25
+      },
+      {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/production-contract.json",
+        "line": 25
+      }
+    ]
+  },
+  "conditionalGeometry": {
+    "mutuallyExclusiveEqualDiscs": {
+      "radiusWorld": 0.38,
+      "minimumCenterDistanceIgnoringMargins": 0.76,
+      "singleCorridorWidthIgnoringMargins": 0.76,
+      "twoParallelCorridorWidthIgnoringMargins": 1.52,
+      "isCurrentGlobalGameRule": false
+    },
+    "capsuleVsUnitAxisAlignedBox": {
+      "approximateFrontContactCenterDistanceIgnoringSkinAndSteps": 0.88,
+      "status": "geometry estimate only; needs engine probe"
+    },
+    "forbiddenInference": "neither 0.76 nor 5/6 proves playable map population"
+  },
+  "recommendedTests": [
+    {
+      "id": "local-remote-physics",
+      "scale": "2–10 actors in independent Unity probe",
+      "goal": "CharacterController.Move vs default remote Cube; four directions, diagonal, transform overlap",
+      "capacity5000Validation": false
+    },
+    {
+      "id": "navigation-connectivity",
+      "scale": "final actual navigation and entrances",
+      "goal": "legal footpoints, connected doors, towers, shops, village paths, island homes",
+      "capacity5000Validation": false
+    },
+    {
+      "id": "aoi-nearby",
+      "scale": "50/100/200 nearby entities in isolated test",
+      "goal": "create/destroy, eviction, same-grid transitions, no retained ghosts",
+      "capacity5000Validation": false
+    },
+    {
+      "id": "device-visual",
+      "scale": "real names/sprites/animations at nearby counts",
+      "goal": "overlap, picking, frame time and memory on target phones",
+      "capacity5000Validation": false
+    },
+    {
+      "id": "same-scene-5000",
+      "scale": "5000 simultaneously in same sceneId and lineId; distributed movement and hotspots",
+      "goal": "server ticks/network/errors plus client nearby counts and target-device performance",
+      "run": false
+    }
+  ],
+  "subsequentPhysicsProbe": {
+    "authorized": true,
+    "directory": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-validation-20261010/physics-probe-project",
+    "attempted": true,
+    "completed": false,
+    "status": "blocked-before-test-execution",
+    "testScriptExecuted": false,
+    "physicsBehaviorValidated": false,
+    "exitCodeReportedByUnityLog": 198,
+    "logPath": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-validation-20261010/physics-probe-project/unity-probe.log",
+    "statusPath": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/capacity-layout-validation-20261010/physics-probe-project/probe-status.json",
+    "meaning": "collision semantics only, never full-client/5000 capacity validation"
+  }
+}

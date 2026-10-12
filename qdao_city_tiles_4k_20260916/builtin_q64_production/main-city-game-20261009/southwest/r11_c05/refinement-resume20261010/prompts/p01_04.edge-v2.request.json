@@ -1,0 +1,107 @@
+{
+  "id": "p01_04.edge-v2",
+  "createdAtUtc": "2026-10-10T11:00:50.339181+00:00",
+  "status": "prepared_not_submitted",
+  "prompt": "Use case: precise-object-edit. Edit IMAGE 1 ONLY, preserving its native 1254 x 1254 square size and exact crop. Return one opaque PNG.\nThis is a microscopic seam repair. At the narrow vertical join around x=230, a few otherwise horizontal stair grout lines have tiny 2-4 pixel stair-step notches. Repair ONLY those small notches: make each horizontal stair edge flow smoothly and continuously through this join. Pay particular attention to the dark line around y=558. Preserve each edge everywhere else and preserve the original number, width, perspective and spacing of stairs. No new vertical joints.\nKeep the existing stone colors, surface texture, shadows and highlights identical. Do not repaint broad surfaces or redesign anything. Top 230 pixels and bottom 230 pixels must remain unchanged. Only the narrow x=180..280 joining area around affected horizontal grooves needs correction. No zoom, no added objects, no text.\nImage 2 is the actual upper neighbor overlap for continuity only; last three are approved layout/material/style references, not compositions to reproduce. Exact native output 1254 x 1254.",
+  "promptFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\prompts\\p01_04.edge-v2.prompt.txt",
+  "promptSha256": "782f6d6f73126c01222960a77ad9036da3cde8207d057113226f1a5c2466fd4c",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\native\\p01_04.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\inputs\\p01_04.north-native-230.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg"
+  ],
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\native\\p01_04.png",
+      "sha256": "1ff6899ab2d644c64b86fde0847839d58e8ee62ca4d55be8426b31e5c715f74a",
+      "role": "1254x1254 actual native edit target; straighten tiny stair-edge notches only",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\inputs\\p01_04.north-native-230.png",
+      "sha256": "9979b9aefef3053b5983d7745b9480cf20167c2536b117937bcc73c8517e4234",
+      "role": "exact top 230px native r10 border at identical pixel scale",
+      "pixels": [
+        1254,
+        230
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved city layout: context only, never widen crop",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved natural stone material and daylight",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "approved rounded Daoist style; never copy UI",
+      "pixels": [
+        1932,
+        814
+      ]
+    }
+  ],
+  "targetOriginal": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\native\\p01_04.png",
+    "sha256": "9657ae6cbdc80abda6f98ba1a9c852a1156b7d5e622f50723450d131bf1edd31",
+    "role": "unmodified original generation",
+    "pixels": [
+      1254,
+      1254
+    ]
+  },
+  "northSource": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\borders\\r10-south-native-overlap.png",
+    "sha256": "5ca1f96d7b7e380d01469945cc211b4dbae951db27163a5a6838de84dea5d02d",
+    "role": "unified native r10 south overlap; cropped only",
+    "pixels": [
+      4326,
+      230
+    ]
+  },
+  "expectedNativePixels": [
+    1254,
+    1254
+  ],
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "transparent_background": false
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "builtInOnly": true,
+  "embeddedNeighborSources": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\inputs\\p01_04.left-native-230.png",
+      "sha256": "5ebc76561d13c49dc2b1ba26210cd4199a18e303a12bb2f5afee1c388d5d90a7",
+      "role": "exact left neighbor 230px overlap; color and stair geometry anchor",
+      "pixels": [
+        230,
+        1254
+      ]
+    }
+  ],
+  "previousRepairNative": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\native\\p01_04.png",
+    "sha256": "1ff6899ab2d644c64b86fde0847839d58e8ee62ca4d55be8426b31e5c715f74a"
+  }
+}

@@ -1,0 +1,4 @@
+from pathlib import Path
+import json,hashlib,sys
+W=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05');n=sys.argv[1];note=sys.argv[2];p=W/'receipts'/(n+'.request.json');q=json.loads(p.read_text());pf=Path(q['promptFile']);q['prompt']+='\n'+note;pf.write_text(q['prompt'],encoding='utf8');q['promptSHA256']=hashlib.sha256(pf.read_bytes()).hexdigest();q['policyEvidence']={'AGENTS':hashlib.sha256(Path(r'D:/work/image/AGENTS.md').read_bytes()).hexdigest(),'split':hashlib.sha256(Path(r'D:/work/image/docs/MAP_PARALLEL_SPLIT_20261013.json').read_bytes()).hexdigest(),'modelPreference':'existing builtin included route; actual model/quality unavailable=null'};p.write_text(json.dumps(q,indent=2),encoding='utf8');print(json.dumps(q))
+

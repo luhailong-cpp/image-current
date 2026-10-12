@@ -1,0 +1,2130 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-05T03:50:22.201Z",
+  "reviewer": "finish_north_pairs 子代理，逐格人工视觉观察并对关键原图复核",
+  "status": "visual_passed_subagent_pending_root",
+  "scope": "N/NE跑步32帧+E/W受击12、普攻24、施法32，共100张；仅本轮腿脚轴线审查，不重新核准全部美术或客户端",
+  "triggerEvidence": [
+    "C:/Users/luyua/AppData/Local/Temp/codex-clipboard-7cc4bf22-e4cf-4c35-8ac6-a37fd85f4037.png",
+    "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/reference-motion-review-20261004/character-detail.jpg"
+  ],
+  "automaticallyApproved": false,
+  "method": "实际查看8张完整连图的100个格位，关键疑似帧打开原图；6张新图逐张打开原生检查，再核对最终NE连图。SHA检验只绑定图像，不代替人工结论。",
+  "changes": {
+    "direction": "NE",
+    "replaced": [
+      2,
+      3,
+      7,
+      10,
+      14,
+      16
+    ],
+    "retainedOtherFrames": 94,
+    "newGenerationCalls": 6,
+    "retries": 0,
+    "oldSha256": {
+      "2": "e3d19d5282b422155aa9d0d180ebb54b55a4411dbe09e754f5675dbb613efdb6",
+      "3": "7e0c588e51e2cabab23c1d077652eb4cd92fca0b0d487385c29d99237d04b4e0",
+      "7": "a96f5e744625bfc523b6c81fae98a7f2d5b556c7e8ffac12055eced0cee9730b",
+      "10": "059594ac691ffb44d5869b14f007906361802cb148b996916a4cfee18b8eb0d4",
+      "14": "80e0902f80ed8c4cc07c4b83f8bea4720ff498336bbb6a20d3972619a212e239",
+      "16": "716f31716420d74b43c9f0606594083c0a3d4fafd90e0cec939fa849c18b6c41"
+    }
+  },
+  "findings": {
+    "N": "16帧未见明确膝踝外扭或突然横甩；保留。",
+    "NE": "02/03左摆腿与10右摆腿收窄侧甩；07右支撑和14/16左支撑鞋轴收正、后跟与小腿居中。01–08右脚、09–16左脚持续支撑未改变。13/15保留正常远侧鞋侧面透视。",
+    "combat": "68帧未找到必须重画的同类翻踝；attack_E05、cast_W06/13已打开原图，正常弓步与提跟保留。"
+  },
+  "modelNote": "6张均使用内置image_gen；配置目标GPT Image2.5 Sunburst/max，实际型号和质量未披露，保持null。",
+  "clientIntegration": "not_integrated",
+  "limitations": [
+    "100张记录为腿脚轴线观察，不替代根窗口动态最终验收。",
+    "按原画布生成/等比导出，未做镜像、插值或脚位平移。"
+  ],
+  "rows": [
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 1,
+      "file": "frames/run/N/frame_01.png",
+      "sha256": "45206d9a6a581590381f41f9d08e2bece084025e1f33cba1a74873bcf4744d6a",
+      "sourceRecord": "frames/run/N/frame_01.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_01_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚初承重，左脚抬起；左鞋底居于小腿下方，没有横向甩出。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 1,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 2,
+      "file": "frames/run/N/frame_02.png",
+      "sha256": "bf783e292ff942d77f6d2594009c84228e9989c20c501ec589ba4a4fcb7122d5",
+      "sourceRecord": "frames/run/N/frame_02.generation.json",
+      "nativeSource": "provenance/run/bamboo_N_02_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚保持承重，左膝更收起；实际原图鞋长轴与左踝连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 2,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 3,
+      "file": "frames/run/N/frame_03.png",
+      "sha256": "9a274aaf79a46376f55fa9114339dd33fb8cdea89c91b88544567bbf70104d96",
+      "sourceRecord": "frames/run/N/frame_03.generation.json",
+      "nativeSource": "provenance/run/bamboo_N_03_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚承重，左脚回收；背向鞋跟没有朝外翻转。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 4,
+      "file": "frames/run/N/frame_04.png",
+      "sha256": "a6cd0e06eb69f6dbc11dd7a1c33afe2c36bd851e9b48b6bf1ead3b58c303d0c2",
+      "sourceRecord": "frames/run/N/frame_04.generation.json",
+      "nativeSource": "provenance/run/stance4_N_04_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "同一右脚承重经过身体下方，左抬腿仍在左髋下轨迹。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 5,
+      "file": "frames/run/N/frame_05.png",
+      "sha256": "e6a975d1210f74e91abec2353a6038ca362985b08fea835b6a1815a1f58b306c",
+      "sourceRecord": "frames/run/N/frame_05.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_05_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚向后支撑，左踝较高；两鞋没有形成外八角。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 6,
+      "file": "frames/run/N/frame_06.png",
+      "sha256": "eff7d40f5f0bf5e531ce1ee6514d9c79dcd2cb7cac4e1a8075f05348f455f062",
+      "sourceRecord": "frames/run/N/frame_06.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_06_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右支撑后移，左脚摆动；膝踝没有交叉断轴。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 7,
+      "file": "frames/run/N/frame_07.png",
+      "sha256": "4664217a4405ce1a85e54012a6fcecbda750ef85e81aa2ee57e4dc10c16bbcbb",
+      "sourceRecord": "frames/run/N/frame_07.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_07_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚后蹬，左脚抬起；足跟居于右胫骨下方。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 7,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 8,
+      "file": "frames/run/N/frame_08.png",
+      "sha256": "81cf41403b2d076e8f9649908e538ea0ca20090541aefd725a9106ecf263af20",
+      "sourceRecord": "frames/run/N/frame_08.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_08_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚末段支撑；左脚底可见来自抬腿，不判为脚掌外翻。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 8,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 9,
+      "file": "frames/run/N/frame_09.png",
+      "sha256": "dc7c213c4f6ebe8a184f00f99c555430b01c1895f3f2df7470aabc3e36fc989d",
+      "sourceRecord": "frames/run/N/frame_09.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_09_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左脚换步承重，右脚抬起；实际原图足底与右踝同轴。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 9,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 10,
+      "file": "frames/run/N/frame_10.png",
+      "sha256": "7434a2dd4a8291d66dd2faa20180d0e7cacd75018482cf9178356423d1c0257d",
+      "sourceRecord": "frames/run/N/frame_10.generation.json",
+      "nativeSource": "provenance/run/bamboo_N_10_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑保持，右膝收起；实际原图右鞋没有向侧面横甩。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 10,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 11,
+      "file": "frames/run/N/frame_11.png",
+      "sha256": "3f1a5efed7cd140c23c6dee7198d7954a4b05d91a2ef50d56fe3f26068adf05d",
+      "sourceRecord": "frames/run/N/frame_11.generation.json",
+      "nativeSource": "provenance/run/bamboo_N_11_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左脚承重经过，右脚回收；膝踝前后方向连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 11,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 12,
+      "file": "frames/run/N/frame_12.png",
+      "sha256": "f9f57c74845ce7e181297b2ce4574f63ebd97877bb301e4b496d70c6976719d4",
+      "sourceRecord": "frames/run/N/frame_12.generation.json",
+      "nativeSource": "provenance/run/stance4_N_12_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑，右脚提起；后跟朝后，鞋尖未向侧方展开。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 13,
+      "file": "frames/run/N/frame_13.png",
+      "sha256": "29ccc79185243e0743870866ac5788d6384e077a8d2576cb54e8360746141d2d",
+      "sourceRecord": "frames/run/N/frame_13.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_13_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左脚向后支撑，右脚前摆；两侧鞋轴没有突然转横。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 13,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 14,
+      "file": "frames/run/N/frame_14.png",
+      "sha256": "618527f740e9956aac48470ce1c35f01d3a632cb50806c60f378cdb02792d05e",
+      "sourceRecord": "frames/run/N/frame_14.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_14_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑脚后移，右踝较高；支撑鞋跟和胫骨中心连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 14,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 15,
+      "file": "frames/run/N/frame_15.png",
+      "sha256": "e47650a548e09ca4340145c069b993fd8b97dd4a8115660edf5b901b97f97b4d",
+      "sourceRecord": "frames/run/N/frame_15.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_15_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左脚末段后蹬，右鞋底可见；没有左右外八。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 15,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "N",
+      "frame": 16,
+      "file": "frames/run/N/frame_16.png",
+      "sha256": "b8deb8e73c3c8867fd1b30ed3280bf0ea42e8fb29869976fb65d5e5d54073aec",
+      "sourceRecord": "frames/run/N/frame_16.generation.json",
+      "nativeSource": "provenance/run/stancepairs_N_16_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "实际原图左鞋跟居中、右脚收起；左前掌后蹬不伴踝侧滚。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_N_contact.png",
+        "contactCell": 16,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 1,
+      "file": "frames/run/NE/frame_01.png",
+      "sha256": "841b5649c123ac175a7df3589c68cd4f6bbcc45f99a387f52ac9100fde521f13",
+      "sourceRecord": "frames/run/NE/frame_01.generation.json",
+      "nativeSource": "provenance/run/stance4_NE_01_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚接地，左脚抬起；鞋底长轴沿摆腿，保留近远侧透视。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 1,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 2,
+      "file": "frames/run/NE/frame_02.png",
+      "sha256": "40ac443e7d56f80a2563f411fdd39c2e127d0c10a3de68051c1b1868b8cf56b3",
+      "sourceRecord": "frames/run/NE/frame_02.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_02_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修左摆腿横甩：左膝踝收回本侧前后轨迹，右脚仍接地。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 2,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 3,
+      "file": "frames/run/NE/frame_03.png",
+      "sha256": "cdb307317579c2de74e606022a54dfe8a365443c6587970e8af42b68f3986ec4",
+      "sourceRecord": "frames/run/NE/frame_03.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_03_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修左胫骨向左张开：摆脚收窄，右承重脚及03相位保留。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 3,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 4,
+      "file": "frames/run/NE/frame_04.png",
+      "sha256": "52b072f8d1693c49988a7145b3d1a6dfee4dd3e3d13f25425844b06e3d43b254",
+      "sourceRecord": "frames/run/NE/frame_04.generation.json",
+      "nativeSource": "provenance/run/stance4_NE_04_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚承重、左腿收回；实际原图鞋底与左踝连贯。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 4,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 5,
+      "file": "frames/run/NE/frame_05.png",
+      "sha256": "68b7112e5ef3285987eff3bd0c075a2fd1b705ba0aae617306447fd413ae0d7b",
+      "sourceRecord": "frames/run/NE/frame_05.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_05_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚后移支撑，左脚抬起；实际原图后跟与支撑胫骨居中。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 5,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 6,
+      "file": "frames/run/NE/frame_06.png",
+      "sha256": "225f1e6b363177cf64f8cd86d461a79151bea19179eaa334a2a28b06b90eea26",
+      "sourceRecord": "frames/run/NE/frame_06.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_06_attempt02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "同一右脚后移，左脚摆动；实际原图没有横滚支撑踝。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 6,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 7,
+      "file": "frames/run/NE/frame_07.png",
+      "sha256": "2e22b654d663af2bb886147beb0b5c1c20d1a5acd71d81ade04f9edc7c7f4cca",
+      "sourceRecord": "frames/run/NE/frame_07.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_07_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修右支撑鞋尖向右下外转：后跟朝后，前掌转回远侧，未换脚。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 7,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 8,
+      "file": "frames/run/NE/frame_08.png",
+      "sha256": "6d41bb23635413d00affadf6bbeaab3d2d9fbec0b86ead4fabfc9d54c5172a86",
+      "sourceRecord": "frames/run/NE/frame_08.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_08_attempt02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "右脚末段支撑，左脚回摆；保留轻微侧面透视，不作外翻处理。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 8,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 9,
+      "file": "frames/run/NE/frame_09.png",
+      "sha256": "1ca73223e5e4de521655f346816aac50774cd524480e7158874c641930937cc9",
+      "sourceRecord": "frames/run/NE/frame_09.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_09_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左脚初承重，右脚抬起；左右腿未交叉，鞋跟方向正确。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 9,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 10,
+      "file": "frames/run/NE/frame_10.png",
+      "sha256": "79b388f1b8f230bb74e32fc8c780187229a16e776ff463bb46c42eeef29783e8",
+      "sourceRecord": "frames/run/NE/frame_10.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_10_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修右摆腿横甩与脚底骤大：抬脚回到右膝下方轨迹，左脚仍接地。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 10,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 11,
+      "file": "frames/run/NE/frame_11.png",
+      "sha256": "740617148b7d57292112265576a851c631cb6d909bb183dfec65f9cfdc54e427",
+      "sourceRecord": "frames/run/NE/frame_11.generation.json",
+      "nativeSource": "provenance/run/bamboo_NE_11_attempt02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑、右踝回收；实际原图右膝踝与鞋底轴连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 11,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 12,
+      "file": "frames/run/NE/frame_12.png",
+      "sha256": "fa52796070e370338c7d49a6d9b2fdddb0ff56080a25c00f3edf74afae726fbf",
+      "sourceRecord": "frames/run/NE/frame_12.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_12_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑经过，右抬脚；鞋尖远侧方向没有突然反转。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 13,
+      "file": "frames/run/NE/frame_13.png",
+      "sha256": "30d066fadd11d3632ff57e3fe6359e1417239b1649541a9ab5ab701677c90996",
+      "sourceRecord": "frames/run/NE/frame_13.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_13_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑开始后移；实际原图有轻微鞋侧面透视，没有14旧帧式侧滚，保留。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 13,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 14,
+      "file": "frames/run/NE/frame_14.png",
+      "sha256": "3649dfec838c7b4ce23c976a652f87dd6eae8a5bff6c79cc09ca0f62e8f6b835",
+      "sourceRecord": "frames/run/NE/frame_14.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_14_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修左支撑踝外翻与横向鞋尖：后跟回到左小腿中心，前掌远侧接地。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 14,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 15,
+      "file": "frames/run/NE/frame_15.png",
+      "sha256": "5b358e19f0006ab755d1cff4514d966a813b7fe8294dd36baabcc4262e345da6",
+      "sourceRecord": "frames/run/NE/frame_15.generation.json",
+      "nativeSource": "provenance/run/stancepairs_NE_15_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "左支撑后蹬，右摆腿在远侧；实际原图鞋侧轮廓较浅，保留正常透视。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 15,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "run",
+      "direction": "NE",
+      "frame": 16,
+      "file": "frames/run/NE/frame_16.png",
+      "sha256": "03b07e1b160170c75d7c4302e9d3443f85cf31f97ddf9e0a3038104e2aa8e8e2",
+      "sourceRecord": "frames/run/NE/frame_16.generation.json",
+      "nativeSource": "provenance/run/video_axis_NE_16_attempt01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 75,
+      "manualObservation": "已修左支撑鞋长轴转横：后跟居中、鞋尖远侧；保持16末段左脚支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/run_NE_contact.png",
+        "contactCell": 16,
+        "originalViewed": true,
+        "newNativeViewed": true
+      },
+      "disposition": "replaced_visual_passed"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/hit/E/frame_01.png",
+      "sha256": "0e600c1050559305e28e2d0bf393b8739488382d484059af8c7698e7d55ba275",
+      "sourceRecord": "frames/hit/E/frame_01.generation.json",
+      "nativeSource": "provenance/hit/E_frame_01_20261002_attempt02.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "受击初段前脚轻抬、后脚承重；膝盖与鞋尖同向。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/hit/E/frame_02.png",
+      "sha256": "656c856290a2ce41a82a2abe02e9e3ac4e8de165009726af02a22bf73c4233e7",
+      "sourceRecord": "frames/hit/E/frame_02.generation.json",
+      "nativeSource": "provenance/hit/E_frame_02_20261002_attempt02.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "身体后仰，前脚回收；鞋尖向东，无反折踝。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/hit/E/frame_03.png",
+      "sha256": "272204657c7439d886b5b14ae0dab0e3d1b19738042e42c64414fdfaf0a57e0a",
+      "sourceRecord": "frames/hit/E/frame_03.generation.json",
+      "nativeSource": "provenance/hit/E_frame_03_20261002_attempt05.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "屈膝缓冲，两脚前后分开；鞋掌方向连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/hit/E/frame_04.png",
+      "sha256": "e0a51bdaa5b548c4508beb4f2d9b876780acf356013b1d225eb9472b15e27b63",
+      "sourceRecord": "frames/hit/E/frame_04.generation.json",
+      "nativeSource": "provenance/hit/E_frame_04_20261002_attempt03.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "身体前收恢复，两足底接地；未见异常外翻。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/hit/E/frame_05.png",
+      "sha256": "de555cc55f0de1c420f1a64f1ee829d36b90484c5e9934d3926211a671c00932",
+      "sourceRecord": "frames/hit/E/frame_05.generation.json",
+      "nativeSource": "provenance/hit/E_frame_05_20261002_attempt01.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "站姿回收，前后脚均朝东；膝踝自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/hit/E/frame_06.png",
+      "sha256": "e3057b6dd3a28cedc0d2056e3c2c916ee2116e250f7992b672c159f6c59dd786",
+      "sourceRecord": "frames/hit/E/frame_06.generation.json",
+      "nativeSource": "provenance/hit/E_06_finish_attempt04.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "回到防御站姿，脚掌没有突然转向镜头。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_E_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/hit/W/frame_01.png",
+      "sha256": "8135b27ad25089b20c81a7e69b7155f22728582c790cf77101b613c2ecd4d53e",
+      "sourceRecord": "frames/hit/W/frame_01.generation.json",
+      "nativeSource": "provenance/hit/W_frame_01_20261002_attempt02.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "后仰受击，前脚朝西伸出，后脚支撑；为正常退步。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/hit/W/frame_02.png",
+      "sha256": "1b1c513b46fcf0e58c6b35613e64ddc9825d843cf049633c2b4d5b2ce1e0e613",
+      "sourceRecord": "frames/hit/W/frame_02.generation.json",
+      "nativeSource": "provenance/hit/W_frame_02_20261002_attempt01.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "前脚抬高、后膝压低；抬脚长轴没有横甩。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/hit/W/frame_03.png",
+      "sha256": "336623219992306b74a46672c6beffceb1fcaa84feb02bfce4eb5a6e2f6f156c",
+      "sourceRecord": "frames/hit/W/frame_03.generation.json",
+      "nativeSource": "provenance/hit/W_frame_03_20261002_attempt02.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "前脚缓落、后脚承重；鞋尖和膝轴连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/hit/W/frame_04.png",
+      "sha256": "6c70a4462d45abc3bc224ca7040fb956cf37f5fb3a87fb324ff8c877aa128600",
+      "sourceRecord": "frames/hit/W/frame_04.generation.json",
+      "nativeSource": "provenance/hit/W_frame_04_20261002_attempt01.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "屈膝恢复站稳，两脚开距正常。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/hit/W/frame_05.png",
+      "sha256": "714c9c39cf41b49611f2fbfccb4178838f5bda9b2ba4e8529a42348e6fc6d9f0",
+      "sourceRecord": "frames/hit/W/frame_05.generation.json",
+      "nativeSource": "provenance/hit/W_frame_05_20261002_attempt01.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "站姿收回，后脚略朝镜头是三分之四透视，没有翻踝。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "hit",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/hit/W/frame_06.png",
+      "sha256": "3cf2a85eb36eb70f78443d6ec879c31d11ded75618906b8db1e6ab8d7e1687c9",
+      "sourceRecord": "frames/hit/W/frame_06.generation.json",
+      "nativeSource": "provenance/hit/W_frame_06_20261002_attempt01.native.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 40,
+      "manualObservation": "恢复站姿，两脚收窄；鞋尖没有突然反向。",
+      "observationEvidence": {
+        "contactSheet": "preview/hit_W_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/attack/E/frame_01.png",
+      "sha256": "6fa0b33c448a6965340e5c086ac67366efd7d137cfed8bdaab264a2ca5f45c43",
+      "sourceRecord": "frames/attack/E/frame_01.generation.json",
+      "nativeSource": "provenance/attack/E_frame_01_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "持杖预备，正常双脚开立；后足小幅外角用于支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/attack/E/frame_02.png",
+      "sha256": "cebd507d111774b1ecb2a29b82acde3de8579baa499c199c453fac9a9afd3206",
+      "sourceRecord": "frames/attack/E/frame_02.generation.json",
+      "nativeSource": "provenance/attack/E_frame_02_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "开始转身蓄力，两膝随鞋尖方向。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/attack/E/frame_03.png",
+      "sha256": "da7f69a4cbc6c11842893f4d6acf2536adc027489c7dc8ed5e9cbab91b9c1298",
+      "sourceRecord": "frames/attack/E/frame_03.generation.json",
+      "nativeSource": "provenance/attack/E_frame_03_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "前膝弯曲准备迈步，后踝自然，没有断轴。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/attack/E/frame_04.png",
+      "sha256": "6e84ea53d071156a52e3051e4a320be3c579c3c63e52d73dc1446c760ab391c1",
+      "sourceRecord": "frames/attack/E/frame_04.generation.json",
+      "nativeSource": "provenance/attack/E_frame_04_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "前脚落下扩大弓步；双脚长轴与出杖方向协调。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/attack/E/frame_05.png",
+      "sha256": "3f033f87e487aeb12b0ad29378d344b5f14452d613f992b8281a6658b3f1df2b",
+      "sourceRecord": "frames/attack/E/frame_05.generation.json",
+      "nativeSource": "provenance/attack/E_frame_05_attempt_03.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "实际原图后脚提跟、前掌蹬地，属于正常突刺弓步，保留。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 5,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/attack/E/frame_06.png",
+      "sha256": "b5d5519e71c7b9a9d556b60f21326c2ba2526c888beb0ddf4eb335387b926550",
+      "sourceRecord": "frames/attack/E/frame_06.generation.json",
+      "nativeSource": "provenance/attack/E_frame_06_attempt_05.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "深弓步突刺，后腿伸长，前足稳定；未见踝侧滚。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 7,
+      "file": "frames/attack/E/frame_07.png",
+      "sha256": "3271e8d10eadc774329421a1d4978a8f219b7165bf6d636c765ee1dfa3288a7a",
+      "sourceRecord": "frames/attack/E/frame_07.generation.json",
+      "nativeSource": "provenance/attack/E_frame_07_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "突刺后保持前足承重，后脚自然跟随髋部。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 7,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 8,
+      "file": "frames/attack/E/frame_08.png",
+      "sha256": "cdb7986f3e3012e38b3f6821d63e0b9a0cb623691a036469a18742dd65b8078b",
+      "sourceRecord": "frames/attack/E/frame_08.generation.json",
+      "nativeSource": "provenance/attack/E_frame_08_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "开始收杖，前后脚保持稳定，无脚尖瞬时外扭。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 8,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 9,
+      "file": "frames/attack/E/frame_09.png",
+      "sha256": "bb5b2c5a314563ee0f9dfb11d91302af6b46750410cc2b192261689bc83a3141",
+      "sourceRecord": "frames/attack/E/frame_09.generation.json",
+      "nativeSource": "provenance/attack/E_frame_09_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "回收弓步，脚间距缩小；足底朝向连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 9,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 10,
+      "file": "frames/attack/E/frame_10.png",
+      "sha256": "1a74b218f63eda5870684cf349433e9ea58d820a7f2271feb947ab54eae5902d",
+      "sourceRecord": "frames/attack/E/frame_10.generation.json",
+      "nativeSource": "provenance/attack/E_frame_10_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "回到准备姿势，后脚收回；膝踝自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 10,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 11,
+      "file": "frames/attack/E/frame_11.png",
+      "sha256": "60ee307d072d26bbb3416863d5217c732a19a24484570b70bfadfd0bb3a58b5b",
+      "sourceRecord": "frames/attack/E/frame_11.generation.json",
+      "nativeSource": "provenance/attack/E_frame_11_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "再收腿，脚距回稳，没有把脚掌翻到侧面。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 11,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "E",
+      "frame": 12,
+      "file": "frames/attack/E/frame_12.png",
+      "sha256": "3c485eb4802220d88b8cdadbdc1cad02224ec3267d272f371784a40f6c62e6ec",
+      "sourceRecord": "frames/attack/E/frame_12.generation.json",
+      "nativeSource": "provenance/attack/E_frame_12_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "恢复持杖站姿；正常战斗开立，不按跑步并脚处理。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_E_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/attack/W/frame_01.png",
+      "sha256": "4e864532494f4a9f1b1cdca0052a9fb112583f248fc547fe9353d503933ee620",
+      "sourceRecord": "frames/attack/W/frame_01.generation.json",
+      "nativeSource": "provenance/attack/W_frame_01_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "持杖预备，前脚朝西、后脚略开；正常战斗支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/attack/W/frame_02.png",
+      "sha256": "752934ef7300cfca289bedd60d774378d996954cbe3120497df1974bafad4673",
+      "sourceRecord": "frames/attack/W/frame_02.generation.json",
+      "nativeSource": "provenance/attack/W_frame_02_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "转杖蓄力，前膝向西弯曲；鞋尖对应膝方向。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/attack/W/frame_03.png",
+      "sha256": "a614719a1d569b32d462c50484806da5cfdbcb806434b5696ba6486313ed5dcd",
+      "sourceRecord": "frames/attack/W/frame_03.generation.json",
+      "nativeSource": "provenance/attack/W_frame_03_attempt_03.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "前脚落稳准备突刺，后脚撑开；未见踝异常扭转。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/attack/W/frame_04.png",
+      "sha256": "57d2b133062a5f5825c20631caa305f32a460ae43b0134c41d39fd3b64f39991",
+      "sourceRecord": "frames/attack/W/frame_04.generation.json",
+      "nativeSource": "provenance/attack/W_frame_04_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "弓步进一步扩大，后腿伸展自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/attack/W/frame_05.png",
+      "sha256": "d85765325120c300100d6282b97b7a5b1d0d2ae3a9e4428ff9082c372c4b9147",
+      "sourceRecord": "frames/attack/W/frame_05.generation.json",
+      "nativeSource": "provenance/attack/W_frame_05_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "向西突刺前足承重，后脚保持正常外角。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/attack/W/frame_06.png",
+      "sha256": "4d72c4bcc2f4ceed87ce41c70fe752eb928f9e1042d3bccfb489b1401e85b557",
+      "sourceRecord": "frames/attack/W/frame_06.generation.json",
+      "nativeSource": "provenance/attack/W_frame_06_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "深弓步出杖，鞋掌均有承重面，没有翻边支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 7,
+      "file": "frames/attack/W/frame_07.png",
+      "sha256": "65530b543572abe508b1c37a9c2be6912f1842c7966b601de44776876b6ef5b9",
+      "sourceRecord": "frames/attack/W/frame_07.generation.json",
+      "nativeSource": "provenance/attack/W_frame_07_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "突刺末段保持前膝与前足同轴，后脚稳定。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 7,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 8,
+      "file": "frames/attack/W/frame_08.png",
+      "sha256": "cf129127d96bbddc4c475dab8353646ca0d571418552660c83bfae3314cf7be6",
+      "sourceRecord": "frames/attack/W/frame_08.generation.json",
+      "nativeSource": "provenance/attack/W_frame_08_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "收杖回身，弓步变浅；足向没有突然反转。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 8,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 9,
+      "file": "frames/attack/W/frame_09.png",
+      "sha256": "7bbe68b82724a7a13dc6bcf449a7ac795ce798aecc59052c3d67fe32bdc5c4c9",
+      "sourceRecord": "frames/attack/W/frame_09.generation.json",
+      "nativeSource": "provenance/attack/W_frame_09_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "恢复站姿，后脚向身体收回，脚踝自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 9,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 10,
+      "file": "frames/attack/W/frame_10.png",
+      "sha256": "36108442a4c6a4237cd55f335b54635541180c792f800f2272b3e2bbbde81770",
+      "sourceRecord": "frames/attack/W/frame_10.generation.json",
+      "nativeSource": "provenance/attack/W_frame_10_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "双脚收回支撑，未见横甩或断踝。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 10,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 11,
+      "file": "frames/attack/W/frame_11.png",
+      "sha256": "f35aeb8ee87ef3df074fdefaf36130385a6d6427c51a7f73ed4ac164c451b1cd",
+      "sourceRecord": "frames/attack/W/frame_11.generation.json",
+      "nativeSource": "provenance/attack/W_frame_11_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "落回准备步，前后膝足方向协调。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 11,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "attack",
+      "direction": "W",
+      "frame": 12,
+      "file": "frames/attack/W/frame_12.png",
+      "sha256": "f98e5bc61ca4d17637c1892192688424bb0156160e1569af58543d8f4c46cbb1",
+      "sourceRecord": "frames/attack/W/frame_12.generation.json",
+      "nativeSource": "provenance/attack/W_frame_12_attempt_01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 30,
+      "manualObservation": "起始姿势衔接，正常开距与后脚支撑外角保留。",
+      "observationEvidence": {
+        "contactSheet": "preview/attack_W_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 1,
+      "file": "frames/cast/E/frame_01.png",
+      "sha256": "7f21b0c902bc6d14aff89e02c13a81147281ea360c6347f860b05da0c53fafa6",
+      "sourceRecord": "frames/cast/E/frame_01.generation.json",
+      "nativeSource": "provenance/cast/E_01_native_059868092143.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "直立起势，两脚正常站稳，脚轴朝东。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 2,
+      "file": "frames/cast/E/frame_02.png",
+      "sha256": "7d7a78f98e5c000365b30909e16df898841539f0937406c9dfa08642bbe7c182",
+      "sourceRecord": "frames/cast/E/frame_02.generation.json",
+      "nativeSource": "provenance/cast/E_02_native_bb200b63e1b4.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "屈膝蓄力，前后脚稍分开；膝踝自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 3,
+      "file": "frames/cast/E/frame_03.png",
+      "sha256": "64afe9c6f083ec4846b9c33028ca3f0e6adea6c8a7a6261b222ea4305be584fc",
+      "sourceRecord": "frames/cast/E/frame_03.generation.json",
+      "nativeSource": "provenance/cast/E_03_native_b23afd370a68.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "双脚扩大支撑，前足跟随前膝方向。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 4,
+      "file": "frames/cast/E/frame_04.png",
+      "sha256": "84c2b73f5a03fcc4d7b889a68bb4291e5a357289d44a354a673e3d436cf9747f",
+      "sourceRecord": "frames/cast/E/frame_04.generation.json",
+      "nativeSource": "provenance/cast/E_04_native_13113cb41189.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "蓄力下沉，支撑鞋没有侧滚。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 5,
+      "file": "frames/cast/E/frame_05.png",
+      "sha256": "748d6b21496be6545b13cb9268502b9812acc6b2bafdac12bc38653f9d95f95a",
+      "sourceRecord": "frames/cast/E/frame_05.generation.json",
+      "nativeSource": "provenance/cast/E_05_native_61cbbf1c44bc.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "抬杖蓄力，两脚稳定；足向与邻帧连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 6,
+      "file": "frames/cast/E/frame_06.png",
+      "sha256": "7612f92d7cffb7de42a17e580baaa65e6f83a8328f89a22ab1f2bb588c513151",
+      "sourceRecord": "frames/cast/E/frame_06.generation.json",
+      "nativeSource": "provenance/cast/E_06_native_e339ea3110a5.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "后腿压低，前足承重，鞋掌无异常外翻。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 6,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 7,
+      "file": "frames/cast/E/frame_07.png",
+      "sha256": "352f04699d02655df1384b69e2e3a05a79f423d8c1a3fba9bc90b08e7c2a3e44",
+      "sourceRecord": "frames/cast/E/frame_07.generation.json",
+      "nativeSource": "provenance/cast/E_07_native_c816b8716156.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "准备推出，前膝转向东侧，足尖对应。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 7,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 8,
+      "file": "frames/cast/E/frame_08.png",
+      "sha256": "e55c8d9d05cf5c0a5f6e811c4b9a05c1a5feb3d2396a17cff0bac1932a51debc",
+      "sourceRecord": "frames/cast/E/frame_08.generation.json",
+      "nativeSource": "provenance/cast/E_08_native_ed62ab22a8d5.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "杖前推、重心前移，后脚自然支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 8,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 9,
+      "file": "frames/cast/E/frame_09.png",
+      "sha256": "89beb273602c26c26a82753379fc0fa1e65f4ae820c2594cc595babff75f2dec",
+      "sourceRecord": "frames/cast/E/frame_09.generation.json",
+      "nativeSource": "provenance/cast/E_09_native_2a5690fda441.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "释放动作弓步，前足朝东压地，后踝自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 9,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 10,
+      "file": "frames/cast/E/frame_10.png",
+      "sha256": "5a833cf3a28910d2c4446625a03cd04f2f20efdcf2e1f42cd3efe5cdac127289",
+      "sourceRecord": "frames/cast/E/frame_10.generation.json",
+      "nativeSource": "provenance/cast/E_10_attempt_05.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "施法延续，前膝足同向；没有横向甩腿。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 10,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 11,
+      "file": "frames/cast/E/frame_11.png",
+      "sha256": "3099289b5d4497bdd369e7d11e0eabf73cd90dea83f5ccb163370050e220cf9c",
+      "sourceRecord": "frames/cast/E/frame_11.generation.json",
+      "nativeSource": "provenance/cast/E_11_native_bbb749523e01.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "收杖初段，脚距保持，后鞋轴稳定。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 11,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 12,
+      "file": "frames/cast/E/frame_12.png",
+      "sha256": "903d3536372612a92f06026ca809ccb4636be293fa2c5e7a3a8b49e48ebff04c",
+      "sourceRecord": "frames/cast/E/frame_12.generation.json",
+      "nativeSource": "provenance/cast/E_12_native_d8bb9a9d2fb6.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "回收重心，两足仍接地；膝踝连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 13,
+      "file": "frames/cast/E/frame_13.png",
+      "sha256": "b6aad8bf14f99b7a28c4cf713ffd81cf15721243e9a6b5c600ea0d2fa0a5187b",
+      "sourceRecord": "frames/cast/E/frame_13.generation.json",
+      "nativeSource": "provenance/cast/E_13_native_d94422a72cd0.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "恢复直立，后脚逐步收回，没有脚尖反向。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 13,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 14,
+      "file": "frames/cast/E/frame_14.png",
+      "sha256": "a9e56f57dca4cc66f1aea665e4300b6ae0e227a789ac20c1b82910d5b6422fc3",
+      "sourceRecord": "frames/cast/E/frame_14.generation.json",
+      "nativeSource": "provenance/cast/E_14_attempt_03.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "站姿收窄，前后足向保持一致。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 14,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 15,
+      "file": "frames/cast/E/frame_15.png",
+      "sha256": "ab24d39c470130d840b0a3f83d8c94aa226648853ac4740b00938835a656e1c5",
+      "sourceRecord": "frames/cast/E/frame_15.generation.json",
+      "nativeSource": "provenance/cast/E_15_native_a66dd42291c7.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "结束收脚，两鞋靠近但无穿插交叉。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 15,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "E",
+      "frame": 16,
+      "file": "frames/cast/E/frame_16.png",
+      "sha256": "80b939a16dc4f200e4e9e3f03a70d22b1ff3fd230755909426ef73ac102368d4",
+      "sourceRecord": "frames/cast/E/frame_16.generation.json",
+      "nativeSource": "provenance/cast/E_16_native_1ff0f45a2bf0.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "回到待机，两脚完整、鞋尖朝东，无翻踝。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_E_contact.png",
+        "contactCell": 16,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 1,
+      "file": "frames/cast/W/frame_01.png",
+      "sha256": "ac011c0db2320a23e5eead239bed63831f7749a83324c40b0bd366010bbf16d8",
+      "sourceRecord": "frames/cast/W/frame_01.generation.json",
+      "nativeSource": "provenance/cast/W_01_native_59e1e2211a46.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "直立起势，前脚西向、后脚略朝镜头；正常透视。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 1,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 2,
+      "file": "frames/cast/W/frame_02.png",
+      "sha256": "f8e4dca0d7523d39c0c2f2a36841176f2e6347fa266a6d669bcee46dfc86b927",
+      "sourceRecord": "frames/cast/W/frame_02.generation.json",
+      "nativeSource": "provenance/cast/W_02_native_7273eced16bf.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "屈膝蓄力，双脚开距增加；膝足方向协调。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 2,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 3,
+      "file": "frames/cast/W/frame_03.png",
+      "sha256": "3bb48d134f7aa565c8c5c4a5c486012fdba9c7226b053cf6ef78f900d122f6d0",
+      "sourceRecord": "frames/cast/W/frame_03.generation.json",
+      "nativeSource": "provenance/cast/W_03_native_0dcf0225e8c0.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "继续下沉，前脚朝西承重，后脚支撑稳定。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 3,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 4,
+      "file": "frames/cast/W/frame_04.png",
+      "sha256": "76a7058fe22d489fc8a84d68453f364640f07d25f93ecf50ab8c11271892b23b",
+      "sourceRecord": "frames/cast/W/frame_04.generation.json",
+      "nativeSource": "provenance/cast/W_04_native_798057d64101.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "深弓步蓄力，后腿展开为正常站姿，不作外翻处理。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 4,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 5,
+      "file": "frames/cast/W/frame_05.png",
+      "sha256": "a478de495d3564a2a59f72a77b9271e5294cb9fae341e5aefce4298d76b811d3",
+      "sourceRecord": "frames/cast/W/frame_05.generation.json",
+      "nativeSource": "provenance/cast/W_05_native_a1dd7e2f03eb.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "抬杖前重心下降，足底接地，前膝与鞋尖一致。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 5,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 6,
+      "file": "frames/cast/W/frame_06.png",
+      "sha256": "aa255ff8234ec7e0fce76cfd4fff2213233f55400055f76290475b44d4ab418f",
+      "sourceRecord": "frames/cast/W/frame_06.generation.json",
+      "nativeSource": "provenance/cast/W_06_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "实际原图后脚提跟、前掌留地；正常向西发力，无脚踝侧折。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 6,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 7,
+      "file": "frames/cast/W/frame_07.png",
+      "sha256": "b8bd91d1eab50a85bbea029b11805296d755a827a3fd4c9254a5df7493e64a4a",
+      "sourceRecord": "frames/cast/W/frame_07.generation.json",
+      "nativeSource": "provenance/cast/W_07_native_28a130836a64.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "抬杖蓄势，双足撑地，后脚外角连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 7,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 8,
+      "file": "frames/cast/W/frame_08.png",
+      "sha256": "ba0731ff09f9d1f19fcd05164b54d3ed516ce0a188410c5793ed780dd3183bcd",
+      "sourceRecord": "frames/cast/W/frame_08.generation.json",
+      "nativeSource": "provenance/cast/W_08_native_6512c67997b4.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "向西释放，前膝推进、前足稳定。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 8,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 9,
+      "file": "frames/cast/W/frame_09.png",
+      "sha256": "9f34545e05419bb8e1fb8483dac8ad6c23b97317c9eebe28e91222163b293880",
+      "sourceRecord": "frames/cast/W/frame_09.generation.json",
+      "nativeSource": "provenance/cast/W_09_native_f7465350f1ad.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "出杖末段弓步，前后脚有承重，未见鞋尖瞬时偏转。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 9,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 10,
+      "file": "frames/cast/W/frame_10.png",
+      "sha256": "eaf7e704793bf2ba42312a302f4a0095cb7137077ac4bdbe1ddffd497b595124",
+      "sourceRecord": "frames/cast/W/frame_10.generation.json",
+      "nativeSource": "provenance/cast/W_10_native_5988cea4126e.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "释放延续，后足开立角和膝方向一致。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 10,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 11,
+      "file": "frames/cast/W/frame_11.png",
+      "sha256": "6ce4a072c720e60b646b01b47e1ea184fa72abde8f80d5c3bbdd289bc3557038",
+      "sourceRecord": "frames/cast/W/frame_11.generation.json",
+      "nativeSource": "provenance/cast/W_11_native_28a043782caa.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "开始收杖，前膝逐渐直起，脚掌仍稳定。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 11,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 12,
+      "file": "frames/cast/W/frame_12.png",
+      "sha256": "edfa38c7610b650eb7295d381b0f7c066600310a668e8f70e59d8f97e24747f0",
+      "sourceRecord": "frames/cast/W/frame_12.generation.json",
+      "nativeSource": "provenance/cast/W_12_attempt_02.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "收回持杖姿势，足向没有反转。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 12,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 13,
+      "file": "frames/cast/W/frame_13.png",
+      "sha256": "d4f8a334629265dbeac9f287f33b9dcafdb9e98a0bff5921822d7fda5f7217bd",
+      "sourceRecord": "frames/cast/W/frame_13.generation.json",
+      "nativeSource": "provenance/cast/W_13_attempt_03.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "实际原图后脚正在回收、轻抬脚跟；膝踝未外翻，保留。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 13,
+        "originalViewed": true,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 14,
+      "file": "frames/cast/W/frame_14.png",
+      "sha256": "e92c9bc292c6607200680e3dcabad4d5cc172dec371c77a39a70ee6870d71c72",
+      "sourceRecord": "frames/cast/W/frame_14.generation.json",
+      "nativeSource": "provenance/cast/W_14_native_d48e4517f86e.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "双脚回稳，后足回到身下，鞋尖自然。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 14,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 15,
+      "file": "frames/cast/W/frame_15.png",
+      "sha256": "58fa2eff0b08e8303c2fac542989342d3c3b10ee8956819811d380031b0f5f5c",
+      "sourceRecord": "frames/cast/W/frame_15.generation.json",
+      "nativeSource": "provenance/cast/W_15_native_0825d816eae8.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "恢复站姿，两脚完整，正常外角支撑。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 15,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    },
+    {
+      "action": "cast",
+      "direction": "W",
+      "frame": 16,
+      "file": "frames/cast/W/frame_16.png",
+      "sha256": "7923ee6cf88e4f6b94f04610383ff964acf2f772f09712d39b50ad1b7be4a40d",
+      "sourceRecord": "frames/cast/W/frame_16.generation.json",
+      "nativeSource": "provenance/cast/W_16_native_24a51a59fbe4.png",
+      "actualModel": null,
+      "actualQuality": null,
+      "durationMs": 45,
+      "manualObservation": "起势衔接，膝踝与两鞋方向连续。",
+      "observationEvidence": {
+        "contactSheet": "preview/cast_W_contact.png",
+        "contactCell": 16,
+        "originalViewed": false,
+        "newNativeViewed": false
+      },
+      "disposition": "retained_no_clear_axis_defect"
+    }
+  ],
+  "contactSheets": [
+    {
+      "file": "preview/run_N_contact.png",
+      "sha256": "01ba83b5e6827586a661afcdb4322696a13e1aaf0dff49c5d0703a2bec9f12d5"
+    },
+    {
+      "file": "preview/run_NE_contact.png",
+      "sha256": "d60cc1a14df1485939b7320d3f343dd926e05c596824d18d41daa67bc4d1e357"
+    },
+    {
+      "file": "preview/hit_E_contact.png",
+      "sha256": "5da4f35573b0292762c4285a4f908e145ead81aa3a9b3621251b4a7cc49b09f4"
+    },
+    {
+      "file": "preview/hit_W_contact.png",
+      "sha256": "78850c2141c3bab0238a5395629cf798b766663f6b3eb387a32b0772f651dc37"
+    },
+    {
+      "file": "preview/attack_E_contact.png",
+      "sha256": "f378ea963d89d72a00ae7c1c44087264d0ccd410147f65fdf15fd85298387627"
+    },
+    {
+      "file": "preview/attack_W_contact.png",
+      "sha256": "527b2d9011c737abb0d3f88136a3e8df4202528c27d740e475ce81036e64eb80"
+    },
+    {
+      "file": "preview/cast_E_contact.png",
+      "sha256": "474a83b3a2fb6678b0d17110d133267b55ebb907b927622baeeabf09deb82681"
+    },
+    {
+      "file": "preview/cast_W_contact.png",
+      "sha256": "ddd4019ad7551aca90dbc6a3741d9b4a6f07258f9dde78380b15362e9a2c12dd"
+    }
+  ],
+  "previews": [
+    {
+      "file": "preview/run_NE_normal.apng",
+      "sha256": "49ff36fc24c13f7e397372e391124c3442105497c606ded31ebccdb9871c4c63",
+      "durationsMs": [
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75
+      ],
+      "cycleMs": 1200
+    },
+    {
+      "file": "preview/run_NE_slow.apng",
+      "sha256": "d940f9f41f4ac31dc6bdedce63ede1924f2fdd67a1ab57a360666db1ca620f9f",
+      "durationsMs": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "cycleMs": 4800
+    }
+  ]
+}

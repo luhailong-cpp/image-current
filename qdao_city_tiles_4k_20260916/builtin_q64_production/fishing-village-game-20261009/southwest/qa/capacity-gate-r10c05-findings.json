@@ -1,0 +1,135 @@
+[
+  {
+    "id": "missing-fourth-row",
+    "severity": "blocking",
+    "topic": "coverage",
+    "coreBox": [
+      0,
+      3072,
+      4096,
+      4096
+    ],
+    "finding": "第4排4个slot均无PNG。p04_01只有已存在的request/guide，无prompt、receipt或已发起imagegen；p04_02～04未准备。没有在途或未保存的成功调用。下方伞沿、兔子/月饼摊和摊位足印均无法完整检查。",
+    "action": "Gate未解除时不填缺图、不追加生图。"
+  },
+  {
+    "id": "single-lamp-column",
+    "severity": "observation",
+    "topic": "lamp",
+    "coreBox": [
+      220,
+      0,
+      740,
+      1600
+    ],
+    "finding": "现有上3排只出现同一根连续灯柱和多层灯座。north-1可读r09c05既有红穗与灯柱，h1024-col1跨排连续；west-1/2石沿与灯座相邻关系没有明显断开。未见新复制的整灯笼。",
+    "evidence": [
+      "north-1",
+      "h1024-col1",
+      "west-1",
+      "west-2"
+    ]
+  },
+  {
+    "id": "single-parasol-position",
+    "severity": "review_required",
+    "topic": "parasol",
+    "coreBox": [
+      2100,
+      2520,
+      4096,
+      3072
+    ],
+    "finding": "p03_03v3与p03_04v1机械拼接后只有一个伞顶，伞骨向同一伞顶汇聚，无复制整伞。但v3仍有导图轮廓偏差：p03_03原生底边处伞面左缘约x220，而纯layout约x420；右缘上侧伞面约y690，纯layout约y820。约200px左扩、130px上抬为人工视觉估计（原layout每源像素约45.73 native px），不能称几何验收通过。伞下半幅缺失，不能验证完整尺寸/下沿/摊位足印。",
+    "evidence": [
+      "v3072-row3",
+      "v2048-row3"
+    ],
+    "nativeCoordinateSpace": "p03_03 context1254x1254",
+    "pureLayout": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/layout-only/r10_c05_p03_03.png"
+  },
+  {
+    "id": "osmanthus-continuity",
+    "severity": "review_required",
+    "topic": "tree",
+    "coreBox": [
+      700,
+      1500,
+      4096,
+      3072
+    ],
+    "finding": "金黄桂树为总览中既有中秋摊树，现有片形成同一连续树冠。树冠没有被补成多个完整树，但p03_01左侧花叶明显较细小，p03_02/03中心叶片较大，细节尺度跨片变化可见。当前未含树干/地面根部，不能从冠幅推定碰撞面积。",
+    "evidence": [
+      "v1024-row3",
+      "v2048-row3",
+      "h2048-col2",
+      "h2048-col3",
+      "intersection-2048-2048"
+    ]
+  },
+  {
+    "id": "pavement-scale-direction",
+    "severity": "review_required",
+    "topic": "road",
+    "coreBox": [
+      650,
+      150,
+      4096,
+      2300
+    ],
+    "finding": "灰石路保持开放、无额外对象。最小误差硬缝多数能沿纹理衔接，但整块可见铺砖尺度/方向分区：p01_02～03附近较小板块、p01_04/p02_04宽大板块、p02_01/p03_01更长浅角度板块并置。不能据某片砖大小估计角色尺度；应由根在容量/世界比例审定后决定是否需统一纹理。",
+    "evidence": [
+      "v2048-row1",
+      "v3072-row1",
+      "v1024-row2",
+      "h2048-col1",
+      "intersection-1024-2048",
+      "intersection-3072-1024"
+    ]
+  },
+  {
+    "id": "sand-road-north-turn",
+    "severity": "review_required",
+    "topic": "boundary",
+    "coreBox": [
+      1650,
+      0,
+      3100,
+      850
+    ],
+    "finding": "north-3处来自r09c05的沙地边线与r10c05新铺石边汇成明显转折，接缝本身未见空隙；p01_02/03间沙地边也有阶状小转折。需结合全区layout判断它是合理沙地肩还是局部轮廓偏移。",
+    "evidence": [
+      "north-3",
+      "v2048-row1"
+    ]
+  },
+  {
+    "id": "external-boundary",
+    "severity": "observation",
+    "topic": "boundary",
+    "finding": "已检查北边4段和西边前三排3段原尺寸机械边界图；引用的邻片PNG均与当时overlap记录hash一致。灯柱/沙地/石沿未见明显几何断裂，灰路纹理尺度仍有变化。第4排西边界与整个南边界因缺片未检查；东侧无相邻原生目标对照。",
+    "evidence": [
+      "north-1",
+      "north-2",
+      "north-3",
+      "north-4",
+      "west-1",
+      "west-2",
+      "west-3"
+    ]
+  },
+  {
+    "id": "capacity-not-validated",
+    "severity": "blocking",
+    "topic": "capacity",
+    "finding": "现有4096×3072部分图显示道路在灯座右方及树冠左/右仍延续，但图块边界不是道路边界，树冠不等于落地障碍。缺完整下方摊位、角色/碰撞尺寸和全区保守通行mask，无法给出可验证最窄路宽或5000人容量。没有改变世界尺寸、坐标或放行门控。"
+  },
+  {
+    "id": "historical-style-source-missing",
+    "severity": "review_required",
+    "topic": "provenance",
+    "finding": "14次生成记录的57个参考引用中，43次当前hash核对一致；14次均引用同一当前缺失的designs/mail-ui-v1/01-mail-event.png，既有预期SHA保留。所有14个PNG尺寸和hash有效，model/quality实际值及submitted selectors均null。未重写任何native历史来源。",
+    "missingPath": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "expectedSha256": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2"
+  }
+]

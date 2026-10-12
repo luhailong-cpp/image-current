@@ -1,0 +1,18 @@
+from production import *
+D=W/'resume-20261012-v1';O=D/'final-v2-verified';Q=O/'qa';a=np.asarray(Image.open(O/'r02_c03.candidate.png'));old=np.asarray(Image.open(D/'composition-v2/r02_c03.candidate.png'));ep=B/'work-r02_c04/resume-20261012-v02/r02_c04.candidate.png';east=np.asarray(Image.open(ep));oldEast=np.asarray(Image.open(B/'work-r02_c04/resume-20261012-v01/r02_c04.candidate.png'))
+assert np.array_equal(a[:,3796:],old[:,3796:]);assert np.array_equal(east[:,:300],oldEast[:,:300])
+for j in range(4):
+ im=Image.new('RGB',(600,1024));im.paste(Image.fromarray(a).crop((3796,j*1024,4096,(j+1)*1024)),(0,0));im.paste(Image.fromarray(east).crop((0,j*1024,300,(j+1)*1024)),(300,0));im.save(Q/f'east-with-r02_c04-{j+1}.png')
+rp=B/'delivery-2x2/stage-v4/r03_c04.png';right=np.asarray(Image.open(rp));proposed=np.asarray(Image.open(O/'r03_c03.proposed.png'));im=Image.new('RGB',(600,1024));im.paste(Image.fromarray(proposed).crop((3796,0,4096,1024)),(0,0));im.paste(Image.fromarray(right).crop((0,0,300,1024)),(300,0));im.save(Q/'r03_c03.delta-east-with-r03_c04.png')
+checks=[]
+for tile in ['r03_c02','r03_c03']:
+ d=read(O/(tile+'.delta.json'));base=np.asarray(Image.open(d['baseCandidate']['file']));assert sha(d['baseCandidate']['file'])==d['baseCandidate']['sha256'];assert sha(d['baseAssembly']['file'])==d['baseAssembly']['sha256'];assert sha(d['baseSourceIdMap']['file'])==d['baseSourceIdMap']['sha256']
+ patch=np.asarray(Image.open(d['payload']['file']));mask=np.asarray(Image.open(d['mask']['file']));assert set(np.unique(mask))=={0,255};l,t,r,b=d['tileDeltaBox'];reconstructed=base.copy();reconstructed[t:b,l:r][mask==255]=patch[mask==255];proposal=np.asarray(Image.open(O/(tile+'.proposed.png')));assert np.array_equal(reconstructed,proposal);unchanged=np.ones(base.shape[:2],dtype=bool);unchanged[t:b,l:r]=mask!=255;assert np.array_equal(proposal[unchanged],base[unchanged]);checks.append({'tile':tile,'baseCandidate':d['baseCandidate'],'delta':{'file':str(O/(tile+'.delta.json')),'sha256':sha(O/(tile+'.delta.json'))},'maskValues':[0,255],'overlayMismatches':0,'unchangedOutsideMaskMismatches':0,'changedPixels':d['proof']['pixels'],'nativeProofMismatches':d['proof']['mismatches'],'proposalProofMismatches':read(O/(tile+'.proposed.assembly.json'))['proof']['mismatches']})
+sourceChecks=[]
+for n in ['r02_r03_roof_connector_v02','r02_c03_stair_rail_join_v02','r02_r03_roof_west_bridge_v02','r02_r03_roof_west_surgical_v03','r02_r03_roof_neighbor_surgical_v04']:
+ p=W/'native'/(n+'.png');g=read(str(p)+'.generation.json');assert sha(p)==g['sha256']==sha(g['toolOriginal']['file']);assert g['actualModel'] is None and g['actualQuality'] is None;assert Image.open(p).size==(1254,1254)
+ for ref in g['references']:assert sha(ref['file'])==ref['sha256']
+ for key in ['request','receipt']:assert sha(g['evidence'][key])==g['evidence'][key+'Sha256']
+ assert sha(g['prompt'])==g['promptSha256'];sourceChecks.append({'file':str(p),'sha256':sha(p),'width':1254,'height':1254,'originalBytesMatch':True,'referenceHashesMatch':True,'requestReceiptPromptHashesMatch':True,'actualModel':None,'actualQuality':None})
+write(O/'overlay-and-generation-proof.json',{'candidateSha256':sha(O/'r02_c03.candidate.png'),'deltas':checks,'newNativeSources':sourceChecks,'eastInheritedQaProof':{'r02_c03EastComparedToCompositionV2Mismatches':0,'r02_c04WestComparedToResumeV01Mismatches':0,'neighborCandidate':{'file':str(ep),'sha256':sha(ep)}},'r03_c03EastNeighbor':{'file':str(rp),'sha256':sha(rp)},'currentBaselinesVerified':True})
+print(json.dumps({'output':str(O/'overlay-and-generation-proof.json'),'mainPixels':read(O/'source-pixel-proof.json')['pixels'],'mainMismatches':0,'deltaChecks':checks}))

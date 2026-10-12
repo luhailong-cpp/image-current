@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "full_fixture_success_exact_tree_ignored_lfs_attrs_and_live_preservation",
+      "passed": true
+    },
+    {
+      "test": "missing-baseline",
+      "passed": true,
+      "expected_rejection": "Deletion is not permitted"
+    },
+    {
+      "test": "protected-change",
+      "passed": true,
+      "expected_rejection": "Protected original changed"
+    },
+    {
+      "test": "unknown-attrs",
+      "passed": true,
+      "expected_rejection": "Unknown .gitattributes edit"
+    },
+    {
+      "test": "lfs-placeholder",
+      "passed": true,
+      "expected_rejection": "unsmudged placeholder"
+    },
+    {
+      "test": "different-lfs-placeholder",
+      "passed": true,
+      "expected_rejection": "pointer text"
+    },
+    {
+      "test": "nested-attribute-override",
+      "passed": true,
+      "expected_rejection": "Nested attributes override"
+    },
+    {
+      "test": "deleted-screenshot-returned",
+      "passed": true,
+      "expected_rejection": "approved deleted screenshot"
+    },
+    {
+      "test": "ignored-inclusion-byte-change",
+      "passed": true,
+      "expected_rejection": "Approved ignored source changed"
+    },
+    {
+      "test": "nonzero-catchup",
+      "passed": true,
+      "expected_rejection": "catchup must be zero"
+    },
+    {
+      "test": "path_boundary_rejections",
+      "passed": true
+    },
+    {
+      "test": "compact_freeze_schema_exact_fifteen_dispatch_checkpoints_and_twelve_archives",
+      "passed": true
+    },
+    {
+      "test": "compact_wrong_zone_rejected",
+      "passed": true
+    },
+    {
+      "test": "compact_wrong_hash_rejected",
+      "passed": true
+    },
+    {
+      "test": "map_audit_actual_hash_mismatch_rejected",
+      "passed": true
+    },
+    {
+      "test": "wrong_map_audit_reference_rejected",
+      "passed": true
+    },
+    {
+      "test": "legacy_embedded_gate_still_checks_pinned_independent_zone",
+      "passed": true
+    },
+    {
+      "test": "not_ready_coordinator_refuses_capture",
+      "passed": true
+    }
+  ],
+  "count": 18,
+  "fixtures": "D:\\work\\image\\.git\\migration-latest-20261011\\capture-offline-fixtures-c8dd64d1f1e2444ea755ddc1fd3d2648",
+  "capture_script_sha256": "16fad0d59d96e0eeda95a4e3395d4a62ee5b504d90f1e804898cbeef64b64039",
+  "production_capture_run": false,
+  "script_unchanged_during_tests": true,
+  "network_accessed": false,
+  "production_live_git_written": false,
+  "note": "Threshold lowered only in the imported test module to 1024 bytes; production remains 100 MiB."
+}

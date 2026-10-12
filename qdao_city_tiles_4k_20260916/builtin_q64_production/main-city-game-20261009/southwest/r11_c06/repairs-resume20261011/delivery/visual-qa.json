@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "tile": "r11_c06",
+  "reviewedAtUtc": "2026-10-11T06:32:38.830Z",
+  "status": "COMPLETE_NATIVE_4096_CANDIDATE_PARTIAL_LOCAL_REPAIRS_CROSS_EDGE_INTEGRATION_PENDING",
+  "candidate": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/repairs-resume20261011/delivery/r11_c06.internal-repaired.candidate.png",
+    "sha256": "75710531adabe4a5c11761343c69a833f6a935d650ac0bfa7147091b5c46315c",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/repairs-resume20261011/delivery/r11_c06.internal-repaired.context.png",
+    "sha256": "c2e843d8e48417a3ea81885c9771f46eed01b684d6225a600b27e8b22e2c47df",
+    "pixels": [
+      4326,
+      4326
+    ]
+  },
+  "assembly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/repairs-resume20261011/delivery/assembly.json",
+  "baselineReview": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/production-summary.json",
+  "counts": {
+    "baselineSuccessfulImages": 19,
+    "baselineSelectedCorePatches": 16,
+    "baselineRejectedImages": 3,
+    "newSuccessfulBuiltinImages": 9,
+    "newSelectedLocalRepairs": 5,
+    "newRejectedImages": 4,
+    "totalSuccessfulTileImages": 28,
+    "totalRejectedTileImages": 7,
+    "totalSelectedNativeSources": 21,
+    "complete4kCandidates": 1,
+    "internalPassed": 0,
+    "formalAccepted": 0
+  },
+  "mechanical": {
+    "allSelectedNative1254Square": true,
+    "noResampling": true,
+    "maximumFeatherRadiusPixels": 2,
+    "allFourTileOuterEdgesByteIdenticalToBaseline": true,
+    "outer115ContextHaloByteIdenticalToBaseline": true,
+    "contextCoreEqualsCandidate": true,
+    "sourceHashChecksPassed": true,
+    "sourceChainMatchesFinalCandidate": true,
+    "generatedArtOnly": true
+  },
+  "reviewCoverage": {
+    "wholeFinalCandidateViewed": true,
+    "nine512IntersectionAtlasViewed": true,
+    "allFiveAppliedRepairsReviewedInNativeCropsOrFinalTargetedCrops": true,
+    "sixFullSeamStripsExported": true,
+    "sixFullSeamStripsNewlyReviewed": false,
+    "externalEdgesComparedWithNewNeighborVersion": false
+  },
+  "resolved": [
+    {
+      "id": "G03",
+      "finding": "Narrow polygon loop and neighboring dangling spurs replaced by clean continuous slab boundary."
+    },
+    {
+      "id": "G04",
+      "finding": "Southwest dead-end grout branch removed; existing long diagonal preserved."
+    },
+    {
+      "id": "G05",
+      "finding": "Originally incomplete diagonal connected to a legitimate long line; obsolete residual stub removed in subsequent native edit."
+    },
+    {
+      "id": "M01",
+      "finding": "Narrow stone foot/trim rectangular tone split and edge kink removed."
+    },
+    {
+      "id": "M02-local",
+      "finding": "Top-right wall rectangular tone boundary removed locally; outer tile pixels unchanged. Requires north cross-edge integration before closure."
+    }
+  ],
+  "pending": [
+    {
+      "id": "G01",
+      "severity": "P2",
+      "coreBox": [
+        100,
+        1200,
+        750,
+        1650
+      ],
+      "finding": "Lowest stair still ends around x285 instead of x505 upper-step/parapet alignment. Four bounded attempts edited wrong step or widened to x670; all four rejected. Baseline pixels retained.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/repairs-resume20261011/delivery/qa/step-terminal-pending.png"
+    },
+    {
+      "id": "G02-pattern",
+      "severity": "P2",
+      "coreBox": [
+        1090,
+        2170,
+        1180,
+        3040
+      ],
+      "finding": "Unsupported short spur removed, but originally invented vertical grout line retained to avoid reopening border/neighbor geometry. Exact sparse layout pattern remains pending."
+    },
+    {
+      "id": "G06",
+      "severity": "P2",
+      "finding": "Extra paving subdivisions introduced in baseline p03_04/p04_02/p04_03 have not all been reconciled to the coarse guide."
+    },
+    {
+      "id": "M03",
+      "severity": "P2",
+      "finding": "Cellular/crosshatch stone microtexture remains too dense and inconsistent in unedited areas. Local seam repairs do not establish whole-tile material acceptance."
+    },
+    {
+      "id": "D01",
+      "severity": "P3",
+      "finding": "Baseline paper locations and some guide joints were simplified/drifted; exact guide fidelity not claimed."
+    },
+    {
+      "id": "E01-E02",
+      "severity": "P2",
+      "finding": "West boundary discontinuities and material transitions remain pending parent-owned cross-edge proposal integration; this worker preserved all outer edge pixels."
+    },
+    {
+      "id": "E03-M02",
+      "severity": "P2",
+      "finding": "North seam integration pending. Parent crossedge-color east-stone proposal overlaps 09-top-right-tone ROI [2700,0,3954,1254]; parent will rebase overlapping section to 08 candidate, apply cross-edge proposal, preserve non-overlapping 09 artwork."
+    },
+    {
+      "id": "unavailable-neighbors",
+      "finding": "East and south exterior neighbor seam acceptance not performed."
+    }
+  ],
+  "selectedRepairIds": [
+    "03-center-joints",
+    "04-left-joints",
+    "05-bottom-stub",
+    "08-stone-foot-tone",
+    "09-top-right-tone"
+  ],
+  "rejectedRepairIds": [
+    "01-step-terminal",
+    "02-step-terminal-retry",
+    "06-bottom-step-focused",
+    "07-bottom-step-width"
+  ],
+  "internalPassed": false,
+  "externalPassed": false,
+  "formalAccepted": false,
+  "actualModel": null,
+  "actualQuality": null,
+  "route": "builtin_image_gen",
+  "scope": "Only r11_c06 written. No shared progress, other tile, shared script, contract, game or runtime edits. Parent instructed stop new generation after 09; generation stopped and delivery stable.",
+  "next": "Parent merges recorded cross-edge proposals and reviews resulting connected candidate. Remaining G01/material/pattern issues remain explicitly open."
+}

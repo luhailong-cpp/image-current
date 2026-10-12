@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五行奇谈 · 属性加点</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <!-- Design context: approved 2026-09-10 jade/ivory/gold style and v10 painted sprites.
+       Window-first layout, native Chinese data, no scene or full-body character.
+       Existing allocation rules are copied unchanged; this preview stores state in memory only. -->
+  <main id="stage" data-screen-label="人物属性面板">
+    <section class="panel" id="panel" aria-label="属性面板">
+      <header class="panel-header">
+        <div class="game-brand">五行奇谈</div>
+        <div class="title-plaque"><h1 id="panelTitle">人物属性</h1></div>
+        <button type="button" class="close-button" id="closePanel" aria-label="关闭属性面板"></button>
+        <img class="close-tassel" src="assets/close_tassel.png" alt="">
+        <nav class="entity-tabs" aria-label="查看对象">
+          <button type="button" data-mode="hero" class="entity-tab active" aria-pressed="true">人物</button>
+          <button type="button" data-mode="pet" class="entity-tab" aria-pressed="false">宝宝</button>
+        </nav>
+      </header>
+      <div class="panel-body">
+        <aside class="identity-column" id="identity"></aside>
+        <section class="details-column" aria-label="当前属性">
+          <div class="section-heading"><h2>属性总览</h2><span id="entitySummary">85级</span></div>
+          <div class="stats-grid" id="stats"></div>
+          <div id="entityExtra"></div>
+        </section>
+        <section class="allocation-column" aria-label="属性加点">
+          <div class="allocation-heading"><h2>属性点</h2><label class="scheme-label">加点方案<select id="scheme"><option value="strength">力道流</option><option value="spirit">灵法流</option><option value="speed">敏捷流</option><option value="balanced">均衡流</option></select></label></div>
+          <div class="point-summary"><img src="assets/notice_icon.png" alt=""><span>剩余属性点</span><strong id="remaining">20</strong><span class="pending" id="pending" aria-live="polite">待分配</span></div>
+          <div class="allocation-rows" id="allocations"></div>
+          <p class="allocation-tip" id="allocationTip">分配后点击确认，才会保存本次加点</p>
+          <div class="allocation-actions"><button type="button" class="button secondary" id="reset">重置</button><button type="button" class="button secondary" id="auto">自动加点</button><button type="button" class="button primary" id="confirm">确认加点</button></div>
+        </section>
+      </div>
+      <footer class="panel-footer"><span id="footerText">一念入道，五行随心</span><span class="preview-note">交互演示 · 刷新后恢复</span><button type="button" class="text-button" id="help">加点说明</button></footer>
+    </section>
+    <div class="reopen" id="reopen" hidden><div><h1>五行奇谈</h1><button class="button primary" data-open="hero">人物属性</button><button class="button secondary" data-open="pet">宝宝属性</button></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <dialog id="infoDialog" aria-labelledby="dialogTitle"><form method="dialog"><button class="dialog-close" aria-label="关闭说明">×</button><h2 id="dialogTitle">加点说明</h2><div id="dialogBody"></div><button class="button primary">知道了</button></form></dialog>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

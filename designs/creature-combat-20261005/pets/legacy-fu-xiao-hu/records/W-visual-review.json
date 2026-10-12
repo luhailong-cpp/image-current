@@ -1,0 +1,62 @@
+{
+  "scope": "符小虎 W 受击6帧 + 施法16帧；W attack由根任务负责",
+  "reviewedAt": "2026-10-05T13:51:25.109Z",
+  "reviewMethod": [
+    "逐次查看image_gen实际返回原生图",
+    "view_image本地W参考",
+    "view_image最终hit/cast全帧contact sheets"
+  ],
+  "staticVisualFindings": {
+    "identity": "杏金虎纹、白颊白足、金头带、玉绿金边披肩、一条短弯尾保持",
+    "direction": "真正左上斜背；后脑与披肩背面可见，非镜像正面",
+    "anatomy": "可见前爪随动作伸缩；远侧前爪在中性姿势自然遮挡，聚气/防御时分开；未见额外肢体/额外尾巴",
+    "support": "坐姿臀与后肢支撑；未制作行走/跑步。生成有小幅轮廓与头位变化，未逐帧对齐遮掩",
+    "effects": "hit03漫画符号已AI去除；cast08实体圆盘已AI改为透明光球；cast10光效边缘与尾巴完整；cast11改为早期收爪",
+    "continuity": "受击有压缩/反冲/回弹；施法有双爪聚气/前推/回收。正常及慢速动态验收未能执行，不能以静态图替代动态通过。"
+  },
+  "technicalReport": "W-QA/technical.json",
+  "technicalReportTransformScope": "本子任务固定1254→1024整画布缩放。根任务计划全W统一y=-4后重算SHA与manifest；此报告若生成在偏移前需根任务刷新。",
+  "dynamicReview": {
+    "status": "subagent_unavailable_root_reported_completed",
+    "attempts": [
+      {
+        "api": "cua.createBrowserTab('iab', localhost W-QA)",
+        "result": "Browser is not available: iab"
+      },
+      {
+        "api": "cua.listBrowsers()",
+        "result": []
+      }
+    ],
+    "preview": "../preview/index.html",
+    "modes": [
+      "1x hit40ms/cast45ms",
+      "0.25x",
+      "pause/previous/next/range"
+    ],
+    "clientIntegration": "not performed",
+    "groupPreviews": [
+      "../preview/hit-W.html",
+      "../preview/cast-W.html"
+    ],
+    "rootFollowup": {
+      "reportedBy": "parent /root",
+      "status": "root reported successful unified six-group 1x and 0.25x playback in cua",
+      "evidence": "Parent message received after W handoff; root final QA record is authoritative."
+    }
+  },
+  "generationEvidence": {
+    "route": "builtin image_gen",
+    "targetModel": "gpt-image-2.5-sunburst",
+    "targetQuality": "max",
+    "actualModel": null,
+    "actualQuality": null,
+    "unverifiedReason": "工具未开放model/quality参数，返回值未披露"
+  },
+  "cleanup": {
+    "workspaceNativeIntermediates": "none created except retained current design/W-reference.png",
+    "rejectedFrames": "runtime被修正最终帧替代，原生成证据JSON保留；未建立拒稿图片备份",
+    "hostGeneratedCache": "工具默认产生于本宠目录之外；本子任务只有本宠目录写权限，因此未修改/删除宿主缓存",
+    "duplicateQa": "W-QA contact PNGs and HTML removed after verifying unified preview equivalents."
+  }
+}

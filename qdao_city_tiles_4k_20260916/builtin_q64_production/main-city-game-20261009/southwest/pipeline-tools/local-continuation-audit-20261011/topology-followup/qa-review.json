@@ -1,0 +1,222 @@
+{
+  "scope": "whole r12_c05 macro structural guide plus local refinement QA",
+  "formalAccepted": false,
+  "completeTileQa": false,
+  "noImageGeneration": true,
+  "noCandidateOrProgressMutation": true,
+  "sourceSha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+  "structuralGuide": {
+    "lineCount": 29,
+    "patchCount": 16,
+    "sourceUncertaintyPixels": 1,
+    "worldPerSourcePixel": 52.261562998405104,
+    "worldCoordinates": "artwork pixels, not client simulation units",
+    "files": [
+      "r12-macro-topology.json",
+      "patch-endpoints.json",
+      "patch-endpoints.txt",
+      "r12-topology-overlay.png",
+      "r12-topology-world-map.png"
+    ],
+    "method": "Manual source topology tracing and exact geometric clipping of those approximate shared world polylines; no automatic source-pixel fitting.",
+    "limitations": [
+      "Single-source-pixel line location uncertainty remains.",
+      "Faint internal subdivision endpoints and roof contour are approximate semantic guidance, not edit masks.",
+      "Colored band boundaries are not additional grout lines.",
+      "All 16 endpoint lists are structural guidance, not acceptance of all 16 generated patches."
+    ]
+  },
+  "localResults": [
+    {
+      "id": "p01_01-quiet-material-v01",
+      "verdict": "local_material_pass",
+      "report": "p01_01-quiet-material-independent-qa.json"
+    },
+    {
+      "id": "p02_03-macro-topology-v01",
+      "verdict": "three_segment_topology_pass_with_overlap_QA_pending",
+      "report": "p02_03-macro-topology-independent-qa.json"
+    }
+  ],
+  "frontTwoRowsRepairList": [
+    {
+      "id": "p01_01",
+      "priority": "P1",
+      "action": "rebuild_macro",
+      "finding": "Old selected native omits/simplifies one of four northwest parallel border boundaries and changes their placement. Retain the quiet material direction, reconstruct full border geometry from guide.",
+      "lines": [
+        "NW1",
+        "NW2",
+        "NW3",
+        "NW4",
+        "D2"
+      ],
+      "snapshotSource": {
+        "id": "p01_01",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p01_01.png",
+        "sha256": "06b588f22d7d648d0f293005cf126e7a1875fdacf283b40bce97c44740729a21",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p01_02",
+      "priority": "P1",
+      "action": "rebuild_macro",
+      "finding": "Old selected native has only clipped corner lines. Approved guide has northwest border continuation, D1 descending seam across upper area, and faint U1 ascending seam across lower area. Quiet material is separately approved and does not restore these missing seams.",
+      "lines": [
+        "NW3",
+        "NW4",
+        "D1",
+        "U1"
+      ],
+      "snapshotSource": {
+        "id": "p01_02",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p01_02.png",
+        "sha256": "6fe719694b49527a3b8bbab333e8039e99565f12c578f607de6ab8a686a50726",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p01_03",
+      "priority": "P1",
+      "action": "rebuild_macro",
+      "finding": "Old native single descending line from top to right is misplaced and misses the complete X junction. Required X near native (382,615), with D1 and U1.",
+      "lines": [
+        "D1",
+        "U1"
+      ],
+      "snapshotSource": {
+        "id": "p01_03",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p01_03.png",
+        "sha256": "f570e3d9ac1e519a8116afa64bad396d4eb7fc94a7b51b1f85a1f396eca9daa4",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p01_04",
+      "priority": "P1",
+      "action": "rebuild_macro",
+      "finding": "Old selected native bottom-left descending line and clipped top-right are not the approved northeast paired border plus lower ascending seam. Use NE1/NE2, U2 and short faint NEstub; no hard old-native strips.",
+      "lines": [
+        "NE1",
+        "NE2",
+        "U2",
+        "NEstub"
+      ],
+      "snapshotSource": {
+        "id": "p01_04",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p01_04.png",
+        "sha256": "e0250543c66d3809740f9f4c832ea52fe24f6ca913c941532f158b3a1e14b0c2",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p02_01",
+      "priority": "P1",
+      "action": "coordinate_macro_and_refinement",
+      "finding": "Base native horizontal locations differ from approved y~864 and y~1150; previously reviewed geometry-v02 refinement improves them but is not the base native in this snapshot. Also restore weak ascending U1 from the rectangular top border to the right edge, and coordinate top D2/NW4 fragments.",
+      "lines": [
+        "D2",
+        "NW4",
+        "U1",
+        "Rtop",
+        "RinnerTop",
+        "RshortV",
+        "RinnerRight"
+      ],
+      "snapshotSource": {
+        "id": "p02_01",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p02_01.png",
+        "sha256": "f5faecdabb442dfbbad345bb129e946bafbf418953279b7187b0233fc9676a34",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p02_02",
+      "priority": "P1",
+      "action": "rebuild_macro",
+      "finding": "Old native removes X and rectangular frame corner, turns horizontal frame into full-width bands. Restore X near(262,349), lower T near(1192,997), outer corner near(554,940), and connected source lines.",
+      "lines": [
+        "D2",
+        "D3",
+        "U1",
+        "U2",
+        "Rtop",
+        "Rright"
+      ],
+      "snapshotSource": {
+        "id": "p02_02",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p02_02.png",
+        "sha256": "bbf0165db29cd27ba152e83444b08e40785aaf65385c58a5596de9c845b917c3",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p02_03",
+      "priority": "P2",
+      "action": "retain_topology_coordinate_overlaps",
+      "finding": "New native has required three line segments; measured top entry x968 is within one-source-pixel tolerance. Shared joins still need local QA after neighbor reconstruction.",
+      "lines": [
+        "D1",
+        "D2",
+        "U2"
+      ],
+      "snapshotSource": {
+        "id": "p02_03",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p02_03.png",
+        "sha256": "9b40bc7267c4f559d02480ec370ace687f2d615627bcd2a183c6e4d3fd71d0f5",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "id": "p02_04",
+      "priority": "P1",
+      "action": "coordinate_endpoints_and_band_width",
+      "finding": "New native restores X, descending seam, southeast border and blue band. Endpoint and band width drift remain: visual lower T near(990,855) vs guide trace(1015,783); blue band bottom entry around750 vs guide863. Treat topology as improved, not final seam acceptance.",
+      "lines": [
+        "D1",
+        "U2",
+        "SErim",
+        "BlueUpper"
+      ],
+      "snapshotSource": {
+        "id": "p02_04",
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p02_04.png",
+        "sha256": "643aebccbfbb115ada6069ff99af61dabc2f7406f942f6d3a03ab5c5608dbc5a",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    }
+  ],
+  "remainingValidation": [
+    "Rebuild first-row macro and p02_02 against global topology.",
+    "Apply/coordinate p02_01 accepted local geometry refinement and missing ascending line.",
+    "Check all actual shared overlap strips and corners after 16 native sources are present.",
+    "Validate quiet stone consistently against approved detail without erasing structure.",
+    "Check r12 top outer edge against integrated r11_c05; matching array dimensions or hashes alone cannot pass it.",
+    "Check blue band and roof silhouette across row3/row4; do not apply blanket stone replacement."
+  ]
+}

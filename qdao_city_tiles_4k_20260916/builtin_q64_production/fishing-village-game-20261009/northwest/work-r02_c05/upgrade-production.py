@@ -1,0 +1,9 @@
+from pathlib import Path
+W=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05')
+t=(W/'production.py').read_text()
+t=t.replace("def name(r,c):return f'r02_c05_s{r:02d}_s{c:02d}_v01'","def name(r,c):return f'r02_c05_s{r:02d}_s{c:02d}_v02' if (r,c)==(4,1) else f'r02_c05_s{r:02d}_s{c:02d}_v01'")
+t=t.replace("prompt=f'''Use case: stylized-concept.", "localNote='For this exact patch, the left/center are close foliage and tree branches, with a large partial gray rock face filling the upper-right. A single thick warm-wood rail crosses only the bottom edge from x0,y950 down toward the bottom-right; any current post is partial at the bottom edge. Leaves roughly20..80pixels and rail thickness roughly150..200pixels must match the native west strip. No complete waterfall or pool or stairway belongs in this patch.' if (r,c)==(4,1) else ''\n prompt=f'''Use case: stylized-concept. CRITICAL: Treat image1 as a tight close crop and preserve its exact local placement and camera zoom. Sharp overlap bands are actual native neighbor pixels; the deliberately blurred region is approved-layout geometry to render sharply at SAME camera scale. Do not shrink an entire map scene into the patch. {localNote}")
+t=t.replace("Render the specific terrain and features shown in image1 at polished native detail, expanding the established west r02_c04 hillside into the next tile.","Render only the LOCAL terrain fragments and features visible in image1 at polished native detail. Each is just one-sixteenth of the tile; the full tile waterfall scene must not be squeezed into this crop. The actual native neighbor leaf, rock and wood sizes set camera zoom.")
+(W/'production-v2.py').write_text(t,encoding='utf8')
+print(str(W/'production-v2.py'))
+

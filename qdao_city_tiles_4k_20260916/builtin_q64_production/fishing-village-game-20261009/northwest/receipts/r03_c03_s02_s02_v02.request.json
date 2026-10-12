@@ -1,0 +1,27 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Asset: one native 1254×1254 seamless GAME MAP PATCH, r03_c03_s02_s02, for 五行奇谈. Render precisely the small field of view in IMAGE 1, not a complete scene. It is a close-cropped region of the existing northwest cloth shop: lower portion of existing red lantern and tassel at top center, existing warm timber wall and column at left, red/wooden dado behind the fabric rack, blue draped fabric in lower half and pale blue fabric entering at lower right, sandy yard behind at upper right. Do not invent another building, lantern, stall, rack or mini-map.\n\nREFERENCE ROLES:\n1 is the exact positional edit target. Top y=0..229 and left x=0..229 are genuine UNRESAMPLED native pixels of neighbors, PIN their geometry, colors, wood grain, shapes and boundary pixels exactly. Interior beyond these strips is blurred layout-only, redraw this interior with fine native crisp detail while preserving exact contours and placements.\n2 is the entire 4K tile layout context only, NEVER a quality source.\n3 is the ONLY full map layout authority, no rearrangement.\n4 is an independent materials/style closeup, NOT coordinate content.\n5 is the principal approved rounded, full-bodied Daoist Q hand-painted style. No UI, text, people, night or haze from this reference.\nImage 1 top 230px was copied from NORTH neighbor r03_c03_s01_s02_v02 bottom 230px. Continue its lantern tassels downward without shift or changing scale. Image 1 left 230px was copied from WEST neighbor r03_c03_s02_s01_v01 right 230px. Continue its diagonal timber rack rail seamlessly to the right, maintaining thickness and shading; no vertical seam or second post.\n\nCOORDINATES: whole canvas 57344 square maps uniformly to image 3, 1254 square. This exact native box is x=9101..10355, y=9101..10355; overview fractional box [199.0208914621,199.0208914621,226.4433942522,226.4433942522]. 1024 core crop [115,115,1139,1139]. Camera/scale/rotation absolutely fixed. Do not recenter or zoom out. Objects MUST continue cropped through edges. Preserve gray road versus sandy yard from map; no red floor.\n\nDRAW: Bright clean daytime, rounded polished hand-painted forms, soft gold and ivory plaster, warm wood, red painted festive architecture. Crisp native fabric weave with subtle fine fibers and broad rounded folds, clear thread edges, warm wood grain, fine lantern ribs and silk fringe. All of the image equally in focus, NO depth of field blur, NO blurry background, NO bokeh, no pixelated enlargement. Layout blurred regions must be genuinely redrawn. Fine material detail respects shapes without noisy dark seams. Top and left native strips are preservation references, never smear or feather them.\n\nGLOBAL INVARIANTS: central red roof temple and two blue roof side houses remain separate; double fish plaza, open routes, northwest cloth shop, weapons shop, northeast jewelry shop, east market/quay, southeast unfinished boat shipyard with both routes, north short connection all retained across map, but do NOT pull distant objects into this crop. Trees only by existing walls, no new potted plants, road islands, NPCs, HUD, labels, watermark. Sparse seasonal touches only where already in layout. Output exactly this continuous local crop, square opaque PNG, native maximum visual finish.",
+  "promptFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/prompts/r03_c03_s02_s02_v02.prompt.txt",
+  "referenced_image_paths": [
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/guides/r03_c03_s02_s02.layout-and-native-overlap.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/guides/r03_c03.layout-only.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-clear-routes-v10.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-detail-v1.png",
+    "D:/work/image/designs/mail-ui-v1/01-mail-event.png"
+  ],
+  "referenceRoles": [
+    "exact positional edit target with pinned native top/left overlaps",
+    "layout-only 4K tile context",
+    "only whole-map layout authority",
+    "independent material closeup, not coordinate crop",
+    "principal approved Daoist Q painting style"
+  ],
+  "transparent_background": false,
+  "submittedParameters": {
+    "model": null,
+    "quality": null
+  },
+  "createdAt": "2026-10-09T16:34:28.493Z",
+  "retryOf": "r03_c03_s02_s02_v01",
+  "retryReason": "`referenced_image_paths` must contain at most 5 paths"
+}

@@ -1,0 +1,55 @@
+{
+  "slot": "run-W-07",
+  "action": "run",
+  "direction": "W",
+  "frame": 7,
+  "requestedAt": "2026-10-05T03:34:15.814863+00:00",
+  "configSnapshot": {
+    "schema_version": 1,
+    "model": "gpt-image-2.5-sunburst",
+    "quality": "max",
+    "builtin_product": "ChatGPT Images 2.5",
+    "selection": "latest_verified",
+    "preferred_route": "builtin",
+    "verified_on": "2026-10-04",
+    "sources": {
+      "release": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    }
+  },
+  "submittedParameters": {
+    "model": null,
+    "quality": null,
+    "prompt": "Use case: precise-object-edit. ONE transparent RGBA 1024x1024-or-larger game animation frame, run WEST frame07. Image1 is the ONLY edit target, current W07. Images2 and3 are immediately preceding W06 and following W08 pose references ONLY. Image4 is the approved bright clean rounded chibi hand-painted style reference ONLY, do not reproduce its UI.\nMake one narrowly localized anatomical correction: in image1 the lifted FRONT leg (the bent knee on the SCREEN LEFT side) has its lower leg and boot mistakenly folded back toward screen RIGHT. That lower leg must already be released forward as in the temporal interval between images2 and3. Keep image1's upper thigh, hip attachment and knee center exactly in place. Redraw ONLY that airborne leg from just below its knee through the boot: the calf descends naturally from the fixed knee instead of curling back, the ankle sits forward/left of its old position, and the boot is a clear WEST-facing side profile with toe pointing SCREEN LEFT. This is a modest continuous late forward swing, not a second knee-fold. At normalized1024 scale, the new airborne boot body is roughly around x320,y880 between neighbor boots, with toe toward x250 and heel toward x395; these are guidance for a newly articulated drawing, never mechanically translate or warp the old boot. The front foot remains lifted clear of the ground. Connect knee, shin, ankle and shoe naturally in a side-view running plane, no outward ankle roll or sole facing the viewer. Maintain chibi lower-leg and boot proportions matching images2/3; create a distinct pose, do not copy another frame.\nHARD INVARIANTS: preserve image1's entire head, face, hair, body scale, costume, waist, shorts, thigh, original hip/knee location, exact other leg stretching backward toward SCREEN RIGHT, its supporting knee/calf/boot and forefoot ground contact. Preserve image1's right EMPTY fist swinging forward beside the waist, shoulder/elbow/sleeve positions, the left hand gripping the complete long bamboo bow and bowstring, right-shoulder quiver, ornaments, palette, brushwork and canvas placement. No extra limbs, no swapped legs, no added arrows, no crop or zoom, no global translation, no mirror, no interpolation. Outside the single lifted knee-down region keep the existing image appearance as closely as possible. Only one full-body sprite with the same transparent margins, real alpha background, no text, no ground shadow, no drawn checkerboard. Highest finished detail with smooth clean alpha.",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/07.png",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png",
+      "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/08.png",
+      "D:/work/image/designs/jubaozhai-ui/02-characters.png"
+    ],
+    "transparent_background": true
+  },
+  "referenceMetadata": [
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/07.png",
+      "sha256": "15c48325c4f94141ee50b0336ab1ed1b369ca256b030486fbd6e3da3985ed69e",
+      "role": "edit_target"
+    },
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/06.png",
+      "sha256": "1db7eea85e3f342c5c58898ab90b4d53e49f69e8977bc9239146f45cd8330156",
+      "role": "pose_or_approved_style"
+    },
+    {
+      "path": "D:/work/image/qdao_original_roster_v14_hd/action-remake-20261001/characters/09_bamboo_archer_girl/runtime/run/W/08.png",
+      "sha256": "899487e5e335d024780ae92ca6911b878d7309df79fcad2ba0271a758307fb3a",
+      "role": "pose_or_approved_style"
+    },
+    {
+      "path": "D:/work/image/designs/jubaozhai-ui/02-characters.png",
+      "sha256": "7a95140fc3c7a0ae6562ec6dff51d5296edd15116375152a8b22502c7107e879",
+      "role": "pose_or_approved_style"
+    }
+  ],
+  "repairReason": "New video-reference review: W05→06→07→08 repeats knee-folded, lower-leg-forward, folded, forward. W07 alone folds the airborne lower leg backwards after it was already released in W06. Continue the same swing through W07 between W06 and W08 without changing support or upper body."
+}

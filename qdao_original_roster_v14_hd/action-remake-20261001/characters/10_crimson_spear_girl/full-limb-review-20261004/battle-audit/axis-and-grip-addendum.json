@@ -1,0 +1,121 @@
+{
+  "reviewedAt": "2026-10-05T04:20:13.519635+00:00",
+  "reason": "Follow-up targeted audit of sustained foot turnout and W cross-action grip, not only sudden sole flips.",
+  "sources": [
+    {
+      "slot": "attack/E/03",
+      "file": "runtime/attack/E/03.png",
+      "sha256": "38f790dc53544862bde08ad53912d79038b1a30962df87399083bdf97351c322",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "attack/E/05",
+      "file": "runtime/attack/E/05.png",
+      "sha256": "de4c97edd173889e38eed8da148ae7cc6611f396fe1ae40c6c7727785cbb3cae",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "attack/W/03",
+      "file": "runtime/attack/W/03.png",
+      "sha256": "7602c12287b5762f1dcdc4ab62012fc92e54a1a666fdd1e0142fb7ce98f15b1f",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "attack/W/05",
+      "file": "runtime/attack/W/05.png",
+      "sha256": "247857fbc39020cacd77b18ac6c1d4eb18e216e8efe17ab8a98bdd9d00d2eaf0",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "cast/E/09",
+      "file": "runtime/cast/E/09.png",
+      "sha256": "c67900a4017b61ff4b7bc6683a872acdf31c472473b0319ec98acc707693cd25",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "cast/W/10",
+      "file": "runtime/cast/W/10.png",
+      "sha256": "e427ae7290cf0439983516ca0e25552111093a45c799c6ee01a1119b608ba0d6",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "run/W/16",
+      "file": "runtime/run/W/16.png",
+      "sha256": "5cfb299abdfe4de7c167702437bb6f30f89d4f0753b1480a004ce370ceef7316",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "run/W/01",
+      "file": "runtime/run/W/01.png",
+      "sha256": "0d298244067485867516a3bfbb76f107721feac8167d56dad00a2b18242aad87",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "hit/W/06",
+      "file": "runtime/hit/W/06.png",
+      "sha256": "91ad0e8110c86e6c8a5b6d14aacc321b647bbc9b020ea78aef1527428abfe919",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "cast/W/16",
+      "file": "runtime/cast/W/16.png",
+      "sha256": "05b789b973c078b3e242a160d9135774550832f0acf2cd06d1bccb479485fa5e",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "attack/W/01",
+      "file": "runtime/attack/W/01.png",
+      "sha256": "39b51d1ed6d45bef983fe540662f9193346aa7eef684706b576e7db64c55f43d",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    },
+    {
+      "slot": "attack/W/12",
+      "file": "runtime/attack/W/12.png",
+      "sha256": "0eb748861834596b99e6bfd743073add588376c60e2170e4d2c7f538bf54313d",
+      "inspection": "direct original PNG viewed at 1024 canvas"
+    }
+  ],
+  "legAxisFindings": [
+    {
+      "slots": [
+        "attack/E/03",
+        "attack/E/05"
+      ],
+      "status": "passed",
+      "observation": "最大横向弓步中护胫正面、踝连接、鞋面主轴连续。前膝屈曲与后腿蹬伸在动作平面内。后腿斜向左、鞋尖向右的投影并不代表扭踝：后腿伸展而脚掌仍朝攻击方向是自然弓步。"
+    },
+    {
+      "slots": [
+        "attack/W/03",
+        "attack/W/05",
+        "cast/W/10"
+      ],
+      "status": "passed",
+      "observation": "前腿弯曲、后腿外展，护胫正面随大腿整体转向，鞋面也随之朝左前；未见小腿正面朝一侧、踝以下却横扭另一侧的断轴。宽站距本身保留。"
+    },
+    {
+      "slots": [
+        "cast/E/09"
+      ],
+      "status": "passed",
+      "observation": "低重心宽站距，两腿分别从髋展开，左侧后足略向镜头，护胫与踝部同向；没有仅鞋头从踝部折成侧向的形态。"
+    }
+  ],
+  "crossAction": {
+    "status": "uncertain",
+    "groups": [
+      "hit/W",
+      "cast/W",
+      "attack/W",
+      "run/W"
+    ],
+    "issue": "仅剩跨动作是否需要转枪过渡：实际查看 run16/01、hit06、cast16、attack01/12。run/hit/cast 的可见肩袖—掌腕布局连续，attack 组采用朝左刺的独立布局，组内12→01握持没有交换。跨动作之间没有提供转枪中间帧，不能仅凭枪头变向断言错手。",
+    "decision": "没有确认单帧解剖错误；不为缺少跨动作中间证据而盲改所有战斗帧。若客户端直接把不同动作首尾硬接，应另验状态切换；目前不是已确认的错误帧。"
+  },
+  "result": {
+    "newConcreteFailures": 0,
+    "edits": 0,
+    "preserveCurrentBattleFrames": true,
+    "interpretation": "髋—膝—踝—鞋头同一运动平面，不等于二维画面中的四点必须成一条直线。"
+  }
+}

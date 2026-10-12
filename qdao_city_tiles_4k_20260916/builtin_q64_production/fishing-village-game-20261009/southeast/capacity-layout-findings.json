@@ -1,0 +1,95 @@
+{
+  "zone": "southeast",
+  "createdAtUtc": "2026-10-10T06:06:53.055Z",
+  "basis": "Existing native artwork and shared contract; no world scale or navigation data invented",
+  "capacity5000Validated": false,
+  "worldSize": null,
+  "clientMappingValidated": false,
+  "existingCoverage": {
+    "full4kCandidateTiles": [
+      "r10_c08",
+      "r10_c09",
+      "r10_c10",
+      "r11_c09"
+    ],
+    "partialNativePositions": {
+      "r11_c10": 6,
+      "r12_c09": 12
+    },
+    "targetTiles": 49,
+    "missingComplete4kCandidates": 45,
+    "complete2x2": false,
+    "priority2x2": [
+      "r10_c09",
+      "r10_c10",
+      "r11_c09",
+      "r11_c10"
+    ],
+    "priority2x2MissingPositions": [
+      "r11_c10:p23",
+      "r11_c10:p24",
+      "r11_c10:p31",
+      "r11_c10:p32",
+      "r11_c10:p33",
+      "r11_c10:p34",
+      "r11_c10:p41",
+      "r11_c10:p42",
+      "r11_c10:p43",
+      "r11_c10:p44"
+    ]
+  },
+  "capacitySensitiveObservations": [
+    {
+      "area": "r10_c08",
+      "globalBox": [
+        28672,
+        36864,
+        32768,
+        40960
+      ],
+      "finding": "Upper pale-stone/deck space is visible, while large unfinished hull/canvas occupies much of lower tile. Boat cavity, framework, canvas and workbench must not be counted as free walkable ground solely from image area."
+    },
+    {
+      "area": "r10_c09/r10_c10",
+      "globalBox": [
+        32768,
+        36864,
+        40960,
+        40960
+      ],
+      "finding": "Building facade, furniture and boat occupy substantial area. Existing connected wooden floor bands are continuous in reviewed borders, but this does not establish complete entrance/exit connectivity or standing-player area."
+    },
+    {
+      "area": "r11_c09/r11_c10",
+      "globalBox": [
+        32768,
+        40960,
+        40960,
+        45056
+      ],
+      "finding": "r11_c10 lacks10 cores, so southeast 2x2 sample is incomplete. Missing area cannot be treated as traversable or capacity-positive."
+    },
+    {
+      "area": "r12_c09",
+      "globalBox": [
+        32768,
+        45056,
+        36864,
+        49152
+      ],
+      "finding": "Only top3 native rows exist. Stone wall, railing, rocks and vegetation constrain free space. Conservatively exclude rocks/vegetation and vertical wall faces; east dock route needs neighboring coverage and world mapping."
+    }
+  ],
+  "reviewEvidence": [
+    "seam-qa/r10_c09/external-seam-summary.json",
+    "r11_c10/qa/existing-2x2/review.json",
+    "r12_c09/qa/capacity-gate-partial-review.json",
+    "r10_c08/qa/root-primary-review.json"
+  ],
+  "validationLimits": [
+    "Artwork pixel count is not a player capacity measure.",
+    "No assumed avatar size, world-unit conversion, walkable-mask area or navigation width is certified here.",
+    "Both shipyard entrances and routes must be checked as a connected whole after global-scale review; existing close fragments alone cannot verify both."
+  ],
+  "gateStatus": "active; no new artwork requests, no new coordinates, no deletion"
+}

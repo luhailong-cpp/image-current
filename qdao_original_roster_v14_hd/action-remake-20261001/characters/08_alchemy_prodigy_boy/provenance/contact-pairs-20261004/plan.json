@@ -1,0 +1,84 @@
+{
+  "createdAt": "2026-10-04T10:57:12.626819+00:00",
+  "latestUserQuote": "直脚着地两帧，再旁边点两帧，再旁边点两帧，再旁边点俩帧，依次类推",
+  "status": "exported_and_offline_reviewed",
+  "timing": {
+    "frames": 16,
+    "frameMs": 75,
+    "cycleMs": 1200,
+    "positionPairMs": 150
+  },
+  "interpretation": "同一支撑脚连续着地，沿运动方向相对身体逐步后移；每段为两个独立姿态，不复制帧，不将角色整图平移，不往身体两侧撇脚。另一足自然屈膝摆动。",
+  "pairPlan": [
+    {
+      "foot": "right",
+      "frames": [
+        16,
+        1
+      ],
+      "position": "初接地，脚位稍在身体前方，01增加承重"
+    },
+    {
+      "foot": "right",
+      "frames": [
+        2,
+        3
+      ],
+      "position": "身体经过支撑脚，膝踝承重"
+    },
+    {
+      "foot": "right",
+      "frames": [
+        4,
+        5
+      ],
+      "position": "支撑脚相对身体稍后，仍接地承重"
+    },
+    {
+      "foot": "right",
+      "frames": [
+        6,
+        7
+      ],
+      "position": "更后方末段，前掌接触并蹬离，07末接触"
+    },
+    {
+      "foot": "left",
+      "frames": [
+        8,
+        9
+      ],
+      "position": "异侧初接地，稍在身体前方，09增加承重"
+    },
+    {
+      "foot": "left",
+      "frames": [
+        10,
+        11
+      ],
+      "position": "身体经过支撑脚，膝踝承重"
+    },
+    {
+      "foot": "left",
+      "frames": [
+        12,
+        13
+      ],
+      "position": "支撑脚相对身体稍后，仍接地承重"
+    },
+    {
+      "foot": "left",
+      "frames": [
+        14,
+        15
+      ],
+      "position": "更后方末段，前掌接触并蹬离，15末接触"
+    }
+  ],
+  "directionSpecificPlan": "各负责人根据当前腿/手遮挡和方向透视确认近远足及位置，不按屏幕左右镜像。",
+  "preserve": "当前符合位置与真实接触的帧保留。combat不变。",
+  "canvasTransform": "独立AI编辑当前注册runtime，native全画布等比缩1024，offset=0，不做bboxfit、warp或脚像素对齐。",
+  "acceptance": "待实图和连续预览检查；不是靠相位文字或时长判通过。",
+  "completedAt": "2026-10-04T22:41:32.841865+00:00",
+  "review": "provenance/contact-pairs-20261004/review-result.json"
+}

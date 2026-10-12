@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "tile": "r15_c13",
+  "status": "candidate_north_halo24_local_pass_pending_neighbor_review",
+  "manifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-native-halo24-v4-20261012-manifest.json",
+    "sha256": "733231fce8a0efd25633aa3e3923d70f98820aba204d0109c7c402f7e0e33df8"
+  },
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-4k-native-halo24-v4-20261012.png",
+    "sha256": "c7d01db8f1c02de10c81f230c68331021b5dc6e676190802ae2b9bdcf7e4e51f",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-context-4326-native-halo24-v4-20261012.png",
+    "sha256": "b03ec9ec79491543de3a67afa23d9c15a73da7d842e35b615b9d153b3613cfc3",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "formalAccepted": false,
+  "internalArtQA": "structure_pass_carried_forward_stone_finish_pass_affected_north_junctions_local_pass",
+  "externalNeighborSeamQA": "north_local_pass_with_texture_watch; east_south_west_joint_pending",
+  "visualQA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\repairs-resume-20261012\\local-qa\\native-halo24-v4-visual-qa.json",
+    "sha256": "4b70bc02a9b67b209b0816ca44e4179eb9cb69422565186f032ac031653c758c"
+  },
+  "verification": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\repairs-resume-20261012\\local-qa\\native-halo24-v4-verification.json",
+    "sha256": "250eef4de3fa8e7d51a08ad40383ab81fee1f4173ee2b6988900968468b1e719"
+  },
+  "nativeActualOutputCount": 25,
+  "activeNativeCount": 16,
+  "activeRepairNativeCount": 1,
+  "reusedNeighborNativeCount": 4,
+  "unadoptedNewNativeCount": 7,
+  "remainingQA": [
+    {
+      "id": "north-independent-joint-review",
+      "status": "north_local_pass_with_texture_watch",
+      "tileBox": [
+        0,
+        0,
+        3254,
+        24
+      ],
+      "description": "Four native north quarters and three edge/internal junctions reviewed: original straight material band removed by actual r14 row4 native halo crop with saved 24px alpha; no visible geometry break or double edge. Root independent acceptance remains pending. This validates only this exact narrow use, not the full halo.",
+      "independentReview": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\repairs-resume-20261012\\local-qa\\root-independent-north-review-20261012.json",
+        "sha256": "cd186aec6b543f5907adb91a7519758941a9a4b224a596ba260fe45419e14acc"
+      }
+    },
+    {
+      "id": "other-neighbor-joints",
+      "status": "not_joint_reviewed",
+      "edges": [
+        "east",
+        "south",
+        "west"
+      ],
+      "description": "All four standalone outer edges inspected at native pixels; east/south/west require neighboring current candidates for full joint acceptance."
+    }
+  ],
+  "selectionReason": "Stone native repair plus verified native northern halo24 integer crop/alpha. No RGB correction or rejected northern source adopted.",
+  "replayScript": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\replay_native_halo24_v4_20261012.py",
+    "sha256": "876b448d653d0d41d60a097fa95cb98a84d5e643cabbc71b0d4fefb222d22154"
+  },
+  "latestAlternativeReview": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\repairs-resume-20261012\\local-qa\\retry1-vs-native-halo24-review.json",
+    "sha256": "ed41ef13d44c087614ea9d5a5220443490ea96f87d71df90d702acb429ac8913"
+  },
+  "independentNorthQA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\repairs-resume-20261012\\local-qa\\root-independent-north-review-20261012.json",
+    "sha256": "cd186aec6b543f5907adb91a7519758941a9a4b224a596ba260fe45419e14acc"
+  },
+  "nextStep": "Continue east/south/west neighboring current-core joint review; north local review recorded."
+}

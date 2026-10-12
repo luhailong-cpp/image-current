@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五行奇谈 · 任务 UI 效果图</title>
+  <style>
+    :root{color-scheme:dark;--jade:#183e33;--ground:#35483f;--paper:#fff4d5;--gold:#ae955a;--muted:#d0c3a1}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--ground);color:var(--paper);font:16px/1.5 "Microsoft YaHei","PingFang SC",sans-serif}
+    body{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+    header{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;padding:12px 18px;border-bottom:1px solid #8d825a;background:var(--jade)}
+    .gallery-title{font-size:14px;color:var(--muted);margin-right:12px}
+    nav{display:flex;gap:8px}
+    button,a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--gold);border-radius:5px;background:transparent;color:var(--paper);padding:8px 21px;font:inherit;text-decoration:none;cursor:pointer}
+    button[aria-pressed="true"]{background:#f4ead0;color:#274f3e;border-color:#e0c688;box-shadow:inset 0 -3px #ae955a}
+    button:hover,a:hover{border-color:#eed589}
+    button:focus-visible,a:focus-visible{outline:3px solid #eed589;outline-offset:3px}
+    main{flex:1;display:grid;place-items:center;min-width:0;padding:16px}
+    figure{margin:0;max-width:100%;text-align:center}
+    img{display:block;max-width:100%;max-height:calc(100vh - 105px);max-height:calc(100svh - 105px);width:auto;height:auto;object-fit:contain;box-shadow:0 8px 25px #0b251b33}
+    .image-error{max-width:30em;margin:24px auto;color:var(--paper)}
+    [hidden]{display:none!important}
+    @media(max-width:600px){header{gap:10px;padding:12px}.gallery-title{width:100%;text-align:center;margin:0}button,a{padding:8px 16px}nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));flex:0 0 100%;width:100%;min-width:0}nav button{min-width:0;padding:8px;white-space:nowrap}main{padding:8px}img{max-height:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <span class="gallery-title">五行奇谈 · UI 效果图</span>
+    <nav aria-label="选择界面效果图">
+      <button type="button" data-view="quests" aria-pressed="true">任务</button>
+      <button type="button" data-view="inventory" aria-pressed="false">背包</button>
+      <button type="button" data-view="activities" aria-pressed="false">活动</button>
+      <button type="button" data-view="guild" aria-pressed="false">帮会</button>
+    </nav>
+    <a id="guildInteractive" href="../guild-ui-v2/" hidden>进入帮会交互版</a>
+    <a id="download" href="01-quests.png" download="01-quests.png" aria-label="下载任务界面原图">保存原图</a>
+  </header>
+  <main aria-label="静态 UI 效果图预览">
+    <figure>
+      <img id="artwork" src="01-quests.png" alt="五行奇谈任务界面静态效果图" decoding="async">
+      <p id="imageError" class="image-error" role="status" hidden>原图暂时无法显示，请稍后重新打开。</p>
+    </figure>
+  </main>
+  <script>
+    (function () {
+      'use strict';
+      const entries = {
+        quests: { file: '01-quests.png', label: '任务' },
+        inventory: { file: '02-inventory.png', label: '背包' },
+        activities: { file: '03-activities.png', label: '活动' },
+        guild: { file: '04-guild.png', label: '帮会' }
+      };
+      const artwork = document.getElementById('artwork');
+      const download = document.getElementById('download');
+      const imageError = document.getElementById('imageError');
+      const buttons = document.querySelectorAll('[data-view]');
+      artwork.addEventListener('load', function () { imageError.hidden = true; });
+      artwork.addEventListener('error', function () { imageError.hidden = false; });
+      function show(view) {
+        if (!Object.prototype.hasOwnProperty.call(entries, view)) view = 'quests';
+        const entry = entries[view];
+        document.getElementById("guildInteractive").hidden = view !== "guild";
+        imageError.hidden = true;
+        artwork.src = entry.file;
+        artwork.alt = '五行奇谈' + entry.label + '界面静态效果图';
+        download.href = entry.file;
+        download.download = entry.file;
+        download.setAttribute('aria-label', '下载' + entry.label + '界面原图');
+        buttons.forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.view === view)); });
+        document.title = '五行奇谈 · ' + entry.label + ' UI 效果图';
+        const url = new URL(location.href);
+        url.searchParams.set('view', view);
+        history.replaceState({}, '', url);
+      }
+      buttons.forEach(function (button) { button.addEventListener('click', function () { show(button.dataset.view); }); });
+      show(new URLSearchParams(location.search).get('view'));
+    })();
+  </script>
+</body>
+</html>

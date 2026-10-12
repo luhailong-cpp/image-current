@@ -1,0 +1,108 @@
+{
+  "name": "stair-upper-v01",
+  "prompt": "Use case: precise-object-edit. Edit Image 1 only, exactly native 1254x1254 opaque PNG. The top 190 pixels contain the dark wooden front fascia; keep the wood exactly unchanged. Below it, the stone stairs have an artificial straight vertical division at x=627: left half is lighter, right half darker and differently textured. Harmonize only the local zone x=460..850 of these stone treads and risers. Retain existing broad illumination and avoid inventing diagonal shadows to hide the seam. The desired result is one continuous stone stair flight, preserving its subtle naturally graded lighting and crisp parallel horizontal boundaries. Outer left and right context and the pale right parapet stay unchanged.\nImage 2 is the approved whole map layout only; do not reproduce its whole view. Image 3 is the approved daylight clean natural pale-grey stone finish. Image 4 gives polished Daoist chibi rendering only, not its UI, characters or nighttime framing. This is an extreme macro staircase crop. Keep all positions, perspective, number and depth of stairs, horizontal edges, narrow seams, rounded bevels and shadows exactly. Change ONLY the sharp vertical tonal/microtexture join near image x=627 into a natural gentle continuous material transition between the existing left and right grey stone surfaces. The faint stone material on both sides must continue through the join, without a seam, visible rectangular patch, abrupt color/texture divider, diagonal brush band or blurry patch. Match the same stone style, no new decorative detail. No extra stairs, lines, architecture, props or foliage. No resizing, reframing, photo blur or diagonal shadows.",
+  "promptFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\prompt.txt",
+  "promptSha256": "af463b9f54e268c0eb12e25e0182f447059c238169fe91e33ca2a5b0d5f42595",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\input.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg"
+  ],
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\input.png",
+      "sha256": "8e3f1a17ca27f74d70fda8f5fdf51192e2525fec05b4678edab9aabd6a6eb3ea",
+      "role": "exact native edit target"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved overall layout"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved daylight materials"
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "approved Daoist style"
+    }
+  ],
+  "worldBox": [
+    19853,
+    39320,
+    21107,
+    40574
+  ],
+  "maskWindowInPatch": [
+    370,
+    170,
+    1020,
+    1254
+  ],
+  "sourceCrops": [
+    {
+      "tile": "r10_c05",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c05.candidate.png",
+      "sha256": "945692b4938ddf1f580ce454d0104ad650fe4474cc89a708b170386b37100fce",
+      "coreWorldBox": [
+        16384,
+        36864,
+        20480,
+        40960
+      ],
+      "sourceCrop": [
+        3469,
+        2456,
+        4096,
+        3710
+      ],
+      "destinationBox": [
+        0,
+        0,
+        627,
+        1254
+      ],
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c05.candidate.context.png",
+      "contextSha256": "e826705859294f6d51c4d0f693d2f900012d614999c6416e6343daf310008eb6",
+      "contextCoreEqualsCandidate": true
+    },
+    {
+      "tile": "r10_c06",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c06.candidate.png",
+      "sha256": "678ed629ba6fca8e3448574d312950bcfabc382e1fdd13fd88994c1b6c5914c9",
+      "coreWorldBox": [
+        20480,
+        36864,
+        24576,
+        40960
+      ],
+      "sourceCrop": [
+        0,
+        2456,
+        627,
+        3710
+      ],
+      "destinationBox": [
+        627,
+        0,
+        1254,
+        1254
+      ],
+      "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r10_c06.candidate.context.png",
+      "contextSha256": "69212cd4087c2639af0efbb24722fe7afe9a2190a26de4b2f1e9d6865f1030b2",
+      "contextCoreEqualsCandidate": true
+    }
+  ],
+  "requestedNativePixels": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "preparedAtUtc": "2026-10-11T08:21:06.823377+00:00",
+  "sourceResampling": false
+}

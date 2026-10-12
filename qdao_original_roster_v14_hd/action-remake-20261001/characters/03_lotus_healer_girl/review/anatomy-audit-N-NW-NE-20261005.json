@@ -1,0 +1,1052 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-05",
+  "character": "03_lotus_healer_girl",
+  "scope": "run N/NW/NE 48槽；只读选表/导出。此文件保留审查开始时的实际选表快照，不假定随后根线程修图已入选。",
+  "selectionSnapshot": {
+    "path": "review/all-actions-selection.json",
+    "updatedAt": "2026-10-04T23:48:23.415688-04:00",
+    "sha256": "33c13bac3c910d334e37a0606b64f088bfdc6a0281d5be997b56916cce229888"
+  },
+  "timing": {
+    "frameDurationMs": 75,
+    "framesPerDirection": 16,
+    "durationMs": 1200,
+    "modified": false
+  },
+  "method": {
+    "sequentialContactSheets": [
+      "preview/run-N-contact.jpg",
+      "preview/run-NW-contact.jpg",
+      "preview/run-NE-contact.jpg"
+    ],
+    "nativeInspection": "NE全部16张原生逐张查看；N/NW当前未变来源已在前轮逐张查看，本轮联系图全圈复核并重看N06/07、NW06/07/10/11及可疑处。N06/NW12 axis-v2生成后已实际查看。",
+    "reference": "实际查看09竹弓NE03/04/08；既有视频连续段/山岳NW截图仅作动作结构比较，人物尺寸/遮挡不足提供鞋细节真值。",
+    "limitations": [
+      "这是静态连续帧审查，不是本轮浏览器动态播放通过。",
+      "透明底图只能判断接触姿态；像素底沿不是世界地面，禁止全图贴底。",
+      "裙、头发和袖会遮髋肩肘；无法见到的关节链保持不确定。",
+      "鞋底露出、自然屈膝/跖屈与鞋踝外滚分开判断。",
+      "不同SHA仅证明字节不同；独立姿态仍靠实图检查。"
+    ]
+  },
+  "summary": {
+    "sourceShaMatchesAtStart": 48,
+    "uniqueSourceShaCount": 48,
+    "confirmedIssues": [
+      "N03灯摆位突降后回升",
+      "N07–10左瓶托腹变提颈，握点与06/11不连贯",
+      "NE03/04/08支撑鞋横向外撇"
+    ],
+    "preserve": "N/NW未发现需要批量重画的高置信新足轴错误；NE其余帧保留，15/16既有axis版未见新的明确外滚。",
+    "uncertain": [
+      "NW07/NW12较斜胫骨和横鞋面肉眼可疑，但NW透视可解释，髋遮挡，不作确定外八结论。",
+      "NE08→09解剖换脚身份不能由屏幕左右断定，需髋膝链条证据；未确认错脚。",
+      "NW03→04、10→11灯摆幅较大，未见确定换手/错接。"
+    ]
+  },
+  "groups": [
+    {
+      "direction": "NE",
+      "visualAccepted": false,
+      "dynamicAccepted": false,
+      "contactFinding": "各槽均有一只可见低位支撑鞋形态，未见明确双脚同时漂浮；同一解剖脚连续身份在遮挡处不能全部独立追踪。",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/NE/01-v3.png",
+          "sourceSha256": "f65bc809eb23e06121315d41bd61909b9e8d65d6d70815910fe61eaf54f064bf",
+          "file": "candidate/run/NE/01.png",
+          "durationMs": 75,
+          "currentSha256": "f65bc809eb23e06121315d41bd61909b9e8d65d6d70815910fe61eaf54f064bf",
+          "shaMatchesAtStart": true,
+          "startMs": 0,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "低鞋较多后跟视角，鞋轴沿NE纵深，另一脚自然露底。",
+          "shoulderElbowWristGripObservation": "右灯左瓶身份保持。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 2,
+          "source": "generation/NE/02-v1.png",
+          "sourceSha256": "765f59101e135fbee0e9c975098d1fdc69a2b89fd7177fa9e7c1c42002d8bfd7",
+          "file": "candidate/run/NE/02.png",
+          "durationMs": 75,
+          "currentSha256": "765f59101e135fbee0e9c975098d1fdc69a2b89fd7177fa9e7c1c42002d8bfd7",
+          "shaMatchesAtStart": true,
+          "startMs": 75,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "低鞋继续承重形态，鞋头未明显横向摊开。",
+          "shoulderElbowWristGripObservation": "肩肘大部遮挡，可见手与柄/瓶连接自然。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 3,
+          "source": "generation/NE/03-midstance-v1.png",
+          "sourceSha256": "c4db97318c7b2cf5f4041c7392a46eec0c22128cd287fd3547d873fedee39476",
+          "file": "candidate/run/NE/03.png",
+          "durationMs": 75,
+          "currentSha256": "c4db97318c7b2cf5f4041c7392a46eec0c22128cd287fd3547d873fedee39476",
+          "shaMatchesAtStart": true,
+          "startMs": 150,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "支撑小腿斜向左下而鞋长侧面横向朝屏右；相对01/02明显外撇，为高置信局部问题。",
+          "shoulderElbowWristGripObservation": "右灯左瓶，无确定握点异常。",
+          "confirmedIssues": [
+            "NE_SUPPORT_SHOE_03_04"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 4,
+          "source": "generation/NE/04-ground4-v1.png",
+          "sourceSha256": "9e0ff9d6d7b78ffe2686be083d47eb2c8561177e1f413bf565ee847a6b01e37f",
+          "file": "candidate/run/NE/04.png",
+          "durationMs": 75,
+          "currentSha256": "9e0ff9d6d7b78ffe2686be083d47eb2c8561177e1f413bf565ee847a6b01e37f",
+          "shaMatchesAtStart": true,
+          "startMs": 225,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "与03同类：支撑鞋长侧面横铺，与胫骨前进平面不顺；高置信需要收正。",
+          "shoulderElbowWristGripObservation": "两手身份固定，各自姿态与03不同，修图须保留。",
+          "confirmedIssues": [
+            "NE_SUPPORT_SHOE_03_04"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 5,
+          "source": "generation/NE/05-paired-v1.png",
+          "sourceSha256": "b5cb131acc7a446770c22f09c340b7f74abaa018809620565d746054145dee38",
+          "file": "candidate/run/NE/05.png",
+          "durationMs": 75,
+          "currentSha256": "b5cb131acc7a446770c22f09c340b7f74abaa018809620565d746054145dee38",
+          "shaMatchesAtStart": true,
+          "startMs": 300,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "低鞋与膝踝弯曲可沿NE解释，未见达到03/04程度的横向错轴。",
+          "shoulderElbowWristGripObservation": "瓶腹由左掌支撑，右手握灯柄。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 6,
+          "source": "generation/NE/06-groundlevel-v1.png",
+          "sourceSha256": "87db17f8458842404fb78e808db9d83624e429d8ece3f9e0df521ec788cc85a8",
+          "file": "candidate/run/NE/06.png",
+          "durationMs": 75,
+          "currentSha256": "87db17f8458842404fb78e808db9d83624e429d8ece3f9e0df521ec788cc85a8",
+          "shaMatchesAtStart": true,
+          "startMs": 375,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "一只低鞋承重，另一脚回收露底；鞋轴未见确定跳翻。",
+          "shoulderElbowWristGripObservation": "手持关系连贯，未见颈部提瓶。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 7,
+          "source": "generation/NE/07-paired-v1.png",
+          "sourceSha256": "c047da8c9a43915a41a96bbefac6e695b18b8a95ebd995de72d09b061cde7e43",
+          "file": "candidate/run/NE/07.png",
+          "durationMs": 75,
+          "currentSha256": "c047da8c9a43915a41a96bbefac6e695b18b8a95ebd995de72d09b061cde7e43",
+          "shaMatchesAtStart": true,
+          "startMs": 450,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "低鞋延续支撑，回收鞋露底正常；后跟角可解释。",
+          "shoulderElbowWristGripObservation": "右灯前侧、左瓶后侧，握点可辨。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 8,
+          "source": "generation/NE/08-axis-v2.png",
+          "sourceSha256": "8ce79ed411a47a24d51c78fab2f534358af0e603fc25db3115ca7007fb9081a2",
+          "file": "candidate/run/NE/08.png",
+          "durationMs": 75,
+          "currentSha256": "8ce79ed411a47a24d51c78fab2f534358af0e603fc25db3115ca7007fb9081a2",
+          "shaMatchesAtStart": true,
+          "startMs": 525,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "当前axis-v2支撑鞋仍较宽横向，胫骨下行而鞋鼻折向右；比07更横铺，根确认同类外撇。",
+          "shoulderElbowWristGripObservation": "右手灯左手瓶不变；空中露底鞋不属于本次问题。",
+          "confirmedIssues": [
+            "NE_SUPPORT_SHOE_08"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 9,
+          "source": "generation/NE/09-v3.png",
+          "sourceSha256": "049f13c41b37efc1e3efab4b43e357547ffa162201540eb20a9b8ef94f8f7cdb",
+          "file": "candidate/run/NE/09.png",
+          "durationMs": 75,
+          "currentSha256": "049f13c41b37efc1e3efab4b43e357547ffa162201540eb20a9b8ef94f8f7cdb",
+          "shaMatchesAtStart": true,
+          "startMs": 600,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "低鞋/高鞋仍在08相同屏幕侧，但髋膝根遮挡，不能据此确定未换脚。低鞋略露底可由俯仰解释。",
+          "shoulderElbowWristGripObservation": "与08手持关系连续，未见左右手互换。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 10,
+          "source": "generation/NE/10-v1.png",
+          "sourceSha256": "88bc7ff1f382019e444c4908e54c81786062e58a4fbab446f0abfca38e9f7d3a",
+          "file": "candidate/run/NE/10.png",
+          "durationMs": 75,
+          "currentSha256": "88bc7ff1f382019e444c4908e54c81786062e58a4fbab446f0abfca38e9f7d3a",
+          "shaMatchesAtStart": true,
+          "startMs": 675,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "与09同低鞋承重形态；膝屈正常，不单凭鞋底边缘判外滚。",
+          "shoulderElbowWristGripObservation": "左掌托瓶腹，右手灯柄。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 11,
+          "source": "generation/NE/11-groundtrack-v1.png",
+          "sourceSha256": "d91355cade174b3fecc658b48383bf11d7b43db69c71e23eb37e6edc2e538e56",
+          "file": "candidate/run/NE/11.png",
+          "durationMs": 75,
+          "currentSha256": "d91355cade174b3fecc658b48383bf11d7b43db69c71e23eb37e6edc2e538e56",
+          "shaMatchesAtStart": true,
+          "startMs": 750,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "支撑低鞋及白裤下段斜向NE运动平面，尚无高置信外八。",
+          "shoulderElbowWristGripObservation": "灯臂后摆，头发遮盖部分上臂；可见腕柄连接保持。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 12,
+          "source": "generation/NE/12-groundtrack-v1.png",
+          "sourceSha256": "4a150535b63fb9bc95df1202e197cba42eca2b370346b67652d0bbfa5aaa5309",
+          "file": "candidate/run/NE/12.png",
+          "durationMs": 75,
+          "currentSha256": "4a150535b63fb9bc95df1202e197cba42eca2b370346b67652d0bbfa5aaa5309",
+          "shaMatchesAtStart": true,
+          "startMs": 825,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "低鞋持续，另一脚向前通过/回收；轴向可解释。",
+          "shoulderElbowWristGripObservation": "右灯左瓶，未见明确换握。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 13,
+          "source": "generation/NE/13-groundtrack-v1.png",
+          "sourceSha256": "dac1c1294c2d822c853626f8173477536cbdbb4d80b6ec3a29bc4295b960e73a",
+          "file": "candidate/run/NE/13.png",
+          "durationMs": 75,
+          "currentSha256": "dac1c1294c2d822c853626f8173477536cbdbb4d80b6ec3a29bc4295b960e73a",
+          "shaMatchesAtStart": true,
+          "startMs": 900,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "支撑腿后伸，鞋不再横向大幅摊开；另一脚露底属正常。",
+          "shoulderElbowWristGripObservation": "灯向后下摆，瓶托腹持续。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 14,
+          "source": "generation/NE/14-groundtrack-v1.png",
+          "sourceSha256": "b4d0278d72427060f358b76f14969d5b68b1d9c54774d5e084cf7e7753ccc5c9",
+          "file": "candidate/run/NE/14.png",
+          "durationMs": 75,
+          "currentSha256": "b4d0278d72427060f358b76f14969d5b68b1d9c54774d5e084cf7e7753ccc5c9",
+          "shaMatchesAtStart": true,
+          "startMs": 975,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "低鞋延续后移承重形态；鞋轴与前帧大致连贯。",
+          "shoulderElbowWristGripObservation": "道具未交换，肘腕遮挡处不假定通过。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 15,
+          "source": "generation/NE/15-axis-v1.png",
+          "sourceSha256": "34d4667ff82fc3460208871eb5ce83b23384451a4de606c14945d91c46ff7869",
+          "file": "candidate/run/NE/15.png",
+          "durationMs": 75,
+          "currentSha256": "34d4667ff82fc3460208871eb5ce83b23384451a4de606c14945d91c46ff7869",
+          "shaMatchesAtStart": true,
+          "startMs": 1050,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "当前15-axis-v1支撑鞋已较窄，未见足踝向外滚的新证据。",
+          "shoulderElbowWristGripObservation": "右灯左瓶身份可辨。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 16,
+          "source": "generation/NE/16-axis-v2.png",
+          "sourceSha256": "c70a04f373d40348ff3585549a8bd5c89379329ec324665bfeaeefabcd92b390",
+          "file": "candidate/run/NE/16.png",
+          "durationMs": 75,
+          "currentSha256": "c70a04f373d40348ff3585549a8bd5c89379329ec324665bfeaeefabcd92b390",
+          "shaMatchesAtStart": true,
+          "startMs": 1125,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "当前16-axis-v2低鞋轴与15相近，抬脚露底不能当外八。",
+          "shoulderElbowWristGripObservation": "手持关系不变，首尾摆臂幅度较大但未确认解剖错接。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        }
+      ]
+    },
+    {
+      "direction": "N",
+      "visualAccepted": false,
+      "dynamicAccepted": false,
+      "contactFinding": "各槽均有一只可见低位支撑鞋形态，未见明确双脚同时漂浮；同一解剖脚连续身份在遮挡处不能全部独立追踪。",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/N/01-v1.png",
+          "sourceSha256": "6cb919bc1b7f98025c16bcd113b8ad67c6ea92092f3b2dccfe609f6ba60a6db4",
+          "file": "candidate/run/N/01.png",
+          "durationMs": 75,
+          "currentSha256": "6cb919bc1b7f98025c16bcd113b8ad67c6ea92092f3b2dccfe609f6ba60a6db4",
+          "shaMatchesAtStart": true,
+          "startMs": 0,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "右侧低鞋接地形态，另一脚屈膝露底；鞋轴近N纵向。",
+          "shoulderElbowWristGripObservation": "灯在右手，左瓶托腹；可见握点一致。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 2,
+          "source": "generation/N/02-v3.png",
+          "sourceSha256": "7278bf34f6dd1aef0fab6960fb1073287078e5a8086b9c6f5705b17f9716599a",
+          "file": "candidate/run/N/02.png",
+          "durationMs": 75,
+          "currentSha256": "7278bf34f6dd1aef0fab6960fb1073287078e5a8086b9c6f5705b17f9716599a",
+          "shaMatchesAtStart": true,
+          "startMs": 75,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "低鞋与01同一侧，膝踝略压缩；没有鞋头横转。",
+          "shoulderElbowWristGripObservation": "两肩袖遮盖，但手与道具连接未见断裂。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 3,
+          "source": "generation/N/03-v1.png",
+          "sourceSha256": "cfc6d818b3fcda02220822022c5607df871945cd9b90aba5f19599860f790110",
+          "file": "candidate/run/N/03.png",
+          "durationMs": 75,
+          "currentSha256": "cfc6d818b3fcda02220822022c5607df871945cd9b90aba5f19599860f790110",
+          "shaMatchesAtStart": true,
+          "startMs": 150,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "两鞋均较低但高度不同；最低鞋纵轴仍正，未见外八。",
+          "shoulderElbowWristGripObservation": "灯从02胸侧突然降至髋侧，04又升回；确定局部摆臂不连续。",
+          "confirmedIssues": [
+            "N_LAMP_03"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 4,
+          "source": "generation/N/04-support-v1.png",
+          "sourceSha256": "5251ee0bf89b0401a0ad7de9a1623858cabf185eaa44a300640008b8819c2519",
+          "file": "candidate/run/N/04.png",
+          "durationMs": 75,
+          "currentSha256": "5251ee0bf89b0401a0ad7de9a1623858cabf185eaa44a300640008b8819c2519",
+          "shaMatchesAtStart": true,
+          "startMs": 225,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "右支撑低鞋轴近纵向；左回收鞋露底属于俯仰。",
+          "shoulderElbowWristGripObservation": "灯回到胸側，与02/05相近；无换手。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 5,
+          "source": "generation/N/05-stance-v1.png",
+          "sourceSha256": "d67b0e1fcfec7a136bba02614a200b37034370bb82fb40911e839ca152ef3117",
+          "file": "candidate/run/N/05.png",
+          "durationMs": 75,
+          "currentSha256": "d67b0e1fcfec7a136bba02614a200b37034370bb82fb40911e839ca152ef3117",
+          "shaMatchesAtStart": true,
+          "startMs": 300,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "右支撑低鞋、左腿后折，低鞋没有明显向外横转。",
+          "shoulderElbowWristGripObservation": "瓶腹在左掌上；灯的右手握点可辨。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 6,
+          "source": "generation/N/06-axis-v2.png",
+          "sourceSha256": "dac52b05bf4b69f6fb40b0159c3ab997d05ab21754601af5901ddee950c85edc",
+          "file": "candidate/run/N/06.png",
+          "durationMs": 75,
+          "currentSha256": "dac52b05bf4b69f6fb40b0159c3ab997d05ab21754601af5901ddee950c85edc",
+          "shaMatchesAtStart": true,
+          "startMs": 375,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "当前axis-v2将支撑鞋横向收回05→07轨迹内；仍略有注册高度变化，鞋轴正。",
+          "shoulderElbowWristGripObservation": "左手托瓶腹，作为07对照。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 7,
+          "source": "generation/N/07-stance-v1.png",
+          "sourceSha256": "bec252c730125f9ce69fbec22aa86377c5f4b3c401a6ff45802d5a47076796d0",
+          "file": "candidate/run/N/07.png",
+          "durationMs": 75,
+          "currentSha256": "bec252c730125f9ce69fbec22aa86377c5f4b3c401a6ff45802d5a47076796d0",
+          "shaMatchesAtStart": true,
+          "startMs": 450,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "低鞋延续前帧，胫骨略斜但鞋仍朝纵深；未见确定外滚。",
+          "shoulderElbowWristGripObservation": "左手从06托腹换到瓶颈/上部，瓶体相对手下落；确认握法跳变。",
+          "confirmedIssues": [
+            "N_BOTTLE_GRIP_07_10"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 8,
+          "source": "generation/N/08-stance-v1.png",
+          "sourceSha256": "a7dfa4ab03a4ea5519364eccea4488502d8f15307b8f12760da85641c9a44624",
+          "file": "candidate/run/N/08.png",
+          "durationMs": 75,
+          "currentSha256": "a7dfa4ab03a4ea5519364eccea4488502d8f15307b8f12760da85641c9a44624",
+          "shaMatchesAtStart": true,
+          "startMs": 525,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "右支撑鞋继续低位，另一脚回收；正常露底不判外翻。",
+          "shoulderElbowWristGripObservation": "延续07颈部握点，仍是左手，问题是握法与06/11不一致。",
+          "confirmedIssues": [
+            "N_BOTTLE_GRIP_07_10"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 9,
+          "source": "generation/N/09-v2.png",
+          "sourceSha256": "5bf482cfe3f87ba2fcc0f0d98eb69bd437b3f62aaf6e30c3de27f181170aef68",
+          "file": "candidate/run/N/09.png",
+          "durationMs": 75,
+          "currentSha256": "5bf482cfe3f87ba2fcc0f0d98eb69bd437b3f62aaf6e30c3de27f181170aef68",
+          "shaMatchesAtStart": true,
+          "startMs": 600,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "左侧低鞋成为支撑，右回收鞋露底；鞋轴未见明确外八。",
+          "shoulderElbowWristGripObservation": "仍出现提瓶颈/上部的握点，与11托腹不连续。",
+          "confirmedIssues": [
+            "N_BOTTLE_GRIP_07_10"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 10,
+          "source": "generation/N/10-v1.png",
+          "sourceSha256": "30ac734748671e831ea67311e25da555ba2de4e3446929a4d881a01330032eb0",
+          "file": "candidate/run/N/10.png",
+          "durationMs": 75,
+          "currentSha256": "30ac734748671e831ea67311e25da555ba2de4e3446929a4d881a01330032eb0",
+          "shaMatchesAtStart": true,
+          "startMs": 675,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "左低鞋延续09，相邻姿态不同；无明显膝踝鞋头错轴。",
+          "shoulderElbowWristGripObservation": "与09相同颈部握点，瓶较低；不是左右手互换。",
+          "confirmedIssues": [
+            "N_BOTTLE_GRIP_07_10"
+          ],
+          "conclusion": "confirmed_local_issue",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 11,
+          "source": "generation/N/11-v1.png",
+          "sourceSha256": "8c1ebe10e7d664cc518fc22ce12dec144480036f3125b0f20f5581664cd516c0",
+          "file": "candidate/run/N/11.png",
+          "durationMs": 75,
+          "currentSha256": "8c1ebe10e7d664cc518fc22ce12dec144480036f3125b0f20f5581664cd516c0",
+          "shaMatchesAtStart": true,
+          "startMs": 750,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "左低鞋，另一鞋较高但接近身体下方；纵轴可解释。",
+          "shoulderElbowWristGripObservation": "左掌重新托腹，证实07–10握点切换。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 12,
+          "source": "generation/N/12-support-v1.png",
+          "sourceSha256": "e892f05d365c3908cd1883e9020d9f0a0ed67f68a7328cd41da09a3c99759253",
+          "file": "candidate/run/N/12.png",
+          "durationMs": 75,
+          "currentSha256": "e892f05d365c3908cd1883e9020d9f0a0ed67f68a7328cd41da09a3c99759253",
+          "shaMatchesAtStart": true,
+          "startMs": 825,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "左低鞋持续支撑形态，右鞋回收；脚面/跟视角正常。",
+          "shoulderElbowWristGripObservation": "手持身份不变，可见手指贴合瓶腹。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 13,
+          "source": "generation/N/13-stance-v1.png",
+          "sourceSha256": "ec5d3585b34d2606c23cc13cb789f4c31a3457a75ee25b3252d76b91872d82ec",
+          "file": "candidate/run/N/13.png",
+          "durationMs": 75,
+          "currentSha256": "ec5d3585b34d2606c23cc13cb789f4c31a3457a75ee25b3252d76b91872d82ec",
+          "shaMatchesAtStart": true,
+          "startMs": 900,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "左腿伸后低鞋，右腿前摆/回收；没有确定鞋头横向叉出。",
+          "shoulderElbowWristGripObservation": "灯摆向后下，与12/14有幅度变化，未见换握或断手。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 14,
+          "source": "generation/N/14-stance-v2.png",
+          "sourceSha256": "06deb3632e3e8d77787018001fcf3bb1d65357220d1939b602eeea555357db6d",
+          "file": "candidate/run/N/14.png",
+          "durationMs": 75,
+          "currentSha256": "06deb3632e3e8d77787018001fcf3bb1d65357220d1939b602eeea555357db6d",
+          "shaMatchesAtStart": true,
+          "startMs": 975,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "左支撑低鞋继续，右空中鞋朝纵深；鞋轴自然。",
+          "shoulderElbowWristGripObservation": "两手连贯，肩肘大部被头发/袖遮挡。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 15,
+          "source": "generation/N/16-stance-v2.png",
+          "sourceSha256": "b6e1e6800379b7780e8e2b0aa40f3cc1419af56eabc97bf86eb41aafd99278c8",
+          "file": "candidate/run/N/15.png",
+          "durationMs": 75,
+          "currentSha256": "b6e1e6800379b7780e8e2b0aa40f3cc1419af56eabc97bf86eb41aafd99278c8",
+          "shaMatchesAtStart": true,
+          "startMs": 1050,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "左低鞋持续，右回收脚露底；后段鞋轴仍近纵向。",
+          "shoulderElbowWristGripObservation": "灯位置接近14/16，左瓶仍托腹。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 16,
+          "source": "generation/N/16-stance-v3.png",
+          "sourceSha256": "5cac383fed5bdaad990dba626a65dbdaeabc594a679dcc107a6c638fdabf660b",
+          "file": "candidate/run/N/16.png",
+          "durationMs": 75,
+          "currentSha256": "5cac383fed5bdaad990dba626a65dbdaeabc594a679dcc107a6c638fdabf660b",
+          "shaMatchesAtStart": true,
+          "startMs": 1125,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "左低鞋持续至末帧，右鞋回收准备换支撑；首尾存在位置跃迁但不等于外八。",
+          "shoulderElbowWristGripObservation": "右灯左瓶身份保留。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        }
+      ]
+    },
+    {
+      "direction": "NW",
+      "visualAccepted": false,
+      "dynamicAccepted": false,
+      "contactFinding": "各槽均有一只可见低位支撑鞋形态，未见明确双脚同时漂浮；同一解剖脚连续身份在遮挡处不能全部独立追踪。",
+      "frames": [
+        {
+          "slot": 1,
+          "source": "generation/NW/01-v1.png",
+          "sourceSha256": "d473de0016df5cd9b9b4020e67ec24621fb6b72e43f585456ae888dc1b2e1073",
+          "file": "candidate/run/NW/01.png",
+          "durationMs": 75,
+          "currentSha256": "d473de0016df5cd9b9b4020e67ec24621fb6b72e43f585456ae888dc1b2e1073",
+          "shaMatchesAtStart": true,
+          "startMs": 0,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "一只低鞋呈支撑形态，另一鞋屈膝露底；投影沿NW平面。",
+          "shoulderElbowWristGripObservation": "右灯在背后外侧、左瓶在前；可见持物手合理。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 2,
+          "source": "generation/NW/02-v3.png",
+          "sourceSha256": "7542b022f9799ff342898203d5d82f035cb197d288ef9f121af40ab1619be393",
+          "file": "candidate/run/NW/02.png",
+          "durationMs": 75,
+          "currentSha256": "7542b022f9799ff342898203d5d82f035cb197d288ef9f121af40ab1619be393",
+          "shaMatchesAtStart": true,
+          "startMs": 75,
+          "pairSlots": [
+            1,
+            2
+          ],
+          "legFootObservation": "延续01低鞋与膝踝压缩，另一鞋露底增加属俯仰。",
+          "shoulderElbowWristGripObservation": "右灯左瓶不变，握点没有确定跳换。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 3,
+          "source": "generation/NW/03-v5.png",
+          "sourceSha256": "cbdc9ea8d9fb6659a1ab26964ee79f71a89681cf03a6cfe376c108081ef37bc5",
+          "file": "candidate/run/NW/03.png",
+          "durationMs": 75,
+          "currentSha256": "cbdc9ea8d9fb6659a1ab26964ee79f71a89681cf03a6cfe376c108081ef37bc5",
+          "shaMatchesAtStart": true,
+          "startMs": 150,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "低鞋在身体下方，另一脚收起；髋被裙遮，不能单靠屏幕左右判脚别。",
+          "shoulderElbowWristGripObservation": "灯臂主要被头发遮住，左瓶托腹可见。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 4,
+          "source": "generation/NW/04-stance-v3.png",
+          "sourceSha256": "aba9633a82a424834f4c46305e7ce6c993d079b0146b3bf05e9af955f0af0275",
+          "file": "candidate/run/NW/04.png",
+          "durationMs": 75,
+          "currentSha256": "aba9633a82a424834f4c46305e7ce6c993d079b0146b3bf05e9af955f0af0275",
+          "shaMatchesAtStart": true,
+          "startMs": 225,
+          "pairSlots": [
+            3,
+            4
+          ],
+          "legFootObservation": "低鞋移后，鞋面视角仍可沿NW解释；未见膝锁死。",
+          "shoulderElbowWristGripObservation": "灯从03背侧到前侧移动较大；看不到确定错误肩肘连接，列次要连续性观察。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 5,
+          "source": "generation/NW/05-stance-v1.png",
+          "sourceSha256": "01db60be6ab0237685a65dcce0b23e187e06b145715092ab5f18dbb40c717f2b",
+          "file": "candidate/run/NW/05.png",
+          "durationMs": 75,
+          "currentSha256": "01db60be6ab0237685a65dcce0b23e187e06b145715092ab5f18dbb40c717f2b",
+          "shaMatchesAtStart": true,
+          "startMs": 300,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "低鞋与04同运动平面，另一脚回收；未见明确横向外翻。",
+          "shoulderElbowWristGripObservation": "左手托瓶腹、右手灯柄保持。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 6,
+          "source": "generation/NW/06-stance-v1.png",
+          "sourceSha256": "ad9458f9bde6a95176803fbac8af0f8948f210026dd0a15507ece7b2edb0f938",
+          "file": "candidate/run/NW/06.png",
+          "durationMs": 75,
+          "currentSha256": "ad9458f9bde6a95176803fbac8af0f8948f210026dd0a15507ece7b2edb0f938",
+          "shaMatchesAtStart": true,
+          "startMs": 375,
+          "pairSlots": [
+            5,
+            6
+          ],
+          "legFootObservation": "低鞋继续后移，屈膝与踝角自然；鞋鼻沿NW。",
+          "shoulderElbowWristGripObservation": "原生复看左掌仍托瓶腹，推翻曾怀疑的握点变化。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 7,
+          "source": "generation/NW/07-stance-v1.png",
+          "sourceSha256": "088196466d43162d8475917ae00dfc4b7f4b172c585925bf97f6cbf1da95028d",
+          "file": "candidate/run/NW/07.png",
+          "durationMs": 75,
+          "currentSha256": "088196466d43162d8475917ae00dfc4b7f4b172c585925bf97f6cbf1da95028d",
+          "shaMatchesAtStart": true,
+          "startMs": 450,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "长斜胫骨与较横鞋面有肉眼可疑性，但沿NW纵深可解释；髋遮挡，无充分外八证据。",
+          "shoulderElbowWristGripObservation": "原生复看左掌托腹，灯握手未变。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 8,
+          "source": "generation/NW/08-stance-v2.png",
+          "sourceSha256": "d62ea4fd691b4c6f3ebe261e96390f2bc9c96b1325d3defca54e5676c908152a",
+          "file": "candidate/run/NW/08.png",
+          "durationMs": 75,
+          "currentSha256": "d62ea4fd691b4c6f3ebe261e96390f2bc9c96b1325d3defca54e5676c908152a",
+          "shaMatchesAtStart": true,
+          "startMs": 525,
+          "pairSlots": [
+            7,
+            8
+          ],
+          "legFootObservation": "延续07后段支撑鞋，另一脚前摆；非双脚腾空。",
+          "shoulderElbowWristGripObservation": "双手身份与07相同，未见确定握法跳变。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 9,
+          "source": "generation/NW/09-v2.png",
+          "sourceSha256": "252e326b5312440015d5a8ad3c6a3eac4109bc9b1c9b0632951130971258e65e",
+          "file": "candidate/run/NW/09.png",
+          "durationMs": 75,
+          "currentSha256": "252e326b5312440015d5a8ad3c6a3eac4109bc9b1c9b0632951130971258e65e",
+          "shaMatchesAtStart": true,
+          "startMs": 600,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "新的低鞋在前段支撑，另一脚回收；髋根仍有遮挡。",
+          "shoulderElbowWristGripObservation": "左瓶托腹/右灯柄关系保持。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 10,
+          "source": "generation/NW/10-v3.png",
+          "sourceSha256": "c4322ccd45f0056d223a1058e563735b17d75a2f65dea175dc048e3329b4f933",
+          "file": "candidate/run/NW/10.png",
+          "durationMs": 75,
+          "currentSha256": "c4322ccd45f0056d223a1058e563735b17d75a2f65dea175dc048e3329b4f933",
+          "shaMatchesAtStart": true,
+          "startMs": 675,
+          "pairSlots": [
+            9,
+            10
+          ],
+          "legFootObservation": "延续09低鞋支撑，鞋纵轴在NW平面内。",
+          "shoulderElbowWristGripObservation": "原生复看未见提瓶颈，仍托腹。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 11,
+          "source": "generation/NW/11-v2.png",
+          "sourceSha256": "75250f99f79c494c62ec53ad2492451b241f954fde204e3393a1e96d46510fe5",
+          "file": "candidate/run/NW/11.png",
+          "durationMs": 75,
+          "currentSha256": "75250f99f79c494c62ec53ad2492451b241f954fde204e3393a1e96d46510fe5",
+          "shaMatchesAtStart": true,
+          "startMs": 750,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "低鞋在身下，空中鞋较靠后；未见确定足轴外滚。",
+          "shoulderElbowWristGripObservation": "灯向身后摆，较10幅度大；被发遮不能凭空补全肩肘链。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 12,
+          "source": "generation/NW/12-axis-v2.png",
+          "sourceSha256": "1bee9cde554bc12083184f42bbed167b2562608ad326f878f75bc438a8c34c77",
+          "file": "candidate/run/NW/12.png",
+          "durationMs": 75,
+          "currentSha256": "1bee9cde554bc12083184f42bbed167b2562608ad326f878f75bc438a8c34c77",
+          "shaMatchesAtStart": true,
+          "startMs": 825,
+          "pairSlots": [
+            11,
+            12
+          ],
+          "legFootObservation": "当前axis-v2空中鞋比旧源向中间收回，11→12→13轨迹单调但不等距；鞋向可沿NW解释。",
+          "shoulderElbowWristGripObservation": "握点与11/13一致，右灯左瓶。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 13,
+          "source": "generation/NW/13-stance-v1.png",
+          "sourceSha256": "04e0f3e53b847a78e085c98dd9b5d1fb8b3c01f1815c8f391f78ccaed7dd5d80",
+          "file": "candidate/run/NW/13.png",
+          "durationMs": 75,
+          "currentSha256": "04e0f3e53b847a78e085c98dd9b5d1fb8b3c01f1815c8f391f78ccaed7dd5d80",
+          "shaMatchesAtStart": true,
+          "startMs": 900,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "低支撑鞋继续，空中鞋更前；膝踝投影自然。",
+          "shoulderElbowWristGripObservation": "灯在后侧，左瓶掌托明确。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 14,
+          "source": "generation/NW/14-stance-v1.png",
+          "sourceSha256": "c7b702656654505c0fd79cca61bba6b81a5fc707e0c9526098d9d54355aeefcc",
+          "file": "candidate/run/NW/14.png",
+          "durationMs": 75,
+          "currentSha256": "c7b702656654505c0fd79cca61bba6b81a5fc707e0c9526098d9d54355aeefcc",
+          "shaMatchesAtStart": true,
+          "startMs": 975,
+          "pairSlots": [
+            13,
+            14
+          ],
+          "legFootObservation": "低鞋后移，另一脚前摆；脚底露出属抬脚俯仰。",
+          "shoulderElbowWristGripObservation": "手持关系维持，袖遮肘不作确定解剖结论。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 15,
+          "source": "generation/NW/15-stance-v1.png",
+          "sourceSha256": "e6de52620a1afec63055855907dfea09f533029ea2cf307802a916b1b30c8d2d",
+          "file": "candidate/run/NW/15.png",
+          "durationMs": 75,
+          "currentSha256": "e6de52620a1afec63055855907dfea09f533029ea2cf307802a916b1b30c8d2d",
+          "shaMatchesAtStart": true,
+          "startMs": 1050,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "后段支撑鞋继续低位，另一脚前摆；未见明确新增外撇。",
+          "shoulderElbowWristGripObservation": "右灯后摆向首帧过渡，左瓶托腹。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        },
+        {
+          "slot": 16,
+          "source": "generation/NW/16-stance-v2.png",
+          "sourceSha256": "3c2c3aed651919305cd0ce61fedfa2ad48a7a736c411b9049c8b657bdf905c34",
+          "file": "candidate/run/NW/16.png",
+          "durationMs": 75,
+          "currentSha256": "3c2c3aed651919305cd0ce61fedfa2ad48a7a736c411b9049c8b657bdf905c34",
+          "shaMatchesAtStart": true,
+          "startMs": 1125,
+          "pairSlots": [
+            15,
+            16
+          ],
+          "legFootObservation": "末段低鞋有接触形态，另一脚较高；换步首尾可能大位移，未证实错脚。",
+          "shoulderElbowWristGripObservation": "右灯左瓶身份保持。",
+          "confirmedIssues": [],
+          "conclusion": "retain_no_confirmed_local_error",
+          "fullHiddenJointChainVerified": false
+        }
+      ]
+    }
+  ],
+  "followupCandidates": [
+    {
+      "file": "generation/N/03-anatomy-v1.png",
+      "owner": "root",
+      "independentObservation": "已实际查看，灯恢复到N02/N04间高度，脚相位视觉保留；根维护该图来源与选表。"
+    },
+    {
+      "slots": "N07/N08",
+      "owner": "root",
+      "reason": "已确认瓶握点问题，根负责修正，本代理不重叠生成。"
+    },
+    {
+      "slots": "N09/N10",
+      "owner": "timing_preview",
+      "reason": "已确认瓶握点问题，分配修正，未在本审计中假定已成功。"
+    },
+    {
+      "file": "generation/NE/03-anatomy-v1.png",
+      "sha256": "ae73aaac78c621d1c92358f7fa62f9dbc7e123769750b813f20927191e12af9c",
+      "target": "generation/NE/03-midstance-v1.png",
+      "review": "review/NE-03-anatomy-v1.json",
+      "status": "local_axis_improvement_candidate"
+    },
+    {
+      "file": "generation/NE/04-anatomy-v1.png",
+      "sha256": "9018b2615bbd42cb68b14dd69106ff28420f9c2337b74684721dcda94ce8f7c9",
+      "target": "generation/NE/04-ground4-v1.png",
+      "review": "review/NE-04-anatomy-v1.json",
+      "status": "rejected_for_right_lamp_clipping_superseded_by_v2"
+    },
+    {
+      "file": "generation/NE/04-anatomy-v2.png",
+      "sha256": "054ead56c9c3ab0cf3c156830008798d171db4b7bc4e593be84513587fdc6bb1",
+      "target": "generation/NE/04-anatomy-v1.png",
+      "review": "review/NE-04-anatomy-v2.json",
+      "status": "local_margin_and_axis_improvement_candidate"
+    },
+    {
+      "file": "generation/NE/08-anatomy-v1.png",
+      "sha256": "e7fd234ba1c015f086d522e7d5f63c0664b924f81a5092dfe7025f65c745d253",
+      "target": "generation/NE/08-axis-v2.png",
+      "review": "review/NE-08-anatomy-v1.json",
+      "status": "axis_improved_registration_drift_requires_root_decision"
+    }
+  ],
+  "inputModified": false,
+  "exportsModified": false,
+  "cleanupExecuted": false,
+  "visualAccepted": false,
+  "dynamicAccepted": false
+}

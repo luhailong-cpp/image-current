@@ -1,0 +1,90 @@
+{
+  "reviewedAtUtc": "2026-10-10T10:44:40.449Z",
+  "reviewer": "/root/stall_repair_resumed",
+  "method": "view_image native size inspection of each actual generation, exact mapped guides, and four 256-wide/tall full-length core boundary stripes",
+  "status": "proposed_replacement_locally_continuous_pending_independent_review",
+  "newAIGenerationCount": 3,
+  "proposalNativeCount": 2,
+  "formalAccepted": false,
+  "selectionChanged": false,
+  "proposedSelections": {
+    "r06_c12_p34": "native/resume-20261010-stall-upper-v1.png",
+    "r06_c12_p44": "native/resume-20261010-stall-lower-v1.png"
+  },
+  "coordinates": {
+    "r06_c12_p34": [
+      48013,
+      22413,
+      49267,
+      23667
+    ],
+    "r06_c12_p44": [
+      48013,
+      23437,
+      49267,
+      24691
+    ]
+  },
+  "firstAttempt": {
+    "path": "native/resume-20261010-stall-v1.png",
+    "layout": "Corrected major prior footprint error: long front post center about590, footabout980 in repair box; expected center520..620,foot930..1030. Leading protruding rim/cap nowaboutx410,y340, near expectedguide.",
+    "externalReview": "Upper/lower insertion boundaries failed: newfish vs oldfloor above, wood/shadow vs warm floor below. Not proposed as a direct paste.",
+    "response": "Expanded reconstruction to full p34 and p44 native planes rather than repeating original local prompt."
+  },
+  "findings": [
+    {
+      "check": "layout",
+      "result": "major_prior_footprint_error_resolved",
+      "detail": "Final p34/p44 keep correct left protruding front rim and tall front support, whose foot is around world(48603,23907). Upper fish rear rim continues through right edge; lower wooden brace continues through right edge. No complete small stall was squeezed into one patch."
+    },
+    {
+      "check": "fish_style",
+      "result": "improved",
+      "detail": "Tapered blue/silver fish, fins/gills and overlapping scales replace rounded blue blobs. New upper fish back row connects within its whole generated plane."
+    },
+    {
+      "check": "p24_p34_top_existing_edge",
+      "result": "no_obvious_major_geometry_or_tone_break_observed",
+      "qa": "qa/resume-20261010-stall-final-p24-p34.native-1to1.png",
+      "detail": "Existing large-stall post and gray slab joints continue through stripey128."
+    },
+    {
+      "check": "p33_p34_left_existing_edge",
+      "result": "no_obvious_major_geometry_break_observed",
+      "qa": "qa/resume-20261010-stall-final-p33-p34.native-1to1.png",
+      "detail": "Large post, diagonal joints and floor geometry connect; subtle grain/value variation remains, no large band."
+    },
+    {
+      "check": "p34_p44_internal",
+      "result": "no_obvious_major_geometry_break_observed",
+      "qa": "qa/resume-20261010-stall-final-p34-p44.native-1to1.png",
+      "detail": "New front support, fish, rim and apron connect at correct core seam; fine wood grain changes slightly. Source halos are not claimed pixel-identical."
+    },
+    {
+      "check": "p43_p44_left_existing_edge",
+      "result": "no_obvious_major_geometry_break_observed",
+      "qa": "qa/resume-20261010-stall-final-p43-p44.native-1to1.png",
+      "detail": "Gray-warm pavement transition and partial lantern base geometry connect acrossx128; no major horizontal band remains."
+    },
+    {
+      "check": "right_and_bottom_tile_external_edges",
+      "result": "not_reviewed_no_existing_accepted_neighbors",
+      "detail": "These remain candidate boundaries for r06c13/r07c12; do not claim formal acceptance."
+    },
+    {
+      "check": "inherited_floor_style",
+      "result": "existing_style_risk",
+      "detail": "Repetitive fine diamond texture and bright joint highlights persist from adjacent native anchors. Repairs preserve local continuity; no new global style pass claimed."
+    }
+  ],
+  "nextStep": "Parent independently inspect named QA stripes, then optionally select upper-v1 and lower-v1 as p34/p44. Keep old source and intermediate until selection/provenance secured. Extend east from resulting native right edge; do not copy original misplaced small stall edge.",
+  "evidence": {
+    "promptPattern": "records/resume-20261010-stall-{v1,upper-v1,lower-v1}.prompt.txt",
+    "receiptPattern": "records/resume-20261010-stall-{v1,upper-v1,lower-v1}.receipt.json",
+    "nativeRecordSuffix": ".png.generation.json",
+    "actualModel": null,
+    "actualQuality": null,
+    "builtinOnly": true,
+    "paidApiUsed": false
+  }
+}

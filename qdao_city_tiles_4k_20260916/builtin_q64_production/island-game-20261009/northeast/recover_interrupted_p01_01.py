@@ -1,0 +1,8 @@
+from native_work import *
+ident='r03_c11_p01_01';src=Path('C:/Users/luyua/.codex/generated_images/01a12988-826d-75d0-a6a4-2bcac0861fb2/exec-abb3746d-9b7a-4439-9c7e-49164dfe2b46.png')
+assert sha(src)=='afcc72c2c8651ed6be4cdd53065e347816c61885174d787da771154593b202be'
+receipt={'id':ident,'tool':'image_gen.imagegen','route':'builtin','recovery':'Successful PNG persisted before agent fatal network-permission interruption, recovered locally without new image request.','associationEvidence':['Agent east_resume reported this exact id in flight as first restored request','Unique recent unregistered PNG in original agent tool directory','Root visually compared output against saved target: identical right lantern/leaf/pot geometry and exact framing'], 'originalToolPath':src.as_posix(),'sha256':sha(src),'sourceModifiedAtUtc':datetime.fromtimestamp(src.stat().st_mtime,timezone.utc).isoformat(),'savedPrompt':(ZONE/'prompts'/f'{ident}.prompt.txt').as_posix(),'orderedReferences':read(ZONE/'prompts'/f'{ident}.inputs.json'),'originalToolResponseAvailable':False,'submittedParameters':{'model':None,'quality':None,'transparent_background':False},'actualModel':None,'actualQuality':None,'recoveredAtUtc':now()}
+write(ZONE/'receipts'/f'{ident}.tool.json',receipt)
+ingest(argparse.Namespace(id=ident,source=src.as_posix(),no_progress=True))
+p=ZONE/'native'/f'{ident}.png.generation.json';r=read(p);r['recovery']=receipt['recovery'];r['evidence']['fields']=['recoveredPNG','savedPrompt','savedOrderedReferences','agentInFlightReport'];r['evidence']['originalToolResponseAvailable']=False;r['sourceModifiedAtUtc']=receipt['sourceModifiedAtUtc'];write(p,r)
+

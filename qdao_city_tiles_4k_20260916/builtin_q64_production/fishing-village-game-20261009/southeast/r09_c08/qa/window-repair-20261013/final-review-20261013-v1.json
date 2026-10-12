@@ -1,0 +1,69 @@
+{
+  "createdAtUtc": "2026-10-13T14:26:21.965Z",
+  "scope": "r09_c08 p44 upper window only; southern existing core immutable",
+  "status": "two_local_attempts_saved_not_accepted_deferred",
+  "attemptCount": 2,
+  "consecutiveUsableResultFailures": 2,
+  "actualModel": null,
+  "actualQuality": null,
+  "route": "builtin image_gen__imagegen",
+  "canonicalModified": false,
+  "selectedModified": false,
+  "otherTilesModified": false,
+  "gitOperations": false,
+  "sourceNorth": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r09_c08/native/p44-v2.png",
+    "sha256": "65460e7999a2f127e892daaa8772217be8c78d6f72db5da66293ac9bb5ae5720"
+  },
+  "sourceSouth": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r10_c08/processed/colorpass/p14-colorpass.png",
+    "sha256": "68e603da60a10c7ca9c0f6e7392ea85322ae59502ff3550cbed3b66e3ca691f4"
+  },
+  "originalIssue": "Current selected north and south cores duplicate the diamond flower vertically. Existing east roof/eave geometry and repaired lantern seam remain usable.",
+  "candidateQaRecord": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r09_c08/qa/window-repair-20261013/bounded-candidates-qa-v1.json",
+  "reviews": [
+    {
+      "version": 1,
+      "usable": false,
+      "adoptRecommended": false,
+      "observations": [
+        "Generated one motif, but displaced the fixed southern flower and sill upward about 60-85 pixels; north-only adoption leaves a conspicuous horizontal geometric discontinuity.",
+        "The original sloping upper frame was also changed; reject."
+      ]
+    },
+    {
+      "version": 2,
+      "usable": false,
+      "adoptRecommended": false,
+      "observations": [
+        "Preserves the original sloping top frame better than v1, but still recenters/shifts the lower fixed flower.",
+        "Exact north-only assembly shows a large petal and diamond-width step at global y=36864 (native north y=1139); reject.",
+        "Viewed native boundary and 128px actual join crops; not merely a material/color mismatch."
+      ]
+    }
+  ],
+  "preferredExistingSelection": "Retain p44-v2 unchanged; local duplicate flower remains pending, not passed.",
+  "editableGlobalBox": [
+    32346,
+    36595,
+    32644,
+    36864
+  ],
+  "nativeBox": [
+    717,
+    870,
+    1015,
+    1139
+  ],
+  "recommendedNext": "Continue independent missing patches. Later use one joint bounded window repair across r09_c08 p44 and r10_c08 p14 with a single shared flower, if root assigns that wider repair; do not warp, move, blur or programmatically redraw this geometry.",
+  "formalAccepted": false,
+  "localGeometryPassed": false,
+  "adoptionInstructions": {
+    "adopt": false,
+    "reason": "Neither candidate matches the immutable southern selected core at the seam.",
+    "candidateFilesForInspectionOnly": [
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r09_c08/qa/window-repair-20261013/p44-window-v1-QA-only.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southeast/r09_c08/qa/window-repair-20261013/p44-window-v2-QA-only.png"
+    ]
+  }
+}

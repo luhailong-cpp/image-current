@@ -1,0 +1,98 @@
+{
+  "tile": "r07_c13",
+  "scope": "owned first row p11..p14 only",
+  "status": "four native patches complete; north gold cap integrated and reviewed at 1:1",
+  "nativeSourceCount": 4,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "sourceAudit": "assemble.inspect_source passed all four: bytes, dimensions, coordinates, prompt/request equality, receipts, direct reference hashes, original tool-output byte identity",
+  "evidenceManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r07_c13/qa/row1-final/source-and-crops.json",
+  "visualReview": {
+    "scale": "1:1 original pixels",
+    "internalPairsViewed": 3,
+    "northSharedSegmentsViewed": 4,
+    "northFourWayIntersectionsViewed": 3,
+    "geometry": "Walls, masonry courses, red posts, tile ribs and inherited gold rails remain connected. p11 initial moved plinth rejected; p14 orphan hip-ridge rejected and corrected."
+  },
+  "retainedP3": [
+    {
+      "id": "p11-foreground-soft-detail",
+      "nativePatch": "p11",
+      "nativeBox": [
+        0,
+        680,
+        1254,
+        1254
+      ],
+      "note": "Foreground ceramic and gold are softer than p12; object contours continue and no further generation performed."
+    },
+    {
+      "id": "stone-material-change",
+      "tileBox": [
+        930,
+        0,
+        1135,
+        630
+      ],
+      "note": "Subtle masonry texture/lightness difference across p11/p12; course lines align."
+    },
+    {
+      "id": "threshold-material-block",
+      "tileBox": [
+        3020,
+        0,
+        3270,
+        130
+      ],
+      "note": "The north p13/p14 threshold intersection retains a rectangular warm/gray material difference; exterior contour remains aligned."
+    },
+    {
+      "id": "north-blue-roof-material",
+      "worldBox": [
+        52570,
+        24550,
+        53230,
+        24660
+      ],
+      "note": "Horizontal glaze lightness difference near shared north border; blue ribs remain continuous."
+    }
+  ],
+  "immutableNative": true,
+  "ownedProgress": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r07_c13/worker-row1.json",
+  "noWritesTo": [
+    "selected-native.json",
+    "candidates",
+    "tile-progress.json",
+    "zone progress.json"
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "formalAcceptedCount": 0,
+  "openP2": [],
+  "resolvedP2": [
+    {
+      "id": "p14-north-cap-crop",
+      "worldBox": [
+        52417,
+        24557,
+        52508,
+        24576
+      ],
+      "reason": "Upper 19 pixels of the new gold cap fall inside p14 north halo; a core-only cut leaves the cap top flat at the tile boundary.",
+      "nativeChangeRequired": false,
+      "solution": "Applied the exact p14 cap with a binary object mask into r06_c13 bottom edge; original p14 native unchanged.",
+      "proposal": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r07_c13/qa/p14-north-cap/integration-proposal.json",
+      "proposalVisualReview": "1:1 after preview restores the curved cap without left/right hard cut or image blur.",
+      "integrationReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r06_c13\\qa\\r07-p14-north-cap-20261010\\visual-review.json",
+      "northCandidateSha256": "7f8784be48316ee2083ceb420d97248f9143bdd274a6a381ef335214e7e64669"
+    }
+  ]
+}

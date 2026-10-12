@@ -1,0 +1,1818 @@
+{
+  "schemaVersion": 1,
+  "task": "village-east-shipyard west boundary preparation only",
+  "createdAtUtc": "2026-10-13T06:39:24.472229+00:00",
+  "samplingStartedAtUtc": "2026-10-13T06:39:23.826759+00:00",
+  "rootInstructions": {
+    "path": "D:\\work\\image\\AGENTS.md",
+    "sampledAtUtc": "2026-10-13T06:39:23.826759+00:00",
+    "exists": true,
+    "sha256": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+    "bytes": 6705,
+    "modifiedAtUtc": "2026-10-13T04:39:58.580501+00:00"
+  },
+  "parallelSplit": {
+    "path": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+    "sampledAtUtc": "2026-10-13T06:39:23.826759+00:00",
+    "exists": true,
+    "sha256": "9b94ae23ed4df431029521138867916d8927894f58868b11e00918435d197e67",
+    "bytes": 4372,
+    "modifiedAtUtc": "2026-10-13T06:25:09.989977+00:00"
+  },
+  "productionContract": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\production-contract.json",
+    "sampledAtUtc": "2026-10-13T06:39:23.827899+00:00",
+    "exists": true,
+    "sha256": "6f22d6bc766af216a8b2b00a5b5c834224ad69748c42beed3be61741ee13c99a",
+    "bytes": 6750,
+    "modifiedAtUtc": "2026-10-10T08:52:16.093078+00:00"
+  },
+  "batchIdentity": {
+    "key": "village-east-shipyard",
+    "map": "fishing-village-game-20261009",
+    "owner": "01a1216d-4a55-7063-ba13-5ddf6d9106f7",
+    "worker": "01a1338b-a299-7163-93e7-055f91a79dde",
+    "tiles": [
+      "r10_c11",
+      "r10_c12",
+      "r11_c11",
+      "r11_c12"
+    ],
+    "status": "pending_owner_ack",
+    "outputDirectory": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-east-shipyard",
+    "ownerAckFile": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/coordination/village-east-shipyard.owner-ack.json"
+  },
+  "ownerAcknowledgment": {
+    "snapshot": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\coordination\\village-east-shipyard.owner-ack.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.848335+00:00",
+      "exists": false
+    },
+    "existsAtFinalCheck": false,
+    "generationAuthorizedByThisPreparation": false,
+    "preparationLimit": "Parent explicitly requested preparation only; owner acknowledgement was missing at sample time. No generation call or reservation claim is made here."
+  },
+  "modelRule": "Free/existing included 2.5 preferred; existing included 2.0 allowed; no paid API or model tests. No image generation/edit performed in this task. Existing processed sources retain unknown actual model.",
+  "targetTiles": [
+    {
+      "tile": "r10_c11",
+      "globalCoreBox": [
+        40960,
+        36864,
+        45056,
+        40960
+      ],
+      "extended4kHaloBox": [
+        40845,
+        36749,
+        45171,
+        41075
+      ],
+      "extended4kHaloBoxIsNotOneNativePatch": true,
+      "directExistingWestBoundary": true,
+      "dependency": "Use verified southeast c10 east-edge sources"
+    },
+    {
+      "tile": "r10_c12",
+      "globalCoreBox": [
+        45056,
+        36864,
+        49152,
+        40960
+      ],
+      "extended4kHaloBox": [
+        44941,
+        36749,
+        49267,
+        41075
+      ],
+      "extended4kHaloBoxIsNotOneNativePatch": true,
+      "directExistingWestBoundary": false,
+      "dependency": "West neighbor is new c11 in this same batch; obtain its current selected east-edge source after it is drawn. Existing c10 cannot be relabeled as c12 direct boundary."
+    },
+    {
+      "tile": "r11_c11",
+      "globalCoreBox": [
+        40960,
+        40960,
+        45056,
+        45056
+      ],
+      "extended4kHaloBox": [
+        40845,
+        40845,
+        45171,
+        45171
+      ],
+      "extended4kHaloBoxIsNotOneNativePatch": true,
+      "directExistingWestBoundary": true,
+      "dependency": "Use verified southeast c10 east-edge sources"
+    },
+    {
+      "tile": "r11_c12",
+      "globalCoreBox": [
+        45056,
+        40960,
+        49152,
+        45056
+      ],
+      "extended4kHaloBox": [
+        44941,
+        40845,
+        49267,
+        45171
+      ],
+      "extended4kHaloBoxIsNotOneNativePatch": true,
+      "directExistingWestBoundary": false,
+      "dependency": "West neighbor is new c11 in this same batch; obtain its current selected east-edge source after it is drawn. Existing c10 cannot be relabeled as c12 direct boundary."
+    }
+  ],
+  "westNeighborCandidateAndQaIdentity": [
+    {
+      "tile": "r10_c10",
+      "selection": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\selected-patches.json",
+        "sampledAtUtc": "2026-10-13T06:39:23.848335+00:00",
+        "exists": true,
+        "sha256": "9ea1b3692d172495decd3d00ab980114835e76f639c92a92574179fa5a696af7",
+        "bytes": 1604,
+        "modifiedAtUtc": "2026-10-10T06:37:48.390963+00:00"
+      },
+      "selectionStatus": "internal_ready_external_seams_pending",
+      "internalReadyDeclared": true,
+      "formalAcceptedDeclared": false,
+      "coordinatePlan": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\coordinate-plan.json",
+        "sampledAtUtc": "2026-10-13T06:39:23.852108+00:00",
+        "exists": true,
+        "sha256": "e75cc197ef667a173a34f2b3fa1efb13f1df48649a8150b890904095788adcab",
+        "bytes": 22778,
+        "modifiedAtUtc": "2026-10-09T19:38:27.698207+00:00"
+      },
+      "candidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\r10_c10-candidate-4096.png",
+        "sampledAtUtc": "2026-10-13T06:39:23.857441+00:00",
+        "exists": true,
+        "sha256": "a9f833d219a3b93d705b7a8bf9d860fc57243769253fe71a008aca024baeeaa5",
+        "bytes": 25214487,
+        "modifiedAtUtc": "2026-10-10T00:51:40.932439+00:00",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      },
+      "candidateHashMatchesSelection": true,
+      "candidateDimensionsPass": true,
+      "qa": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal-review\\review-round2-final.json",
+        "sampledAtUtc": "2026-10-13T06:39:23.946401+00:00",
+        "exists": true,
+        "sha256": "9ff282d03fdd444a0a2c7d82e0ea6a9dc8c5849902a9212db86ce9d1da3a4005",
+        "bytes": 78342,
+        "modifiedAtUtc": "2026-10-10T06:24:22.351336+00:00"
+      },
+      "qaCandidatePath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\r10_c10-candidate-4096.png",
+      "qaCandidateSha256": "a9f833d219a3b93d705b7a8bf9d860fc57243769253fe71a008aca024baeeaa5",
+      "qaCandidateIdentityMatchesCurrent": true,
+      "qaClaims": {
+        "reviewedAtUtc": "2026-10-10T06:24:22.326472+00:00",
+        "candidateExactlyMatches16SelectedNativeCores": true,
+        "structuralBlockers": [],
+        "mandatoryColorOrTextureRepairs": [],
+        "internalCandidateReady": true,
+        "formalAccepted": false,
+        "externalTileEdges": "not signed off by this internal review; current-source external verification and adjacent outer corners remain separate"
+      },
+      "qaCurrentSelectionHashSameAsReview": false,
+      "qaScopeLimit": "Prior internal QA candidate identity is verified here; future east-neighbor joins remain pending. This is a boundary preparation view, not external seam acceptance."
+    },
+    {
+      "tile": "r11_c10",
+      "selection": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\selected-patches.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.225262+00:00",
+        "exists": true,
+        "sha256": "c1e79764e1403122c26135485a61e7b08603047634c25de878b8ffac8a2d2828",
+        "bytes": 1534,
+        "modifiedAtUtc": "2026-10-10T17:25:49.190981+00:00"
+      },
+      "selectionStatus": "internal_ready_external_east_south_pending",
+      "internalReadyDeclared": true,
+      "formalAcceptedDeclared": false,
+      "coordinatePlan": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\coordinate-plan.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.228343+00:00",
+        "exists": true,
+        "sha256": "b776583ab0e8b0420390d48ae48253abd6ba5dbd1ac552f5b70516cb87d82544",
+        "bytes": 22774,
+        "modifiedAtUtc": "2026-10-10T01:17:04.496430+00:00"
+      },
+      "candidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\candidate\\r11_c10-internal-ready-4096.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.230489+00:00",
+        "exists": true,
+        "sha256": "fe272333737013523783f6d58925354320a20ffdbffccbf6fc8cf3811b57395f",
+        "bytes": 25772201,
+        "modifiedAtUtc": "2026-10-10T14:09:32.007281+00:00",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      },
+      "candidateHashMatchesSelection": true,
+      "candidateDimensionsPass": true,
+      "qa": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\qa\\internal-review.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.317443+00:00",
+        "exists": true,
+        "sha256": "a643dd68f50cef65801079adeb02341bcec4ea92bbd9b79943a43ae4622739f2",
+        "bytes": 1702,
+        "modifiedAtUtc": "2026-10-10T17:25:49.189848+00:00"
+      },
+      "qaCandidatePath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\candidate\\r11_c10-internal-ready-4096.png",
+      "qaCandidateSha256": "fe272333737013523783f6d58925354320a20ffdbffccbf6fc8cf3811b57395f",
+      "qaCandidateIdentityMatchesCurrent": true,
+      "qaClaims": {
+        "internalReady": true,
+        "formalAccepted": false,
+        "geometryBlockingIssues": [],
+        "colorBlockingIssues": [],
+        "externalEast": "pending_neighbor",
+        "externalSouth": "pending_neighbor",
+        "verifiedAt": "2026-10-10T17:25:49.188339+00:00"
+      },
+      "qaCurrentSelectionHashSameAsReview": null,
+      "qaScopeLimit": "Prior internal QA candidate identity is verified here; future east-neighbor joins remain pending. This is a boundary preparation view, not external seam acceptance."
+    }
+  ],
+  "usableWestBoundaryReferences": [
+    {
+      "westTile": "r10_c10",
+      "westPatch": "p14",
+      "selectedRelativePath": "processed/p14-connected-net-v3.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.049347+00:00",
+        "exists": true,
+        "sha256": "a8a18455bcaa7d863115b023144952dd4b33c354d511477087c4bb9e20d03778",
+        "bytes": 2552173,
+        "modifiedAtUtc": "2026-10-10T00:25:39.970148+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.064506+00:00",
+        "exists": true,
+        "sha256": "6f507c3e7ab3c409eaa466ac2c585a3e2705b15103dfdf5e50749f61d2761640",
+        "bytes": 1310,
+        "modifiedAtUtc": "2026-10-10T00:25:40.061013+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          36864,
+          40960,
+          37888
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          36749,
+          41075,
+          38003
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r10_c11",
+      "targetPatch": "p11",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          36864,
+          41984,
+          37888
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          36749,
+          42099,
+          38003
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          36749,
+          41075,
+          38003
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          36864,
+          41075,
+          37888
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "暖棕斜向木甲板",
+          "粗木立柱与向右延伸的横栏",
+          "左侧黄篷边缘",
+          "青绿布底和浅麻色绳网"
+        ],
+        "eastOverlapObjects": [
+          "上部斜向木板及暗接缝",
+          "中下部向右斜出的木横栏与高光边",
+          "下部绳网/青绿布和木地板"
+        ],
+        "focus": [
+          "保持横栏上下轮廓、厚度和透视斜率；不要在目标左缘复制第二根立柱。",
+          "黄篷和立柱主要在西侧，目标不能凭局部图再创造一个重复端头。",
+          "以源右230px接续绳股落点与底部木板接缝。"
+        ],
+        "risk": "结构较密集：栏杆、网绳、篷布与木板交叠，容易出现双栏或绳网断线。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "repairGlobalBox": [
+          39821,
+          37773,
+          41075,
+          39027
+        ],
+        "adoptedWorldBox": [
+          39821,
+          37773,
+          40556,
+          38003
+        ],
+        "repairCrop": [
+          0,
+          0,
+          735,
+          230
+        ],
+        "destination": [
+          0,
+          1024,
+          735,
+          1254
+        ],
+        "operation": "unscaled bounded native edit propagated to intersecting core and halo pixels",
+        "resamplingApplied": false
+      }
+    },
+    {
+      "westTile": "r10_c10",
+      "westPatch": "p24",
+      "selectedRelativePath": "processed/p24-connected-net-v3.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p24-connected-net-v3.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.067323+00:00",
+        "exists": true,
+        "sha256": "183245636a466718f54a248868f4afc72f1386c33454458cd7668014e20e4689",
+        "bytes": 2568147,
+        "modifiedAtUtc": "2026-10-10T00:25:40.664109+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p24-connected-net-v3.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.080487+00:00",
+        "exists": true,
+        "sha256": "b364e76d8f1817938bbfa575c95c3768319f9ca0901a2a15ad48ff1111a77424",
+        "bytes": 1308,
+        "modifiedAtUtc": "2026-10-10T00:25:40.714831+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          37888,
+          40960,
+          38912
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          37773,
+          41075,
+          39027
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r10_c11",
+      "targetPatch": "p21",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          37888,
+          41984,
+          38912
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          37773,
+          42099,
+          39027
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          37773,
+          41075,
+          39027
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          37888,
+          41075,
+          38912
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "竖向粗木柱及底部绕绳",
+          "青绿织物",
+          "菱格麻绳网",
+          "左下蓝布桌面一角",
+          "底部棕木甲板"
+        ],
+        "eastOverlapObjects": [
+          "连续青绿布底及绳网菱格/绳结",
+          "底部木边和甲板"
+        ],
+        "focus": [
+          "保留绳股粗细、三股绞纹、菱格节奏和青绿底色。",
+          "不要将近中央木柱平移到新片或在接缝处新增立柱。",
+          "跨p14/p24上下230px重叠要同时对齐，不能只对正中一条竖边。"
+        ],
+        "risk": "重复网孔或结点相位偏移会形成明显接缝；布纹密度应延续现有processed版本。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "repairGlobalBox": [
+          39821,
+          37773,
+          41075,
+          39027
+        ],
+        "adoptedWorldBox": [
+          39821,
+          37773,
+          40556,
+          39027
+        ],
+        "repairCrop": [
+          0,
+          0,
+          735,
+          1254
+        ],
+        "destination": [
+          0,
+          0,
+          735,
+          1254
+        ],
+        "operation": "unscaled bounded native edit propagated to intersecting core and halo pixels",
+        "resamplingApplied": false
+      }
+    },
+    {
+      "westTile": "r10_c10",
+      "westPatch": "p34",
+      "selectedRelativePath": "processed/p34-rim-complete-v5.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p34-rim-complete-v5.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.195847+00:00",
+        "exists": true,
+        "sha256": "fa8ec012d269b66881dd0890c9379b17eba9fd4414f6335c036c61619f05f848",
+        "bytes": 2309709,
+        "modifiedAtUtc": "2026-10-10T00:46:58.830813+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p34-rim-complete-v5.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.206365+00:00",
+        "exists": true,
+        "sha256": "a0b95519f05aa90e7fd193844f4cac5b81a91f2210439b283b249f0949bebcd4",
+        "bytes": 1307,
+        "modifiedAtUtc": "2026-10-10T00:46:58.888947+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          38912,
+          40960,
+          39936
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          38797,
+          41075,
+          40051
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r10_c11",
+      "targetPatch": "p31",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          38912,
+          41984,
+          39936
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          38797,
+          42099,
+          40051
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          38797,
+          41075,
+          40051
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          38912,
+          41075,
+          39936
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "上部木柱根及绕绳",
+          "青绿网布尾部",
+          "斜向木甲板",
+          "金黄木工作台边",
+          "白云纹蓝布桌面/垂边",
+          "右下桌腿"
+        ],
+        "eastOverlapObjects": [
+          "上端网布/绕绳尾部",
+          "木板和金黄桌沿转角附近",
+          "蓝布边角附近的木桌角/桌腿与右侧地板"
+        ],
+        "focus": [
+          "保持桌沿金黄高光线连续、桌角厚度和木腿落点；不要把单层台面画成双层。",
+          "蓝布白色云纹和织纹属于同一桌面，延续转折不另加一张桌。",
+          "已选p34-rim-complete-v5承载既有修补，不能替换为早期native版本。"
+        ],
+        "risk": "桌沿和桌腿处容易发生台面抬阶、双边或投影跳变。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "repairGlobalBox": [
+          39821,
+          38797,
+          41075,
+          40051
+        ],
+        "adoptedWorldBox": [
+          40021,
+          39147,
+          40721,
+          39677
+        ],
+        "repairCrop": [
+          200,
+          350,
+          900,
+          880
+        ],
+        "destination": [
+          200,
+          350,
+          900,
+          880
+        ],
+        "operation": "unscaled bounded native edit propagated to intersecting core and halo pixels",
+        "resamplingApplied": false
+      }
+    },
+    {
+      "westTile": "r10_c10",
+      "westPatch": "p44",
+      "selectedRelativePath": "processed/p44-own-color-v2.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p44-own-color-v2.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.209540+00:00",
+        "exists": true,
+        "sha256": "dfcb1b9f4d303e9de4b4604b6611a289cde6cf58fef98b723220008547c98030",
+        "bytes": 2283971,
+        "modifiedAtUtc": "2026-10-10T00:46:56.098342+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p44-own-color-v2.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.222233+00:00",
+        "exists": true,
+        "sha256": "239b4009e8a3b40ab1b12df5f138d212f8e05cfb36d29a050afb0400c1180562",
+        "bytes": 1738,
+        "modifiedAtUtc": "2026-10-10T00:46:56.167645+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          39936,
+          40960,
+          40960
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          39821,
+          41075,
+          41075
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r10_c11",
+      "targetPatch": "p41",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          39936,
+          41984,
+          40960
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          39821,
+          42099,
+          41075
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          39821,
+          41075,
+          41075
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          39936,
+          41075,
+          40960
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "蓝布白云纹工作台垂边",
+          "暖金木桌腿及横撑",
+          "暖棕斜木地板",
+          "桌下暗影和钉头"
+        ],
+        "eastOverlapObjects": [
+          "上段右桌腿/桌沿及其地面阴影",
+          "其下连续斜向木板、暗接缝与高光"
+        ],
+        "focus": [
+          "桌腿及阴影在右上区域应自然收尾，目标不能镜像再加腿。",
+          "木板接缝斜率、板宽、钉头位置和阴影方向要从重叠区续接。",
+          "本行下沿同时与r11_c10/p14和新r11_c11/p11形成四片角点。"
+        ],
+        "risk": "桌腿脚和地板对角接缝靠近上下/左右交叉处，需保留四片角点几何。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "operation": "restore this patch own geometry pixels in bounded region, apply only shared additive RGB field; no cross-patch artwork copy",
+        "resamplingApplied": false
+      }
+    },
+    {
+      "westTile": "r11_c10",
+      "westPatch": "p14",
+      "selectedRelativePath": "processed\\colorpass\\p14-colorpass.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p14-colorpass.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.320170+00:00",
+        "exists": true,
+        "sha256": "400ef9687145a46d7f1a13bf2d333a9a422f9a248527772fa86215bc30548a4a",
+        "bytes": 2281771,
+        "modifiedAtUtc": "2026-10-10T14:09:14.116238+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p14-colorpass.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.329654+00:00",
+        "exists": true,
+        "sha256": "7aaa33cce3849be2edb0300835e34d18818e86a72d88912f5919cae58d61815d",
+        "bytes": 4162,
+        "modifiedAtUtc": "2026-10-10T14:09:14.569949+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          40960,
+          40960,
+          41984
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          40845,
+          41075,
+          42099
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r11_c11",
+      "targetPatch": "p11",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          40960,
+          41984,
+          41984
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          40845,
+          42099,
+          42099
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          40845,
+          41075,
+          42099
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          40960,
+          41075,
+          41984
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "暖橙棕木甲板",
+          "左上至右下方向的板缝",
+          "细木纹与少量灰钉头"
+        ],
+        "eastOverlapObjects": [
+          "斜向木板、深色缝和窄金黄受光边"
+        ],
+        "focus": [
+          "接续与上一块r10_c10/p44同一甲板的板宽和对角走向。",
+          "右侧补片保留现有暖亮底色及接缝高光，不能改成石地或水面。"
+        ],
+        "risk": "大面积重复木板容易产生周期错位、缝线转向或色带。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "operation": "original selected image plus low-frequency harmonic RGB field; integer rounding and gamut clipping only",
+        "actualCoordinateShift": [
+          0,
+          0
+        ],
+        "resampling": false
+      }
+    },
+    {
+      "westTile": "r11_c10",
+      "westPatch": "p24",
+      "selectedRelativePath": "processed\\colorpass\\p24-colorpass.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p24-colorpass.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.331764+00:00",
+        "exists": true,
+        "sha256": "f546f1739c89af467a4081f65a5cabf1216b23493ac7dfe0257b9fe7b22225a2",
+        "bytes": 2411541,
+        "modifiedAtUtc": "2026-10-10T14:09:18.974843+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p24-colorpass.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.343967+00:00",
+        "exists": true,
+        "sha256": "99347ae8af777caf71a4338fa684687b67346da39492efee5a4dfb6f338f35c0",
+        "bytes": 4162,
+        "modifiedAtUtc": "2026-10-10T14:09:19.506770+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          41984,
+          40960,
+          43008
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          41869,
+          41075,
+          43123
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r11_c11",
+      "targetPatch": "p21",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          41984,
+          41984,
+          43008
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          41869,
+          42099,
+          43123
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          41869,
+          41075,
+          43123
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          41984,
+          41075,
+          43008
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "连续斜向木甲板",
+          "散布灰钉头",
+          "暖亮木纹和窄深缝"
+        ],
+        "eastOverlapObjects": [
+          "斜木板和接缝，基本无新增大物体"
+        ],
+        "focus": [
+          "以源右230px锁定板缝的穿边位置与板宽。",
+          "继承同方向日光，避免把木纹边缘抹糊或改成新铺地。"
+        ],
+        "risk": "纯重复材质的边线相位和低频色差比单个钉头更关键。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "operation": "original selected image plus low-frequency harmonic RGB field; integer rounding and gamut clipping only",
+        "actualCoordinateShift": [
+          0,
+          0
+        ],
+        "resampling": false
+      }
+    },
+    {
+      "westTile": "r11_c10",
+      "westPatch": "p34",
+      "selectedRelativePath": "processed\\colorpass\\p34-colorpass.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p34-colorpass.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.347044+00:00",
+        "exists": true,
+        "sha256": "0eb99b67ac583dfee2028ddbd27bd46a2701c9be6a8b7717326968c4da7ffcba",
+        "bytes": 2233177,
+        "modifiedAtUtc": "2026-10-10T14:09:24.160255+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p34-colorpass.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.356455+00:00",
+        "exists": true,
+        "sha256": "687fcef34d4cbb09398703d5b9d085c995ab9bce784ebb1a2a25fe0d1c0723a0",
+        "bytes": 4157,
+        "modifiedAtUtc": "2026-10-10T14:09:24.574231+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          43008,
+          40960,
+          44032
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          42893,
+          41075,
+          44147
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r11_c11",
+      "targetPatch": "p31",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          43008,
+          41984,
+          44032
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          42893,
+          42099,
+          44147
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          42893,
+          41075,
+          44147
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          43008,
+          41075,
+          44032
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "上段斜木甲板",
+          "约native y230附近既有横向结构分界",
+          "下段较浅的另一方向木板",
+          "码头厚木边梁和竖向木立面",
+          "右下青蓝水面"
+        ],
+        "eastOverlapObjects": [
+          "上段斜板到下段码头板的既有转向线",
+          "下部木边梁、木立面与水面的斜分界"
+        ],
+        "focus": [
+          "保留已存在的板向转折，不将整片强行延续为单一方向木板。",
+          "延续码头外沿的斜率、梁厚、立面分缝及木面到水面的高度关系。",
+          "水面只在现有岸线以外出现；不能拓岸或移动边梁。"
+        ],
+        "risk": "木甲板—边梁—水面是几何高风险交界；右边水线和下邻p44要联看。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "operation": "original selected image plus low-frequency harmonic RGB field; integer rounding and gamut clipping only",
+        "actualCoordinateShift": [
+          0,
+          0
+        ],
+        "resampling": false
+      }
+    },
+    {
+      "westTile": "r11_c10",
+      "westPatch": "p44",
+      "selectedRelativePath": "processed\\colorpass\\p44-colorpass.png",
+      "source": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p44-colorpass.png",
+        "sampledAtUtc": "2026-10-13T06:39:24.358147+00:00",
+        "exists": true,
+        "sha256": "264635eed08e8903a957dbc39b742c6e9944e57484aa1b3c29f34964528a72f0",
+        "bytes": 2094567,
+        "modifiedAtUtc": "2026-10-10T14:09:28.996129+00:00",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "derivation": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p44-colorpass.png.derivation.json",
+        "sampledAtUtc": "2026-10-13T06:39:24.367698+00:00",
+        "exists": true,
+        "sha256": "3c6c5ef20b5e9c2b8c104835824af74a9255f695c4e8cfde89efa1209002e56c",
+        "bytes": 4165,
+        "modifiedAtUtc": "2026-10-10T14:09:29.550603+00:00"
+      },
+      "classification": "currently selected processed native-resolution derivative; not untouched model output",
+      "actualModel": "not independently verified / not returned; old config cannot prove actual model",
+      "sourceCoordinates": {
+        "coreGlobalBox": [
+          39936,
+          44032,
+          40960,
+          45056
+        ],
+        "nativeHaloGlobalBox": [
+          39821,
+          43917,
+          41075,
+          45171
+        ]
+      },
+      "coreCropNative": [
+        115,
+        115,
+        1139,
+        1139
+      ],
+      "sharedVerticalBoundaryGlobalX": 40960,
+      "sourceCoreBoundaryNativeX": 1139,
+      "targetTile": "r11_c11",
+      "targetPatch": "p41",
+      "targetCoordinates": {
+        "coreGlobalBox": [
+          40960,
+          44032,
+          41984,
+          45056
+        ],
+        "nativeHaloGlobalBox": [
+          40845,
+          43917,
+          42099,
+          45171
+        ]
+      },
+      "targetCoreBoundaryNativeX": 115,
+      "full1254HighOverlap": {
+        "sourceCropNative": [
+          1024,
+          0,
+          1254,
+          1254
+        ],
+        "targetDestinationNative": [
+          0,
+          0,
+          230,
+          1254
+        ],
+        "globalBox": [
+          40845,
+          43917,
+          41075,
+          45171
+        ],
+        "operation": "same-coordinate 230px overlap reference; no scale, warp, flip, recolor or new assembly performed"
+      },
+      "coreHeightOnlyOverlap": {
+        "sourceCropNative": [
+          1024,
+          115,
+          1254,
+          1139
+        ],
+        "targetDestinationNative": [
+          0,
+          115,
+          230,
+          1139
+        ],
+        "globalBox": [
+          40845,
+          44032,
+          41075,
+          45056
+        ]
+      },
+      "viewEvidence": {
+        "viewedWith": "view_image",
+        "detail": "original",
+        "viewedDuringThisPreparation": true,
+        "viewScope": "Full existing selected 1254x1254 image; east overlap visually examined, no image crops written"
+      },
+      "observations": {
+        "objects": [
+          "上部码头木立面和斜水线",
+          "明亮青蓝水面及白青色焦散",
+          "下部偏左圆木桩与金色横栏"
+        ],
+        "eastOverlapObjects": [
+          "主要为青蓝水面与连续焦散纹",
+          "最上端码头边/水线尾部"
+        ],
+        "focus": [
+          "按现有青蓝水色、焦散尺度和光斑密度续接，不画成另一种海面。",
+          "圆木桩和金栏在源图偏左区域，东邻不能复制出第二根桩。",
+          "码头立面上缘与p34连续；不要凭水面扩大或缩小码头轮廓。"
+        ],
+        "risk": "焦散被镜像/重复、亮度跳变或无依据新增栏桩会破坏接续。"
+      },
+      "checks": {
+        "sourceDimensions1254": true,
+        "outputHashMatchesDerivation": true,
+        "outputPathMatchesDerivation": true,
+        "planCoreMatchesComputed": true,
+        "planHaloMatchesComputed": true,
+        "coreCropCorrect": true
+      },
+      "directGeometryDeclarations": {
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "operation": "original selected image plus low-frequency harmonic RGB field; integer rounding and gamut clipping only",
+        "actualCoordinateShift": [
+          0,
+          0
+        ],
+        "resampling": false
+      }
+    }
+  ],
+  "junctionPriority": [
+    {
+      "globalPoint": [
+        40960,
+        40960
+      ],
+      "existingSources": [
+        "r10_c10/p44",
+        "r11_c10/p14"
+      ],
+      "futureNewSources": [
+        "r10_c11/p41",
+        "r11_c11/p11"
+      ],
+      "focus": "Preserve slanted wood-deck line phase, table-leg shadow termination and upper/lower source halo agreement across the four-core corner."
+    },
+    {
+      "withinEachTile": "p11/p21/p31/p41 west-column vertical joins",
+      "focus": "Each east source includes 115px top/bottom halo; future reference order must follow the four current east-edge rows without stretching or vertically restarting their objects."
+    }
+  ],
+  "counts": {
+    "westSelectedSources": 8,
+    "sourceChecksConfirmed": 8,
+    "sourceChecksUncertain": 0,
+    "sourceImagesActuallyViewed": 8,
+    "processedSelectedSources": 8,
+    "candidateIdentitiesChecked": 2,
+    "candidateIdentitiesConfirmed": 2,
+    "qaCandidateIdentitiesConfirmed": 2,
+    "newImages": 0,
+    "assembledImages": 0,
+    "sharedRecordsWritten": 0
+  },
+  "bindingFailures": [],
+  "finalInputChanges": [],
+  "inputSnapshots": [
+    {
+      "path": "D:\\work\\image\\AGENTS.md",
+      "sampledAtUtc": "2026-10-13T06:39:23.826759+00:00",
+      "exists": true,
+      "sha256": "d9a7239c206d12d2c0af084d8a30b7caff91c8da08f571e3edf970db0517d4c2",
+      "bytes": 6705,
+      "modifiedAtUtc": "2026-10-13T04:39:58.580501+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.826759+00:00",
+      "exists": true,
+      "sha256": "9b94ae23ed4df431029521138867916d8927894f58868b11e00918435d197e67",
+      "bytes": 4372,
+      "modifiedAtUtc": "2026-10-13T06:25:09.989977+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\production-contract.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.827899+00:00",
+      "exists": true,
+      "sha256": "6f22d6bc766af216a8b2b00a5b5c834224ad69748c42beed3be61741ee13c99a",
+      "bytes": 6750,
+      "modifiedAtUtc": "2026-10-10T08:52:16.093078+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\coordination\\village-east-shipyard.owner-ack.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.848335+00:00",
+      "exists": false
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\selected-patches.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.848335+00:00",
+      "exists": true,
+      "sha256": "9ea1b3692d172495decd3d00ab980114835e76f639c92a92574179fa5a696af7",
+      "bytes": 1604,
+      "modifiedAtUtc": "2026-10-10T06:37:48.390963+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\coordinate-plan.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.852108+00:00",
+      "exists": true,
+      "sha256": "e75cc197ef667a173a34f2b3fa1efb13f1df48649a8150b890904095788adcab",
+      "bytes": 22778,
+      "modifiedAtUtc": "2026-10-09T19:38:27.698207+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\r10_c10-candidate-4096.png",
+      "sampledAtUtc": "2026-10-13T06:39:23.857441+00:00",
+      "exists": true,
+      "sha256": "a9f833d219a3b93d705b7a8bf9d860fc57243769253fe71a008aca024baeeaa5",
+      "bytes": 25214487,
+      "modifiedAtUtc": "2026-10-10T00:51:40.932439+00:00",
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal-review\\review-round2-final.json",
+      "sampledAtUtc": "2026-10-13T06:39:23.946401+00:00",
+      "exists": true,
+      "sha256": "9ff282d03fdd444a0a2c7d82e0ea6a9dc8c5849902a9212db86ce9d1da3a4005",
+      "bytes": 78342,
+      "modifiedAtUtc": "2026-10-10T06:24:22.351336+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.049347+00:00",
+      "exists": true,
+      "sha256": "a8a18455bcaa7d863115b023144952dd4b33c354d511477087c4bb9e20d03778",
+      "bytes": 2552173,
+      "modifiedAtUtc": "2026-10-10T00:25:39.970148+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.064506+00:00",
+      "exists": true,
+      "sha256": "6f507c3e7ab3c409eaa466ac2c585a3e2705b15103dfdf5e50749f61d2761640",
+      "bytes": 1310,
+      "modifiedAtUtc": "2026-10-10T00:25:40.061013+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p24-connected-net-v3.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.067323+00:00",
+      "exists": true,
+      "sha256": "183245636a466718f54a248868f4afc72f1386c33454458cd7668014e20e4689",
+      "bytes": 2568147,
+      "modifiedAtUtc": "2026-10-10T00:25:40.664109+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p24-connected-net-v3.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.080487+00:00",
+      "exists": true,
+      "sha256": "b364e76d8f1817938bbfa575c95c3768319f9ca0901a2a15ad48ff1111a77424",
+      "bytes": 1308,
+      "modifiedAtUtc": "2026-10-10T00:25:40.714831+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p34-rim-complete-v5.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.195847+00:00",
+      "exists": true,
+      "sha256": "fa8ec012d269b66881dd0890c9379b17eba9fd4414f6335c036c61619f05f848",
+      "bytes": 2309709,
+      "modifiedAtUtc": "2026-10-10T00:46:58.830813+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p34-rim-complete-v5.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.206365+00:00",
+      "exists": true,
+      "sha256": "a0b95519f05aa90e7fd193844f4cac5b81a91f2210439b283b249f0949bebcd4",
+      "bytes": 1307,
+      "modifiedAtUtc": "2026-10-10T00:46:58.888947+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p44-own-color-v2.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.209540+00:00",
+      "exists": true,
+      "sha256": "dfcb1b9f4d303e9de4b4604b6611a289cde6cf58fef98b723220008547c98030",
+      "bytes": 2283971,
+      "modifiedAtUtc": "2026-10-10T00:46:56.098342+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p44-own-color-v2.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.222233+00:00",
+      "exists": true,
+      "sha256": "239b4009e8a3b40ab1b12df5f138d212f8e05cfb36d29a050afb0400c1180562",
+      "bytes": 1738,
+      "modifiedAtUtc": "2026-10-10T00:46:56.167645+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\selected-patches.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.225262+00:00",
+      "exists": true,
+      "sha256": "c1e79764e1403122c26135485a61e7b08603047634c25de878b8ffac8a2d2828",
+      "bytes": 1534,
+      "modifiedAtUtc": "2026-10-10T17:25:49.190981+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\coordinate-plan.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.228343+00:00",
+      "exists": true,
+      "sha256": "b776583ab0e8b0420390d48ae48253abd6ba5dbd1ac552f5b70516cb87d82544",
+      "bytes": 22774,
+      "modifiedAtUtc": "2026-10-10T01:17:04.496430+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\candidate\\r11_c10-internal-ready-4096.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.230489+00:00",
+      "exists": true,
+      "sha256": "fe272333737013523783f6d58925354320a20ffdbffccbf6fc8cf3811b57395f",
+      "bytes": 25772201,
+      "modifiedAtUtc": "2026-10-10T14:09:32.007281+00:00",
+      "dimensions": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\qa\\internal-review.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.317443+00:00",
+      "exists": true,
+      "sha256": "a643dd68f50cef65801079adeb02341bcec4ea92bbd9b79943a43ae4622739f2",
+      "bytes": 1702,
+      "modifiedAtUtc": "2026-10-10T17:25:49.189848+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p14-colorpass.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.320170+00:00",
+      "exists": true,
+      "sha256": "400ef9687145a46d7f1a13bf2d333a9a422f9a248527772fa86215bc30548a4a",
+      "bytes": 2281771,
+      "modifiedAtUtc": "2026-10-10T14:09:14.116238+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p14-colorpass.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.329654+00:00",
+      "exists": true,
+      "sha256": "7aaa33cce3849be2edb0300835e34d18818e86a72d88912f5919cae58d61815d",
+      "bytes": 4162,
+      "modifiedAtUtc": "2026-10-10T14:09:14.569949+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p24-colorpass.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.331764+00:00",
+      "exists": true,
+      "sha256": "f546f1739c89af467a4081f65a5cabf1216b23493ac7dfe0257b9fe7b22225a2",
+      "bytes": 2411541,
+      "modifiedAtUtc": "2026-10-10T14:09:18.974843+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p24-colorpass.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.343967+00:00",
+      "exists": true,
+      "sha256": "99347ae8af777caf71a4338fa684687b67346da39492efee5a4dfb6f338f35c0",
+      "bytes": 4162,
+      "modifiedAtUtc": "2026-10-10T14:09:19.506770+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p34-colorpass.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.347044+00:00",
+      "exists": true,
+      "sha256": "0eb99b67ac583dfee2028ddbd27bd46a2701c9be6a8b7717326968c4da7ffcba",
+      "bytes": 2233177,
+      "modifiedAtUtc": "2026-10-10T14:09:24.160255+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p34-colorpass.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.356455+00:00",
+      "exists": true,
+      "sha256": "687fcef34d4cbb09398703d5b9d085c995ab9bce784ebb1a2a25fe0d1c0723a0",
+      "bytes": 4157,
+      "modifiedAtUtc": "2026-10-10T14:09:24.574231+00:00"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p44-colorpass.png",
+      "sampledAtUtc": "2026-10-13T06:39:24.358147+00:00",
+      "exists": true,
+      "sha256": "264635eed08e8903a957dbc39b742c6e9944e57484aa1b3c29f34964528a72f0",
+      "bytes": 2094567,
+      "modifiedAtUtc": "2026-10-10T14:09:28.996129+00:00",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p44-colorpass.png.derivation.json",
+      "sampledAtUtc": "2026-10-13T06:39:24.367698+00:00",
+      "exists": true,
+      "sha256": "3c6c5ef20b5e9c2b8c104835824af74a9255f695c4e8cfde89efa1209002e56c",
+      "bytes": 4165,
+      "modifiedAtUtc": "2026-10-10T14:09:29.550603+00:00"
+    }
+  ],
+  "scopeLimits": [
+    "Only two current west-neighbor selections, their eight east-edge images, directly relevant coordinates/derivation metadata and current candidate/QA identity were checked.",
+    "No historical image enumeration, no target placeholders, no image assembly/crops, no AI edits, no shared progress/owner changes, no Git/.git operation.",
+    "Visual notes identify continuation objects; they do not certify future seam quality, full-map completion or actual image model."
+  ],
+  "writeTargetOnly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\preparation\\west-boundary-snapshot-vN.json"
+}

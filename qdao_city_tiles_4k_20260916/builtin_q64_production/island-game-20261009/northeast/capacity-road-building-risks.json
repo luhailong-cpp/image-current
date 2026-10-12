@@ -1,0 +1,119 @@
+{
+  "zone": "northeast",
+  "createdAtUtc": "2026-10-10T05:30:35.693391+00:00",
+  "scope": "existing native artwork and sole approved layout; no gameplay/navigation validation",
+  "artCanvasPixels": [
+    57344,
+    57344
+  ],
+  "worldSize": null,
+  "characterFootprint": null,
+  "walkableAreaMeasured": false,
+  "capacity5000Validated": false,
+  "gateActive": true,
+  "risks": [
+    {
+      "id": "terrace-height-discontinuity",
+      "severity": "confirmed_art_geometry_defect",
+      "tileId": "r03_c13",
+      "tilePixelBox": [
+        1850,
+        3450,
+        2550,
+        4096
+      ],
+      "evidence": "qa/r03_c13_p04_02_v3__r03_c13_p04_03_v2.join-100pct.png",
+      "observation": "Raised terrace upper/front edge changes height at core join; apparent step/boundary cannot be trusted until full joint redraw.",
+      "nextActionAfterRelease": "Native redraw spanning complete interrupted terrace front and all attaching boundaries; do not keep repeating same one-sided local repair.",
+      "measuredVisualLocation": {
+        "coreBoundaryX": 2048,
+        "approxY": [
+          3570,
+          3890
+        ],
+        "estimatedFrontEdgeMismatchPixels": [
+          150,
+          220
+        ],
+        "measurementKind": "native-resolution visual estimate, not gameplay units"
+      }
+    },
+    {
+      "id": "gourd-footprint",
+      "severity": "capacity_sensitive_unvalidated",
+      "tiles": [
+        "r03_c12",
+        "r03_c13"
+      ],
+      "observation": "Large gourd landmark, pots and raised plinth occupy courtyard-edge artwork. Reconstructed feet touch plinth plausibly; no walkable collision or character scale defined.",
+      "nextAction": "Main layout/scale review must exclude solid props and raised plinth from conservative walking area; preserve approved object scale until reviewed."
+    },
+    {
+      "id": "lantern-fish-overhang",
+      "severity": "capacity_sensitive_unvalidated",
+      "tiles": [
+        "r03_c13",
+        "r03_c14"
+      ],
+      "observation": "Lantern stand base, stone railing and suspended carp overlap ground/water in projection. Projected decorative fish silhouette alone does not establish ground collision footprint.",
+      "nextAction": "Separate ground contacts from elevated decoration using gameplay footprint metadata before counting walkable area."
+    },
+    {
+      "id": "courtyard-openings-main-routes",
+      "severity": "not_yet_native_covered",
+      "observation": "Northeast main circulation and residence entrances are only defined by approved overview outside current native fragments. Existing fragments cannot prove complete routes or 5000 distributed players.",
+      "nextAction": "Gate reviewer should evaluate complete conservative walkable masks, entrance widths, stairs and links at proposed character scale before releasing untouched coordinates."
+    },
+    {
+      "id": "wall-tree-exclusion",
+      "severity": "capacity_sensitive_unvalidated",
+      "tiles": [
+        "r03_c12",
+        "r03_c13"
+      ],
+      "observation": "Existing canopy is behind the courtyard wall. Canopy projection must not be treated as walkable ground or used to infer new free-standing trees.",
+      "nextAction": "Use existing walls/tree bases/shoreline as conservative exclusions; no new coastal/tree-island geometry."
+    },
+    {
+      "id": "material-low-contrast",
+      "severity": "visual_review_only",
+      "observation": "Pale gray stone retained; detailed mottled brush texture and leaf shadows require in-client scale review for readability; no capacity change inferred.",
+      "nextAction": "Review at eventual camera scale without changing global art style."
+    },
+    {
+      "id": "vessel-count-layout-risk",
+      "severity": "layout_count_requires_confirmation",
+      "tiles": [
+        "r03_c12",
+        "r03_c13"
+      ],
+      "observation": "Independent adjacent native-context review sees3round jars+1long-neck vessel. Low-resolution sole layout appears to show3vessels total, but cannot resolve all overlaps reliably.",
+      "evidence": [
+        "qa/r03_c12-r03_c13-adjacent-preview.png",
+        "reference-audit.json"
+      ],
+      "nextAction": "Confirm intended prop count against approved design before repainting; do not invalidate otherwise passed r03_c12 internal geometry solely from blurred overview."
+    }
+  ],
+  "nonClaims": [
+    "49tiles finished",
+    "2x2 native sample closed",
+    "formal delivery approved",
+    "5000player capacity",
+    "world mapping validated"
+  ],
+  "resumePrerequisites": [
+    "delegating root releases capacity gate",
+    "restore or locate approved style reference and batch config through authorized project ownership; verify recorded hashes before new calls",
+    "resolve confirmed native terrace edge defect",
+    "finish2x2 connected sample r03_c12,r03_c13,r04_c12,r04_c13 and all known external contacts"
+  ],
+  "doNotChangeWithoutInstruction": [
+    "57344 art canvas",
+    "14x14 raster grid",
+    "49tile regional scope",
+    "building scale",
+    "character scale",
+    "shared worldSize"
+  ]
+}

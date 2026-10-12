@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "tile": "r07_c12",
+  "status": "complete_native_coverage_internal_QA_pass_external_reconciliation_pending",
+  "formalAccepted": false,
+  "coordinate": {
+    "origin": [
+      45056,
+      24576
+    ],
+    "tileDimensions": [
+      4096,
+      4096
+    ],
+    "nativePatchDimensions": [
+      1254,
+      1254
+    ],
+    "coreDimensions": [
+      1024,
+      1024
+    ],
+    "halo": 115
+  },
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r07_c12.candidate-v1.png",
+    "sha256": "29d64cf0da2b94fab99a2b881299f575d92e19f2db3faf9a7e158a43295f2dd9"
+  },
+  "selection": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/records/r07_c12.selection-v1.json",
+  "generationAudit": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/records/r07_c12.reference-snapshots.json",
+  "actualGenerationCount": 29,
+  "generationBreakdown": {
+    "southernPatchNativeOutputs": 24,
+    "northRepairNativeOutputs": 5,
+    "selectedSouthernCores": 16
+  },
+  "qualityEvidence": {
+    "configTarget": "gpt-image-2.5-sunburst / max",
+    "actualModel": null,
+    "actualQuality": null,
+    "reason": "Builtin image_gen exposes neither selectors nor returned model or quality evidence; target config snapshots preserved per generation."
+  },
+  "visualInspection": {
+    "all29NativeOutputsViewed": true,
+    "selected16CoreCoverage": true,
+    "internalEdges": {
+      "count": 24,
+      "scale": "1:1",
+      "status": "main_geometry_continuous",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r07_c12-v1/manifest.json"
+    },
+    "junctions": {
+      "count": 9,
+      "scale": "1:1",
+      "status": "main_geometry_continuous"
+    },
+    "northBoundary": {
+      "width": 4096,
+      "scale": "1:1",
+      "source": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r06_c12.candidate-v3.png",
+      "status": "continuous_against_current_v3_pending_root_latest_north_repair",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r07_c12-v1/north-full4096.native-1to1.png"
+    },
+    "caveats": [
+      "Subtle grain, shading and printed fish motif variation remains; no local resample/blend/paint used to hide seams.",
+      "Eastern shared boundary near p24/p34 top T-junction has upstream quay/frame level discrepancy; neighbor beam_repair_resumed owns native cross-boundary repair.",
+      "Root is coordinating r06_c12 p42/p43 curb repair and final source selection. North edge must be rechecked after that selection, even though unchanged bottom anchors were requested."
+    ]
+  },
+  "fixedNativeDefects": [
+    "p11 false grey paving and invented post removed with native revisions.",
+    "p12 stone-to-wood slope coordinated with northrepair42; full lantern semantics restored across northern repair and southern continuation.",
+    "p24 mistaken ice patch changed to cream fish-printed canopy cloth.",
+    "p42 hard reference-strip truncation in rope collar and piling repaired natively.",
+    "p44 tray rim step and adjacent p43 corner carpentry coordinated with native revisions."
+  ],
+  "provenance": {
+    "allSourcePromptReceiptHashesVerified": true,
+    "failures": 0,
+    "byteExactHistoricalReferenceSnapshots": 2,
+    "actualRequiredReferencesPerGeneration": 3,
+    "primaryStyleReference": "mail-daoist-style.jpg",
+    "resizedFinalPixels": false,
+    "localPaintedFinalPixels": false,
+    "composition": "Only integer 1024 core crops and opaque pastes; no resize or blend."
+  },
+  "handoff": {
+    "northRepairSourcesLocked": true,
+    "rootOwnsProgressAndFormalSelection": true,
+    "nextAction": "Root/neighbor consolidate pending external repairs, re-render affected native outer-boundary QA, then decide formal acceptance."
+  }
+}

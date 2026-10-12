@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "tile": "r08_c14",
+  "reviewDate": "2026-10-11",
+  "reviewer": "/root/east_tile_resume/qa_r07",
+  "status": "pass-internal-seams-and-intersections-after-m01",
+  "candidate": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\candidates\\r08_c14.candidate.png",
+    "sha256": "de6180ca265a68efd454404fda86939a951475483868d773ed4b11dd64c094a0",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "baselineReport": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r08_c14/qa/independent-review-20261011.json",
+  "baselineCandidateSha256": "522091916baa3c1bea6191dfc9dfe718d5ba3dc0aea278aef11a8ab08e4d36de",
+  "scope": "24 internal seam strips and 9 intersections reviewed on baseline; sole P2 and surrounding mask boundary rechecked in exact native integrated crop. External boundary acceptance excluded.",
+  "repairReview": {
+    "operation": "m01-stone",
+    "resolvedFinding": "P2-01 p31/p32 diagonal stone-mortar discontinuity",
+    "visualResult": "The slanted mortar line now forms one continuous joint across the former x=1024 break, meeting the adjoining slab corner without a height step or dangling end.",
+    "nativeIntegratedCrop": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\m01-stone-integrated-100pct.png",
+      "sha256": "654d08435ccc40890598315a81d49d8e41128b09f5b6cd7c9218153730620034",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewedWith": "view_image(detail=original)",
+      "candidateOrigin": [
+        397,
+        2143
+      ],
+      "candidateCrop": [
+        397,
+        2143,
+        1651,
+        3397
+      ]
+    },
+    "mask": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\masks\\m01-stone.png",
+      "sha256": "55b67224d9bb52a445e5bd26dd3a82c6755c86ddfd2edf1b3a979e33ef4f6314",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewedWith": "view_image(detail=original)",
+      "polygon": [
+        [
+          140,
+          745
+        ],
+        [
+          635,
+          525
+        ],
+        [
+          810,
+          565
+        ],
+        [
+          835,
+          690
+        ],
+        [
+          225,
+          880
+        ],
+        [
+          140,
+          865
+        ]
+      ],
+      "visualBoundaryReview": "All six polygon edges lie within the viewed integrated crop. No new P2 hard edge, shifted stone joint, duplicated mortar line, or sharp pasted contour observed; residual stone-grain variation is P3."
+    },
+    "newP2Findings": [],
+    "recommendation": "Accept internal seam repair; no additional cosmetic regeneration needed."
+  },
+  "readOnlyVerification": {
+    "files": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\candidates\\r08_c14.candidate.png",
+        "sha256": "de6180ca265a68efd454404fda86939a951475483868d773ed4b11dd64c094a0",
+        "pixels": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\replay.json",
+        "sha256": "21ce66f57f22dacad7a9db499ecd5e47dc1460d9699ecae7a5e0d1ca68b07152",
+        "pixels": null
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\m01-stone-integrated-100pct.png",
+        "sha256": "654d08435ccc40890598315a81d49d8e41128b09f5b6cd7c9218153730620034",
+        "pixels": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\masks\\m01-stone.png",
+        "sha256": "55b67224d9bb52a445e5bd26dd3a82c6755c86ddfd2edf1b3a979e33ef4f6314",
+        "pixels": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r08_c14\\qa\\finish-20261011\\source\\m01-stone.png",
+        "sha256": "a549f0299c6f5592e93035e58a4f016679fab924b0cc5213f7a5a9724622d985",
+        "pixels": [
+          1254,
+          1254
+        ]
+      }
+    ],
+    "candidateMatchesRecordedSha": true,
+    "replayPixelExact": true,
+    "integratedCropPixelExact": true,
+    "changedPixelBox": [
+      537,
+      2668,
+      1233,
+      3024
+    ],
+    "maskValues": [
+      0,
+      255
+    ],
+    "fourEdgesPixelIdentical": true
+  },
+  "acceptanceLimits": {
+    "artEditedByReviewer": false,
+    "sharedProgressEditedByReviewer": false,
+    "externalEdgesReviewed": false,
+    "formalWholeTileAcceptance": false
+  },
+  "summary": "Baseline has 23 passing seam strips plus one repaired seam; 8 passing intersection crops plus the intersection containing that same repaired issue. Current candidate passes this internal-only QA scope."
+}

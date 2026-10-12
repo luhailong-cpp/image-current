@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>玄潮龟 · 六组动作验收预览</title>
+<style>
+:root{color-scheme:dark;font-family:"Microsoft YaHei",system-ui,sans-serif;background:#111722;color:#eaf0fa}*{box-sizing:border-box}body{margin:0;padding:24px;max-width:1500px;margin-inline:auto}h1{font-size:26px;margin:0 0 12px}p{line-height:1.7;color:#c1ccdc}.note{padding:12px 16px;border:1px solid #43506c;border-radius:12px;background:#1d273a}.toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:16px 0}button,select,a{font:inherit}button,select{background:#25334b;color:inherit;border:1px solid #53637d;border-radius:8px;padding:8px 12px;cursor:pointer}button:hover{background:#364967}a{color:#abd8ff}main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}article{background:#1a2434;border:1px solid #35445b;border-radius:15px;overflow:hidden;padding:16px}h2{font-size:19px;margin:0 0 12px}.stage{position:relative;width:100%;aspect-ratio:1;background-color:#ced6df;background-image:linear-gradient(45deg,#aebdca 25%,transparent 25%),linear-gradient(-45deg,#aebdca 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#aebdca 75%),linear-gradient(-45deg,transparent 75%,#aebdca 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0;border-radius:8px;overflow:hidden}.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.missing{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#721d24;font-size:20px;background:#eedcdfcc;padding:16px}.missing[hidden]{display:none}.anchor{display:none;position:absolute;left:50%;top:91.9921875%;width:14px;height:14px;transform:translate(-50%,-50%);border:1px solid #ff00bd;border-radius:50%}.anchor:after{content:"";position:absolute;left:6px;top:-5px;width:1px;height:22px;background:#ff00bd}.stage.show-anchor .anchor{display:block}input[type=range]{width:100%;accent-color:#9bc2ff}output{display:block;font-variant-numeric:tabular-nums;line-height:1.7;color:#cdd9e9}.controls{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0 9px}.subtle{font-size:13px;color:#a9b8cd}.bg-white .stage{background:#fff}.bg-dark .stage{background:#162030}.single main{grid-template-columns:1fr;max-width:1000px;margin:auto}@media(max-width:750px){body{padding:14px}main{grid-template-columns:1fr}h1{font-size:22px}}footer{margin:25px 0;color:#a9b8cd}
+</style>
+<h1>玄潮龟 · 受击 / 普攻 / 施法</h1>
+<p class="note">验收辅助预览。E 为斜前朝右下；W 为独立斜后朝左上。正式帧应为 1024×1024 RGBA，共 68 张。此页面只读取现有 PNG，不补帧、不插值。缺帧会明确显示；技术检查与美术、动态验收分别记录，客户端未接入。</p>
+<div class="toolbar"><button id="play-all">全部播放</button><button id="pause-all">全部暂停</button><button id="restart-all">全部回到首帧</button><label>全局速度 <select id="speed-all"><option value="1">正常 1×</option><option value="0.25">慢放 0.25×</option></select></label><label>背景 <select id="background"><option value="checker">透明棋盘</option><option value="white">白色</option><option value="dark">深色</option></select></label><label>布局 <select id="layout"><option value="double">两列</option><option value="single">单列大图</option></select></label><label><input id="anchor-toggle" type="checkbox">显示约定脚点</label><button id="reload">重新载入图片</button></div>
+<main id="groups"></main>
+<footer>按组使用暂停、前后帧和滑条核对四足、三爪、短尾、桂枝朱结与背甲归属。图片按自身 1024 舞台显示，预览不会自动贴底或按轮廓挪位。页面显示缩放不更改源图。</footer>
+<script>
+"use strict";
+const groups=[{"action": "hit", "direction": "E", "count": 6, "duration": 40}, {"action": "hit", "direction": "W", "count": 6, "duration": 40}, {"action": "attack", "direction": "E", "count": 12, "duration": 30}, {"action": "attack", "direction": "W", "count": 12, "duration": 30}, {"action": "cast", "direction": "E", "count": 16, "duration": 45}, {"action": "cast", "direction": "W", "count": 16, "duration": 45}];
+const actionNames={hit:"受击",attack:"普攻",cast:"施法"};
+const players=[];
+for(const group of groups){
+  const article=document.createElement("article");
+  const {action,direction,count,duration}=group;
+  article.innerHTML=`<h2>${actionNames[action]} ${direction} <span class="subtle">${count} 帧 × ${duration} ms · 共 ${count*duration} ms</span></h2><div class="stage"><img alt="${actionNames[action]} ${direction} 当前帧"><div class="missing" hidden></div><span class="anchor" title="约定脚点 [512,942]"></span></div><div class="controls"><button class="play">播放</button><button class="previous">上一帧</button><button class="next">下一帧</button><button class="first">首帧</button><select class="speed"><option value="1">正常 1×</option><option value="0.25">慢放 0.25×</option></select><label><input class="loop" type="checkbox" checked>循环</label></div><input class="scrub" type="range" min="1" max="${count}" value="1" step="1" aria-label="${action} ${direction} 逐帧"><output></output><p class="subtle"><a href="contact-sheets/${action}-${direction}.jpg" target="_blank">查看本组联系表（验收辅助）</a></p>`;
+  document.querySelector("#groups").append(article);
+  const image=article.querySelector("img"),missing=article.querySelector(".missing"),slider=article.querySelector(".scrub"),out=article.querySelector("output"),play=article.querySelector(".play"),speed=article.querySelector(".speed"),loop=article.querySelector(".loop");
+  const p={article,action,direction,count,duration,frame:0,playing:false,speed:1,last:0,elapsed:0,loaded:new Map(),revision:0};
+  p.path=(index)=>`../runtime/${action}/${direction}/${String(index+1).padStart(2,"0")}.png`;
+  p.show=()=>{
+    const path=p.path(p.frame),full=path+`?v=${p.revision}`;
+    if(image.getAttribute("src")!==full)image.src=full;
+    slider.value=p.frame+1;
+    const event=action==="attack"&&p.frame===6?" · impact":action==="cast"&&p.frame===9?" · release":"";
+    out.textContent=`${String(p.frame+1).padStart(2,"0")} / ${count} · ${p.speed}× · 每帧 ${(duration/p.speed).toFixed(0)} ms${event} — ${path}`;
+    play.textContent=p.playing?"暂停":"播放";
+  };
+  image.onload=()=>{missing.hidden=true;};
+  image.onerror=()=>{missing.textContent=`当前帧缺失或无法读取\n${p.path(p.frame)}`;missing.hidden=false;};
+  p.pause=()=>{p.playing=false;p.elapsed=0;p.last=0;p.show();};
+  p.start=()=>{p.playing=true;p.elapsed=0;p.last=0;p.show();};
+  p.seek=(n)=>{p.pause();p.frame=((n%count)+count)%count;p.show();};
+  p.setSpeed=(value)=>{p.speed=Number(value);speed.value=String(value);p.elapsed=0;p.last=0;p.show();};
+  p.preload=()=>{for(let n=0;n<count;n++){const im=new Image();im.src=p.path(n)+`?v=${p.revision}`;p.loaded.set(n,im);}};
+  play.onclick=()=>p.playing?p.pause():p.start();
+  article.querySelector(".previous").onclick=()=>p.seek(p.frame-1);
+  article.querySelector(".next").onclick=()=>p.seek(p.frame+1);
+  article.querySelector(".first").onclick=()=>p.seek(0);
+  slider.oninput=()=>p.seek(Number(slider.value)-1);
+  speed.onchange=()=>p.setSpeed(speed.value);
+  p.tick=(now)=>{if(!p.playing)return;if(!p.last){p.last=now;return;}p.elapsed+=now-p.last;p.last=now;const ms=duration/p.speed;if(p.elapsed>=ms){const steps=Math.floor(p.elapsed/ms);p.elapsed%=ms;if(!loop.checked&&p.frame+steps>=count){p.frame=count-1;p.pause();}else{p.frame=(p.frame+steps)%count;p.show();}}};
+  p.show();p.preload();players.push(p);
+}
+function tick(now){players.forEach(p=>p.tick(now));requestAnimationFrame(tick);}requestAnimationFrame(tick);
+document.querySelector("#play-all").onclick=()=>players.forEach(p=>p.start());
+document.querySelector("#pause-all").onclick=()=>players.forEach(p=>p.pause());
+document.querySelector("#restart-all").onclick=()=>players.forEach(p=>p.seek(0));
+document.querySelector("#speed-all").onchange=e=>players.forEach(p=>p.setSpeed(e.target.value));
+document.querySelector("#background").onchange=e=>{document.body.classList.remove("bg-white","bg-dark");if(e.target.value!=="checker")document.body.classList.add(`bg-${e.target.value}`);};
+document.querySelector("#layout").onchange=e=>document.body.classList.toggle("single",e.target.value==="single");
+document.querySelector("#anchor-toggle").onchange=e=>document.querySelectorAll(".stage").forEach(s=>s.classList.toggle("show-anchor",e.target.checked));
+document.querySelector("#reload").onclick=()=>players.forEach(p=>{p.revision=Date.now();p.preload();p.show();});
+document.addEventListener("visibilitychange",()=>players.forEach(p=>{p.last=0;p.elapsed=0;}));
+</script>
+</html>

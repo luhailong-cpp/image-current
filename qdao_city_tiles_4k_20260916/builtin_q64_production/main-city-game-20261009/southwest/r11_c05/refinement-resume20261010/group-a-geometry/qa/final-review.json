@@ -1,0 +1,65 @@
+{
+  "status": "PASS-local-repair-with-disclosed-G07-adjustment",
+  "recommendedForParentMerge": true,
+  "formalAccepted": false,
+  "wholeTilePassed": false,
+  "reviewedAtUtc": "2026-10-10T17:24:10.405998+00:00",
+  "findings": [
+    {
+      "ids": [
+        "G01",
+        "G02"
+      ],
+      "result": "PASS",
+      "description": "Removed both unsupported NW/SW spurs, including their beveled free endpoints. Retained original NE-SE corner without visible disconnection. Retained SE centerline sample displacement 0 to 2 pixels within the tiny junction neighborhood."
+    },
+    {
+      "ids": [
+        "G07"
+      ],
+      "result": "PASS-local-continuity",
+      "description": "Expanded narrow clipping corridor eliminates the notch, double bevel and floating residual. Groove and short vertical stem connect continuously. This composition intentionally accepts a six-pixel local T endpoint adjustment while preserving far anchors; it does not satisfy an absolute original-T-position lock.",
+      "geometryAdjustment": {
+        "TjunctionOriginalDarkestAtX420": 439,
+        "generatedDarkestAtX420": 445,
+        "deltaPixels": 6,
+        "intent": "expanded corridor is a different proposed composition from rejected tiny ROI; retain explicit displacement evidence for parent review"
+      },
+      "previousTinyROI": "Rejected; the present expanded corridor is a different composition using the same raw native source."
+    }
+  ],
+  "checks": {
+    "outsideMasksExact": true,
+    "allOuterImageEdgesExact": true,
+    "BmaskPixelIntersection": 0,
+    "Bassembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\B-repair\\output\\assembly.json",
+    "BassemblySha256": "d72f5ec59341a773ce3b79e237840dba5ee0ad39de23d0cf7c13ecd53b88c0f0",
+    "resampling": false,
+    "colorAdjustment": false,
+    "geometryWarping": false,
+    "maximumFeatherRadiusPixels": 2
+  },
+  "outsideMasksExact": true,
+  "noBmaskOverlap": true,
+  "CregionOutsideACrop": true,
+  "generationCounts": {
+    "successfulBuiltinResponses": 5,
+    "toolErrors": 0,
+    "sourceNativeContributions": 2,
+    "fullyRejectedMainAttempts": [
+      "group-a-v1",
+      "group-a-v2",
+      "group-a-G01-v3"
+    ],
+    "actualModel": null,
+    "actualQuality": null
+  },
+  "visualEvidence": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\output\\A.candidate.native-crop.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\qa\\G07-original-candidate.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\qa\\G01-G02-original-candidate.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\qa\\A-plus-B-junction-compatibility.png"
+  ],
+  "sourceAndSharedFilesModified": false,
+  "requiresWholeTileRecheckAfterGroupIntegration": true
+}

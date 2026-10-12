@@ -1,0 +1,976 @@
+{
+  "createdAt": "2026-10-05T05:35:30.390720+00:00",
+  "character": "01_ice_sword_girl",
+  "scope": "Independent visual E/W run draft review; no candidate/selection modification",
+  "candidateOrSelectionModified": false,
+  "method": [
+    "Actually inspected both current full 16-frame 256 contact sheets.",
+    "Actually inspected four native1254 drafts and old targets plus immediate neighboring1024 images.",
+    "Actually inspected E11/E12/E13 and W12 at1024 for doubtful transitions; all other arms and legs additionally inspected in larger review crops.",
+    "Current32 and native4 file SHA/dimensions/alpha are freshly read.",
+    "Subsequently actually inspected W07-v3 full native1254 against earlierW06/W08 andv2; freshly computed SHA."
+  ],
+  "timingExpectation": {
+    "framesPerDirection": 16,
+    "durationMs": 75,
+    "cycleMs": 1200
+  },
+  "supportObservation": {
+    "E": "Expected right support01–08 then left09–16; visible shoe long axes follow side travel plane.",
+    "W": "Expected left support01–08 then right09–16; visible shoe long axes follow side travel plane."
+  },
+  "drafts": [
+    {
+      "file": "drafts/full-axis-20261005/run/E/03-v1.png",
+      "sha256": "86f5066dbcdcc759525648f8030c2ccb222f9be6545094741fa8b37a0a7b21a4",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        2,
+        40,
+        1158,
+        1230
+      ],
+      "direction": "E",
+      "frame": 3,
+      "version": 1,
+      "passed": true,
+      "status": "pass_local_revision",
+      "observations": "近侧解剖右肩→右袖→弯肘→剑腕完整；远侧左手持符。剑刃改为近直立，改善02后摆→04前摆之间角度。腿脚、头部及支撑靴注册与旧03一致，未见外扭或支撑退化。",
+      "comparisonInputs": [
+        "candidate/run/E/02.png",
+        "candidate/run/E/03.png",
+        "candidate/run/E/04.png"
+      ],
+      "legRegressionFound": false,
+      "canvasRegistration": "Normalized whole-canvas comparison; no crop/recenter/flip apparent. Small redraw variation exists; not a pixel-preservation claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/W/03-v1.png",
+      "sha256": "36e1c830889e80679421dcd64b5e3e4a0cd2158fea906fc9f6b999b41e7a9e49",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        49,
+        53,
+        1254,
+        1214
+      ],
+      "direction": "W",
+      "frame": 3,
+      "version": 1,
+      "passed": true,
+      "status": "pass_local_revision",
+      "observations": "近侧解剖左肩→左袖→胸前符手完整；远侧右手持剑。近直立剑刃改善02右上→04左上的角度过渡。剑腕02→03前移仍较大，但这是旧帧已有位移；本次没有新增手臂身份或腿脚错误。",
+      "comparisonInputs": [
+        "candidate/run/W/02.png",
+        "candidate/run/W/03.png",
+        "candidate/run/W/04.png"
+      ],
+      "legRegressionFound": false,
+      "canvasRegistration": "Normalized whole-canvas comparison; no crop/recenter/flip apparent. Small redraw variation exists; not a pixel-preservation claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/W/07-v1.png",
+      "sha256": "2a842880a117e5d4d3747431cb087ac88188a3746416beb6f558957158718619",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        53,
+        1254,
+        1254
+      ],
+      "direction": "W",
+      "frame": 7,
+      "version": 1,
+      "passed": false,
+      "status": "reject_anatomical_hand_ownership",
+      "observations": "近侧解剖左肩章直接接蓝上臂及胸腰白袖口，最终连接到剑手；前方符手改接远侧袖。相较W06、旧W07、W08出现右剑左符身份交换。不得提升。",
+      "comparisonInputs": [
+        "candidate/run/W/06.png",
+        "candidate/run/W/07.png",
+        "candidate/run/W/08.png"
+      ],
+      "legRegressionFound": false,
+      "canvasRegistration": "Normalized whole-canvas comparison; no crop/recenter/flip apparent. Small redraw variation exists; not a pixel-preservation claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/W/07-v2.png",
+      "sha256": "7d2184aeb736193219198fbed22348c677e760c4f80856b7b6f3e090227899fe",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        21,
+        1254,
+        1220
+      ],
+      "direction": "W",
+      "frame": 7,
+      "version": 2,
+      "passed": false,
+      "status": "identity_fixed_midpoint_still_insufficient",
+      "observations": "近侧左肩→前方左符链恢复，远侧右剑臂分离正确；腿脚和注册未退化。剑腕归一1024约x580，旧W07约605，仅收回约25px；相对腰部仍在后伸端，W06约x340到W08约x655之间的主要位移仍集中在06→07。剑刃中间角度已改善，但不足以宣称剑腕中间摆位完成。",
+      "comparisonInputs": [
+        "candidate/run/W/06.png",
+        "candidate/run/W/07.png",
+        "candidate/run/W/08.png"
+      ],
+      "legRegressionFound": false,
+      "canvasRegistration": "Normalized whole-canvas comparison; no crop/recenter/flip apparent. Small redraw variation exists; not a pixel-preservation claim."
+    },
+    {
+      "file": "drafts/full-axis-20261005/run/W/07-v3.png",
+      "sha256": "ac37dc22f41b0f587478b82fd2bf7ced92f9e36a6a230ab88ac9dbb63d886eba",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        21,
+        1254,
+        1254
+      ],
+      "direction": "W",
+      "frame": 7,
+      "version": 3,
+      "passed": true,
+      "status": "pass_identity_and_intermediate_wrist_revision",
+      "observations": "实际原生图已复核：近侧解剖左肩章→蓝袖→前方蓝符手连续保留；远侧右袖从腰后伸出接剑手，身份正确。右剑腕已收到native约535,760的腰侧中间位置，较v2明显改善W06→W08的握持位移分配。剑刃斜向右上；未见穿袖或腿脚退化。",
+      "comparisonInputs": [
+        "candidate/run/W/06.png",
+        "candidate/run/W/07.png",
+        "candidate/run/W/08.png",
+        "drafts/full-axis-20261005/run/W/07-v2.png"
+      ],
+      "legRegressionFound": false,
+      "canvasRegistration": "Whole-canvas visual registration maintained; slight redraw variation, not pixel identity."
+    }
+  ],
+  "currentFrameCoverage": [
+    {
+      "file": "candidate/run/E/01.png",
+      "sha256": "a2ad44d5339fed043e5f81f36088e223ec67e3144270f6907b24668593c68b96",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        63,
+        1013,
+        991
+      ],
+      "direction": "E",
+      "frame": 1,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/02.png",
+      "sha256": "314c0acd7939c6e20d176c4dcca70aa41a22d9309bee7347831a975b8668b330",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        65,
+        972,
+        1004
+      ],
+      "direction": "E",
+      "frame": 2,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/03.png",
+      "sha256": "ff90d51817bc9bd9a21f3d39b4b14fa016f073f5f8a048422e7c088e86730642",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        15,
+        1009,
+        1024
+      ],
+      "direction": "E",
+      "frame": 3,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": false,
+      "note": "Current target is being revised; refer to draft verdict."
+    },
+    {
+      "file": "candidate/run/E/04.png",
+      "sha256": "ef407ce26e032b966a59cf396559aabc693002a81289e5e7cc678e7b8efda0b5",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        33,
+        32,
+        1015,
+        999
+      ],
+      "direction": "E",
+      "frame": 4,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/05.png",
+      "sha256": "a0fd955cac40c0c3dc5ce8f8b34525ac4b107aa6c270a14a381582e42d9a44d6",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        61,
+        66,
+        1024,
+        985
+      ],
+      "direction": "E",
+      "frame": 5,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/06.png",
+      "sha256": "ee60197182ed4f9ad14e8b3cb414a863af77a8230111e4163ce9f78cd6160c10",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        30,
+        17,
+        1024,
+        991
+      ],
+      "direction": "E",
+      "frame": 6,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/07.png",
+      "sha256": "322d33d1f9c3ec55de004c93282596f036434d2815aec1baa44480cf00ff241f",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        60,
+        43,
+        1024,
+        991
+      ],
+      "direction": "E",
+      "frame": 7,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/08.png",
+      "sha256": "462dec38f2acd9098d56d96e8e5f2f31b68cf64d134a0057a81e1c9a6c885f64",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        56,
+        17,
+        1024,
+        990
+      ],
+      "direction": "E",
+      "frame": 8,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/09.png",
+      "sha256": "8dda03ca488ef9ccc37539c3083ba2da28d6935936de5e9708b0e2049a335fef",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        16,
+        1023,
+        1024
+      ],
+      "direction": "E",
+      "frame": 9,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/10.png",
+      "sha256": "b434a4abca24b6843aabeb06e9c03d1581d883dd3325237ec6b6ebf27d2f9476",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1023,
+        1011
+      ],
+      "direction": "E",
+      "frame": 10,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/11.png",
+      "sha256": "1268c2b42760e5b2936632839aca6fdde26c9645e1fcb841b87dcae7461f1b23",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        64,
+        66,
+        988,
+        991
+      ],
+      "direction": "E",
+      "frame": 11,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/12.png",
+      "sha256": "1a0315d18949466c87d6c0bed57090a5d5211b16ec8b96d05694316657def4d0",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1002,
+        991
+      ],
+      "direction": "E",
+      "frame": 12,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/13.png",
+      "sha256": "206649ae417e8da2f19ae7b018be7f0fc538aa37833c6eb78589e1aa36e2db48",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        41,
+        1000,
+        1024
+      ],
+      "direction": "E",
+      "frame": 13,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/14.png",
+      "sha256": "a7443534f17f57e3cebf44cb0a926c5dc8cdb415f35bd1bf266ed0891152a9c9",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        23,
+        63,
+        1000,
+        996
+      ],
+      "direction": "E",
+      "frame": 14,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/15.png",
+      "sha256": "bced524ce36f72b2b723d3720faabb267be013eb413cccb21dafb1e2810182d1",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        33,
+        1000,
+        1024
+      ],
+      "direction": "E",
+      "frame": 15,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/E/16.png",
+      "sha256": "a2c158a7eb2b4c513db0afe62fc4d2f4cdff912811ef36a5989952f0302b9486",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        32,
+        1014,
+        983
+      ],
+      "direction": "E",
+      "frame": 16,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/01.png",
+      "sha256": "f32ff5ba8aa1078f2760246e1712c4cdc161bea28f3e34656ab0da7792fa8427",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        16,
+        1003,
+        1024
+      ],
+      "direction": "W",
+      "frame": 1,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/02.png",
+      "sha256": "383c8a6702f260f1e2b5bd0e2aef1753e657ccc61d57edd8d08f995d57493f3a",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        33,
+        1024,
+        1011
+      ],
+      "direction": "W",
+      "frame": 2,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/03.png",
+      "sha256": "25f962ab65c5f765bd6c6dd1b2bba444e31818664e3b5ffb1ff880b5bc74da78",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 3,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": false,
+      "note": "Current target is being revised; refer to draft verdict."
+    },
+    {
+      "file": "candidate/run/W/04.png",
+      "sha256": "80c9b10acb592aa1098c6b413ff3ffccebbd754a118f19a281aeef49983be58b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        14,
+        62,
+        1012,
+        990
+      ],
+      "direction": "W",
+      "frame": 4,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/05.png",
+      "sha256": "f485e8ebfe7f294fd003541c28468e1c41a08703af563790a99492b7710aab1a",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        46,
+        1024,
+        1008
+      ],
+      "direction": "W",
+      "frame": 5,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/06.png",
+      "sha256": "b8b93ff85cc1f8b35c018aa25e69f9755fba0017434a1b9027176f920402504c",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        41,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 6,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/07.png",
+      "sha256": "f8e282a43011cb733d35fdba09f85cd3b1e7cfd23727e7bdcd89d991dc7d5726",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        43,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 7,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": false,
+      "note": "Current target is being revised; refer to draft verdict."
+    },
+    {
+      "file": "candidate/run/W/08.png",
+      "sha256": "a198be33d64cb68c685d81eb309dc9014492446ac8fb3c3ade7cf632a30ed26b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        51,
+        37,
+        1017,
+        1009
+      ],
+      "direction": "W",
+      "frame": 8,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/09.png",
+      "sha256": "a2e7e29f7479803651a55c46f5681b6a3c2b86c37f56f75ef58d81d2a162bc04",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 9,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/10.png",
+      "sha256": "ab161d1bd3941a3cd1ae9c1b97b921dd306dd3e56c51e909617d494af74aa40b",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        40,
+        20,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 10,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/11.png",
+      "sha256": "c5ed2a037a551b51b61940660557895b26309af88f0d5bffdef83a20a180c9bf",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        50,
+        43,
+        1017,
+        998
+      ],
+      "direction": "W",
+      "frame": 11,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/12.png",
+      "sha256": "dfbc746a178614de6bbe0f6403185ebfc10e3325a4bcfdb33b5a681090a7add1",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1014,
+        1024
+      ],
+      "direction": "W",
+      "frame": 12,
+      "visualInspection": "whole contact sheet plus individual full 1024 image",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/13.png",
+      "sha256": "2642e834597c9a02780bb88b894041502611c5c23364d0125995e8ddeed94b9e",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        32,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 13,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/14.png",
+      "sha256": "183e8abe8529d94898dc9dca40648700f423a837f295f4a8132d0a9c72c31853",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        33,
+        1024,
+        1004
+      ],
+      "direction": "W",
+      "frame": 14,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/15.png",
+      "sha256": "b7b6e7a5c750350871e9b63267f9d950a2496221381bf57009db5c9ff2ae5d89",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        0,
+        42,
+        1012,
+        1004
+      ],
+      "direction": "W",
+      "frame": 15,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    },
+    {
+      "file": "candidate/run/W/16.png",
+      "sha256": "4b394ce3f7a6e370254f06f75c7fef107034415f042473b86f167eb4af8206dd",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "alphaBBox": [
+        23,
+        17,
+        1024,
+        1024
+      ],
+      "direction": "W",
+      "frame": 16,
+      "visualInspection": "whole contact sheet plus enlarged shoulder-to-boot review crop",
+      "canRetainStatic": true,
+      "note": "Shoulder/sleeve/hand ownership and knee/ankle/boot travel plane show no newly identified mandatory repair in static review."
+    }
+  ],
+  "retainedCurrentFrameCount": 29,
+  "limitations": [
+    "Static image review does not establish final 1x temporal playback smoothness or a world-space foot lock.",
+    "The blade-angle revision in W03 does not remove the pre-existing large02→03 wrist translation; no claim that every arm velocity is uniform.",
+    "Normal perspective, airborne sole visibility, bent-knee recovery, and transient toe clearance were not treated as outward foot twist.",
+    "Native-generation provenance pixel checks are a separate root audit; this report records actual draft file hashes but does not substitute for that audit."
+  ],
+  "reviewCrops": [
+    "review/full-axis-EW-remaining-E-1-20261005.jpg",
+    "review/full-axis-EW-remaining-E-2-20261005.jpg",
+    "review/full-axis-EW-remaining-E-3-20261005.jpg",
+    "review/full-axis-EW-remaining-W-1-20261005.jpg",
+    "review/full-axis-EW-remaining-W-2-20261005.jpg",
+    "review/full-axis-EW-remaining-W-3-20261005.jpg"
+  ],
+  "updatedAt": "2026-10-05T06:25:04.044987+00:00",
+  "acceptedProposalFiles": [
+    "drafts/full-axis-20261005/run/E/03-v1.png",
+    "drafts/full-axis-20261005/run/W/03-v1.png",
+    "drafts/full-axis-20261005/run/W/07-v3.png"
+  ]
+}

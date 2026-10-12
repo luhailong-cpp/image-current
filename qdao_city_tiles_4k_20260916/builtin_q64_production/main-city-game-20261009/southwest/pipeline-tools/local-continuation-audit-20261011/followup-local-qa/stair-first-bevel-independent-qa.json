@@ -1,0 +1,84 @@
+{
+  "createdAtUtc": "2026-10-11T10:23:44.011471+00:00",
+  "reviewer": "resume_crossedge_audit",
+  "status": "first_bevel_local_visual_pass_pending_parent_merge",
+  "proposal": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\stair-short-bevels-local\\proposal.json",
+    "sha256": "2884869a6178a30328a2a2f28cc4bf4dde3e442cc94b8909a34b3329c35628b4"
+  },
+  "worldBox": [
+    20173,
+    40467,
+    20833,
+    40547
+  ],
+  "affectedWorldBox": [
+    20318,
+    40497,
+    20713,
+    40522
+  ],
+  "hashes": {
+    "input": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\stair-short-bevels-local\\input.png",
+      "sha256": "4f4967cff15ec05cca55e333273dc40453ecc1e7a1c88f2ea98946ecf0d9df5d",
+      "matches": true
+    },
+    "premixed": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\stair-short-bevels-local\\premixed.png",
+      "sha256": "91540ac4d0dc2653dbc46d3b690f57ad3a56b1409b87f4d2ff733f512c659d01",
+      "matches": true
+    },
+    "copyMask": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\stair-short-bevels-local\\copy-mask.png",
+      "sha256": "395505467da9494cba04187eb08ecd7d38be6a24bed10c04be45a8877ca2ae85",
+      "matches": true
+    },
+    "alpha": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\stair-short-bevels-local\\alpha.png",
+      "sha256": "dd085882b6cde34269233034616713650f5b1363ffb55d876e42d8f90ad01d0c",
+      "matches": true
+    }
+  },
+  "source": {
+    "generation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\generation.json",
+    "generationSha256": "0b51006b16bc1ef8c3beb2f247740a6684a555ee484a6e1c3a0a14453d928ed3",
+    "native": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-stair-restored-20261011\\stair-upper-v01\\native.png",
+    "nativeSha256": "e2fddc2b7d72b517ca09d0948f5205fe407c51405534f67be3c2340cc28c309f",
+    "nativeCrop": [
+      320,
+      1147,
+      980,
+      1227
+    ],
+    "exactTranslationPixels": [
+      0,
+      0
+    ],
+    "reason": "The upper native aligns locally better than lower native; no 3-4px uniform translation is justified."
+  },
+  "mechanicalChecks": {
+    "dependencyHashMatches": true,
+    "expectedParentPremixedHashMatches": true,
+    "sourceInputEqualsParentCrop": true,
+    "nativeHashMatches": true,
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "oneToOneNativeAlphaReplayExact": true,
+    "singleCopyMaskReplayExact": true,
+    "maskEqualsAlphaNonzero": true,
+    "outsideMaskChangedPixels": 0,
+    "changedPixels": 8936
+  },
+  "visualFinding": "Before/after actual-size660x80 crops show that the abrupt short vertical value step around x20480/y40507 is removed. The bright bevel reads continuously without an obvious rectangle or gross new bend. This is an acceptable local improvement; uniform translation is unnecessary.",
+  "mayCloseFirstBevelLocalIssueAfterMerge": true,
+  "secondBevelWorldY": 40734,
+  "secondBevelStatus": "unchanged_pending",
+  "northVerticalFullEdgeStatus": "pending_material_and_second_bevel",
+  "mergeOrder": "Apply after stair-combined, validating this input under copy-mask; copy premixed once, no second alpha.",
+  "formalAccepted": false,
+  "networkRequests": 0,
+  "newImageGenerationCalls": 0
+}

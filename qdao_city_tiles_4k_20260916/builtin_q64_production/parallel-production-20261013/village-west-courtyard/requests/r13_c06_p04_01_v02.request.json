@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "patch": "r13_c06_p04_01",
+  "version": "v02",
+  "tool": "image_gen.imagegen",
+  "preparedAtUtc": "2026-10-13T16:06:45.142789+00:00",
+  "submittedArguments": {
+    "prompt": "Use case: precise-object-edit. Make a targeted correction to image 1, preserving native 1254 x 1254 size. Correct ONLY the oversized cropped rock surface in the lower-right to be ONE continuous broad rounded boulder, matching image 2 exact silhouette and composition. It must NOT be a stack of four rocks or four repeated rounded lobes. Remove the repeated horizontal shelves and separate humps inside that right-side rock; replace them with a single softly domed natural grey stone surface, warm cream-grey upper/right lit planes and cool slate-grey left/lower shading, a few restrained gentle mineral planes. Preserve the current outer diagonal silhouette exactly from right border around y450 down-left to x350 at the bottom edge, and preserve its large scale outside the right/bottom frame. The left-bottom smaller cropped rock, water channel, foam and entire ocean must remain in their current positions and colors. Image 2 is original coordinate layout, image 3 the exact native north overlap, image 4 overall context only. Maintain the same refined hand-painted Daoist Q map style, sunny elevated game camera, matte natural stone, crisp detail. No added rocks, buildings, vegetation, objects, text, UI or borders. Return only the corrected single 1254 square terrain crop.",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p04_01_v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_01.layout-only.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_01.north-overlap-v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\batch-layout-only.png"
+    ],
+    "transparent_background": false
+  },
+  "globalCoreBox": [
+    20480,
+    52224,
+    21504,
+    53248
+  ],
+  "globalNativeBox": [
+    20365,
+    52109,
+    21619,
+    53363
+  ],
+  "requestedNativeDimensions": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "actualModelEvidence": "not returned",
+  "allocation": "allocated_root_reserved",
+  "ownerAcknowledgementClaimed": false,
+  "references": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p04_01_v01.png",
+      "sha256": "46b309edba7aecbff096b4fccc3a1447a0a2d869c53c562384b445c09185afbd",
+      "role": "edit target, preserve ocean and outer rock silhouettes"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_01.layout-only.png",
+      "sha256": "c62ed306779f60eba503a68b95f105d7f39bdf968423f93b8c7a18be4a2e67a7",
+      "role": "exact original single-rock contour guide"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_01.north-overlap-v01.png",
+      "sha256": "1ce7c1e0ab54e71339f330bae8558f076e0f4b823c8ac09b219112be16587fe0",
+      "role": "native northern top230 overlap"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\batch-layout-only.png",
+      "sha256": "4a0abcecd9e6181b2e6c1ba9ec19a58cf7b8b37a4a7fc253f68b37db2947fd9b",
+      "role": "approved rock cluster context only"
+    }
+  ],
+  "authorities": [
+    {
+      "path": "D:\\work\\image\\AGENTS.md",
+      "sha256": "57f1ad4f81fdb2256b843923d862308be228130917b99cfced375db256aff01a"
+    },
+    {
+      "path": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+      "sha256": "a7cab49b89974586a1a0375baeadc5d4a7aa12dce6e782bcc8f9b52b777b3c8f"
+    },
+    {
+      "path": "C:\\Users\\luyua\\.codex\\skills\\.system\\imagegen\\SKILL.md",
+      "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+    }
+  ],
+  "edgeSources": [
+    {
+      "direction": "north",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p03_01_v01.png",
+      "sha256": "1581e0951b0ef9bcaac9b89cd0bfbf823f4fb78d9cba78ea873d61776a8edabb",
+      "crop": [
+        0,
+        1024,
+        1254,
+        1254
+      ],
+      "target": [
+        0,
+        0,
+        1254,
+        230
+      ]
+    }
+  ],
+  "repairOf": "r13_c06_p04_01_v01",
+  "repairReason": "single intended rounded rock was split into repeated stacked lobes"
+}

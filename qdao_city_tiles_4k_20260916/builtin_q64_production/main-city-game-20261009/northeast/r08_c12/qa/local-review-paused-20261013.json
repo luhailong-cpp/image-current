@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "tile": "r08_c12",
+  "reviewedAt": "2026-10-13T04:35:47.167Z",
+  "status": "partial_native_art_reviewed_P2_repairs_paused_model_requirement",
+  "assemblyManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northeast/r08_c12/qa/core-baseline/1aff3c1891bdd927eb6e/assembly.json",
+  "selectedNativeCount": 14,
+  "missingSelectedIds": [
+    "p11",
+    "p12"
+  ],
+  "expectedInternalPairCount": 24,
+  "reviewedReadyInternalPairCount": 20,
+  "unreadyInternalPairCount": 4,
+  "expectedIntersections": 9,
+  "reviewedIntersectionWindows": 9,
+  "fullyPaintedIntersectionCount": 7,
+  "partialIntersectionCount": 2,
+  "complete4kCandidateCount": 0,
+  "internalPassed4kCount": 0,
+  "formalAcceptedCount": 0,
+  "reviewMethod": "Viewed available native-pixel join crops and all900x900 corner windows; contact sheets use integer paste without resampling.1024 preview is inspection only. No final core pixels changed.",
+  "sourceValidation": "assemble.py validated all14 selected native PNGs, measured1254x1254; no invalid sources; reference bytes reverified; direct1024 core crops and integer paste only.",
+  "findings": [
+    {
+      "id": "M01",
+      "priority": "P2",
+      "type": "paving-border-termination",
+      "files": [
+        "vertical-p21-p22-join-100pct.png",
+        "intersection-r2-c1-100pct.png"
+      ],
+      "description": "The narrow horizontal pale paving trim from p21 ends abruptly at the p21/p22 boundary instead of connecting to the bordering route; adjacent material also changes at the rectangular core edge.",
+      "repairStatus": "paused; verified GPT Image2.5 route required"
+    },
+    {
+      "id": "M02",
+      "priority": "P2",
+      "type": "blue-inlay-discontinuity",
+      "files": [
+        "vertical-p22-p23-join-100pct.png",
+        "intersection-r1-c2-100pct.png"
+      ],
+      "description": "The diagonal blue-gray inlay coming from p22 is truncated at the vertical boundary with p23; the road route is geometrically discontinuous. The northwest corner of this review window remains missing because p12 is absent.",
+      "repairStatus": "paused; fill missing core and repair localized route after verified model available"
+    },
+    {
+      "id": "M03",
+      "priority": "P2",
+      "type": "retained-context-strip-boundaries",
+      "files": [
+        "vertical-p32-p33-join-100pct.png",
+        "vertical-p33-p34-join-100pct.png",
+        "horizontal-p23-p33-join-100pct.png",
+        "horizontal-p33-p43-join-100pct.png",
+        "intersection-r2-c3-100pct.png",
+        "intersection-r3-c2-100pct.png",
+        "intersection-r3-c3-100pct.png"
+      ],
+      "description": "p33 retains straight rectangular material transitions at its native east/south guide-strip start lines, visibly cutting across slabs. The defect is present inside the selected1024 core, so cropping cannot remove it.",
+      "approximateTilePixels": [
+        [
+          2957,
+          2048,
+          3072,
+          3072
+        ],
+        [
+          2048,
+          2957,
+          3072,
+          3072
+        ]
+      ],
+      "repairStatus": "paused; localized versioned image repair with candidate-layer provenance required"
+    },
+    {
+      "id": "M04",
+      "priority": "P2",
+      "type": "rectangular-material-and-joint-transition",
+      "files": [
+        "vertical-p31-p32-join-100pct.png",
+        "horizontal-p22-p32-join-100pct.png",
+        "intersection-r2-c1-100pct.png",
+        "intersection-r2-c2-100pct.png",
+        "intersection-r3-c1-100pct.png"
+      ],
+      "description": "Central-left paving shows abrupt rectangular changes in mineral texture density and some slab-joint thickness/endpoint alignment across selected core boundaries; review these together with M01 rather than broad redraw.",
+      "repairStatus": "paused; bounded local repair after verified model available"
+    },
+    {
+      "id": "P3-material-variation",
+      "priority": "P3",
+      "files": [
+        "vertical-p23-p24-join-100pct.png",
+        "vertical-p41-p42-join-100pct.png",
+        "vertical-p42-p43-join-100pct.png",
+        "horizontal-p13-p23-join-100pct.png",
+        "horizontal-p24-p34-join-100pct.png",
+        "horizontal-p31-p41-join-100pct.png",
+        "horizontal-p32-p42-join-100pct.png",
+        "horizontal-p34-p44-join-100pct.png"
+      ],
+      "description": "Natural material density and slight stone color variations remain in other windows. These are recorded for later context review, not a request to redraw completed slabs."
+    }
+  ],
+  "generationHold": {
+    "authority": "D:/work/image/docs/IMAGE_MODEL_REQUIREMENT.md",
+    "rootInstructions": "D:/work/image/AGENTS.md",
+    "rootInstructionsSha256": "94b3d5f54a7f2bfb41a9a5f3e06f166d2e2f4bf24845813090974e59ac5dbbcf",
+    "requestedExactImageModel": "GPT Image 2.5",
+    "availableRoute": "builtin image_gen",
+    "actualModel": null,
+    "actualQuality": null,
+    "reason": "The current builtin schema exposes neither an exact model selector nor independently verifiable2.5 metadata; new generation/AI repairs paused. Paid API not authorized.",
+    "inflightGeneration": null,
+    "successfulUnsavedOutputCount": 0,
+    "lastSavedNative": "p13-v20261012.png",
+    "nextMissingPatch": "p12"
+  },
+  "externalSeams": {
+    "status": "shared_QA_pending",
+    "east": "r08_c13 painted actual pixels used during generation; full shared seam not yet accepted",
+    "west": "r08_c11 unpainted; no boundary release",
+    "north": "r07_c12 unpainted",
+    "south": "outside northeast ownership; pending shared review"
+  },
+  "allOriginalsPreserved": true,
+  "imagesOverwritten": 0,
+  "gitMutations": false,
+  "sharedProgressModified": false
+}

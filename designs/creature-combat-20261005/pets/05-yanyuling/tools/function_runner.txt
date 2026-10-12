@@ -1,0 +1,15 @@
+async function(jobs){
+const root="D:/work/image/designs/creature-combat-20261005/pets/05-yanyuling";
+for(const j of jobs){
+const n=String(j.frame).padStart(2,"0");j.refs=[...load("refs")];if(j.frame>1)j.refs.push(root+"/runtime/"+j.action+"/"+j.direction+"/01.png");if(j.extraRef&&!j.refs.includes(j.extraRef))j.refs.push(j.extraRef);
+j.prompt=load("hitBase").replace("at E screen-left","at "+j.direction+" screen-"+(j.direction==="E"?"left":"right")).replace("at E screen-right","at "+j.direction+" screen-"+(j.direction==="E"?"right":"left"))+"\nDirection "+j.direction+": "+(j.direction==="W"?"TRUE rear three-quarter, facing upper-left. Back of head/back feather coat and ankles visible. Only a narrow side face sliver at screen-left; NO chest/front medallion. Scroll screen-right; ink pouch screen-left.":"front three-quarter facing down-right.")+"\nReference 4, if included, is exact same-direction camera/scale/support continuity. "+j.phase+"\nONE independent fully drawn full-body sprite frame "+j.action+"/"+j.direction+"/"+n+", on true transparent 1024x1024 RGBA. Preserve full feather/tassel tips within image. Stationary combat only. Both bird feet support the same position, no step or flight. No human arms/hands/legs, no extra wings, new props or text. Original palette and polished soft handpainting. No ground/shadow/platform/background/checkerboard, no image recentering or camera motion. Fixed support target512,942 if no same-direction accepted reference. Preserve same-direction first-frame scale if attached.";
+j.startedAt=new Date().toISOString();
+text(await tools.apply_patch("*** Begin Patch\n*** Add File: "+root+"/provenance/"+j.action+"/"+j.direction+"/"+n+".prompt.txt\n+"+j.prompt.replace(/\n/g,"\n+")+"\n*** End Patch"));
+}
+const all=await Promise.allSettled(jobs.map(async j=>{const result=await tools.image_gen__imagegen({prompt:j.prompt,referenced_image_paths:j.refs,transparent_background:true});return {j,result,finishedAt:new Date().toISOString()};}));
+for(const item of all){if(item.status!=="fulfilled"){text(item);continue;} const {j,result:r,finishedAt}=item.value,n=String(j.frame).padStart(2,"0");const rec={startedAt:j.startedAt,finishedAt,submittedParameters:{prompt:j.prompt,referenced_image_paths:j.refs,transparent_background:true,model:null,quality:null},output_hint:r.output_hint,actualModel:null,actualQuality:null,visualStatus:"pending_review",visualNotes:"Awaiting actual visual review."};text({frame:j.action+"/"+j.direction+"/"+n});generatedImage(r);
+text(await tools.apply_patch("*** Begin Patch\n*** Add File: "+root+"/provenance/"+j.action+"/"+j.direction+"/"+n+".receipt.json\n+"+JSON.stringify(rec,null,2).replace(/\n/g,"\n+")+"\n*** End Patch"));
+const match=r.output_hint.match(/as (C:\\.*?\.png) by default/);if(!match)throw Error("missing source path");
+text(await tools.exec_command({cmd:"& 'C:\\Users\\luyua\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' '"+root+"/tools/save_frame.py' '"+match[1]+"' "+j.action+" "+j.direction+" "+j.frame,max_output_tokens:250}));
+}
+}

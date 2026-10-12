@@ -1,0 +1,24 @@
+{
+  "tile": "r11_c10",
+  "reviewer": "seam_review",
+  "status": "internal_geometry_pass_with_verified_additive_color_derivation",
+  "internalReady": true,
+  "formalAccepted": false,
+  "candidateSha256": "fe272333737013523783f6d58925354320a20ffdbffccbf6fc8cf3811b57395f",
+  "coverage": "All 24 native internal seams and all 9 crossings covered by round1 geometry review, final new-last-row review, and final repair-adoption checks.",
+  "earlierGeometryReview": "review-round1.json",
+  "newFinalSeamsViewed": ["p33--p43", "p34--p44", "p42--p43", "p43--p44"],
+  "newFinalCrossingsViewed": ["cross-r3-c1", "cross-r3-c2", "cross-r3-c3"],
+  "repairAdoptionEvidence": "../r11_c10-adoption-final/manifest.json",
+  "repairChecks": {
+    "G1": "closed; v3 full native object viewed, then final top/bottom/left/right adoption strips and actual four-patch crossing viewed; wooden floor to paving boundary is coherent with no rectangular cutoff or disconnected T seam",
+    "Q1": "closed; final top/bottom/left/right adoption strips plus p31--p32 core join viewed; sill/plank/nail detail is sharp and boundary contours connect"
+  },
+  "colorVerification": "independent-color-replay.json",
+  "colorScope": "All 16 outputs independently reconstructed exactly using stored same-coordinate additive RGB fields, maximum actual channel change20, no image resampling/blur/geometry displacement/pixel blending.",
+  "northExternalEdge": "pass; all four final 1024px segments re-viewed",
+  "westExternalEdge": "pass; all four final 1024px segments re-viewed",
+  "central2x2Crossing": "pass; current final-color crossing at global [36864,40960] re-viewed",
+  "structuralBlockers": [],
+  "externalAcceptanceLimit": "Other missing outer neighbors remain pending; formal acceptance is false."
+}

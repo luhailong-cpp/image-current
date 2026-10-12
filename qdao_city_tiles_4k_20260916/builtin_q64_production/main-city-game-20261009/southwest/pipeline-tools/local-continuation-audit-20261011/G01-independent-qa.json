@@ -1,0 +1,101 @@
+{
+  "createdAtUtc": "2026-10-11T09:03:04.137144+00:00",
+  "reviewer": "resume_crossedge_audit",
+  "status": "geometry_pass_object_plane_pending",
+  "issue": "r11_c06 G01",
+  "sourceProposal": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.proposal.json",
+    "sha256": "910b18e871b5239af591e847e6ea3c7f87852e746f38d3bf37003fb36557ae59"
+  },
+  "candidateBox": [
+    170,
+    1315,
+    560,
+    1522
+  ],
+  "worldBox": [
+    20650,
+    42275,
+    21040,
+    42482
+  ],
+  "hashes": {
+    "base": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\integrated-20261011\\v2\\r11_c06.candidate.png",
+      "expected": "d9c0e339fa94e64921347e629e0e649205ed1561d7fdf4dd09fa0e32f6cee007",
+      "actual": "d9c0e339fa94e64921347e629e0e649205ed1561d7fdf4dd09fa0e32f6cee007",
+      "matches": true
+    },
+    "nativeSource": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-resume20261011\\07-bottom-step-width\\rejected-native.png",
+      "expected": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+      "actual": "6532557e3f0e8b4c1af3f4297531badf6952a9f79b653213fa85f8a8cb5bf502",
+      "matches": true
+    },
+    "premixed": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.premixed.patch.png",
+      "expected": "1ef209e6da36c4256994741852888ffb74a484ea315a02387ba9c08dc73022ac",
+      "actual": "1ef209e6da36c4256994741852888ffb74a484ea315a02387ba9c08dc73022ac",
+      "matches": true
+    },
+    "pasteMask": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.paste-mask.png",
+      "expected": "1b6ea52e32665352dc414b2295dd3690e06b2bd42ff44181e0d265c00f413a20",
+      "actual": "1b6ea52e32665352dc414b2295dd3690e06b2bd42ff44181e0d265c00f413a20",
+      "matches": true
+    },
+    "nativeAlpha": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.native-alpha.png",
+      "expected": "bad6b8a15bcf307e4273e13a86c5b70ed8a23a709fb70410d4934166cbe17f1d",
+      "actual": "bad6b8a15bcf307e4273e13a86c5b70ed8a23a709fb70410d4934166cbe17f1d",
+      "matches": true
+    },
+    "proposal": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.proposal.candidate.png",
+      "expected": "90633d49d10e9276c51cad66020a3fece50ece551042b2bcc51bf413bbf1e312",
+      "actual": "90633d49d10e9276c51cad66020a3fece50ece551042b2bcc51bf413bbf1e312",
+      "matches": true
+    }
+  },
+  "mechanicalChecks": {
+    "allDeclaredHashesMatch": true,
+    "proposal4096Square": true,
+    "nativeSource1254Square": true,
+    "binaryPasteMask": true,
+    "maskReplayExact": true,
+    "nativeAlphaReplayExact": true,
+    "zeroMaskPixelsUnchanged": true,
+    "outsideROIPixelsChanged": 0,
+    "allFourOuterEdgesExact": true,
+    "nativeLeftUnresizedRegionExact": true,
+    "nativeRightTranslatedRegionExact": true
+  },
+  "changedPixels": 69798,
+  "actualChangedBox": [
+    175,
+    1320,
+    553,
+    1520
+  ],
+  "viewedNativeCrops": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.qa-before.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c06\\repairs-restored-20261011\\G01.qa-after.png"
+  ],
+  "visualReview": {
+    "stairGeometry": "pass_local",
+    "reason": "Lowest stair now ends with the upper stair near tile x505; tread, front riser, vertical end and lower bevel are visually continuous. The previous premature end near x285 is corrected.",
+    "paperProjectionAndContactShadow": "pending",
+    "paperBoxInTile": [
+      392,
+      1438,
+      464,
+      1484
+    ],
+    "paperReason": "The red scrap previously read as a flat object on the ground. In the proposal it lies in the middle of the extended vertical riser while retaining a flat diamond-like quadrilateral and lower-right shadow. Its support plane and contact shadow do not convincingly establish whether it rests on a tread or adheres to the face; object placement is not accepted.",
+    "material": "not_closed_by_this_geometry_review; surrounding dense repetitive stone remains a separate issue"
+  },
+  "mergeRecommendation": "May merge as a provisional local geometry improvement while retaining G01-object-plane as an explicit open visual issue. Do not label the whole G01 repair or whole tile formally accepted.",
+  "formalTileAccepted": false,
+  "newImageGenerationCalls": 0,
+  "sourceArtworkModified": false
+}

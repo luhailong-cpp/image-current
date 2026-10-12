@@ -1,0 +1,61 @@
+{
+  "reviewedOn": "2026-10-03",
+  "reviewer": "timing_preview subagent",
+  "method": "Direct original-size view_image of saved PNG; static visual review only",
+  "status": "candidate_pending_sequence_review",
+  "nativeCanvas": [
+    1254,
+    1254
+  ],
+  "imageModifiedAfterGeneration": false,
+  "modelAndQuality": "host-managed; actualModel and actualQuality remain null",
+  "provisionalRoot": {
+    "xy": [
+      800,
+      1164
+    ],
+    "status": "prompt target only, pending full-cycle calibration",
+    "alignmentApplied": false
+  },
+  "passedChecks": [
+    "单张原生1254 RGBA，实际透明；未经逐帧贴地、裁切、缩放或全图位移",
+    "主要脸型、金棕眼、长波浪发、高髻、粉米白金边服装、粉鞋延续旧参考",
+    "未出现可见右耳花饰，莲灯与玉瓶各一件，无额外文字或背景"
+  ],
+  "notVerified": [
+    "完整E向连续左右脚追踪与首尾循环",
+    "128/256px正常尺寸动态观感",
+    "完整周期及相位时长标定",
+    "1024正式导出",
+    "客户端位移速度、滑步与游戏内验收"
+  ],
+  "file": "generation/E/03-v1.png",
+  "sha256": "49cd4a6bb0f3d544f5a186207bade135c6e3eec3ebc15df13c6e2624e0b4fefd",
+  "intendedPhase": "E03 near anatomical RIGHT midstance/loading",
+  "observedPose": [
+    "大幅屈曲的支撑腿位于骨盆下方，前景鞋完整可读，鞋底比E01-v3趋近水平",
+    "另一腿在后方屈膝，后鞋抬离拟定地面；单幅只能确认为一支撑一屈腿候选",
+    "灯已在身体前方，瓶明显在身后，摆臂相位比提示的中段更接近E05"
+  ],
+  "manualScreenLandmarkEstimates": {
+    "supportShoeBoundsApprox": [
+      655,
+      1034,
+      840,
+      1158
+    ],
+    "supportSoleApproxYRange": [
+      1150,
+      1158
+    ],
+    "targetFloorY": 1164,
+    "note": "视觉估计，非自动最低Alpha校准；不得据此整图下移"
+  },
+  "actualContactEvent": "candidate plantar support shape, contact against fixed y1164 not yet confirmed",
+  "concerns": [
+    "E03右灯臂提前摆至前方、左瓶臂过早后摆；E02→E03可能突跳，应优先串帧核对，必要时只修摆臂",
+    "支撑鞋底视觉末端约在y1158，距暂定地面约6px；鞋底略弧，不能宣称全底精确贴合",
+    "宽袖遮挡肩肘，解剖左右手链仍需与相邻帧追踪验证，不仅凭灯瓶屏幕左右位置判断"
+  ],
+  "recommendedNextAction": "与当前E02和E04/E05并排与动态审核；若臂摆跳跃，针对性编辑E03手臂而保留承重腿。"
+}

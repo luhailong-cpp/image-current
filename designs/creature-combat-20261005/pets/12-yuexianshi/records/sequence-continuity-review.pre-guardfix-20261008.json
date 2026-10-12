@@ -1,0 +1,134 @@
+{
+  "reviewDate": "2026-10-08",
+  "checkedAt": "2026-10-08T09:17:41.181461+00:00",
+  "status": "requires-repair",
+  "method": "Two independent reviewers inspected six complete contact sheets and 42 key full-resolution frame views, plus numerical checks on unchanged exported PNGs. Static sequence review only; no actual playback.",
+  "confirmedFindings": [
+    {
+      "id": "E-attack-01-foot-outlier",
+      "affectedGroups": [
+        "attack-E"
+      ],
+      "affectedFiles": [
+        "runtime/attack/E/01.png"
+      ],
+      "description": "Screen-right shoe is much farther right than frame02 and the final guard; the other shoe remains near its existing support.",
+      "measurements": {
+        "method": "Zero-based 1024 RGBA; y>=890,610<=x<850,alpha>150,maxRGB<185; unweighted coordinate centroid of selected dark opaque pixels.",
+        "01": {
+          "centroid": [
+            771.3,
+            923.3
+          ],
+          "pixels": 1576
+        },
+        "02": {
+          "centroid": [
+            690.3,
+            926.6
+          ],
+          "pixels": 1840
+        },
+        "12": {
+          "centroid": [
+            669.8,
+            921.4
+          ],
+          "pixels": 1443
+        },
+        "01to02HorizontalDifferencePx": 81.0,
+        "12to01HorizontalDifferencePx": 101.5
+      },
+      "repairRecommendation": "Repair frame01 lower-body support to the established guard and check both01/02 and12/01 transitions; preserve grip and independent pose."
+    },
+    {
+      "id": "W-return-guard-foot-mismatch",
+      "affectedGroups": [
+        "hit-W",
+        "attack-W"
+      ],
+      "affectedFiles": [
+        "runtime/hit/W/06.png",
+        "runtime/attack/W/12.png"
+      ],
+      "description": "Hit06 and attack12 end in a wider support than original W identity and cast01/16 guard.",
+      "measurements": {
+        "method": "Zero-based 1024 RGBA; fixed ROI x[280,605),y[850,970),alpha>150,maxRGB<185. Eight-neighbour components, area>=500, choose smallest centroid x: screen-left shoe major dark component.",
+        "cast01": {
+          "centroid": [
+            505.4816,
+            928.2643
+          ],
+          "pixels": 2259
+        },
+        "cast16": {
+          "centroid": [
+            512.7424,
+            929.7674
+          ],
+          "pixels": 2236
+        },
+        "attack12": {
+          "centroid": [
+            367.8717,
+            924.7708
+          ],
+          "pixels": 2478
+        },
+        "hit06": {
+          "centroid": [
+            368.2115,
+            909.7537
+          ],
+          "pixels": 2643
+        },
+        "cast16ToAttack12HorizontalDifferencePx": 144.8707,
+        "cast16ToHit06HorizontalDifferencePx": 144.5309
+      },
+      "repairRecommendation": "Restore a common original W return guard, checking adjacent recovery and next-action entry frames. Preserve legitimate recoil, knee bends and heel lifts. Do not fix by whole-image translation."
+    }
+  ],
+  "playbackOnlyQuestions": [
+    "attack-E05/06/07/08 wrist trajectory may read as a second movement; needs actual playback.",
+    "attack-W09/10/11/12 minor side-to-side foot variation and05/06 chiffon change; needs playback.",
+    "Cast return and glow decay rhythm not established from stills."
+  ],
+  "anatomyObservation": "No clear hand swap, lyre detachment, added or missing limbs, camera flip or solid-edge cropping found in reviewed views.",
+  "measurementLimits": "Dark-shoe pixel centroids are not skeletal joints. Static differences demonstrate inconsistent support positions; severity during playback is not visually verified. Natural heel/sole perspective is not itself an error. Hit start/end need not form an idle loop.",
+  "frameEvidence": [
+    {
+      "file": "runtime/attack/E/01.png",
+      "sha256": "91dbff56147165ac9f61fbfaeccf18fc3a4b9e846be0f60df706a2c9cef9b91f"
+    },
+    {
+      "file": "runtime/attack/E/02.png",
+      "sha256": "62440d4888aa66db6780de0a92cb6753562964d715008f91838f91213c49c7fe"
+    },
+    {
+      "file": "runtime/attack/E/12.png",
+      "sha256": "a2988001987414b1005ceaa30bb50e0a6ed6ca566487b3d4a1d7046cb3392540"
+    },
+    {
+      "file": "runtime/attack/W/12.png",
+      "sha256": "6e42a4de2dc961171ec992dd7eaf127f497714901d8b6fa43214728e71014364"
+    },
+    {
+      "file": "runtime/hit/W/06.png",
+      "sha256": "3bac8f3c25679d2abd6119a0433f3aa1da575a2ee0bc1d6a8e8a04ea30ba047d"
+    },
+    {
+      "file": "runtime/cast/W/01.png",
+      "sha256": "3186336b4060d500054755f540e81453e6c2faa69e90020a9c4daa4b70fe2f07"
+    },
+    {
+      "file": "runtime/cast/W/16.png",
+      "sha256": "35c21f53a1676cafdd04059036aa7bbb2cf721adae080d3304d5c77f4356108a"
+    }
+  ],
+  "sequenceMetrics": "records/sequence-continuity-metrics.json",
+  "technicalVerification": "delivery-verification.json",
+  "playbackStatus": "not-verified-browser-policy-blocked",
+  "playbackEvidence": "records/cast-E/browser-policy-rejection.json",
+  "clientStatus": "not-integrated",
+  "pixelsModifiedThisReview": false
+}

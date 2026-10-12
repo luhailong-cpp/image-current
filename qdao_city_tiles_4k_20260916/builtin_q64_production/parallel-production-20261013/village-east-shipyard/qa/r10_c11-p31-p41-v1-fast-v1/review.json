@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T14:46:19.677707+00:00",
+  "reviewType": "fast_new_pair_neighbor_and_outgoing_anchor_check",
+  "status": "p41_anchor_ready_p31_east_layout_blocked",
+  "formalAccepted": false,
+  "inputs": {
+    "p31": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p31-v1.png",
+      "sha256": "aef66afb07421478cb8e435dedb6a35112d4ce686da3060cac38af7752a6c744",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p41-v1.png",
+      "sha256": "21ecebff9d33ff6313b9417b230a87fa0198fa435265787f5ead31125f28a8b1",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31_guide": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p31-v1-conditioned-target.png",
+      "sha256": "3286c77cbea49a05085ee23dcf085d8d4ca2934541c54ccd6996519567a80601",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41_guide": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p41-v1-conditioned-target.png",
+      "sha256": "7a4eb0e3f9905ad059aab98a965d6dae65381c560ff90e905ecda6d8d0bfd57e",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31_left": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p34-rim-complete-v5.png",
+      "sha256": "fa8ec012d269b66881dd0890c9379b17eba9fd4414f6335c036c61619f05f848",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31_top": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p21-v2.png",
+      "sha256": "d12507f17857197d4d390ddcc9c1081726f9ea9590e9c7bbb07c1bc3273fc5d3",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41_left": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p44-own-color-v2.png",
+      "sha256": "dfcb1b9f4d303e9de4b4604b6611a289cde6cf58fef98b723220008547c98030",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41_top": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p31-v1.png",
+      "sha256": "aef66afb07421478cb8e435dedb6a35112d4ce686da3060cac38af7752a6c744",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "canAnchor": {
+    "p31_to_p41_south": true,
+    "p31_to_p32_east": false,
+    "p41_to_r11_c11_p11_south": true,
+    "p41_to_p42_east": true
+  },
+  "decisions": {
+    "p41": "North and west core seams are continuous. Open deck has coherent plank geometry at south/east outgoing edges, with no new object or geometry propagation blocker. Continue south and east.",
+    "p31": "North/west seams and the south open-deck outgoing edge are coherent. Do not fix the east net silhouette into p32 until its lower-right end is reconciled with the approved guide."
+  },
+  "blockers": [
+    {
+      "id": "B1_p31_east_net_silhouette",
+      "patch": "p31",
+      "blocksOnly": "p32 east continuation",
+      "nativeAffectedRegionApprox": [
+        1024,
+        400,
+        1254,
+        850
+      ],
+      "sharedCoreExitX": 1139,
+      "observed": "The layout guide lower-right cloth/net silhouette rounds upward and ends toward the right, exposing deck. The generated net remains a tall continuous straight-bottom hanging panel with a descending timber foot/rope reaching the east edge around y750-850. This extends the object downward/rightward into an area where the guide has receding edge and exposed deck.",
+      "coordinateUncertainty": "Guide is low-resolution and blurred, so an exact pixel tolerance cannot be inferred. The mismatch is an outgoing object silhouette/course, not a weave/wood texture discrepancy.",
+      "propagation": "Directly pasting p31 x1024..1254 into p32 x0..230 would lock in the lower extension and continue a panel past the intended receding end. This does not enter p31 south overlap or affect p41 continuation.",
+      "evidence": [
+        "p31-east-footprint-guide-native-100pct.png"
+      ]
+    }
+  ],
+  "quickChecks": [
+    {
+      "patch": "p31",
+      "check": "north_west_true_core_seams",
+      "status": "no_blocker_observed",
+      "evidence": [
+        "p31-north-core-seam-100pct.png",
+        "p31-west-core-seam-100pct.png"
+      ]
+    },
+    {
+      "patch": "p41",
+      "check": "north_west_true_core_seams",
+      "status": "no_blocker_observed",
+      "evidence": [
+        "p41-north-core-seam-100pct.png",
+        "p41-west-core-seam-100pct.png"
+      ]
+    },
+    {
+      "patch": "p41",
+      "check": "south_east_outgoing_deck",
+      "status": "no_blocker_observed",
+      "evidence": [
+        "p41-south-anchor-100pct.png",
+        "p41-east-anchor-100pct.png"
+      ]
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_material_finish",
+      "status": "pending_consolidated_QA",
+      "observed": "Local wood-grain and weave finish may be assessed in complete-tile QA; no fine-texture issue blocks the permitted directions."
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidenceViewedAt100Percent": true,
+  "sourceAndGuideImagesViewed": true,
+  "unchangedCandidateHashesReused": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSelectionsChanged": false,
+    "gitTouched": false,
+    "historicalVersionsRescanned": false,
+    "overviewRebuilt": false,
+    "formalFullTileAcceptance": false
+  },
+  "recommendedNextStep": "Continue r11_c11/p11 and p42 from p41. Retain p31 east silhouette unpassed; reconcile only that bounded net-end region before p32."
+}

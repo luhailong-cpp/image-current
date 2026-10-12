@@ -1,0 +1,726 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T20:01:22.661279+00:00",
+  "reviewer": "coordinate_audit",
+  "scope": "Native continuity only: 12 horizontal core-edge strips and 9 four-patch junctions. Overall illustration style is not rated.",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\tiles\\r06_c12.candidate.png",
+    "sha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56"
+  },
+  "manifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\manifest.json",
+    "sha256": "965ceac743f00a84907c1b320357d8917c6bc81146ff998be40f06d25d5f4357"
+  },
+  "imagesUnchangedDuringReview": true,
+  "horizontalCount": 12,
+  "junctionCount": 9,
+  "statusCounts": {
+    "minor_tonal_residual": 2,
+    "pass": 17,
+    "pass_horizontal_with_off_axis_issue": 1,
+    "fail_geometry_and_tone": 1
+  },
+  "overallResult": "not_passed",
+  "formalAccepted": false,
+  "blockingFindings": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r2_c2.native-1to1.png",
+      "sha256": "f4d0e2b1e44e7095c45b0fe4c99340b47e8341cc78a082cb36be6deaa168e760",
+      "summary": "Final p22/p23/p32/p33 junction retains a lower crossbeam/inner-wall geometry step and conspicuous block tone discontinuity at the central vertical boundary.",
+      "localRegionApprox": [
+        240,
+        240,
+        340,
+        420
+      ],
+      "candidateRegionApprox": [
+        2032,
+        2032,
+        2132,
+        2212
+      ],
+      "attribution": "Existing p32/p33 wood tone discontinuity was already reported by the parent; this review does not claim the bridge newly caused it."
+    }
+  ],
+  "minorResiduals": [
+    "h_p11_p21: slight horizontal stone-tone transition near y128, x0..315.",
+    "h_p31_p41: slight horizontal wood/fish-tone transition near y128."
+  ],
+  "limitations": [
+    "Visual judgment at native pixel scale; no acceptance of external tile/zone edges, navigation or client mapping.",
+    "A horizontal strip can pass its y128 edge while an off-axis defect remains elsewhere; the failed four-patch junction prevents overall continuity acceptance.",
+    "No source, generation metadata, prompt, receipt, selection, progress, manifest or QA images modified."
+  ],
+  "records": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p11_p21.native-1to1.png",
+      "sha256": "319b15ec89c69215a0e8ab0d08b368d36ec6c1bc42a9773aad4484a4cf2f30f9",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        0,
+        896,
+        1024,
+        1152
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p11",
+        "r06_c12_p21"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "minor_tonal_residual",
+      "geometry": "柱子、绳结、木栏和石板边缘跨 y=128 连续，没有明显错位。",
+      "tone": "y=128 附近左侧石面 x≈0..315 有轻微水平冷暖/明暗切换；未见大块断层。",
+      "notes": "非严格色调通过，保留轻微残差。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p12_p22.native-1to1.png",
+      "sha256": "02056cf0b555ef4eddd73066b8bea87d913fe1bc8cb9d1f56a820fbd5cb73926",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        1024,
+        896,
+        2048,
+        1152
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p12",
+        "r06_c12_p22"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "红鱼轮廓、鱼鳍、冰块和斜木隔栏跨 y=128 连续。",
+      "tone": "未见明显贯通水平色带。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p13_p23.native-1to1.png",
+      "sha256": "706bbf0ae961711ebb30b73a193ad2c69819e6c0a7d3949b32efd88df1e82125",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        2048,
+        896,
+        3072,
+        1152
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p13",
+        "r06_c12_p23"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "红鱼/蓝鱼、冰块和斜木边跨 y=128 连续；未见新鱼鳍或鱼身截断。",
+      "tone": "未见明显水平色块突变。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p14_p24.native-1to1.png",
+      "sha256": "d159c9898e56625505961f38603cb95697be9ff25a7c96815fd51056c8a8f345",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        3072,
+        896,
+        4096,
+        1152
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p14",
+        "r06_c12_p24"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "木边、立柱帽、蓝鱼和地砖跨 y=128 没有明显错位。",
+      "tone": "未见明显水平色带。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p21_p31.native-1to1.png",
+      "sha256": "156d1c7cbe7a24c19390a3aca9c57cd99dd376aab2feebc5825b856cf8cd7f04",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        0,
+        1920,
+        1024,
+        2176
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p21",
+        "r06_c12_p31"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "斜向石板接缝跨 y=128 的切线和宽度连续。",
+      "tone": "未见明显水平明暗断层。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p22_p32.native-1to1.png",
+      "sha256": "2a51ac8cfc1f7f232244b6a4b6505e8f2e110778a34920cf3c94860ddfef0076",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        1024,
+        1920,
+        2048,
+        2176
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p22",
+        "r06_c12_p32"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "立柱、下木梁和铺石边跨 y=128 连续，未见独立水平轮廓断点。",
+      "tone": "石面局部纹理/明暗不均，但未见明确沿 y=128 贯通的色带。",
+      "notes": "此条不能代替其右端四片交点检查；junction_r2_c2 失败单列。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p23_p33.native-1to1.png",
+      "sha256": "f357d120038574eb6faee7cb4240a27cde49c4d9a6a9ef02195bfd479362043d",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        2048,
+        1920,
+        3072,
+        2176
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p23",
+        "r06_c12_p33"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass_horizontal_with_off_axis_issue",
+      "geometry": "当前水平边 y=128 上的柱边、木梁边缘未见明显横向错位。",
+      "tone": "木梁/暗内壁内存在竖向色调块，约 x≈510..630 一带可见；不是沿本条水平核心边的单一横带。",
+      "notes": "记录现有竖向色块，不将其归因于本轮桥接；其左侧四片交点 junction_r2_c2 的结构不连续另行失败。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p24_p34.native-1to1.png",
+      "sha256": "c71abe49b919e307bc760328383cf96f2c69a398b67c7514383f5f67df2f1c3d",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        3072,
+        1920,
+        4096,
+        2176
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p24",
+        "r06_c12_p34"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "左柱和石板接缝跨 y=128 连续。",
+      "tone": "未见明显水平颜色断层。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p31_p41.native-1to1.png",
+      "sha256": "9653c3bd914d9e8435c6a18e49d137ff27e75fc64c6a883e4f019647cc4b2330",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        0,
+        2944,
+        1024,
+        3200
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p31",
+        "r06_c12_p41"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "minor_tonal_residual",
+      "geometry": "长斜木栏、红布与鱼体大轮廓跨 y=128 连续，未见明显几何错位。",
+      "tone": "木栏和左侧鱼体附近可辨轻微水平明暗/材质变化，未形成大幅错色。",
+      "notes": "非严格色调通过；与既有左列接缝残差相符，不判为本轮桥接新增。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p32_p42.native-1to1.png",
+      "sha256": "f5374d2fb0bb8fb332398ebb75e7a8483d74df4117669e4f2619c6d71159a4e5",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        1024,
+        2944,
+        2048,
+        3200
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p32",
+        "r06_c12_p42"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "左侧鱼鳍、木边及右侧铺石接缝跨 y=128 连续。",
+      "tone": "未见明显贯通水平色带。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p33_p43.native-1to1.png",
+      "sha256": "1c5ef0c6a8c420edc61540cf98184b765ed99c104a7b31fbfb801ffa2d72b8d0",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        2048,
+        2944,
+        3072,
+        3200
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p33",
+        "r06_c12_p43"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "斜石板轮廓与交汇节点跨 y=128 连续。",
+      "tone": "局部石面纹理强弱不均，没有明确沿核心边的直线色调跳变。",
+      "notes": "不对整体铺石画法作评判。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\h_p34_p44.native-1to1.png",
+      "sha256": "5f52be95fb15646b9239bd2aacbfff78db5220196aca43c6d9e7edc11148d7f7",
+      "pixels": [
+        1024,
+        256
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "horizontal_boundary",
+      "candidateCropBox": [
+        3072,
+        2944,
+        4096,
+        3200
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p34",
+        "r06_c12_p44"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "木架/柱脚与斜石板接缝跨 y=128 连续。",
+      "tone": "阴影延续自然，未见独立水平色带。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": {
+        "horizontalCoreY": 128
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r1_c1.native-1to1.png",
+      "sha256": "d0e6f5d487d8b4e4debf2dc6d1b05a8dec23346c007ebd5fff2226e53252259d",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        768,
+        768,
+        1280,
+        1280
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p11",
+        "r06_c12_p12",
+        "r06_c12_p21",
+        "r06_c12_p22"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "中心 (256,256) 周围蓝鱼尾、冰块和木框连续，没有十字切口。",
+      "tone": "未见四象限块状跳色。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r1_c2.native-1to1.png",
+      "sha256": "3963ddb637c2319473f76b328fef9e129656eb18f8b0121831ba7abebc350cb8",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        1792,
+        768,
+        2304,
+        1280
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p12",
+        "r06_c12_p13",
+        "r06_c12_p22",
+        "r06_c12_p23"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "红鱼身、鳍与鳞片跨中心两轴保持连续，没有可见截断或重复肢体。",
+      "tone": "未见明显十字色块。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r1_c3.native-1to1.png",
+      "sha256": "0d52c56b6c2b29bd833dff0aa75e0ecf2674d32ecf1d20dc5cbef8ad94613d2a",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        2816,
+        768,
+        3328,
+        1280
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p13",
+        "r06_c12_p14",
+        "r06_c12_p23",
+        "r06_c12_p24"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "蓝鱼身、鳍、冰块和木隔条跨中心两轴连续。",
+      "tone": "未见明显四片色差边框。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r2_c1.native-1to1.png",
+      "sha256": "1918471d96d5e6ff37f3a5ea9b66ce2329f8cf2376428edc2f3781ed1400d955",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        768,
+        1792,
+        1280,
+        2304
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p21",
+        "r06_c12_p22",
+        "r06_c12_p31",
+        "r06_c12_p32"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "石板长斜缝与立柱底座附近跨中心两轴连续。",
+      "tone": "未见明确十字或竖直色块边。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r2_c2.native-1to1.png",
+      "sha256": "f4d0e2b1e44e7095c45b0fe4c99340b47e8341cc78a082cb36be6deaa168e760",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        1792,
+        1792,
+        2304,
+        2304
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p22",
+        "r06_c12_p23",
+        "r06_c12_p32",
+        "r06_c12_p33"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "fail_geometry_and_tone",
+      "geometry": "右下木梁在中心 x=256、y≈256 处以竖直边突然起头；左下相邻木梁的上缘明显更低，二者在 x=256、y≈256..400 范围未形成连贯支撑结构。暗内壁/木梁的遮挡轮廓出现阶差。",
+      "tone": "中心竖直核心边下方有明显木色/暗内壁块状跳变；不能按普通细微纹理差异放过。",
+      "notes": "父线程已确认原 p32/p33 木板存在竖向色调突变。本审阅记录最终合成仍有的几何/色调断点，不断言其由 p22/p23 桥接新引入。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ],
+      "defectLocalRegionApprox": [
+        240,
+        240,
+        340,
+        420
+      ],
+      "candidateDefectRegionApprox": [
+        2032,
+        2032,
+        2132,
+        2212
+      ],
+      "severity": "blocking_visual_continuity"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r2_c3.native-1to1.png",
+      "sha256": "26a7e9d6f6697dba7678e6d4b3bfca10ab28404ae0c72caacdbb2abb17b274cf",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        2816,
+        1792,
+        3328,
+        2304
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p23",
+        "r06_c12_p24",
+        "r06_c12_p33",
+        "r06_c12_p34"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "中央宽立柱、木梁端部和地砖跨中心两轴连续。",
+      "tone": "未见明显十字色块；木料自然明暗面保留。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r3_c1.native-1to1.png",
+      "sha256": "e9deeb97ee3da4ee8646afe7b67e5e3a02bbd55e43a95791235145ed7c49245e",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        768,
+        2816,
+        1280,
+        3328
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p31",
+        "r06_c12_p32",
+        "r06_c12_p41",
+        "r06_c12_p42"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "绳结柱、木框及蓝鱼身体/鳍跨中心两轴未见明显断开。",
+      "tone": "未见明显四象限块状跳色。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r3_c2.native-1to1.png",
+      "sha256": "884dcb51fef3be8f993eaf3a9cb00c7703866973504ffe1ef9af19d5e574d450",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        1792,
+        2816,
+        2304,
+        3328
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p32",
+        "r06_c12_p33",
+        "r06_c12_p42",
+        "r06_c12_p43"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "中心铺石边线及相邻节点连续，没有错位台阶。",
+      "tone": "未见中心两轴上独立的直线色带。",
+      "notes": "",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northeast\\qa\\r06_c12\\junction_r3_c3.native-1to1.png",
+      "sha256": "517ce9530fa80ebefa8a5a90598007728f4699bf3e78c83d53dbeb285498f22a",
+      "pixels": [
+        512,
+        512
+      ],
+      "pixelScale": 1,
+      "viewedUsing": "view_image detail=original; no resize, annotation or drawing",
+      "kind": "four_patch_junction",
+      "candidateCropBox": [
+        2816,
+        2816,
+        3328,
+        3328
+      ],
+      "neighborPatchIds": [
+        "r06_c12_p33",
+        "r06_c12_p34",
+        "r06_c12_p43",
+        "r06_c12_p44"
+      ],
+      "sourceCandidateSha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "status": "pass",
+      "geometry": "大石板与边缘接缝跨中心两轴连续。",
+      "tone": "存在斑驳纹理强弱变化，未见明显与 x=256 或 y=256 对齐的硬色差边。",
+      "notes": "不把石面原有材质变化直接判作拼接断裂。",
+      "formalAccepted": false,
+      "inspectionLocalCoordinate": [
+        256,
+        256
+      ]
+    }
+  ]
+}

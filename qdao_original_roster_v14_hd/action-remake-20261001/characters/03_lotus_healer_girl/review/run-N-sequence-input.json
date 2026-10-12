@@ -1,0 +1,707 @@
+{
+  "schemaVersion": 1,
+  "character": "03_lotus_healer_girl",
+  "action": "run",
+  "direction": "N",
+  "status": "continuous_support_candidate_not_accepted",
+  "visualAccepted": false,
+  "reviewedOn": "2026-10-04",
+  "nativeRoot": [
+    627,
+    1164
+  ],
+  "canvas": [
+    1254,
+    1254
+  ],
+  "root": {
+    "native": [
+      627,
+      1164
+    ],
+    "nativeCanvas": 1254,
+    "definition": "用户最新指定的固定虚拟身体诊断轴；北向鞋点随纵深投影变化。N01右鞋实际1144仅代表该落脚深度，不是逐帧贴地线。",
+    "status": "provisional_not_client_approved",
+    "alignmentApplied": false
+  },
+  "timing": {
+    "frameMs": 60,
+    "trialCycleMs": 960,
+    "offlineDefaultCycleMs": 960,
+    "mode": "uniform",
+    "selectedProductionCycleMs": null
+  },
+  "frames": [
+    {
+      "slot": 1,
+      "frame": 1,
+      "source": "generation/N/01-v1.png",
+      "observedPhase": "右足落地候选；左腿后收",
+      "issues": [
+        "Right-contact native mother; exact game-space root and contact require dynamic/client review."
+      ],
+      "durationMs": 60,
+      "sourceSha256": "6cb919bc1b7f98025c16bcd113b8ad67c6ea92092f3b2dccfe609f6ba60a6db4",
+      "review": "generation/N/01-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        280,
+        85,
+        1133,
+        1145
+      ],
+      "visualAccepted": false,
+      "startMs": 0,
+      "supportFoot": "right",
+      "supportPosition": "front_contact_buffer",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 2,
+      "frame": 2,
+      "source": "generation/N/02-v3.png",
+      "observedPhase": "右足固定接触，右膝局部承重压缩；头注册保持",
+      "issues": [
+        "Compression is modest and visible chiefly in right knee/cloth; do not infer full dynamic loading from one frame."
+      ],
+      "durationMs": 60,
+      "sourceSha256": "7278bf34f6dd1aef0fab6960fb1073287078e5a8086b9c6f5705b17f9716599a",
+      "review": "generation/N/02-v3.review.json",
+      "nativeAlphaGt8Bounds": [
+        279,
+        84,
+        1135,
+        1147
+      ],
+      "visualAccepted": false,
+      "measurements": {
+        "headTopY": 84,
+        "shoeLowestY": 1146,
+        "alphaBounds": [
+          279,
+          84,
+          1135,
+          1147
+        ],
+        "mother": {
+          "headTopY": 85,
+          "shoeLowestY": 1144,
+          "alphaBounds": [
+            280,
+            85,
+            1133,
+            1145
+          ]
+        },
+        "shoeLiftFromMother": -2
+      },
+      "startMs": 60,
+      "supportFoot": "right",
+      "supportPosition": "front_contact_buffer",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 3,
+      "frame": 3,
+      "source": "generation/N/03-anatomy-v1.png",
+      "observedPhase": "右脚中段支撑、左腿回收；右灯臂恢复胸侧连续高度。",
+      "issues": [
+        "局部AI重画存在细微差异，手位接近02/04高度，非像素级锁定。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "f3dded0f68fc3429509f770207bf5def799be6e59d1332faed55a30ce814457d",
+      "review": "generation/N/03-anatomy-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        272,
+        57,
+        1145,
+        1162
+      ],
+      "visualAccepted": false,
+      "startMs": 120,
+      "supportFoot": "right",
+      "supportPosition": "under_body_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/03-anatomy-v1.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "slot": 4,
+      "frame": 4,
+      "source": "generation/N/04-support-v1.png",
+      "observedPhase": "Right support foot longitudinalaxis pointsaway towardN; heel/sole edge forms stable level support silhouette.; Upperbody, rightlamp/leftbottle and oppositeLEFTswingleg visibly retained.; Actual new stance can extend right support sequence01–04 to4 distinct frames at60ms each.",
+      "issues": [
+        "Support depth/footprint differs slightly from03 and remains subject to full-cycle ground calibration; no wholeimage alignment used."
+      ],
+      "durationMs": 60,
+      "sourceSha256": "5251ee0bf89b0401a0ad7de9a1623858cabf185eaa44a300640008b8819c2519",
+      "review": "generation/N/04-support-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        245,
+        52,
+        1110,
+        1178
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/04-support-v1.png.generation.json",
+      "startMs": 180,
+      "supportFoot": "right",
+      "supportPosition": "under_body_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 5,
+      "frame": 5,
+      "source": "generation/N/05-stance-v1.png",
+      "observedPhase": "右支撑脚粉色后跟、窄金底边落平；左脚仍回收，右灯左瓶保留。",
+      "issues": [
+        "地面纵深与邻帧须整圈复核；未动态通过。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "d67b0e1fcfec7a136bba02614a200b37034370bb82fb40911e839ca152ef3117",
+      "review": "generation/N/05-stance-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        228,
+        76,
+        1116,
+        1178
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/05-stance-v1.png.generation.json",
+      "startMs": 240,
+      "supportFoot": "right",
+      "supportPosition": "slightly_behind_loaded",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 6,
+      "frame": 6,
+      "source": "generation/N/06-axis-v2.png",
+      "observedPhase": "右脚全掌持续支撑，支撑踝鞋向本腿髋下收正，左脚抬起。",
+      "issues": [
+        "支撑鞋中心由原749.5收至720，减小05到07间的向外凸出；未达到提示目标700。",
+        "保留原生画布，手和法器未换；未采用整图移动或逐帧贴底。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "dac52b05bf4b69f6fb40b0159c3ab997d05ab21754601af5901ddee950c85edc",
+      "review": "generation/N/06-axis-v2.review.json",
+      "nativeAlphaGt8Bounds": [
+        148,
+        54,
+        1171,
+        1186
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/06-axis-v2.png.generation.json",
+      "startMs": 300,
+      "supportFoot": "right",
+      "supportPosition": "slightly_behind_loaded",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/06-axis-v2.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "alphaGt8Bounds": [
+        148,
+        54,
+        1171,
+        1186
+      ],
+      "manualContactPointNative": [
+        720,
+        1185
+      ],
+      "footPoint": [
+        720,
+        1185
+      ]
+    },
+    {
+      "slot": 7,
+      "frame": 7,
+      "source": "generation/N/07-anatomy-v2.png",
+      "observedPhase": "北向原腿支撑相位保持；左掌仅托瓶腹，右手持灯。",
+      "issues": [
+        "AI局部修改非像素级锁定；瓶颈与袖口轻微接壤。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "31ad2c56d41aa4e769ad9ee6da53e58b0c9054a77a1a9eef706aa861f696e5fe",
+      "review": "generation/N/07-anatomy-v2.review.json",
+      "nativeAlphaGt8Bounds": [
+        217,
+        56,
+        1123,
+        1189
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/07-anatomy-v2.png.generation.json",
+      "startMs": 360,
+      "supportFoot": "right",
+      "supportPosition": "rear_terminal_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/07-anatomy-v2.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "slot": 8,
+      "frame": 8,
+      "source": "generation/N/08-anatomy-v2.png",
+      "observedPhase": "北向原末支撑相位保持；左掌仅托瓶腹，右手持灯。",
+      "issues": [
+        "AI局部修改非像素级锁定；瓶颈与袖口轻微接壤。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "7fcfc172523c1198459c8ef369b1855e352c02b484262e16e866de2ccab73594",
+      "review": "generation/N/08-anatomy-v2.review.json",
+      "nativeAlphaGt8Bounds": [
+        222,
+        57,
+        1115,
+        1217
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/08-anatomy-v2.png.generation.json",
+      "startMs": 420,
+      "supportFoot": "right",
+      "supportPosition": "rear_terminal_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/08-anatomy-v2.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "slot": 9,
+      "frame": 9,
+      "source": "generation/N/09-anatomy-v1.png",
+      "observedPhase": "北向换步相位保持；左掌仅托瓶腹，右手持灯。",
+      "issues": [
+        "瓶局部位置/轮廓有约十余像素以内目测差；无分割测量支持精确瓶像素不变的说法。",
+        "客户端未验收；新60ms时长交root统一，本图未写选表。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "5064d9837c27099ad1842a430d0096c006dd5c0542e559ae0a9f5aa28d2a3da4",
+      "review": "generation/N/09-anatomy-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        234,
+        60,
+        1104,
+        1148
+      ],
+      "visualAccepted": false,
+      "startMs": 480,
+      "supportFoot": "left",
+      "supportPosition": "front_contact_buffer",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/09-anatomy-v1.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "slot": 10,
+      "frame": 10,
+      "source": "generation/N/10-anatomy-v3.png",
+      "observedPhase": "北向压缩承重相位保持；左掌仅托瓶腹，旧颈握手移除。",
+      "issues": [
+        "相同相位与大体注册保持，不能宣称逐像素锁定。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "0b0e89c544348aab1427b9fb88b9984313c03891cbf0c92f1d3a30254acf6515",
+      "review": "generation/N/10-anatomy-v3.review.json",
+      "nativeAlphaGt8Bounds": [
+        233,
+        68,
+        1118,
+        1162
+      ],
+      "visualAccepted": false,
+      "startMs": 540,
+      "supportFoot": "left",
+      "supportPosition": "front_contact_buffer",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation",
+      "sourceGenerationRecord": "generation/N/10-anatomy-v3.png.generation.json",
+      "sourceDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "slot": 11,
+      "frame": 11,
+      "source": "generation/N/11-v1.png",
+      "observedPhase": "左支撑、右脚部分展开通过",
+      "issues": [
+        "Right passing foot did not descend as much as requested; this reads early passing rather than a fully established mid-support. Arm transition from10 is fairly large."
+      ],
+      "durationMs": 60,
+      "sourceSha256": "8c1ebe10e7d664cc518fc22ce12dec144480036f3125b0f20f5581664cd516c0",
+      "review": "generation/N/11-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        282,
+        62,
+        1106,
+        1147
+      ],
+      "visualAccepted": false,
+      "startMs": 600,
+      "supportFoot": "left",
+      "supportPosition": "under_body_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 12,
+      "frame": 12,
+      "source": "generation/N/12-support-v1.png",
+      "observedPhase": "左支撑鞋改成粉色后跟和窄金色鞋底边，平稳落地关系可辨；右腿仍屈膝回收。头发、上身和持物基本保留。",
+      "issues": [
+        "尚未完成每半周期连续8帧/四位置要求；整圈未动态验收。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "e892f05d365c3908cd1883e9020d9f0a0ed67f68a7328cd41da09a3c99759253",
+      "review": "generation/N/12-support-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        275,
+        51,
+        1109,
+        1165
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/12-support-v1.png.generation.json",
+      "startMs": 660,
+      "supportFoot": "left",
+      "supportPosition": "under_body_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 13,
+      "frame": 13,
+      "source": "generation/N/13-stance-v1.png",
+      "observedPhase": "左腿由腾空伸下，粉色后跟和窄金底平稳，右腿回收不变；左后段承重。",
+      "issues": [
+        "未整圈动态验收；实际足点位置不能当作提示词数值已锁定。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "ec5d3585b34d2606c23cc13cb789f4c31a3457a75ee25b3252d76b91872d82ec",
+      "review": "generation/N/13-stance-v1.review.json",
+      "nativeAlphaGt8Bounds": [
+        228,
+        43,
+        1132,
+        1164
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/13-stance-v1.png.generation.json",
+      "startMs": 720,
+      "supportFoot": "left",
+      "supportPosition": "slightly_behind_loaded",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 14,
+      "frame": 14,
+      "source": "generation/N/14-stance-v2.png",
+      "observedPhase": "新增裤腿金纹已去除，恢复纯白长裤；左支撑、右摆腿与上半身保持。",
+      "issues": [
+        "整圈动态效果仍待统一预览复核。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "06deb3632e3e8d77787018001fcf3bb1d65357220d1939b602eeea555357db6d",
+      "review": "generation/N/14-stance-v2.review.json",
+      "nativeAlphaGt8Bounds": [
+        278,
+        81,
+        1138,
+        1164
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/14-stance-v2.png.generation.json",
+      "startMs": 780,
+      "supportFoot": "left",
+      "supportPosition": "slightly_behind_loaded",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 15,
+      "frame": 15,
+      "source": "generation/N/16-stance-v2.png",
+      "observedPhase": "正确左支撑继续向后伸出，右摆腿未动；实际脚点只略后移，非请求的50像素。",
+      "issues": [
+        "整圈未动态通过；位移为实际视觉观察而非提示数值承诺。",
+        "Selected actual earlier rear-support pose from 16-stance-v2; filenames do not define slot phase."
+      ],
+      "durationMs": 60,
+      "sourceSha256": "b6e1e6800379b7780e8e2b0aa40f3cc1419af56eabc97bf86eb41aafd99278c8",
+      "review": "generation/N/16-stance-v2.review.json",
+      "nativeAlphaGt8Bounds": [
+        271,
+        81,
+        1140,
+        1181
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/16-stance-v2.png.generation.json",
+      "startMs": 840,
+      "supportFoot": "left",
+      "supportPosition": "rear_terminal_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    },
+    {
+      "slot": 16,
+      "frame": 16,
+      "source": "generation/N/16-stance-v3.png",
+      "observedPhase": "左支撑鞋继续纵深递后至画面下方，未横向扭脚；右回收腿不动；适合最后一槽。",
+      "issues": [
+        "整圈未动态通过；支撑位置非数学等距。"
+      ],
+      "durationMs": 60,
+      "sourceSha256": "5cac383fed5bdaad990dba626a65dbdaeabc594a679dcc107a6c638fdabf660b",
+      "review": "generation/N/16-stance-v3.review.json",
+      "nativeAlphaGt8Bounds": [
+        270,
+        82,
+        1140,
+        1214
+      ],
+      "visualAccepted": false,
+      "generationRecord": "generation/N/16-stance-v3.png.generation.json",
+      "startMs": 900,
+      "supportFoot": "left",
+      "supportPosition": "rear_terminal_support",
+      "contactObserved": true,
+      "contactEvidence": "actual plantar orientation, loaded knee/ankle and opposite-leg recovery visible; static candidate, no collision/ground simulation"
+    }
+  ],
+  "summaryIssues": [
+    "四位置为相对身体的视觉分段，非数学等距，仍需统一连播审阅。",
+    "无飞行空槽；换脚发生08→09与16→01之间。",
+    "上身沿用原相位，仍有头部高度/衣摆/灯摆幅变化；不通过整图贴地修正。"
+  ],
+  "footDirectionFinding": "选入的N鞋轴沿纵深，NW鞋轴沿左上运动平面；拒绝了NW08-stance-v1反轴和N15-stance-v2侧转。悬空腿露鞋底属于俯仰，不一律视为外八。",
+  "armFinding": "已有清楚的右灯前/左瓶后与右灯后/左瓶前交替，非16帧全持物展示；但若干中间过渡跨度和闭环仍待修。",
+  "actualModel": null,
+  "actualQuality": null,
+  "events": [
+    {
+      "event": "right_support_start",
+      "slot": 1,
+      "frame": 1,
+      "timeMs": 0,
+      "startMs": 0,
+      "evidence": "RIGHT support continuously shown in slots01-08",
+      "type": "right_support_start"
+    },
+    {
+      "event": "right_to_left_support_exchange",
+      "slot": 9,
+      "frame": 9,
+      "timeMs": 480,
+      "startMs": 480,
+      "evidence": "RIGHT remains support in08; LEFT becomes support in09; exact release is between drawings",
+      "type": "right_to_left_support_exchange"
+    },
+    {
+      "event": "left_to_right_support_exchange_loop",
+      "slot": 1,
+      "frame": 1,
+      "timeMs": 0,
+      "startMs": 0,
+      "evidence": "LEFT support retained16, RIGHT support on next01; cyclic time0 equals960ms boundary.",
+      "cycleBoundaryMs": 960,
+      "type": "left_to_right_support_exchange_loop"
+    }
+  ],
+  "referenceUpdate": {
+    "character": "09_bamboo_archer_girl",
+    "scope": "Current runtime user-approved reference; reviewed N/NW actual32 frames and manifest/animation-timing/MERGE_HANDOFF. Only action mechanics borrowed, no identity or mirrored frames.",
+    "timing": "03 latest direct user instruction: uniform60ms per frame,960ms per cycle; reference character timing is not copied."
+  },
+  "cycleIssues": [
+    "四位置为相对身体的视觉分段，非数学等距，仍需统一连播审阅。",
+    "无飞行空槽；换脚发生08→09与16→01之间。",
+    "上身沿用原相位，仍有头部高度/衣摆/灯摆幅变化；不通过整图贴地修正。"
+  ],
+  "verification": {
+    "nativePngCount": 16,
+    "distinctSha256Count": 16,
+    "scriptPixelEditing": false,
+    "mirrorCopyInterpolation": false,
+    "staticReview": true,
+    "dynamicPlaybackPassed": false,
+    "allDuration60": true
+  },
+  "loopClosureReview": {
+    "status": "static_pair_inspected_dynamic_pending",
+    "findings": [
+      "08与16仍保持各自原支撑脚；下一接触帧换脚。",
+      "脚轴未发现新增明确反向；循环边界的转重和上身起伏等待统一预览。"
+    ]
+  },
+  "supportMatrix": [
+    {
+      "foot": "right",
+      "slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "continuousMs": 480,
+      "positions": [
+        {
+          "name": "front_contact_buffer",
+          "slots": [
+            1,
+            2
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "under_body_support",
+          "slots": [
+            3,
+            4
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "slightly_behind_loaded",
+          "slots": [
+            5,
+            6
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "rear_terminal_support",
+          "slots": [
+            7,
+            8
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        }
+      ],
+      "basis": "逐张实际图像静态支撑姿态；未把提示坐标当作测量"
+    },
+    {
+      "foot": "left",
+      "slots": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "continuousMs": 480,
+      "positions": [
+        {
+          "name": "front_contact_buffer",
+          "slots": [
+            9,
+            10
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "under_body_support",
+          "slots": [
+            11,
+            12
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "slightly_behind_loaded",
+          "slots": [
+            13,
+            14
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        },
+        {
+          "name": "rear_terminal_support",
+          "slots": [
+            15,
+            16
+          ],
+          "durationMs": 120,
+          "independentImages": true
+        }
+      ],
+      "basis": "逐张实际图像静态支撑姿态；未把提示坐标当作测量"
+    }
+  ],
+  "inputStableForAggregation": true,
+  "staticSupportAudit": {
+    "rightSlots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "leftSlots": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "rightContinuousMs": 480,
+    "leftContinuousMs": 480,
+    "requiredSameFootContactVisible": true,
+    "spaceProgression": "四个相对身体位置各两张；北向纵深压缩较明显，西北向递后较清楚。非数学等距。",
+    "axisFinding": "未发现选入支撑鞋明确反轴/八字；对侧摆腿露鞋底属于正常俯仰。",
+    "remaining": [
+      "原上身相位仍有头高、衣摆和灯摆幅变化，N6→7/13→14与两向闭环需统一连播确认。",
+      "NW03/11部分髋膝和手持被长发衣摆遮挡；接触是实图承重轮廓判断，非碰撞实测。"
+    ],
+    "visualAccepted": false
+  },
+  "updatedAt": "2026-10-05T06:32:39.911853-04:00",
+  "latestAxisRevision": "review/axis-revision-decisions-20261004.json",
+  "latestAnatomyRevision": "review/anatomy-revision-decisions-20261005.json"
+}

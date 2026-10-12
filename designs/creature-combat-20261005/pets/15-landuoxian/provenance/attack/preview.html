@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><title>岚铎仙普攻动作预览</title>
+<style>body{background:#cbd5dd;color:#142634;font:18px system-ui;text-align:center;margin:12px}h1{font-size:24px;margin:10px}img{width:min(72vh,640px);height:min(72vh,640px);object-fit:contain}button,select,input{font:inherit;margin:5px}</style>
+<h1>岚铎仙 · 普攻</h1><div><select id="dir" aria-label="方向"><option>E</option><option>W</option></select><button id="play">暂停</button><select id="speed" aria-label="速度"><option value="1">正常 30ms</option><option value="0.25">0.25 慢放</option></select><input id="frame" aria-label="帧" type="range" min="1" max="12" value="1"><span id="label"></span></div><img id="sprite" alt="普攻当前帧">
+<script>
+const s=document.getElementById('sprite'),f=document.getElementById('frame'),l=document.getElementById('label'),d=document.getElementById('dir'),sp=document.getElementById('speed'),p=document.getElementById('play');
+const banks={E:[],W:[]};let n=1,playing=true,last=0,elapsed=0,ready=false;
+for(const v of ['E','W'])for(let i=1;i<=12;i++){const im=new Image();im.src='../../runtime/attack/'+v+'/'+String(i).padStart(2,'0')+'.png';banks[v].push(im);}
+function show(){s.src=banks[d.value][n-1].src;f.value=n;l.textContent=d.value+' '+n+'/12';}
+f.oninput=()=>{playing=false;p.textContent='播放';n=+f.value;elapsed=0;show();};
+p.onclick=()=>{playing=!playing;p.textContent=playing?'暂停':'播放';elapsed=0;};
+d.onchange=()=>{n=1;elapsed=0;show();};sp.onchange=()=>{elapsed=0;};
+function tick(t){const dt=last?t-last:0;last=t;if(playing&&ready){elapsed+=dt;const duration=30/+sp.value;if(elapsed>=duration){const step=Math.floor(elapsed/duration);elapsed-=step*duration;n=(n-1+step)%12+1;show();}}requestAnimationFrame(tick);}
+Promise.all(Object.values(banks).flat().map(im=>im.decode())).then(()=>{ready=true;show();requestAnimationFrame(tick);}).catch(e=>{l.textContent='图片加载失败';console.error(e);});
+</script></html>

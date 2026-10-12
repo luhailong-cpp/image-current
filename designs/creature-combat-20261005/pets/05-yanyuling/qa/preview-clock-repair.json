@@ -1,0 +1,15 @@
+{
+  "reportedSymptom": "Preview froze at frame 01; draw() read undefined.file, including from later image-load callbacks.",
+  "reproducedCause": "A first requestAnimationFrame timestamp earlier than the performance.now initialization sample made elapsed time negative and selected frame -1. An exception then stopped scheduling later animation frames.",
+  "changes": [
+    "Clock starts with the first rAF callback instead of mixing the initial performance.now sample into elapsed time.",
+    "Delta time is nonnegative, and frame indices are constrained to valid ranges.",
+    "Image preloading starts only after cards, frame grid, and initial render are constructed.",
+    "Resume and visibility changes reset the clock origin."
+  ],
+  "probe": "tools/check_preview_clock.cjs",
+  "before": "Reproduced TypeError: Cannot read properties of undefined (reading 'file')",
+  "after": "PASS: nonnegative first timestamp, normal advance, quarter-speed timing",
+  "generatedHtmlSyntaxCheck": "node --check passed",
+  "browserRetest": "delegated to root; not performed by this subagent"
+}

@@ -1,0 +1,84 @@
+{
+  "tile": "r04_c11",
+  "candidateVersion": "v1",
+  "formalAccepted": false,
+  "status": "candidate-reviewed-repair-required",
+  "reviewScope": {
+    "internal": 24,
+    "north": 4,
+    "west": 4,
+    "uninspectedExterior": [
+      "east",
+      "south"
+    ],
+    "neighborCandidates": {
+      "north": "r03_c11-v2",
+      "west": "r04_c10-v2"
+    }
+  },
+  "method": "All 32 native unresampled 256px seam strips visually reviewed; broader 512px strips additionally inspected for high-delta joins, rope termination, railing and neighbor boundaries. Metrics are diagnostic, not acceptance thresholds.",
+  "trueDefects": [
+    {
+      "seam": "v-p41-p42",
+      "owner": "root left columns",
+      "location": {
+        "tileX": 1139,
+        "approxTileY": [
+          3170,
+          4096
+        ],
+        "wideCropX": 371
+      },
+      "description": "Gold rope is cut straight at the west-conditioning halo boundary 115 pixels into p42; net texture continues as a hard vertical band. Requires native builtin image edit of p42.",
+      "action": "Parent notified; parent handling. No p42 change made by geometry_audit."
+    }
+  ],
+  "minorResiduals": [
+    {
+      "seams": [
+        "v-p22-p23",
+        "v-p32-p33",
+        "v-p23-p24"
+      ],
+      "description": "Small local slab-edge and painted texture differences; no disconnected major object or hard rectangular band requiring regeneration."
+    },
+    {
+      "seam": "v-p13-p14",
+      "description": "High numerical channel difference occurs in detailed railing/panel area. Wider crop shows continuous wooden rails and jade panel; no major object severance."
+    }
+  ],
+  "focusedChecks": [
+    {
+      "seam": "v-p42-p43",
+      "finding": "Warm ground beneath the net, rope shadow and gray paving make a plausible continuous transition. No right-patch repair recommended."
+    },
+    {
+      "seams": [
+        "north-c1",
+        "north-c2",
+        "north-c3",
+        "north-c4"
+      ],
+      "finding": "Stone paving, rear red display front and front jade railing continue coherently across the tile boundary."
+    },
+    {
+      "seams": [
+        "west-r1",
+        "west-r2",
+        "west-r3",
+        "west-r4"
+      ],
+      "finding": "Paving, net ropes and posts continue coherently across the tile boundary."
+    },
+    {
+      "seams": [
+        "h-p34-p44",
+        "v-p43-p44"
+      ],
+      "finding": "Gold finial continues into blue fish-market roof corner. No disconnected free-standing fencepost."
+    }
+  ],
+  "selectionChangesByThisReview": [],
+  "rightOwnedPatchAction": "Keep current p13,p14,p23,p24,p33,p34,p43,p44 selections.",
+  "finalState": "Candidate only. Reinspection required after parent's p42 repair; formal exterior acceptance remains false."
+}

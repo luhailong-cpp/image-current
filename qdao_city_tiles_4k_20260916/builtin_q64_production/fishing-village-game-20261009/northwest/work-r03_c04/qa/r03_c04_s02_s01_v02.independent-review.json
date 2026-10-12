@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s02_s01_v02",
+  "reviewedAt": "2026-10-09T23:07:44.051980+00:00",
+  "decision": "usable-for-selection",
+  "usableForSelection": true,
+  "formalAccepted": false,
+  "repairRequested": false,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s02_s01_v02.png",
+      "sha256": "1018d3ea33890dfcd8bad100e5211b1a8673728db4b345e8d76ceb4828d912e7"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s02_s01_v02.native-overlap-edit-target.png",
+      "sha256": "9d9d1355fd9890b3b7b9da2494d774d0729a512c13a1bad90342a25a313ebbf3"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s04_v01.png",
+      "sha256": "7a974e31af00445b7376dc5415fd7538b4d6ba341f9e2b106dfa1c31cc782d89"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s04_v01.png",
+      "sha256": "38018a9c8a12e83d66e20ecd69486234141a0944b8541c719feff16022314609"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s03_s04_v01.png",
+      "sha256": "a23ac08fef9e3578a2d638bb610784120bf9a3ed4c155e05774d0e2eb002f50f"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.seams.json",
+      "sha256": "2d127cd356e4ccfaba5f3024060d28448656e4c28fe9aad03501f3c2bc8e11ff"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v5.png",
+      "sha256": "01cc33b6fac4a1a233ef908c709b307cd3597d42aee521f355d3d935b52adea1"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\assemble_r03_c03.py",
+      "sha256": "32d65a023e4f17ee91d77e10e97fd0d931ef981baa025e9c5d93c4d4c5fbe9e8"
+    }
+  ],
+  "incomingGlobalNativeOrigin": [
+    12173,
+    9101
+  ],
+  "diagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v02.hardcut-diagnostic.json",
+    "sha256": "1f4dd2b9d486092f34fc919c49a122ba93d7a164881c0cf4386cf7a4ba82afa0",
+    "method": "Unmodified append_hard/minimum_vertical_seam, true230px overlaps, one native source per pixel; no feather/resample.",
+    "westContext": "Replayed saved west row1-to2 and row2-to3 horizontal seams. Reconstructed eastmost115px matches v5 at tile[3981,909,4096,2163] exactly.",
+    "cornerOrder": "North incoming joined first, then actual west; independent north and west joins also inspected."
+  },
+  "visualViewsAt100Percent": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v02.north.seam100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v02.west.seam100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v02.northwest-intersection100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v02.west-stone-sand-boundary100pct.png"
+  ],
+  "findings": [
+    {
+      "scope": "north230 full1254px",
+      "result": "pass",
+      "detail": "Stone joints and slab highlights remain continuous through the adaptive cut."
+    },
+    {
+      "scope": "actual west230 full1254px",
+      "result": "pass",
+      "detail": "Stone scale and grid continue coherently; sand texture has no conspicuous cut-shaped patch; no severed/doubled joint."
+    },
+    {
+      "scope": "northwest intersection",
+      "result": "pass",
+      "detail": "Combined overlap crossing remains coherent without extra fragments."
+    },
+    {
+      "scope": "former stone-sand defect",
+      "result": "pass",
+      "detail": "Invented narrow curb is removed. Existing thick slab edge and shadow continue without the former triangular gap or overhang. Native sand border follows the exact west anchor."
+    }
+  ],
+  "boundaryMeasurements": {
+    "method": "After visual inspection, approximate sand onset from5px-wide RGB sample:r-b>80,g>150 withiny400..1000; not an acceptance criterion by itself.",
+    "samples": [
+      {
+        "nativeX": 20,
+        "guideSandStartYApprox": 724,
+        "newSandStartYApprox": 725,
+        "deltaY": 1
+      },
+      {
+        "nativeX": 115,
+        "guideSandStartYApprox": 784,
+        "newSandStartYApprox": 787,
+        "deltaY": 3
+      },
+      {
+        "nativeX": 210,
+        "guideSandStartYApprox": 843,
+        "newSandStartYApprox": 848,
+        "deltaY": 5
+      }
+    ]
+  },
+  "metricsForContextOnly": [
+    {
+      "label": "north230",
+      "overlapMAE": 4.828429604974227,
+      "pathRange": [
+        87,
+        223
+      ]
+    },
+    {
+      "label": "actual-west230",
+      "overlapMAE": 4.709292004715346,
+      "pathRange": [
+        0,
+        166
+      ]
+    },
+    {
+      "label": "north-then-actual-west230",
+      "overlapMAE": 4.549507662436724,
+      "pathRange": [
+        0,
+        166
+      ]
+    }
+  ],
+  "reviewLimits": [
+    "Only currently available north/west neighbor joins and their crossing were checked.",
+    "Final tile composition and shared external edge coordination remain pending.",
+    "No shared selection/plan/progress file was changed."
+  ]
+}

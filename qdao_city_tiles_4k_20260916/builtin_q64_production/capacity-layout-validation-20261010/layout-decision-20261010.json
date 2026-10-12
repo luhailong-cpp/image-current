@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-10",
+  "status": "static_geometry_review_complete_runtime_and_entrance_validation_pending",
+  "userIntent": "Each of the three maps hosts 5000 people distributed across the same map; not 5000 rendered in every viewport. Preserve approved Q-style artwork and short north/south exits.",
+  "decision": "Do not enlarge or redraw whole maps based on the earlier arbitrary 5/6-unit visual-spacing experiments. Retain current artwork and investigate localized entrance/underpass issues before final world-scale approval.",
+  "trialOnly": {
+    "mainWorldSide": 500,
+    "villageAndIslandWorldSide": 433.0127018922193,
+    "villageAndIslandAreaRatio": 0.75,
+    "standingSpacing": 2.5,
+    "actorRadiusReference": 0.38,
+    "reservedCorridorWidthTarget": 3,
+    "usableFeetPositionsAfterCorridor": {
+      "main": 12269,
+      "village": 6278,
+      "island": 5441
+    },
+    "actualSelectedPerMap": 5000,
+    "productionParametersChanged": false
+  },
+  "localizedReview": [
+    {
+      "map": "main",
+      "areas": [
+        "warehouse_entrance",
+        "manor"
+      ],
+      "action": "Check warehouse entrance connectivity and manor approach clearance against actual collision boundaries. Do not classify roof occlusion alone as a blocked passage."
+    },
+    {
+      "map": "village",
+      "areas": [
+        "north gate underpass",
+        "cloth shop entrance",
+        "shipyard east approach",
+        "shipyard south approach"
+      ],
+      "action": "Resolve north gate occlusion in navigation; verify the shop and shipyard approach widths. Preserve the three core buildings and all required shop types."
+    },
+    {
+      "map": "island",
+      "areas": [
+        "east third residence court entrance",
+        "south gate underpass",
+        "lotus pavilion bridges",
+        "west fourth residence approach",
+        "east fourth residence approach"
+      ],
+      "action": "Check the thin visible connection at east third court; separate south gate roof occlusion from true obstruction, then verify the lotus bridges and fourth-court approaches. Preserve eight residences."
+    }
+  ],
+  "remainingAcceptance": [
+    "Final world scale and true ground-plane mapping",
+    "Actual controller/remote-actor collision behavior",
+    "All required entrances and underpasses connected in final navigation",
+    "Actual character, nameplate, pet and hotspot readability",
+    "Same scene/line 5000-player server and client runtime test on target hardware"
+  ],
+  "runtimeAttempt": {
+    "isolatedPhysicsProbeAttempted": true,
+    "formalClientModified": false,
+    "scriptExecuted": false,
+    "blocker": "Unity reports no valid Editor license; exited before test execution, code 198.",
+    "evidence": "physics-probe-project/probe-status.json"
+  },
+  "newAreaGenerationGateRemainsActive": true,
+  "capacity5000Validated": false,
+  "worldSizeApproved": false,
+  "wholeMapRepaintRequiredByCurrentEvidence": false,
+  "subsequentProductionRelease": {
+    "releasedAtUtc": "2026-10-10T08:52:16.081417+00:00",
+    "userAuthorization": "那你按我们的需求让他继续做啊",
+    "control": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/resume-production-20261010/production-resume.json",
+    "capacity5000Validated": false
+  }
+}

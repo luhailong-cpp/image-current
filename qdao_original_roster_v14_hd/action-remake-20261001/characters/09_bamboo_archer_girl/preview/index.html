@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>09 竹弓少女 · 动作逐帧验收</title>
+<style>
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#eff4e8;background:#142521;color-scheme:dark}*{box-sizing:border-box}body{max-width:1600px;margin:auto;padding:24px}h1{font-size:26px;margin:0 0 8px}p{line-height:1.7;margin:8px 0}.muted{color:#b6c6bb}.summary{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.summary span{padding:8px 13px;background:#223e33;border-radius:8px}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}button,select{font:inherit;border:1px solid #607569;border-radius:6px;padding:9px 12px;background:#213c32;color:#f8faec;cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #f0ca7e;outline-offset:2px}button:disabled{opacity:.5;cursor:default}#position{font-variant-numeric:tabular-nums;font-weight:700}#timeline{width:100%;accent-color:#e2c982}.stages{display:grid;grid-template-columns:1fr 1fr;gap:16px}.stage{position:relative;aspect-ratio:1;overflow:hidden;border:1px solid #537260;border-radius:8px;background:#111917}.stage.light{background:#f6f2e9}.stage canvas{width:100%;height:100%;display:block}.tag{position:absolute;top:8px;left:8px;background:#122018cd;color:#fff;padding:3px 9px;border-radius:4px;font-size:13px}.notice{border-left:3px solid #e3bf7c;padding:8px 12px;background:#25362b}#slotInfo{min-height:3em;overflow-wrap:anywhere}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px}.dot{width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:5px}.missing{background:#cf795b}.present{background:#9bbc72}.export{background:#79b8bd}#slots{display:grid;grid-template-columns:repeat(16,minmax(38px,1fr));gap:5px;margin:10px 0}#slots button{padding:8px 3px;font-size:12px;border-bottom:4px solid #cf795b}#slots button.present{background:#244131;border-bottom-color:#9bbc72}#slots button.export{border-bottom-color:#79b8bd}#slots button.active{outline:2px solid #f5d68c;outline-offset:1px}#groups{border-collapse:collapse;width:100%;font-size:14px;margin-top:16px}th,td{padding:8px 12px;border-bottom:1px solid #385345;text-align:left}a{color:#e7cb8c}details{margin-top:14px}#missingList{line-height:1.8;overflow-wrap:anywhere}@media(max-width:760px){body{padding:14px}.stages{grid-template-columns:1fr}#slots{grid-template-columns:repeat(8,minmax(36px,1fr))}h1{font-size:22px}th,td{padding:7px 5px}}
+</style>
+</head>
+<body>
+<h1>09 竹弓少女 · 动作逐帧验收</h1>
+<p class="muted">受击 E/W 各 6 帧、普攻各 12 帧、施法各 16 帧、八方向跑步各 16 帧；目标 196 张独立动作帧。</p>
+<div class="summary" id="summary"></div>
+<p class="notice" id="inventoryNotice">正在读取库存。缺帧会显示明确空缺，播放时仍保留该槽的时间，不压缩为现有帧循环。</p>
+<div class="controls"><select id="sequence" aria-label="动作和朝向"></select><select id="speed" aria-label="播放速度"><option value="1">正常 1×</option><option value="0.25">慢放 0.25×</option></select><select id="runCycle" aria-label="跑步周期"><option value="1200" selected>跑步 1200ms · 75ms/帧</option></select><select id="displaySize" aria-label="显示尺寸"><option value="large">放大检查</option><option value="256" selected>游戏尺寸 256px</option><option value="128">游戏尺寸 128px</option></select><button id="playOne">播放当前段</button><button id="playAll">全部顺序播放</button><button id="pause">暂停</button><button id="prev">上一帧</button><button id="next">下一帧</button><label><input type="checkbox" id="guides">显示固定参考线</label></div>
+<p class="notice">跑步正常 1×：完整16帧，每帧75ms，一圈1200ms；首尾不额外停顿。接触姿态已按每两帧一组修订；实播与客户端尚未验收。</p>
+<p id="position" aria-live="polite"></p><input id="timeline" type="range" min="0" value="0" aria-label="逐帧选择">
+<div id="slots" aria-label="当前动作所有帧槽"></div>
+<div class="legend"><span><i class="dot missing"></i>缺帧 / 无法预览</span><span><i class="dot present"></i>已存在选定 PNG</span><span><i class="dot export"></i>已存在 runtime PNG</span></div>
+<p id="slotInfo"></p>
+<div class="stages"><div class="stage"><span class="tag">深色底 · 1024 固定画布</span><canvas id="dark" width="1024" height="1024"></canvas></div><div class="stage light"><span class="tag">浅色底 · 1024 固定画布</span><canvas id="light" width="1024" height="1024"></canvas></div></div>
+<p class="muted" id="playStatus">载入中…</p>
+<p class="muted">整幅 1024 画布直接绘制；不根据轮廓或最低脚像素定位，不做逐帧裁切、贴地、缩放或插值。显示器刷新率可能跳过高速帧；使用慢放与逐帧检查手脚和握持。预览不自动产生视觉或动态通过记录。客户端未接入、未运行验收。</p>
+<p class="muted" id="anchorInfo"></p><label>诊断地面 y <input id="groundY" type="number" value="940" min="0" max="1024" step="1" style="width:80px">（仅参考线，尚未按各方向实际鞋底确认；不移动图片）</label>
+<details><summary>全部动作库存与验收状态</summary><table id="groups"><thead><tr><th>动作</th><th>实际 PNG</th><th>已导出</th><th>视觉通过</th><th>动态通过</th></tr></thead><tbody></tbody></table></details>
+<details><summary>明确缺帧清单</summary><p id="missingList"></p></details>
+<script src="data.js?v=20261005-full-limb-final"></script>
+<script src="player.js?v=20261005-full-limb-final"></script>
+</body></html>

@@ -1,0 +1,88 @@
+{
+  "reviewed_utc": "2026-10-12T03:02:53.865650+00:00",
+  "reviewer": "audit_city",
+  "script": "D:\\work\\image\\.git\\migration-latest-20261011\\capture_frozen_delta.py",
+  "script_sha256": "16fad0d59d96e0eeda95a4e3395d4a62ee5b504d90f1e804898cbeef64b64039",
+  "static_review_passed": true,
+  "ast_passed": true,
+  "production_capture_executed": false,
+  "independent_runtime_tests_executed": true,
+  "unresolved_code_findings": [],
+  "verified_properties": [
+    "All Git mutations target a fresh isolated capture.git, a private index and task-owned refs; live Git calls are read-only and all inherited GIT_* environment keys are removed case-insensitively.",
+    "Working images, live .gitattributes, live index/refs and the first uploader state are not modified. Only exclusive new spools and private artifacts are written; spool unlink is confined to owned files.",
+    "Capture seeds the complete baseline tree and includes baseline tracked paths, current tracked paths, nonignored untracked files and every explicitly reviewed ignored inclusion. Baseline missing files are errors rather than deletions.",
+    "Ignored membership is pinned and every ignored file requires an explicit include/exclude record; included hashes/sizes are checked. Non-.git pinned portability/evidence files must belong to the capture selection.",
+    "The fifteen dispatched producer IDs, fixed three-map zone set, owned roots/checkpoint paths, coordinator 15/15 readiness and fresh independent audit/checkpoint hashes are bound together. Twelve user reference archive copies are checked and pinned.",
+    "Source bytes are read and hashed twice; final membership, live index, HEAD, text configuration and pinned freeze/protection evidence are rechecked; any catchup rejects the capture. This remains an observed stable interval rather than a filesystem-atomic snapshot.",
+    "New large payloads are spooled directly to independent LFS storage without a reachable oversized raw Git blob. Existing LFS pointer identities and payload hashes are retained where source content is unchanged.",
+    "Exact-path LFS rules append to original attributes in the private tree; clean attributes are anchored to baseline; nested effective attribute overrides reject; disk .gitattributes stays unchanged.",
+    "Old and new/changed canonical LFS pointer text is rejected as unhydrated source rather than wrapped into a pointer-to-pointer payload.",
+    "Complete resulting tree and all final object sizes are checked; 6516 protected originals retain their exact content/mode, and 186 removed screenshot paths remain absent.",
+    "Capture output is explicitly not a commit, push, data-publication success or complete migration claim. Subsequent runner must anchor commits to server-confirmed P and finish portable receipt plus local adoption.",
+    "Compact gate auditEvidence resolves through the fixed map-to-audit path and actual pinned audit SHA; exactly one matching zone row must exist in that map audit. The same zone name in another map cannot supply its evidence.",
+    "Top-level checkpointPath/checkpointSha256 are accepted on audit rows. Optional nested checkpoint and legacy gate checkpoint, when present, must agree exactly with the current zone checkpoint. Neither compact nor legacy gate payload can replace the independent audit row.",
+    "Explicit source manifest aliases manifest/currentManifestSha256 are pinned at the current digest; manifest/manifestSha256 is used only when no current digest is supplied. Other heterogeneous source aliases must be normalized explicitly by root source_evidence; historical hashes are not guessed."
+  ],
+  "review_findings_resolved": [
+    {
+      "topic": "Real producer/zone mapping",
+      "resolution": "Added exact dispatch recipient equality and fixed zone/owned-root/checkpoint mapping."
+    },
+    {
+      "topic": "Portable evidence omitted by ignore rules",
+      "resolution": "Every pinned repository evidence file outside .git must be in selected capture inputs."
+    },
+    {
+      "topic": "Unhydrated LFS pointer nested as payload",
+      "resolution": "Reject both baseline pointer placeholders and canonical pointer text on new/changed LFS sources."
+    },
+    {
+      "topic": "Current compact readiness schema",
+      "resolution": "Added exact pinned independent audit resolver with fixed map path, exact five-zone audit membership, unique zone row and current checkpoint identity."
+    },
+    {
+      "topic": "Portable source manifest alias/current hash",
+      "resolution": "Pins manifest alias and prefers currentManifestSha256 when historical manifestSha256 also appears."
+    }
+  ],
+  "author_offline_verification": {
+    "path": "D:\\work\\image\\.git\\migration-latest-20261011\\capture-offline-verification.json",
+    "sha256": "b76a4c7b48dea1a5bc3470314400bcd526b9780e2f15d03955ee045f1a01fada",
+    "passed": true,
+    "count": 18,
+    "tested_sha256": "16fad0d59d96e0eeda95a4e3395d4a62ee5b504d90f1e804898cbeef64b64039",
+    "matches_reviewed_script": true,
+    "production_capture_run": false,
+    "network_accessed": false,
+    "production_live_git_written": false,
+    "note": "Author ran complete fixture suite. Independent reviewer verified final hash and all eighteen result entries; separately ran twelve pure resolver checks."
+  },
+  "execution_gate": "Code review and matching offline tests are green for this exact SHA only. Root must still obtain genuinely complete frozen evidence, current pinned 15/15 coordinator/independent audits and normalized source_evidence. Neither this review nor a fixture/template authorizes capture before real readiness.",
+  "script_bytes": 50384,
+  "supersedes": {
+    "script_sha256": "13fec3cf1e20105703627f4f515204a501656e0031140ad45639cc69409fab19",
+    "reason": "Old interface expected embedded checkpoint; current gate uses compact independent-audit references. Old green review is not valid for current production capture."
+  },
+  "independent_tests": {
+    "kind": "Pure in-memory resolver calls plus AST only; no capture, Git, network or test filesystem writes.",
+    "script_sha256": "16fad0d59d96e0eeda95a4e3395d4a62ee5b504d90f1e804898cbeef64b64039",
+    "passed": true,
+    "count": 12,
+    "cases": [
+      "valid_compact_without_embedded_checkpoint",
+      "wrong_zone_key",
+      "wrong_compact_hash",
+      "same_zone_other_map_path",
+      "zone_independent_audit_other_map",
+      "duplicate_zone_row",
+      "top_level_checkpoint_hash_differs",
+      "embedded_checkpoint_conflicts",
+      "row_explicit_other_map",
+      "legacy_requires_same_audit_checkpoint",
+      "legacy_conflicting_checkpoint",
+      "unready_audit_row"
+    ],
+    "source_unchanged_during_tests": true
+  }
+}

@@ -1,0 +1,11 @@
+from pathlib import Path
+import json
+T=Path(__file__).resolve().parent
+p=T/'local-content.json';d=json.loads(p.read_text(encoding='utf-8-sig'))
+d.update({
+ 'p03_04':'Existing curved golden roof ribs outline teal roof planes: gold curve enters top-left and descends to left around y700, existing other plain gold eave continues to far-right around y600. Large teal tiled roof surface fills lower-half and continues beyond bottom. Pale grey-tan wall is behind roof at upper-right, no new raised structure. Match top/left native surfaces and all rib endpoints; no new scroll, tier, finial, ornament or terminal bottom edge. Right black strip is outside guide; naturally continue existing materials through it without a border.',
+ 'p04_02':'Existing broad blue-teal tiled roof with one plain gold rib descending from top x800 to x300 y680, then meeting existing vermilion eave/wall. Roof plane extends to bottom around y950 with plain red fascia/structural wall cropped across lower edge, red corner column partly at far-left lower. Continue native left and top at exact scale. Do not add gold ornaments, scrolled tips, lanterns, windows, lattice, new roof tiers or freestanding objects. Keep partial architectural crop.',
+ 'p04_03':'Broad quiet teal roof tile plane fills almost entire crop. Existing thin plain gold rib only at upper-right curves out of far-right around y600. At bottom y1050 the existing red wood fascia/wall is narrowly cropped. Native left and top tile courses must flow continuously. No new rib, ridge, scroll, ornament, window, roof tier, eave roof segment or lantern. Roof stays broad with coherent tightly resolved tile rows.',
+ 'p04_04':'Existing teal roof face bounded by plain gold edge curves from top-left toward center x550 y750 and then upward/right to far-right top. Below it are cropped existing vermilion corner-tower column/wall and warm pale stone surface at far-right. Keep exact guide crop, blue roof directions, native left/top connections and simple red structural shapes. No added lantern, tassel, medallion, swirl, window, extra tier, freestanding furnishing or complete building. Black far-right115px is outside the guide: continue natural materials without black border.'
+})
+p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')

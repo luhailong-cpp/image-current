@@ -1,0 +1,119 @@
+{
+  "task": "Read-only diagnosis of remaining r04_c05 issues after local r04_c04 railing repair",
+  "status": "diagnosis-complete-not-formal-acceptance",
+  "candidate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/continuation-20261011/south-v3/integrated-candidate-native.png",
+  "candidateSHA256": "0e9a0c64dd52be40467e10750e4de055051de8fdf67dd26deba57e4506a6f35f",
+  "candidateSize": [
+    4096,
+    4096
+  ],
+  "coordinateConvention": "tile pixel box [left,top,right,bottom), all review images native 1:1; ROI bounds include small context margins",
+  "writesToC05": false,
+  "generationForC05": false,
+  "selectionOrProgressChanged": false,
+  "findings": [
+    {
+      "id": "timber-left-small-material-jog",
+      "tileROI": [
+        109,
+        1018,
+        155,
+        1066
+      ],
+      "severity": "minor",
+      "observation": "Dark upright near x120 and red panel edge near x145 retain a tiny horizontal material change / edge notch near y1050. Main upright remains continuous.",
+      "qa": "diagnostic-c05-timber-residual.png"
+    },
+    {
+      "id": "gold-trim-right-small-jog",
+      "tileROI": [
+        448,
+        1031,
+        469,
+        1067
+      ],
+      "severity": "minor",
+      "observation": "Right boundary of the gold vertical trim has a tiny lateral step near y1050; no open gap or duplicate full trim.",
+      "qa": "diagnostic-c05-timber-residual.png"
+    },
+    {
+      "id": "pavement-mortar-small-step",
+      "tileROI": [
+        2037,
+        2007,
+        2075,
+        2036
+      ],
+      "severity": "minor",
+      "observation": "Horizontal pavement mortar/shadow line makes a short triangular 2-4 px height step near x2054,y2020. Requires local geometry continuity, not large surface regeneration.",
+      "qa": "diagnostic-c05-pavement-line.png"
+    },
+    {
+      "id": "plinth-cap-rectangular-tone-patch",
+      "tileROI": [
+        1988,
+        2795,
+        2059,
+        2816
+      ],
+      "severity": "minor",
+      "observation": "Small rectangular darker patch on the narrow top bevel of the gray plinth. Silhouette remains straight.",
+      "qa": "diagnostic-c05-plinth-tone.png"
+    },
+    {
+      "id": "plinth-face-vertical-material-boundary",
+      "tileROI": [
+        1918,
+        2818,
+        1953,
+        3954
+      ],
+      "severity": "minor",
+      "observation": "Very faint straight vertical texture/tone boundary centered near x1933 down the gray stone face. Continuous long plane; no geometry break. This is a long narrow material ROI, not a compact geometry defect.",
+      "qa": "diagnostic-c05-plinth-full.png"
+    },
+    {
+      "id": "south-segment04-inherited-green-strip",
+      "tileROI": [
+        2956,
+        3978,
+        4096,
+        4043
+      ],
+      "severity": "visible material/context conflict",
+      "observation": "Blurred foliage-like green strip sits immediately beneath the lion feet and above the pale stone cap. It visually corresponds to the old south-neighbor native upper halo. The actual c05/c05-south tile boundary at y4096 continues the stone face cleanly in the viewed 1024x320 cross-boundary strip. The green strip is above the neighbor core and can be targeted inside c05 while preserving the bottom native edge.",
+      "qa": "diagnostic-c05-south-green.png",
+      "neighborSource": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/../northwest/r05_c05/native/s01_04.png",
+      "neighborSHA256": "95707bd4e14faefbd77e7bb538fd7ac15382f40ffafce06f27d2e0103697758e",
+      "neighborNativeSize": [
+        1254,
+        1254
+      ],
+      "sameWorldC05TileBox": [
+        3072,
+        3981,
+        4096,
+        4096
+      ],
+      "sameWorldNeighborNativeBox": [
+        115,
+        0,
+        1139,
+        115
+      ],
+      "pixelIdentity": false,
+      "pixelCheck": "c05-south-inheritance-check.json",
+      "note": "Visual correspondence is not a claim of exact source-copy inheritance. 117654/117760 pixels differ, maximum channel difference 41. Green detector inside this overlap yields [3072,3981,4096,4038]."
+    }
+  ],
+  "actualViewedNativeQA": [
+    "diagnostic-c05-timber-residual.png",
+    "diagnostic-c05-pavement-line.png",
+    "diagnostic-c05-plinth-tone.png",
+    "diagnostic-c05-south-green.png",
+    "diagnostic-c05-south-four-cross.png",
+    "diagnostic-c05-south-old-neighbor-top.png",
+    "diagnostic-c05-plinth-full.png"
+  ],
+  "recommendation": "Root may address these small ROIs according to its current finish scope. This worker did not generate or mutate r04_c05; no acceptance or complete-all-QA claim."
+}

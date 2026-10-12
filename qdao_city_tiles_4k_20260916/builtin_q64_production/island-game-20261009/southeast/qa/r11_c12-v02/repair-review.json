@@ -1,0 +1,120 @@
+{
+  "tile": "r11_c12",
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r11_c12.candidate-v02.png",
+  "sha256": "0ed5fd885003178cf28ca75411e25299372b62a2cee34f705534f623d0a55bc9",
+  "reviewedAt": "2026-10-11T03:48:32.254315+00:00",
+  "reviewer": "tile_right repair operator, after independent discovery on v01",
+  "status": "internal_repair_review_pass",
+  "formalAcceptedCount": 0,
+  "independentDiscoveryReport": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r11_c12-independent-review.json",
+  "resolvedFindings": [
+    {
+      "location": "h31, p31/p32",
+      "before": "Lower rail bottom jumped 11 pixels at original x1024 source boundary; upper rail/rim also carried a smaller source mismatch.",
+      "after": "Both complete horizontal rails, picket joins and water/rim geometry are continuous across original seam and new native ownership boundaries.",
+      "repairNative": "native/r11_c12_railjoin_v02.png"
+    },
+    {
+      "location": "h41, p41/p42",
+      "before": "Deck joint jumped 17 pixels at original x1024 source boundary; parallel grooves were stepped together.",
+      "after": "Whole existing deck board assembly redrawn once; continuous slope, width, dark grooves, rim and highlights through original cut and both side boundaries.",
+      "repairNative": "native/r11_c12_deckjoin_v01.png"
+    }
+  ],
+  "visuallyReviewed": {
+    "wholeCandidate": true,
+    "changedSeams": [
+      "h31",
+      "h41",
+      "v21",
+      "v22",
+      "v31",
+      "v32"
+    ],
+    "changedJunctions": [
+      "junction_21",
+      "junction_31"
+    ],
+    "repairBoundaries": [
+      "r11_c12_railjoin_v02-left",
+      "r11_c12_railjoin_v02-right",
+      "r11_c12_railjoin_v02-top",
+      "r11_c12_railjoin_v02-bottom",
+      "r11_c12_deckjoin_v01-left",
+      "r11_c12_deckjoin_v01-right",
+      "r11_c12_deckjoin_v01-top",
+      "r11_c12_deckjoin_v01-bottom"
+    ],
+    "note": "All detail inspections were native pixel crops. Whole candidate preview was display downsampled only; stored candidate is unchanged 4096 x 4096."
+  },
+  "unchangedReplay": {
+    "seamCount": 18,
+    "junctionCount": 7,
+    "allByteIdenticalToV01": true,
+    "outer256Bands": {
+      "north": {
+        "sourceCrop": [
+          0,
+          0,
+          4096,
+          256
+        ],
+        "identicalToV01": true
+      },
+      "south": {
+        "sourceCrop": [
+          0,
+          3840,
+          4096,
+          4096
+        ],
+        "identicalToV01": false
+      },
+      "west": {
+        "sourceCrop": [
+          0,
+          0,
+          256,
+          4096
+        ],
+        "identicalToV01": true
+      },
+      "east": {
+        "sourceCrop": [
+          3840,
+          0,
+          4096,
+          4096
+        ],
+        "identicalToV01": true
+      }
+    }
+  },
+  "sourceIntegrity": {
+    "manifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\selected-native-r11_c12-repaired-v02.json",
+    "sourceIdMap": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r11_c12-v02\\source-id.png",
+    "sourceIdMapSha256": "56e76349cdc1f7ade3f1b645a0f8ee4e2f485fbcf9698c7b4b1d36335f9a8d42",
+    "nativeSourceCount": 18,
+    "candidatePixelCount": 16777216,
+    "exactPerPixelReplay": true,
+    "newRepairNatives": 2,
+    "actualModel": null,
+    "actualQuality": null,
+    "colorEdits": false,
+    "blending": false,
+    "resizing": false,
+    "filters": false
+  },
+  "hardOwnership": "Irregular paths select one original native pixel at the same world coordinate; no interpolation. Chosen in true overlap using source agreement. Exhaustive source-ID replay passed.",
+  "externalBorders": {
+    "north": "256px complete band unchanged; existing r10/r11 join QA inherited by exact pixels.",
+    "west": "256px complete band unchanged.",
+    "east": "256px complete band unchanged.",
+    "south": "Changed deck continues to candidate edge and generated native halo. No assembled southern neighbor exists in this review; external join remains unverified."
+  },
+  "remainingKnownInternalRepairDefects": [],
+  "limits": [
+    "This is internal visual and source QA, not formal external acceptance.",
+    "Original v01 candidate, original selection and all generation histories remain preserved."
+  ]
+}

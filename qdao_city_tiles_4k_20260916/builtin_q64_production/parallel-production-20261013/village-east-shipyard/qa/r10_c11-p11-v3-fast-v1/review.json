@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T08:26:08.114668+00:00",
+  "reviewType": "fast_recheck_previous_blockers_and_west_seam",
+  "tile": "r10_c11",
+  "patch": "p11",
+  "version": 3,
+  "status": "anchor_ready_pending_consolidated_QA",
+  "formalAccepted": false,
+  "fullTileInternalQaCompleted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p11-v3.png",
+    "sha256": "bf40e08bd61427455424e6a2b713dbb5198e1039efb5100ca410dddf63b340e8",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\layout-only\\p11-v2-conditioned-target.png",
+    "sha256": "150da4dd22caa840fcb84e9e69b7a62231aa00d0397501376deb7a2f49a25229",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "westAnchor": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-connected-net-v3.png",
+    "sha256": "a8a18455bcaa7d863115b023144952dd4b33c354d511477087c4bb9e20d03778",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "generationEvidence": {
+    "tool": "image_gen__imagegen",
+    "route": "existing built-in image tool",
+    "actualModel": null,
+    "actualModelStatus": "not returned / unknown",
+    "actualQuality": null,
+    "paidApiUsed": false
+  },
+  "dimensionsSatisfyContract": true,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "coreDimensions": [
+    1024,
+    1024
+  ],
+  "canAnchor": {
+    "p21_south": true,
+    "p12_east": true
+  },
+  "decision": "Allow this version as the next production anchor in both directions. The previously large cap/post offset and elevated east-running beam are corrected enough to remove the obvious propagation blocker. Local residual silhouette differences remain pending; this is not formal acceptance.",
+  "blockers": [],
+  "previousBlockerRecheck": [
+    {
+      "id": "B1_post_footprint_drift",
+      "status": "large_offset_resolved_for_anchor_use",
+      "candidateCapBoxApprox": [
+        470,
+        503,
+        756,
+        641
+      ],
+      "candidateCapCenterApprox": [
+        613,
+        572
+      ],
+      "requestedCapCenterApprox": [
+        620,
+        540
+      ],
+      "observed": "Single existing post has moved left and down, returning its cap to the intended region. The earlier roughly 70 px rightward and 100-130 px upward displacement is no longer present. Cap is about 30 px lower than the prompt nominal center; retain as a local residual, not a gross layout blocker.",
+      "southOutgoingAtY1139": {
+        "candidateShaftXApprox": [
+          389,
+          754
+        ],
+        "guideSoftShaftXApprox": [
+          430,
+          790
+        ],
+        "observed": "South shaft lies approximately 35-45 px left of the prior blurred-guide contour estimate. Guide edges are soft; this small residual is pending consolidated layout QA and does not show a duplicated post or disconnected support."
+      },
+      "evidence": [
+        "cap-guide-vs-candidate-100pct.png",
+        "south-shaft-guide-vs-candidate-100pct.png"
+      ]
+    },
+    {
+      "id": "B2_east_rail_height_drift",
+      "status": "large_offset_resolved_for_anchor_use",
+      "atCandidateNativeX": 1139,
+      "candidateRailYApprox": [
+        1100,
+        1250
+      ],
+      "guideRailWithHighlightYApprox": [
+        1070,
+        1225
+      ],
+      "observed": "East-running beam now occupies the intended lower-right guide region. Its main mass is aligned with the guide rail; the previous 100-140 px upward displacement is removed. Minor upper/lower contour differences remain within the blurred-guide comparison uncertainty.",
+      "evidence": [
+        "east-rail-guide-vs-candidate-100pct.png"
+      ]
+    }
+  ],
+  "quickChecks": [
+    {
+      "check": "west_core_join",
+      "status": "no_blocker_observed",
+      "sourceBoundaryX": 1139,
+      "candidateBoundaryX": 115,
+      "nativeWorldShiftX": 1024,
+      "observed": "Deck joints, rail contours and rope/net crossings remain continuous at the actual cut. No new gap, abrupt step or duplicate strip is visible.",
+      "evidence": [
+        "west-core-seam-100pct.png"
+      ]
+    },
+    {
+      "check": "post_count_and_beam_connection",
+      "status": "no_new_blocker_observed",
+      "observed": "One post is present in the candidate. The fixed western incoming rail connects behind the net/support region; the eastern beam joins the existing shaft without an additional post."
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P2_cap_small_vertical_residual",
+      "status": "pending_consolidated_QA",
+      "locationApprox": [
+        470,
+        503,
+        756,
+        641
+      ],
+      "observed": "Cap center is about 30 px below the nominal correction target; keep this recorded for complete-tile comparison."
+    },
+    {
+      "id": "P3_south_shaft_small_horizontal_residual",
+      "status": "pending_consolidated_QA",
+      "atNativeY": 1139,
+      "locationApproxX": [
+        389,
+        754
+      ],
+      "observed": "Outgoing shaft silhouette is approximately 35-45 px left of the earlier blurred-guide estimate; retain pending and use this exact native edge consistently in p21."
+    },
+    {
+      "id": "P1_local_wood_finish",
+      "status": "pending_consolidated_visual_QA_carried_forward",
+      "observed": "Previous local wood-grain/highlight consistency concern remains pending; detail rescanning was intentionally omitted in this fast blocker recheck."
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidence": [
+    {
+      "file": "west-core-seam-100pct.png",
+      "size": [
+        384,
+        1024
+      ],
+      "left": {
+        "input": "west",
+        "crop": [
+          947,
+          115,
+          1139,
+          1139
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          115,
+          115,
+          307,
+          1139
+        ],
+        "paste": [
+          192,
+          0
+        ]
+      },
+      "joinX": 192,
+      "purpose": "Actual west core seam at x192, source x1138 followed by candidate x115.",
+      "sha256": "01fc2b4c0e6260a2df6cafd6c2839c4d667e7606b05a0206776eebb35374b2ac"
+    },
+    {
+      "file": "cap-guide-vs-candidate-100pct.png",
+      "size": [
+        1100,
+        350
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          350,
+          400,
+          900,
+          750
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          350,
+          400,
+          900,
+          750
+        ],
+        "paste": [
+          550,
+          0
+        ]
+      },
+      "joinX": 550,
+      "purpose": "Same coordinate cap/footprint comparison; guide left, candidate right.",
+      "sha256": "1a630546673885f6901a71a04d91efaedec2eba76463ad629ece7de564bb5354"
+    },
+    {
+      "file": "south-shaft-guide-vs-candidate-100pct.png",
+      "size": [
+        1100,
+        254
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          350,
+          1000,
+          900,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          350,
+          1000,
+          900,
+          1254
+        ],
+        "paste": [
+          550,
+          0
+        ]
+      },
+      "joinX": 550,
+      "purpose": "Same coordinate south shaft comparison, core line y1139 lies at crop y139.",
+      "sha256": "310c555e4e2b2e725ca0f99202401595693049ddac3901e7bc21814cea4229a9"
+    },
+    {
+      "file": "east-rail-guide-vs-candidate-100pct.png",
+      "size": [
+        508,
+        304
+      ],
+      "left": {
+        "input": "target",
+        "crop": [
+          1000,
+          950,
+          1254,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      "right": {
+        "input": "candidate",
+        "crop": [
+          1000,
+          950,
+          1254,
+          1254
+        ],
+        "paste": [
+          254,
+          0
+        ]
+      },
+      "joinX": 254,
+      "purpose": "Same coordinate east outgoing beam comparison, core line x1139 lies at crop x139.",
+      "sha256": "e8c337a9506e2794189e84dfb82147d1fe5cadc80146e2634a131cb4e758b216"
+    }
+  ],
+  "evidenceViewedAt100Percent": true,
+  "candidateViewedAt100Percent": true,
+  "unchangedReferencesHashVerified": true,
+  "referenceCheckReusedFrom": "../r10_c11-p11-v2-fast-v1/review.json",
+  "resized": false,
+  "evidenceOperations": "Exact rectangular crop and horizontal concatenation only; no scaling, blending, sharpening or drawing.",
+  "scopeLimits": {
+    "historicalVersionsRescanned": false,
+    "overviewRebuilt": false,
+    "sourcesOrSelectionsEdited": false,
+    "gitTouched": false,
+    "generationPerformed": false,
+    "guidePixelsCountedAsFinal": false
+  },
+  "recommendedNextStep": "Proceed with p21 and p12 using p11-v3 as the same native anchor; maintain unchanged western anchor coordinates. Review the recorded small silhouette/material residuals during consolidated tile QA; do not report the tile formally accepted."
+}

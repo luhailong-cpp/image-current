@@ -1,0 +1,102 @@
+{
+  "slug": "10-xuanchaogui",
+  "reviewedAt": "2026-09-24T11:21:36.938Z",
+  "status": "passed-agent-visual-review",
+  "userApproval": false,
+  "legalConclusion": null,
+  "originality": "Black teal four-legged turtle with shallow celadon water-bowl shell, contained pebble/flower and rope knot; no human bearded warrior or coiling ice dragon. New animal silhouette and prop language.",
+  "directions": {
+    "E": "Three-quarter front down-right, face and front shell side visible; far hind leg naturally occluded.",
+    "W": "True back-up-left view with back of head and neck, rear shell wall and tail base, rear feet; no mirroring."
+  },
+  "completeness": "All visible extremities complete and natural leg occlusion; no detached effects. E returned opaque magenta; W native alpha.",
+  "style": "Fine painted dark scale texture, soft celadon jade midtones and rounded chibi proportions.",
+  "portrait": {
+    "direction": "E",
+    "crop": [
+      640,
+      485,
+      1165,
+      950
+    ],
+    "reviewed": true
+  },
+  "anchors": {
+    "E": [
+      628,
+      1070
+    ],
+    "W": [
+      637,
+      1110
+    ]
+  },
+  "postprocessNote": "Opaque magenta source retained. Final exports use documented optional 2px edge decontamination; 4244 mixed boundary pixels corrected with red knot protected; see records/qa/10-edge/verification.json.",
+  "evidence": [
+    "source/10-xuanchaogui-E.png",
+    "source/10-xuanchaogui-W.png",
+    "records/10-xuanchaogui-E.receipt.json",
+    "records/10-xuanchaogui-W.receipt.json"
+  ],
+  "finalExportReview": {
+    "reviewedAt": "2026-09-24T11:55:16.615959+00:00",
+    "status": "passed-agent-visual-review",
+    "sourceSha256Unchanged": "fbd52b40f56eb6f541316fd0ae8ff723d88e791eb19ce770df4b5e874d7ef4bc",
+    "observedDefect": "Small enclosed magenta background triangle below red knot between gold tassel and jade shell.",
+    "cleanup": {
+      "enabled": true,
+      "applied": true,
+      "method": "reviewed-bounded-key-colour-alpha-only-clear",
+      "sourceSha256": "fbd52b40f56eb6f541316fd0ae8ff723d88e791eb19ce770df4b5e874d7ef4bc",
+      "coordinateSpace": "native-source-top-left-pixels-half-open-box",
+      "selector": {
+        "minimumRedBlue": 60,
+        "minimumMagentaExcess": 20,
+        "maximumRedBlueRatio": 1.65
+      },
+      "regions": [
+        {
+          "reviewedSourceBox": [
+            189,
+            516,
+            211,
+            541
+          ],
+          "reason": "Visually verified enclosed magenta background gap under red knot, between left gold tassel and celadon shell; clear alpha only.",
+          "removedPixels": 69,
+          "removedSourceBbox": [
+            195,
+            523,
+            204,
+            536
+          ]
+        }
+      ],
+      "removedPixels": 69,
+      "rgbModifiedPixels": 0,
+      "nativeSourceUnchanged": true,
+      "note": "Only explicitly reviewed enclosed background gaps are affected; no global pink removal."
+    },
+    "verification": {
+      "sourceBytesUnchanged": true,
+      "sourceRgbModifiedPixels": 0,
+      "alphaOnlyChangedPixels": 69,
+      "actualChangedSourceBbox": [
+        195,
+        523,
+        204,
+        536
+      ],
+      "extractedSourceVisibleMagentaPixels": 0,
+      "reviewedRuntimePocketVisibleMagentaPixels": 0,
+      "otherRuntimeSemiTransparentMagentaPixelsAfterResampling": 35,
+      "visualInspection": "4x crop runtime x70,y340,width200,height175 on gray-green backing; gap now transparent, knot/tassel/shell contours intact. Full E/W pose and portrait also reviewed. Remaining 35 threshold hits are isolated partial-alpha outer-edge resampling pixels, with no visible fringe at full display scale."
+    },
+    "clientIntegrated": false,
+    "userApproval": false
+  },
+  "portraitFinalReview": {
+    "reviewedAt": "2026-09-24T12:31:41.386289+00:00",
+    "note": "Left edge moved 10 native pixels to exclude a separate 46-pixel foot fragment at the lower-left crop boundary; face and both eyes retained."
+  }
+}

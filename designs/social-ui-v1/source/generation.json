@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-14",
+  "tool": "host built-in image_gen",
+  "modelParameterExposed": false,
+  "qualityParameterExposed": false,
+  "qualityIntent": "Highest available visual quality",
+  "artReference": "source/reference-style.png",
+  "functionOnlyReferences": [
+    "source/reference-function-groups.png",
+    "source/reference-function-world.png",
+    "source/reference-function-rumor.png"
+  ],
+  "referenceTransport": "Conversation image reference after displaying project style through read-only thumbnail. Prior local path inputs failed with Windows sandbox ACL helper_unknown_error.",
+  "outputs": [
+    {
+      "file": "01-groups.png",
+      "width": 1931,
+      "height": 814,
+      "sha256": "6af434083218d5e50437b5803fadac4d09f0ece677a9c7c5247d958a7333d51f",
+      "resampled": false,
+      "prompt": "prompts/01-groups.prompt.txt",
+      "conversationReference": "Project specified style reference shown in conversation",
+      "num_last_images_to_include": 1
+    },
+    {
+      "file": "02-world.png",
+      "width": 1931,
+      "height": 814,
+      "sha256": "bf9db79437736b7d7e75a203a31c2053bb3930d8032848ac9492829339a209fd",
+      "resampled": false,
+      "prompt": "prompts/02-world.prompt.txt",
+      "conversationReference": "Generated 01-groups.png shown in conversation",
+      "num_last_images_to_include": 1
+    },
+    {
+      "file": "03-rumor.png",
+      "width": 1931,
+      "height": 814,
+      "sha256": "9fa6038af02985bab7dd909d472c17a9491308451544a05f64010d86f2c3e952",
+      "resampled": false,
+      "prompt": "prompts/03-rumor.prompt.txt",
+      "conversationReference": "Generated 02-world.png shown in conversation",
+      "num_last_images_to_include": 1
+    }
+  ]
+}

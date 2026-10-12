@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "independent native 100-percent visual QA",
+  "createdAtUtc": "2026-10-10T11:22:43.542Z",
+  "status": "needs_edge_revision_not_accepted",
+  "scope": "r09_c03/r09_c04 shared boundary repair only; source, index and progress unchanged",
+  "repairGlobalBox": [
+    11660,
+    33940,
+    12914,
+    35194
+  ],
+  "repairImage": "native/r09_c03_c04_boundary_tone_v01.png",
+  "candidatePrefix": "multi-boundary-v01",
+  "method": "Viewed unresampled native candidate crops and before/after ROI perimeter images. Full source-pixel validation was already performed by the assembly tool and was not repeated.",
+  "resolved": [
+    {
+      "id": "old_black_rectangle",
+      "result": "pass",
+      "description": "The former black rectangular patch in the door panel is completely removed; wood shading and panel bevel now continue through it.",
+      "evidence": "multi-boundary-independent-target-rectangle-base-left-candidate-right-100pct.png",
+      "cropRepairBox": [
+        540,
+        790,
+        860,
+        1050
+      ]
+    },
+    {
+      "id": "old_tile_boundary_roof_beam_tone",
+      "result": "pass_for_original_target",
+      "description": "The straight brightness boundary through blue roof tiles and the upper wooden beam is removed. Main roof-tile rims, beam outline and gold detail remain connected at the tile join.",
+      "evidence": "multi-boundary-independent-roof-and-upper-beam-base-left-candidate-right-100pct.png",
+      "cropRepairBox": [
+        480,
+        130,
+        800,
+        700
+      ]
+    },
+    {
+      "id": "top_right_roi_perimeter",
+      "result": "no_obvious_new_large_contour_break",
+      "description": "Top blue/gold roof contours and right wood joint do not show an obvious new large silhouette break at native viewing scale.",
+      "evidence": [
+        "multi-boundary-v01-roi1-top-base-first-candidate-second-100pct.png",
+        "multi-boundary-independent-right-corner-transition-base-left-candidate-right-100pct.png"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "new_left_roi_tone_and_bevel_step",
+      "severity": "blocks_visual_acceptance",
+      "description": "The selected repair introduces a visible wavy near-vertical brightness boundary on the long wooden beam at the ROI left perimeter. The lower beveled beam edges have small visible steps where this boundary crosses them; this was absent from the base image.",
+      "approximateRepairBox": [
+        340,
+        510,
+        410,
+        940
+      ],
+      "approximateGlobalBox": [
+        12000,
+        34450,
+        12070,
+        34880
+      ],
+      "evidence": "multi-boundary-independent-left-wood-beam-transition-base-left-candidate-right-100pct.png"
+    },
+    {
+      "id": "new_bottom_roi_door_color_contour",
+      "severity": "blocks_visual_acceptance",
+      "description": "The ROI bottom perimeter leaves a shallow curved/jagged horizontal tonal boundary on the door panel above/right of the red diamond decoration. It reads as a patch edge rather than a continuous wood stroke and was absent in the base.",
+      "approximateRepairBox": [
+        560,
+        1070,
+        770,
+        1140
+      ],
+      "approximateGlobalBox": [
+        12220,
+        35010,
+        12430,
+        35080
+      ],
+      "evidence": "multi-boundary-independent-bottom-door-transition-base-left-candidate-right-100pct.png"
+    }
+  ],
+  "recommendation": "Retain the successful central repair as a candidate, but revise its left/bottom transition selection or repair those transitions before accepting. Inspect whole beam/panel junction if another localized attempt fails. Do not mark either tile or this boundary as visually accepted yet.",
+  "limitations": [
+    "Visual review only; no game or runtime validation performed.",
+    "Coordinates of defect bounds are approximate diagnostic bounds; source and output coordinates are unchanged."
+  ],
+  "qaOnly": true
+}

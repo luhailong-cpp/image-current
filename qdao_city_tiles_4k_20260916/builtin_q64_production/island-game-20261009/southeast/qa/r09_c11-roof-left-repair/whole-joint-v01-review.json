@@ -1,0 +1,321 @@
+{
+  "timestamp": "2026-10-11T13:43:16.159605+00:00",
+  "status": "native_saved_geometry_anchor_rejected",
+  "decision": "The full native source removes the old strong straight blue bar and has internally continuous new barrel surfaces, but moves the explicitly immovable old terminal disc and curved trough endpoint. It is not eligible for final object-mask assembly or promotion.",
+  "native": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_whole_joint_v01.png",
+  "nativeSha256": "840acb41cf62e1a43dc71cb32025e6bb19a4cd9f26ea241e186fb87e4218d450",
+  "originRelativeR09c11": [
+    3230,
+    370
+  ],
+  "actualBuiltinCallsThisAuthorizedRound": 1,
+  "successfulCalls": 1,
+  "additionalCalls": 0,
+  "networkError": false,
+  "pendingRequest": false,
+  "actualModel": null,
+  "actualQuality": null,
+  "findings": [
+    {
+      "severity": "reject",
+      "object": "fixed old lower-left terminal disc",
+      "localInspectionBox": [
+        40,
+        650,
+        470,
+        1060
+      ],
+      "relativeR09c11InspectionBox": [
+        3270,
+        1020,
+        3700,
+        1430
+      ],
+      "detail": "The complete old gold terminal is visibly displaced left and upward. Its illuminated gold bounding box moves from [116,857,252,973] to [96,847,234,959], approximately 20px left and 10-17px up. Keeping this generated object violates the fixed-anchor requirement; restoring the old object reintroduces the incompatible joint."
+    },
+    {
+      "severity": "reject",
+      "object": "fixed terminal upper curved joint and right trough endpoint",
+      "targetEndpointApproxLocal": [
+        400,
+        850
+      ],
+      "generatedEndpointApproxLocal": [
+        360,
+        828
+      ],
+      "targetEndpointApproxRelativeR09c11": [
+        3630,
+        1220
+      ],
+      "generatedEndpointApproxRelativeR09c11": [
+        3590,
+        1198
+      ],
+      "detail": "The right contact still differs by approximately 40px horizontally and22px vertically. Two original sources do not provide the same continuous joint at a common coordinate. This is a geometric discrepancy, not ordinary paint grain."
+    },
+    {
+      "severity": "improved",
+      "object": "old strong vertical source bar localx584/world-relative-r09c11x3814",
+      "detail": "The straight pale/dark material division is removed within the generated roof. No new source-internal major discontinuity was observed in the replacement blue body or upper curved joint."
+    },
+    {
+      "severity": "secondary_minor",
+      "object": "top anchor corner near local[70,90,170,125]",
+      "detail": "A small rectangular texture/tone remnant from the mechanical anchor corner remains visible. It is secondary to the fixed terminal geometry failure and is not promoted as acceptable."
+    }
+  ],
+  "goldMeasurement": [
+    {
+      "source": "target",
+      "illuminatedGoldPixelBoxInclusive": [
+        116,
+        857,
+        252,
+        973
+      ],
+      "illuminatedPixelCentroid": [
+        191.41115311909263,
+        902.3635790800251
+      ],
+      "note": "Color-defined gold pixels, not a fitted geometric ellipse center; direct same-coordinate crops corroborate object displacement."
+    },
+    {
+      "source": "generated",
+      "illuminatedGoldPixelBoxInclusive": [
+        96,
+        847,
+        234,
+        959
+      ],
+      "illuminatedPixelCentroid": [
+        175.1196926809543,
+        885.2151233319854
+      ],
+      "note": "Color-defined gold pixels, not a fitted geometric ellipse center; direct same-coordinate crops corroborate object displacement."
+    }
+  ],
+  "diagnosticAnchorPixelStatistics": [
+    {
+      "name": "top115",
+      "localBox": [
+        70,
+        0,
+        1254,
+        115
+      ],
+      "changedPixels": 135244,
+      "pixelCount": 136160,
+      "meanAbsoluteRGBDifference": 5.725252154328241,
+      "note": "Diagnostic only; visual contour/position findings determine rejection."
+    },
+    {
+      "name": "left115",
+      "localBox": [
+        0,
+        0,
+        115,
+        1254
+      ],
+      "changedPixels": 144177,
+      "pixelCount": 144210,
+      "meanAbsoluteRGBDifference": 14.957839262187088,
+      "note": "Diagnostic only; visual contour/position findings determine rejection."
+    },
+    {
+      "name": "right115",
+      "localBox": [
+        1139,
+        0,
+        1254,
+        1254
+      ],
+      "changedPixels": 143642,
+      "pixelCount": 144210,
+      "meanAbsoluteRGBDifference": 4.36349998844278,
+      "note": "Diagnostic only; visual contour/position findings determine rejection."
+    },
+    {
+      "name": "bottom115",
+      "localBox": [
+        0,
+        1139,
+        1254,
+        1254
+      ],
+      "changedPixels": 144154,
+      "pixelCount": 144210,
+      "meanAbsoluteRGBDifference": 4.1384762961422,
+      "note": "Diagnostic only; visual contour/position findings determine rejection."
+    },
+    {
+      "name": "fixedTerminal",
+      "localBox": [
+        60,
+        730,
+        410,
+        1020
+      ],
+      "changedPixels": 101486,
+      "pixelCount": 101500,
+      "meanAbsoluteRGBDifference": 32.07487027914614,
+      "note": "Diagnostic only; visual contour/position findings determine rejection."
+    }
+  ],
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\whole-joint-terminal-target.png",
+      "sha256": "6767fc600413cd5be7acf072b96dafb9dbc94ef39d3117067a253565ce58b8db",
+      "source": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\r09_c11_roof_whole_joint_v01.native-context.png",
+      "sourceNativeCrop": [
+        40,
+        650,
+        470,
+        1060
+      ],
+      "relativeR09c11Crop": [
+        3270,
+        1020,
+        3700,
+        1430
+      ],
+      "cropPixelMismatch": 0,
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\whole-joint-terminal-generated.png",
+      "sha256": "3a6aa0cdc8c663c121b9bd642207a8fe21ebb4d3e6b043b00daa7c9df7b38975",
+      "source": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_whole_joint_v01.png",
+      "sourceNativeCrop": [
+        40,
+        650,
+        470,
+        1060
+      ],
+      "relativeR09c11Crop": [
+        3270,
+        1020,
+        3700,
+        1430
+      ],
+      "cropPixelMismatch": 0,
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\whole-joint-upper-target.png",
+      "sha256": "536b34f23bc6c18948f519ccde54e6ee83f60728f02cddb48fc5c69e0b184333",
+      "source": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\r09_c11_roof_whole_joint_v01.native-context.png",
+      "sourceNativeCrop": [
+        250,
+        90,
+        700,
+        400
+      ],
+      "relativeR09c11Crop": [
+        3480,
+        460,
+        3930,
+        770
+      ],
+      "cropPixelMismatch": 0,
+      "resized": false
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\whole-joint-upper-generated.png",
+      "sha256": "cec9b39253976dd7b1d64274b9f7d54f6e753c73e22064435d0ab9855097c36c",
+      "source": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_whole_joint_v01.png",
+      "sourceNativeCrop": [
+        250,
+        90,
+        700,
+        400
+      ],
+      "relativeR09c11Crop": [
+        3480,
+        460,
+        3930,
+        770
+      ],
+      "cropPixelMismatch": 0,
+      "resized": false
+    }
+  ],
+  "sourceAudit": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "nativeSha256": "840acb41cf62e1a43dc71cb32025e6bb19a4cd9f26ea241e186fb87e4218d450",
+    "nativeMatchesGeneratedOutput": true,
+    "nativeMatchesRecord": true,
+    "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\prompts\\r09_c11_roof_whole_joint_v01.prompt.txt",
+    "promptShaMatches": true,
+    "request": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\prompts\\r09_c11_roof_whole_joint_v01.request.json",
+    "requestShaMatches": true,
+    "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\receipts\\r09_c11_roof_whole_joint_v01.json",
+    "receiptShaMatches": true,
+    "references": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\r09_c11_roof_whole_joint_v01.native-context.png",
+        "exists": true,
+        "shaMatches": true
+      },
+      {
+        "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+        "exists": true,
+        "shaMatches": true
+      },
+      {
+        "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-detail-v1.png",
+        "exists": true,
+        "shaMatches": true
+      },
+      {
+        "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+        "exists": true,
+        "shaMatches": true
+      }
+    ],
+    "actualModel": null,
+    "actualQuality": null,
+    "configIsTargetOnly": true,
+    "submittedModelQuality": {
+      "model": null,
+      "quality": null
+    },
+    "resizedAfterGeneration": false
+  },
+  "mainCandidates": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r09_c11.candidate-v04.png",
+      "sha256": "e2ba04b0f1605c7c228a7a40fcfb9dafd65beb5ea6b2fb1817046a435ec0dcbf",
+      "unchangedFromRoundBase": true
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r09_c12.candidate-v08.png",
+      "sha256": "bf41fc7060cf4fed831baf48d2a595fd6baf70d4c5f21926ced0fca8285988eb",
+      "unchangedFromRoundBase": true
+    }
+  ],
+  "noFinalObjectTrialCreatedAfterFailedGeometryGate": true,
+  "formalAccepted": false,
+  "usableExternalAccepted": false,
+  "optionsWithoutAutomaticExecution": [
+    {
+      "option": "Preserve the fixed old geometry requirement",
+      "action": "Keep both main candidates unchanged. Retain this native only as a saved source/material reference. A future distinct request, if separately chosen, should use the complete old barrel/terminal geometry as the sole geometry authority and the new upper roof only as a color/material reference, rather than freezing two currently incompatible endpoint geometries into one image."
+    },
+    {
+      "option": "Prepare a different structural guide before a future original call",
+      "action": "A reversible guide may suppress the old interior vertical material bar while retaining exact old tile contours, both old terminal silhouettes, and wood anchors. The next source would rebuild the complete barrel against those fixed contours; it must then be checked against the upper source before ownership. Do not repeat the same prompt/target or slide/resize any source to conceal the measured gap."
+    }
+  ],
+  "policyReassessment": {
+    "timestamp": "2026-10-11T15:30:36.111937+00:00",
+    "supersedesRejectionForWholeObjectTrial": true,
+    "historicalMeasuredPositionsRetained": true,
+    "reason": "Parent clarified that complete-object internal displacement is allowed if actual cross-source boundaries avoid breakage/double edges or strong material discontinuity. Original anchor-only rejection is historical and not the final verdict.",
+    "currentReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\whole-object-v05-review.json",
+    "currentStatus": "internal_candidate_with_documented_minor_boundary_defects"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 2,
+  "reviewedAtUtc": "2026-10-09T15:59:34.3806560Z",
+  "image": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c13\\candidate\\r13_c13-4k-candidate-repaired.png",
+  "imageSha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+  "imageSize": [
+    4096,
+    4096
+  ],
+  "contextImage": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c13\\candidate\\r13_c13-context-4326-repaired.png",
+  "contextImageSha256": "d15bf1ad12cb71edcfbd54d7692c4e8b69131937b7b32c54b848bb1983e9cf12",
+  "contextImageSize": [
+    4326,
+    4326
+  ],
+  "internalVerdict": "pass",
+  "externalVerdict": "pending",
+  "formalAccepted": false,
+  "internalScope": "Visual continuity within the formal 4096 core, incorporating the previous six-repair audit and direct native-pixel inspection of the seventh repair plus all visible repair perimeters.",
+  "method": "Current native-pixel crops only; no resizing. Inspected full new repair clipped to formal core with 64px outside its placement, a detailed right-edge strip, and the right repair perimeter extending through the 115px outer halo.",
+  "currentRepairRecord": "repairs/context-composition.json",
+  "currentRepairRecordSha256": "35d7f4842d1780b49b3b5bad15ac21586d36f38a983e976d42c4175fb2637f3d",
+  "reviewedAreas": [
+    {
+      "id": "umbrella-edge-context-v1-formal-core",
+      "placementInTileCoordinates": [
+        2950,
+        650,
+        4204,
+        1904
+      ],
+      "reviewedCoreBox": [
+        2886,
+        586,
+        4096,
+        1968
+      ],
+      "nativePixelCrop": "edge-repair-core-and-perimeter-db5f9566-100pct.png",
+      "cropSha256": "ba16cade3ecac96787f362f3dd16a0b675761f0519fdcafcbdbadd745d27cd3d",
+      "resized": false,
+      "result": "pass",
+      "observed": "Ribs converge coherently, red/cream rim continues through the formal right edge, and no material geometry or tonal break is visible along the reviewed left/top/bottom repair boundaries."
+    },
+    {
+      "id": "previous-offending-right-core-edge",
+      "reviewedCoreBox": [
+        3900,
+        1050,
+        4096,
+        1830
+      ],
+      "nativePixelCrop": "right-edge-db5f9566-100pct.png",
+      "resized": false,
+      "result": "pass",
+      "observed": "Previously detached bamboo endpoint and displaced red/cream rim are no longer present inside x0-4095."
+    },
+    {
+      "id": "right-repair-outer-halo",
+      "reviewedContextBox": [
+        4000,
+        701,
+        4326,
+        2083
+      ],
+      "reviewedBoxInTileCoordinates": [
+        3885,
+        586,
+        4211,
+        1968
+      ],
+      "formalCoreRightEdgeInThisCrop": 211,
+      "nativePixelCrop": "edge-repair-context-d15bf1ad-100pct.png",
+      "resized": false,
+      "result": "pending_outer_halo_repair_and_neighbor_review"
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "right-umbrella-preserved-perimeter",
+      "previousCoveredImageSha256": "e7072b7d82a4fca2e30d2cc45b84f103309e9d2db373c5d62c404cd9e92308d1",
+      "currentCoreStatus": "resolved",
+      "resolution": "The repair now continues across x4096 inside the repair interior, removing the prior core-edge rib and rim mismatch."
+    }
+  ],
+  "unresolvedFindings": [
+    {
+      "id": "outer-halo-old-geometry",
+      "scope": "outside_formal_core",
+      "priority": 2,
+      "approximateBoxInTileCoordinates": [
+        4150,
+        1080,
+        4211,
+        1720
+      ],
+      "blocksInternalCorePass": false,
+      "blocksFormalAcceptance": true,
+      "observed": "At the far-right repair transition, beyond the formal x4096 edge, an old bamboo segment and offset rim reappear around x4155-4211. The halo is therefore not a validated seamless neighbor handoff.",
+      "requiredNextAction": "Resolve the remaining outer-halo geometry together with the adjacent tile native artwork; inspect the shared seam and corner at native pixels before formal acceptance.",
+      "evidence": "edge-repair-context-d15bf1ad-100pct.png"
+    }
+  ],
+  "previousReviews": [
+    {
+      "coveredImageSha256": "e7072b7d82a4fca2e30d2cc45b84f103309e9d2db373c5d62c404cd9e92308d1",
+      "supersededForCurrentCore": true,
+      "evidenceTextAndResults": {
+        "schemaVersion": 1,
+        "reviewedAtUtc": "2026-10-09T15:44:55.9024218Z",
+        "image": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c13\\candidate\\r13_c13-4k-candidate-repaired.png",
+        "imageSha256": "e7072b7d82a4fca2e30d2cc45b84f103309e9d2db373c5d62c404cd9e92308d1",
+        "imageSize": [
+          4096,
+          4096
+        ],
+        "compositionHistory": "repairs/composition-history.json",
+        "compositionHistorySha256": "0f0dd3ccbd38b3c6c9eeabf9bc30a6a0a08d43a7d9630be2eab779bbfb2eaafe",
+        "method": "Six current-image native-pixel crops include each repair and 64px outside its perimeter; no crop resizing. Additional 512x512 endpoint and 196x780 right-edge crops were inspected. Overview used only for orientation.",
+        "reviewedAreas": [
+          {
+            "id": "umbrella-left-v1",
+            "repairBox": [
+              2450,
+              320,
+              3704,
+              1574
+            ],
+            "reviewedBox": [
+              2386,
+              256,
+              3768,
+              1638
+            ],
+            "nativePixelCrop": "area-umbrella-left-v1-with-perimeter-100pct.png",
+            "cropSha256": "fcd8155887502ea5cb6346c05c869358ede2291f9d4b97f2f2e1a203cef2bcae",
+            "resized": false,
+            "result": "no_material_discontinuity_observed_in_reviewed_area"
+          },
+          {
+            "id": "umbrella-lower-v1",
+            "repairBox": [
+              2842,
+              700,
+              4096,
+              1954
+            ],
+            "reviewedBox": [
+              2778,
+              636,
+              4096,
+              2018
+            ],
+            "nativePixelCrop": "area-umbrella-lower-v1-with-perimeter-100pct.png",
+            "cropSha256": "f9321dd4b32364d2efafcb44f1a894ae604b85b9bf1ee7e8e949f19e9900b2e2",
+            "resized": false,
+            "result": "fail_right_perimeter_geometry"
+          },
+          {
+            "id": "ground-middle-v1",
+            "repairBox": [
+              1680,
+              2570,
+              2934,
+              3824
+            ],
+            "reviewedBox": [
+              1616,
+              2506,
+              2998,
+              3888
+            ],
+            "nativePixelCrop": "area-ground-middle-v1-with-perimeter-100pct.png",
+            "cropSha256": "a05d912edbfafba30db16994f974733e2f4be77f8e524a023e62134811f54fa6",
+            "resized": false,
+            "result": "no_material_discontinuity_observed_in_reviewed_area"
+          },
+          {
+            "id": "ground-right-v1",
+            "repairBox": [
+              2450,
+              2500,
+              3704,
+              3754
+            ],
+            "reviewedBox": [
+              2386,
+              2436,
+              3768,
+              3818
+            ],
+            "nativePixelCrop": "area-ground-right-v1-with-perimeter-100pct.png",
+            "cropSha256": "b61965f38961eb357d03113b2c97d0e4243a9b1016fd341ac35a9e53663ba9fb",
+            "resized": false,
+            "result": "no_material_discontinuity_observed_in_reviewed_area"
+          },
+          {
+            "id": "border-left-v1",
+            "repairBox": [
+              650,
+              2480,
+              1904,
+              3734
+            ],
+            "reviewedBox": [
+              586,
+              2416,
+              1968,
+              3798
+            ],
+            "nativePixelCrop": "area-border-left-v1-with-perimeter-100pct.png",
+            "cropSha256": "c36d89d1f4da54af67c7d81d0af7ec92e5469ffbb9791863103d4c9657688f58",
+            "resized": false,
+            "result": "no_material_discontinuity_observed_in_reviewed_area"
+          },
+          {
+            "id": "plant-floor-v1",
+            "repairBox": [
+              1570,
+              1200,
+              2824,
+              2454
+            ],
+            "reviewedBox": [
+              1506,
+              1136,
+              2888,
+              2518
+            ],
+            "nativePixelCrop": "area-plant-floor-v1-with-perimeter-100pct.png",
+            "cropSha256": "f7c55134671bbc4680a489b2d5c365b5a124c69336feb841953c4ee03e9566ed",
+            "resized": false,
+            "result": "no_material_discontinuity_observed_in_reviewed_area"
+          }
+        ],
+        "internalVerdict": "fail",
+        "externalVerdict": "pending",
+        "formalAccepted": false,
+        "unresolvedFindings": [
+          {
+            "id": "right-umbrella-preserved-perimeter",
+            "priority": 1,
+            "globalBox": [
+              4025,
+              1085,
+              4096,
+              1680
+            ],
+            "title": "Right parasol ribs and rim remain discontinuous in preserved perimeter",
+            "observed": "Near x4050,y1140-1180, a bamboo rib fades into a blunt end while an old rib segment resumes higher at the right edge. The same x4050-4096 strip also offsets the red/cream rim around y1395 and the lower rim/shadow around y1630. This is an internal geometry discontinuity visible before comparison with a neighboring tile.",
+            "evidence": [
+              "right-bamboo-endpoint-100pct.png",
+              "right-umbrella-perimeter-100pct.png",
+              "area-umbrella-lower-v1-with-perimeter-100pct.png"
+            ],
+            "likelyCause": "The 24px unchanged perimeter plus 24px alpha transition retained the old edge geometry while the repaired interior changed its rib/rim positions.",
+            "requiredRepair": "Use the available 4326 context to move the formal right edge inside a native repair window, rather than preserving the erroneous x4096-side perimeter again. Continue the same rib centerline and both rim boundaries through x4096, then recrop the formal 4096 tile and retain the corrected outer context.",
+            "suggestedNative1254ContextBoxInTileCoordinates": [
+              2950,
+              650,
+              4204,
+              1904
+            ],
+            "suggestedBoxIncludesOutsideFormalTile": true,
+            "externalSeamStillPending": true
+          }
+        ],
+        "resolvedComparedWithInitialCandidate": [
+          "Gross duplicate parasol and disconnected left spokes removed",
+          "Former y3187 horizontal ground break removed in both ground repairs",
+          "Left border cap transition is coherent at native view; no new T-shaped branch observed",
+          "Detached central foliage removed and paving/grout continued"
+        ],
+        "limits": "Only this exact repaired SHA is covered. External neighbor art and client rendering were not available for this audit. No progress or acceptance state was modified."
+      }
+    }
+  ],
+  "limits": "This internal pass applies only to the exact current 4096 SHA. Outer halo and neighbor seams remain pending; no client integration or formal acceptance is implied. Progress was not modified."
+}

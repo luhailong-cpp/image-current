@@ -1,0 +1,107 @@
+{
+  "createdAtUtc": "2026-10-10T10:25:55.302660+00:00",
+  "reviewer": "art_qa",
+  "status": "six_nose_topology_pass_but_direct_coordinate_guide_requires_correction",
+  "generatedStructure": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/stair-rebuild/r10_c04_sixstep_structure_v1.png",
+    "sha256": "3662ad39d68540baa0bff38a72e666639867bddbe03285d1dc9a148167079b82"
+  },
+  "originalStructureGuide": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/r10_c04-six-step-structure-layout-1254.png",
+    "sha256": "032027476d3850a519b2d807e0f45752c517af489bf83441457e5bf7138d73b4"
+  },
+  "originalTileGuide": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/layout-only/r10_c04.png",
+    "sha256": "d8b491c6d1a000983b015dd2cfa85b983e50727ef6d2027c282e0c6f232d8e9c"
+  },
+  "lineFits": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/r10_c04-six-step-layout-line-fits.json",
+    "sha256": "941041fd047c28693e12ac41c0c5e449709e9f95cf2faabf2e12009d3eb01bdf"
+  },
+  "reviewedAtNativeScale": true,
+  "centerStrip": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/stair-structure-v1-center-strip-100pct.png",
+    "sha256": "12d83c211ac7ee907120096cd4c7d52dca1bc8cf5819829f28aae47721ae7845",
+    "sourceBox": [
+      600,
+      200,
+      800,
+      1000
+    ],
+    "operation": "integer crop only",
+    "dimensions": [
+      200,
+      800
+    ]
+  },
+  "sourceCoordinateCorrection": {
+    "lineFitsSpace": "1254-square entire r10_c04 tile guide, not the offset structure guide",
+    "tileEquation": "tileY = slope * (tileX - 700*4096/1254) + yAtGuideX700*4096/1254",
+    "structureGuideEquation": "v = slope * (u + 78.375 - 700) + yAtGuideX700 + 235.125",
+    "structureCropTileBox": [
+      256,
+      -768,
+      4352,
+      3328
+    ]
+  },
+  "sixNosesAtStructureX700": [
+    {
+      "stepFromTop": 1,
+      "originalTileGuideYAtX700": 145.72847503373814,
+      "structureGuideExpectedYAtX700": 346.83,
+      "generatedStructureApproxYAtX700": 349,
+      "driftStructureGuidePx": 2.17,
+      "driftNativePx": 7.1
+    },
+    {
+      "stepFromTop": 2,
+      "originalTileGuideYAtX700": 243.13265856950053,
+      "structureGuideExpectedYAtX700": 444.51,
+      "generatedStructureApproxYAtX700": 456,
+      "driftStructureGuidePx": 11.49,
+      "driftNativePx": 37.5
+    },
+    {
+      "stepFromTop": 3,
+      "originalTileGuideYAtX700": 335.6125506072874,
+      "structureGuideExpectedYAtX700": 536.66,
+      "generatedStructureApproxYAtX700": 561,
+      "driftStructureGuidePx": 24.34,
+      "driftNativePx": 79.5
+    },
+    {
+      "stepFromTop": 4,
+      "originalTileGuideYAtX700": 427.89730094466915,
+      "structureGuideExpectedYAtX700": 631.77,
+      "generatedStructureApproxYAtX700": 665,
+      "driftStructureGuidePx": 33.23,
+      "driftNativePx": 108.5
+    },
+    {
+      "stepFromTop": 5,
+      "originalTileGuideYAtX700": 520.1476383265855,
+      "structureGuideExpectedYAtX700": 720.98,
+      "generatedStructureApproxYAtX700": 769,
+      "driftStructureGuidePx": 48.02,
+      "driftNativePx": 156.8
+    },
+    {
+      "stepFromTop": 6,
+      "originalTileGuideYAtX700": 619.5700404858297,
+      "structureGuideExpectedYAtX700": 822.26,
+      "generatedStructureApproxYAtX700": 874,
+      "driftStructureGuidePx": 51.74,
+      "driftNativePx": 169.0
+    }
+  ],
+  "findings": [
+    "Six visible noses including the upper landing are present, with no disconnected short stair segments.",
+    "Generated flight lower lines progressively drift downward, reaching about 52 structure pixels / 170 native pixels at the last nose; do not use direct isotropic enlargement to define final patch coordinates.",
+    "New squared lower-left stone post and shifted right wall/ground edge must not be copied into native output merely because they appear in the generated structure reference.",
+    "Original native lanterns, poles and preserved northern stone post remain separate anchors; masks should follow the object contours so old eight-step background is not locked behind rectangular exclusions."
+  ],
+  "allowedUse": "Whole-object six-step form/style reference; native geometry still derives from original layout and corrected six-line coordinate equations.",
+  "notProductionArt": true,
+  "finalAcceptance": false
+}

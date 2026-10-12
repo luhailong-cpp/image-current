@@ -1,0 +1,115 @@
+{
+  "status": "targeted_x2048_repair_passed_internal_visual_review",
+  "reviewedAtUtc": "2026-10-10T11:27:25.919493+00:00",
+  "formalAccepted": false,
+  "counts": {
+    "newBuiltinNativeOutputs": 1,
+    "toolErrors": 0,
+    "nativePixels": [
+      1254,
+      1254
+    ],
+    "newSpatialCoverage": 0
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "outputs": {
+    "context": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\output\\tone-v1\\r11-p01-p02.repaired.context.png",
+      "sha256": "3149b7169983dffcbf232acbf77d349eb8822ebed9e7b3d61c716e40f05238c1",
+      "pixels": [
+        4326,
+        2278
+      ],
+      "resampled": false
+    },
+    "core": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\output\\tone-v1\\r11-p01-p02.repaired.core.png",
+      "sha256": "3a8d0367837799493f26e476fc098be733389001e0979e90309cacbec05d3dae",
+      "pixels": [
+        4096,
+        2048
+      ],
+      "resampled": false
+    }
+  },
+  "boundedPatch": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\output\\tone-v1\\row2-x2048.overlay.patch.png",
+    "sha256": "8eac203e3f0acedb994d72afaa28308403cb23d4dc471313c159360ef879fd1d",
+    "pixels": [
+      1254,
+      575
+    ],
+    "contextBox": [
+      1536,
+      1074,
+      2790,
+      1649
+    ],
+    "tileCoreBox": [
+      1421,
+      959,
+      2675,
+      1534
+    ],
+    "worldBox": [
+      17805,
+      41919,
+      19059,
+      42494
+    ],
+    "blendAlreadyApplied": true,
+    "additionalFeatherNeeded": false
+  },
+  "findings": [
+    {
+      "seamCoreX": 1024,
+      "status": "unchanged_minor_texture_transition",
+      "description": "Geometry is connected. Some left/right stone texture variation remains, without the conspicuous diagonal color block seen at x2048."
+    },
+    {
+      "seamCoreX": 2048,
+      "status": "repaired",
+      "description": "The obvious diagonal warm/cool color divisions on the three stair risers are removed. Stair edges and slab joints remain continuous; all red paper fragments remain untouched."
+    },
+    {
+      "seamCoreX": 3072,
+      "status": "unchanged_remaining_review_item",
+      "priority": "P2",
+      "description": "An existing milder slanted warm/cool stone transition remains near the upper stair riser; it is outside this repair. No claim that the entire second row has passed final QA."
+    }
+  ],
+  "scopeNote": "Repair is within the second native row context, including its upper overlap. Context rows0:1024 owned by first-row v5 are unchanged. The affected tile-core box starts at y959 because native row2 includes a115px upper halo.",
+  "checks": {
+    "firstRowV5Context0to1024PixelExact": true,
+    "secondRowBottom230PixelExact": true,
+    "allPixelsOutsideAffectedRectangleMatchCombinedBase": true,
+    "r10FinalUnchanged": true,
+    "originalParentContextUnchanged": true,
+    "allRedPaperFragmentsUnchanged": true,
+    "resampling": false,
+    "colorAdjustment": false,
+    "warping": false
+  },
+  "integration": {
+    "optionA": "After applying first-row v5, paste the supplied1254x575 patch at full-context coordinate(1536,1074). The closed seam is already included; do not resize or add feather.",
+    "optionB": "For a full context based on the unchanged original first-two-row sources, replace only full-context rows0:2048 with this repaired two-row context. Preserve rows2048 onward from the current full context so the existing row2/row3 blend remains intact.",
+    "doNotPasteAll2278ContextRowsOverAnAlreadyAssembledThirdRow": true,
+    "sourceParentContext": {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\pipeline\\output\\a50210b57293e7dc\\r11_c05.partial-p01_01-p02_04.context.png",
+      "sha256": "19f5d95f4c27c28f4efca1e23b6a637ed5e83cb4b9b2443eef4f26b03aed39b4"
+    }
+  },
+  "evidence": {
+    "assembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\output\\tone-v1\\repair-assembly.json",
+    "assemblySha256": "9e0d6152e092e3f1fc896000af152875b26579b5c3445384324c667799098add",
+    "nativeRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\native\\row2-x2048-tone.png.generation.json",
+    "nativeRecordSha256": "e3c11aad9fade54b593359341d575d8496c115c6ee73da1b74812dddb0127bc1",
+    "prompt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\prompts\\row2-x2048-tone.prompt.txt",
+    "promptSha256": "468d34f738ec3d6ba6b692de1524c8fbe7ee434cae08bd4e2fe097ba5c8b4a31",
+    "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\second-row\\receipts\\row2-x2048-tone.receipt.json",
+    "receiptSha256": "d7ae35f138ff9272798f2368c6ad4c0b228a20d9be9f2149fce751a71dbb810b"
+  },
+  "officialSelectionModified": false,
+  "progressModified": false
+}

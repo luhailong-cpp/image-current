@@ -1,0 +1,26 @@
+from pathlib import Path
+from PIL import Image
+import json,hashlib
+from datetime import datetime,timezone
+R=Path(__file__).resolve().parents[2];Q=Path(__file__).resolve().parent
+assert __import__('os').environ.get('ISLAND_PROGRESS_FILE')=='progress-r08_c12.json'
+def rd(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def wr(p,d):p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+pid='r09_c11_roof_color_upper_v01';base=[R/'tiles/r09_c11.candidate-v04.png',R/'tiles/r09_c12.candidate-v08.png']
+canvas=Image.new('RGB',(8192,4096));canvas.paste(Image.open(base[0]).convert('RGB'),(0,0));canvas.paste(Image.open(base[1]).convert('RGB'),(4096,0))
+box=[3300,0,4554,1254];f=R/'guides'/f'{pid}.native-context.png';assert not f.exists();canvas.crop(box).save(f)
+wr(Path(str(f)+'.generation.json'),{'file':str(f),'sha256':sha(f),'operation':'Unscaled crop of two final candidate images pasted at true adjacent coordinates; context only','sourceCandidates':[{'file':str(b),'sha256':sha(b)} for b in base],'sourceCropInTwoTileCanvas':box,'nativeGlobalBox':[44260,32768,45514,34022],'usableAsFinalArt':False})
+refs=[{'file':str(f),'sha256':sha(f),'role':'EDIT TARGET: exact1254 native-coordinate crop. Fix the vertical color discontinuity at local x514, which crosses top/bottom. Keep the curved tile geometry.'}]+rd(R/'references.json')
+prompt="""Use case: precise-object-edit. Edit image1 only, a native1254x1254 crop of the existing daylight Q Daoist game map. Return one opaque1254x1254 native image with the same camera, scale and precise tile coordinates. Last3 attachments are full map LAYOUT ONLY, independent MATERIAL ONLY detail, and approved PAINTING STYLE ONLY. Never shrink a whole reference into this crop.
+PRIMARY REPAIR: At image-local x514 a wrong straight vertical boundary splits the very same long curved blue ceramic roof tiles: pale cyan surface suddenly changes to dark cobalt. This line continues through the top and bottom. Repaint the COMPLETE affected blue tile surfaces, preserving each original tile's rim, gutter, spacing, curve and white specular streak. Shading must follow each tile's rounded diagonal cylinder continuously from pale lit crown toward darker side, NEVER a vertical rectangular source edge or uniform color band. Remove the entire x514 straight color boundary throughout this1254 crop, including its top and bottom intersection. Preserve bright clean painterly ceramic detail; no blur or feathering.
+LOCKS: The LEFT115 and RIGHT115 columns are true geometry/color anchors and must remain unchanged. All tile gutters and rounded transverse rims retain precise positions. Top/bottom are geometry anchors, but the wrong x514 color boundary in them is explicitly editable and must not be frozen in place. Keep the already sound far-right roof color. Do not create horizontal seam stripes when correcting the vertical stripe. Retain any existing gold tile medallions, red supporting timber and original architecture at their exact positions. No added tile courses, ornaments, objects, text, people or lighting changes. No image zoom, translation, rotation, scaling, photographic material, repainting outside this existing crop, or UI.
+Native crop origin relative r09c11 is[3300,0]; r09c12 begins at local x796. The defect is514px from the left edge, away from the side anchors. Its exact world origin is[44260,32768]. This is native object repainting, not enlargement."""
+pf=R/'prompts'/f'{pid}.prompt.txt';assert not pf.exists();pf.write_text(prompt,encoding='utf-8')
+req={'id':pid,'promptPath':str(pf),'promptSha256':sha(pf),'references':refs,'nativeTileBox':box,'originRelativeR09c11':[3300,0],'nativeGlobalBox':[44260,32768,45514,34022],'baseCandidates':[{'file':str(b),'sha256':sha(b)} for b in base],'transparent_background':False,'submittedParameters':{'model':None,'quality':None},'actualModel':None,'actualQuality':None}
+wr(R/'prompts'/f'{pid}.request.json',req)
+wr(Q/'repair-plan.json',{'status':'upper_request_ready','upperRequest':str(R/'prompts'/f'{pid}.request.json'),'lowerPlannedOriginRelativeR09c11':[3300,600],'maximumNewNativeAttempts':2,'noTilesOrProgressMutation':True,'noR08c11GuidesUntilRoofReview':True})
+# Close independently checked north-edge preservation report. Left color repair is a separate outstanding issue.
+p=rd(R/'qa/roof-final-north-independent.json');p['status']='north_edge_geometry_pass_pixel_inheritance_verified';p['visualFindings']=['North1..3 exactly inherit previously viewed roof-surface evidence where indicated. North4 and all3 true boundary junctions directly viewed; no disconnected roof/leaf contours at the actual y256 tile boundary.','r09c12v08 first changed row is742, so the entire top256 band and r08c12v15 shared seam are unaffected by the E/F/G repair.','This scoped north-edge pass does not accept the separate r09c11 x3814 strong blue material discontinuity, now under repair.'];p['formalAccepted']=False;wr(R/'qa/roof-final-north-independent.json',p)
+print(json.dumps({'pid':pid,'toolArgs':{'prompt':prompt,'referenced_image_paths':[a['file'] for a in refs],'transparent_background':False}},ensure_ascii=False))
+

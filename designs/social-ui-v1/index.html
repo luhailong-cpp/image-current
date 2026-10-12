@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#244d3b">
+  <title>五行奇谈 · 仙友会</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="channels.css">
+</head>
+<body>
+  <!-- Three isolated social UI previews. Text and local state are independent of
+       the painted skin; no live player, message or server connection is made. -->
+  <div class="world-backdrop" aria-hidden="true"></div>
+  <main id="stage" data-screen-label="群组 · 世界 · 谣言">
+    <section class="social-window" aria-labelledby="screen-title">
+      <header class="window-header"><p class="game-name">五行奇谈</p><img class="header-lantern" src="assets/lantern.png" alt=""><div class="title-plaque"><h1 id="screen-title">仙 友 会</h1></div><p class="header-note">山海相逢 · 同道相知</p><button id="close-social" class="close-button" type="button" aria-label="收起社交界面"></button><img class="close-tassel" src="assets/close_tassel.png" alt=""></header>
+      <div class="social-toolbar"><nav class="view-navigation" aria-label="社交功能"><button type="button" data-view="groups" aria-pressed="true">群组</button><button type="button" data-view="world" aria-pressed="false">世界</button><button type="button" data-view="rumor" aria-pressed="false">谣言</button></nav><a class="mail-link" href="../mail-ui-v1/index.html">查看仙笺 <span aria-hidden="true">›</span></a></div>
+      <section id="view-root" aria-label="当前社交功能"></section>
+      <footer class="shell-footer"><img src="assets/notice_icon.png" alt=""><p id="shell-note">道友相聚，一言一语皆是仙缘。</p></footer>
+    </section>
+    <section class="reopen-panel" id="reopen-panel" hidden><img src="assets/round_badge_taiji.png" alt=""><h2>暂别片刻，仙缘未散</h2><button type="button" id="reopen-social" class="button primary">打开仙友会</button></section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <details class="demo-controls"><summary>设计预览</summary><div><span>示例消息仅保存在本地，不会发给其他玩家</span><button type="button" id="simulate-message" hidden>模拟收到消息</button><button type="button" id="reset-demo">重置演示</button></div></details>
+  <script src="groups.js"></script>
+  <script src="channels.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

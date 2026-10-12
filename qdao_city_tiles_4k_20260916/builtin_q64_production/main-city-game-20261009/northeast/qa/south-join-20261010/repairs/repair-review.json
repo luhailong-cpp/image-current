@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-10",
+  "status": "two-native-repair-proposals-ready-for-parent-integration-review",
+  "generationRoute": "builtin image_gen",
+  "successfulCalls": 2,
+  "attemptsPerIssue": {"SOUTH-01": 1, "SOUTH-02": 1},
+  "actualModel": null,
+  "actualQuality": null,
+  "formalAcceptedCount": 0,
+  "productionNativeOrSelectionOrCandidateChanged": false,
+  "repairs": [
+    {
+      "id": "south-01-flowers-v1",
+      "resolves": "SOUTH-01",
+      "source": "source/south-01-flowers-v1.png",
+      "prompt": "prompts/south-01-flowers-v1.prompt.txt",
+      "generationRecord": "records/south-01-flowers-v1.generation.json",
+      "proposal": "south-01-flowers-v1.integration-proposal.json",
+      "contextWorldBox": [49536, 19936, 50790, 21190],
+      "editWorldBox": [49980, 20365, 50360, 20630],
+      "visualFinding": "顶部原来呈软色团的粉白花瓣已具有明确轮廓、花芯与细枝，整体花簇位置、轮廓和路缘走向保持。比邻清晰花朵的完成度接近；未观察到新的明显枝条/路缘断裂。",
+      "edgeReview": "已查看1254上下文以及508×393的前后边缘裁片。矩形下缘有轻微笔触/亮度过渡，列为P3供主控整块复看；没有用羽化或模糊消除。",
+      "boundaryRisk": "P3 minor brush/brightness transition at lower rectangle edge; not formal acceptance",
+      "pixelInvariant": "矩形外像素与原生拼接上下文完全一致。",
+      "integerTileOperations": [
+        {"tile": "r05_c13", "sourceCrop": [444, 429, 824, 544], "destinationTileXY": [828, 3981], "mask": "opaque rectangle"},
+        {"tile": "r06_c13", "sourceCrop": [444, 544, 824, 694], "destinationTileXY": [828, 0], "mask": "opaque rectangle"}
+      ],
+      "reviewImages": ["crops/south-01-flowers-v1-before-edge-review.png", "crops/south-01-flowers-v1-after-edge-review.png", "crops/south-01-flowers-v1-proposal-context.png"]
+    },
+    {
+      "id": "south-02-gold-ridge-v1",
+      "resolves": "SOUTH-02",
+      "source": "source/south-02-gold-ridge-v1.png",
+      "prompt": "prompts/south-02-gold-ridge-v1.prompt.txt",
+      "generationRecord": "records/south-02-gold-ridge-v1.generation.json",
+      "proposal": "south-02-gold-ridge-v1.object-integration-proposal.json",
+      "rejectedIntegration": "south-02-gold-ridge-v1.integration-proposal.json is a rejected rectangular paste; it creates a blue-tile color step. Do not apply it.",
+      "contextWorldBox": [51520, 19872, 52774, 21126],
+      "authorizedEditWorldBox": [52020, 20370, 52280, 20580],
+      "activeMaskWorldBox": [52020, 20370, 52280, 20546],
+      "binaryMask": "crops/south-02-gold-ridge-v1-object-paste-mask.png",
+      "visualFinding": "软糊金脊边缘和高光已清晰，原有斜线、金边宽度和邻接卷角维持。金脊对象掩膜排除了会产生矩形色阶的蓝瓦内面；原来的瓦面接缝仍按原样保留，不把它算作本次新修复通过。",
+      "edgeReview": "已查看388×338的前后1:1裁片，金脊对象掩膜版本未见矩形底边的蓝瓦色阶；顶边与金脊两端无明显轮廓断裂。",
+      "pixelInvariant": "掩膜只含0/255，掩膜外逐像素原样；无羽化、模糊、锐化、缩放、颜色匹配或半透明混合。",
+      "integerTileOperations": [
+        {"tile": "r05_c13", "sourceCrop": [500, 498, 760, 608], "maskCrop": [500, 498, 760, 608], "destinationTileXY": [2868, 3986]},
+        {"tile": "r06_c13", "sourceCrop": [500, 608, 760, 674], "maskCrop": [500, 608, 760, 674], "destinationTileXY": [2868, 0]}
+      ],
+      "reviewImages": ["crops/south-02-gold-ridge-v1-before-edge-review.png", "crops/south-02-gold-ridge-v1-object-after-edge-review.png", "crops/south-02-gold-ridge-v1-object-proposal-context.png"]
+    }
+  ],
+  "reproduction": [
+    "propose.py REPAIR_ID TOOL_OUTPUT_PATH reconstructs the rectangular diagnostic proposal with exact crops and records source-output byte identity.",
+    "gold_object_proposal.py reconstructs the preferred gold proposal using the recorded integer polygon and binary mask.",
+    "Before integration, verify every native source hash against records/*.input.json sourceComposition; stop if a selected source has changed.",
+    "Use the recorded per-tile integer crop and destination operations against the current candidate while preserving unrelated repair layers. These repair contexts derive from selected native cores; do not replace an entire candidate with them.",
+    "Recheck both affected formal-tile sides together after integration. No production asset was overwritten during proposal creation."
+  ]
+}

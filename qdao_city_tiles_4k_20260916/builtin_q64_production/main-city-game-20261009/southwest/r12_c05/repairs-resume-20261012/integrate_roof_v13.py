@@ -1,0 +1,21 @@
+from pathlib import Path
+from PIL import Image
+import numpy as np,json,hashlib,datetime
+D=Path(r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r12_c05/repairs-resume-20261012');T=D/'roof-color-east-cap-v01';O=D/'integrated-local-v13';O.mkdir(exist_ok=True)
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def desc(p):return {'file':str(p),'sha256':sha(p),'dimensions':list(Image.open(p).size)}
+def ref(p):return {'file':str(p),'sha256':sha(p)}
+def write(p,o):Path(p).write_text(json.dumps(o,ensure_ascii=False,indent=2),encoding='utf-8')
+src=D/'integrated-local-v11/r12_c05.candidate.context.png';assert sha(src)=='a22182ec97d02b43396cff7ad0d1817b2ea0cea070287f33dcb49f6e36551e11'
+base=Image.open(src).convert('RGB');orig=Image.open(T/'input.png').convert('RGB');app=Image.open(T/'applied-crop-v02.png').convert('RGB');mask=np.array(Image.open(T/'copy-mask-v02.png'))>0
+outside=int((np.any(np.array(orig)!=np.array(app),axis=2)&~mask).sum());assert outside==0
+res=base.copy();res.paste(app,(3072,2717));gm=np.zeros((4326,4326),bool);gm[2717:3971,3072:4326]=mask
+outsideunion=int((np.any(np.array(base)!=np.array(res),axis=2)&~gm).sum());assert outsideunion==0;changed=int(np.any(np.array(orig)!=np.array(app),axis=2).sum())
+res.save(O/'r12_c05.candidate.context.png');res.crop((115,115,4211,4211)).save(O/'r12_c05.candidate.png');res.resize((1082,1082)).save(O/'context-preview-resized.png')
+res.crop((3187,3007,4211,3367)).save(O/'H3-4-native-QA.png');res.crop((3764,2997,3894,3971)).save(O/'roof-cap-narrow-native-QA.png')
+proposal=json.loads((T/'proposal.json').read_text());proposal.update({'copyMask':desc(T/'copy-mask-v02.png'),'alpha':desc(T/'alpha-v02.png'),'appliedCrop':desc(T/'applied-crop-v02.png'),'maskRefinementAudit':ref(T/'mask-refinement-v02-QA.json'),'changedPixels':changed,'outsideMaskChangedPixels':outside,'floorChangedPixels':0,'localVisualAssessment':'Warm interior floor removed from copy scope. The roof cap shading remains continuous in native content-shaped ROI; old floor color variation is preserved and remains open.'});write(T/'proposal-v02.json',proposal)
+write(O/'assembly.json',{'sourceAssembly':str(D/'integrated-local-v11/assembly.json'),'appliedProposals':[str(T/'proposal-v02.json')],'contextOutput':desc(O/'r12_c05.candidate.context.png'),'output':desc(O/'r12_c05.candidate.png'),'outsideUnionChangedPixels':outsideunion,'coreEqualsContextCrop':True,'maximumFeatherPixels':2,'sourceResampling':False,'formalAccepted':False,'internalAccepted':False})
+write(D/'integrated-local-v12/disposition.json',{'assembly':ref(D/'integrated-local-v12/assembly.json'),'superseded':True,'reason':'v12 copy mask included21,821 warm-floor pixels. The v13 proposal-v02 excludes them and retains the original floor; neither version is formally accepted. No native original is rejected because only the corrected roof ROI is reused.'})
+write(T/'qa-review-v02.json',{'viewedNative':['applied-content-ROI-native-v02-QA.png'],'candidate':'integrated-local-v13','floorChangedPixels':0,'finding':'Old gold/teal/red stripe is removed with generated source pixels; warm floor is preserved. No new straight strip margin observed in the native ROI; independent perimeter verification pending.','outsideMaskChangedPixels':outside,'outsideUnionChangedPixels':outsideunion,'maximumFeatherPixels':2,'sourceResampling':False,'formalAccepted':False,'internalAccepted':False,'openIssues':['Independent roof perimeter verification','old warm floor tone difference','large blue/cream notch','quiet material and grout cap gaps']})
+lane=json.loads((D/'lane-state.json').read_text());lane.update({'candidateAssembly':str(O/'assembly.json'),'currentCandidateAssembly':str(O/'assembly.json'),'updatedAtUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'openIssues':['Independent v13 roof perimeter review','old warm floor tone difference','upper gray/cream left cap kink','large blue/cream notch and blue field tonal seam','small grout gap/cap offsets','quiet stone variation across patches']});write(D/'lane-state.json',lane)
+print(json.dumps({'assembly':str(O/'assembly.json'),'output':desc(O/'r12_c05.candidate.png'),'context':desc(O/'r12_c05.candidate.context.png'),'outsideMask':outside,'outsideUnion':outsideunion,'changedPixels':changed}))

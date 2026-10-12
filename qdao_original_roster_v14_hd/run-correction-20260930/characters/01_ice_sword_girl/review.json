@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "characterId": "01_ice_sword_girl",
+  "status": "failed_visual_acceptance_incomplete_delivery",
+  "reviewedAtUtc": "2026-09-30T17:03:32.858Z",
+  "approvedFrames": 0,
+  "formalExportedFrames": 0,
+  "expectedFrames": 128,
+  "clientIntegrated": false,
+  "clientRuntimeVerified": false,
+  "fullNativeHdCycleExists": false,
+  "reviewMethod": {
+    "static": "Viewed seven full-resolution single-frame drafts, original E reference, new16-grid study; independent subagent review of01/05/09/13 and09-v2.",
+    "browser": "Opened preview/E.html; 197px calibration view and512px view; selected120ms playback, paused and stepped01 to03. Partial6-frame playback does not constitute a480ms16-frame run."
+  },
+  "findings": [
+    {
+      "file": "generation/E/01-v1.png",
+      "result": "research_pose_only",
+      "detail": "Near sword arm backswing and talisman arm frontswing visible. One pose does not prove a complete two-step cycle."
+    },
+    {
+      "file": "generation/E/03-v1.png",
+      "result": "not_accepted",
+      "detail": "Support/pass pose differs from01, but lower-body proportions, support baseline and camera-facing body pose shift; no opposite-step continuity established."
+    },
+    {
+      "file": "generation/E/05-v1.png",
+      "result": "not_accepted",
+      "detail": "Requested far-left leading flight is not established. Retains essentially the same near-leading silhouette and arm extremes as01."
+    },
+    {
+      "file": "generation/E/09-v1.png",
+      "result": "failed",
+      "detail": "Visible near shoulder and sleeve still extend backward, now holding talisman; sword changed to forward far hand. Exchanging props is not correct counter-swing."
+    },
+    {
+      "file": "generation/E/09-v2.png",
+      "result": "partial_improvement_not_accepted",
+      "detail": "Near silver-blue shoulder/sleeve now connect to forward sword grip. Elbow remains occluded. Anatomical leg reversal is not confirmed because robe occludes hip/thigh; bun expands upward45-50px and front boot extends downward65-75px vs01 by visual estimate. Cannot correct with uniform translation or per-foot grounding."
+    },
+    {
+      "file": "generation/E/11-v1.png",
+      "result": "failed",
+      "detail": "Visible near shoulder sleeve again extends to backward talisman hand; front sword appears on far hand. Support/pass pose does not resolve handedness."
+    },
+    {
+      "file": "generation/E/13-v1.png",
+      "result": "not_accepted",
+      "detail": "Same leading-leg/arm silhouette as05; small boot/cloth changes do not establish opposite flight phase."
+    },
+    {
+      "file": "generation/E/study16-v1.png",
+      "result": "failed_research_only",
+      "detail": "16-grid sheet has mostly persistent sword-back/talisman-front arms rather than reverse phase; some silhouettes cross cell boundaries, alpha edges polluted. Native1254square divided4x4 yields313.5nominal pixels/cell; not native1024."
+    }
+  ],
+  "unresolved": [
+    "Readable alternate anatomical legs with stable near/far chains",
+    "Correct counter-swing without sword/talisman changing hands",
+    "Consistent head/body scale and fixed virtual ground acrossframes",
+    "True continuous16-frame two-step loop with seamless16-to01",
+    "Allother7directions",
+    "Clean true alpha silhouette and no cross-cell clipping"
+  ],
+  "nextWork": "Rebuild opposite-step pose and scale from an explicit approved anatomy reference, then completeE16 and dynamically verify before otherdirections. No frame duplication, mirroring, image interpolation or per-frame lowest-alpha grounding.",
+  "limits": "Image-generation tool success, native canvas size, unique SHA and playable preview are not art approval."
+}

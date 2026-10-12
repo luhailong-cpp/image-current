@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214e3e">
+  <title>五行奇谈 · 岁时雅集</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <main class="gallery-shell">
+    <header class="gallery-header">
+      <a class="mail-link" href="index.html">返回仙笺</a>
+      <p class="eyebrow">五行奇谈 · 四时有信</p>
+      <h1>岁时雅集</h1>
+      <p class="gallery-intro">循春风，赏夏荷，拾秋色，候冬雪。<br>把一年的团圆与好景，写进每一封仙笺。</p>
+      <p class="collection-summary">17 个传统节日 · 二十四节气 · 清明共用一幅</p>
+    </header>
+    <section class="gallery-content" aria-label="节日与节气插画图集">
+      <div class="gallery-controls">
+        <div class="group-filters" role="group" aria-label="图集分类">
+          <button type="button" data-group="all" aria-pressed="true">全部 <span>40</span></button>
+          <button type="button" data-group="traditional" aria-pressed="false">传统节日 <span>17</span></button>
+          <button type="button" data-group="solar" aria-pressed="false">二十四节气 <span>24</span></button>
+        </div>
+        <label class="search-label"><span>查找</span><input id="festival-search" type="search" placeholder="如：中秋、春分" autocomplete="off"></label>
+      </div>
+      <div class="gallery-subcontrols">
+        <div class="season-filters" role="group" aria-label="四季筛选">
+          <button type="button" data-season="all" aria-pressed="true">四时</button>
+          <button type="button" data-season="spring" aria-pressed="false">春</button>
+          <button type="button" data-season="summer" aria-pressed="false">夏</button>
+          <button type="button" data-season="autumn" aria-pressed="false">秋</button>
+          <button type="button" data-season="winter" aria-pressed="false">冬</button>
+        </div>
+        <p id="gallery-count" role="status" aria-live="polite">正在展开岁时画卷…</p>
+      </div>
+      <div id="festival-grid" class="festival-grid"></div>
+      <p id="gallery-empty" class="gallery-empty" hidden>还没有找到这一景，试试其他节日或季节。</p>
+    </section>
+    <footer class="gallery-footer">每幅插画均可打开原图，或进入对应仙笺查看活动横幅效果。活动与奖励为演示样例。</footer>
+  </main>
+  <dialog id="art-dialog" aria-labelledby="art-title">
+    <div class="art-dialog-heading"><h2 id="art-title"></h2><button id="close-art" type="button" aria-label="关闭插画">×</button></div>
+    <img id="art-image" alt="">
+    <div class="art-dialog-actions"><a id="original-link" target="_blank" rel="noopener">打开原图</a><a id="mail-preview-link">放入仙笺查看</a></div>
+  </dialog>
+  <script src="gallery.js"></script>
+</body>
+</html>

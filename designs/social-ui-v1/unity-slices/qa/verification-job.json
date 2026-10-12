@@ -1,0 +1,104 @@
+{
+    "status": "error",
+    "runId": "20260917T033123086-5ccd7c1a",
+    "startedAtUtc": "2026-09-17T03:31:23.0920288Z",
+    "completedAtUtc": "2026-09-17T03:32:01.5553090Z",
+    "phase": "Finish",
+    "consumedFlag": "E:/work/image/designs/social-ui-v1/unity-slices/qa\\run-native-verification.consumed-20260917T033123086-5ccd7c1a.flag",
+    "unityVersion": "6000.6.0f1",
+    "success": false,
+    "liveServerVerified": false,
+    "seconds": 38.46983709999995,
+    "testReportPath": "E:/work/image/designs/social-ui-v1/unity-slices/qa/editmode-results.json",
+    "mailCaptureDirectory": "E:/work/image/designs/mail-ui-v1/unity-slices/qa",
+    "socialCaptureDirectory": "E:/work/image/designs/social-ui-v1/unity-slices/qa",
+    "stages": [
+        {
+            "stage": "import",
+            "status": "passed",
+            "message": "",
+            "completedAtUtc": "2026-09-17T03:31:40.3370643Z"
+        },
+        {
+            "stage": "social-capture",
+            "status": "error",
+            "message": "Social native QA: 2560: visible window blocks world input",
+            "completedAtUtc": "2026-09-17T03:31:43.2725912Z"
+        },
+        {
+            "stage": "mail-capture",
+            "status": "passed",
+            "message": "",
+            "completedAtUtc": "2026-09-17T03:31:51.9534753Z"
+        },
+        {
+            "stage": "test-dispatch",
+            "status": "passed",
+            "message": "",
+            "completedAtUtc": "2026-09-17T03:31:52.2243542Z"
+        },
+        {
+            "stage": "test-results",
+            "status": "error",
+            "message": "Actual Unity tests need attention: passed=61, failed=2, skipped=0, inconclusive=0\nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus () [0x0008a] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:71 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker () [0x00017] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:104 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ",
+            "completedAtUtc": "2026-09-17T03:32:01.3593731Z"
+        },
+        {
+            "stage": "social-preview-assets",
+            "status": "error",
+            "message": "Cannot create a new scene additively with an untitled scene unsaved.",
+            "completedAtUtc": "2026-09-17T03:32:01.3676098Z"
+        },
+        {
+            "stage": "mail-preview-assets",
+            "status": "error",
+            "message": "Cannot create a new scene additively with an untitled scene unsaved.",
+            "completedAtUtc": "2026-09-17T03:32:01.4525826Z"
+        }
+    ],
+    "errors": [
+        {
+            "stage": "social-capture",
+            "message": "Social native QA: 2560: visible window blocks world input",
+            "stacktrace": "System.InvalidOperationException: Social native QA: 2560: visible window blocks world input\r\n  at SocialUiVerification.Require (System.Boolean condition, System.String message) [0x0001f] in E:\\work\\mmorpg-client\\Assets\\Editor\\Social\\SocialUiVerification.cs:50 \r\n  at SocialUiVerification.Capture (System.Int32 width, System.Int32 height) [0x00326] in E:\\work\\mmorpg-client\\Assets\\Editor\\Social\\SocialUiVerification.cs:129 \r\n  at SocialUiVerification.CaptureAll () [0x00038] in E:\\work\\mmorpg-client\\Assets\\Editor\\Social\\SocialUiVerification.cs:38 \r\n  at MailSocialVerificationJob.RunStage (System.String stage, System.Action action) [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:160 ",
+            "occurredAtUtc": "2026-09-17T03:31:43.2714950Z"
+        },
+        {
+            "stage": "test-results",
+            "message": "Actual Unity tests need attention: passed=61, failed=2, skipped=0, inconclusive=0\nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus () [0x0008a] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:71 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker () [0x00017] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:104 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ",
+            "stacktrace": "System.InvalidOperationException: Actual Unity tests need attention: passed=61, failed=2, skipped=0, inconclusive=0\nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus () [0x0008a] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:71 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \nMmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker () [0x00017] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:104 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \r\n  at MailSocialVerificationJob.ReadTestResults () [0x00167] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:202 \r\n  at MailSocialVerificationJob.RunStage (System.String stage, System.Action action) [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:160 ",
+            "occurredAtUtc": "2026-09-17T03:32:01.3588190Z"
+        },
+        {
+            "stage": "social-preview-assets",
+            "message": "Cannot create a new scene additively with an untitled scene unsaved.",
+            "stacktrace": "System.InvalidOperationException: Cannot create a new scene additively with an untitled scene unsaved.\r\n  at (wrapper managed-to-native) UnityEditor.SceneManagement.EditorSceneManager.NewScene_Injected(UnityEditor.SceneManagement.NewSceneSetup,UnityEditor.SceneManagement.NewSceneMode,UnityEngine.SceneManagement.Scene&)\r\n  at UnityEditor.SceneManagement.EditorSceneManager.NewScene (UnityEditor.SceneManagement.NewSceneSetup setup, UnityEditor.SceneManagement.NewSceneMode mode) [0x00000] in <2194b77af8ea43e69caba13ba778a69a>:0 \r\n  at SocialUiVerification.BuildPreviewAssets () [0x00062] in E:\\work\\mmorpg-client\\Assets\\Editor\\Social\\SocialUiVerification.cs:258 \r\n  at MailSocialVerificationJob.BuildMissing (System.String scenePath, System.String prefabPath, System.Action builder) [0x00051] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:211 \r\n  at MailSocialVerificationJob+<>c.<Update>b__27_0 () [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:108 \r\n  at MailSocialVerificationJob.RunStage (System.String stage, System.Action action) [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:160 ",
+            "occurredAtUtc": "2026-09-17T03:32:01.3670966Z"
+        },
+        {
+            "stage": "mail-preview-assets",
+            "message": "Cannot create a new scene additively with an untitled scene unsaved.",
+            "stacktrace": "System.InvalidOperationException: Cannot create a new scene additively with an untitled scene unsaved.\r\n  at (wrapper managed-to-native) UnityEditor.SceneManagement.EditorSceneManager.NewScene_Injected(UnityEditor.SceneManagement.NewSceneSetup,UnityEditor.SceneManagement.NewSceneMode,UnityEngine.SceneManagement.Scene&)\r\n  at UnityEditor.SceneManagement.EditorSceneManager.NewScene (UnityEditor.SceneManagement.NewSceneSetup setup, UnityEditor.SceneManagement.NewSceneMode mode) [0x00000] in <2194b77af8ea43e69caba13ba778a69a>:0 \r\n  at MailUiVerification.BuildPreviewAssets () [0x00051] in E:\\work\\mmorpg-client\\Assets\\Editor\\Mail\\MailUiVerification.cs:140 \r\n  at MailSocialVerificationJob.BuildMissing (System.String scenePath, System.String prefabPath, System.Action builder) [0x00051] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:211 \r\n  at MailSocialVerificationJob+<>c.<Update>b__27_1 () [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:111 \r\n  at MailSocialVerificationJob.RunStage (System.String stage, System.Action action) [0x00000] in E:\\work\\mmorpg-client\\Assets\\Editor\\MailSocial\\MailSocialVerificationJob.cs:160 ",
+            "occurredAtUtc": "2026-09-17T03:32:01.4519943Z"
+        }
+    ],
+    "tests": {
+        "status": "needs-attention",
+        "unityVersion": "6000.6.0f1",
+        "completedAtUtc": "2026-09-17T03:32:01.2759535Z",
+        "passed": 61,
+        "failed": 2,
+        "skipped": 0,
+        "inconclusive": 0,
+        "assertions": 0,
+        "seconds": 2.7541991,
+        "assemblies": [
+            "MmorpgClient.Tests.EditMode.Mail",
+            "MmorpgClient.Tests.EditMode.Social"
+        ],
+        "failures": [
+            "MmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.DeletionProtectsPendingRewardsAndConfirmationHasSafeCancelFocus () [0x0008a] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:71 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ",
+            "MmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker: System.NullReferenceException : Object reference not set to an instance of an object\n  at MmorpgClient.Tests.EditMode.Mail.MailWindowTests.HideRestoresFocusAndBalancesGameplayInputBlocker () [0x00017] in E:\\work\\mmorpg-client\\Assets\\Tests\\EditMode\\Mail\\MailWindowTests.cs:104 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+        ]
+    }
+}

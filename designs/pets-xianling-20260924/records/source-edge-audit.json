@@ -1,0 +1,4223 @@
+{
+  "schemaVersion": 2,
+  "auditedAt": "2026-09-24T13:02:00.612594+00:00",
+  "scope": "Read-only audit of all 28 formal source PNGs selected by current asset-config; unused candidates are reported separately and excluded from formal counts.",
+  "rosterConfigSha256": "ac36b0ff6287c1456fd498f2d510bafc1b779d726100ee18fa93a01ecb70cada",
+  "method": {
+    "alphaThresholds": [
+      1,
+      2,
+      16,
+      128
+    ],
+    "visibleThreshold": 16,
+    "opaqueThreshold": 128,
+    "keyColorCriteria": "RGB extremes near magenta/cyan/yellow/red/blue; classification is diagnostic only, never permission for global color deletion",
+    "boundaryBand": "one-pixel MaxFilter neighborhood of alpha<16"
+  },
+  "sourceMutation": false,
+  "expectedSourceCount": 28,
+  "checkedSourceCount": 28,
+  "needsStrongEdgeReview": [],
+  "visibleHighSaturationFiles": [
+    "source/14-feierling-E.png",
+    "source/14-feierling-W.png"
+  ],
+  "formalSummary": {
+    "checkedCount": 28,
+    "needsStrongEdgeReview": [],
+    "visibleHighSaturationFiles": [
+      "source/14-feierling-E.png",
+      "source/14-feierling-W.png"
+    ],
+    "highSaturationPixelTotals": {
+      "alpha0Pixels": 0,
+      "alpha1to15Pixels": 119187,
+      "alpha16to127Pixels": 0,
+      "alpha128to255Pixels": 13
+    },
+    "remoteAlphaOnePixels": 3686,
+    "readErrors": []
+  },
+  "sources": [
+    {
+      "file": "source/01-zhuling-E.png",
+      "sha256": "b235bfa5e5d080d92f2b3d749d51d8d1a10fb90963a5b165e51930b935a92e2a",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            13,
+            1254,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 62,
+            "left": 141,
+            "right": 70
+          },
+          "pixels": 805942
+        },
+        "2": {
+          "bbox": [
+            0,
+            14,
+            1254,
+            1196
+          ],
+          "edgePixels": {
+            "left": 21,
+            "right": 52
+          },
+          "pixels": 767521
+        },
+        "16": {
+          "bbox": [
+            10,
+            14,
+            1250,
+            1194
+          ],
+          "edgePixels": {},
+          "pixels": 725175
+        },
+        "128": {
+          "bbox": [
+            11,
+            17,
+            1249,
+            1193
+          ],
+          "edgePixels": {},
+          "pixels": 708949
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 231,
+        "preserveBox": [
+          0,
+          6,
+          1254,
+          1204
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1611,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 97,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 473,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 316,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5342,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/01-zhuling-W.png",
+      "sha256": "e2a27236d27538014a0169ee0714141bfeaddc4d8a211a6aab39bfa263f91527",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            37,
+            21,
+            1232,
+            1220
+          ],
+          "edgePixels": {},
+          "pixels": 615043
+        },
+        "2": {
+          "bbox": [
+            75,
+            91,
+            1199,
+            1177
+          ],
+          "edgePixels": {},
+          "pixels": 585399
+        },
+        "16": {
+          "bbox": [
+            77,
+            94,
+            1196,
+            1175
+          ],
+          "edgePixels": {},
+          "pixels": 561523
+        },
+        "128": {
+          "bbox": [
+            79,
+            95,
+            1195,
+            1174
+          ],
+          "edgePixels": {},
+          "pixels": 551693
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 101,
+        "preserveBox": [
+          67,
+          83,
+          1207,
+          1185
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1014,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 54,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 480,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1600,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1553,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/02-jiangling-E.png",
+      "sha256": "3bf882a60b6c315572bd94d2e1ff98b5f9651d991e09248b71408d8d76549b03",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1216,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 563219
+        },
+        "2": {
+          "bbox": [
+            82,
+            68,
+            1129,
+            1164
+          ],
+          "edgePixels": {},
+          "pixels": 537541
+        },
+        "16": {
+          "bbox": [
+            85,
+            72,
+            1127,
+            1162
+          ],
+          "edgePixels": {},
+          "pixels": 513694
+        },
+        "128": {
+          "bbox": [
+            86,
+            73,
+            1126,
+            1161
+          ],
+          "edgePixels": {},
+          "pixels": 501269
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 41,
+        "preserveBox": [
+          74,
+          60,
+          1137,
+          1172
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 64,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 63,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3895,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1992,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/02-jiangling-W.png",
+      "sha256": "835b1d9608f5a83faf8b57d55462831d85abc03bdb482d29b34a24b451b5dfec",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            17,
+            1194,
+            1198
+          ],
+          "edgePixels": {
+            "left": 1
+          },
+          "pixels": 499281
+        },
+        "2": {
+          "bbox": [
+            140,
+            116,
+            1142,
+            1136
+          ],
+          "edgePixels": {},
+          "pixels": 470949
+        },
+        "16": {
+          "bbox": [
+            142,
+            119,
+            1140,
+            1133
+          ],
+          "edgePixels": {},
+          "pixels": 445483
+        },
+        "128": {
+          "bbox": [
+            143,
+            120,
+            1139,
+            1132
+          ],
+          "edgePixels": {},
+          "pixels": 432896
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 201,
+        "preserveBox": [
+          132,
+          108,
+          1150,
+          1144
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 44,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3606,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2564,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 31,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/03-shuangtuan-E.png",
+      "sha256": "b020ca080d1cfc3c61791149dde295442ec4f3c1c02935bdcf0eeb0f2cbc0e45",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1224,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 5,
+            "left": 27
+          },
+          "pixels": 676655
+        },
+        "2": {
+          "bbox": [
+            46,
+            180,
+            1219,
+            1156
+          ],
+          "edgePixels": {},
+          "pixels": 645248
+        },
+        "16": {
+          "bbox": [
+            50,
+            183,
+            1213,
+            1153
+          ],
+          "edgePixels": {},
+          "pixels": 624111
+        },
+        "128": {
+          "bbox": [
+            51,
+            184,
+            1199,
+            1152
+          ],
+          "edgePixels": {},
+          "pixels": 613047
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 342,
+        "preserveBox": [
+          38,
+          172,
+          1227,
+          1164
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 41,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 48,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 883,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 505,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 39,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/03-shuangtuan-W.png",
+      "sha256": "370372d02797006243e81cfba8a6491116151d4d7352e159b6d78ab04b8eb1db",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "edgePixels": {
+            "top": 11,
+            "bottom": 4,
+            "left": 7,
+            "right": 102
+          },
+          "pixels": 748685
+        },
+        "2": {
+          "bbox": [
+            18,
+            162,
+            1254,
+            1163
+          ],
+          "edgePixels": {
+            "right": 2
+          },
+          "pixels": 703333
+        },
+        "16": {
+          "bbox": [
+            23,
+            163,
+            1239,
+            1161
+          ],
+          "edgePixels": {},
+          "pixels": 671346
+        },
+        "128": {
+          "bbox": [
+            28,
+            164,
+            1238,
+            1160
+          ],
+          "edgePixels": {},
+          "pixels": 657808
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 166,
+        "preserveBox": [
+          10,
+          154,
+          1254,
+          1171
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 733,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 633,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 26,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/04-guideng-E.png",
+      "sha256": "39f6b87e59a8ac001fa86221159321cf24aae6bf804c153bd69e1a16859d2a60",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1234,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 497185
+        },
+        "2": {
+          "bbox": [
+            212,
+            96,
+            1056,
+            1155
+          ],
+          "edgePixels": {},
+          "pixels": 471137
+        },
+        "16": {
+          "bbox": [
+            216,
+            99,
+            1054,
+            1151
+          ],
+          "edgePixels": {},
+          "pixels": 447560
+        },
+        "128": {
+          "bbox": [
+            216,
+            99,
+            1053,
+            1150
+          ],
+          "edgePixels": {},
+          "pixels": 438017
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 177,
+        "preserveBox": [
+          204,
+          88,
+          1064,
+          1163
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 38,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5270,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1629,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 41,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/04-guideng-W.png",
+      "sha256": "f77376a2516a1451094c9e6a7cff51159bb71738974c4c680fcd25c77b7c4419",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1226,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 10,
+            "left": 10
+          },
+          "pixels": 551982
+        },
+        "2": {
+          "bbox": [
+            183,
+            95,
+            1082,
+            1142
+          ],
+          "edgePixels": {},
+          "pixels": 523168
+        },
+        "16": {
+          "bbox": [
+            185,
+            97,
+            1079,
+            1140
+          ],
+          "edgePixels": {},
+          "pixels": 495718
+        },
+        "128": {
+          "bbox": [
+            186,
+            98,
+            1078,
+            1139
+          ],
+          "edgePixels": {},
+          "pixels": 484005
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 52,
+        "preserveBox": [
+          175,
+          87,
+          1090,
+          1150
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 57,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 57,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5695,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 929,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 39,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/05-yanyuling-E.png",
+      "sha256": "68e5b04cf595e99973df2b22d10e9e887760cde4e290970813c670b739017fce",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            21,
+            23,
+            1172,
+            1238
+          ],
+          "edgePixels": {},
+          "pixels": 719613
+        },
+        "2": {
+          "bbox": [
+            99,
+            24,
+            1151,
+            1221
+          ],
+          "edgePixels": {},
+          "pixels": 705936
+        },
+        "16": {
+          "bbox": [
+            102,
+            26,
+            1149,
+            1219
+          ],
+          "edgePixels": {},
+          "pixels": 694226
+        },
+        "128": {
+          "bbox": [
+            103,
+            27,
+            1148,
+            1218
+          ],
+          "edgePixels": {},
+          "pixels": 687719
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 85,
+        "preserveBox": [
+          91,
+          16,
+          1159,
+          1229
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1330,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 52,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 284,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 644,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1843,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/05-yanyuling-W.png",
+      "sha256": "1574b829f672f52c14090856f657ec46620827116dd278872984c8af076ebe5d",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            61,
+            40,
+            1190,
+            1198
+          ],
+          "edgePixels": {},
+          "pixels": 583930
+        },
+        "2": {
+          "bbox": [
+            250,
+            74,
+            1147,
+            1187
+          ],
+          "edgePixels": {},
+          "pixels": 572683
+        },
+        "16": {
+          "bbox": [
+            252,
+            76,
+            1144,
+            1185
+          ],
+          "edgePixels": {},
+          "pixels": 562242
+        },
+        "128": {
+          "bbox": [
+            252,
+            78,
+            1144,
+            1184
+          ],
+          "edgePixels": {},
+          "pixels": 556780
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 80,
+        "preserveBox": [
+          242,
+          66,
+          1155,
+          1195
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1432,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 467,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 615,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 413,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/15-landuoxian-E.png",
+      "sha256": "0db8251d17fc738c8b85569b094de8beb25d661f05bb703c3a7ff45a2d3e2b15",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            0,
+            1222,
+            1254
+          ],
+          "edgePixels": {
+            "top": 37,
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 671650
+        },
+        "2": {
+          "bbox": [
+            126,
+            0,
+            1127,
+            1236
+          ],
+          "edgePixels": {
+            "top": 5
+          },
+          "pixels": 641221
+        },
+        "16": {
+          "bbox": [
+            128,
+            10,
+            1125,
+            1234
+          ],
+          "edgePixels": {},
+          "pixels": 613332
+        },
+        "128": {
+          "bbox": [
+            129,
+            11,
+            1124,
+            1233
+          ],
+          "edgePixels": {},
+          "pixels": 600138
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 44,
+        "preserveBox": [
+          118,
+          0,
+          1135,
+          1244
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 64,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 62,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1058,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 369,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 177,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/15-landuoxian-W.png",
+      "sha256": "3b5d407c99614c8530d76efb9a8c5eb0e3292a1685061ce574987bd00bd85f22",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1200,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 12,
+            "left": 1
+          },
+          "pixels": 690370
+        },
+        "2": {
+          "bbox": [
+            135,
+            66,
+            1177,
+            1214
+          ],
+          "edgePixels": {},
+          "pixels": 663438
+        },
+        "16": {
+          "bbox": [
+            138,
+            68,
+            1175,
+            1211
+          ],
+          "edgePixels": {},
+          "pixels": 633598
+        },
+        "128": {
+          "bbox": [
+            140,
+            69,
+            1174,
+            1211
+          ],
+          "edgePixels": {},
+          "pixels": 618825
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 163,
+        "preserveBox": [
+          127,
+          58,
+          1185,
+          1222
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 263,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 210,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1958,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 413,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1058,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/06-xiluo-E.png",
+      "sha256": "ec07be604af82f0c1f43ef0cc9947c7a13239e7945f105e252934a26bf0416d8",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            49,
+            21,
+            1222,
+            1182
+          ],
+          "edgePixels": {},
+          "pixels": 697555
+        },
+        "2": {
+          "bbox": [
+            101,
+            111,
+            1204,
+            1120
+          ],
+          "edgePixels": {},
+          "pixels": 687953
+        },
+        "16": {
+          "bbox": [
+            104,
+            113,
+            1202,
+            1118
+          ],
+          "edgePixels": {},
+          "pixels": 678086
+        },
+        "128": {
+          "bbox": [
+            105,
+            114,
+            1201,
+            1117
+          ],
+          "edgePixels": {},
+          "pixels": 673315
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 31,
+        "preserveBox": [
+          93,
+          103,
+          1212,
+          1128
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 44,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 19,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 4049,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 620,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 25,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/06-xiluo-W.png",
+      "sha256": "46cc8f2c559c2c6f42981575a54880010957c17c236659a035948c59669cb932",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1227,
+            1232
+          ],
+          "edgePixels": {
+            "left": 17
+          },
+          "pixels": 640036
+        },
+        "2": {
+          "bbox": [
+            161,
+            124,
+            1225,
+            1171
+          ],
+          "edgePixels": {},
+          "pixels": 626482
+        },
+        "16": {
+          "bbox": [
+            161,
+            126,
+            1223,
+            1168
+          ],
+          "edgePixels": {},
+          "pixels": 614570
+        },
+        "128": {
+          "bbox": [
+            162,
+            127,
+            1223,
+            1167
+          ],
+          "edgePixels": {},
+          "pixels": 608758
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 54,
+        "preserveBox": [
+          153,
+          116,
+          1233,
+          1179
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 62,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5433,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1129,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 36,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/07-cangzhanglin-E.png",
+      "sha256": "299886bd419cc3cc576f55ed6577b69001d18e01464372091fb38fac453fbf1e",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            33,
+            21,
+            1208,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 36
+          },
+          "pixels": 710170
+        },
+        "2": {
+          "bbox": [
+            72,
+            21,
+            1178,
+            1218
+          ],
+          "edgePixels": {},
+          "pixels": 683494
+        },
+        "16": {
+          "bbox": [
+            74,
+            23,
+            1175,
+            1213
+          ],
+          "edgePixels": {},
+          "pixels": 659606
+        },
+        "128": {
+          "bbox": [
+            75,
+            24,
+            1175,
+            1213
+          ],
+          "edgePixels": {},
+          "pixels": 647748
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 63,
+        "preserveBox": [
+          64,
+          13,
+          1186,
+          1226
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 24,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 900,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 995,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 123,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 318,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/07-cangzhanglin-W.png",
+      "sha256": "b4c3333ac8790d06de71ed52b403cadbe2e7bade8419150e464e80d656fed663",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            17,
+            1200,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 14,
+            "left": 1
+          },
+          "pixels": 650096
+        },
+        "2": {
+          "bbox": [
+            128,
+            32,
+            1182,
+            1215
+          ],
+          "edgePixels": {},
+          "pixels": 622568
+        },
+        "16": {
+          "bbox": [
+            130,
+            34,
+            1179,
+            1212
+          ],
+          "edgePixels": {},
+          "pixels": 601281
+        },
+        "128": {
+          "bbox": [
+            131,
+            35,
+            1179,
+            1212
+          ],
+          "edgePixels": {},
+          "pixels": 592130
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 77,
+        "preserveBox": [
+          120,
+          24,
+          1190,
+          1223
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 29,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 158,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 808,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 161,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 59,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/08-zhufengli-E.png",
+      "mode": "RGB",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "cdf42afa91af2fa1481d4ac398da75134c140d3c4ca8079bcdef3b5b9016f7c0",
+      "status": "needs-alpha-or-key-extraction-review"
+    },
+    {
+      "file": "source/08-zhufengli-W.png",
+      "sha256": "8298c4ac004a6f0c2ca79ef71a24dd3ee5ab3b1fa5da450fefc2a85e03d2c428",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            0,
+            1238,
+            1254
+          ],
+          "edgePixels": {
+            "top": 2,
+            "bottom": 21,
+            "left": 20
+          },
+          "pixels": 646410
+        },
+        "2": {
+          "bbox": [
+            139,
+            140,
+            1192,
+            1109
+          ],
+          "edgePixels": {},
+          "pixels": 622649
+        },
+        "16": {
+          "bbox": [
+            142,
+            142,
+            1189,
+            1107
+          ],
+          "edgePixels": {},
+          "pixels": 600906
+        },
+        "128": {
+          "bbox": [
+            175,
+            144,
+            1188,
+            1106
+          ],
+          "edgePixels": {},
+          "pixels": 583333
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 1037,
+        "preserveBox": [
+          131,
+          132,
+          1200,
+          1117
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 61,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 50,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5230,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2852,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 74,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/09-chishakui-E.png",
+      "sha256": "e357d00cfdfbd81ec964f0ee2243a72f9d7a92ff620d2442f61eef6ef7c7d308",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1192,
+            1228
+          ],
+          "edgePixels": {
+            "left": 41
+          },
+          "pixels": 642783
+        },
+        "2": {
+          "bbox": [
+            196,
+            33,
+            1049,
+            1204
+          ],
+          "edgePixels": {},
+          "pixels": 633658
+        },
+        "16": {
+          "bbox": [
+            198,
+            35,
+            1047,
+            1201
+          ],
+          "edgePixels": {},
+          "pixels": 625976
+        },
+        "128": {
+          "bbox": [
+            198,
+            36,
+            1046,
+            1200
+          ],
+          "edgePixels": {},
+          "pixels": 622420
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 110,
+        "preserveBox": [
+          188,
+          25,
+          1057,
+          1212
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 35,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 25,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2354,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1513,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 26,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/09-chishakui-W.png",
+      "sha256": "a32ab6b98fd2bd0aef900f282a7dfa0574a6ee1b08ec6d37250b0ca2f46c1e9c",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            65,
+            21,
+            1103,
+            1200
+          ],
+          "edgePixels": {},
+          "pixels": 590901
+        },
+        "2": {
+          "bbox": [
+            171,
+            41,
+            1075,
+            1197
+          ],
+          "edgePixels": {},
+          "pixels": 583268
+        },
+        "16": {
+          "bbox": [
+            173,
+            43,
+            1072,
+            1195
+          ],
+          "edgePixels": {},
+          "pixels": 576384
+        },
+        "128": {
+          "bbox": [
+            174,
+            44,
+            1072,
+            1194
+          ],
+          "edgePixels": {},
+          "pixels": 572838
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 36,
+        "preserveBox": [
+          163,
+          33,
+          1083,
+          1205
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 21,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 30,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1923,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1202,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/10-xuanchaogui-E.png",
+      "sha256": "f2459ff60388ff60cee119686237ba31a6f6b179c8b48d38fb07a448e12b3e2a",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1206,
+            1198
+          ],
+          "edgePixels": {
+            "left": 17
+          },
+          "pixels": 603503
+        },
+        "2": {
+          "bbox": [
+            79,
+            169,
+            1188,
+            1100
+          ],
+          "edgePixels": {},
+          "pixels": 595671
+        },
+        "16": {
+          "bbox": [
+            81,
+            171,
+            1183,
+            1098
+          ],
+          "edgePixels": {},
+          "pixels": 588509
+        },
+        "128": {
+          "bbox": [
+            82,
+            172,
+            1182,
+            1097
+          ],
+          "edgePixels": {},
+          "pixels": 584691
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 140,
+        "preserveBox": [
+          71,
+          161,
+          1196,
+          1108
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 20,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 155,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2016,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 160,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 168,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/10-xuanchaogui-W.png",
+      "mode": "RGB",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "sha256": "dbe4e831272104cafd4c7d624fc81cfd849315c68b9f445134785e47299d5c9d",
+      "status": "needs-alpha-or-key-extraction-review"
+    },
+    {
+      "file": "source/12-yuexianshi-E.png",
+      "sha256": "2862445d5177f7943ecbf065efe54ae75f176296cd62cd1dcf98e0a73e913ad9",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            35,
+            1218,
+            1222
+          ],
+          "edgePixels": {
+            "left": 8
+          },
+          "pixels": 745960
+        },
+        "2": {
+          "bbox": [
+            114,
+            56,
+            1178,
+            1221
+          ],
+          "edgePixels": {},
+          "pixels": 713384
+        },
+        "16": {
+          "bbox": [
+            117,
+            58,
+            1175,
+            1219
+          ],
+          "edgePixels": {},
+          "pixels": 682228
+        },
+        "128": {
+          "bbox": [
+            118,
+            59,
+            1174,
+            1218
+          ],
+          "edgePixels": {},
+          "pixels": 666330
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 90,
+        "preserveBox": [
+          106,
+          48,
+          1186,
+          1229
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 76,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 444,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2057,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1843,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 157,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/12-yuexianshi-W.png",
+      "sha256": "504c7e66059f34657ed2a6598b0f80d0a2bb018e6b06dc766a95ba98dd244558",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1244,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 5,
+            "left": 13
+          },
+          "pixels": 781362
+        },
+        "2": {
+          "bbox": [
+            73,
+            22,
+            1241,
+            1232
+          ],
+          "edgePixels": {},
+          "pixels": 750824
+        },
+        "16": {
+          "bbox": [
+            75,
+            24,
+            1239,
+            1230
+          ],
+          "edgePixels": {},
+          "pixels": 721971
+        },
+        "128": {
+          "bbox": [
+            76,
+            26,
+            1238,
+            1230
+          ],
+          "edgePixels": {},
+          "pixels": 707225
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 58,
+        "preserveBox": [
+          65,
+          14,
+          1249,
+          1240
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 70,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 74,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2174,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1647,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 52,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/16-luhualing-E.png",
+      "sha256": "5450686d49143f73d339b1e3d0f48ab3adf32fcb8c233106b37ade8ac3983b00",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            41,
+            21,
+            1230,
+            1230
+          ],
+          "edgePixels": {},
+          "pixels": 584551
+        },
+        "2": {
+          "bbox": [
+            106,
+            25,
+            1161,
+            1225
+          ],
+          "edgePixels": {},
+          "pixels": 561666
+        },
+        "16": {
+          "bbox": [
+            108,
+            27,
+            1159,
+            1223
+          ],
+          "edgePixels": {},
+          "pixels": 542425
+        },
+        "128": {
+          "bbox": [
+            109,
+            28,
+            1158,
+            1222
+          ],
+          "edgePixels": {},
+          "pixels": 532388
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 32,
+        "preserveBox": [
+          98,
+          17,
+          1169,
+          1233
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 23,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 31,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2832,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 538,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 51,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/16-luhualing-W.png",
+      "sha256": "70a32fe569674cbfc15b71ded42f9ed6d6b79444ee2d25cfe573e9aecf589c7f",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            31,
+            1218,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 11
+          },
+          "pixels": 677396
+        },
+        "2": {
+          "bbox": [
+            83,
+            36,
+            1209,
+            1210
+          ],
+          "edgePixels": {},
+          "pixels": 647211
+        },
+        "16": {
+          "bbox": [
+            89,
+            40,
+            1207,
+            1208
+          ],
+          "edgePixels": {},
+          "pixels": 620840
+        },
+        "128": {
+          "bbox": [
+            90,
+            40,
+            1207,
+            1208
+          ],
+          "edgePixels": {},
+          "pixels": 609250
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 32,
+        "preserveBox": [
+          75,
+          28,
+          1217,
+          1218
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 42,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 45,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3069,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 454,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 45,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/14-feierling-E.png",
+      "sha256": "aab119ddf99d0842f37d994b819910544cc38ba23efc2322bba819db3118f1fa",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1224,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 10,
+            "left": 5
+          },
+          "pixels": 513553
+        },
+        "2": {
+          "bbox": [
+            184,
+            139,
+            1092,
+            1202
+          ],
+          "edgePixels": {},
+          "pixels": 495469
+        },
+        "16": {
+          "bbox": [
+            185,
+            140,
+            1091,
+            1197
+          ],
+          "edgePixels": {},
+          "pixels": 475939
+        },
+        "128": {
+          "bbox": [
+            187,
+            144,
+            1089,
+            1196
+          ],
+          "edgePixels": {},
+          "pixels": 466413
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 99,
+        "preserveBox": [
+          176,
+          131,
+          1100,
+          1210
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 43,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 63,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 4950,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2766,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 11,
+          "visibleBbox": [
+            731,
+            735,
+            745,
+            766
+          ],
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": [
+            [
+              744,
+              735
+            ],
+            [
+              734,
+              754
+            ],
+            [
+              735,
+              754
+            ],
+            [
+              736,
+              754
+            ],
+            [
+              737,
+              754
+            ],
+            [
+              733,
+              755
+            ],
+            [
+              732,
+              756
+            ],
+            [
+              731,
+              757
+            ],
+            [
+              731,
+              758
+            ],
+            [
+              733,
+              764
+            ],
+            [
+              736,
+              765
+            ]
+          ]
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 40,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge; strong-red-interior-decoration-verified-and-preserved",
+      "visibleHighSaturationReview": {
+        "status": "accepted-intentional-interior-red-decoration",
+        "finding": "The strong-alpha near-red pixels are inside the vermilion knot/tassel at the waist. Both native coordinates and neutral-background full-image inspection match intended red decoration, with zero pixels in the transparent-boundary band. Preserve them.",
+        "requiresCleanup": false
+      }
+    },
+    {
+      "file": "source/14-feierling-W.png",
+      "sha256": "7a2fee7c016c4cc4a33d00bf7bc5b9d192742e749aef0fffe1d8ac3eaed551b6",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1224,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 502742
+        },
+        "2": {
+          "bbox": [
+            144,
+            87,
+            1146,
+            1173
+          ],
+          "edgePixels": {},
+          "pixels": 478934
+        },
+        "16": {
+          "bbox": [
+            146,
+            89,
+            1143,
+            1168
+          ],
+          "edgePixels": {},
+          "pixels": 456855
+        },
+        "128": {
+          "bbox": [
+            147,
+            92,
+            1142,
+            1167
+          ],
+          "edgePixels": {},
+          "pixels": 446712
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 144,
+        "preserveBox": [
+          136,
+          79,
+          1154,
+          1181
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 37,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 54,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 4808,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3261,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 2,
+          "visibleBbox": [
+            585,
+            665,
+            587,
+            667
+          ],
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": [
+            [
+              586,
+              665
+            ],
+            [
+              585,
+              666
+            ]
+          ]
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 57,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge; strong-red-interior-decoration-verified-and-preserved",
+      "visibleHighSaturationReview": {
+        "status": "accepted-intentional-interior-red-decoration",
+        "finding": "The strong-alpha near-red pixels are inside the vermilion knot/tassel at the waist. Both native coordinates and neutral-background full-image inspection match intended red decoration, with zero pixels in the transparent-boundary band. Preserve them.",
+        "requiresCleanup": false
+      }
+    }
+  ],
+  "candidateSummary": {
+    "checkedCount": 9,
+    "needsStrongEdgeReview": [],
+    "visibleHighSaturationFiles": [
+      "source/candidates/14-feierling-E-candidate01.png"
+    ],
+    "highSaturationPixelTotals": {
+      "alpha0Pixels": 0,
+      "alpha1to15Pixels": 51591,
+      "alpha16to127Pixels": 0,
+      "alpha128to255Pixels": 3
+    },
+    "remoteAlphaOnePixels": 1537,
+    "readErrors": []
+  },
+  "candidates": [
+    {
+      "file": "source/candidates/14-feierling-E-candidate01.png",
+      "sha256": "c731c572f1153b571275067d928a106354045abd4ac9fd30e7282728447d4b43",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            0,
+            1222,
+            1254
+          ],
+          "edgePixels": {
+            "top": 16,
+            "bottom": 85,
+            "left": 26
+          },
+          "pixels": 698347
+        },
+        "2": {
+          "bbox": [
+            104,
+            0,
+            1145,
+            1254
+          ],
+          "edgePixels": {
+            "top": 15,
+            "bottom": 37
+          },
+          "pixels": 675908
+        },
+        "16": {
+          "bbox": [
+            106,
+            1,
+            1142,
+            1247
+          ],
+          "edgePixels": {},
+          "pixels": 654390
+        },
+        "128": {
+          "bbox": [
+            108,
+            5,
+            1141,
+            1246
+          ],
+          "edgePixels": {},
+          "pixels": 642349
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 226,
+        "preserveBox": [
+          96,
+          0,
+          1153,
+          1254
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 66,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 80,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5057,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 4649,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 3,
+          "visibleBbox": [
+            748,
+            720,
+            766,
+            735
+          ],
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": [
+            [
+              765,
+              720
+            ],
+            [
+              748,
+              733
+            ],
+            [
+              748,
+              734
+            ]
+          ]
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 73,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge; inspect-visible-high-saturation-pixels-no-global-removal"
+    },
+    {
+      "file": "source/native-archive/01-zhuling-E-b235bfa5e5d080d9.png",
+      "sha256": "b235bfa5e5d080d92f2b3d749d51d8d1a10fb90963a5b165e51930b935a92e2a",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            13,
+            1254,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 62,
+            "left": 141,
+            "right": 70
+          },
+          "pixels": 805942
+        },
+        "2": {
+          "bbox": [
+            0,
+            14,
+            1254,
+            1196
+          ],
+          "edgePixels": {
+            "left": 21,
+            "right": 52
+          },
+          "pixels": 767521
+        },
+        "16": {
+          "bbox": [
+            10,
+            14,
+            1250,
+            1194
+          ],
+          "edgePixels": {},
+          "pixels": 725175
+        },
+        "128": {
+          "bbox": [
+            11,
+            17,
+            1249,
+            1193
+          ],
+          "edgePixels": {},
+          "pixels": 708949
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 231,
+        "preserveBox": [
+          0,
+          6,
+          1254,
+          1204
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1611,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 97,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 473,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 316,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5342,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/01-zhuling-W-e2a27236d2753801.png",
+      "sha256": "e2a27236d27538014a0169ee0714141bfeaddc4d8a211a6aab39bfa263f91527",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            37,
+            21,
+            1232,
+            1220
+          ],
+          "edgePixels": {},
+          "pixels": 615043
+        },
+        "2": {
+          "bbox": [
+            75,
+            91,
+            1199,
+            1177
+          ],
+          "edgePixels": {},
+          "pixels": 585399
+        },
+        "16": {
+          "bbox": [
+            77,
+            94,
+            1196,
+            1175
+          ],
+          "edgePixels": {},
+          "pixels": 561523
+        },
+        "128": {
+          "bbox": [
+            79,
+            95,
+            1195,
+            1174
+          ],
+          "edgePixels": {},
+          "pixels": 551693
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 101,
+        "preserveBox": [
+          67,
+          83,
+          1207,
+          1185
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1014,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 54,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 480,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1600,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1553,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/02-jiangling-E-3bf882a60b6c3155.png",
+      "sha256": "3bf882a60b6c315572bd94d2e1ff98b5f9651d991e09248b71408d8d76549b03",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1216,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 563219
+        },
+        "2": {
+          "bbox": [
+            82,
+            68,
+            1129,
+            1164
+          ],
+          "edgePixels": {},
+          "pixels": 537541
+        },
+        "16": {
+          "bbox": [
+            85,
+            72,
+            1127,
+            1162
+          ],
+          "edgePixels": {},
+          "pixels": 513694
+        },
+        "128": {
+          "bbox": [
+            86,
+            73,
+            1126,
+            1161
+          ],
+          "edgePixels": {},
+          "pixels": 501269
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 41,
+        "preserveBox": [
+          74,
+          60,
+          1137,
+          1172
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 64,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 63,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3895,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1992,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/02-jiangling-W-835b1d9608f5a83f.png",
+      "sha256": "835b1d9608f5a83faf8b57d55462831d85abc03bdb482d29b34a24b451b5dfec",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            17,
+            1194,
+            1198
+          ],
+          "edgePixels": {
+            "left": 1
+          },
+          "pixels": 499281
+        },
+        "2": {
+          "bbox": [
+            140,
+            116,
+            1142,
+            1136
+          ],
+          "edgePixels": {},
+          "pixels": 470949
+        },
+        "16": {
+          "bbox": [
+            142,
+            119,
+            1140,
+            1133
+          ],
+          "edgePixels": {},
+          "pixels": 445483
+        },
+        "128": {
+          "bbox": [
+            143,
+            120,
+            1139,
+            1132
+          ],
+          "edgePixels": {},
+          "pixels": 432896
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 201,
+        "preserveBox": [
+          132,
+          108,
+          1150,
+          1144
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 44,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 3606,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 2564,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 31,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/03-shuangtuan-E-b020ca080d1cfc3c.png",
+      "sha256": "b020ca080d1cfc3c61791149dde295442ec4f3c1c02935bdcf0eeb0f2cbc0e45",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1224,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 5,
+            "left": 27
+          },
+          "pixels": 676655
+        },
+        "2": {
+          "bbox": [
+            46,
+            180,
+            1219,
+            1156
+          ],
+          "edgePixels": {},
+          "pixels": 645248
+        },
+        "16": {
+          "bbox": [
+            50,
+            183,
+            1213,
+            1153
+          ],
+          "edgePixels": {},
+          "pixels": 624111
+        },
+        "128": {
+          "bbox": [
+            51,
+            184,
+            1199,
+            1152
+          ],
+          "edgePixels": {},
+          "pixels": 613047
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 342,
+        "preserveBox": [
+          38,
+          172,
+          1227,
+          1164
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 41,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 48,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 883,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 505,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 39,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/03-shuangtuan-W-370372d027970062.png",
+      "sha256": "370372d02797006243e81cfba8a6491116151d4d7352e159b6d78ab04b8eb1db",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "edgePixels": {
+            "top": 11,
+            "bottom": 4,
+            "left": 7,
+            "right": 102
+          },
+          "pixels": 748685
+        },
+        "2": {
+          "bbox": [
+            18,
+            162,
+            1254,
+            1163
+          ],
+          "edgePixels": {
+            "right": 2
+          },
+          "pixels": 703333
+        },
+        "16": {
+          "bbox": [
+            23,
+            163,
+            1239,
+            1161
+          ],
+          "edgePixels": {},
+          "pixels": 671346
+        },
+        "128": {
+          "bbox": [
+            28,
+            164,
+            1238,
+            1160
+          ],
+          "edgePixels": {},
+          "pixels": 657808
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 166,
+        "preserveBox": [
+          10,
+          154,
+          1254,
+          1171
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 33,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 733,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 633,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 26,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/04-guideng-E-39f6b87e59a8ac00.png",
+      "sha256": "39f6b87e59a8ac001fa86221159321cf24aae6bf804c153bd69e1a16859d2a60",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            21,
+            1234,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 1,
+            "left": 1
+          },
+          "pixels": 497185
+        },
+        "2": {
+          "bbox": [
+            212,
+            96,
+            1056,
+            1155
+          ],
+          "edgePixels": {},
+          "pixels": 471137
+        },
+        "16": {
+          "bbox": [
+            216,
+            99,
+            1054,
+            1151
+          ],
+          "edgePixels": {},
+          "pixels": 447560
+        },
+        "128": {
+          "bbox": [
+            216,
+            99,
+            1053,
+            1150
+          ],
+          "edgePixels": {},
+          "pixels": 438017
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 177,
+        "preserveBox": [
+          204,
+          88,
+          1064,
+          1163
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 46,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 38,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5270,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 1629,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 41,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    },
+    {
+      "file": "source/native-archive/04-guideng-W-f77376a2516a1451.png",
+      "sha256": "f77376a2516a1451094c9e6a7cff51159bb71738974c4c680fcd25c77b7c4419",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alphaThresholdDiagnostics": {
+        "1": {
+          "bbox": [
+            0,
+            19,
+            1226,
+            1254
+          ],
+          "edgePixels": {
+            "bottom": 10,
+            "left": 10
+          },
+          "pixels": 551982
+        },
+        "2": {
+          "bbox": [
+            183,
+            95,
+            1082,
+            1142
+          ],
+          "edgePixels": {},
+          "pixels": 523168
+        },
+        "16": {
+          "bbox": [
+            185,
+            97,
+            1079,
+            1140
+          ],
+          "edgePixels": {},
+          "pixels": 495718
+        },
+        "128": {
+          "bbox": [
+            186,
+            98,
+            1078,
+            1139
+          ],
+          "edgePixels": {},
+          "pixels": 484005
+        }
+      },
+      "subjectTouchesCanvasAtAlpha16": false,
+      "subjectTouchesCanvasAtAlpha128": false,
+      "deterministicCleanup": {
+        "remoteAlphaOnePixels": 52,
+        "preserveBox": [
+          175,
+          87,
+          1090,
+          1150
+        ],
+        "rule": "clear only alpha=1 outside the alpha>=2 bounding box padded by 8 pixels; existing processor already does this when cleanupSmallComponents=true",
+        "sourcePixelsMustRemainUnchanged": true
+      },
+      "highSaturationDiagnostic": {
+        "near-magenta": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 57,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-cyan": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 57,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-yellow": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 5695,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-red": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 929,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        },
+        "near-blue": {
+          "alpha0Pixels": 0,
+          "alpha1to15Pixels": 39,
+          "alpha16to127Pixels": 0,
+          "alpha128to255Pixels": 0,
+          "visibleBbox": null,
+          "visibleBoundaryBandPixels": 0,
+          "visibleSampleCoordinatesXY": []
+        }
+      },
+      "decision": "source-silhouette-clear-of-canvas-edge"
+    }
+  ],
+  "visualSpotCheck": {
+    "file": "source/01-zhuling-E.png",
+    "method": "Read-only System.Drawing neutral-ivory composite shown at 900x900; entire source retained",
+    "finding": "Both wing tips and tail visibly intact. Alpha>=16 bbox [10,14,1250,1194] gives 10px left and 4px right margin; this source is tightly framed but has no meaningful-alpha clipping. Maintain export safe margin through shared downscale; redraw is not required solely for this edge audit.",
+    "sourceChanged": false
+  },
+  "conclusions": [
+    "All 28 formal sources are included. Candidate rows are excluded from formal totals.",
+    "Formal strong-alpha edge-review files: [].",
+    "Extreme RGB diagnostic pixels: alpha 1..15 = 119187; alpha 16..127 = 0; alpha 128..255 = 13.",
+    "The existing source-preserving remote-alpha-one rule can deterministically clear 3686 remote pixels from derived exports.",
+    "Do not globally remove purple/blue/pink/yellow material colors. Where alpha>=16 extreme-color counts are zero, tool-display color artifacts do not establish opaque paint contamination.",
+    "Final shared-scale export and composite checks remain necessary; original PNGs were neither changed nor re-encoded.",
+    "The only 13 formal-source strong-alpha extreme-color pixels are the intended red waist-knot/tassel decoration in 14-feierling E/W, verified by exact coordinates and neutral-background views; preserve these pixels. No unresolved meaningful-alpha clipping or key-color fringe remains."
+  ],
+  "visibleHighSaturationResolved": true,
+  "unresolvedEdgeOrChromaFiles": [],
+  "additionalVisualSpotChecks": [
+    {
+      "file": "source/14-feierling-E.png",
+      "method": "Read-only neutral-ivory 650x650 composite plus exact RGBA coordinate read",
+      "finding": "11 near-red pixels at [731,735,745,766] are intended interior waist red knot/tassel; not fringe."
+    },
+    {
+      "file": "source/14-feierling-W.png",
+      "method": "Read-only neutral-ivory 650x650 composite plus exact RGBA coordinate read",
+      "finding": "2 near-red pixels at [585,665,587,667] are intended interior red knot/tassel; not fringe."
+    }
+  ]
+}

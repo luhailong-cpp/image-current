@@ -1,0 +1,1761 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T22:07:30.381098+00:00",
+  "reviewer": "independent sw_contract_audit agent",
+  "pathBase": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/southwest",
+  "status": "candidate_progress_not_formal_acceptance",
+  "liveProgress": "progress.json",
+  "currentTileAtReview": "r09_c04",
+  "complete4kAtReview": true,
+  "scope": "Independent current v04 source-coordinate verification, whole-tile overview and named native crops; r09_c03/r09_c04 top-1024 native edge; current record chain and selected next-guide source. Historical reviews below retain their original findings and do not describe current pixels unless explicitly reconfirmed.",
+  "reviewedCases": [
+    {
+      "id": "initial-local-layout",
+      "files": [
+        "guides/r09_c03_s01_01_v01.layout-only.png",
+        "native/r09_c03_s01_01_v01.png"
+      ],
+      "result": "candidate_layout_relationship_retained",
+      "findings": "Bamboo, curled gold/red eave, blue tiles and timber remain a local crop, not a new map. Eave rises to the right. Initial native silhouette had an estimated 70–90 native-pixel shift at the right edge relative to the blurry layout guide; exact layout registration was not certified.",
+      "supersededBy": "First-pair repair below for active seam context."
+    },
+    {
+      "id": "first-row-eave-repair",
+      "files": [
+        "qa/r09_c03_s01_pair-repair-full-v02.png",
+        "qa/repair-full-v02-left-boundary100.png",
+        "qa/repair-full-v02-right-boundary100.png"
+      ],
+      "result": "candidate_geometry_pass",
+      "findings": "Both native boundary crops retain continuous eave, blue-tile edges, timber and bamboo. No conspicuous structural break requiring immediate rework was seen."
+    },
+    {
+      "id": "second-row-timber-before-repair",
+      "files": [
+        "qa/s02_02-03-seam100.png"
+      ],
+      "result": "failed_then_superseded",
+      "findings": "At crop seam x=300, approximately y=650–1254, timber beams, supports and dark framing failed to join. Global seam x=10240, affected y approximately 34327–34931. Original pair was not usable as a joined candidate.",
+      "supersededBy": "second-row-timber-repair"
+    },
+    {
+      "id": "first-to-second-row-vertical-join",
+      "files": [
+        "qa/s01_02-s02_02-seam100.png"
+      ],
+      "result": "candidate_geometry_pass",
+      "findings": "No comparable structural break seen across the inspected horizontal boundary; column, plaster and diagonal eave remain continuous. This does not clear other edges of either patch."
+    },
+    {
+      "id": "second-row-timber-repair",
+      "files": [
+        "qa/r09_c03_seam_s02_02_03_v01-assembled.png",
+        "qa/r09_c03_seam_s02_02_03_v01-left100.png",
+        "qa/r09_c03_seam_s02_02_03_v01-right100.png"
+      ],
+      "result": "candidate_geometry_pass_with_minor_tonal_followup",
+      "findings": "The interrupted beam/support assembly now forms a continuous corner. No conspicuous new geometry breaks at either repair boundary. A slight vertical tonal/brushwork join remains on the upper timber in the left boundary crop; recheck before formal acceptance."
+    },
+    {
+      "id": "blue-tile-notch-local-repair",
+      "files": [
+        "native/r09_c03_s02_03_v02.png",
+        "native/r09_c03_s02_03_resolved_v2.png",
+        "qa/s02_03-notch-local-composite100.png"
+      ],
+      "result": "candidate_local_geometry_pass",
+      "findings": "The narrow defect near native x=1014,y=335 persisted in v02. The selected resolved_v2 restores the curved tile edge and highlight. No conspicuous rectangular patch edge was seen in the native crop. Whole-image v03 color shift is not attributed to pixels outside the actual repair contribution.",
+      "pixelVerification": {
+        "method": "Pillow read-only RGB ImageChops comparison; no files written by this check",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "changedBoundingBox": [
+          935,
+          290,
+          1115,
+          470
+        ],
+        "repairDestinationTopLeft": [
+          935,
+          290
+        ],
+        "outsideRepairIdenticalToBase": true,
+        "repairEqualsAiSourceCrop": true,
+        "base": {
+          "path": "native/r09_c03_s02_03_resolved.png",
+          "sha256": "bafa4f3576bbb350077d75e68dcda90a9d1179c8528c5786cd9747ebe97388c1"
+        },
+        "selected": {
+          "path": "native/r09_c03_s02_03_resolved_v2.png",
+          "sha256": "f23d04e307dcf9082ca2326439547d22aa3c4e9c472b619effb5c51b34fa27ab"
+        },
+        "aiContribution": {
+          "path": "native/r09_c03_s02_03_v03.png",
+          "sha256": "0d6f2ea790146055f6fdad096812bcdfe83e756271f19ee6beef344fb54ec811"
+        },
+        "sourceGenerationRecordsExist": true
+      }
+    },
+    {
+      "id": "third-row-native-seams",
+      "reviewedAtUtc": "2026-10-09T18:58:33.871362+00:00",
+      "files": [
+        "qa/s03_01-02-seam100.png",
+        "qa/s03_02-03-seam100.png",
+        "qa/s03_03-04-seam100.png",
+        "qa/s02_01-s03_01-seam100.png",
+        "qa/s02_02-s03_02-seam100.png",
+        "qa/s02_03-s03_03-seam100.png",
+        "qa/s02_04-s03_04-seam100.png"
+      ],
+      "result": "candidate_geometry_continuous_tone_review_required",
+      "findings": "No new conspicuous geometric break seen in these seven native seam crops. Visible vertical tonal joins occur on plaster/timber at global x=10240 and upper timber/lantern at x=11264; weaker horizontal tonal changes occur along global y=34816. These need full-tile review and correction if still visible before formal acceptance.",
+      "wholeTileAcceptance": false
+    },
+    {
+      "id": "r09_c04-s02_03-top-right-native-seams",
+      "reviewedAtUtc": "2026-10-10T00:33:10.742649+00:00",
+      "result": "candidate_geometry_pass_with_visible_top_tone_step",
+      "formalAccepted": false,
+      "native": "native/r09_c04_s02_03_v01.png",
+      "nativeSha256": "2565f9d365e3cb3e0c3228a3036a988919b3f8b6a14a6c1c01b9036184be7263",
+      "nativeGlobalBox": [
+        14221,
+        33677,
+        15475,
+        34931
+      ],
+      "layoutCompared": "guides/r09_c04_s02_03_v01.layout-only.png",
+      "qaPixelVerification": [
+        {
+          "path": "qa/r09_c04_s01_03-s02_03-seam100.png",
+          "sha256": "f1ddac719bd547afecfee99fc7465a91a228807e9375b9e85cd69fda91255729",
+          "sourceHashesMatch": true,
+          "sameCoordinateCropPixelsMatch": true,
+          "dimensions": [
+            1254,
+            600
+          ],
+          "seamAt": 300,
+          "direction": "vertical"
+        },
+        {
+          "path": "qa/r09_c04_s02_03-04-seam100.png",
+          "sha256": "d20c1e0b88a74022fd6f2c85524027bda7a5151e2d3147772f0d1acadff18012",
+          "sourceHashesMatch": true,
+          "sameCoordinateCropPixelsMatch": true,
+          "dimensions": [
+            600,
+            1254
+          ],
+          "seamAt": 300,
+          "direction": "horizontal"
+        }
+      ],
+      "guideReconstructedFromRecordedPastes": true,
+      "guideCornerNote": "Top strip uses repaired s01_03_resolved. Right strip pasted later uses s02_04_v01 and owns the top-right230-square corner. This expected order is not a coordinate error; both resulting boundary views were inspected.",
+      "topSeam": {
+        "file": "qa/r09_c04_s01_03-s02_03-seam100.png",
+        "qaGlobalOrigin": [
+          14221,
+          33492
+        ],
+        "globalSeamY": 33792,
+        "findings": [
+          {
+            "component": "eave timber and hanger",
+            "qaReviewBox": [
+              0,
+              275,
+              260,
+              600
+            ],
+            "globalReviewBox": [
+              14221,
+              33767,
+              14481,
+              34092
+            ],
+            "geometry": "Continuous wooden support/end ornament; no detached hanger or obvious sideways step at the seam. Lower hanging sphere and lantern continue below. Their left-neighbor connection is a separate unreviewed boundary."
+          },
+          {
+            "component": "main bamboo node",
+            "qaReviewBox": [
+              790,
+              275,
+              965,
+              315
+            ],
+            "globalReviewBox": [
+              15011,
+              33767,
+              15186,
+              33807
+            ],
+            "geometry": "One normal node structure with continuous stalk boundaries; no duplicate ring or severed segment observed."
+          },
+          {
+            "component": "bamboo/background tone",
+            "qaReviewBox": [
+              500,
+              285,
+              1254,
+              315
+            ],
+            "globalReviewBox": [
+              14721,
+              33777,
+              15475,
+              33807
+            ],
+            "severity": "visible_tonal_followup_before_formal_acceptance",
+            "geometry": "Trunk and leaf contours remain continuous; the conspicuous horizontal transition is a value step rather than evidence of a geometry offset.",
+            "action": "Review and resolve the top horizontal tone step before formal acceptance using an authorized native repair or a recorded same-coordinate hard-cut choice only where geometry stays continuous."
+          }
+        ]
+      },
+      "rightSeam": {
+        "file": "qa/r09_c04_s02_03-04-seam100.png",
+        "qaGlobalOrigin": [
+          15060,
+          33677
+        ],
+        "globalSeamX": 15360,
+        "findings": [
+          {
+            "component": "bamboo",
+            "qaReviewBox": [
+              270,
+              0,
+              340,
+              470
+            ],
+            "geometry": "No conspicuous node-level or stem-contour displacement seen where the seam intersects the bamboo and leaves."
+          },
+          {
+            "component": "rear stone top",
+            "qaPointApprox": [
+              300,
+              480
+            ],
+            "globalPointApprox": [
+              15360,
+              34157
+            ],
+            "geometry": "Continuous curved top silhouette, no join step."
+          },
+          {
+            "component": "front stone upper edge",
+            "qaPointApprox": [
+              300,
+              713
+            ],
+            "globalPointApprox": [
+              15360,
+              34390
+            ],
+            "geometry": "Continuous oblique/curved silhouette and overlap ordering, no displaced lip or open gap."
+          },
+          {
+            "component": "front stone surface",
+            "qaReviewBox": [
+              285,
+              710,
+              315,
+              1150
+            ],
+            "globalReviewBox": [
+              15345,
+              34387,
+              15375,
+              34827
+            ],
+            "severity": "minor_tonal_followup",
+            "geometry": "Very slight vertical value/texture join on the front stone surface; contours and stone occlusion remain continuous."
+          }
+        ]
+      },
+      "layoutInterpretation": "Broad placement remains eave/hanger at left, bamboo behind, stacked pale stone at right. Low-resolution guide cannot certify small painted detail or exact stone contours. No new substantial layout shift was identified in this review.",
+      "limits": [
+        "Only the named top and right seams are reviewed. S02_02 left-neighbor join, bottom join and complete four-way junctions remain to be checked.",
+        "Hanger hardware near the left edge includes native halo content; this does not validate its later contribution through s02_02.",
+        "Visual contour inspection is separate from exact source-coordinate checks. Neither establishes formal whole-tile acceptance."
+      ],
+      "secondRead": "Independent roof_landmark_second_read agent agreed: no structure redraw indicated; top value boundary visible, right stone surface transition minor.",
+      "currentApplicability": "historical_rejected_stone_sources_only",
+      "supersededBy": [
+        "native/r09_c04_s02_03_v02.png",
+        "native/r09_c04_s02_04_v02.png"
+      ],
+      "semanticCorrection": "The old source was a mistaken stacked-rock interpretation of a crafted vessel. Prior contour continuity did not validate object identity; no stone-related pass carries to the selected v02 vessel."
+    },
+    {
+      "id": "r09_c04-s02_01-s02_02-s03_01-seams",
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "result": "candidate_continuation_with_known_rectangle_artifact_and_visible_tone_joins",
+      "formalAccepted": false,
+      "evidence": [
+        {
+          "path": "qa/r09_c03-v04-r09_c04-s02_01-external100.png",
+          "sha256": "44362ee01d124bacb8e4672ef218a911bb93e7f4c58b45532c4e464bf81903de",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c03-native-candidate-v04.png",
+            "r09_c04_s02_01_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c03-v04-r09_c04-s03_01-external100.png",
+          "sha256": "8d7b4c6fb27770aa0dfeee1770e5819a291e8bd49f8955a9a53e0fd4d11b4c58",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c03-native-candidate-v04.png",
+            "r09_c04_s03_01_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c04_s01_01-s02_01-seam100.png",
+          "sha256": "78735137daa885cbe7c2fc5bc3457ad8cdcecb09a908694d352e7d30d74cf5e3",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c04_s01_01_v02.png",
+            "r09_c04_s02_01_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c04_s01_02-s02_02-seam100.png",
+          "sha256": "95e5088b2a7d8127bba2cbf55696945208e611bb1ddfc6c6769cd39f423373c4",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c04_s01_02_resolved.png",
+            "r09_c04_s02_02_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c04_s02_01-02-seam100.png",
+          "sha256": "323bb060badef063587d1a0467a2a152011ee836cbf9a36a609540eab5cc38c2",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c04_s02_01_v01.png",
+            "r09_c04_s02_02_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c04_s02_02-03-seam100.png",
+          "sha256": "0869cead7200ce8946be274192bb8ba7667c6833cd32f16530edd1e7c2f8040b",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c04_s02_02_v01.png",
+            "r09_c04_s02_03_v01.png"
+          ]
+        },
+        {
+          "path": "qa/r09_c04_s02_01-s03_01-seam100.png",
+          "sha256": "d088fa26cb1e0c7b737d831073df927a6ff63f6eddcabed4f02db0d083b13086",
+          "sourceHashesAndAllCropPixelsIndependentlyVerified": true,
+          "sources": [
+            "r09_c04_s02_01_v01.png",
+            "r09_c04_s03_01_v01.png"
+          ]
+        }
+      ],
+      "visualFindings": [
+        {
+          "id": "s02_01-external-v04",
+          "file": "qa/r09_c03-v04-r09_c04-s02_01-external100.png",
+          "globalSeamX": 12288,
+          "globalYHalfOpen": [
+            33792,
+            34816
+          ],
+          "geometry": "Gold trim, blue roof-tile contours and timber outlines remain connected across the actual v04 edge; no clear new offset requiring structural redrawing.",
+          "tone": "Vertical value changes remain visible through roof and wood surfaces; not a clean final seam."
+        },
+        {
+          "id": "s03_01-external-v04",
+          "file": "qa/r09_c03-v04-r09_c04-s03_01-external100.png",
+          "globalSeamX": 12288,
+          "globalYHalfOpen": [
+            34816,
+            35840
+          ],
+          "geometry": "Door diamond outline and its decoration remain connected across the border; no new whole-door displacement demonstrated. The known rectangle remains a separate artificial edge.",
+          "landmarksQaApprox": [
+            [
+              300,
+              310
+            ],
+            [
+              300,
+              725
+            ]
+          ],
+          "tone": "Visible rectangular wood artifact near the upper border and other vertical value differences remain."
+        },
+        {
+          "id": "known-s03_01-wood-rectangle",
+          "severity": "must_fix_before_formal_acceptance",
+          "native": "native/r09_c04_s03_01_v01.png",
+          "nativeBoxApprox": [
+            115,
+            130,
+            235,
+            230
+          ],
+          "globalBoxApprox": [
+            12288,
+            34831,
+            12408,
+            34931
+          ],
+          "externalQaBoxApprox": [
+            300,
+            15,
+            420,
+            115
+          ],
+          "topQaBoxApprox": [
+            115,
+            315,
+            235,
+            415
+          ],
+          "finding": "A plainly visible rectangular wood-value remnant contains abruptly terminated vertical grain/shadow and right-angle edges. It is not a natural continuous shadow and must not be reported as seam-free. It does not, by itself, demonstrate movement of the full door or facade.",
+          "action": "Local native AI repair should restore the intended continuous door-panel/wood structure and lighting; then recheck both actual v04 external edge and the top join. A feather-only concealment would not address the artificial edge."
+        },
+        {
+          "id": "s02_01-top",
+          "file": "qa/r09_c04_s01_01-s02_01-seam100.png",
+          "globalSeamY": 33792,
+          "geometry": "Blue tile rims and gold trim cross the seam without a conspicuous missing tile or stepped contour.",
+          "tone": "Mild surface-value differences remain a complete-tile review item."
+        },
+        {
+          "id": "s02_02-top",
+          "file": "qa/r09_c04_s01_02-s02_02-seam100.png",
+          "globalSeamY": 33792,
+          "qaConcernBoxApprox": [
+            985,
+            285,
+            1254,
+            315
+          ],
+          "globalConcernBoxApprox": [
+            14182,
+            33777,
+            14451,
+            33807
+          ],
+          "geometry": "Roof mouths, eave timber support and hanging component are continuous; support is not severed.",
+          "tone": "Visible horizontal value transition around the right-side support/background."
+        },
+        {
+          "id": "s02_01-02-wall",
+          "file": "qa/r09_c04_s02_01-02-seam100.png",
+          "globalSeamX": 13312,
+          "qaConcernBoxApprox": [
+            285,
+            525,
+            315,
+            1254
+          ],
+          "globalConcernBoxApprox": [
+            13297,
+            34202,
+            13327,
+            34931
+          ],
+          "geometry": "Timber beam and plaster-wall border connect.",
+          "tone": "Clear straight vertical wall-value and texture transition; surface consistency requires correction before formal acceptance."
+        },
+        {
+          "id": "s02_02-03-lantern",
+          "file": "qa/r09_c04_s02_02-03-seam100.png",
+          "globalSeamX": 14336,
+          "qaConcernBoxApprox": [
+            285,
+            300,
+            315,
+            1254
+          ],
+          "globalConcernBoxApprox": [
+            14321,
+            33977,
+            14351,
+            34931
+          ],
+          "geometry": "Hanger chain, gold lantern crown, lantern outer contour and flower pattern remain broadly aligned; no detached hanger or confirmed major outline step.",
+          "tone": "Clear vertical value/texture transitions in bamboo leaves, lantern surface and flower pattern; geometric continuity is not tonal acceptance.",
+          "currentApplicability": "historical_join_with_rejected_s02_03_v01; current v02 join needs its own evidence"
+        },
+        {
+          "id": "s03_01-top",
+          "file": "qa/r09_c04_s02_01-s03_01-seam100.png",
+          "globalSeamY": 34816,
+          "geometry": "Vertical timber post, wall edge and red wall-plaque border continue without a new large shift.",
+          "tone": "Horizontal value change visible on timber; known rectangle crosses the corner area and remains open."
+        }
+      ],
+      "layoutAssessment": {
+        "s03_01": "Native and layout-only directly compared: door at left, central upright trim, white wall/red plaque at right and lower stone steps retain broad relationships. No clear major facade relocation inferred; low-resolution guide does not establish exact small ornament contours.",
+        "s02_01_s02_02": "Second independent reviewer compared each native to its layout-only: roof/beam/column/wall relationships and hanging lantern placement remain consistent. Segmented gold detail, beads and painted flower are reinterpretations of low-resolution detail; no major roof occupancy change, shifted lantern or unsupported hanging component established.",
+        "layoutReviewedBy": "s03_01 by sw_contract_audit; s02_01/s02_02 by roof_landmark_second_read"
+      },
+      "selectedIndexReadback": {
+        "s01_02": "r09_c04_s01_02_resolved",
+        "s01_03": "r09_c04_s01_03_resolved",
+        "s02_01": "r09_c04_s02_01_v01",
+        "s02_02": "r09_c04_s02_02_v01",
+        "s03_01": "r09_c04_s03_01_v01",
+        "note": "Read-only snapshot confirms selected repaired eave sources and the three requested candidates. S03_02 had arrived by readback but was excluded from this task."
+      },
+      "limits": [
+        "No claim that these sources have no seams. Visible tones and the known rectangle are open.",
+        "This review excludes the newly arrived s03_02 and other unlisted boundaries.",
+        "C04 remains incomplete; the complete final4K-to-final4K edge must be reviewed after assembly."
+      ]
+    }
+  ],
+  "codeAudit": {
+    "file": "production.py",
+    "regularCoordinateMath": "1024 core spacing, 115 halo, 230 native overlap, overview mapping, and inspected regular-grid seam crops are consistent.",
+    "priorGuardFinding": "Earlier seamcheck lacked native-size, adjacency and direction checks.",
+    "currentGuardStatus": "Re-read during this handoff: seamcheck now validates direction, global delta and 1254 dimensions. Code inspected; no execution test performed by this reviewer.",
+    "remainingLimitation": "overlap_guide pastes multiple neighbors in order; the last neighbor wins where their constraints intersect. Four-patch corners still require visual conflict inspection.",
+    "recordConvention": "Some earlier guide records use four-value destination boxes under destinationTopLeft; interpret those historical entries as rectangles, not two-value points.",
+    "resolvepairReadback": {
+      "checkedAtUtc": "2026-10-09T23:48:08.452983+00:00",
+      "file": "production.py",
+      "allowedRepairOffsetFromLeftSource": [
+        0,
+        1024
+      ],
+      "offsetDerivedFromGlobalCoordinates": true,
+      "constraints": "Horizontal source pair spaced1024, matching top y, each input1254 square; repair has same top y and lies within paired native coverage. Not a general arbitrary-position or vertical repair assembler.",
+      "validation": "Code read only; actual offset700 outputs independently pixel-verified as above. No production command executed by reviewer."
+    }
+  },
+  "followups": [
+    {
+      "id": "minor-timber-tonal-join",
+      "status": "historical_source_join_superseded_by_current_v04_review",
+      "severity": "minor",
+      "file": "qa/r09_c03_seam_s02_02_03_v01-left100.png",
+      "action": "Inspect the upper timber tonal join at native resolution during full-tile QA; correct through the authorized image workflow if still perceptible.",
+      "historicalStatus": "open_before_formal_acceptance",
+      "currentAction": "Use final v04 pixels and source-id mask; see v04-minor-post-tone and v04-external-boundaries. Do not infer the old fixed-grid tonal defect persists unchanged."
+    },
+    {
+      "id": "selected-source-index-mismatch",
+      "status": "resolved_index_and_preview_source_verified",
+      "indexCorrectionVerifiedAtUtc": "2026-10-09T18:03:36Z",
+      "verifiedCurrentValue": "r09_c03_s02_03_resolved_v2",
+      "severity": "must_resolve_before_reassembly",
+      "file": "current-native-map.json",
+      "observedValue": "r09_c03 row 2 column 3 = r09_c03_s02_03_v03",
+      "expectedAtThisReview": "r09_c03_s02_03_resolved_v2",
+      "basis": "qa/s02_03-final-local-repair.json selected resolved_v2; read of index during this handoff still selected v03.",
+      "action": "Owner corrected index and rebuilt v02 partial preview. Reviewer confirmed progress.currentCandidate, preview hash and every recorded source core against output pixels; no resizing or mismatched source contribution found.",
+      "resolutionVerifiedAtUtc": "2026-10-09T18:06:14.564547+00:00",
+      "previewVerification": {
+        "path": "qa/r09_c03-upper-half-native-candidate-v02.png",
+        "dimensions": [
+          4096,
+          2048
+        ],
+        "sha256": "643ea59103ba973cc5757ef7d9badc4e71e2eb2590d729b40acd74c4bd7cc249",
+        "previewHashMatches": true,
+        "allRecordedSourceHashesMatch": true,
+        "allRecordedSourceCorePixelsMatch": true,
+        "visualFullPreviewQA": false
+      }
+    },
+    {
+      "id": "derived-record-explicit-links",
+      "status": "resolved_owner_added_links_verified",
+      "severity": "minor",
+      "file": "native/r09_c03_s02_03_resolved_v2.png.generation.json",
+      "action": "Both derivedFrom.generationRecord paths now exist and were read back by the reviewer.",
+      "resolutionVerifiedAtUtc": "2026-10-09T18:06:14.564547+00:00"
+    },
+    {
+      "id": "local-qa-preview-provenance",
+      "status": "resolved_owner_added_derivation_verified",
+      "severity": "minor",
+      "file": "qa/s02_03-notch-local-composite100.png",
+      "action": "Sidecar now identifies resolved_v2 and native crop [875,230,1175,530]; reviewer read back the record.",
+      "resolutionVerifiedAtUtc": "2026-10-09T18:06:14.564547+00:00"
+    },
+    {
+      "id": "third-row-and-full-tile-tonal-joins",
+      "status": "historical_source_join_superseded_by_current_v04_review",
+      "severity": "must_resolve_before_formal_acceptance_if_visible",
+      "globalEdges": {
+        "verticalX": [
+          10240,
+          11264
+        ],
+        "horizontalY": [
+          34816
+        ]
+      },
+      "action": "Review white wall, timber beams, lantern surface, stone steps and four-core intersections in assembled full tile; preserve geometry and native coverage during any AI repair. Include reported fourth-row defects when the tile is ready.",
+      "historicalStatus": "confirmed_in_full_candidate_v01_pending_repairs",
+      "currentAction": "Use final v04 pixels and source-id mask; see v04-minor-post-tone and v04-external-boundaries. Do not infer the old fixed-grid tonal defect persists unchanged."
+    },
+    {
+      "id": "v04-minor-post-tone",
+      "status": "open_before_formal_acceptance",
+      "severity": "minor",
+      "tileLocalBox": [
+        1625,
+        3320,
+        1740,
+        3380
+      ],
+      "file": "output/r09_c03-native-candidate-v04.png",
+      "action": "At native resolution recheck the low-amplitude post tone transition; the inspected current bottom comparison has no conspicuous geometric discontinuity. Formal acceptance is not asserted."
+    },
+    {
+      "id": "v04-external-boundaries",
+      "status": "partial_candidate_edge_review_only",
+      "severity": "required_before_formal_acceptance",
+      "action": "Current independent checks cover global x12288,y[32768,35840), the top3072 rows of c03v04 against selected c04 native candidates. Last1024 rows y[35840,36864) and all other external/cross-zone edges remain unreviewed by these checks. Recheck the entire border with both final4K artifacts.",
+      "latestCoverageAtUtc": "2026-10-10T01:05:53.211235+00:00"
+    },
+    {
+      "id": "r09_c04-east-eave-tip-layout-drift",
+      "status": "resolved_for_candidate_continuation_by_native_AI_repair",
+      "severity": "local_layout_repair",
+      "reviewRecord": "layoutReviews/r09_c04-east-eave-tip-layout-drift",
+      "action": "Select the reviewed resolved pair and rebuild affected guide constraints. Residual silhouette uncertainty is recorded in the repair review; full tile and final external seams still require QA.",
+      "historicalStatus": "open_before_downward_corner_extension",
+      "resolutionReviewedAtUtc": "2026-10-09T23:48:08.452983+00:00"
+    },
+    {
+      "id": "r09_c04-s02_03-top-tone-step",
+      "status": "historical_rejected_source_replaced_by_v02_recheck_current_evidence",
+      "severity": "visible_tonal_seam",
+      "globalSeamY": 33792,
+      "approxGlobalXRange": [
+        14721,
+        15475
+      ],
+      "sourceReview": "r09_c04-s02_03-top-right-native-seams",
+      "action": "Resolve the visible horizontal value discontinuity while preserving bamboo-node and hanger geometry. Review current complete candidate after assembly.",
+      "historicalStatus": "open_before_formal_acceptance",
+      "currentAction": "Do not use rejected rock-source crops. Current vessel and lantern geometry/value decisions must reference selected v02 and its QA."
+    },
+    {
+      "id": "r09_c04-s02_03-right-stone-tone",
+      "status": "historical_rejected_source_replaced_by_v02_recheck_current_evidence",
+      "severity": "minor",
+      "globalSeamX": 15360,
+      "approxGlobalYRange": [
+        34387,
+        34827
+      ],
+      "sourceReview": "r09_c04-s02_03-top-right-native-seams",
+      "action": "Recheck subtle front-stone vertical surface tone/texture join; no geometry repair requirement identified by this review.",
+      "historicalStatus": "minor_followup_in_full_tile_QA",
+      "currentAction": "Do not use rejected rock-source crops. Current vessel and lantern geometry/value decisions must reference selected v02 and its QA."
+    },
+    {
+      "id": "s03_01-wood-rectangle",
+      "severity": "must_fix_before_formal_acceptance",
+      "globalBoxApprox": [
+        12288,
+        34831,
+        12408,
+        34931
+      ],
+      "action": "Resolve known rectangular wood artifact with continuous local structure and lighting; inspect top and actual external edge afterward.",
+      "status": "open",
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "sourceReview": "r09_c04-s02_01-s02_02-s03_01-seams"
+    },
+    {
+      "id": "s02_01-02-wall-value",
+      "severity": "visible_tonal_seam",
+      "globalSeamX": 13312,
+      "globalYApprox": [
+        34202,
+        34931
+      ],
+      "action": "Resolve straight wall-value and texture join before formal acceptance.",
+      "status": "open",
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "sourceReview": "r09_c04-s02_01-s02_02-s03_01-seams"
+    },
+    {
+      "id": "s02_02-03-lantern-value",
+      "severity": "visible_tonal_seam",
+      "globalSeamX": 14336,
+      "globalYApprox": [
+        33977,
+        34931
+      ],
+      "action": "Resolve leaf/lantern/flower surface value join while preserving the aligned contour and hanger.",
+      "status": "historical_rejected_source_replaced_by_v02_recheck_current_evidence",
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "sourceReview": "r09_c04-s02_01-s02_02-s03_01-seams",
+      "historicalStatus": "open",
+      "currentAction": "Do not use rejected rock-source crops. Current vessel and lantern geometry/value decisions must reference selected v02 and its QA."
+    }
+  ],
+  "limitations": [
+    "Whole-tile images are displayed downscaled; native visual conclusions apply only to listed 100% crops. Same-coordinate provenance does not certify visual quality.",
+    "Current v04 is a complete4K candidate, not a formally accepted game tile. Current external checks cover only its east top3072 rows against selected c04 native candidates, with documented open artifacts; both final4K artifacts must be checked later.",
+    "Actual builtin model version and quality remain unconfirmed/null; configuration targets and prompts do not establish actual returned settings.",
+    "The 49-tile southwest task remains incomplete. World area, navigation, client integration and 5000-player capacity remain unverified.",
+    "Historical findings retain their original version scope. Read current progress.json and candidate derivation rather than directory counts or old seam previews."
+  ],
+  "writesAuthorizedForThisTask": [
+    "README.md",
+    "qa/independent-qc-review.json",
+    "qa/r09_c03-v04-r09_c04-current-native-edge100.png",
+    "qa/r09_c03-v04-r09_c04-current-native-edge100.png.derivation.json"
+  ],
+  "lastUpdatedAtUtc": "2026-10-10T05:57:06.354133+00:00",
+  "processAudits": [
+    {
+      "recordedAtUtc": "2026-10-09T18:58:33.871362+00:00",
+      "scope": "Read-only native/request/guide/progress/index audit and third-row native seam viewing; only README and this review record changed.",
+      "snapshots": [
+        {
+          "checkedAtUtc": "2026-10-09T18:43:47.786474+00:00",
+          "builtinOutputCount": 16,
+          "derivedOutputCount": 5,
+          "regularCorePositionsGenerated": 11,
+          "progressGeneratedNativeCount": 16,
+          "progressCorePositionsGenerated": 8,
+          "progressUsableNativeCount": 12,
+          "progressCorePositionsCovered": 10,
+          "indexedPositions": 8,
+          "indexedRows": 2,
+          "finding": "Generated native count matched actual recorded builtin outputs; corePositionsGenerated was stale. All 21 then-present native/derived images matched recorded hash/dimensions; regular-grid core and native coordinates matched the contract; recorded builtin reference hashes and prompt-file existence passed."
+        },
+        {
+          "checkedAtUtc": "2026-10-09T18:49:24.178933+00:00",
+          "builtinOutputCount": 18,
+          "regularCorePositionsGenerated": 13,
+          "progressGeneratedNativeCount": 18,
+          "progressCorePositionsGenerated": 13,
+          "progressUsableNativeCount": 14,
+          "progressCorePositionsCovered": 12,
+          "finding": "Core generated count was corrected and matched the then-current output set. Later outputs are outside this count snapshot. All then-read builtin records retained null submitted/actual model and quality selectors."
+        }
+      ],
+      "selectedIndexObservation": {
+        "indexedPositions": 8,
+        "rowsAvailable": 2,
+        "currentCandidateIsPartial": true,
+        "ancestralBuiltinSourceCount": 11,
+        "note": "The published two-row candidate index still represented eight selected cores. Its recursive AI source chain contains eleven unique builtin outputs, including two seam repairs and the v03 180x180 contribution. This is source ancestry, not eleven core positions. Usable-output count cannot be reconstructed unambiguously until whether partially used AI edits count is explicitly defined; most immutable generation records remain awaiting_visual_QA while QA decisions are separate."
+      },
+      "guideCoordinateVerification": {
+        "files": [
+          "guides/r09_c03_s03_01_v01.native-overlap-guide.png",
+          "guides/r09_c03_s03_02_v01.native-overlap-guide.png",
+          "guides/r09_c03_s03_03_v01.native-overlap-guide.png",
+          "guides/r09_c03_s03_04_v01.native-overlap-guide.png"
+        ],
+        "result": "Original-size top and left strips have correct coordinates. For s03_02 through s03_04, differences against the top source are confined to the [0,0,230,230] corner overwritten by the later left-source paste; the left contribution matches exactly. This is expected paste order, not coordinate drift, but does not resolve conflicts between the two source views.",
+        "usesCorrectResolvedS02_03": true
+      },
+      "recommendations": [
+        "Derive corePositionsGenerated from unique regular (tile,subrow,subcolumn) output positions; exclude midpoint seam repair canvases, retries and mechanical derivatives.",
+        "Define whether usableNativeCount includes an AI output used only through a small accepted crop; keep this separate from usable core-position coverage.",
+        "Before final assembly, synchronize the selected-source index, QA decisions, corePositionsCovered and the latest candidate preview; the current published partial index does not yet list every subsequently generated position.",
+        "Inspect all native horizontal/vertical seams and four-core junctions in the complete tile. Continue to classify pending tonal joins as candidates rather than formally accepted art."
+      ],
+      "ownerReportedNotIndependentlyViewed": {
+        "source": "Parent production-agent message during this audit",
+        "patch": "r09_c03_s04_03_v01",
+        "issues": [
+          "Unwanted red-window-frame extension at native x=0..268,y=355..535; owner plans a localized AI repair and native crop replacement before extending s04_02.",
+          "Lantern tassel may be too long; post base approximately 100px to the right, to assess in full tile.",
+          "Visible vertical tone mismatch at a horizontal stone-step adjacency."
+        ],
+        "status": "Await full-tile independent visual QA; no pass/fail asserted for these reported issues."
+      }
+    },
+    {
+      "recordedAtUtc": "2026-10-09T22:07:30.381098+00:00",
+      "scope": "Read-only v04 chain, current records, c04 first-native rejection/selection and s01_02 guide-source verification; newly generated edge QA is the explicitly authorized mechanical crop only.",
+      "r09_c04": {
+        "rejected": "native/r09_c04_s01_01_v01.png",
+        "rejectionRecord": "qa/r09_c04_s01_01_v01-rejected.json",
+        "reason": "Left overlap geometry shifted; invented upper red/gold geometry. Do not extend from v01.",
+        "selected": "native/r09_c04_s01_01_v02.png",
+        "selectionRecord": "qa/r09_c04_s01_01_v02-review.json",
+        "selectedNativeGlobalBox": [
+          12173,
+          32653,
+          13427,
+          33907
+        ],
+        "selectedCoreGlobalBox": [
+          12288,
+          32768,
+          13312,
+          33792
+        ],
+        "nextGuideChecked": "guides/r09_c04_s01_02_v01.native-overlap-guide.png",
+        "nextGuideLeft230ExactlyMatchesV02Right230": true,
+        "nextGuideSha256": "fcbdb93cd6b8cb4b2906f622a2faacea26deb8243affa73a3b55e694921c9df9",
+        "requestSourceAndGuideHashesChecked": true,
+        "note": "Generation record awaiting_visual_QA is immutable receipt metadata; selected-candidate decisions are in separate QA/index records. Newly arrived s01_02 output and s01_03 guide were not visually reviewed by this subtask."
+      },
+      "progressSnapshot": {
+        "sourceUpdatedAtUtc": "2026-10-09T22:01:00.826778+00:00",
+        "status": "guide_ready",
+        "currentTile": "r09_c04",
+        "currentPatch": "s01_03",
+        "generatedNativeCount": 29,
+        "corePositionsGenerated": 18,
+        "corePositionsCovered": 17,
+        "selectedCandidateCoreCount": 17,
+        "candidate4kCount": 1,
+        "complete4kCount": 1,
+        "formalAcceptedCount": 0,
+        "note": "Live read only, not a re-audit of every new output after the v04 and c04-v02 checks. Generated positions can exceed selected positions while QA/indexing is in progress; no automatic count mutation made."
+      }
+    }
+  ],
+  "fullTileReviews": [
+    {
+      "reviewedAtUtc": "2026-10-09T19:43:58.504236+00:00",
+      "candidate": "output/r09_c03-native-candidate-v01.png",
+      "sha256": "95ff1da33ba6a403e8bb5157b73163e964d50512ca70dfd82a7ad59658293a03",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "globalBox": [
+        8192,
+        32768,
+        12288,
+        36864
+      ],
+      "result": "complete_native_candidate_requires_geometry_and_tone_repairs",
+      "formalAccepted": false,
+      "coverageVerification": {
+        "candidateHashMatches": true,
+        "all16RecordedSourceHashesAndCoreContributionsMatch": true,
+        "allNineCrossCropsMatchCandidatePixels": true,
+        "method": "Read-only Pillow RGB pixel comparison of every recorded 1024 core and every cross crop; no image files changed."
+      },
+      "viewingLimits": "Whole 4096 image was displayed by the viewer at 1600 square. Nine 500-square cross crops and the listed seam/native views were displayed at native size; this is not a claim that every interior tile pixel was independently viewed at 100%.",
+      "crossFileNaming": "v01-cross-<y>-<x>.png; verified from crop records, not inferred as x-y.",
+      "crossReviews": [
+        {
+          "file": "qa/v01-cross-1024-1024.png",
+          "tileCenterXY": [
+            1024,
+            1024
+          ],
+          "globalCenterXY": [
+            9216,
+            33792
+          ],
+          "crop": [
+            774,
+            774,
+            1274,
+            1274
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Plaster/timber outlines continuous; mild tonal seam remains."
+        },
+        {
+          "file": "qa/v01-cross-1024-2048.png",
+          "tileCenterXY": [
+            2048,
+            1024
+          ],
+          "globalCenterXY": [
+            10240,
+            33792
+          ],
+          "crop": [
+            1798,
+            774,
+            2298,
+            1274
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Red/gold eave and blue tile geometry continuous; tone boundary visible."
+        },
+        {
+          "file": "qa/v01-cross-1024-3072.png",
+          "tileCenterXY": [
+            3072,
+            1024
+          ],
+          "globalCenterXY": [
+            11264,
+            33792
+          ],
+          "crop": [
+            2822,
+            774,
+            3322,
+            1274
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Blue roof courses and highlights connect; inspect residual tone at full-tile scale."
+        },
+        {
+          "file": "qa/v01-cross-2048-1024.png",
+          "tileCenterXY": [
+            1024,
+            2048
+          ],
+          "globalCenterXY": [
+            9216,
+            34816
+          ],
+          "crop": [
+            774,
+            1798,
+            1274,
+            2298
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Gold curl and blue eave connect without a conspicuous break."
+        },
+        {
+          "file": "qa/v01-cross-2048-2048.png",
+          "tileCenterXY": [
+            2048,
+            2048
+          ],
+          "globalCenterXY": [
+            10240,
+            34816
+          ],
+          "crop": [
+            1798,
+            1798,
+            2298,
+            2298
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Timber corner and diagonal beam connect; horizontal/vertical tone step visible."
+        },
+        {
+          "file": "qa/v01-cross-2048-3072.png",
+          "tileCenterXY": [
+            3072,
+            2048
+          ],
+          "globalCenterXY": [
+            11264,
+            34816
+          ],
+          "crop": [
+            2822,
+            1798,
+            3322,
+            2298
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Horizontal beam remains aligned; conspicuous vertical tone boundary."
+        },
+        {
+          "file": "qa/v01-cross-3072-1024.png",
+          "tileCenterXY": [
+            1024,
+            3072
+          ],
+          "globalCenterXY": [
+            9216,
+            35840
+          ],
+          "crop": [
+            774,
+            2822,
+            1274,
+            3322
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Window corner and wall remain connected; horizontal tonal band is clear."
+        },
+        {
+          "file": "qa/v01-cross-3072-2048.png",
+          "tileCenterXY": [
+            2048,
+            3072
+          ],
+          "globalCenterXY": [
+            10240,
+            35840
+          ],
+          "crop": [
+            1798,
+            2822,
+            2298,
+            3322
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Small window and vertical wall trim remain connected; a separate 1px trim step occurs at local-repair upper boundary below the grid junction."
+        },
+        {
+          "file": "qa/v01-cross-3072-3072.png",
+          "tileCenterXY": [
+            3072,
+            3072
+          ],
+          "globalCenterXY": [
+            11264,
+            35840
+          ],
+          "crop": [
+            2822,
+            2822,
+            3322,
+            3322
+          ],
+          "nativeCropVerifiedAgainstCandidate": true,
+          "findings": "Lantern-side beam is structurally connected; tonal discontinuity remains."
+        }
+      ],
+      "findings": [
+        {
+          "id": "lower-left-plinth-geometry",
+          "priority": "high",
+          "status": "owner_already_repairing",
+          "files": [
+            "qa/s04_01-02-seam100.png"
+          ],
+          "tileSeamX": 1024,
+          "globalSeamX": 9216,
+          "description": "Lower-left timber plinth and stone panel frame have an obvious vertical step across the join. This is geometry and must be repaired through the authorized AI workflow, not hidden by a seam path."
+        },
+        {
+          "id": "lower-right-step-geometry",
+          "priority": "high",
+          "status": "repair_required",
+          "files": [
+            "qa/s04_03-04-seam100.png",
+            "native/r09_c03_s04_03_resolved.png",
+            "native/r09_c03_s04_04_v01.png"
+          ],
+          "tileSeamX": 3072,
+          "globalSeamX": 11264,
+          "tileYApprox": [
+            3821,
+            3860
+          ],
+          "description": "Stone top/front-face transition jumps across the vertical seam. Exploratory luminance-edge readings place the principal front edge near crop y903 at x299 and y864 at x300, approximately 39px apart. This corroborates the visual step and is not solely a color mismatch; measured peaks are edge evidence, not a full fitted contour."
+        },
+        {
+          "id": "local-window-removal-boundary",
+          "priority": "low",
+          "status": "minor_geometry_followup",
+          "files": [
+            "native/r09_c03_s04_03_resolved.png",
+            "qa/v01-cross-3072-2048.png"
+          ],
+          "nativeRepairBoundaryY": 230,
+          "tileLocationApprox": [
+            2153,
+            3187
+          ],
+          "globalLocationApprox": [
+            10345,
+            35955
+          ],
+          "description": "Unwanted extra red window-frame extension is absent in the selected candidate. At the local patch upper boundary, the fine vertical timber/plaster edge shifts about 1px: strongest local green edge at x220 on native row229, x221 on row230. Keep as a small cleanup item, separate from the large beam/stone problems."
+        },
+        {
+          "id": "systemic-native-tone-steps",
+          "priority": "medium",
+          "status": "required_before_formal_acceptance",
+          "description": "Walls, timber, roof surfaces and lantern retain visible straight tone boundaries; y3072 in tile coordinates is particularly clear across the white walls/window surrounds. Junction crops confirm that the issue spans more than the previously repaired wood seam. Inspect along entire seams after geometry repair."
+        },
+        {
+          "id": "lantern-proportion-and-base-placement",
+          "priority": "review",
+          "status": "layout_review_not_exact_registration_failure",
+          "files": [
+            "native/r09_c03_s04_03_resolved.png",
+            "guides/r09_c03_s04_03_v01.layout-only.png"
+          ],
+          "description": "Lantern tassel appears longer and the column-foot placement somewhat rightward relative to the low-resolution guide. The guide is too blurred for a precise silhouette tolerance; review full-building proportions before accepting. No new dwelling, character, UI or watermark was observed in this local tile."
+        },
+        {
+          "id": "historical-vertical-seam-preview",
+          "priority": "medium",
+          "status": "qa_refresh_required",
+          "file": "qa/s03_03-s04_03-seam100.png",
+          "recordedBottomSource": "native/r09_c03_s04_03_v01.png",
+          "currentBottomSource": "native/r09_c03_s04_03_resolved.png",
+          "description": "This old vertical seam view still shows the removed red-frame extension and must not be used to judge the current repaired area. The nine cross crops all match the current candidate. s04_03-04 also names v01 but uses its unaffected right strip, so its inspected seam pixels remain relevant."
+        }
+      ],
+      "acceptanceScope": "One full covered 4K candidate, not an internally or externally accepted game tile; adjacent tile/zone seams and client/capacity validation remain outstanding.",
+      "currentApplicability": "historical_v01_only_superseded_by_v04",
+      "supersededBy": "output/r09_c03-native-candidate-v04.png",
+      "currentDisposition": "Large lower-left plinth and lower-right stair geometry repaired in selected sources before v04; v01 tone and historical seam images must not be treated as current v04 failures. Exact building proportions and all final external seams are not certified."
+    },
+    {
+      "reviewedAtUtc": "2026-10-09T22:07:30.381098+00:00",
+      "candidate": "output/r09_c03-native-candidate-v04.png",
+      "sha256": "8ee82b7ea612c125dc243d2f64404ed4d0f50a9e487fdcb8754da5f20f3b9206",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "globalBox": [
+        8192,
+        32768,
+        12288,
+        36864
+      ],
+      "result": "complete_native_candidate_with_minor_tone_and_external_QA_remaining",
+      "formalAccepted": false,
+      "coverageVerification": {
+        "method": "Independent read-only NumPy comparison of every output pixel to the source selected by the complete source-id mask at the identical global coordinate. All source image and generation-record hashes rechecked.",
+        "pixelCount": 16777216,
+        "mismatchedPixels": 0,
+        "coordinatesOutOfBounds": 0,
+        "all18SourceIdsPresent": true,
+        "mask": "qa/hardseam-v04-source-id-mask.png",
+        "maskSha256": "d2a6a230b145062cede1f4130b6e2394f8eb7fe030250592e27817c3e2069a9b",
+        "sources": [
+          {
+            "sourceId": 1,
+            "path": "native/r09_c03_s01_01_resolved.png",
+            "selectedPixelCount": 888231,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 2,
+            "path": "native/r09_c03_s01_02_resolved.png",
+            "selectedPixelCount": 1077503,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 3,
+            "path": "native/r09_c03_s01_03_v01.png",
+            "selectedPixelCount": 1114876,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 4,
+            "path": "native/r09_c03_s01_04_v01.png",
+            "selectedPixelCount": 934942,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 5,
+            "path": "native/r09_c03_s02_01_v01.png",
+            "selectedPixelCount": 1133956,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 6,
+            "path": "native/r09_c03_s02_02_resolved.png",
+            "selectedPixelCount": 1091849,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 7,
+            "path": "native/r09_c03_s02_03_resolved_v2.png",
+            "selectedPixelCount": 882683,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 8,
+            "path": "native/r09_c03_s02_04_v01.png",
+            "selectedPixelCount": 990736,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 9,
+            "path": "native/r09_c03_s03_01_v01.png",
+            "selectedPixelCount": 1116741,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 10,
+            "path": "native/r09_c03_s03_02_v01.png",
+            "selectedPixelCount": 920583,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 11,
+            "path": "native/r09_c03_s03_03_v01.png",
+            "selectedPixelCount": 886201,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 12,
+            "path": "native/r09_c03_s03_04_v01.png",
+            "selectedPixelCount": 781358,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 13,
+            "path": "native/r09_c03_s04_01_resolved.png",
+            "selectedPixelCount": 1039884,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 14,
+            "path": "native/r09_c03_s04_02_resolved.png",
+            "selectedPixelCount": 879491,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 15,
+            "path": "native/r09_c03_s04_03_resolved_v2.png",
+            "selectedPixelCount": 1071010,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 16,
+            "path": "native/r09_c03_s04_04_resolved.png",
+            "selectedPixelCount": 1049022,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 17,
+            "path": "native/r09_c03_tone_lower_cross_v01.png",
+            "selectedPixelCount": 608550,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          },
+          {
+            "sourceId": 18,
+            "path": "native/r09_c03_tone_door_cross_v01.png",
+            "selectedPixelCount": 309600,
+            "coordinatesOutOfBounds": 0,
+            "mismatchedPixels": 0,
+            "sourceHashMatches": true,
+            "recordHashMatches": true
+          }
+        ]
+      },
+      "reproduction": {
+        "arrayAloneSufficient": false,
+        "baseCoreArrayCount": 16,
+        "finalSourceIdCount": 18,
+        "entryRecord": "output/r09_c03-native-candidate-v04.png.derivation.json",
+        "report": "qa/hardseam-v04-report.json",
+        "source17Report": "qa/hardseam-v04-lower3-report.json",
+        "source17": "native/r09_c03_tone_lower_cross_v01.png",
+        "source18": "native/r09_c03_tone_door_cross_v01.png",
+        "rule": "Use full source-ID mask plus all 18 recorded input images at their nativeGlobalBox coordinates; current-native-map 16-cell array alone does not reconstruct v04. Some inputs are mechanical derivatives with their own recursive AI provenance. Do not use rejected lower/lower2 variants or the superseded earlier v04 hash."
+      },
+      "independentlyViewed": [
+        "output/r09_c03-native-candidate-v04.png",
+        "qa/hardseam-v04-wood-roi-bottom-v03-left-v04-right-100pct.png",
+        "qa/hardseam-v04-previous-bottom-issue-v03-left-v04-right-100pct.png"
+      ],
+      "visualFindings": [
+        "Whole-tile overview shows the earlier conspicuous lower-left beam/plinth and lower-right step offsets repaired; do not repeat v01 geometry findings as current failures.",
+        "Large fixed-grid tone bands are reduced. The current wood ROI bottom retains a slight value transition; no new conspicuous geometry break was seen in that native comparison.",
+        "The earlier v03 angular post-bottom artifact is absent in the current native comparison."
+      ],
+      "ownerEvidenceRead": "qa/hardseam-v04-visual-review.json",
+      "viewingLimits": "Whole 4096 image was displayed at 1600 square. Named comparison crops were viewed at 100%; this independent review does not claim every v04 internal seam/repair boundary or interior pixel has been visually rechecked at native resolution. Owner report covers additional boundary inspections; pixel provenance alone is not visual acceptance."
+    }
+  ],
+  "contractInterpretation": {
+    "reviewedAtUtc": "2026-10-09T19:43:58.504236+00:00",
+    "question": "May a nonrectilinear binary hard seam be selected inside the 230px native overlap without feather, scaling, warping or any pixel-coordinate change?",
+    "decision": "Permitted as an interpretation of the existing authorized mechanical crop/assembly workflow; no shared contract change or new drawing authority is implied.",
+    "basis": [
+      {
+        "path": "../production-contract.json",
+        "fields": [
+          "nativePatchPlan",
+          "acceptance",
+          "coordinateSystem"
+        ],
+        "reason": "The contract requires native coverage, fixed final tile coordinates, no final-art resizing, contribution traceability and native-resolution seam checks; it does not mandate a straight cut between native sources."
+      },
+      {
+        "path": "../../../../主城地图切图规范.md",
+        "section": "2 布局与拼接; 3 裁切与命名",
+        "reason": "Process overlap before formal cropping; repair geometry by redrawing; retain native source, overlap and assembly provenance. Final 4096 effective bounds are fixed."
+      },
+      {
+        "path": "../README.md",
+        "reason": "User has authorized mechanical cropping/assembly of native generated art."
+      }
+    ],
+    "conditions": [
+      "Every output pixel selects exactly one recorded AI-native source pixel at the same global coordinate. No translation, resampling, scaling, warp, blend or recoloring is part of this method.",
+      "The choice path remains within the actual intersection of the two source nativeGlobalBox values. For a regular internal boundary B, the available overlap is [B-115,B+115); do not extend a source beyond its recorded coverage.",
+      "Keep the final 4096 tile origin and extent fixed. Selected halo pixels become ordinary single-count source contributions; they do not enlarge coverage.",
+      "Save binary selection masks or a lossless exact seam-path/ownership representation with hashes, source coordinates and contribution records. Existing claims that every contribution is merely the fixed [115,115,1139,1139] core must be replaced if the cut uses other native pixels.",
+      "At four-way junctions, the masks must partition the canvas exactly once with no holes or duplicate/contradictory ownership. Verify geometry and all junctions at native resolution.",
+      "Use only where geometry is already correct. Large beam offsets, the stone-front edge jump and other misaligned structure require AI repair; routing around them is not an acceptable substitute.",
+      "A low-cost seam only reduces visible source transitions; it does not certify color continuity or formal tile acceptance. External tile/zone boundaries still require review."
+    ]
+  },
+  "latestStateSummary": {
+    "checkedAtUtc": "2026-10-09T22:07:30.381098+00:00",
+    "currentCandidate": "output/r09_c03-native-candidate-v04.png",
+    "currentCandidateSha256": "8ee82b7ea612c125dc243d2f64404ed4d0f50a9e487fdcb8754da5f20f3b9206",
+    "complete4kCandidateExists": true,
+    "formalAccepted": false,
+    "currentTile": "r09_c04",
+    "currentPatch": "s01_03",
+    "taskTargetTiles": 49,
+    "taskComplete": false,
+    "selectedCorePositionsAtSnapshot": 17,
+    "finalSourceIdCountForC03": 18,
+    "base16CellIndexAloneReproducesV04": false,
+    "liveCountsSource": "progress.json",
+    "externalEdgeCoverage": "Global x12288,y[32768,35840):top3072 c03v04 vs selected c04 native cores inspected; last1024 and both-final4K recheck outstanding.",
+    "usableNativeCount": "Deprecated; use explicitly defined live counters.",
+    "latestLayoutReviewAtUtc": "2026-10-09T23:48:08.452983+00:00",
+    "newLayoutFollowup": "Repaired s01_02/s01_03 are selected; original eave drift resolved for candidate continuation. Known s03_01 rectangle and value joins remain pending. No formal acceptance.",
+    "layoutRepairSelectionRecommended": [
+      "r09_c04_s01_02_resolved",
+      "r09_c04_s01_03_resolved"
+    ],
+    "latestNativeSeamReviewAtUtc": "2026-10-10T01:05:53.211235+00:00",
+    "latestNativeSeamResult": "s02_01/s02_02/s03_01: no new major structure/layout break; known rectangle and visible timber/wall/lantern value seams remain open.",
+    "layoutRepairSelectionVerified": true,
+    "capacityGateActive": true,
+    "capacityRiskReport": "qa/capacity-road-building-risk.json",
+    "currentVesselSources": [
+      "r09_c04_s02_03_v02",
+      "r09_c04_s02_04_v02",
+      "r09_c04_s03_03_v02"
+    ],
+    "oldStoneQAStatus": "Rejected-source history; not current candidate or route evidence.",
+    "sharedInputsRequireResolutionBeforeGeneration": true
+  },
+  "firstReviewedAtUtc": "2026-10-09T18:02:38Z",
+  "currentCandidateAtReview": "output/r09_c03-native-candidate-v04.png",
+  "externalEdgeReviews": [
+    {
+      "reviewedAtUtc": "2026-10-09T22:07:30.381098+00:00",
+      "file": "qa/r09_c03-v04-r09_c04-current-native-edge100.png",
+      "sha256": "89d7458fcec2c4ab314758eec2fd18b4d31de96b67680f3b834c17fb6e481382",
+      "dimensions": [
+        600,
+        1024
+      ],
+      "derivation": "qa/r09_c03-v04-r09_c04-current-native-edge100.png.derivation.json",
+      "leftSource": "output/r09_c03-native-candidate-v04.png",
+      "leftSourceCrop": [
+        3796,
+        0,
+        4096,
+        1024
+      ],
+      "rightSource": "native/r09_c04_s01_01_v02.png",
+      "rightSourceCrop": [
+        115,
+        115,
+        415,
+        1139
+      ],
+      "bothContributionPixelsVerified": true,
+      "nativeView": true,
+      "seamAtX": 300,
+      "globalSeam": {
+        "x": 12288,
+        "yHalfOpen": [
+          32768,
+          33792
+        ]
+      },
+      "result": "candidate_geometry_continuous_minor_tone_transition_not_formal",
+      "findings": "Across this top-1024 segment the sloping blue-tile bodies, rim curves and highlights show no conspicuous confirmed geometry step. In the final 106 rows (tile y918..1023) no new clear structural break was seen; a mild value/brushwork transition is still visible. This is a visual judgment on the specified segment, not a pixel-perfect seamlessness claim.",
+      "coverageLimit": "Right source is a single selected native candidate, not a completed final 4K neighbor. Remaining 3072 rows and every other external/cross-zone edge are unreviewed by this check. Repeat using both final 4K artifacts.",
+      "historicalEvidenceCorrection": {
+        "file": "qa/r09_c03-r09_c04-top-row-current-seam100.png",
+        "leftSourceWas": "native/r09_c03_s01_04_v01.png",
+        "differentPixelsWithinLeftTop1024": 27342,
+        "differentTileBox": [
+          3796,
+          913,
+          4096,
+          1024
+        ],
+        "rightmostBoundaryRowsDifferent": [
+          918,
+          1024
+        ],
+        "note": "Old view remains historical single-native evidence; its bottom 106 boundary rows are not the actual current v04 boundary."
+      },
+      "formalAccepted": false
+    },
+    {
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "file": "qa/r09_c03-v04-r09_c04-s02_01-external100.png",
+      "sha256": "44362ee01d124bacb8e4672ef218a911bb93e7f4c58b45532c4e464bf81903de",
+      "leftSource": "output/r09_c03-native-candidate-v04.png",
+      "rightSource": "native/r09_c04_s02_01_v01.png",
+      "globalSeam": {
+        "x": 12288,
+        "yHalfOpen": [
+          33792,
+          34816
+        ]
+      },
+      "bothContributionPixelsVerified": true,
+      "nativeView": true,
+      "formalAccepted": false,
+      "result": "candidate_geometry_continuous_with_open_value_artifacts",
+      "findings": "Gold trim, blue roof-tile contours and timber outlines remain connected across the actual v04 edge; no clear new offset requiring structural redrawing. Vertical value changes remain visible through roof and wood surfaces; not a clean final seam.",
+      "coverageLimit": "Right source is native candidate core, not final complete4K. Repeat with both final4K artifacts."
+    },
+    {
+      "reviewedAtUtc": "2026-10-10T01:05:53.211235+00:00",
+      "file": "qa/r09_c03-v04-r09_c04-s03_01-external100.png",
+      "sha256": "8d7b4c6fb27770aa0dfeee1770e5819a291e8bd49f8955a9a53e0fd4d11b4c58",
+      "leftSource": "output/r09_c03-native-candidate-v04.png",
+      "rightSource": "native/r09_c04_s03_01_v01.png",
+      "globalSeam": {
+        "x": 12288,
+        "yHalfOpen": [
+          34816,
+          35840
+        ]
+      },
+      "bothContributionPixelsVerified": true,
+      "nativeView": true,
+      "formalAccepted": false,
+      "result": "candidate_geometry_continuous_with_open_value_artifacts",
+      "findings": "Door diamond outline and its decoration remain connected across the border; no new whole-door displacement demonstrated. The known rectangle remains a separate artificial edge. Visible rectangular wood artifact near the upper border and other vertical value differences remain.",
+      "coverageLimit": "Right source is native candidate core, not final complete4K. Repeat with both final4K artifacts."
+    }
+  ],
+  "layoutReviews": [
+    {
+      "id": "r09_c04-east-eave-tip-layout-drift",
+      "reviewedAtUtc": "2026-10-09T22:57:21.062492+00:00",
+      "result": "local_roof_silhouette_drift_requires_cross_patch_repair",
+      "formalAccepted": false,
+      "layoutReference": "../production-contract.json#layoutReference",
+      "layoutReferenceSha256": "e7a06f547274a29a01cc4e20223637e99c0fab534d4982361e824147c800b34f",
+      "viewedFiles": [
+        {
+          "path": "guides/r09_c04_s01_03_v01.layout-only.png",
+          "sha256": "1c0c90a2b6e74c2a771c95b6740bc95786071752a782c39ac5f0e82b17121089"
+        },
+        {
+          "path": "guides/r09_c04_s01_03_v01.native-overlap-guide.png",
+          "sha256": "935c926a07220049a76e380235aa9bad844cd558adc803ab78bde1445c6eb660"
+        },
+        {
+          "path": "native/r09_c04_s01_03_v01.png",
+          "sha256": "2d5a22b5481b8a2b61dcaaeb4c03980a78025c3d56ed820f5d8dfffc25845dd9"
+        },
+        {
+          "path": "guides/r09_c04_s01_02_v01.layout-only.png",
+          "sha256": "18a7758b290d55fdb0c83bf9e481bbe93c5f72149b97bd21164e210586757f49"
+        },
+        {
+          "path": "native/r09_c04_s01_02_v01.png",
+          "sha256": "0ff21e51e1efa7798207b88643105a135c6d5720d9f377d12c02fc56f8618e13"
+        },
+        {
+          "path": "guides/r09_c04_s01_01_v02.layout-only.png",
+          "sha256": "85e914479079b4a78a616830c091a846698dfa74d23c93a49d5f82aa06fadd9d"
+        },
+        {
+          "path": "native/r09_c04_s01_01_v02.png",
+          "sha256": "46c04d08aa0af8003b85cd2a5d90ab69aa26f091c8ad1feb7cb36e59bcbee2a2"
+        }
+      ],
+      "fullMapViewed": true,
+      "coordinateChecks": {
+        "s01_03NativeGlobalBox": [
+          14221,
+          32653,
+          15475,
+          33907
+        ],
+        "s01_03CoreGlobalBox": [
+          14336,
+          32768,
+          15360,
+          33792
+        ],
+        "soleLayoutHashMatchesContract": true,
+        "layoutPixelsExactlyReproduceRecordedBicubicExtent": true,
+        "overlapGuideLeft230ExactlyMatchesS01_02Right230": true,
+        "overlapGuideRemainderExactlyMatchesLayout": true,
+        "conclusion": "Guide-coordinate math and mechanical placement are correct; the observed silhouette difference is in generated content, not coordinate drift introduced by guide construction."
+      },
+      "landmarkInterpretation": {
+        "sameComponentConfidence": "high",
+        "sameComponent": "One upturned gold/red eave terminal on the east/right end of the bamboo-courtyard residence roof; continuity of incoming gold trim, red fascia, blue roof and bamboo background identifies it as the same component. No basis for a second decorative terminal.",
+        "approximateLayoutCurlCenterInS01_03": [
+          500,
+          700
+        ],
+        "approximateNativeCurlCenterInS01_03": [
+          160,
+          850
+        ],
+        "approximateCenterDeltaNative": [
+          -340,
+          150
+        ],
+        "approximateCenterDeltaOverviewPixels": [
+          -7.44,
+          3.28
+        ],
+        "measurementLimit": "These are visually estimated landmark centers, not fitted contours or required pixel tolerances. The source supplies only about 27.4 overview pixels across each native guide; bicubic blur and different detailed carving make exact contour tracing inappropriate. Nevertheless, the center separation and visibly reduced rightward projection are too large to describe only as sharpening of the same silhouette.",
+        "nativeGoldEndcapRightExtentApprox": 340,
+        "direction": "Screen-left/down local change; incoming eave still approaches from upper left and turns upward at its end. No observed reversal of the roof orientation."
+      },
+      "findings": [
+        "The local curl is smaller and ends earlier toward the left than the reference form; the roof/eave terminal silhouette is materially changed within this crop.",
+        "S01_02 already draws the spiral in its right halo, where the layout shows the still-running fascia. S01_03 preserved this premature terminal. Adjacent-patch continuity therefore does not establish agreement with the unique layout.",
+        "This crop lacks wall-foot and ground-contact evidence. It does not prove the whole roof was uniformly shortened, the building moved, the wall footprint changed, or the building rotated.",
+        "The deviation currently replaces part of an eave projection with bamboo background, so no route blockage is demonstrated. Propagating its endcap/bracket downward could move the visible building corner and its support relationship; resolve before extending that corner into the next row."
+      ],
+      "repairRecommendation": {
+        "priority": "resolve_local_layout_before_downward_corner_extension",
+        "method": "One native AI local repair spanning the existing premature curl and the intended farther-right/upward tip; continue the existing fascia into a single curl and reconcile the red beam/endcap and immediate bamboo occlusion. Preserve all unaffected same-coordinate context and do not duplicate the curl, translate existing pixels, resize, or use a hard seam to disguise the contour change.",
+        "reviewAndRepairWorkAreasNative": [
+          {
+            "source": "native/r09_c04_s01_02_v01.png",
+            "box": [
+              750,
+              400,
+              1254,
+              1254
+            ]
+          },
+          {
+            "source": "native/r09_c04_s01_03_v01.png",
+            "box": [
+              0,
+              400,
+              850,
+              1254
+            ]
+          }
+        ],
+        "unionGlobalBox": [
+          13947,
+          33053,
+          15071,
+          33907
+        ],
+        "rangeLimit": "Suggested working/context region, not an exact replacement mask or mandatory traced silhouette. A repair may require a larger native context canvas. Recheck both same-coordinate boundaries, the resulting single tip, its relation to the blue roof/fascia and the next-row support before selecting it.",
+        "subsequentGuideAction": "Update selected source indices and rebuild all affected native overlap constraints only after the new local repair passes QA; do not use the uncorrected terminal to fix the corner in lower-row art."
+      },
+      "independentSecondVisualOpinion": {
+        "reviewer": "roof_landmark_second_read",
+        "result": "Concurred that the same terminal moved left/down and reduced rightward silhouette beyond blur ambiguity; no claim of changed whole-building footprint or orientation."
+      },
+      "resourcesModified": false,
+      "currentApplicability": "historical_unrepaired_v01_sources",
+      "resolvedBy": "r09_c04-east-eave-tip-layout-repair-v01",
+      "currentDisposition": "Subsequent native AI repair restores the meaningful single-tip silhouette. Do not treat the original approximately340px center drift as an unresolved current defect after selecting the resolved pair."
+    },
+    {
+      "id": "r09_c04-east-eave-tip-layout-repair-v01",
+      "reviewedAtUtc": "2026-10-09T23:48:08.452983+00:00",
+      "result": "meaningful_single_tip_silhouette_restored_candidate_for_continuation",
+      "formalAccepted": false,
+      "repair": "native/r09_c04_eave_layout_repair_v01.png",
+      "repairSha256": "aede1c278f06995b5200f68de8dab5a40bbf745171593a4d694e2a40bbfa72e6",
+      "repairNativeGlobalBox": [
+        13897,
+        32653,
+        15151,
+        33907
+      ],
+      "selectedPairRecommended": [
+        "native/r09_c04_s01_02_resolved.png",
+        "native/r09_c04_s01_03_resolved.png"
+      ],
+      "viewed": [
+        "native/r09_c04_eave_layout_repair_v01.png",
+        "guides/r09_c04_eave_layout_repair_v01.layout-only.png",
+        "guides/r09_c04_eave_layout_repair_v01.native-edit-target.png",
+        "qa/r09_c04_eave_layout_repair_v01-left100.png",
+        "qa/r09_c04_eave_layout_repair_v01-right100.png"
+      ],
+      "visualFindings": [
+        "The eave now extends continuously along a long gold/red arc and rises into one larger curl. The formerly premature small terminal is removed rather than duplicated. The broad silhouette, component identity and direction are restored relative to the sole layout reference.",
+        "The new tip remains slightly left/down from the blurred reference. Top/right outer-edge discrepancies are visually about90..130 native pixels (roughly2..3 overview pixels); the exact value depends on how the broad blurred edge is interpreted. Inner spiral-center comparison also mixes carving thickness and viewing interpretation, so it is not a precise registration anchor.",
+        "At the available low-resolution reference strength, the remaining difference does not demonstrate a material silhouette error requiring another redraw. Candidate continuation is appropriate; exact geometric coincidence, whole-building footprint and final acceptance are not asserted.",
+        "The left/right100 crops show no conspicuous new geometric discontinuity in the eave, roof-tile rims or bamboo stems. Slight local value/brushwork transitions remain a full-tile visual-QA item."
+      ],
+      "pixelVerification": {
+        "method": "Read-only reconstruction in memory from both original sources, followed by the complete1254 repair at offset700; compare every assembled/derived pixel and both QA crops. No images written by the independent reviewer.",
+        "assemblyDimensions": [
+          2278,
+          1254
+        ],
+        "assemblyPixelCount": 2856612,
+        "assemblyMismatchedPixels": 0,
+        "repairOffsetFromLeftSource": 700,
+        "sameGlobalCoordinates": true,
+        "checks": {
+          "assemblyMatchesSameCoordinatePastes": true,
+          "inputTargetMatchesOriginalSameCoordinateCrop": true,
+          "leftDerivedMatchesAssembly": true,
+          "rightDerivedMatchesAssembly": true,
+          "left100MatchesAssembly": true,
+          "right100MatchesAssembly": true,
+          "layoutMatchesRecordedExtent": true
+        },
+        "sourceAndDerivedRecords": [
+          {
+            "path": "native/r09_c04_s01_02_v01.png",
+            "sha256": "0ff21e51e1efa7798207b88643105a135c6d5720d9f377d12c02fc56f8618e13",
+            "recordHashMatchesImage": true,
+            "nativeGlobalBox": [
+              13197,
+              32653,
+              14451,
+              33907
+            ]
+          },
+          {
+            "path": "native/r09_c04_s01_03_v01.png",
+            "sha256": "2d5a22b5481b8a2b61dcaaeb4c03980a78025c3d56ed820f5d8dfffc25845dd9",
+            "recordHashMatchesImage": true,
+            "nativeGlobalBox": [
+              14221,
+              32653,
+              15475,
+              33907
+            ]
+          },
+          {
+            "path": "native/r09_c04_eave_layout_repair_v01.png",
+            "sha256": "aede1c278f06995b5200f68de8dab5a40bbf745171593a4d694e2a40bbfa72e6",
+            "recordHashMatchesImage": true,
+            "nativeGlobalBox": [
+              13897,
+              32653,
+              15151,
+              33907
+            ]
+          },
+          {
+            "path": "native/r09_c04_s01_02_resolved.png",
+            "sha256": "6d8aaca8d3f9e705f0b8deab3f91260d03dd9c5f85a307ec0a347463439892b8",
+            "recordHashMatchesImage": true,
+            "nativeGlobalBox": [
+              13197,
+              32653,
+              14451,
+              33907
+            ]
+          },
+          {
+            "path": "native/r09_c04_s01_03_resolved.png",
+            "sha256": "5435d1e05d30f8cd95740688684e4c7950bc36d78afe97668c5f4997067e4db6",
+            "recordHashMatchesImage": true,
+            "nativeGlobalBox": [
+              14221,
+              32653,
+              15475,
+              33907
+            ]
+          }
+        ]
+      },
+      "interpretationLimit": "No numerical contour tolerance is imposed by this review. Approximately2..3 overview pixels is an uncertainty explanation for this specific blurred landmark, not blanket permission for future layout drift.",
+      "nextActions": [
+        "Update current source selection to the resolved pair after owner QA, then rebuild affected right/lower overlap guides.",
+        "Review the complete building corner and its support relationship when the lower rows exist; continue full-tile and external-edge QA."
+      ],
+      "independentSecondVisualOpinion": {
+        "reviewer": "roof_landmark_second_read",
+        "result": "Concurred that the major silhouette is restored and further substantive redraw is not justified by this blurred reference; exact center alignment should not be claimed."
+      },
+      "writesByReviewer": [
+        "README.md",
+        "qa/independent-qc-review.json"
+      ]
+    }
+  ],
+  "capacityGateReviews": [
+    {
+      "reviewedAtUtc": "2026-10-10T05:43:38.745951+00:00",
+      "report": "qa/capacity-road-building-risk.json",
+      "reportSha256": "719f2cd0a4cdd814a180d61d9610032417f7f21996cc5580ea83385b2bad8666",
+      "generationHoldActive": true,
+      "riskItemCount": 6,
+      "worldSize": null,
+      "capacity5000Validated": false,
+      "result": "Potential ground-footprint/clearance risks identified; no route or capacity pass, no road changes.",
+      "historicalStoneQaSuperseded": true
+    }
+  ],
+  "sharedInputAvailability": {
+    "checkedAtUtc": "2026-10-10T05:57:06.354133+00:00",
+    "configPath": "D:/work/image/config/image-generation.json",
+    "configExists": false,
+    "primaryStylePath": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "primaryStyleExists": false,
+    "ownerAudit": "qa/capacity-provenance-audit.json",
+    "ownerAuditSha256": "2ce0b2f744a3bb94504928a4573d1043145e19ddfb02ce1975768ad669b534bf",
+    "scope": "This reviewer checked existence at the stated shared paths and read the owner audit; the owner performed the wider exact-filename search and44-output provenance replay.",
+    "effect": "Existing read-only/mechanical QA may continue. Future generation requires root to resolve current shared input paths and revalidate the configuration/reference under the gate. Historical config snapshots support only already-returned output records and do not certify current settings.",
+    "historicalRecordPolicy": "Preserve old model/config/reference path/hash evidence; do not rewrite old image records as if newly configured or supplied a different reference."
+  }
+}

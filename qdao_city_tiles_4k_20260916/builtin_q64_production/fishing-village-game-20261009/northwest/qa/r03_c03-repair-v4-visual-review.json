@@ -1,0 +1,117 @@
+{
+  "createdAt": "2026-10-09T19:52:25.658803+00:00",
+  "tile": "r03_c03",
+  "candidate": {
+    "file": "tiles/r03_c03.candidate-repair-v4.png",
+    "sha256": "68e0940fb551fedd31b69058b740803b26331c820c0fd012a90816c2bd2fcbe9",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "assembly": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.repair-v4.assembly.json",
+    "sha256": "0571154dba793d69ca1ebf380d0aa6bae210fe6667d40717df426fa83abc8890"
+  },
+  "plan": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\repair-plan-v4.json",
+    "sha256": "d4c5d897dab17e98b74ca572cdce056eec7160e989faf5af3d143f3e51327b07"
+  },
+  "scriptEvolution": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-script-evolution.json",
+    "sha256": "0b13ecb7ae008af37950709f454c15f037a660c02f71846ab5d336359460dd52"
+  },
+  "mechanical": {
+    "preflight": "passed",
+    "apply": "passed",
+    "check": "passed",
+    "pixelsVerified": 16777216,
+    "constrainedDpExhaustiveCostCasesPassed": 12,
+    "unconstrainedV3ReplayIdentical": true,
+    "bottomCutMinimumRanges": [
+      {
+        "xStart": 644,
+        "xEndExclusive": 679,
+        "minY": 1221,
+        "reason": "Cover tile [2065,1588,2100,1618) with the existing straight native bridge rail bevel; old source6/source7 step remains below unconstrained cut."
+      }
+    ],
+    "actualCutYForConstrainedRange": [
+      1223,
+      1239
+    ],
+    "maximumAdjacentPathDelta": 1,
+    "bottomCutDomain": [
+      1139,
+      1253
+    ],
+    "wholeRequestedBoxOwnedBySource17": true,
+    "requestedTileBox": [
+      2065,
+      1588,
+      2100,
+      1618
+    ],
+    "otherThreePathsUnchangedFromV3": true,
+    "changedBottomPathLocalXRange": [
+      582,
+      877
+    ],
+    "nativePixelOwnershipOnly": true,
+    "colorRewrite": false,
+    "resample": false,
+    "feather": false
+  },
+  "comparisonToV3": {
+    "changedRgbPixels": 7934,
+    "changedRgbBoundingBox": [
+      2003,
+      1564,
+      2298,
+      1650
+    ],
+    "outsideChangedBoundingBoxUnchanged": true
+  },
+  "visualQA": {
+    "scale": "100 percent original pixel crops",
+    "localAccepted": true,
+    "scope": "Residual rail step and entire changed bottom cut with surrounding rail, sand, blue fabrics and rope; unchanged other boundaries retain v3 evidence.",
+    "checks": [
+      {
+        "feature": "old front-bevel step at tile2080,1598",
+        "status": "pass",
+        "observation": "Bright bevel now forms one continuous diagonal. Old4-6pixel step is absent."
+      },
+      {
+        "feature": "changed bottom cut full length",
+        "status": "pass",
+        "observation": "Full south-edge and changed-bounds-context crops inspected at original size; no visible new hard color band, geometry step, wood break, fabric discontinuity or rope deformation."
+      },
+      {
+        "feature": "sand bridge and remaining boundary corners",
+        "status": "unchanged-from-reviewed-v3",
+        "observation": "All changed pixels lie in tile[2003,1564,2298,1650); north/west/east and corners have identical pixels to v3."
+      }
+    ],
+    "remainingLocalFindings": []
+  },
+  "formalAccepted": false,
+  "acceptanceLimit": "This is a local bridge repair visual QA pass, not acceptance of the entire tile, external neighbor seams or client integration.",
+  "evidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-changed-bounds-context-100pct.png",
+      "sha256": "04e25123af8b1ab4a3f9d07f84fd6db7feb7957b6273b1460838722b028b51c6",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-changed-bounds-context-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-rail-crossing-100pct.png",
+      "sha256": "04430472da0182132d7fc5e5d777307cdc6d89d9207c485250a3ae8d5783a0b6",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-rail-crossing-100pct.png.derivation.json"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-south-edge-100pct.png",
+      "sha256": "06d42974311eab39913e48fc2251eb5e367c03047d13f69cb35e44620ab5b440",
+      "derivation": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\r03_c03-repair-v4-visual-south-edge-100pct.png.derivation.json"
+    }
+  ]
+}

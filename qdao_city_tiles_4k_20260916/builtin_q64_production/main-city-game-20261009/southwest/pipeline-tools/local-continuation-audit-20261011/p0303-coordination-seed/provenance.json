@@ -1,0 +1,135 @@
+{
+  "status": "QA_SEED_ONLY_NOT_GENERATED_NOT_ACCEPTED",
+  "base": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_03.png",
+    "sha256": "1956e9dbfacffb2f16998beec9fcd6b305ea99b6a7a104bc71ff57a3420b0b01",
+    "contextWorldBox": [
+      18317,
+      46989,
+      19571,
+      48243
+    ]
+  },
+  "copiedSource": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r12_c05\\native\\p03_02.png",
+    "sha256": "83a5aca1f05af735c3e45e2baa9c9b63b732b437bdf9ac1659dfa6c72fb2fffc",
+    "contextWorldBox": [
+      17293,
+      46989,
+      18547,
+      48243
+    ]
+  },
+  "operation": {
+    "type": "exact_integer_translation_copy",
+    "sourceCrop": [
+      1024,
+      0,
+      1254,
+      1254
+    ],
+    "targetBox": [
+      0,
+      0,
+      230,
+      1254
+    ],
+    "sharedWorldBox": [
+      18317,
+      46989,
+      18547,
+      48243
+    ],
+    "translationPixels": [
+      -1024,
+      0
+    ],
+    "scale": 1,
+    "resampling": false,
+    "compositing": "opaque overwrite, no blend, no color change"
+  },
+  "outputs": {
+    "seed": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\p0303-coordination-seed\\p03_03.left-neighbor-anchor.seed.png",
+      "sha256": "7dbf24e4003a9c273fad7c56bed5056315e6571fd2b004064ed859c3c2dcdfe7"
+    },
+    "strip": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\p0303-coordination-seed\\left-neighbor.exact230.png",
+      "sha256": "cbb3eef769138c6db55d359f995a01e50fa33057fafbe5dcc76abbc49e07292c"
+    },
+    "mask": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\p0303-coordination-seed\\copied-anchor.mask.png",
+      "sha256": "448511c439d229f9e42187493507c721911a59527d868cda8f219daf14fba51e",
+      "whiteMeaning": "copied source anchor, NOT the imagegen edit region"
+    },
+    "prompt": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\local-continuation-audit-20261011\\p0303-coordination-seed\\builtin-repair.prompt.txt",
+      "sha256": "ac33cd04a5e6307d8b0b668b7cc816b19d3a6c827614d726aa14920c4e6118f7"
+    }
+  },
+  "qa": {
+    "copiedStripExact": true,
+    "outsideTargetExactToBase": true,
+    "copiedPixelCount": 288420,
+    "changedPixels": 288355,
+    "changedPixelsOutsideTarget": 0,
+    "sourceResampling": false
+  },
+  "sourceMacroVsActualAnchorConflict": {
+    "approvedSourceYUpperTNativeApprox": [
+      288,
+      417
+    ],
+    "approvedSourceYLowerTNativeApprox": [
+      382,
+      945
+    ],
+    "actualAnchorUpperTProposed": [
+      294,
+      437
+    ],
+    "actualAnchorLowerTProposed": [
+      302,
+      944
+    ],
+    "lowerTXDifferenceNativePixels": -80,
+    "lowerTXDifferenceSourcePixels": -1.53076171875,
+    "decision": "Do not conceal this difference. Actual exact neighbor line heads and straight continuation put the lower T about 1.53 source pixels left of the coarse manual estimate. Root must visually review the generated join and macro tradeoff; preserving the left anchor plus strict straightness plus the old T coordinate is overconstrained. If exact macro T is mandatory, coordinate a later joint edit of both patches instead.",
+    "notAcceptance": true
+  },
+  "sourceCoordinateConvention": "half-open artwork-world pixel boxes, not client simulation units",
+  "rootNextStep": "Review seed and conflict note, perform built-in image edit, record new native receipt, independently QA before selection. No generation performed by this QA agent.",
+  "additionalAnchorException": {
+    "id": "missing_top_descending_fragment_in_neighbor",
+    "seedUnmodified": true,
+    "targetNativeBox": [
+      145,
+      0,
+      230,
+      75
+    ],
+    "targetWorldBox": [
+      18462,
+      46989,
+      18547,
+      47064
+    ],
+    "neighborNativeBox": [
+      1169,
+      0,
+      1254,
+      75
+    ],
+    "expectedFragmentApprox": [
+      [
+        170,
+        0
+      ],
+      [
+        230,
+        41
+      ]
+    ],
+    "instruction": "This original macro fragment is present in the base but lost when exact neighbor strip is pasted. Root must either permit this tiny edit exception plus a corresponding neighbor repair or keep the corner explicitly pending. Do not claim all-overlap acceptance after Y repair alone."
+  }
+}

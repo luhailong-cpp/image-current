@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "tile": "r13_c15",
+  "reviewedAtUtc": "2026-10-12T12:42:55.434799+00:00",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\candidate\\r13_c15-4k-unified-native-repairs-20261012T121123.png",
+    "sha256": "173e67ac86c37595dd6ad272757093367dab48585f73c8192c832fcf3f42110f",
+    "size": [
+      4096,
+      4096
+    ],
+    "format": "PNG"
+  },
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\candidate\\r13_c15-context-4326-unified-native-repairs-20261012T121123.png",
+    "sha256": "fcd9907a1999704f61cd84dd919db50b849cf3f9c8bfd4167f6cc93f0287e6fc",
+    "size": [
+      4326,
+      4326
+    ],
+    "format": "PNG"
+  },
+  "internalArtQA": "local_pass",
+  "internalSeamQA": "passed_after_three_native_structure_repairs",
+  "externalNeighborSeamQA": "west_geometry_pass_cosmetic_watch; north_east_south_pending",
+  "formalAccepted": false,
+  "reviewMethod": "Actual native100% visual review of3 repaired areas with entire perimeters,2 protected ornament regions,west full4096 split into4 native segments,and new south joint. Prior full6-seam/9-junction review remains applicable outside the exact changed rectangles; those remaining pixels were verified unchanged.",
+  "inheritedFullSeamReview": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\review\\independent-20261011\\visual-qa.json",
+    "sha256": "1dc410d87403dd07c15b0da4e2b27ddeb93a14ff7cbb0a4c3146cb1c2d3ddc20"
+  },
+  "inheritedReviewScope": {
+    "internalVertical": [
+      1024,
+      2048,
+      3072
+    ],
+    "internalHorizontal": [
+      1024,
+      2048,
+      3072
+    ],
+    "junctionCount": 9
+  },
+  "unchangedOutsideRepairAndOrnamentRegions": true,
+  "evidence": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c15\\review\\unified-native-repairs-20261012T121123\\evidence.json",
+    "sha256": "8c39c161378224e68443386fb16403de71b19179a053498a9f635dc54229dc57"
+  },
+  "resolved": [
+    {
+      "id": "I1",
+      "result": "Upper tabletop rim and lower fascia are continuous without the previous30px step/notch. Full surrounding1254 crop and all placement boundaries inspected.",
+      "evidence": "I1-table-rim.png"
+    },
+    {
+      "id": "I2",
+      "result": "Diagonal under-table floor joins coherent transverse planks; leg left face vertical grain continues across the old horizontal cut. Perimeter and overlap with W1 inspected.",
+      "evidence": "I2-floor-leg.png"
+    },
+    {
+      "id": "W1",
+      "result": "Three floor grooves connect to a real flush butt joint at x~230 inside r13_c15. No open-ended grooves at x0. Top foot contact and right endpoints continuous.",
+      "evidence": [
+        "W1-perimeter.png",
+        "west-3072-4096-native.png"
+      ]
+    }
+  ],
+  "ornamentReview": {
+    "bell": "Removed; original plaster wall/wood intact.",
+    "extraSmallWhiteCap": "Removed; continuous timber restored; correct larger cap preserved.",
+    "protectedRegionPixelsExactlyUnchanged": true,
+    "evidence": [
+      "bell-protected.png",
+      "cap-protected.png"
+    ]
+  },
+  "westNeighborUsed": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+    "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4",
+    "size": [
+      4096,
+      4096
+    ],
+    "format": "PNG"
+  },
+  "currentWestPointer": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-repaired-west-remove-grout-stub-20261011T082322-15c2e7ac-masked.png",
+    "sha256": "89c0bd8fcf2a507c90a1b690a2e0911a8b490f195820502eb026c56f298bc2d4"
+  },
+  "currentWestRight400PixelsIdentical": true,
+  "remainingFindings": [
+    {
+      "id": "W-COSMETIC",
+      "severity": "watch",
+      "boxIn4096": [
+        0,
+        3482,
+        30,
+        4096
+      ],
+      "description": "A small value/texture step remains at the fixed west boundary; no contour or groove topology break. Similar upper panel/rail tonal steps remain from initial tile generation.",
+      "furtherNativeRepairRequired": false
+    },
+    {
+      "id": "SOUTH-PENDING",
+      "severity": "external_neighbor_pending",
+      "edge": "south",
+      "rangeX": [
+        0,
+        629
+      ],
+      "description": "New flush timber butt joint exits bottom near x230. Future r14_c15 must anchor actual current4096 core, never historical halo.",
+      "furtherNativeRepairRequired": "Only after actual neighbor comparison reveals a discontinuity."
+    }
+  ],
+  "outerHaloQA": "pending; context outer115 retained from earlier generation, not guaranteed to match corrected core",
+  "noNewMandatoryInternalDefectObserved": true,
+  "newGenerationCalls": 0
+}

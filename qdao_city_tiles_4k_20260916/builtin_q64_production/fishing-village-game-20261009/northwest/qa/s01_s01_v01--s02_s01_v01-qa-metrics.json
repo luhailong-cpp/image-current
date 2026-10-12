@@ -1,0 +1,98 @@
+{
+  "timestampUtc": "2026-10-09T16:32:30.199582+00:00",
+  "operation": "unscaled native mechanical crop and hard join; no feather or art edit",
+  "sourceA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s01_v01.png",
+    "sha256": "43cc2542995ab18542e1f3b4b2182c3fbe243d45b4e5637a96ee5b91d8feb643",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "sourceB": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s01_v01.png",
+    "sha256": "368ae7073faeb4bec0dff41fb324d51d35e91594845722d19ddbbe89ef7a566c",
+    "size": [
+      1254,
+      1254
+    ]
+  },
+  "axis": "y",
+  "overlapSourceBoxes": {
+    "A": [
+      0,
+      1024,
+      1254,
+      1254
+    ],
+    "B": [
+      0,
+      0,
+      1254,
+      230
+    ]
+  },
+  "globalOverlapBox": [
+    8077,
+    9101,
+    9331,
+    9331
+  ],
+  "globalCoreSeam": {
+    "y": 9216
+  },
+  "coreSeamPreviewCoordinate": 384,
+  "metrics": {
+    "rgbMAE": 3.411248642026674,
+    "rgbRMSE": 4.853364801572281,
+    "pixelMeanChannelDifferenceP95": 7.333333333333333,
+    "coreSeamMeanAbsoluteChannelJump": 3.9479166666666665,
+    "immediateBeforeNaturalPixelJump": 1.5582682291666667,
+    "immediateAfterNaturalPixelJump": 1.5533854166666667
+  },
+  "qaArtifacts": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s02_s01_v01-core-seam-100pct.png",
+      "sha256": "1bfc6e2d35cb045b0a99cd74a037177e96e287ea98674c2803a5df15c1b95d34",
+      "size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s02_s01_v01-core-stitch-100pct.png",
+      "sha256": "e9987d3ce5a9ad38812a58efbdf3f1c9c7bc91293e6e76d58771ee0a0d12e0d9",
+      "size": [
+        1024,
+        2048
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s02_s01_v01-overlap-absolute-rgb-difference.png",
+      "sha256": "d74a9e596d8b033be847f3491bdf95cf53cfcc8cac39332a183157e7f37680a2",
+      "size": [
+        1254,
+        230
+      ]
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\qa\\s01_s01_v01--s02_s01_v01-overlap-pair-100pct.png",
+      "sha256": "7a8e53be5eaade73b0359295bdd2ad796c9307a369e5368d6440213ed2720c3f",
+      "size": [
+        1254,
+        460
+      ]
+    }
+  ],
+  "review": {
+    "status": "pass-local-north-seam",
+    "formalAccepted": false,
+    "aiRepairRequired": false,
+    "findings": [
+      "1254x1254 originals measured. Compared A bottom [0,1024,1254,1254) against B top [0,0,1254,230) with no native resampling.",
+      "At native 100%, window lattice bars, red arch/window-frame boundaries, vertical wood posts and white plaster/shadow transitions remain continuous across global y9216. No doubled or offset structural edge seen.",
+      "Small painterly texture/color changes remain; overlap MAE3.411/255, core-seam average jump3.948/255. No conspicuous stripe is visible in the hard-join review."
+    ],
+    "remaining": "other edges, corner relationships, total 4K coverage and cross-tile/zone seams remain unreviewed"
+  }
+}

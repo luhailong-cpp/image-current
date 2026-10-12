@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五行奇谈 · 帮会</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="stage">
+    <section id="guildWindow" class="guild-window" aria-labelledby="windowTitle" data-screen-label="帮会">
+      <header class="window-header">
+        <span class="brand">五行奇谈</span>
+        <div class="title-plaque"><h1 id="windowTitle">帮 会</h1></div>
+        <button id="closeWindow" class="close-button" aria-label="关闭帮会"></button>
+        <img class="close-tassel" src="assets/close_tassel.png" alt="">
+      </header>
+      <nav class="tabs" aria-label="帮会页面" role="tablist">
+        <button id="tab-overview" role="tab" aria-controls="pageContent" aria-selected="true" data-page="overview">帮会总览</button>
+        <button id="tab-members" role="tab" aria-controls="pageContent" aria-selected="false" tabindex="-1" data-page="members">成员</button>
+        <button id="tab-donation" role="tab" aria-controls="pageContent" aria-selected="false" tabindex="-1" data-page="donation">帮会捐献</button>
+        <button id="tab-tasks" role="tab" aria-controls="pageContent" aria-selected="false" tabindex="-1" data-page="tasks">帮会任务</button>
+        <button id="tab-events" role="tab" aria-controls="pageContent" aria-selected="false" tabindex="-1" data-page="events">帮会活动</button>
+        <button id="tab-shop" role="tab" aria-controls="pageContent" aria-selected="false" tabindex="-1" data-page="shop">帮会商店</button>
+      </nav>
+      <div class="window-content">
+        <aside id="guildSummary" class="guild-summary" aria-label="帮会资料"></aside>
+        <section id="pageContent" class="page-content" role="tabpanel" tabindex="0" aria-labelledby="tab-overview"></section>
+      </div>
+      <footer class="window-footer">
+        <div class="wallet"><span>我的贡献 <strong id="contribution">3,280</strong></span><span>铜钱 <strong id="coins">80,000</strong></span></div>
+        <div class="footer-actions"><button id="bagButton" class="text-button">所得道具</button><button id="signInButton" class="button">每日签到</button><button id="hallButton" class="button primary">帮会驻地</button></div>
+      </footer>
+    </section>
+    <section id="reopen" class="reopen" hidden><h1>五行奇谈</h1><p>同修五行，共护仙途</p><button id="reopenButton" class="button primary">打开帮会</button></section>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <div class="preview-tools"><span id="saveStatus">本地交互演示</span><a href="../gameplay-ui/?view=guild">查看效果图</a><button id="demoRoleButton">演示身份</button><button id="resetButton">重置演示</button></div>
+  </main>
+  <dialog id="actionDialog" aria-labelledby="dialogTitle">
+    <button id="dialogClose" class="dialog-close" aria-label="关闭弹窗">×</button>
+    <h2 id="dialogTitle"></h2>
+    <div id="dialogBody"></div>
+    <p id="dialogError" class="inline-error" role="alert" hidden></p>
+    <div id="dialogActions" class="dialog-actions"></div>
+  </dialog>
+  <script src="model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

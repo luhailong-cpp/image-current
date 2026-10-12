@@ -1,0 +1,526 @@
+{
+  "status": "historical_superseded",
+  "reason": "same support foot per8 and2 independent poses per position replaces older flight distribution",
+  "previousReview": {
+    "reviewedAt": "2026-10-03T22:01:16.315481+00:00",
+    "direction": "S",
+    "method": "逐张实际查看原图，并查看固定整画布240px和480px并排图。未按提示词相位判定，未对任何PNG作位移/缩放配准。",
+    "newPolicy": "../../RUN_GROUNDING_REVIEW_20261003.md",
+    "available": 16,
+    "expected": 16,
+    "missing": [],
+    "approved": 0,
+    "fullLoopDynamicReview": "all_slots_available_not_yet_passed",
+    "candidateSupportFrames": [
+      2,
+      3,
+      4,
+      10,
+      11,
+      12
+    ],
+    "weakContactFrames": [
+      1,
+      9
+    ],
+    "priorityRedrawFrames": [],
+    "otherProblemFrames": [
+      1,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16
+    ],
+    "root": {
+      "normalized": [
+        0.5,
+        0.92
+      ],
+      "status": "uncalibrated_manual_contact_band_for_diagnosis_only",
+      "note": "S前后脚具有透视深度，后脚不得强行贴同一屏幕水平线。现有图不能仅凭92%线判定接地；禁止按最低像素逐帧贴地。",
+      "additionalFinding": "高度诊断见grounding-S/boot-height-diagnostic.json。该ROI最低点只用于核实局部修改，绝不用于逐帧贴地；S01/S09接触轮廓仍不能单独定义全局地面。"
+    },
+    "timing": {
+      "adoptedCycleMs": 1200,
+      "frameMs": 75,
+      "frameCount": 16,
+      "phaseWeightsApplied": false,
+      "previewControls": [
+        "normal",
+        "slow",
+        "pause",
+        "frame-step"
+      ],
+      "note": "用户最新明确1200ms/16；旧480/640/720/800档仅历史，不作当前入口。"
+    },
+    "normal240pxFindings": "当前脚轴局部纠正后，主要前靴与02/10承重靴、11回收靴更正向镜头。最新06v3/07v6/08v4/09v1构成可辨的屈膝→伸膝下降序列，优于旧06v2/07v5的过早前伸后屈回。05→06转换、05/13推离、09→10尺度、14/15卷轴与16→01仍待完整动态复核，不能标整体通过。",
+    "frames": [
+      {
+        "frame": 1,
+        "file": "staging/run-S-01-v1.png",
+        "observedPhase": "右脚前伸的轻接触候选；左脚后抬",
+        "supportCandidate": "right",
+        "lead": "right",
+        "handConnection": "笔手在画面左髋旁后摆，卷手从画面右肩向前，连接清楚。",
+        "groundingObservation": "前靴露出一部分鞋底，脚跟轻触感比平踏强；不能作为稳定承重。头/道具比例比09略小。",
+        "issues": [
+          "透明边缘彩点",
+          "接触/地面尚未标定"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "c7c08aaf41469837e8c2e3f9708276a78b2178d76c5e7bafca624fb3ad521cd9",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "前靴大致正面，仍有轻微不对称；未在本轮重画，须动态复核。",
+        "footAxisApproval": false
+      },
+      {
+        "frame": 2,
+        "file": "staging/run-S-02-v2.png",
+        "observedPhase": "右腿平底承重候选；左脚向前回收",
+        "supportCandidate": "right",
+        "lead": "right",
+        "handConnection": "右肩袖到持笔手连续，笔手开始前移；左卷手仍前。",
+        "groundingObservation": "右靴下缘接近平直、膝轻屈，身体下降有限；240px下是可辨支撑候选，须与03连续复核。",
+        "issues": [
+          "脚轴局部改善，整体接地/动作仍需动态复核",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "8e7fd4b415bcda3e9618475ed0dbf46203470dbc502d3c6f7c0553505c18ec22",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v2经放大确证外撇后旋正右承重靴：前掌、鞋带与膝踝近居中；保留平底承重，没有仅缩窄站距。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-02-v1.png"
+        ]
+      },
+      {
+        "frame": 3,
+        "file": "staging/run-S-03-v1.png",
+        "observedPhase": "右腿支撑、左膝通过",
+        "supportCandidate": "right",
+        "lead": "left_passing",
+        "handConnection": "右笔臂已前摆，左卷臂回撤，未换手。",
+        "groundingObservation": "右靴下缘平、左靴抬高，肩/骨盆相较02下沉；240px下支撑最清楚之一。右笔臂前摆幅度从02跳变较快。",
+        "issues": [
+          "透明边缘彩点",
+          "02→03摆臂突变"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "b9b6632129b0a37a0baa060d448afa4c03bdb3f0f8c76e11519f42a7cd99473b",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "支撑靴鞋尖/鞋带近居中，膝踝到靴的前进面较直，暂保留。",
+        "footAxisApproval": false
+      },
+      {
+        "frame": 4,
+        "file": "staging/run-S-04-v4.png",
+        "observedPhase": "延长支撑修正版候选",
+        "supportCandidate": "right",
+        "lead": "left",
+        "handConnection": "笔臂前摆、卷臂后摆，肩袖连接可辨。",
+        "groundingObservation": "右脚低位平底支撑、左脚明显抬离；闭口恢复。比v1支撑明确，但脚跟仍未清楚抬起，只能算延长支撑，不能认定前掌蹬离。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "110604731f3ef8be4e738cccf1105f52297bc7a4a2f5dec5483b8d6a3ba892ff",
+        "previousFile": "staging/run-S-04-v1.png",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v4摆动左靴已由外撇露底改为正向镜头；右支撑靴保留。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-04-v3.png"
+        ]
+      },
+      {
+        "frame": 5,
+        "file": "staging/run-S-05-v3.png",
+        "observedPhase": "右脚前掌推离趋势候选",
+        "supportCandidate": "right_toe_candidate",
+        "lead": "left",
+        "handConnection": "右笔手前、左卷手后，物件归属稳定。",
+        "groundingObservation": "v2由04-v3定点绘制；右靴更窄、脚尖下压、后跟侧缘稍高，左脚抬离；比v1更接近推离。前视角下脚跟抬起仍弱，暂不通过。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "12f0a153b13bb9a0d87c94915926a3ab45f2f61206353350db3c2fb4dee95850",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v3摆动左靴正向镜头，鞋尖/鞋跟较居中；支撑右靴仍需推离连续性复核。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-05-v2.png"
+        ]
+      },
+      {
+        "frame": 6,
+        "file": "staging/run-S-06-v3.png",
+        "observedPhase": "左膝屈收的短腾空候选，左前靴开始伸膝下降前的较高位置",
+        "supportCandidate": "none_airborne_candidate",
+        "lead": "left",
+        "handConnection": "以07v6局部改绘膝踝，右肩-袖-笔手与左肩-袖-卷手保留；06/07/08上半身基本一致，尚需检查连续摆臂是否短暂停滞。",
+        "groundingObservation": "06v3前靴ROI最低1036；07v6=1097、08v4=1159、09v1=1190。实际膝踝由屈收到渐伸，替代06v2前靴1182后再屈回的反向动作；两靴离地形态可辨，不能仅靠像素数字标接地通过。",
+        "issues": [
+          "05→06头位/道具姿态转换需完整循环复核",
+          "06/07/08上半身接近，持物臂连续运动仍待动态审查",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "915021414766ba911257e1495d68684df34617b43d9eb438a50af316c5e18330",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "左前靴鞋尖/鞋底长轴正向镜头，屈膝后的鞋带、前掌和后跟居中；右后靴仍近正面。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-06-v1.png",
+          "staging/run-S-06-v2.png"
+        ]
+      },
+      {
+        "frame": 7,
+        "file": "staging/run-S-07-v6.png",
+        "observedPhase": "左腿开始伸膝下降、右脚继续后收的短腾空候选",
+        "supportCandidate": "none_airborne_candidate",
+        "lead": "left",
+        "handConnection": "沿用08v4上半身与持物肩袖连接，右手笔前、左手卷后；未换持手。",
+        "groundingObservation": "重新按相邻序列判断选07v6。06v3→07v6→08v4→09v1前靴最低1036→1097→1159→1190，前腿逐渐伸膝下降；07v6相对08收高62px并非单独弃用理由。后靴1068→1053→1044→1036渐收。",
+        "issues": [
+          "整体接地仍未校准、完整循环待动态验收",
+          "06/07/08上半身接近，持物臂连续运动仍待动态审查",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "1050cfef066061fda0488401871a9d823f622fe030e4f79b0b69867880d20d3a",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v6前靴近对称朝镜头，膝踝前进面保持；不再选前靴过低的v5。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-07-v2.png",
+          "staging/run-S-07-v5.png"
+        ]
+      },
+      {
+        "frame": 8,
+        "file": "staging/run-S-08-v4.png",
+        "observedPhase": "左脚临接触候选",
+        "supportCandidate": "none_or_ambiguous",
+        "lead": "left",
+        "handConnection": "右手持笔胸前、左手持卷髋后，未换手。",
+        "groundingObservation": "保留08v4。与新06v3/07v6配对后，前靴由1036→1097→1159逐步下降再到09的1190，原07v5→08反向收腿问题在当前选择中已消除；前靴未平踏，仍属临接触候选。",
+        "issues": [
+          "09触地轮廓与真实承重仍待动态验收",
+          "06/07/08上半身接近，持物臂连续运动仍待动态审查",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "7e632e912973f423ea151e44bb1aae99d6e311a1fe05eb1cbb4627af1e28f24e",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v4保持正面脚轴；不再因前一帧旧v5导致的相对高度判断而单独认定08收得偏高。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-08-v2.png"
+        ]
+      },
+      {
+        "frame": 9,
+        "file": "staging/run-S-09-v1.png",
+        "observedPhase": "左脚前伸轻接触候选；右脚后抬",
+        "supportCandidate": "left",
+        "lead": "left",
+        "handConnection": "笔手画面左胸前，卷手画面右髋旁后摆，正确异侧摆臂。",
+        "groundingObservation": "左靴下缘偏平但仍有前伸，能与01区分左右脚；头部/人物尺度较10明显偏大，不能简单单帧缩放归一化。",
+        "issues": [
+          "相较10头身尺度跳变",
+          "接触点未标定",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "f77d8eedde284ffb7d919494ebebb4ee4a90bf1b74c9a1b7e707d595aed1fac7",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "左前靴近正面且中心鞋带与膝踝同向，暂保留，不宣告全姿势通过。",
+        "footAxisApproval": false
+      },
+      {
+        "frame": 10,
+        "file": "staging/run-S-10-v2.png",
+        "observedPhase": "左腿平底承重候选；右脚回收",
+        "supportCandidate": "left",
+        "lead": "left",
+        "handConnection": "右笔臂向后过渡、左卷臂开始向前，保持持手。",
+        "groundingObservation": "左靴底接近平、左膝略屈，240px下可辨支撑；但09→10整体轮廓缩小，既包含生图尺度漂移也可能部分重心变化。",
+        "issues": [
+          "脚轴局部改善，整体接地/动作仍需动态复核",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "6eb0afa86ed4b8590fe690b756f7916dc0efa7a3ad8c38d00d9d0db7be09ac7b",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v2经放大确证外撇后旋正左承重靴：侧后跟外露减少，鞋尖正向镜头；保留承重姿态。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-10-v1.png"
+        ]
+      },
+      {
+        "frame": 11,
+        "file": "staging/run-S-11-v3.png",
+        "observedPhase": "左腿支撑、右膝通过",
+        "supportCandidate": "left",
+        "lead": "right_passing",
+        "handConnection": "v2笔头已补长，右肩-袖-手-笔连接保留，短笔突变减轻；其他手臂动作仍需动态复核。",
+        "groundingObservation": "左靴平底、右靴抬高且屈膝；240px下支撑可辨。v2已补长笔头，v3保留；回收靴下缘相对v2变化20px，须与10/12动态复核。",
+        "issues": [
+          "脚轴局部改善，整体接地/动作仍需动态复核",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "26ddad298b7a2fca606f4a1c36e9157d7a3864fb3195302248acf3f84784f5ad",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v3只把右回收靴转向镜头，左承重靴与已补长笔头保持；脚轴更直，回收靴轮廓稍向下延伸须动态复核。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-11-v1.png",
+          "staging/run-S-11-v2.png"
+        ]
+      },
+      {
+        "frame": 12,
+        "file": "staging/run-S-12-v2.png",
+        "observedPhase": "延长支撑修正版候选",
+        "supportCandidate": "left",
+        "lead": "right",
+        "handConnection": "右笔臂后摆，左卷臂向前，正确保持原持手。",
+        "groundingObservation": "左脚低位平底支撑、右脚低抬，原先双脚漂浮样歧义降低；左跟仍不清楚抬起，不能认定前掌蹬离。",
+        "issues": [
+          "尚未形成明确前掌蹬离",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "bbe69ed7d73027f247fb8a423621913ddc5dbaadabd4efcdb1edc901d17203a6",
+        "previousFile": "staging/run-S-12-v1.png",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "放大检查主要是抬脚俯仰与倾斜，鞋跟投影不足以确证yaw外撇；按原v2保留，不把透视误改为机械正面。",
+        "footAxisApproval": false
+      },
+      {
+        "frame": 13,
+        "file": "staging/run-S-13-v3.png",
+        "observedPhase": "双脚轴已转正的左前掌推离候选",
+        "supportCandidate": "left_toe_ambiguous",
+        "lead": "right",
+        "handConnection": "右笔手后、左卷手前，肩袖连续。",
+        "groundingObservation": "v3纠正v2两脚外撇并改善左膝踝路径；支撑脚前掌与后跟的离地关系仍不清楚，不能标蹬地通过。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "06d521295233b3b7d7855ee81816a6b8ff7b90fa5fb66dc1803dc69ffe73c86a",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v3同时纠正两脚向左右撇：两靴鞋尖和鞋底长轴已正向镜头，左膝踝也回到较合理路径；前掌蹬离仍不清楚。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-13-v2.png"
+        ]
+      },
+      {
+        "frame": 14,
+        "file": "staging/run-S-14-v2.png",
+        "observedPhase": "右腿领先的腾空样姿态",
+        "supportCandidate": "none_or_ambiguous",
+        "lead": "right",
+        "handConnection": "右笔臂后摆，左卷臂前摆幅度更大；握持可辨。",
+        "groundingObservation": "前右靴显底、后左靴回收，腾空候选；卷轴变大且更正面，可能产生道具膨胀感。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "4e23d00cda6847800a7f8cb17e1a3f843c08b347d901814389ae42047723c0ec",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v2右前靴长轴已正向镜头，鞋跟居中；仍存在前脚高度与相邻帧连续性问题。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-14-v1.png"
+        ]
+      },
+      {
+        "frame": 15,
+        "file": "staging/run-S-15-v5.png",
+        "observedPhase": "右腿前伸、左脚后收；下降段候选",
+        "supportCandidate": "none_or_ambiguous",
+        "lead": "right",
+        "handConnection": "右笔臂后，左卷臂前，握持持续但卷轴偏大。",
+        "groundingObservation": "v2靴ROI最低y1208；高度两轮修正v3=1092/v4=1166；脚轴转正后v5最低点轻度下移。未通过。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "b3a79a6be7a60fdc19940a140f1d96b5a5def43d99911f233d496811c4f17447",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "v5右前靴已转正，中心鞋带/鞋尖在同向前进面；脚轴改善但高度随重画下移。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-15-v2.png"
+        ]
+      },
+      {
+        "frame": 16,
+        "file": "staging/run-S-16-v3.png",
+        "observedPhase": "右脚临接触候选",
+        "supportCandidate": "none_or_ambiguous",
+        "lead": "right",
+        "handConnection": "右笔手髋旁后、左卷手胸前，侧别与01连续。",
+        "groundingObservation": "v3脚轴转正且高度接近01；v4高度修正过度，约100px收腿，不选。仍需解决16→01微小高度跳变。",
+        "issues": [
+          "脚轴已局部改善，整段仍需动态复核",
+          "接地/腾空高度与邻帧尚未连续",
+          "透明边缘彩点"
+        ],
+        "status": "needs_review",
+        "approval": false,
+        "sha256": "2680e6f245ec552b0b9d4906b6c90512caf56b961cc1775d49a8ff093fe42c44",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "footAxisObservation": "选择v3：右前靴转正且较接近01高度；v4虽然脚轴仍直，却过度收腿约100px，不选作当前序列。",
+        "footAxisApproval": false,
+        "supersededReviewSelections": [
+          "staging/run-S-16-v2.png"
+        ]
+      }
+    ],
+    "newRepairAttempts": [
+      "run-S-04-v3",
+      "run-S-05-v2",
+      "run-S-12-v2",
+      "run-S-13-v2"
+    ],
+    "newMissingSlotFills": [
+      "run-S-07-v2",
+      "run-S-08-v2",
+      "run-S-15-v2",
+      "run-S-16-v2"
+    ],
+    "footAxisReviewPolicy": "最新人工认可09竹弓少女当前版作为动作参考；仍分开判断鞋轴、膝踝、肩手与接地，不把精确坐标或自然头部起伏当硬错误。",
+    "retryBounds": {
+      "07_descentHeight": 2,
+      "15_descentHeight": 2,
+      "08_precontactHeight": 2,
+      "16_precontactHeight": 2,
+      "sameDefectFurtherRetry": "stopped; report remaining problems"
+    },
+    "notSelectedCandidates": {
+      "run-S-16-v4.png": "高度过度回收，尽管脚轴保持较直；继续选16v3。",
+      "run-S-06-v2.png": "虽脚轴较直，但前腿过早伸到y1182，接07v6时反向屈回；选择06v3建立渐伸下降。",
+      "run-S-07-v5.png": "前靴y1194随后08v4回升至1159，反向收腿；选择07v6与06v3/08v4配对。"
+    },
+    "latestFocusedReview": {
+      "framesEditedOnce": [
+        2,
+        10,
+        11
+      ],
+      "framePreservedAfterInspection": 12,
+      "reason12": "insufficient evidence of outward yaw; possible perspective/pitch",
+      "noFurtherHeightRetries": [
+        7,
+        8,
+        16
+      ]
+    },
+    "newBaseS07Attempt": "grounding-S/S07-new-base-attempt.json",
+    "candidateCount": 41,
+    "sequenceReview06to09": "grounding-S/S06-S09-sequence-review.json",
+    "latestSequenceChoice": {
+      "reviewedAt": "2026-10-03T22:01:16.315481+00:00",
+      "selected": [
+        "run-S-06-v3",
+        "run-S-07-v6",
+        "run-S-08-v4",
+        "run-S-09-v1"
+      ],
+      "decisionBasis": "actual_anatomical_sequence_not_exact_prompt_pixel_target",
+      "furtherRetries": "none",
+      "approved": false
+    },
+    "approvedReferenceReview": "reference09-S-20261003.json",
+    "referenceBasedDecision": "保留当前S16；05/13前视蹬离显著度、16→01数像素差异不再自动触发重画。整体1200ms实播仍待主代理复核。"
+  }
+}

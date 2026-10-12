@@ -1,0 +1,20 @@
+r03_c05 南界最终候选补充 QA
+
+结论：新双方候选实际原尺寸查看后，4/4 南界仍为结构冲突 FAIL。
+
+北块 r03_c05：r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.png
+SHA256 60ecd41051d16e950bd301453236cec3cd0227945ac8d034b9e379e6fce89760
+南块 r04_c05：r04_c05-pipeline-minimum-error-e2769dba9467-6e5fcf.png
+SHA256 ac954e1d5fbbbcfdba1a0cf4caef511d80a47d6edc5a51271785d8abc78919ac
+双方哈希与 4096x4096 尺寸已实际核验。
+
+每段为1024x320原像素裁图：上160行为北块底边，下160行为最新南块顶边，正式界线 world y=12288。只 crop/paste；没有缩放、重绘或源图修改。south-latest-batch-native.png 已用 original-detail 实际查看全部四段。
+
+01 FAIL | world x16384..17408：木门板/竖框对金边、红墙、红柱，结构及位置错接。
+02 FAIL | world x17408..18432：木门板对大红灯笼，灯笼轮廓无北向延续。
+03 FAIL | world x18432..19456：木门板对灯笼右缘、墙面、柱与窗格，结构未衔接。
+04 FAIL | world x19456..20480：木门板/红柱对浅色格栅窗，框线和实体整体冲突。
+
+最新窄带材质变化没有解决这四段结构冲突。南界修复未尝试、未合入；selection/progress 未改。旧报告保留，本补充仅更新最终双方哈希对应的南界结论。
+精确源裁框、PNG哈希及world框：crop-manifest.json。
+结构化补充报告：supplement-report.json。

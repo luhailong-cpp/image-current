@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-09T20:13:27.476392+00:00",
+  "tile": "r09_c04",
+  "status": "internal_qa_complete_with_minor_nonblocking_observation",
+  "internalComplete4k": 1,
+  "formalAcceptedCount": 0,
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-candidate-4096.png",
+    "sha256": "1b34b7380156476a918b2b7ba867b5fcffa1cca0039e4ab10ad4d7ad9883b7ea",
+    "size": [
+      4096,
+      4096
+    ],
+    "cropFromContext": [
+      115,
+      115,
+      4211,
+      4211
+    ],
+    "globalCoreBox": [
+      12288,
+      32768,
+      16384,
+      36864
+    ]
+  },
+  "context": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-context-native.png",
+    "sha256": "ba88b210f10b824910bfaf42d78f32b53dc1b100c7a3e7af91156118c3b55d92",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "repairTrace": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-trace.json",
+    "sha256": "3b820154c8a78a78b59281ee6ae19c3517587348ebec0709e71a7da500e76259"
+  },
+  "mechanicalAudit": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-internal-mechanical-audit.json",
+    "sha256": "ab2e16a9f3d892fcf7509f4b7b307501961d69a442dbc3c8ae05f5241f6b5ba2"
+  },
+  "inheritedBaseInternalReview": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/full-tile-r09_c04-visual-audit.json",
+    "sha256": "2618752d830675f61957d500d56e8dbf654e6ba25d1cbb34062984b872e33b5e"
+  },
+  "reviewScope": "All pixels selected by both native repair masks, their complete closed perimeters, and surrounding unchanged pixels were reviewed at original resolution. The previous 39-image audit is inherited for unmodified regions, not claimed to have been repeated.",
+  "mechanicalConclusion": "Independent replay from stable base, two native repair images and saved masks exactly reproduces all 4326x4326 context pixels; final 4096 is the exact integer crop. Every pixel outside masks is unchanged.",
+  "visualReviews": [
+    {
+      "repair": "post",
+      "status": "pass_with_minor_nonblocking_observation",
+      "core": "Original full-width horizontal wood-colour and grain discontinuity F01 is removed.",
+      "perimeter": "All four hard mask sides and corners were reviewed. Wall stones, foliage, ground and post outer silhouette remain continuous. There is a small highlight/brush transition at the top edge as separately recorded."
+    },
+    {
+      "repair": "lantern",
+      "status": "pass",
+      "core": "Original diagonal red-paint discontinuity F02 and the dark frame jump are removed.",
+      "perimeter": "All four hard mask sides and corners were reviewed. Red surface, black/red outer frame, golden frame, paper glow and surrounding ground have no new clear contour break or independent colour band."
+    }
+  ],
+  "resolvedBlockingFindings": [
+    "F01",
+    "F02"
+  ],
+  "openBlockingFindings": [],
+  "nonblockingObservations": [
+    {
+      "id": "N01",
+      "priority": "P3",
+      "type": "small_local_highlight_and_brush_transition",
+      "repairLocalBox": [
+        675,
+        415,
+        705,
+        440
+      ],
+      "tileBox": [
+        3075,
+        1865,
+        3105,
+        1890
+      ],
+      "globalBox": [
+        15363,
+        34633,
+        15393,
+        34658
+      ],
+      "description": "At the new post-mask top edge, the narrow golden corner has a roughly 25-pixel shallow angular highlight/colour transition. It is visible in the native close crop but does not span the post, break its contour, or recreate the former material colour band. Retained as a nonblocking local brush observation.",
+      "evidence": [
+        {
+          "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-top-before-detail-100pct.png",
+          "sha256": "4a2d33e13ce89ee23a838a3b819f6ec4b434444e4616f38b75995779bff5bc67",
+          "source": {
+            "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-before-internal-100pct.png",
+            "sha256": "8694be7863435df6fca4f3b0463506cfb074be91627120d6279d2e94933d5d14"
+          },
+          "sourceBox": [
+            230,
+            100,
+            480,
+            200
+          ],
+          "repairLocalBox": [
+            560,
+            380,
+            810,
+            480
+          ],
+          "tileBox": [
+            2960,
+            1830,
+            3210,
+            1930
+          ],
+          "operation": "integer crop only",
+          "noResize": true,
+          "viewedBy": "coordinate_audit",
+          "viewedWith": "view_image detail=original"
+        },
+        {
+          "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-top-after-detail-100pct.png",
+          "sha256": "92d478acdb449a4dc15f8e3369f98c4d0952c4df72ab3b903612ef9b218adada",
+          "source": {
+            "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-after-internal-100pct.png",
+            "sha256": "c3abdd8af7d802d1db0502f8541c95b111c9c2173c72ffa72587e48e41d30bad"
+          },
+          "sourceBox": [
+            230,
+            100,
+            480,
+            200
+          ],
+          "repairLocalBox": [
+            560,
+            380,
+            810,
+            480
+          ],
+          "tileBox": [
+            2960,
+            1830,
+            3210,
+            1930
+          ],
+          "operation": "integer crop only",
+          "noResize": true,
+          "viewedBy": "coordinate_audit",
+          "viewedWith": "view_image detail=original"
+        },
+        {
+          "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-top-mask-detail-100pct.png",
+          "sha256": "e6a216d38baca7c1773a5010b582d76e7c7b606556d7e9efa56c9ad63a2e2ed4",
+          "source": {
+            "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-mask-internal-100pct.png",
+            "sha256": "db7971ecb5f8d50c2cc3854011970ad28c4cb16fd9e0afdea34bc89b47a1c519"
+          },
+          "sourceBox": [
+            230,
+            100,
+            480,
+            200
+          ],
+          "repairLocalBox": [
+            560,
+            380,
+            810,
+            480
+          ],
+          "tileBox": [
+            2960,
+            1830,
+            3210,
+            1930
+          ],
+          "operation": "integer crop only",
+          "noResize": true,
+          "viewedBy": "coordinate_audit",
+          "viewedWith": "view_image detail=original"
+        }
+      ]
+    }
+  ],
+  "qaAssetsActuallyViewed": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-before-internal-100pct.png",
+      "sha256": "8694be7863435df6fca4f3b0463506cfb074be91627120d6279d2e94933d5d14",
+      "size": [
+        740,
+        690
+      ],
+      "repair": "post",
+      "role": "before",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/full-tile-r09_c04-context-native.png",
+        "sha256": "2c83a0c7ab8fd70ade3fcbfb550701fdda5c589270c9bdfbc20bfd0b6d78b2e5"
+      },
+      "sourceBox": [
+        2845,
+        1845,
+        3585,
+        2535
+      ],
+      "localRepairSourceBox": [
+        330,
+        280,
+        1070,
+        970
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-after-internal-100pct.png",
+      "sha256": "c3abdd8af7d802d1db0502f8541c95b111c9c2173c72ffa72587e48e41d30bad",
+      "size": [
+        740,
+        690
+      ],
+      "repair": "post",
+      "role": "after",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-context-native.png",
+        "sha256": "ba88b210f10b824910bfaf42d78f32b53dc1b100c7a3e7af91156118c3b55d92",
+        "size": [
+          4326,
+          4326
+        ]
+      },
+      "sourceBox": [
+        2845,
+        1845,
+        3585,
+        2535
+      ],
+      "localRepairSourceBox": [
+        330,
+        280,
+        1070,
+        970
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-mask-internal-100pct.png",
+      "sha256": "db7971ecb5f8d50c2cc3854011970ad28c4cb16fd9e0afdea34bc89b47a1c519",
+      "size": [
+        740,
+        690
+      ],
+      "repair": "post",
+      "role": "mask",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-post-source-mask-bw.png",
+        "sha256": "3b17a79bfd760014ab888359d930f53c7f56ce1e874c5c068c98cc22095a15e2",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "sourceBox": [
+        330,
+        280,
+        1070,
+        970
+      ],
+      "localRepairSourceBox": [
+        330,
+        280,
+        1070,
+        970
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-lantern-before-internal-100pct.png",
+      "sha256": "a29dc25bb4ffd7728ec29a94c20f28668010f6f7042cef28baf39868f54a3879",
+      "size": [
+        614,
+        690
+      ],
+      "repair": "lantern",
+      "role": "before",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/full-tile-r09_c04-context-native.png",
+        "sha256": "2c83a0c7ab8fd70ade3fcbfb550701fdda5c589270c9bdfbc20bfd0b6d78b2e5"
+      },
+      "sourceBox": [
+        3712,
+        2845,
+        4326,
+        3535
+      ],
+      "localRepairSourceBox": [
+        640,
+        330,
+        1254,
+        1020
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-lantern-after-internal-100pct.png",
+      "sha256": "f1b8497d12e87e0a91a04ba40f2c428ef4f66662aa30f54f649b76abc8607865",
+      "size": [
+        614,
+        690
+      ],
+      "repair": "lantern",
+      "role": "after",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-context-native.png",
+        "sha256": "ba88b210f10b824910bfaf42d78f32b53dc1b100c7a3e7af91156118c3b55d92",
+        "size": [
+          4326,
+          4326
+        ]
+      },
+      "sourceBox": [
+        3712,
+        2845,
+        4326,
+        3535
+      ],
+      "localRepairSourceBox": [
+        640,
+        330,
+        1254,
+        1020
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-lantern-mask-internal-100pct.png",
+      "sha256": "56ae6f423ee60a68b2f2e4f1ab246b02ccfee086d8966b260b0ddbfaa88901da",
+      "size": [
+        614,
+        690
+      ],
+      "repair": "lantern",
+      "role": "mask",
+      "source": {
+        "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c04-v1-lantern-source-mask-bw.png",
+        "sha256": "36e130018def3e6ce878876e40066e5801ab2f882fd106bcde088bfe92ed4a80",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "sourceBox": [
+        640,
+        330,
+        1254,
+        1020
+      ],
+      "localRepairSourceBox": [
+        640,
+        330,
+        1254,
+        1020
+      ],
+      "operation": "integer crop only",
+      "noResize": true,
+      "noFeather": true,
+      "noDrawing": true,
+      "viewedBy": "coordinate_audit",
+      "viewedWith": "view_image detail=original",
+      "reviewCoverage": "entire crop at native size",
+      "status": "reviewed"
+    }
+  ],
+  "noResize": true,
+  "noFeather": true,
+  "noColourCorrection": true,
+  "externalTileJoinsVerified": false,
+  "acceptanceLimit": "Internal QA complete for this 4096 candidate only. Formal accepted count remains 0 until neighbouring tile joins and remaining formal criteria are verified.",
+  "independentFollowup": "A supplementary child-agent lantern/top-highlight check was requested and remains pending at the time of this report; this conclusion is based on the named reviewer personally viewing all listed assets."
+}

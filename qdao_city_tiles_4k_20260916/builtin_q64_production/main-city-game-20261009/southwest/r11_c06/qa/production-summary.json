@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "tile": "r11_c06",
+  "reviewedAtUtc": "2026-10-10T22:56:03.366Z",
+  "baselineNativeCount": 0,
+  "toolReturnedImages": 19,
+  "selectedNativeCount": 16,
+  "rejectedNativeCount": 3,
+  "failedCalls": 0,
+  "preparedButNotGenerated": [
+    "p01_01.v01",
+    "p02_01.v01"
+  ],
+  "rejectedAttempts": [
+    "p01_01.v02",
+    "p02_01.v02",
+    "p02_02.v01"
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "nativePixels": [
+    1254,
+    1254
+  ],
+  "corePixels": [
+    1024,
+    1024
+  ],
+  "haloPixels": 115,
+  "overlapPixels": 230,
+  "northPriorityAtCorner": true,
+  "allThreeCurrentReferencesAttached": true,
+  "complete4kCandidate": true,
+  "verifiedNativeCount": 16,
+  "preflightPassed": true,
+  "missingPatchIds": [],
+  "sourceResampling": false,
+  "finalArtUpscaled": false,
+  "guidePixelsCompositedIntoFinal": false,
+  "mechanicalAssemblyPassed": true,
+  "geometryPassed": false,
+  "internalPassed": false,
+  "visualQaPassed": false,
+  "formalAccepted": false,
+  "formalAcceptedCount": 0,
+  "status": "COMPLETE_4096_CANDIDATE_QA_FAILED_REPAIRS_REQUIRED",
+  "output": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/pipeline/output/94ddb3ea62a89ee2/r11_c06.candidate.png",
+    "sha256": "a0e4ab32fd38432c298e28f41adc0802b113071101be223d09bcfcbbea427bea",
+    "pixels": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/pipeline/output/94ddb3ea62a89ee2/r11_c06.candidate.context.png",
+    "sha256": "f88aa576cc77ea7f264f9fc46177e6c5394f2de4260787417d9af3e193e62104",
+    "pixels": [
+      4326,
+      4326
+    ]
+  },
+  "assembly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/pipeline/output/94ddb3ea62a89ee2/assembly.json",
+  "mechanicalReview": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/mechanical-review.json",
+  "reviewCoverage": {
+    "wholeCandidateViewed": true,
+    "allSixInternalFullSeamStripsViewed": true,
+    "allNineInternal512IntersectionsViewed": true,
+    "sevenTargetedIssueCropsViewed": true,
+    "northAllFourNativeScaleSegmentsViewed": true,
+    "westAllFourNativeScaleSegmentsViewed": true,
+    "eastExternalReviewed": false,
+    "southExternalReviewed": false
+  },
+  "neighborSources": {
+    "north": {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r10_c06/pipeline/output/5c4d9d81c6fcc1ca/r10_c06.candidate.png",
+      "sha256": "044a7c8f769e1006a8575951411f8bbf9f57582063d7c7ab09064e30458f94d8"
+    },
+    "west": {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c05/refinement-resume20261010/integrated-v2/r11_c05.repaired-v2.candidate.png",
+      "sha256": "a003e9ab16588dc8373440bda3e2a28d97cd67b626446c504b1bad7bd6aa0af8"
+    }
+  },
+  "issues": [
+    {
+      "id": "G01",
+      "severity": "P2",
+      "category": "step-geometry",
+      "coreBox": [
+        100,
+        1200,
+        750,
+        1650
+      ],
+      "finding": "Last stair shortens at core x~285 instead of continuing to parapet near x~505. Step width differs from preceding steps; repair required.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/step-terminal.png"
+    },
+    {
+      "id": "G02",
+      "severity": "P2",
+      "category": "artificial-joint",
+      "coreBox": [
+        1090,
+        2170,
+        1180,
+        3040
+      ],
+      "finding": "p03_02 invented vertical joint at native x230 (core tile x1139) and join ends with short unsupported diagonal spur near [1121,3025].",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/p03p04-free-joint-left.png"
+    },
+    {
+      "id": "G03",
+      "severity": "P2",
+      "category": "quilting-geometry",
+      "coreBox": [
+        1700,
+        2800,
+        2350,
+        3300
+      ],
+      "finding": "Third/fourth row intersection creates a narrow polygon loop and unsupported northwest spur around [1793,2981]. Newly generated north-strip joints caused inconsistent overlap geometry.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/p03p04-loop.png"
+    },
+    {
+      "id": "G04",
+      "severity": "P2",
+      "category": "dangling-joint",
+      "corePoint": [
+        1028,
+        3631
+      ],
+      "finding": "Fourth-row diagonal joint ends freely in open paving; no meeting edge.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/p04-free-joint-left.png"
+    },
+    {
+      "id": "G05",
+      "severity": "P2",
+      "category": "dangling-joint",
+      "corePoint": [
+        2100,
+        3745
+      ],
+      "finding": "Fourth-row diagonal joint ends freely in open paving; no meeting edge.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/p04-free-joint-center.png"
+    },
+    {
+      "id": "G06",
+      "severity": "P2",
+      "category": "paving-pattern",
+      "patches": [
+        "p03_04",
+        "p04_02",
+        "p04_03"
+      ],
+      "finding": "Extra fine paving subdivisions and new north-strip joints differ from sparse coarse guide. Several have affected assembled geometry; broad slab pattern requires reconciliation.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/pipeline/qa/94ddb3ea62a89ee2/intersection_x3072_y3072.png"
+    },
+    {
+      "id": "M01",
+      "severity": "P2",
+      "category": "stone-tone",
+      "coreBox": [
+        750,
+        850,
+        1300,
+        1300
+      ],
+      "finding": "Visible horizontal tone change and small edge shift through narrow stone foot/trim around core y1139.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/stone-tone-p01p02.png"
+    },
+    {
+      "id": "M02",
+      "severity": "P2",
+      "category": "stone-tone",
+      "coreBox": [
+        2750,
+        0,
+        3500,
+        450
+      ],
+      "finding": "Rectangular darker patch on upper-right stone face at core y~115 and x~3070; not a legitimate architectural line.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/top-right-stone-tone.png"
+    },
+    {
+      "id": "M03",
+      "severity": "P2",
+      "category": "material-style",
+      "finding": "Stone microtexture remains overly dense and varies from scalloped cellular on stairs/left ground to diagonal crosshatch on right/lower ground. Native-reference polished quiet material not yet matched consistently.",
+      "evidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/pipeline/qa/94ddb3ea62a89ee2/intersection_x1024_y2048.png"
+    },
+    {
+      "id": "D01",
+      "severity": "P3",
+      "category": "guide-detail",
+      "patches": [
+        "p01_04",
+        "p02_02",
+        "p04_01"
+      ],
+      "finding": "Paper locations simplified/drifted (p02_02 x350/y350 paper absent), and some original guide paving joints omitted or shifted. No claim of precise guide fidelity."
+    },
+    {
+      "id": "E01",
+      "severity": "P2",
+      "category": "west-boundary-geometry",
+      "corePoints": [
+        [
+          0,
+          1728
+        ],
+        [
+          0,
+          2433
+        ]
+      ],
+      "finding": "Against integrated-v2 r11_c05, horizontal ground joint in segment 2 and diagonal in segment 3 terminate abruptly at the tile boundary.",
+      "evidence": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/west-segment-2.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/west-segment-3.png"
+      ]
+    },
+    {
+      "id": "E02",
+      "severity": "P2",
+      "category": "west-boundary-material",
+      "finding": "Visible warm/cool or texture transition at western boundary, particularly lower two segments; upper stairs geometrically align but material differs mildly.",
+      "evidence": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/west-segment-3.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/west-segment-4.png"
+      ]
+    },
+    {
+      "id": "E03",
+      "severity": "P3",
+      "category": "north-boundary-review",
+      "finding": "All four north segments inspected. Major stair/parapet/plinth edges align at exact tile boundary; cylinder rim sharpness changes from old blurred source near top, and M02 remains nearby inside this tile. This is limited visual observation, not whole boundary approval.",
+      "evidence": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/north-segment-1.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/north-segment-2.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/north-segment-3.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/r11_c06/qa/full-review/north-segment-4.png"
+      ]
+    }
+  ],
+  "scope": "Only r11_c06 files written. r10_c06 summary previously saved. No shared progress, other tile assets, contract, game/Unity/client modified. No new tile or extra generation window opened.",
+  "conclusion": "All sixteen native candidates and complete no-resize 4096 assembly exist, but visual QA failed. Repair geometry and materials before acceptance. No formal acceptance granted."
+}

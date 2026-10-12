@@ -1,0 +1,41 @@
+{
+  "tile": "r12_c12",
+  "reviewScope": "Saved native repair rectangle [1536,0,2560,1024] and its immediate joins only; no full-area review",
+  "reviewedProof": "../r12-c12-saved-deck-resume-20261012-v01/source-proof.json",
+  "nativeBaseVersions": {"p12": "v02", "p13": "v04"},
+  "realNorth": "r11_c12.candidate-v02.png",
+  "viewed": ["left.png", "right.png", "bottom.png", "north.png", "corner-NW.png", "corner-NE.png", "corner-SW.png", "corner-SE.png", "repaired-middle.png", "old-middle.png", "r12_c12_deck_whole_joint_v01.png"],
+  "outerJoins": {
+    "left_x1536": "pass: visible long grooves and railing outline remain continuous",
+    "right_x2560": "pass: visible long grooves remain continuous",
+    "bottom_y1024": "pass: long grooves, gold sphere and post outlines remain continuous",
+    "north_y0": "pass against real r11_c12 v02: no visible long-groove break or major material jump",
+    "corners": "NW, NE, SW and SE pass: no obvious geometry offset or gold-post break",
+    "material": "No major color/material discontinuity; small grain phase changes are not a reason for repeated repair",
+    "geometryFaultCoordinates": []
+  },
+  "internalFindings": [
+    {
+      "kind": "new short dark crosscut terminates inside plank",
+      "severity": "structural concern",
+      "coordinatesAreApproximate": true,
+      "tileStart": [2035,130],
+      "tileEnd": [2083,231],
+      "repairedMiddleStart": [243,130],
+      "repairedMiddleEnd": [291,231],
+      "evidence": "The cut joins the upper long groove, then stops in smooth wood before the next lower long groove. It is absent from old-middle.png."
+    },
+    {
+      "kind": "new short dark crosscut terminates inside plank",
+      "severity": "structural concern",
+      "coordinatesAreApproximate": true,
+      "tileStart": [2045,512],
+      "tileEnd": [2085,600],
+      "repairedMiddleStart": [253,512],
+      "repairedMiddleEnd": [293,600],
+      "evidence": "The cut joins the upper long groove, then stops inside the plank before the next lower long groove. It is absent from old-middle.png."
+    }
+  ],
+  "recommendation": "Outer join inspection passes. Do not automatically adopt the entire rectangle without resolving or explicitly accepting the two new interior crosscut endings. These are geometric marks, not fine-grain phase differences.",
+  "limitations": "Visual review of native-resolution saved cuts. Coordinate estimates have a few-pixel tolerance. No image was generated or modified; no full 4K candidate was reviewed."
+}

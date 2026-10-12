@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "b-complete-center-post-v3",
+  "operation": "hard object-mask source selection; same integer placement, no resize or color operations",
+  "tileContextBox": [
+    1360,
+    500,
+    2614,
+    2778
+  ],
+  "contextBox": [
+    1475,
+    615,
+    2729,
+    2893
+  ],
+  "dimensions": [
+    1254,
+    2278
+  ],
+  "sourceNativeComposite": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c06-bcomplete-v3-native-1254x2278.png",
+    "sha256": "e95f368621471bd6c3a5a6a3751d938849313cbf46e25bea04be555a7923202f"
+  },
+  "sourceNativeIds": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c06-bcomplete-v3-native-source-ids.npy",
+    "sha256": "469f2db95c3e1683174ee94a8f717825228f788679c153fcc0f168c649ffcf85"
+  },
+  "objectMask": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c06-bcomplete-v3-object-mask.npy",
+    "sha256": "ee9bed39197ae143a7f0e9f243800c0ae6881914ebf20926cca013d026ef5d4d"
+  },
+  "nativeSources": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/native/r09_c06_repair_b_complete_upper_v3.png",
+      "sha256": "ca6e0daa6798148381b256aca68226f5a4b71cbb6286d285724f054d8240444d",
+      "sourceId": 1,
+      "sourceOriginInComposite": [
+        0,
+        0
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/native/r09_c06_repair_b_complete_lower_v3.png",
+      "sha256": "856459b9c9cb191603006e9b38ab76ddb6324f4bdddc0cabc942ec5f8d65fa7d",
+      "sourceId": 2,
+      "sourceOriginInComposite": [
+        0,
+        1024
+      ]
+    }
+  ],
+  "sourceTrace": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c06-bcomplete-v3-trace.json",
+    "sha256": "55bcf90395be495f84629fa0b238200ac82e5c561a97a315b09dfe534a5bbc97"
+  },
+  "visualAudit": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/qa/repair-r09_c06-bcomplete-v3-visual-audit.json",
+    "sha256": "9ea913d45eecf6dfd6a194e627964236581ab7ece34ac619362307ee97142679"
+  },
+  "integrationRules": [
+    "Load sourceNativeComposite and objectMask; place true mask pixels into final context at contextBox.",
+    "Preserve all pixels outside objectMask from the current accepted composite.",
+    "Record this object integration plus sourceNativeIds so each retained pixel resolves to one original AI native source.",
+    "This mask does not intersect approved counter corner, fish, C or D repair regions."
+  ]
+}

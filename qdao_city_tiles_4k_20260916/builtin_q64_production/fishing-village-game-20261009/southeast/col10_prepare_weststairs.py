@@ -1,0 +1,13 @@
+from pathlib import Path
+from PIL import Image
+import tile_native_workflow as w
+import json
+T=w.ZONE/'r12_c10';S=T/'repairs';stem='west-stairs-joint-v1';box=[36237,45965,37491,47219]
+left=w.ZONE/'r12_c09/processed/colorpass/p24-colorpass.png';right=T/'native/p21-v3.png'
+im=Image.new('RGB',(1254,1254));im.paste(Image.open(left).crop((512,0,1139,1254)),(0,0));im.paste(Image.open(right).crop((115,0,742,1254)),(627,0));out=S/(stem+'-input.png');im.save(out)
+w.write(out.with_suffix('.png.derivation.json'),{'operation':'unscaled native shared west boundary stitch','globalBox':box,'left':{'path':str(left),'sha256':w.sha(left),'crop':[512,0,1139,1254],'destination':[0,0]},'right':{'path':str(right),'sha256':w.sha(right),'crop':[115,0,742,1254],'destination':[627,0]},'resamplingApplied':False})
+q=w.read(S/'stairs-joint-p11-p21-v3.request.json');q['referenced_image_paths'][0]=str(out);q['coordinate']['globalBox']=box
+q['prompt']='''Precise native shared-edge repair. Return exactly 1254 x 1254 pixels at the same camera and scale. Image 1 is a stitched extreme close-up of one continuous flight of stone stairs over a timber dock. Its left 627 pixels are a FINISHED LOCKED neighboring map tile and must remain geometrically unchanged. Only the right half x627..1253 may be reconstructed. Image 2 layout-only; image 3 daylight material only; image 4 primary rounded clean painterly Q Daoist game style only.
+Three broad diagonal stair edges meet the central vertical stitch x627. They are slightly misregistered in height in the right half, most clearly the lowest stair's bottom edge where it meets wood. Repair each whole edge through the right half so it connects precisely to its left incoming endpoint at x627, with a single smooth straight diagonal edge. The first two stairs must retain the exact left heights and widths. The lowest step in the right half must be lifted to the exact level of the left lowest step, including the stone-to-wood baseline; keep its stone thickness continuous. The rightmost 100 pixels are also anchors: meet their existing endpoints smoothly. Do not create jogs, returns, stair ends, extra noses or side faces. Repair any paver groove or wood plank grain crossing the join. Keep all of the left half exact, including the partial wooden post and surrounding stair structure. Do not change the full scene or zoom. Crisp native detail, large rounded stone slabs, warm gold timber, bright daylight, no blur, text, UI or watermarks.'''
+(S/(stem+'.prompt.txt')).write_text(q['prompt'],encoding='utf-8');w.write(S/(stem+'.request.json'),q)
+print(json.dumps({k:q[k] for k in ['prompt','referenced_image_paths','transparent_background']}))

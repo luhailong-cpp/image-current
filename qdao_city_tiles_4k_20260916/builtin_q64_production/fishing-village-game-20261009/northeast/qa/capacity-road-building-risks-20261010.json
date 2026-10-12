@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T05:01:00.864Z",
+  "reviewer": "/root/first_patch_qa",
+  "scope": "capacity gate 下对现有 r06_c12 4K 候选进行只读道路、摊间通行与占地风险视检；仅记录图片证据，不生成图像、导航面或新的地图坐标方案。",
+  "status": "visual_risks_recorded_navigation_and_capacity_unverified",
+  "coordinateConvention": {
+    "space": "当前 r06_c12.candidate.png 的局部图片像素",
+    "origin": "左上角 (0,0)，x 向右、y 向下",
+    "imageSize": [
+      4096,
+      4096
+    ],
+    "boxes": "[left,top,right,bottom]，仅为定位用近似矩形，绝不是可走/碰撞多边形；矩形内不保证同一材质或属性",
+    "preview": "使用既有 1024×1024 preview 与同尺寸 authoritative guide 对照；报告中的范围统一写为当前 4096 图的局部图片像素。没有换算为任何游戏世界单位。"
+  },
+  "method": {
+    "imageViewer": "tools.view_image detail=original",
+    "fullCandidateDisplay": "4096 原图已读取，但工具显示缩至 3200；总体位置同时用既有 1024 预览核对，重点地面/小摊/木梁用既有 1024 或 512 原生 QA 核对。未声称全图每个像素均以100%显示。",
+    "coordinateEstimation": "手工视觉近似，不使用图像分割，不绘制导航面，不从阴影或缝线自动推导碰撞。",
+    "layoutPrecision": "authoritative guide 由很低分辨率总览局部放大，模糊轮廓不能给出像素级占地；一般物体范围误差约 ±80–160 本图像素，边缘裁切/遮挡处更大。当前清晰候选可见轮廓定位约 ±40–80像素；这不等于地面投影或碰撞精度。"
+  },
+  "summary": [
+    "当前图片中能看见连续的中央灰石通道与右下暖色铺地；它们仍是外观证据，缺少角色尺寸、碰撞、导航与邻块连接证据。",
+    "右侧小鱼摊前角明显偏右，柱脚结束位置偏上，使候选中中央至右下空地看起来比 authoritative guide 更宽、更浅；按该候选画面估算通行余量有高估风险。",
+    "摊体、立柱、台面下暗部及左下摊体不能计入普通地面面积；本块只露出建筑/棚柱和家具局部，不能从本块给出完整建筑占地。",
+    "木梁断口是视觉几何/遮挡错误，本次不把它直接判为通路、障碍、碰撞漏洞或容量瓶颈。"
+  ],
+  "risks": [
+    {
+      "id": "R01",
+      "topic": "中央灰石地面与宽路",
+      "priority": "high_for_capacity_inference",
+      "candidateRegion": [
+        1800,
+        2560,
+        3640,
+        3440
+      ],
+      "observation": "此范围大部分为连续灰石地面，主摊前方、左下摊右侧与右小摊左侧之间可见较宽空地。没有在该中央区域看见独立新增的大型物体横断整条地面。",
+      "layoutComparison": "总览guide也保留摊间空地，但右小摊的真实布局更向左、向下侵入此空间，因此候选右段空地偏大。",
+      "risk": "不能把整块矩形或整片灰色像素计作可走面积；边界附近有摊体投影、阴影和前柱。宽路外观不等于有效导航宽度。",
+      "uncertainty": "范围为查阅窗口，不是通行面；实际可走边界及路网出口未获得证据。"
+    },
+    {
+      "id": "R02",
+      "topic": "主摊与左下摊之间的斜向通行",
+      "priority": "medium",
+      "candidateRegion": [
+        0,
+        1400,
+        2440,
+        3440
+      ],
+      "observation": "主摊左/前缘与左下摊上/右缘之间存在可见斜向灰石走廊；p31/p32 原生核心显示该处主要为石面，地砖线连续。阴影暗化不应自动当作障碍。",
+      "screenSamples": [
+        {
+          "imageXApprox": 1000,
+          "visibleGroundYApproxRange": [
+            1960,
+            2720
+          ],
+          "meaning": "近似屏幕竖向切片可见空地窗口，避开上方主摊及下方左下摊；约 ±100px。不是垂直于道路的净宽。"
+        }
+      ],
+      "risk": "两侧摊柱与台面边缘的屏幕轮廓不等于落地碰撞边；台下空隙不能默认穿行。不能把这条斜走廊的屏幕竖向空隙换算成并行人数。",
+      "uncertainty": "局部地面连续可见；完整左侧入口跨出本块，未验证与相邻正式图块连通。"
+    },
+    {
+      "id": "R03",
+      "topic": "右小摊偏位造成通行空间高估",
+      "priority": "high",
+      "candidateRegion": [
+        3640,
+        2480,
+        4096,
+        3400
+      ],
+      "authoritativeApproxRegion": [
+        3280,
+        2240,
+        4096,
+        3680
+      ],
+      "candidateLandmarks": {
+        "frontPostBodyXRange": [
+          3700,
+          3830
+        ],
+        "frontPostFootYRange": [
+          3040,
+          3160
+        ],
+        "leadingCapAndRimRegion": [
+          3660,
+          2680,
+          3910,
+          2900
+        ]
+      },
+      "authoritativeLandmarksApprox": {
+        "frontSupportXRange": [
+          3400,
+          3580
+        ],
+        "frontSupportFootYRange": [
+          3380,
+          3600
+        ],
+        "leadingRimTipRegion": [
+          3280,
+          2680,
+          3480,
+          2960
+        ]
+      },
+      "observation": "候选小摊前柱/前角比 guide 更靠右，向下占地也更短。两个物体是同一侧小摊的对应轮廓，不是一次新的布局选择。",
+      "displacementEstimate": {
+        "frontSupportRightwardImagePixels": [
+          160,
+          320
+        ],
+        "footEndsEarlierVerticallyImagePixels": [
+          240,
+          480
+        ],
+        "interpretation": "宽范围反映低清guide与台面/支柱对应点差异；不把柱帽和前沿突出端混作同一点。"
+      },
+      "risk": "现有候选扩大了中央通道右边和转入暖色地面的可见余量；如果按布局恢复，摊前需要避让的空间将增加。不能因此宣称该处实际碰撞已经变窄或不可通过。",
+      "uncertainty": "右侧摊体被图块边缘裁掉，右边完整落地轮廓及邻块连接均未知；本报告只说当前已生成块与guide不一致。"
+    },
+    {
+      "id": "R04",
+      "topic": "摊间横向空隙的屏幕观察",
+      "priority": "high_for_misinterpretation",
+      "candidateRegion": [
+        1080,
+        2800,
+        3840,
+        3040
+      ],
+      "screenSample": {
+        "imageYApprox": 2880,
+        "currentVisibleGapXApprox": [
+          1240,
+          3680
+        ],
+        "authoritativeVisibleGapXApprox": [
+          1280,
+          3400
+        ],
+        "sampleEndpointUncertaintyPixels": 120,
+        "meaning": "只比较这个横向屏幕切片里两摊可见轮廓之间的空隙；不是净通行宽度、最窄点或路径垂线。"
+      },
+      "observation": "当前图中此切片的右边物体较guide靠右，空隙显示更宽。",
+      "risk": "容量计算若采用这个外观间距，会把布局漂移贡献的像素也计为道路；需由实际导航/碰撞和角色尺寸另行确认。",
+      "uncertainty": "同一屏幕y可穿过立面和抬高的台面，不一定对应同一地面深度。不得从该样本外推整条路的最窄宽度。"
+    },
+    {
+      "id": "R05",
+      "topic": "主鱼摊与左下摊的不可走占地辨识",
+      "priority": "high",
+      "candidateRegions": [
+        {
+          "label": "主鱼摊完整可见投影包围范围",
+          "box": [
+            280,
+            0,
+            3860,
+            2560
+          ]
+        },
+        {
+          "label": "左下鱼摊局部投影包围范围",
+          "box": [
+            0,
+            2240,
+            1820,
+            4096
+          ]
+        }
+      ],
+      "observation": "木框、鱼货、立柱和横梁构成明确设施。台面下暗洞和台腿之间可见石地属于遮挡复杂区，不能自动作为普通宽路使用。",
+      "risk": "包围矩形含大量外部空地，不能整体填实为障碍；反之也不能只扣除柱脚而默认穿台底。需要设施的实际落地占地定义。",
+      "uncertainty": "这里只标出视觉设施定位范围，不生成碰撞面或宣布它们在引擎中不可走。左下摊超出左/下边界，完整占地未知。"
+    },
+    {
+      "id": "R06",
+      "topic": "建筑/棚柱与附属家具的占地边界",
+      "priority": "medium",
+      "candidateRegions": [
+        {
+          "label": "左上角棚柱/基座局部",
+          "box": [
+            0,
+            0,
+            400,
+            340
+          ]
+        },
+        {
+          "label": "右上角建筑柱/桌凳局部",
+          "box": [
+            3480,
+            0,
+            4096,
+            300
+          ]
+        },
+        {
+          "label": "下缘立柱/栏杆局部",
+          "box": [
+            2640,
+            3680,
+            3120,
+            4096
+          ]
+        }
+      ],
+      "observation": "本块只截到若干柱脚、家具和下缘栏柱，没有呈现一座完整建筑的围合地面。全总览用于确认该处位于鱼市棚屋前方，不能当作未生成建筑的成图证据。",
+      "risk": "这些明确物体所在位置不能无条件计入空地；完整建筑是否可进入、檐下可否走以及墙基轮廓均未验证。不得从屋顶/檐口投影或总览推定完整不可走区域。",
+      "uncertainty": "所有这些局部都被图边截断；±120px 定位窗口不是建筑占地。"
+    },
+    {
+      "id": "R07",
+      "topic": "右下灰石到暖色铺地的过渡",
+      "priority": "medium",
+      "candidateRegion": [
+        2520,
+        3160,
+        4096,
+        4096
+      ],
+      "observation": "灰石与暖色长条石地面相接，主要表现为材质和光照变化，中央/右侧没有画出明显贯穿的实体墙。下缘立柱仍是局部设施。",
+      "risk": "材质边界不应直接编码成障碍，也不应自动确认两侧同高可通行。此块边缘之外的码头/栏杆/水边位置与实际连接未检查。",
+      "uncertainty": "未见足以确认落差的完整结构证据；本次不推断高度或坡度。"
+    },
+    {
+      "id": "R08",
+      "topic": "鱼摊地面风格与辨识",
+      "priority": "visual_only",
+      "candidateRegion": [
+        0,
+        2080,
+        4096,
+        4096
+      ],
+      "observation": "原生 p31/p32/p34/p43/p44 可见重复细菱纹、较亮金白缝和局部强纹理；右小摊蓝鱼仍是圆亮团块。这些延续已有风格漂移。",
+      "risk": "纹理和亮缝可能降低玩家对真实物体边界的辨识，但不能据此判定导航面断裂、路被阻断或碰撞存在。",
+      "uncertainty": "本次未进行角色遮挡、移动或可读性实测。"
+    },
+    {
+      "id": "R09",
+      "topic": "既知木梁断口与容量问题分开",
+      "priority": "visual_only",
+      "candidateRegion": [
+        2032,
+        2032,
+        2132,
+        2212
+      ],
+      "observation": "既有 junction_r2_c2 原生QA仍显示横梁/暗内壁在核心交界产生阶差和色块突变。当前图块哈希与旧视觉检查一致。",
+      "risk": "这是明确视觉连续性问题。断口画在摊体立面/内部阴影处，不能直接宣称它形成地面可走缺口、实体阻挡、碰撞漏洞或吞吐瓶颈。",
+      "uncertainty": "没有碰撞数据、导航网或运行时移动测试，故碰撞影响未知。"
+    }
+  ],
+  "limitations": [
+    "范围仅限已存在的 r06_c12 当前4K候选；不对未生成区域的成图质量、建筑占地或道路连通作推测。",
+    "没有新的 image_gen 调用，没有坐标生产、导航面绘制、障碍掩膜、世界单位换算或容量验证。",
+    "图块外接边、正式邻块连接、玩家碰撞半径、角色精灵遮挡、交互站位及人群动态均未验证。",
+    "报告没有给出可走面积百分比、容纳人数、并排人数、吞吐量、路径最窄值或任何5000验证结论。",
+    "原图、来源、selection、progress及旧QA均保持不变；唯一新增文件为本报告。"
+  ],
+  "requiredBeforeAnyCapacityConclusion": [
+    "经确认的设施落地占地与建筑可进入规则",
+    "与角色碰撞尺寸一致的运行时导航/碰撞证据",
+    "右小摊布局偏差处理后的同一版本图像与数据",
+    "跨块出口连通与实际拥堵/交互站位测试"
+  ],
+  "navigationValidated": false,
+  "capacityValidated": false,
+  "formalAccepted": false,
+  "evidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r06_c12.candidate.png",
+      "sha256": "997d0f2d213d60610c5e92f3314da18efbc93131419ea7dd2167c6c69207ae56",
+      "pixels": [
+        4096,
+        4096
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/r06_c12.preview-only-1024.png",
+      "sha256": "34113ee8d50bc7dffbfc0e83b38664bda3966016856518edde9120d57d03816e",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/authoritative-layout-only-1024.png",
+      "sha256": "bd56ced715ea47d21ab335e251428fbb22bbc37aae19680919a1ecf96f9fdf6b",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/cores/p31.native-1to1.png",
+      "sha256": "0adbb5f279d400df8b14f6dfa0b3cbd14f6c9eb4c25d4f7edb77698e196ad41f",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/cores/p32.native-1to1.png",
+      "sha256": "12e8d00864cc9e640302a05c1d3c9220f69d4dc259f0f859788357d4c652f8ba",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/cores/p34.native-1to1.png",
+      "sha256": "c1cbb975539911768597858534cf1f9eeb10b7fdf2b854c0130236ad137a579d",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/cores/p43.native-1to1.png",
+      "sha256": "9b8addbbe538f30947bcb50b67013a62dd9dafb94c874975d9ea5cac0be03a7b",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/cores/p44.native-1to1.png",
+      "sha256": "4db312c8070052b7a6e3983d7270629a0d1aee25be846768ef1cb6df1f0a4c4d",
+      "pixels": [
+        1024,
+        1024
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/junction_r2_c2.native-1to1.png",
+      "sha256": "f4d0e2b1e44e7095c45b0fe4c99340b47e8341cc78a082cb36be6deaa168e760",
+      "pixels": [
+        512,
+        512
+      ],
+      "viewed": true,
+      "role": "已视检的现有图片"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r06_c12/horizontal-junction-review.json",
+      "sha256": "ce6c4f044ba162dd8eb68dbef9f7f1a607bcfdeba1e73d0dc89058532e551342",
+      "viewed": false,
+      "role": "只读文本来源"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/records/r06_c12.selection.json",
+      "sha256": "247851595ba0c1f704e2062068a69b2dae2bd4cd7aa585e0ab7c08366c53e0d4",
+      "viewed": false,
+      "role": "只读文本来源"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/donghai-natural-stone-clear-routes-v10.png",
+      "sha256": "cf450f0afe784b4700f2dfc19b3af35867765403e8f1d81741e78b3116583d42",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewed": true,
+      "role": "全总览只用于鱼市场位置确认，不作为未生成区域成图证据"
+    }
+  ]
+}

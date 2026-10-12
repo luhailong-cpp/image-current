@@ -1,0 +1,94 @@
+{
+  "reviewedAtUtc": "2026-10-03T17:38:48.809240+00:00",
+  "file": "generation/cast/E/01-v1.png",
+  "status": "candidate_needs_correction_do_not_expand_sequence_yet",
+  "actualInspection": "Generated return and saved PNG both visually inspected with view_image; read-only alpha measurements; no pixel edits",
+  "observedPhase": "聚势初态；近右手把莲灯抬到身前、左手玉瓶靠胸腹，姿态安静集中，无释放光效。",
+  "observations": [
+    "右灯左瓶持手可读，两个道具未互换；无额外法杖/葫芦。",
+    "鞋尖总体朝屏幕右方，比attack后脚更接近同轴，但后脚仍带朝观者透视，待方向核验。",
+    "完整长波浪发和粉米白金边袍保留，灯体光限定在灯内。"
+  ],
+  "issues": [
+    "大莲花和长穗被画在可见近侧，违反E向解剖左花远隐要求。",
+    "脸/身体水平位置偏左于既有run E标定，整体动作相机/根点未统一；不可用逐帧移图掩盖。",
+    "双脚最低不透明像素低于虚拟地面1164，尤其画面左侧鞋；需局部姿态和根点诊断，不能以最低alpha贴地。",
+    "仅首帧，不具备整套16帧连续动作验收条件。"
+  ],
+  "pixelMeasurements": {
+    "native": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaGt128BoundsExclusive": [
+      213,
+      77,
+      1053,
+      1187
+    ],
+    "shoeROIs": {
+      "screenLeftShoe": {
+        "roi": [
+          450,
+          1090,
+          640,
+          1220
+        ],
+        "alphaThreshold": 128,
+        "boundsExclusive": [
+          471,
+          1090,
+          622,
+          1187
+        ],
+        "lowestOpaqueY": 1186,
+        "deltaFromVirtualFloor1164": 22,
+        "lowestRowXExtent": [
+          551,
+          583
+        ]
+      },
+      "screenRightShoe": {
+        "roi": [
+          690,
+          1090,
+          900,
+          1220
+        ],
+        "alphaThreshold": 128,
+        "boundsExclusive": [
+          713,
+          1090,
+          874,
+          1177
+        ],
+        "lowestOpaqueY": 1176,
+        "deltaFromVirtualFloor1164": 12,
+        "lowestRowXExtent": [
+          809,
+          843
+        ]
+      }
+    },
+    "limitation": "ROI alpha extrema describe visible shoe regions, not anatomical contact labels or approval; no force-aligning per-frame pixels"
+  },
+  "sequenceIntent": {
+    "action": "cast",
+    "direction": "E",
+    "frame": 1,
+    "plannedFrames": 16,
+    "plannedCycleMs": 720,
+    "timingChangedForRunFeedback": false,
+    "remainingFramesGenerated": false
+  },
+  "actualModel": null,
+  "actualQuality": null,
+  "clientAcceptance": "not_performed",
+  "dynamicSequenceAcceptance": "not_possible_single_keyframe",
+  "sourcePixelsModified": false
+}

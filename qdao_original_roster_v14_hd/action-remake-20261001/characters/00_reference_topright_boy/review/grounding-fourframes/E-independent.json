@@ -1,0 +1,396 @@
+{
+  "atUtc": "2026-10-04T13:35:39.559006+00:00",
+  "reviewer": "independent_child_finish_sw",
+  "direction": "E",
+  "status": "static_reviewed_no_confirmed_hard_defect",
+  "authority": "最新方案为沿跑向前2、中4、后2，各脚8帧；覆盖旧仅连续4帧要求。",
+  "selection": {
+    "path": "generation/run/E/selection-middle4-side2-20261004.json",
+    "sha256": "79b3dfc23d1332422086235f01f1bc6771d50a0d99b299a9df69ae1bbcef6260"
+  },
+  "timing": {
+    "frameDurationMs": 75,
+    "cycleDurationMs": 1200,
+    "verifiedByThisReview": "候选静态审阅的目标时间；未改时长或运行播放器"
+  },
+  "methods": [
+    "实际查看16帧完整画布联系表和固定下半身联系表。",
+    "实际查看当前槽01、03、08、09、12、13、14、16的完整1254原生图；均从当前选表解析路径，不以源文件号代替槽号。",
+    "核对所有16实际源SHA、RGBA与1254尺寸；相邻相位综合膝踝、鞋长轴、手臂与遮挡判断。",
+    "不使用alpha最低点判断地面，不将静态结论称为动态通过。"
+  ],
+  "contactPattern": [
+    {
+      "foot": "right",
+      "front": [
+        1,
+        2
+      ],
+      "middle": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "rear": [
+        7,
+        8
+      ]
+    },
+    {
+      "foot": "left",
+      "front": [
+        9,
+        10
+      ],
+      "middle": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "rear": [
+        15,
+        16
+      ]
+    }
+  ],
+  "conclusions": [
+    "静态可读为每只脚前2、中4、后2；中段各4张具有不同支撑/膝踝或摆腿姿态，不是单图重复。",
+    "01/02和09/10缓冲差异较温和，但膝踝形状与支撑鞋后收可辨，没有明确不足到需要追加新稿的硬伤。",
+    "03右空臂身侧过渡与12→13→14逐渐后摆已改善前摆跳幅/持久问题，左手葫芦保持。",
+    "08→09右后推转左前落、16→01左后推转右前落的角色分工可辨；未看到段内反腿、额外手脚或持物换侧。",
+    "当前16槽未确认脚掌外翻、鞋轴反跑向或明显头脸比例跳档。"
+  ],
+  "confirmedHardDefects": [],
+  "requiredNewEdits": [],
+  "limitations": [
+    "中/后分区是连续空间带，06/14接近中段后边界，不可把人工坐标当作严格物理测量。",
+    "透明图没有已标定世界地面，鞋掌接触形状不证明足底固定或无滑步。",
+    "02/10缓冲幅度、08→09/16→01速度连续性、12→14摆臂节奏仍需1200ms完整循环/客户端验证。",
+    "未观看正常速动态，不宣称动态通过。"
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "source": "generation/run/E/01-v5.png",
+      "sourceSha256": "0335d08d84cd367c85a43fb72dd69980a45befd970d9ab1de1a1758a315b4dc6",
+      "supportFoot": "right",
+      "position": "front",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "右前侧落地；支撑鞋在髋前，右空臂后摆。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 2,
+      "source": "generation/run/E/02-v1.png",
+      "sourceSha256": "953d6eb9cc82e9ce0f2a7609e67eaa6ee39b0d1650a7f0ea1c2781b3abe4df77",
+      "supportFoot": "right",
+      "position": "front",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "右前侧缓冲；较01的膝踝屈曲/鞋后收可辨，缓冲幅度温和。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 3,
+      "source": "generation/run/E/middle4-03-v3.png",
+      "sourceSha256": "4548e7b6ccc7315f6ef38ca4135290dd4b867ef54a44da8222d4d08859462697",
+      "supportFoot": "right",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "右中段第一张；支撑鞋回到髋下附近，右空臂已下放至身侧，未突跳到最大前摆。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 4,
+      "source": "generation/run/E/03-v1.png",
+      "sourceSha256": "c9a743e8e8b68eaee439e039820c661a02dd67cbd3fd90dc84857b253a389499",
+      "supportFoot": "right",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "右中段第二张；膝屈曲承重，摆动腿前送，右空臂继续前摆。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 5,
+      "source": "generation/run/E/middle4-05-v1.png",
+      "sourceSha256": "f5f259e407d5e8327c820cc9e5a4cb562c886eb1900235bea26d2bfe23eb3956",
+      "supportFoot": "right",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "右中段第三张；支撑脚向中段后部过渡，宽掌向下，膝踝形状不同。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 6,
+      "source": "generation/run/E/middle4-06-v1.png",
+      "sourceSha256": "03b415fc4ce414183a8ee83d4b0cfe722ec3962ef2285467b7764d3d12ee7045",
+      "supportFoot": "right",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "右中段第四张；位于中后边界，支撑膝踝连接自然，摆动脚继续前送。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 7,
+      "source": "generation/run/E/middle4-07-v1.png",
+      "sourceSha256": "9bd7639457514a060e45625ab7c3d6828f1920d4e15fb0f66e07d235d53bcb44",
+      "supportFoot": "right",
+      "position": "rear",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "右后侧第一张；后伸支撑脚前掌接触形状明确，后跟开始提起。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 8,
+      "source": "generation/run/E/04-v4.png",
+      "sourceSha256": "61c7ce44361db54d667ebf1ce0c1ddeff7dd095352a3d5b309a88a0396f3a42f",
+      "supportFoot": "right",
+      "position": "rear",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "右后侧第二张；后腿伸展，宽前掌接触，左脚前伸准备换足。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 9,
+      "source": "generation/run/E/09-v4.png",
+      "sourceSha256": "7e51047c8ca0ad07087dbfeb0834cad4389a3a80d6d74f5eb5c52c388625bb01",
+      "supportFoot": "left",
+      "position": "front",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "左前侧落地；支撑脚在髋前，右空臂前摆，与前一帧分工相接。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 10,
+      "source": "generation/run/E/10-v1.png",
+      "sourceSha256": "8ca326eabe532d21811444e76bf4177c661707c74a4e4157df0d2dfd87468d43",
+      "supportFoot": "left",
+      "position": "front",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "左前侧缓冲；支撑膝踝屈曲与脚后收可辨，较09变化温和。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 11,
+      "source": "generation/run/E/middle4-11-v2.png",
+      "sourceSha256": "a0ba12bef251cd0f741f6a78ebcedfeca7f962943c0f3013c1dabbecb55133fb",
+      "supportFoot": "left",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "左中段第一张；左鞋向髋下收回，右空臂前摆开始回收。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 12,
+      "source": "generation/run/E/middle4-12-v2.png",
+      "sourceSha256": "a0da59eaffa38e131fa93f2dd463498e5fff271d2e512db373caee167083924c",
+      "supportFoot": "left",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "左中段第二张；右空臂降到身体旁，支撑脚保持中段，未继续滞留最大前摆。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 13,
+      "source": "generation/run/E/middle4-13-v4.png",
+      "sourceSha256": "da6880534d25ddceb31256824f372d3bd5f8db7e95e512215cbeec057ab06992",
+      "supportFoot": "left",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "左中段第三张；支撑脚向后过渡，右空臂初后摆；原生头身尺度与12近似。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 14,
+      "source": "generation/run/E/middle4-14-v3.png",
+      "sourceSha256": "0c29a015b6d6ef3c4b08e7d8c1f07d771b413db42c428d73d349cd910fb046a7",
+      "supportFoot": "left",
+      "position": "middle",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "左中段第四张；中段后部，右空臂进一步后摆，腿与鞋轴保持朝E。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 15,
+      "source": "generation/run/E/middle4-15-v1.png",
+      "sourceSha256": "0ee075219f2440962754ce28273f347ded5860a7c01257425e8089fc5bdef245",
+      "supportFoot": "left",
+      "position": "rear",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_canvas_and_lower_contact",
+      "observation": "左后侧第一张；支撑腿后伸、鞋掌仍有接触形状，右空臂后摆。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false
+    },
+    {
+      "frame": 16,
+      "source": "generation/run/E/axis-16-v1.png",
+      "sourceSha256": "b4d75db3fc6dd620b2bc9771436bf4b83b3763185468db8878ab1b0d0ac9730a",
+      "supportFoot": "left",
+      "position": "rear",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "inspection": "full_native_plus_full_canvas_and_lower_contact",
+      "observation": "两鞋偏航回到E向运动平面，减少朝镜头的短正面鞋形；右悬空脚保持将落地的俯仰，左脚后侧支撑，膝踝与手持侧保留。",
+      "staticRecommendation": "retain_current_candidate",
+      "dynamicVerified": false,
+      "staticObservation": "两鞋偏航回到E向运动平面，减少朝镜头的短正面鞋形；右悬空脚保持将落地的俯仰，左脚后侧支撑，膝踝与手持侧保留。",
+      "nativePixelSha256": "53344aa0150ba955fab5767b5143bfa475f4ae3afc0b512aa5c353794eda819c",
+      "generationRecordSha256": "b5ca96634e3c6a97ac937a97e9ce136aec5ddfc74e6b436ebf938f6076699ef0",
+      "revisionReviewer": "/root/axis_side_review",
+      "revisionEvidence": "review/axis-review-20261004/side-repair-review.json"
+    }
+  ],
+  "qa": [
+    {
+      "path": "review/grounding-fourframes/E-middle4-contact.jpg",
+      "sha256": "2d0108cd81399f7330dd3e5c6cf1f61d771a21731016adf9fc9b93a1b2b3b0e4"
+    },
+    {
+      "path": "review/grounding-fourframes/E-middle4-lower.jpg",
+      "sha256": "1b1ae5a2e5a2ffece7aa9e1f7b3830c88afb5a39aa502b97bb1a260d4693dd8c"
+    }
+  ],
+  "priorRevisions": [
+    {
+      "reportSha256": "db3ae54b2edc383b10e7e5c6d5043cda877577f972d5f5618e5ba353cdec1e2f",
+      "selection": {
+        "path": "generation/run/E/selection-middle4-side2-20261004.json",
+        "sha256": "df29c35d51a4e08c30bc76000d3535b43a5da4fbe3e8a98a9d5697efe99fc56e"
+      },
+      "replacedFrame": {
+        "frame": 16,
+        "source": "generation/run/E/12-v3.png",
+        "sourceSha256": "7828cb465513b69e5ca4e0539fbecf2b80a7ddf59708d27f20911ddbc7a78cd2",
+        "supportFoot": "left",
+        "position": "rear",
+        "nativeSize": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "inspection": "full_native_plus_full_canvas_and_lower_contact",
+        "observation": "左后侧第二张；后侧支撑前掌与抬起右脚可辨，准备回到01右脚前侧。",
+        "staticRecommendation": "retain_current_candidate",
+        "dynamicVerified": false
+      },
+      "reason": "shoe heading continuity follow-up"
+    }
+  ],
+  "latestRevision": {
+    "atUtc": "2026-10-05T02:03:16.538249+00:00",
+    "review": "review/axis-review-20261004/side-repair-review.json",
+    "reviewSha256": "9fbaa814099e88135a702a5e50f3649e4bdc00a30a62e96b66dab36666c98c44",
+    "frame": 16,
+    "sourceSha256": "b4d75db3fc6dd620b2bc9771436bf4b83b3763185468db8878ab1b0d0ac9730a",
+    "dynamicVerified": false
+  },
+  "timingRebindings": [
+    {
+      "atUtc": "2026-10-05T08:44:17.829062+00:00",
+      "selectionBeforeSha256": "060c2c168ef91573e7d773f9c3da00dcbd4e78c8ce9688f871f69a16380730db",
+      "selectionAfterSha256": "79b3dfc23d1332422086235f01f1bc6771d50a0d99b299a9df69ae1bbcef6260",
+      "oldFrameMs": 75,
+      "newFrameMs": 60,
+      "sourceImagesUnchanged": true,
+      "newVisualReviewClaimed": false
+    }
+  ],
+  "currentPlaybackTiming": {
+    "frameMs": 60,
+    "cycleMs": 960,
+    "visualPlaybackVerified": false
+  }
+}

@@ -1,0 +1,795 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T04:49:17.731022+00:00",
+  "purpose": "Concrete handoff queue only; original zone owners retain image/progress writes and all coordinates.",
+  "currentModelPolicy": "Free/existing included 2.5 preferred; built-in 2.0 allowed when unavailable. This source-review queue performs no generation.",
+  "completeCandidateReferencesFirst": [
+    {
+      "priority": 1,
+      "zone": "northwest",
+      "coordinate": "r06_c04",
+      "action": "Owner reconcile progress/inventory/source counts with SHA-bound current internal QA; already source-verified, no repeat drawing implied.",
+      "evidence": "northwest-source-verification-v2.json#issues/NW-STATE-001"
+    },
+    {
+      "priority": 2,
+      "zone": "northwest",
+      "coordinate": "r02_c02",
+      "action": "Owner or existing visual-review task resolves pending internal QA/adoption of saved complete candidate; source structure is verified.",
+      "evidence": "northwest-source-verification-v2.json#pendingQaCoordinates"
+    },
+    {
+      "priority": 3,
+      "zone": "southwest",
+      "coordinate": "r11_c03",
+      "action": "Reuse current candidate and referenced owner QA; original visual reviewer resolves pending internal QA. No replacement or stitching by this source review.",
+      "evidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/progress.json#internalQaPending"
+    },
+    {
+      "priority": 4,
+      "zone": "southwest",
+      "coordinate": "r11_c07",
+      "action": "Reuse current candidate and referenced owner QA; original visual reviewer resolves pending internal QA.",
+      "evidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/progress.json#internalQaPending"
+    }
+  ],
+  "partialReconciliationBeforeAnyNewImage": [
+    {
+      "zone": "northwest",
+      "coordinate": "r02_c05",
+      "selectionAuthorityConfirmed": false,
+      "conditionalAbsentVersionPaths": [
+        {
+          "slot": "s01_s01",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s01_s01_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s01_s01_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            16269,
+            3981,
+            17523,
+            5235
+          ],
+          "globalCoreBox": [
+            16384,
+            4096,
+            17408,
+            5120
+          ]
+        },
+        {
+          "slot": "s01_s02",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s01_s02_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s01_s02_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            17293,
+            3981,
+            18547,
+            5235
+          ],
+          "globalCoreBox": [
+            17408,
+            4096,
+            18432,
+            5120
+          ]
+        },
+        {
+          "slot": "s01_s03",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s01_s03_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s01_s03_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            18317,
+            3981,
+            19571,
+            5235
+          ],
+          "globalCoreBox": [
+            18432,
+            4096,
+            19456,
+            5120
+          ]
+        },
+        {
+          "slot": "s01_s04",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s01_s04_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s01_s04_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            19341,
+            3981,
+            20595,
+            5235
+          ],
+          "globalCoreBox": [
+            19456,
+            4096,
+            20480,
+            5120
+          ]
+        },
+        {
+          "slot": "s02_s01",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s02_s01_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s02_s01_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            16269,
+            5005,
+            17523,
+            6259
+          ],
+          "globalCoreBox": [
+            16384,
+            5120,
+            17408,
+            6144
+          ]
+        },
+        {
+          "slot": "s02_s02",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s02_s02_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s02_s02_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            17293,
+            5005,
+            18547,
+            6259
+          ],
+          "globalCoreBox": [
+            17408,
+            5120,
+            18432,
+            6144
+          ]
+        },
+        {
+          "slot": "s02_s03",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s02_s03_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s02_s03_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            18317,
+            5005,
+            19571,
+            6259
+          ],
+          "globalCoreBox": [
+            18432,
+            5120,
+            19456,
+            6144
+          ]
+        },
+        {
+          "slot": "s02_s04",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s02_s04_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s02_s04_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            19341,
+            5005,
+            20595,
+            6259
+          ],
+          "globalCoreBox": [
+            19456,
+            5120,
+            20480,
+            6144
+          ]
+        },
+        {
+          "slot": "s03_s03",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s03_s03_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s03_s03_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            18317,
+            6029,
+            19571,
+            7283
+          ],
+          "globalCoreBox": [
+            18432,
+            6144,
+            19456,
+            7168
+          ]
+        },
+        {
+          "slot": "s03_s04",
+          "coordinate": "r02_c05",
+          "expectedCurrentSource": {
+            "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r02_c05\\native\\r02_c05_s03_s04_v01.png",
+            "repositoryRelativePath": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/work-r02_c05/native/r02_c05_s03_s04_v01.png",
+            "exists": false,
+            "referenceField": "work-r02_c05/production-v5.py:name/native"
+          },
+          "globalNativeBox": [
+            19341,
+            6029,
+            20595,
+            7283
+          ],
+          "globalCoreBox": [
+            19456,
+            6144,
+            20480,
+            7168
+          ]
+        }
+      ],
+      "definitiveMissingSlotCount": null
+    },
+    {
+      "zone": "southwest",
+      "coordinate": "r08_c05",
+      "ledgerNativeSlots": 15,
+      "declaredSlotDeficit": 1,
+      "missingSlotCoordinate": null,
+      "action": "Original art_qa owner confirms slot-to-source map/record adoption before any new production."
+    },
+    {
+      "zone": "southwest",
+      "coordinate": "r11_c05",
+      "ledgerNativeSlots": 15,
+      "declaredSlotDeficit": 1,
+      "missingSlotCoordinate": null,
+      "action": "Original root owner confirms slot-to-source map/record adoption before any new production."
+    }
+  ],
+  "adjacentMissingCoverageGroups": [
+    {
+      "zone": "northwest",
+      "coordinateCount": 6,
+      "connectedByOrthogonalNeighbors": true,
+      "coordinates": [
+        "r02_c05",
+        "r03_c05",
+        "r04_c05",
+        "r02_c06",
+        "r03_c06",
+        "r04_c06"
+      ],
+      "existingCompleteAnchors": [
+        "r02_c04",
+        "r03_c04",
+        "r04_c04"
+      ],
+      "items": [
+        {
+          "order": 1,
+          "coordinate": "r02_c05",
+          "globalCoreBox": [
+            16384,
+            4096,
+            20480,
+            8192
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r03_c05",
+            "r02_c06",
+            "r02_c04"
+          ],
+          "action": "Original sol_e3 owner confirm active selection entry first; preserve six verified saved sources and reconcile the saved s03_s02 sidecar with source-index. Ten absent expected paths below are conditional, not a final production order.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count.",
+          "workerAllocationRetained": "sol_e3",
+          "selectionAuthority": "inferred_only",
+          "confirmedSavedSourcesUnderInferredRule": 6,
+          "absentExpectedPathsUnderInferredRule": 10,
+          "conditionalSlotOrder": [
+            "s03_s03",
+            "s03_s04",
+            "s02_s01",
+            "s02_s02",
+            "s02_s03",
+            "s02_s04",
+            "s01_s01",
+            "s01_s02",
+            "s01_s03",
+            "s01_s04"
+          ]
+        },
+        {
+          "order": 2,
+          "coordinate": "r03_c05",
+          "globalCoreBox": [
+            16384,
+            8192,
+            20480,
+            12288
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r02_c05",
+            "r04_c05",
+            "r03_c06",
+            "r03_c04"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count."
+        },
+        {
+          "order": 3,
+          "coordinate": "r04_c05",
+          "globalCoreBox": [
+            16384,
+            12288,
+            20480,
+            16384
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r03_c05",
+            "r04_c06",
+            "r04_c04"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count."
+        },
+        {
+          "order": 4,
+          "coordinate": "r02_c06",
+          "globalCoreBox": [
+            20480,
+            4096,
+            24576,
+            8192
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r02_c05",
+            "r03_c06"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count."
+        },
+        {
+          "order": 5,
+          "coordinate": "r03_c06",
+          "globalCoreBox": [
+            20480,
+            8192,
+            24576,
+            12288
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r03_c05",
+            "r02_c06",
+            "r04_c06"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count."
+        },
+        {
+          "order": 6,
+          "coordinate": "r04_c06",
+          "globalCoreBox": [
+            20480,
+            12288,
+            24576,
+            16384
+          ],
+          "owner": "existing northwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r04_c05",
+            "r03_c06"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "currentSelectedSlotCount": null,
+          "definitiveMissingSlotCoordinates": null,
+          "stateBasis": "Current inventory says no complete selected candidate; missing slot total cannot be inferred from contributing source count."
+        }
+      ],
+      "reservationCreated": false
+    },
+    {
+      "zone": "southwest",
+      "coordinateCount": 6,
+      "connectedByOrthogonalNeighbors": true,
+      "coordinates": [
+        "r11_c05",
+        "r11_c04",
+        "r12_c05",
+        "r12_c04",
+        "r12_c03",
+        "r12_c06"
+      ],
+      "existingCompleteAnchors": [
+        "r10_c04",
+        "r10_c05",
+        "r11_c03",
+        "r11_c06",
+        "r11_c07"
+      ],
+      "items": [
+        {
+          "order": 1,
+          "coordinate": "r11_c05",
+          "globalCoreBox": [
+            16384,
+            40960,
+            20480,
+            45056
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r11_c04",
+            "r12_c05",
+            "r10_c05",
+            "r11_c06"
+          ],
+          "action": "Original owner reconcile current ledger/selection against saved breakpoint before drawing. Ledger has 15 slots, but does not identify the one missing slot. Do not promote unadopted assembly.",
+          "ledgerNativeSlots": 15,
+          "declaredSlotDeficit": 1,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": null
+        },
+        {
+          "order": 2,
+          "coordinate": "r11_c04",
+          "globalCoreBox": [
+            12288,
+            40960,
+            16384,
+            45056
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r11_c05",
+            "r12_c04",
+            "r10_c04",
+            "r11_c03"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "ledgerNativeSlots": 0,
+          "declaredSlotDeficit": 16,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": [
+            "p01_01",
+            "p01_02",
+            "p01_03",
+            "p01_04",
+            "p02_01",
+            "p02_02",
+            "p02_03",
+            "p02_04",
+            "p03_01",
+            "p03_02",
+            "p03_03",
+            "p03_04",
+            "p04_01",
+            "p04_02",
+            "p04_03",
+            "p04_04"
+          ],
+          "absenceMeaning": "No selected source in current ledger; historical disk availability was not searched."
+        },
+        {
+          "order": 3,
+          "coordinate": "r12_c05",
+          "globalCoreBox": [
+            16384,
+            45056,
+            20480,
+            49152
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r11_c05",
+            "r12_c04",
+            "r12_c06"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "ledgerNativeSlots": 0,
+          "declaredSlotDeficit": 16,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": [
+            "p01_01",
+            "p01_02",
+            "p01_03",
+            "p01_04",
+            "p02_01",
+            "p02_02",
+            "p02_03",
+            "p02_04",
+            "p03_01",
+            "p03_02",
+            "p03_03",
+            "p03_04",
+            "p04_01",
+            "p04_02",
+            "p04_03",
+            "p04_04"
+          ],
+          "absenceMeaning": "No selected source in current ledger; historical disk availability was not searched."
+        },
+        {
+          "order": 4,
+          "coordinate": "r12_c04",
+          "globalCoreBox": [
+            12288,
+            45056,
+            16384,
+            49152
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r11_c04",
+            "r12_c05",
+            "r12_c03"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "ledgerNativeSlots": 0,
+          "declaredSlotDeficit": 16,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": [
+            "p01_01",
+            "p01_02",
+            "p01_03",
+            "p01_04",
+            "p02_01",
+            "p02_02",
+            "p02_03",
+            "p02_04",
+            "p03_01",
+            "p03_02",
+            "p03_03",
+            "p03_04",
+            "p04_01",
+            "p04_02",
+            "p04_03",
+            "p04_04"
+          ],
+          "absenceMeaning": "No selected source in current ledger; historical disk availability was not searched."
+        },
+        {
+          "order": 5,
+          "coordinate": "r12_c03",
+          "globalCoreBox": [
+            8192,
+            45056,
+            12288,
+            49152
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r12_c04",
+            "r11_c03"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "ledgerNativeSlots": 0,
+          "declaredSlotDeficit": 16,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": [
+            "p01_01",
+            "p01_02",
+            "p01_03",
+            "p01_04",
+            "p02_01",
+            "p02_02",
+            "p02_03",
+            "p02_04",
+            "p03_01",
+            "p03_02",
+            "p03_03",
+            "p03_04",
+            "p04_01",
+            "p04_02",
+            "p04_03",
+            "p04_04"
+          ],
+          "absenceMeaning": "No selected source in current ledger; historical disk availability was not searched."
+        },
+        {
+          "order": 6,
+          "coordinate": "r12_c06",
+          "globalCoreBox": [
+            20480,
+            45056,
+            24576,
+            49152
+          ],
+          "owner": "existing southwest owner",
+          "claimedByReview": false,
+          "adjacentCoordinates": [
+            "r12_c05",
+            "r11_c06"
+          ],
+          "action": "Original owner confirm current slot selection, reuse saved chosen sources, then complete only actual remaining slots.",
+          "ledgerNativeSlots": 0,
+          "declaredSlotDeficit": 16,
+          "slotCountEvidence": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json",
+          "definitiveMissingSlotCoordinates": [
+            "p01_01",
+            "p01_02",
+            "p01_03",
+            "p01_04",
+            "p02_01",
+            "p02_02",
+            "p02_03",
+            "p02_04",
+            "p03_01",
+            "p03_02",
+            "p03_03",
+            "p03_04",
+            "p04_01",
+            "p04_02",
+            "p04_03",
+            "p04_04"
+          ],
+          "absenceMeaning": "No selected source in current ledger; historical disk availability was not searched."
+        }
+      ],
+      "reservationCreated": false
+    }
+  ],
+  "allMissingCoverageCoordinates": {
+    "northwest": [
+      "r01_c01",
+      "r01_c02",
+      "r01_c03",
+      "r01_c04",
+      "r01_c05",
+      "r01_c06",
+      "r01_c07",
+      "r02_c01",
+      "r02_c05",
+      "r02_c06",
+      "r02_c07",
+      "r03_c01",
+      "r03_c05",
+      "r03_c06",
+      "r03_c07",
+      "r04_c01",
+      "r04_c05",
+      "r04_c06",
+      "r04_c07",
+      "r05_c01",
+      "r05_c05",
+      "r05_c06",
+      "r05_c07",
+      "r06_c01",
+      "r06_c02",
+      "r06_c03",
+      "r06_c05",
+      "r06_c06",
+      "r06_c07",
+      "r07_c01",
+      "r07_c02",
+      "r07_c03",
+      "r07_c04",
+      "r07_c05",
+      "r07_c06",
+      "r07_c07"
+    ],
+    "southwest": [
+      "r08_c01",
+      "r08_c02",
+      "r08_c03",
+      "r08_c04",
+      "r08_c05",
+      "r08_c07",
+      "r09_c01",
+      "r09_c02",
+      "r10_c01",
+      "r10_c02",
+      "r11_c01",
+      "r11_c02",
+      "r11_c04",
+      "r11_c05",
+      "r12_c01",
+      "r12_c02",
+      "r12_c03",
+      "r12_c04",
+      "r12_c05",
+      "r12_c06",
+      "r12_c07",
+      "r13_c01",
+      "r13_c02",
+      "r13_c03",
+      "r13_c04",
+      "r13_c05",
+      "r13_c06",
+      "r13_c07",
+      "r14_c01",
+      "r14_c02",
+      "r14_c03",
+      "r14_c04",
+      "r14_c05",
+      "r14_c06",
+      "r14_c07"
+    ]
+  },
+  "counting": {
+    "missingCompleteCandidateCoordinates": 71,
+    "northwestMissingCompleteCandidateCoordinates": 36,
+    "northwestDefinitiveRemainingNativeSlotCount": null,
+    "northwestOtherCoordinatesWithoutCurrentSelectedSourceManifest": 35,
+    "northwestConditionalAbsentPathsInActivePartial": 10,
+    "southwestMissingCompleteCandidateCoordinates": 35,
+    "southwestDeclaredMissingNativeCoreSlots": 530,
+    "southwestZeroSelectedSlotCoordinates": 33,
+    "southwestZeroSelectedCoreSlots": 528,
+    "southwestPartialSlotDeficitWithUnconfirmedLocation": 2,
+    "partialCoordinatesNeedingAuthoritativeSlotSelection": 3
+  },
+  "inputHashes": {
+    "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northwest/coordinate-inventory-current.json": "2cd858795df0e0d0885d8ad0f7982897c1d2c01935ccd046a0cdc1cf8bda5e87",
+    "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/southwest/current-tile-ledger.json": "cea21c55c5787acb006c8f6332cf062f170d149435b25f0e444ea480347a11d6",
+    "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/village-west/northwest-source-verification-v2.json": "f96fc068bc97bc3c16d4d083117b7c2eea6b45d7141681306600d8fefd1c4366"
+  },
+  "constraints": {
+    "noSharedRecordChanges": true,
+    "noCoordinatesReserved": true,
+    "noGenerationByReviewer": true,
+    "noPaidApi": true,
+    "reuseExistingArtAndQa": true,
+    "noHistoricalVersionRescan": true,
+    "reviewCompletionIsNotMapCompletion": true
+  }
+}

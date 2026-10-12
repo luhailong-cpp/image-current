@@ -1,0 +1,1920 @@
+{
+  "schemaVersion": 1,
+  "tile": "r10_c10",
+  "reviewedAtUtc": "2026-10-09T23:15:51.655301+00:00",
+  "reviewer": "layout_audit",
+  "sourceManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\manifest.json",
+  "sourceManifestSha256": "59b78f29b452a0833759ee63decf5e0871f2b934623c747e28273e9fb2cf27b8",
+  "selectedManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\selected-patches.json",
+  "selectedManifestSha256": "6b2556a7a1a4cbd001000df9d881dc08a9733d334b740f45a9c8ca909d460907",
+  "scope": "front two rows; then available p33 and lower floor seams requested by tile owner",
+  "reviewedSeams": 20,
+  "reviewedCrossings": 7,
+  "issues": [
+    {
+      "id": "G1",
+      "priority": "high",
+      "category": "structural_blocker",
+      "source": "native/p24-v1.png",
+      "sourceSha256": "470a71418100fd22a70e9bee6d7c38df42236e4a5f70b749431922ab36c7d51c",
+      "description": "native y=230 处出现水平矩形切线：篷布下的绿布、绳网方向与阴影一起跳接，位于正式核心内，不能仅靠颜色匹配解决。",
+      "primaryNativeLine": {
+        "y": 230,
+        "xRange": [
+          165,
+          430
+        ]
+      },
+      "suggestedRepairBoxNative": [
+        145,
+        195,
+        450,
+        420
+      ],
+      "suggestedContextBoxNative": [
+        70,
+        110,
+        580,
+        550
+      ],
+      "suggestedRepairBoxTile": [
+        3102,
+        1104,
+        3407,
+        1329
+      ],
+      "suggestedRepairBoxGlobal": [
+        39966,
+        37968,
+        40271,
+        38193
+      ],
+      "protect": "保持黄篷真实下缘、可解释的绳结连接和右侧主木柱。",
+      "relatedEvidence": [
+        "p14--p24",
+        "p23--p24",
+        "cross-r1-c3"
+      ],
+      "status": "reported_to_next_tile_setup; owner has submitted local AI edit; repaired output not yet reviewed"
+    },
+    {
+      "id": "C1",
+      "priority": "medium",
+      "category": "local_color_or_texture_adoption_edge",
+      "source": "processed/p11-joint-p11-p12-v1.png",
+      "sourceSha256": "23f45bb758450f12acd44589de0048b9b57a0e1dc5d0414b7e31e59be6dcba4d",
+      "description": "先前 west 修复采用右边界在红檐梁面上留下窄竖向色阶。主轮廓大体连续，优先按颜色/纹理收口处理，勿据此重绘整片。",
+      "boundaryNativeX": 608,
+      "boundaryTileX": 493,
+      "boundaryGlobalX": 37357,
+      "focusGlobalBox": [
+        37325,
+        37715,
+        37389,
+        37865
+      ],
+      "focusTileBox": [
+        461,
+        851,
+        525,
+        1001
+      ],
+      "focusNativeBox": [
+        576,
+        966,
+        640,
+        1116
+      ],
+      "relatedEvidence": [
+        "p11--p21"
+      ],
+      "status": "reported_to_next_tile_setup; pending local edge finishing"
+    },
+    {
+      "id": "M1",
+      "priority": "low_nonblocking",
+      "category": "material_observation",
+      "description": "p12-p13 与 p13-p23 大篷布有轻微织纹/色温变化；当前100%未见必须结构重绘的硬断口。",
+      "relatedEvidence": [
+        "p12--p13",
+        "p13--p23",
+        "cross-r1-c2"
+      ],
+      "status": "observe at final integrated review; no mandatory redraw requested"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "p11--p12",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p11--p12.png",
+      "sha256": "38ec85239bddbfc96c6099c09aa6cb24bff4a3bbd8049e6923e3a6f9ac1982bd",
+      "globalBox": [
+        37632,
+        36864,
+        38144,
+        37888
+      ],
+      "sources": [
+        {
+          "patch": "p11",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p11-joint-p11-p12-v1.png",
+          "sha256": "23f45bb758450f12acd44589de0048b9b57a0e1dc5d0414b7e31e59be6dcba4d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            0,
+            1024,
+            1024
+          ]
+        },
+        {
+          "patch": "p12",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+          "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            0,
+            2048,
+            1024
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "瓦面、金檐转角与下方篷布的核心接缝轮廓连续，未见旧金檐分叉问题。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p11--p21",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p11--p21.png",
+      "sha256": "451c9dfb195b92a366824d6ca57c69edea72847c5abae4c86bee3daba96455f7",
+      "globalBox": [
+        36864,
+        37632,
+        37888,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p11",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p11-joint-p11-p12-v1.png",
+          "sha256": "23f45bb758450f12acd44589de0048b9b57a0e1dc5d0414b7e31e59be6dcba4d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            0,
+            1024,
+            1024
+          ]
+        },
+        {
+          "patch": "p21",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p21-v1.png",
+          "sha256": "6a0e7eb54c49aac971d2168d90323ef18d8d04e8d3edc7e42f133ac08fb7049d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            1024,
+            1024,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [
+        "C1"
+      ],
+      "note": "跨行轮廓连续；此裁图另外暴露了 p11 先前 west 修复的内部采用边界红梁色阶，见 C1。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p12--p13",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p12--p13.png",
+      "sha256": "93ce42473ee4dff2e35fa272688afe50a64e2834be2e8ed6171e422d5e6509b1",
+      "globalBox": [
+        38656,
+        36864,
+        39168,
+        37888
+      ],
+      "sources": [
+        {
+          "patch": "p12",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+          "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            0,
+            2048,
+            1024
+          ]
+        },
+        {
+          "patch": "p13",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+          "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            0,
+            3072,
+            1024
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [
+        "M1"
+      ],
+      "note": "篷布主平面连续；细纹密度和色温略有变化，作为低级材质观察，暂无明确几何阻断。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p12--p22",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p12--p22.png",
+      "sha256": "b82ebf98756fbf6fe75e768e481f78ff3e4b910fa5ad00460b152ad239dafdef",
+      "globalBox": [
+        37888,
+        37632,
+        38912,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p12",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+          "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            0,
+            2048,
+            1024
+          ]
+        },
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "篷布肋条与前缘方向连续，未见跨行断口。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p13--p14",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p13--p14.png",
+      "sha256": "d3b0d91e3ba87314564adcafc52df4b563c647fd113e5f9d01007d77ea966f94",
+      "globalBox": [
+        39680,
+        36864,
+        40192,
+        37888
+      ],
+      "sources": [
+        {
+          "patch": "p13",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+          "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            0,
+            3072,
+            1024
+          ]
+        },
+        {
+          "patch": "p14",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-joint-p13-p14-v1.png",
+          "sha256": "fbd704026589213fffffe42d85f0f8a5e989f640609827b861ed1eaa5169d62b",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            0,
+            4096,
+            1024
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "木板、后压条和篷布主面连续；采用区边缘未见明显几何错位。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p13--p23",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p13--p23.png",
+      "sha256": "af6ee54627dcfd21201aa534b7d7d7fe8c745129631cce19ecd394fa19330f3d",
+      "globalBox": [
+        38912,
+        37632,
+        39936,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p13",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+          "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            0,
+            3072,
+            1024
+          ]
+        },
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [
+        "M1"
+      ],
+      "note": "弯曲篷布前缘连续；织纹有轻微变化，无明显台阶。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p14--p24",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p14--p24.png",
+      "sha256": "95a68a0c24636a96f00e3b39aa4d76fe1c75dcc6e92f048f52a18d811a96bde8",
+      "globalBox": [
+        39936,
+        37632,
+        40960,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p14",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-joint-p13-p14-v1.png",
+          "sha256": "fbd704026589213fffffe42d85f0f8a5e989f640609827b861ed1eaa5169d62b",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            0,
+            4096,
+            1024
+          ]
+        },
+        {
+          "patch": "p24",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p24-v1.png",
+          "sha256": "470a71418100fd22a70e9bee6d7c38df42236e4a5f70b749431922ab36c7d51c",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            1024,
+            4096,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_has_structural_blocker_in_crop",
+      "relatedIssues": [
+        "G1"
+      ],
+      "note": "核心接线本身连续，但条带内 p24 native y230 的绳网/绿布跳接是明确结构阻断，见 G1。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p21--p22",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p21--p22.png",
+      "sha256": "8eb7192df73445de0afb43e8f88581cd1b962084b17d9d84b88b6812e807a78c",
+      "globalBox": [
+        37632,
+        37888,
+        38144,
+        38912
+      ],
+      "sources": [
+        {
+          "patch": "p21",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p21-v1.png",
+          "sha256": "6a0e7eb54c49aac971d2168d90323ef18d8d04e8d3edc7e42f133ac08fb7049d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            1024,
+            1024,
+            2048
+          ]
+        },
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "篷布前缘、墙和窗连续；p22 篷布与柱顶关系可解释为折垂与支撑，暂不要求重绘。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p21--p31",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p21--p31.png",
+      "sha256": "3b9da34ad0264a20d6b3b62b3ed92ee3425fa010fb62839a8458102e109e1fc5",
+      "globalBox": [
+        36864,
+        38656,
+        37888,
+        39168
+      ],
+      "sources": [
+        {
+          "patch": "p21",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p21-v1.png",
+          "sha256": "6a0e7eb54c49aac971d2168d90323ef18d8d04e8d3edc7e42f133ac08fb7049d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            1024,
+            1024,
+            2048
+          ]
+        },
+        {
+          "patch": "p31",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p31-v1.png",
+          "sha256": "914a08182e131880b3a2f42088c2e2d7f10d6068949fd64b0031a2274eaa22d7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            2048,
+            1024,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "灯笼穗、墙柱和阴影连续，无明显几何阻断。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p22--p23",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p22--p23.png",
+      "sha256": "885b8284922b8bf4e70e80b1e3f87190b0aa781ddf8c8ef0830838f6f218b8b9",
+      "globalBox": [
+        38656,
+        37888,
+        39168,
+        38912
+      ],
+      "sources": [
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        },
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "篷布前缘、暗墙和蓝布连续，无明确断线。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p22--p32",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p22--p32.png",
+      "sha256": "5137b2271163d5cde79d45176afc66a62ef44e1e010e5a14a2ff51368ef345e0",
+      "globalBox": [
+        37888,
+        38656,
+        38912,
+        39168
+      ],
+      "sources": [
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        },
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "立柱、后台布和前台框连续，无重复柱或明显台阶。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p23--p24",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p23--p24.png",
+      "sha256": "17f06805bd31f10b87292e4c48e7c10d3a553f16a0fd4d635e7f04f01c3a7076",
+      "globalBox": [
+        39680,
+        37888,
+        40192,
+        38912
+      ],
+      "sources": [
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        },
+        {
+          "patch": "p24",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p24-v1.png",
+          "sha256": "470a71418100fd22a70e9bee6d7c38df42236e4a5f70b749431922ab36c7d51c",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            1024,
+            4096,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_has_structural_blocker_in_crop",
+      "relatedIssues": [
+        "G1"
+      ],
+      "note": "跨片蓝布、桌框和网绳主线连续；上方可见 G1 的 native y230 横切问题。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p23--p33",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p23--p33.png",
+      "sha256": "356abaf868478094317e68fd402441e4796f34303f894a17c310947ca39716fc",
+      "globalBox": [
+        38912,
+        38656,
+        39936,
+        39168
+      ],
+      "sources": [
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        },
+        {
+          "patch": "p33",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p33-v1.png",
+          "sha256": "719586c4e55fcac7e5fb093de2bd85981f9320f4ebf91ede8aea379027c55a2a",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            2048,
+            3072,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "后台布、柱与桌腿连续，没有新增几何断口。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p31--p32",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p31--p32.png",
+      "sha256": "e929097b2be08ee51fc2aa43e50da86b546c76e48724f1150786a35cb198bf10",
+      "globalBox": [
+        37632,
+        38912,
+        38144,
+        39936
+      ],
+      "sources": [
+        {
+          "patch": "p31",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p31-v1.png",
+          "sha256": "914a08182e131880b3a2f42088c2e2d7f10d6068949fd64b0031a2274eaa22d7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            2048,
+            1024,
+            3072
+          ]
+        },
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "墙柱、柱基、护墙木板与地板连续。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p31--p41",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p31--p41.png",
+      "sha256": "8cf1efda991500af2c0a4ee8b289181d6f23167261a5ca4c35097b859f9c4a11",
+      "globalBox": [
+        36864,
+        39680,
+        37888,
+        40192
+      ],
+      "sources": [
+        {
+          "patch": "p31",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p31-v1.png",
+          "sha256": "914a08182e131880b3a2f42088c2e2d7f10d6068949fd64b0031a2274eaa22d7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            2048,
+            1024,
+            3072
+          ]
+        },
+        {
+          "patch": "p41",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p41-v1.png",
+          "sha256": "e856e868153444ccb1dbb0a4baef4ae7cbb47bc957c6cfd0086a92147846393d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            3072,
+            1024,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "地板边线、钉与柱基下缘连续，未见地板转向。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p32--p33",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p32--p33.png",
+      "sha256": "02c59a92fc31fb8211bb305469b622d7592327c7f5bfb56dff2939cbf3d144ab",
+      "globalBox": [
+        38656,
+        38912,
+        39168,
+        39936
+      ],
+      "sources": [
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        },
+        {
+          "patch": "p33",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p33-v1.png",
+          "sha256": "719586c4e55fcac7e5fb093de2bd85981f9320f4ebf91ede8aea379027c55a2a",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            2048,
+            3072,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "前蓝布台面与包角/桌腿连续，桌面保持同一方向。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p32--p42",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p32--p42.png",
+      "sha256": "b304d8ac2550cc941ef9d4a1e435320314c4ee93197412b6af2db740d6f9dffc",
+      "globalBox": [
+        37888,
+        39680,
+        38912,
+        40192
+      ],
+      "sources": [
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        },
+        {
+          "patch": "p42",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p42-v1.png",
+          "sha256": "0f5730c349430c36c29621a82a1b122e2031beced3ab263be3d1efa7c8972f51",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            3072,
+            2048,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "前台腿、底横撑和地板线连续。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p33--p43",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p33--p43.png",
+      "sha256": "8f31479ec03ef1f0642c6d1b1a1f828d2224d35f02a26ad821722a4702da62cd",
+      "globalBox": [
+        38912,
+        39680,
+        39936,
+        40192
+      ],
+      "sources": [
+        {
+          "patch": "p33",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p33-v1.png",
+          "sha256": "719586c4e55fcac7e5fb093de2bd85981f9320f4ebf91ede8aea379027c55a2a",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            2048,
+            3072,
+            3072
+          ]
+        },
+        {
+          "patch": "p43",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p43-v1.png",
+          "sha256": "fdf6825d3bb3b07f2bc21bfc5d4343ca7d1593d222593d48245cf73d57c4d8a7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            3072,
+            3072,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "桌脚、地板拼缝与阴影连续，未见方向反转。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p41--p42",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p41--p42.png",
+      "sha256": "87ad68fc885ec44467a7e3fa1121f45869bac8d58dc3cc01e349b053c68a1d74",
+      "globalBox": [
+        37632,
+        39936,
+        38144,
+        40960
+      ],
+      "sources": [
+        {
+          "patch": "p41",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p41-v1.png",
+          "sha256": "e856e868153444ccb1dbb0a4baef4ae7cbb47bc957c6cfd0086a92147846393d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            3072,
+            1024,
+            4096
+          ]
+        },
+        {
+          "patch": "p42",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p42-v1.png",
+          "sha256": "0f5730c349430c36c29621a82a1b122e2031beced3ab263be3d1efa7c8972f51",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            3072,
+            2048,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "大面积地板长边线连续，未见直线色块或断线。",
+      "formalAccepted": false
+    },
+    {
+      "id": "p42--p43",
+      "category": "seams",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\p42--p43.png",
+      "sha256": "cb68b7bdc8724f812fc96490bcdc992ea5fd3a4a52637bca58f7cd00f00e6362",
+      "globalBox": [
+        38656,
+        39936,
+        39168,
+        40960
+      ],
+      "sources": [
+        {
+          "patch": "p42",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p42-v1.png",
+          "sha256": "0f5730c349430c36c29621a82a1b122e2031beced3ab263be3d1efa7c8972f51",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            3072,
+            2048,
+            4096
+          ]
+        },
+        {
+          "patch": "p43",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p43-v1.png",
+          "sha256": "fdf6825d3bb3b07f2bc21bfc5d4343ca7d1593d222593d48245cf73d57c4d8a7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            3072,
+            3072,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "台脚两面、阴影与地板长边线连续。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r1-c1",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r1-c1.png",
+      "sha256": "4dd2563b90fe119567fa299c977c4e8fb9bdc22744000a4d72c929f104dd7a15",
+      "globalBox": [
+        37632,
+        37632,
+        38144,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p11",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p11-joint-p11-p12-v1.png",
+          "sha256": "23f45bb758450f12acd44589de0048b9b57a0e1dc5d0414b7e31e59be6dcba4d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            0,
+            1024,
+            1024
+          ]
+        },
+        {
+          "patch": "p12",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+          "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            0,
+            2048,
+            1024
+          ]
+        },
+        {
+          "patch": "p21",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p21-v1.png",
+          "sha256": "6a0e7eb54c49aac971d2168d90323ef18d8d04e8d3edc7e42f133ac08fb7049d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            1024,
+            1024,
+            2048
+          ]
+        },
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "金檐末端、篷布肋条与折垂前缘连贯，无十字几何错位。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r1-c2",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r1-c2.png",
+      "sha256": "d526200be7ba5774b7fd9279ead2a48a451922766a4cc47100456f515d41ff89",
+      "globalBox": [
+        38656,
+        37632,
+        39168,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p12",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+          "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            0,
+            2048,
+            1024
+          ]
+        },
+        {
+          "patch": "p13",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+          "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            0,
+            3072,
+            1024
+          ]
+        },
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        },
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [
+        "M1"
+      ],
+      "note": "大篷布面与斜肋条连续，只有细纹自然变化。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r1-c3",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r1-c3.png",
+      "sha256": "b92084a53a8412b721eb8693ea9395e1e14173ca12eef92fb4f2f24508752073",
+      "globalBox": [
+        39680,
+        37632,
+        40192,
+        38144
+      ],
+      "sources": [
+        {
+          "patch": "p13",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+          "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            0,
+            3072,
+            1024
+          ]
+        },
+        {
+          "patch": "p14",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-joint-p13-p14-v1.png",
+          "sha256": "fbd704026589213fffffe42d85f0f8a5e989f640609827b861ed1eaa5169d62b",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            0,
+            4096,
+            1024
+          ]
+        },
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        },
+        {
+          "patch": "p24",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p24-v1.png",
+          "sha256": "470a71418100fd22a70e9bee6d7c38df42236e4a5f70b749431922ab36c7d51c",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            3072,
+            1024,
+            4096,
+            2048
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_has_structural_blocker_in_crop",
+      "relatedIssues": [
+        "G1"
+      ],
+      "note": "交点硬切连续，但右下包含 G1 绳网跳接，需修后复核。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r2-c1",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r2-c1.png",
+      "sha256": "a32a089bdd9a71cf2e806d08d6101891c807dd3c2bcea374ee4eefe83a558d05",
+      "globalBox": [
+        37632,
+        38656,
+        38144,
+        39168
+      ],
+      "sources": [
+        {
+          "patch": "p21",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p21-v1.png",
+          "sha256": "6a0e7eb54c49aac971d2168d90323ef18d8d04e8d3edc7e42f133ac08fb7049d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            1024,
+            1024,
+            2048
+          ]
+        },
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        },
+        {
+          "patch": "p31",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p31-v1.png",
+          "sha256": "914a08182e131880b3a2f42088c2e2d7f10d6068949fd64b0031a2274eaa22d7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            2048,
+            1024,
+            3072
+          ]
+        },
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "窗底、红柱与白墙交点连续。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r2-c2",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r2-c2.png",
+      "sha256": "c4ab1e6421eb355d2cf4b968886c939c7f88c144d0cf84ac707f5e57b0e78478",
+      "globalBox": [
+        38656,
+        38656,
+        39168,
+        39168
+      ],
+      "sources": [
+        {
+          "patch": "p22",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+          "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            1024,
+            2048,
+            2048
+          ]
+        },
+        {
+          "patch": "p23",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p23-v1.png",
+          "sha256": "352b6f263cd6e004f1fd9ca13d472677d6f8e99b0f1fce6a59cc21a1463fcd21",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            1024,
+            3072,
+            2048
+          ]
+        },
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        },
+        {
+          "patch": "p33",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p33-v1.png",
+          "sha256": "719586c4e55fcac7e5fb093de2bd85981f9320f4ebf91ede8aea379027c55a2a",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            2048,
+            3072,
+            3072
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "后台蓝布纹样、木框与前台后框连续。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r3-c1",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r3-c1.png",
+      "sha256": "fb71c227a4001cb20c960bddd9f9ed25a71e7592f980832f0a26e706b097e1de",
+      "globalBox": [
+        37632,
+        39680,
+        38144,
+        40192
+      ],
+      "sources": [
+        {
+          "patch": "p31",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p31-v1.png",
+          "sha256": "914a08182e131880b3a2f42088c2e2d7f10d6068949fd64b0031a2274eaa22d7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            2048,
+            1024,
+            3072
+          ]
+        },
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        },
+        {
+          "patch": "p41",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p41-v1.png",
+          "sha256": "e856e868153444ccb1dbb0a4baef4ae7cbb47bc957c6cfd0086a92147846393d",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            0,
+            3072,
+            1024,
+            4096
+          ]
+        },
+        {
+          "patch": "p42",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p42-v1.png",
+          "sha256": "0f5730c349430c36c29621a82a1b122e2031beced3ab263be3d1efa7c8972f51",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            3072,
+            2048,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "柱基和地板边线连续，未见色块交点。",
+      "formalAccepted": false
+    },
+    {
+      "id": "cross-r3-c2",
+      "category": "crossings",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\cross-r3-c2.png",
+      "sha256": "5df2f2499f4c9b5e7a56e8606ac313a4027e52563ab799e4f1bdc56e87e351fd",
+      "globalBox": [
+        38656,
+        39680,
+        39168,
+        40192
+      ],
+      "sources": [
+        {
+          "patch": "p32",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p32-v1.png",
+          "sha256": "e5f5af59acf12fff791c3d36372a1e8cc5cdaab3626bab3e86646a7971a96fda",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            2048,
+            2048,
+            3072
+          ]
+        },
+        {
+          "patch": "p33",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p33-v1.png",
+          "sha256": "719586c4e55fcac7e5fb093de2bd85981f9320f4ebf91ede8aea379027c55a2a",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            2048,
+            3072,
+            3072
+          ]
+        },
+        {
+          "patch": "p42",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p42-v1.png",
+          "sha256": "0f5730c349430c36c29621a82a1b122e2031beced3ab263be3d1efa7c8972f51",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            1024,
+            3072,
+            2048,
+            4096
+          ]
+        },
+        {
+          "patch": "p43",
+          "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p43-v1.png",
+          "sha256": "fdf6825d3bb3b07f2bc21bfc5d4343ca7d1593d222593d48245cf73d57c4d8a7",
+          "crop": [
+            115,
+            115,
+            1139,
+            1139
+          ],
+          "destination": [
+            2048,
+            3072,
+            3072,
+            4096
+          ]
+        }
+      ],
+      "viewedWith": "view_image",
+      "resamplingInEvidence": false,
+      "currentEvidenceHashMatches": true,
+      "currentSourceHashesMatch": true,
+      "status": "reviewed_no_obvious_structural_blocker",
+      "relatedIssues": [],
+      "note": "台脚两面、下横撑和阴影连续。",
+      "formalAccepted": false
+    }
+  ],
+  "additionalNativeEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p24-v1.png",
+      "sha256": "470a71418100fd22a70e9bee6d7c38df42236e4a5f70b749431922ab36c7d51c",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\native\\p22-v2.png",
+      "sha256": "f03549227e0a1193f1e92c410e0297e73573d46f29d39012eaa5f059b62f5db2",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p11-joint-p11-p12-v1.png",
+      "sha256": "23f45bb758450f12acd44589de0048b9b57a0e1dc5d0414b7e31e59be6dcba4d",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p12-joint-p11-p12-v1.png",
+      "sha256": "165ba4f9ed4d76cb7c3cf0d28de5f817003d4244ddf45be77acd37ea89cf1c71",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p13-joint-p13-p14-v1.png",
+      "sha256": "b9c4a446ca18923ae29c8f46378c0bbea9de2e32df800687f020f4a7ad59735d",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\processed\\p14-joint-p13-p14-v1.png",
+      "sha256": "fbd704026589213fffffe42d85f0f8a5e989f640609827b861ed1eaa5169d62b",
+      "viewedWith": "view_image",
+      "purpose": "native details or adopted rectangle perimeter review"
+    }
+  ],
+  "overview": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r10_c10\\qa\\internal\\overview-QA-only-1024.png",
+    "viewedAs": "QA-only overview, not 100% evidence and not final art"
+  },
+  "firstRowAdoptionReview": "Current core joins and major outlines are coherent. p11 native x115 discontinuity is the unselected left halo and does not supersede final adjacent-core external QA. Visible core adoption color edge C1 requires local finishing; p13/p14 y700 and their rectangle sides show no obvious geometry break.",
+  "p22CanopyPillarConclusion": "No clear mandatory geometry redraw identified; folding valances and pillar support remain interpretable in native view and overall composition.",
+  "formalAccepted": false,
+  "candidateInternalReady": false,
+  "pending": "G1 repair output and C1 finishing; unselected p34/p44 and any subsequently changed source hashes require later review.",
+  "mutations": "Only this independent review report was written; native, processed, selected and owner QA manifest were not changed."
+}

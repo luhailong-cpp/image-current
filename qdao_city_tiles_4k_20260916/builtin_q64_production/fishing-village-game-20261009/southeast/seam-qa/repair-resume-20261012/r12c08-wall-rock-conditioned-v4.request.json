@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "preparedAtUtc": "2026-10-12T08:14:26.018205-04:00",
+  "status": "prepared_for_actual_builtin_v4",
+  "generationSubmitted": false,
+  "builtinOnly": true,
+  "paidApiAllowed": false,
+  "authority": {
+    "file": "D:\\work\\image\\docs\\MAP_PRODUCTION_RESUME_20261012.json",
+    "sha256": "6b169e04fd4228ac9482819f4e23a224c36f24d6161c2c159c50ac7ed9035203"
+  },
+  "toolInput": {
+    "prompt": "Local correction of the supplied 1254x1254 isometric game image. Keep the same frame and scale. There is still a vertical splice at x618. The RIGHT of x618 and BELOW y830 are final fixed native neighbors. Correct the LEFT to meet them.\n\nEdit only x350..617,y280..829. The left coping block underside STILL ends approximately40 pixels too low where it reaches x618. Raise that LEFT underside to meet the existing dark joint on the RIGHT at x618,y535. Its front face must become shallower near that endpoint. The LEFT coping top/front break must end at the fixed RIGHT break around x618,y410. Carry both stone edges into their fixed endpoints with matching slopes. The lower course below this gap must meet the RIGHT course at the same levels; bring the right crevice leaves' silhouettes naturally into the left. Do not solve this by lowering/deepening or remaking the RIGHT block. The right block must remain the same.\n\nThe small boulder in lower center still has a flat vertical truncation at x618: its upper outline on the left reaches x618 too low. Extend ONLY the upper LEFT part of that boulder so its rounded upper outline arrives at the existing RIGHT boulder edge at x618,y740, then curves toward x503,y830 to meet the fixed BOTTOM rock. Make one continuous rounded boulder outline, no flat vertical cut at x618 or horizontal ledge at y830. Keep the bottom rock the same.\n\nAll wood, rails, post and their geometry are locked. Keep all pixels outside x350..617,y280..829 visually unchanged. Preserve the native stone textures and gray/cyan material, the scene's camera, daylight and crisp painterly Q-style Daoist art. No new objects, fog, blur, global recolor, crop or rescale. No text or guide marks. The fixed right and bottom side of the splice are the boundary authority. Return opaque1254x1254.",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\seam-qa\\repair-resume-20261012\\r12c08-wall-rock-conditioned-v3-bounded-adoption-preview.png"
+    ],
+    "transparent_background": false
+  },
+  "referenceRoles": [
+    "sole edit target: version3 exact bounded guide; fixed current east and bottom native context"
+  ],
+  "globalBox": [
+    32150,
+    45250,
+    33404,
+    46504
+  ],
+  "expectedDimensions": [
+    1254,
+    1254
+  ],
+  "editRegions": [
+    {
+      "id": "G4",
+      "worldBox": [
+        32500,
+        45530,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        350,
+        280,
+        618,
+        830
+      ],
+      "editPurpose": "Repair left p14 masonry courses, crevice plants and rock edges to match fixed c09 right core at x32768."
+    },
+    {
+      "id": "G5",
+      "worldBox": [
+        32580,
+        45920,
+        32768,
+        46080
+      ],
+      "guideBox": [
+        430,
+        670,
+        618,
+        830
+      ],
+      "editPurpose": "Repair upper p14 rock silhouettes to match fixed p24 below y46080; lower source is immutable."
+    }
+  ],
+  "protectedRailBoxGlobal": [
+    32470,
+    45066,
+    32800,
+    45491
+  ],
+  "outputPolicy": "Save generated raw output under this versioned stem with generation receipt. Reject changed scale or framing; never resize it. Root owner must review output and exact native adoption boundaries before selection.",
+  "subagentGenerationPermission": "No generation call by preparing agent until root later authorizes built-in generation.",
+  "formalAccepted": false,
+  "promotedToSelected": false
+}

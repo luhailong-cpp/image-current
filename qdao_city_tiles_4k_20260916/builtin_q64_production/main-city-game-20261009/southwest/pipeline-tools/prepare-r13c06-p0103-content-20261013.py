@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib,sys
+from PIL import Image
+B=Path(__file__).resolve().parent.parent;sys.path.insert(0,str(B));from checkpoint_resume import atomic_json
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+g=B/'r13_c06/pipeline/guides/approved-geometry-context-20261013-v01.png'
+src=Path('D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png')
+dp=Path(str(g)+'.derivation.json');assert not dp.exists()
+assert Image.open(g).size==(750,600)
+atomic_json(dp,{'file':str(g),'sha256':sha(g),'source':str(src),'sourceSha256':sha(src),'sourceCrop':[375,900,500,1000],'operation':'nearest-neighbor enlargement for approved coarse geometry inspection only','guideOnly':True,'gameArt':False})
+p=B/'r13_c06/pipeline/prompts/p01_03.resume-20261012-v01.request.json';d=json.loads(p.read_text(encoding='utf-8'));assert len(d['references'])==4 and not d['prompt'].startswith('CONTENT LOCK:')
+prefix='''CONTENT LOCK: reproduce this exact close fragment of the approved building roof, not an entire building. Blue glazed roof ribs occupy the upper and left majority. Extend the native top/left diagonal ribs down and right with their exact pitch, spacing, rounded profiles and highlight phase. The lower boundary of the blue roof follows the coarse guide: a RED WOODEN FRONT FASCIA slopes upward to the right, from near the lower-left edge to approximately the lower-middle of the right edge. Roof ribs terminate naturally at that existing slanted front edge; do not carry blue roof across the red fascia. Below it the only visible content is clipped dark red/orange wooden structure, with the deep guide shadows in their existing positions. The tiny gold eave fragment in the left strip's bottom corner is the clipped end of the side eave and stays at that corner. DO NOT extend that gold strip across the front of the roof, and do not add a long gold front band, a new scroll tip, rolled tile cap, flower, medallion, transverse roof joint, door or lantern. Image 5 is only a larger approved coarse geometry context: it confirms the side gold eave ends while the red front fascia continues toward the right. Never copy its full-building framing or coarse pixels. Render only Image1's native1254 crop with clean rounded hand-painted forms and restrained fine brush texture. Native top/left overlap strips own exact line scale and color; no straight strip-divider or cyan phase jump at y230/x230.'''
+d['prompt']=prefix+'\n\n'+d['prompt'];Path(d['promptFile']).write_text(d['prompt'],encoding='utf-8',newline='');d['promptSha256']=sha(d['promptFile'])
+d['references'].append({'file':str(g),'sha256':sha(g),'role':'supporting approved coarse building geometry context only; guide pixels and framing are not final artwork; viewed before call'})
+d['referenced_image_paths'].append(str(g));d['currentImagePolicy']={'file':str(B/'pipeline-tools/corrected-image-preference-resume-20261013.json'),'sha256':sha(B/'pipeline-tools/corrected-image-preference-resume-20261013.json'),'existingBuiltinAllowed':True,'actualModel':None,'paidApiAllowed':False}
+atomic_json(p,d);print(json.dumps(d,ensure_ascii=False))

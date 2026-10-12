@@ -1,0 +1,1023 @@
+{
+  "createdAt": "2026-10-08T11:45:27.827777+00:00",
+  "script": "tools/measure-cast-support.py",
+  "scriptSha256": "a73c2e7f31273d145f80c5dfa5a48cb6adcaeb2cdf657a017500c0ff3e275c43",
+  "action": "cast",
+  "direction": "W",
+  "coordinates": "1024 canvas; x right, y down",
+  "method": {
+    "roiXYXYExclusive": {
+      "screenLeft": [
+        250,
+        835,
+        510,
+        1000
+      ],
+      "screenRight": [
+        550,
+        835,
+        790,
+        1000
+      ]
+    },
+    "bluePredicate": "alpha>=128; B-R>=12; B-G>=5; R<150",
+    "componentRule": "4-connected; area>=20; max canvas y>=900; not touching ROI top",
+    "bottomBand": "alpha>=16; bottommost six rows within each fixed shoe ROI",
+    "baseline": "Mean paint centroids of frames 07 and 11",
+    "noResamplingNoAlignment": true
+  },
+  "limitations": [
+    "Pixel paint centroid and alpha band are not skeleton joints or physical contact points.",
+    "Changes in painted pattern, shoe orientation, lighting, and occlusion affect measurements.",
+    "No automatic animation pass/fail; compare full frames and playback separately.",
+    "Source SHA identifies exact current PNG; old reports are historical after repair."
+  ],
+  "baselineBlueCentroids": {
+    "screenLeft": [
+      389.531,
+      915.5664999999999
+    ],
+    "screenRight": [
+      673.4685,
+      913.7655
+    ]
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "file": "runtime/cast/W/01.png",
+      "sha256": "ac8432e2218320168d85ed6085e8880ff7570d5c8b372f2eaffff82662f0d149",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2365,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            372.953,
+            915.593
+          ],
+          "bluePaintBBox": [
+            298,
+            877,
+            449,
+            940
+          ],
+          "alphaBottomY": 965,
+          "bottomSixRowsCentroid": [
+            407.276,
+            961.846
+          ],
+          "bottomSixRowsXRange": [
+            373,
+            442
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -16.578,
+            0.027
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 1970,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            656.953,
+            913.833
+          ],
+          "bluePaintBBox": [
+            609,
+            886,
+            724,
+            933
+          ],
+          "alphaBottomY": 955,
+          "bottomSixRowsCentroid": [
+            624.878,
+            952.081
+          ],
+          "bottomSixRowsXRange": [
+            589,
+            658
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -16.515,
+            0.067
+          ]
+        }
+      }
+    },
+    {
+      "frame": 2,
+      "file": "runtime/cast/W/02.png",
+      "sha256": "11b82d76d76614006dcf4e52edabb6c88c9bdef076966009ea358abcd4189faa",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2753,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            365.74,
+            909.775
+          ],
+          "bluePaintBBox": [
+            285,
+            878,
+            453,
+            933
+          ],
+          "alphaBottomY": 958,
+          "bottomSixRowsCentroid": [
+            406.761,
+            955.157
+          ],
+          "bottomSixRowsXRange": [
+            368,
+            449
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -23.791,
+            -5.791
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2265,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            668.681,
+            910.292
+          ],
+          "bluePaintBBox": [
+            613,
+            882,
+            738,
+            930
+          ],
+          "alphaBottomY": 957,
+          "bottomSixRowsCentroid": [
+            636.524,
+            953.902
+          ],
+          "bottomSixRowsXRange": [
+            601,
+            673
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -4.787,
+            -3.473
+          ]
+        }
+      }
+    },
+    {
+      "frame": 3,
+      "file": "runtime/cast/W/03.png",
+      "sha256": "51030067fc44ade5fe64ccf6ef376f0e1193c54ebbb2b69f8a30a7794759b767",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2778,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            366.632,
+            910.38
+          ],
+          "bluePaintBBox": [
+            285,
+            879,
+            454,
+            933
+          ],
+          "alphaBottomY": 960,
+          "bottomSixRowsCentroid": [
+            407.553,
+            956.864
+          ],
+          "bottomSixRowsXRange": [
+            372,
+            447
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -22.899,
+            -5.186
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2354,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            666.675,
+            912.161
+          ],
+          "bluePaintBBox": [
+            597,
+            882,
+            737,
+            932
+          ],
+          "alphaBottomY": 960,
+          "bottomSixRowsCentroid": [
+            639.752,
+            956.748
+          ],
+          "bottomSixRowsXRange": [
+            603,
+            675
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -6.793,
+            -1.605
+          ]
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "file": "runtime/cast/W/04.png",
+      "sha256": "96bd5733b2d5360da23147ab9e2272522e86fe0c03c17ef698538948e40e3f78",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2797,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            385.722,
+            914.987
+          ],
+          "bluePaintBBox": [
+            306,
+            884,
+            474,
+            937
+          ],
+          "alphaBottomY": 963,
+          "bottomSixRowsCentroid": [
+            426.575,
+            960.049
+          ],
+          "bottomSixRowsXRange": [
+            389,
+            469
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -3.809,
+            -0.579
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2369,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.312,
+            912.549
+          ],
+          "bluePaintBBox": [
+            603,
+            883,
+            748,
+            931
+          ],
+          "alphaBottomY": 959,
+          "bottomSixRowsCentroid": [
+            645.518,
+            956.113
+          ],
+          "bottomSixRowsXRange": [
+            605,
+            684
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.844,
+            -1.216
+          ]
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "file": "runtime/cast/W/05.png",
+      "sha256": "3775c1728954d2a1dec867d0096778d6c1e16bfb4bea8c2113ca43424a82b333",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2738,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            386.531,
+            913.168
+          ],
+          "bluePaintBBox": [
+            305,
+            882,
+            474,
+            935
+          ],
+          "alphaBottomY": 963,
+          "bottomSixRowsCentroid": [
+            426.876,
+            959.977
+          ],
+          "bottomSixRowsXRange": [
+            390,
+            467
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -3.0,
+            -2.398
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2318,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.323,
+            911.873
+          ],
+          "bluePaintBBox": [
+            602,
+            882,
+            747,
+            931
+          ],
+          "alphaBottomY": 962,
+          "bottomSixRowsCentroid": [
+            646.244,
+            958.744
+          ],
+          "bottomSixRowsXRange": [
+            606,
+            683
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.855,
+            -1.892
+          ]
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "file": "runtime/cast/W/06.png",
+      "sha256": "38bd55748c432a32d6cefb38f05622f636723c8e04f314dc53119afd31fcf7cf",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2736,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            387.502,
+            913.87
+          ],
+          "bluePaintBBox": [
+            305,
+            882,
+            477,
+            935
+          ],
+          "alphaBottomY": 965,
+          "bottomSixRowsCentroid": [
+            426.825,
+            962.015
+          ],
+          "bottomSixRowsXRange": [
+            392,
+            466
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -2.029,
+            -1.696
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2293,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            673.131,
+            912.324
+          ],
+          "bluePaintBBox": [
+            600,
+            883,
+            746,
+            931
+          ],
+          "alphaBottomY": 964,
+          "bottomSixRowsCentroid": [
+            647.326,
+            960.902
+          ],
+          "bottomSixRowsXRange": [
+            608,
+            683
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -0.337,
+            -1.442
+          ]
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "file": "runtime/cast/W/07.png",
+      "sha256": "73698e3b1d0579294f35ffd2c20ded1e0cd5ab45b8a63d07668dcdb49d13250a",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2847,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            389.177,
+            915.371
+          ],
+          "bluePaintBBox": [
+            305,
+            884,
+            478,
+            938
+          ],
+          "alphaBottomY": 968,
+          "bottomSixRowsCentroid": [
+            430.151,
+            964.929
+          ],
+          "bottomSixRowsXRange": [
+            395,
+            467
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -0.354,
+            -0.195
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2422,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            673.156,
+            913.623
+          ],
+          "bluePaintBBox": [
+            598,
+            883,
+            748,
+            932
+          ],
+          "alphaBottomY": 966,
+          "bottomSixRowsCentroid": [
+            644.759,
+            963.015
+          ],
+          "bottomSixRowsXRange": [
+            607,
+            679
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -0.312,
+            -0.142
+          ]
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "file": "runtime/cast/W/08.png",
+      "sha256": "ae8ae6ed2cefdd62e1bff16e3fff1c3aa79c70aec6c77bfd062bfb72d02234df",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2766,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            390.452,
+            915.81
+          ],
+          "bluePaintBBox": [
+            305,
+            885,
+            479,
+            937
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            431.474,
+            965.988
+          ],
+          "bottomSixRowsXRange": [
+            396,
+            469
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.921,
+            0.244
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2334,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.566,
+            913.584
+          ],
+          "bluePaintBBox": [
+            598,
+            884,
+            748,
+            933
+          ],
+          "alphaBottomY": 967,
+          "bottomSixRowsCentroid": [
+            644.787,
+            964.122
+          ],
+          "bottomSixRowsXRange": [
+            607,
+            680
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            1.098,
+            -0.182
+          ]
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "file": "runtime/cast/W/09.png",
+      "sha256": "dce2994b6e030fc925d622e04668d2dfc61cd4d33efb5ebc41ae453bee99073e",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2828,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            390.96,
+            916.244
+          ],
+          "bluePaintBBox": [
+            306,
+            885,
+            480,
+            938
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            431.821,
+            966.091
+          ],
+          "bottomSixRowsXRange": [
+            396,
+            471
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            1.429,
+            0.678
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2374,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.078,
+            913.889
+          ],
+          "bluePaintBBox": [
+            599,
+            883,
+            748,
+            933
+          ],
+          "alphaBottomY": 968,
+          "bottomSixRowsCentroid": [
+            644.938,
+            964.944
+          ],
+          "bottomSixRowsXRange": [
+            609,
+            679
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.61,
+            0.124
+          ]
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "file": "runtime/cast/W/10.png",
+      "sha256": "163be4b23354dff86e980d129b7e45d0d79ec4278634e36e4d89c3b5df6c9dab",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2798,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            389.89,
+            916.177
+          ],
+          "bluePaintBBox": [
+            305,
+            885,
+            479,
+            938
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            431.116,
+            966.061
+          ],
+          "bottomSixRowsXRange": [
+            395,
+            470
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.359,
+            0.611
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2322,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.364,
+            914.046
+          ],
+          "bluePaintBBox": [
+            598,
+            885,
+            748,
+            933
+          ],
+          "alphaBottomY": 968,
+          "bottomSixRowsCentroid": [
+            644.462,
+            964.894
+          ],
+          "bottomSixRowsXRange": [
+            608,
+            679
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.896,
+            0.281
+          ]
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "file": "runtime/cast/W/11.png",
+      "sha256": "35cf7f6eb94e726fb27cc7a18a883933aa67af1182a9ce1d7c121b6dfc8e195e",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2829,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            389.885,
+            915.762
+          ],
+          "bluePaintBBox": [
+            305,
+            885,
+            479,
+            938
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            431.307,
+            965.988
+          ],
+          "bottomSixRowsXRange": [
+            396,
+            469
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.354,
+            0.196
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2363,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            673.781,
+            913.908
+          ],
+          "bluePaintBBox": [
+            598,
+            884,
+            748,
+            933
+          ],
+          "alphaBottomY": 967,
+          "bottomSixRowsCentroid": [
+            644.135,
+            964.003
+          ],
+          "bottomSixRowsXRange": [
+            607,
+            679
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.312,
+            0.143
+          ]
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "file": "runtime/cast/W/12.png",
+      "sha256": "28ab69b2d94287f01fa72eaba0965ad3b7de2aee02123a165b2ca3e360e8114c",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2804,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            389.926,
+            916.129
+          ],
+          "bluePaintBBox": [
+            305,
+            885,
+            479,
+            938
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            431.409,
+            966.045
+          ],
+          "bottomSixRowsXRange": [
+            396,
+            470
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.395,
+            0.563
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2326,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.376,
+            913.989
+          ],
+          "bluePaintBBox": [
+            599,
+            884,
+            748,
+            933
+          ],
+          "alphaBottomY": 967,
+          "bottomSixRowsCentroid": [
+            644.67,
+            963.988
+          ],
+          "bottomSixRowsXRange": [
+            607,
+            680
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.908,
+            0.224
+          ]
+        }
+      }
+    },
+    {
+      "frame": 13,
+      "file": "runtime/cast/W/13.png",
+      "sha256": "0c1608e0918a1d99536a3b32847f11937cf00379d4aa6d54a6a0551df56bdd81",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2822,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            389.863,
+            916.047
+          ],
+          "bluePaintBBox": [
+            304,
+            884,
+            479,
+            938
+          ],
+          "alphaBottomY": 969,
+          "bottomSixRowsCentroid": [
+            430.669,
+            965.985
+          ],
+          "bottomSixRowsXRange": [
+            395,
+            469
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            0.332,
+            0.481
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2369,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            674.651,
+            914.008
+          ],
+          "bluePaintBBox": [
+            599,
+            884,
+            748,
+            933
+          ],
+          "alphaBottomY": 968,
+          "bottomSixRowsCentroid": [
+            645.05,
+            964.717
+          ],
+          "bottomSixRowsXRange": [
+            609,
+            679
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            1.183,
+            0.243
+          ]
+        }
+      }
+    },
+    {
+      "frame": 14,
+      "file": "runtime/cast/W/14.png",
+      "sha256": "343025bcb186f95f34c7a9d5523d054ed07e08b8cf1673852d52b1e8af2726ce",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2277,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            390.68,
+            915.278
+          ],
+          "bluePaintBBox": [
+            322,
+            885,
+            444,
+            938
+          ],
+          "alphaBottomY": 964,
+          "bottomSixRowsCentroid": [
+            421.792,
+            960.889
+          ],
+          "bottomSixRowsXRange": [
+            389,
+            455
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            1.149,
+            -0.288
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2135,
+          "bluePaintComponentCount": 2,
+          "bluePaintCentroid": [
+            662.437,
+            917.841
+          ],
+          "bluePaintBBox": [
+            611,
+            888,
+            732,
+            938
+          ],
+          "alphaBottomY": 963,
+          "bottomSixRowsCentroid": [
+            631.874,
+            959.87
+          ],
+          "bottomSixRowsXRange": [
+            600,
+            662
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -11.031,
+            4.076
+          ]
+        }
+      }
+    },
+    {
+      "frame": 15,
+      "file": "runtime/cast/W/15.png",
+      "sha256": "1ee253c89f669e560a27c4a83c5ea16362bb64fa85bc8f20e6999e4d22ed2026",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2524,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            391.971,
+            916.068
+          ],
+          "bluePaintBBox": [
+            323,
+            878,
+            466,
+            941
+          ],
+          "alphaBottomY": 966,
+          "bottomSixRowsCentroid": [
+            422.014,
+            962.927
+          ],
+          "bottomSixRowsXRange": [
+            389,
+            456
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            2.44,
+            0.502
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2220,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            659.616,
+            916.491
+          ],
+          "bluePaintBBox": [
+            586,
+            887,
+            731,
+            937
+          ],
+          "alphaBottomY": 962,
+          "bottomSixRowsCentroid": [
+            631.958,
+            958.916
+          ],
+          "bottomSixRowsXRange": [
+            598,
+            664
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -13.852,
+            2.726
+          ]
+        }
+      }
+    },
+    {
+      "frame": 16,
+      "file": "runtime/cast/W/16.png",
+      "sha256": "8eeecfb61b921969175e665bde40c86a8d4ceed6fb7ca6ae7da560f00e746d48",
+      "measurements": {
+        "screenLeft": {
+          "bluePaintPixelCount": 2404,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            380.789,
+            915.528
+          ],
+          "bluePaintBBox": [
+            305,
+            878,
+            456,
+            940
+          ],
+          "alphaBottomY": 965,
+          "bottomSixRowsCentroid": [
+            412.384,
+            962.092
+          ],
+          "bottomSixRowsXRange": [
+            377,
+            448
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -8.742,
+            -0.038
+          ]
+        },
+        "screenRight": {
+          "bluePaintPixelCount": 2104,
+          "bluePaintComponentCount": 3,
+          "bluePaintCentroid": [
+            656.989,
+            916.679
+          ],
+          "bluePaintBBox": [
+            584,
+            887,
+            724,
+            938
+          ],
+          "alphaBottomY": 964,
+          "bottomSixRowsCentroid": [
+            628.35,
+            960.935
+          ],
+          "bottomSixRowsXRange": [
+            593,
+            661
+          ],
+          "blueCentroidDeltaFromMean07And11": [
+            -16.479,
+            2.913
+          ]
+        }
+      }
+    }
+  ]
+}

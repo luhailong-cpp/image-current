@@ -1,0 +1,53 @@
+{
+  "directory": "delivery-20261011-v1",
+  "tiles": [
+    {
+      "tile": "r03_c04",
+      "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\candidate\\r03_c04-pipeline-fixed-native-contexts-424e41dd0ce0.png",
+      "assembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\candidate\\r03_c04-pipeline-fixed-native-contexts-424e41dd0ce0.assembly.json",
+      "review": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c04/final-candidate-review.json"
+    },
+    {
+      "tile": "r03_c05",
+      "candidate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c05/candidate/r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.png",
+      "assembly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c05/candidate/r03_c05-pipeline-minimum-error-ece82fe09771-fbbe92.assembly.json",
+      "review": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c05/qa-review-native/final-visual-review.json",
+      "supplementaryReviews": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r03_c05/qa-review-native/south-final-supplement-ac954e1d5fbb/supplement-report.json"
+      ]
+    },
+    {
+      "tile": "r04_c04",
+      "candidate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c04/candidate/r04_c04-pipeline-fixed-native-contexts-71cabb17b21f.png",
+      "assembly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c04/candidate/r04_c04-pipeline-fixed-native-contexts-71cabb17b21f.assembly.json",
+      "review": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c04/final-candidate-review.json",
+      "supplementaryReviews": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/final-delivery.json"
+      ]
+    },
+    {
+      "tile": "r04_c05",
+      "candidate": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/candidate/r04_c05-pipeline-minimum-error-e2769dba9467-6e5fcf.png",
+      "assembly": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/candidate/r04_c05-pipeline-minimum-error-e2769dba9467-6e5fcf.assembly.json",
+      "review": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/accelerated-yamen-north/r04_c05/final-delivery.json"
+    }
+  ],
+  "crossBoundarySummary": [
+    "r03_c04→r04_c04：4/4段主要轮廓连续，原尺寸实看；两次内部修复的外160像素保持不变。",
+    "r04_c04→既有r05_c04：4/4段主要轮廓连续；栏杆横向连接石带为已披露的局部设计调整。",
+    "r04_c04→r04_c05：最新双方候选4/4段主要连续，依据r04_c05最终报告。",
+    "r03_c04→r03_c05：前2段通过；第3段色阶跳变、第4段瓦当错位，未通过。",
+    "r03_c05→r04_c05：最新候选四段均为结构冲突FAIL；完整补充报告见r03_c05 supplementaryReviews，修复未尝试。",
+    "r04_c05→既有r05_c05：前3段主要连续；第4段狮足下模糊绿色带未通过严格质量检查。",
+    "四块中央交点320×320原尺寸裁图主要轮廓连续；不能抵消其他失败段。证据 qa-final-fourway-v1/root-review.json。",
+    "北侧r02_c04/r02_c05、西侧r03_c03/r04_c03、东侧r03_c06/r04_c06均缺相邻原生素材（各0/4段），待跨区验收。"
+  ],
+  "remainingWork": [
+    "优先修复r03_c05内部约5类问题：y≈909前两列瓦型硬切；y≈2048木/瓦锯齿与矩形碎片；x≈1024,y≈3530瓦当花心重复；y≈2960第2–4列重复瓦行/方向断点；x≈1150金弧梁起点直切。24内缝15 FAIL、9交点7 FAIL，多个检查窗口可指向同一缺陷。",
+    "修复r03_c05→r04_c05南界四段门板、柱框、灯笼和格栅窗的结构冲突；目前未尝试此边界重绘。",
+    "修复r03_c04剩余两处屋瓦区域[583,1008,943,1218]、[903,1008,1278,1218]，以及r03_c04→r03_c05第3/4段边界问题。",
+    "r04_c04栏杆面[905,2957,953,2990]仍有微弱矩形色差。",
+    "r04_c05残留木纹色块、地砖线约2–4像素小折、灰台基色带；南界第4段狮足下继承的绿色模糊带仍未解决。",
+    "等待北、东、西三个方向的六个相邻图块素材，完成剩余跨区边界验收；四张候选正式验收均为false。"
+  ]
+}

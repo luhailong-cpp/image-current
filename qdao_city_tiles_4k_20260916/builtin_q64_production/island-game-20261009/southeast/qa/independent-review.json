@@ -1,0 +1,1891 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-09T18:52:24.395065+00:00",
+  "reviewer": "coordinate_audit independent visual reviewer",
+  "zone": "southeast",
+  "tile": "r09_c12",
+  "method": "view_image with detail original; native hard-cut QA images inspected without resizing or blending. Numeric overlap metrics are cited from producer QA reports, not used as automatic pass criteria.",
+  "scopeLimitations": [
+    "This report covers the specific r09_c12 candidate identified by SHA256 64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d.",
+    "All 24 internal pairwise hard seams and all 9 four-piece junctions are visually reviewed; no formal or external-edge acceptance is granted.",
+    "The preview is downscaled and is used only for composition; native-detail judgments use original 100% pairwise and junction crops.",
+    "Generated overlaps are not pixel-identical; visual internal pass is not pixel-exact overlap identity. Final 1024 cores themselves are verified pixel-exact against native source PNGs.",
+    "Cross-4K-tile and cross-zone seams, navigation, client mapping, capacity and full-island layout counts remain unverified.",
+    "Historical p44_v01 is excluded. This candidate uses p44_v02 with its source SHA checked."
+  ],
+  "reviews": [
+    {
+      "id": "p11-p12-v03",
+      "status": "rejected",
+      "internalContinuityUsable": false,
+      "formalAccepted": false,
+      "qaImage": "p11-p12-v03.hard-seam-100pct.png",
+      "sourceReport": "p11-p12-v03.json",
+      "sourceSha256": [
+        "342551be9a9b6f4d00d4161791f389275becc37ff9a08e8f338710ea02545bd8",
+        "0541fef6365e8d0fd6c5a63041c08fb71c9cc01ffdd1f2a99f1515d2edc6c455"
+      ],
+      "reasons": [
+        "100%检查图中央约x=256出现明显竖向色阶分界，左侧偏青灰、右侧更纯更亮的蓝色切断同一瓦面。",
+        "约y=400、780、1140附近弧形瓦端与纵向亮边衔接不自然，位置/宽度存在变化。",
+        "没有新增横梁和卷金的大形体错误，但不能抵消接缝色阶和纹理漂移。"
+      ],
+      "recommendedAction": "已被后续v06替代；不把v03计为可用原生片。"
+    },
+    {
+      "id": "p11-p21-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "qaImage": "p11-p21-v01.hard-seam-100pct.png",
+      "sourceReport": "p11-p21-v01.json",
+      "sourceSha256": [
+        "342551be9a9b6f4d00d4161791f389275becc37ff9a08e8f338710ea02545bd8",
+        "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834"
+      ],
+      "reasons": [
+        "原尺寸水平接缝附近的斜向瓦沟、弧形瓦端和亮带可连续接上，没有明显贯穿接缝的色阶跳变或瓦列错位。",
+        "p21与native-context的位置对应：上部蓝瓦、斜向红木檐梁、左下白墙、木柱暗窗和右侧金色卷檐均在对应位置。"
+      ],
+      "recommendedAction": "可使用p21底部230像素原生上下文继续向下扩展墙面及木柱；仍需邻片和四片交会处联合核验。"
+    },
+    {
+      "id": "p11-p12-v06",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "qaImage": "p11-p12-v06.hard-seam-100pct.png",
+      "sourceReport": "p11-p12-v06.json",
+      "sourceSha256": [
+        "342551be9a9b6f4d00d4161791f389275becc37ff9a08e8f338710ea02545bd8",
+        "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e"
+      ],
+      "producerMetrics": {
+        "overlapMAE": 22.357564200355963,
+        "pixelExactOverlapFraction": 0
+      },
+      "reasons": [
+        "本次实际查看原尺寸硬切图后，中央x=256处没有再见v03那种贯穿同一瓦面的明显色阶分界。",
+        "跨中心线的深蓝瓦沟、弧形瓦端、青蓝亮边能连续衔接，没有可辨认的截断、双瓦沟或瓦列台阶。",
+        "保留局部手绘笔触变化；此目检通过不表示230像素重叠区逐像素一致，生产报告明确pixelExactOverlapFraction=0。"
+      ],
+      "recommendedAction": "可作为内部连续性候选继续相邻片制作；后续先检查p11/p12/p21/p22交会处及整块合成，不能据本项作正式4K验收。"
+    },
+    {
+      "id": "p12v06-p22",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "qaImage": "p12v06-p22.hard-seam-100pct.png",
+      "sourceReport": "p12v06-p22.json",
+      "sourceSha256": [
+        "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e",
+        "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea"
+      ],
+      "producerMetrics": {
+        "overlapMAE": 16.162912881677183,
+        "pixelExactOverlapFraction": 0.0007558421746064767
+      },
+      "reasons": [
+        "原尺寸硬切图中央y=256处蓝瓦的斜向沟线、曲面明暗和高光方向连续，未见明显贯穿全宽的亮度/饱和度分界。",
+        "右侧粗金色斜向檐边穿过接缝时轮廓、亮面和橙色暗面连续，没有明显横向错位或折点。",
+        "该结论限定于所示选择的硬接缝，仍不证明整个重叠区像素相同或四片角点合成合格。"
+      ],
+      "recommendedAction": "可继续以p12v06和p22的原生边缘做邻接输入；保留candidate，待四片交会处和完整4K核验。"
+    },
+    {
+      "id": "p12v06-p13v02",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.7654074Z",
+      "qaImage": "p12v06-p13v02.hard-seam-100pct.png",
+      "qaImageSha256": "48bd92e2fd207970f8db749f8c35b0e930d3f8bc04d3c46fdfef0de65f761d17",
+      "sourceReport": "p12v06-p13v02.json",
+      "sourceSha256": [
+        "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e",
+        "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p12_v06.png",
+          "reportedSha256": "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e",
+          "actualSha256": "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p13_v02.png",
+          "reportedSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "actualSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 12.592731664470795,
+        "pixelExactOverlapFraction": 0.0002323001178836419
+      },
+      "reasons": [
+        "中央x=256处穿缝的蓝瓦暗沟、长向高光以及金橙色斜檐面连续，未见竖向色阶分界。",
+        "上端横向金橙色构件和下端露出的蓝瓦轮廓没有跨缝台阶或重复描边。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p13v02-p23",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.7795305Z",
+      "qaImage": "p13v02-p23.hard-seam-100pct.png",
+      "qaImageSha256": "d5e92651ae738b4b90549ed72d82a6420b1eca2a48b7f6b1b4c8c5e91012feb4",
+      "sourceReport": "p13v02-p23.json",
+      "sourceSha256": [
+        "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+        "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p13_v02.png",
+          "reportedSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "actualSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p23_v01.png",
+          "reportedSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "actualSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 2.9352691676490306,
+        "pixelExactOverlapFraction": 0.003931766174329103
+      },
+      "reasons": [
+        "中央y=256处蓝瓦外沿、白色山墙与竖直木柱继续同一方向，未见水平错位。",
+        "斜向木梁亮边和阴影跨缝连续；蓝瓦颜色、白墙明暗及木材色调没有横向截断。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p22-p23-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.7919033Z",
+      "qaImage": "p22-p23-v01.hard-seam-100pct.png",
+      "qaImageSha256": "3d6418b190e39d9ba700e4708050bb788925832e162f0bb2155e6254aad12324",
+      "sourceReport": "p22-p23-v01.json",
+      "sourceSha256": [
+        "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+        "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p22_v01.png",
+          "reportedSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "actualSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p23_v01.png",
+          "reportedSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "actualSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 20.212916348843123,
+        "pixelExactOverlapFraction": 0.0017301158033423479
+      },
+      "reasons": [
+        "中央x=256附近蓝瓦端部、木构转角、白墙投影连续，没有被硬切产生双边线。",
+        "下部斜木梁和托木的轮廓、厚度与明暗衔接自然，未见贯穿全高的色差分界。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p23-p33-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.7989290Z",
+      "qaImage": "p23-p33-v01.hard-seam-100pct.png",
+      "qaImageSha256": "837223c23bb419bda11875ac9c42aa39363a3de92c736835bbe266a728217b62",
+      "sourceReport": "p23-p33-v01.json",
+      "sourceSha256": [
+        "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+        "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p23_v01.png",
+          "reportedSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "actualSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p33_v01.png",
+          "reportedSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "actualSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.64404687608349,
+        "pixelExactOverlapFraction": 0.005138339920948616
+      },
+      "reasons": [
+        "中央y=256处深青色窗板的竖缝和纹理方向连续，圆弧木框宽度没有突变。",
+        "左右白墙、红木竖柱和斜向投影没有明显水平色带或错位。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p32-p33-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8104473Z",
+      "qaImage": "p32-p33-v01.hard-seam-100pct.png",
+      "qaImageSha256": "48b96612ab393d612015263e842e9d79d3bdb07f99799403a9c20ec1d69d9801",
+      "sourceReport": "p32-p33-v01.json",
+      "sourceSha256": [
+        "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+        "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p32_v01.png",
+          "reportedSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "actualSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p33_v01.png",
+          "reportedSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "actualSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 4.105718512354668,
+        "pixelExactOverlapFraction": 0.011230150475001734
+      },
+      "reasons": [
+        "中央x=256处大面积象牙白墙的明度与石灰纹理尺度连续，未见竖直拼贴边。",
+        "上部托木和软投影跨缝延续；细碎纹理变化未形成结构轮廓断裂。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p33-p43v02",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8176276Z",
+      "qaImage": "p33-p43v02.hard-seam-100pct.png",
+      "qaImageSha256": "ec0e59049696a6deb44437970bfccf0f4805529f7a4ef10b379ac7eb331c7dec",
+      "sourceReport": "p33-p43v02.json",
+      "sourceSha256": [
+        "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+        "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p33_v01.png",
+          "reportedSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "actualSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p43_v02.png",
+          "reportedSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "actualSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 4.826018768924947,
+        "pixelExactOverlapFraction": 0.0029297552180847374
+      },
+      "reasons": [
+        "中央y=256处横木梁上下缘、右侧竖柱与左墙投影连续，未见折点。",
+        "木材明暗和纹理密度跨缝没有明显水平跳变；画面保持窗下木构到地面方向的连续性。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p42-p43v02",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8297762Z",
+      "qaImage": "p42-p43v02.hard-seam-100pct.png",
+      "qaImageSha256": "55e4f175043e85b740cebd6c365fcdfef87da1ef4626c980d2ecca06983037cc",
+      "sourceReport": "p42-p43v02.json",
+      "sourceSha256": [
+        "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+        "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p42_v01.png",
+          "reportedSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "actualSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p43_v02.png",
+          "reportedSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "actualSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 13.361989459815547,
+        "pixelExactOverlapFraction": 0.004874835309617918
+      },
+      "reasons": [
+        "中央x=256处白墙到灰色墙基的斜边、墙基下沿及铺地缝线连续，没有台阶。",
+        "下端烧过烟花筒的椭圆筒口、红色外壁和金色环跨缝衔接，未见分裂或重影。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p21-p22-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8420001Z",
+      "qaImage": "p21-p22-v01.hard-seam-100pct.png",
+      "qaImageSha256": "f779932f6e303a917f5e6f84e7ed03377d8d9b4f8757613874b48c143bd25552",
+      "sourceReport": "p21-p22-v01.json",
+      "sourceSha256": [
+        "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+        "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p21_v01.png",
+          "reportedSha256": "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+          "actualSha256": "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p22_v01.png",
+          "reportedSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "actualSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.9383988627695725,
+        "pixelExactOverlapFraction": 0.0016399694889397407
+      },
+      "reasons": [
+        "中央x=256处蓝瓦端弧、斜瓦沟和金色卷檐轮廓连续，旋卷未被截断。",
+        "金属亮面、内凹暗部及下方木柱构件未见跨缝的突兀跳色或几何错位。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p21-p31-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8538096Z",
+      "qaImage": "p21-p31-v01.hard-seam-100pct.png",
+      "qaImageSha256": "87f98baf0e7545cf482f10112e1b27be4e9a7447f30ec6044cc68d1d74bda7c0",
+      "sourceReport": "p21-p31-v01.json",
+      "sourceSha256": [
+        "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+        "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p21_v01.png",
+          "reportedSha256": "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+          "actualSha256": "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p31_v01.png",
+          "reportedSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "actualSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 3.1187666135034555,
+        "pixelExactOverlapFraction": 0.002097635392829901
+      },
+      "reasons": [
+        "中央y=256处斜向红木横梁、暗窗槽和竖柱边缘连续，木柱宽度没有跨缝突变。",
+        "浅色墙面与深木阴影在硬切位置没有明显水平色带。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p22-p32-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8618179Z",
+      "qaImage": "p22-p32-v01.hard-seam-100pct.png",
+      "qaImageSha256": "d23fefaf849e36db65017f187d9750e4144bcb0189cd8b3070ddda5490b7550b",
+      "sourceReport": "p22-p32-v01.json",
+      "sourceSha256": [
+        "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+        "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p22_v01.png",
+          "reportedSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "actualSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p32_v01.png",
+          "reportedSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "actualSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.391824422716871,
+        "pixelExactOverlapFraction": 0.000575549545801262
+      },
+      "reasons": [
+        "中央y=256处金色构件、弯曲木托和深红木背景连续，没有轮廓断点。",
+        "右侧白墙与曲木投影连续；左下灯笼顶冠附近未见明显跨缝错位。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p31-p32-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8693072Z",
+      "qaImage": "p31-p32-v01.hard-seam-100pct.png",
+      "qaImageSha256": "4f79f946e3f9d60071bd8239e88cd89a7ae9361fbcbb5905967c92be402eb1e1",
+      "sourceReport": "p31-p32-v01.json",
+      "sourceSha256": [
+        "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+        "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p31_v01.png",
+          "reportedSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "actualSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p32_v01.png",
+          "reportedSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "actualSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.354466865450847,
+        "pixelExactOverlapFraction": 0.0022571250260037447
+      },
+      "reasons": [
+        "中央x=256处红灯笼表面的弧形金线、暖色渐变与上下金属环连续。",
+        "灯笼主体没有被竖直硬切分成两种色阶，后方木构轮廓也无明显错位。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p31-p41-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8811872Z",
+      "qaImage": "p31-p41-v01.hard-seam-100pct.png",
+      "qaImageSha256": "c382a64d607708e5c69451c99e29990e16698892a4e4a31ef054a8e9d5a3a40b",
+      "sourceReport": "p31-p41-v01.json",
+      "sourceSha256": [
+        "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+        "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p31_v01.png",
+          "reportedSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "actualSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p41_v01.png",
+          "reportedSha256": "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+          "actualSha256": "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.224510551741673,
+        "pixelExactOverlapFraction": 0.00042992857638166564
+      },
+      "reasons": [
+        "中央y=256处门板竖缝、圆木柱、灯笼底冠及白墙阴影连续。",
+        "大面积木面没有贯穿接缝的横向亮度分界或木纹方向翻转。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p32-p42-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8882082Z",
+      "qaImage": "p32-p42-v01.hard-seam-100pct.png",
+      "qaImageSha256": "37b0cb3a7a2c141a08440e0d25385f85ac3044279c0793dedeb1f746e1a23b43",
+      "sourceReport": "p32-p42-v01.json",
+      "sourceSha256": [
+        "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+        "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p32_v01.png",
+          "reportedSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "actualSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p42_v01.png",
+          "reportedSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "actualSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 6.130709844439822,
+        "pixelExactOverlapFraction": 0.003193259829415436
+      },
+      "reasons": [
+        "中央y=256处红灯笼及金属底圈、木柱长边、象牙白墙连续。",
+        "木柱圆面高光及白墙纹理没有明显跨缝跳色；灯笼金属边线无双影。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p41-p42-v01",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:34:18.8961776Z",
+      "qaImage": "p41-p42-v01.hard-seam-100pct.png",
+      "qaImageSha256": "850c412bf6c40c0c50d791738bde9c870ae92cd2fe7cd7fc1c72dc1b9d39bcee",
+      "sourceReport": "p41-p42-v01.json",
+      "sourceSha256": [
+        "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+        "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p41_v01.png",
+          "reportedSha256": "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+          "actualSha256": "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p42_v01.png",
+          "reportedSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "actualSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 4.048570371911333,
+        "pixelExactOverlapFraction": 0.0035434435892101796
+      },
+      "reasons": [
+        "中央x=256处红流苏长线、斜向底梁、墙基顶沿和铺地缝线连续。",
+        "白墙投影、红色流苏及灰石地面没有明显竖向明度分界或轮廓位移。"
+      ],
+      "recommendedAction": "可作为当前选定版本的内部硬接缝候选；此处通过不代替四片交会处、完整4K、跨块或跨区检查。"
+    },
+    {
+      "id": "p43v02-p44v02",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.906590+00:00",
+      "qaImage": "p43v02-p44v02.hard-seam-100pct.png",
+      "qaImageSha256": "4f568186b4c4d4ac3b254cd6699a6613498e6b8c8449aa2f3989dbc8eaa56bd0",
+      "sourceReport": "p43v02-p44v02.json",
+      "sourceSha256": [
+        "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+        "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p43_v02.png",
+          "sha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "reportedSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p44_v02.png",
+          "sha256": "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a",
+          "reportedSha256": "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.357618519289,
+        "pixelExactOverlapFraction": 0.0009326676374731295
+      },
+      "reasons": [
+        "中央x=256处横木梁、后方墙基和灰石铺地接续，未见缝线错位。",
+        "前景木底梁轮廓和投影穿过硬接缝时连续；无新增玉色圆锣出现在检查带中。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p33-p34",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.922152+00:00",
+      "qaImage": "p33-p34.hard-seam-100pct.png",
+      "qaImageSha256": "1d06cd3f674c222fe181cd5d389293e9e2962efe4c35cd9bd5e45061f8bf2114",
+      "sourceReport": "p33-p34.json",
+      "sourceSha256": [
+        "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+        "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p33_v01.png",
+          "sha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "reportedSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p34_v01.png",
+          "sha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "reportedSha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 3.616764903034926,
+        "pixelExactOverlapFraction": 0.005304763885999584
+      },
+      "reasons": [
+        "中央x=256附近白墙窄面与红木立柱长边连续，没有平移或双边。",
+        "木柱高光、木纹和下端横梁在硬接缝位置未出现明显竖向色带。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p34-p44v02",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.938760+00:00",
+      "qaImage": "p34-p44v02.hard-seam-100pct.png",
+      "qaImageSha256": "a0e6d0c3e39285f385ed5e298162029affd29505ae788a6e68676d03f29be1e4",
+      "sourceReport": "p34-p44v02.json",
+      "sourceSha256": [
+        "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+        "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p34_v01.png",
+          "sha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "reportedSha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p44_v02.png",
+          "sha256": "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a",
+          "reportedSha256": "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 11.603321544969143,
+        "pixelExactOverlapFraction": 0.0005131405589071493
+      },
+      "reasons": [
+        "中央y=256处木柱、横杆、金葫芦边缘和背景叶丛连续，没有结构断点。",
+        "叶片与金属曲面虽有自然细部变化，未形成横向拼贴带或重复物体。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p23-p24",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.957325+00:00",
+      "qaImage": "p23-p24.hard-seam-100pct.png",
+      "qaImageSha256": "4b6b06f4e5200805076f1d6a524c74698704d535718dfabdc8e70bace9574d78",
+      "sourceReport": "p23-p24.json",
+      "sourceSha256": [
+        "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+        "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p23_v01.png",
+          "sha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "reportedSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p24_v01.png",
+          "sha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "reportedSha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.193896632226152,
+        "pixelExactOverlapFraction": 0.0031447195062755703
+      },
+      "reasons": [
+        "中央x=256处檐下木板的斜边、横梁和竖柱连接连续，构件透视方向一致。",
+        "木构深浅面和下方白墙投影没有跨缝的明显颜色突变或折点。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p24-p34",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.973067+00:00",
+      "qaImage": "p24-p34.hard-seam-100pct.png",
+      "qaImageSha256": "61ec4ecbcf066cd39cd84d696dc3f70130a2a88598a0a6aa6607ac01661970cb",
+      "sourceReport": "p24-p34.json",
+      "sourceSha256": [
+        "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+        "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p24_v01.png",
+          "sha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "reportedSha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p34_v01.png",
+          "sha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "reportedSha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 4.965539837736634,
+        "pixelExactOverlapFraction": 0.0014874141876430205
+      },
+      "reasons": [
+        "中央y=256处木柱边线、斜横杆及葫芦悬挂件连续，没有横向错位。",
+        "背景绿叶与葫芦金属亮暗跨缝衔接，未见分裂的轮廓或重复挂件。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p13v02-p14",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:23.992223+00:00",
+      "qaImage": "p13v02-p14.hard-seam-100pct.png",
+      "qaImageSha256": "0227f2de547c5a23cab3b496a14fda491cd113ec4245011a6a94d60c2e74f484",
+      "sourceReport": "p13v02-p14.json",
+      "sourceSha256": [
+        "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+        "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p13_v02.png",
+          "sha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "reportedSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p14_v01.png",
+          "sha256": "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+          "reportedSha256": "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 5.6076728382220375,
+        "pixelExactOverlapFraction": 0.0009396019693502531
+      },
+      "reasons": [
+        "中央x=256处曲檐金色亮边和下方蓝瓦带连续，瓦端、瓦沟及屋檐弧度无明显断裂。",
+        "上方绿叶和下方山墙/木梁没有竖向色阶跳变。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    },
+    {
+      "id": "p14-p24",
+      "status": "candidate_internal_pass",
+      "internalContinuityUsable": true,
+      "formalAccepted": false,
+      "reviewedAtUtc": "2026-10-09T18:52:24.011493+00:00",
+      "qaImage": "p14-p24.hard-seam-100pct.png",
+      "qaImageSha256": "9936a7ffe1d8bb9d18a1c0b8db8506f57282b17a6ce58db97add141a432c97a4",
+      "sourceReport": "p14-p24.json",
+      "sourceSha256": [
+        "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+        "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda"
+      ],
+      "sourceIdentityCheck": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p14_v01.png",
+          "sha256": "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+          "reportedSha256": "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+          "matches": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p24_v01.png",
+          "sha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "reportedSha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+          "matches": true
+        }
+      ],
+      "producerMetrics": {
+        "overlapMAE": 6.61031944155514,
+        "pixelExactOverlapFraction": 0.0006656958602038694
+      },
+      "reasons": [
+        "中央y=256处白墙/木梁、卷檐与背景枝叶连续，无明显水平断层。",
+        "金色卷檐与蓝色瓦带保持同一结构和照明方向；未见新增独立建筑或重复卷饰。"
+      ],
+      "recommendedAction": "内部候选接缝通过；不表示跨4K块或跨区域边缘已经检查。"
+    }
+  ],
+  "selectedNativeSubset": [
+    "r09_c12_p11_v01.png",
+    "r09_c12_p12_v06.png",
+    "r09_c12_p13_v02.png",
+    "r09_c12_p14_v01.png",
+    "r09_c12_p21_v01.png",
+    "r09_c12_p22_v01.png",
+    "r09_c12_p23_v01.png",
+    "r09_c12_p24_v01.png",
+    "r09_c12_p31_v01.png",
+    "r09_c12_p32_v01.png",
+    "r09_c12_p33_v01.png",
+    "r09_c12_p34_v01.png",
+    "r09_c12_p41_v01.png",
+    "r09_c12_p42_v01.png",
+    "r09_c12_p43_v02.png",
+    "r09_c12_p44_v02.png"
+  ],
+  "latestPass": {
+    "newPairwiseReviews": 7,
+    "selectedTilePairwiseSeams": 24,
+    "selectedTileCandidateInternalPasses": 24,
+    "junctionsReviewed": 9,
+    "junctionCandidateInternalPasses": 9,
+    "newlyRejectedSeams": 0,
+    "historicalRejectedRetained": [
+      "p11-p12-v03"
+    ],
+    "candidateTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+    "tileInternalStatus": "candidate_internal_pass",
+    "formalAccepted": false,
+    "externalEdgesReviewed": false
+  },
+  "junctionReviews": [
+    {
+      "id": "junction_11",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_11.png",
+      "sha256": "e46fbc7520f930fa95726a83c038af5f38532465cbec949a3c60379ff8dbb95f",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        768,
+        768,
+        1280,
+        1280
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "交会点中心的蓝瓦亮面、斜向瓦沟与瓦端弧线连续，未见四象限色差、十字切痕或轮廓台阶。"
+      ]
+    },
+    {
+      "id": "junction_12",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_12.png",
+      "sha256": "e0c32e66eb5ea6312b0a84630f91b263100fd1b573a010e48fd1a8782d64663b",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        1792,
+        768,
+        2304,
+        1280
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "交会点中心位于金橙色檐面和相邻蓝瓦区域，金属高光及蓝瓦边缘连续，未见十字断层。"
+      ]
+    },
+    {
+      "id": "junction_13",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_13.png",
+      "sha256": "52e928d718af3fe850fccf3ca19e687bb9067c870d059335edc190eb3f7bdb1d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        2816,
+        768,
+        3328,
+        1280
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "横木梁、上方山墙与右下卷檐在交会附近保持同一投影与明暗，未见十字线或重复构件。"
+      ]
+    },
+    {
+      "id": "junction_21",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_21.png",
+      "sha256": "6dc522fe72619e2ab690e8a8b1a904ecbdd564a9642d936e4e5dd57abdaff39e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        768,
+        1792,
+        1280,
+        2304
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "红木柱面、阴影、上方金属构件及下方灯笼顶冠连续，未见十字色块或轮廓错位。"
+      ]
+    },
+    {
+      "id": "junction_22",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_22.png",
+      "sha256": "b7b0f52b22c0e952c725351a7c89bc0875fad83ec544ebabf12fcc1a9083bf36",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        1792,
+        1792,
+        2304,
+        2304
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "弯曲木托、白墙与斜向投影跨越交会中心连续，未见断边或四象限亮度拼接。"
+      ]
+    },
+    {
+      "id": "junction_23",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_23.png",
+      "sha256": "03d9963c5c8423b98b39df97ee56177c9c0556dc48d7f5f97b0168fc58900a1d",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        2816,
+        1792,
+        3328,
+        2304
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "白墙窄面、红木竖柱和斜阴影在交会中心连续，没有横向断点或十字纹理缝。"
+      ]
+    },
+    {
+      "id": "junction_31",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_31.png",
+      "sha256": "5908fe7dd41a63e42ff1458c945be69becbebdd4ea45dac5282152d4079d897e",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        768,
+        2816,
+        1280,
+        3328
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "灯笼红面、金色底圈和白墙阴影在交会中心连续，金线与轮廓没有断裂。"
+      ]
+    },
+    {
+      "id": "junction_32",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_32.png",
+      "sha256": "8855fbd70ac0028b136929a71c8a164ff3e4e8a751158365e71dd41fcbf9a2f0",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        1792,
+        2816,
+        2304,
+        3328
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "象牙白墙纹理与柔和斜影跨交会中心连续，无可辨认的十字拼贴边。"
+      ]
+    },
+    {
+      "id": "junction_33",
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.junction_33.png",
+      "sha256": "a73869f5bef12df8833bbdb04f54a45b37df256ee4a3dfc01b6efffaa1940e83",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceCrop": [
+        2816,
+        2816,
+        3328,
+        3328
+      ],
+      "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+      "exactNativePixelEquality": true,
+      "sourceAndOutputHashesMatch": true,
+      "sourceCropMatchesGridJunction": true,
+      "status": "candidate_internal_pass",
+      "formalAccepted": false,
+      "reasons": [
+        "红木立柱、下部横梁和白墙边界连续，没有交会处四向轮廓错位或色阶块。"
+      ]
+    }
+  ],
+  "previewReview": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c12.preview-1024.png",
+    "sha256": "c3aee52225631e1041f45df1a66ff56d56bafdb2925d228021333a864d6fe01f",
+    "sourceTileSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+    "hashAndSourceMatch": true,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "matchesLanczosDownscaledCandidate": true,
+    "role": "downscaled composition preview only; not native-detail evidence",
+    "status": "candidate_internal_pass",
+    "formalAccepted": false,
+    "reasons": [
+      "整体呈现同一仙居的屋面、山墙、红木柱、青窗和相邻挂饰木架，未见4x4方片棋盘色差或结构重复。",
+      "日光方向、材质尺度与屋檐曲线整体一致；没有把完整岛屿或另一座小宅院塞入单片。",
+      "预览可见的修正版区域未出现此前报告的两面玉色圆锣；保留金葫芦挂饰。",
+      "整体观察不代表八仙岛全局建筑数量、导航、容量或本块外部接缝已验收。"
+    ]
+  },
+  "assemblyAudit": {
+    "reviewedAtUtc": "2026-10-09T18:52:24.395065+00:00",
+    "candidateFile": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r09_c12.candidate.png",
+    "actualSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+    "expectedSha256": "64a4d47f945bd90edf3600d2a59db16b9a24f9f1284025f0af9f2c4c8b9faa6d",
+    "candidateHashMatches": true,
+    "dimensions": [
+      4096,
+      4096
+    ],
+    "contributionCount": 16,
+    "uniqueGridCells": 16,
+    "fullNativeCoreCoverage": true,
+    "sourceCorePixelsVerified": 16777216,
+    "finalPixels": 16777216,
+    "all16CoreRegionsPixelExact": true,
+    "allNativeImagesIdenticalToHostOutput": true,
+    "assemblyScript": "assemble_first.py",
+    "assemblyScriptSha256": "0050fcca9849d633042498521d46ace1e2fb5d4af0dd5f3344bec9db88f3e96c",
+    "scriptReview": "Assembly loop uses native 115:1139 crops and hard paste only. The sole resize call creates a separate 1024 preview after the 4096 candidate is saved.",
+    "noResizeEvidence": "All 16 destination core regions are byte-identical RGB pixels to corresponding native PNG crops, and each native PNG matches its recorded host output hash.",
+    "contributions": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p11_v01.png",
+        "actualSha256": "342551be9a9b6f4d00d4161791f389275becc37ff9a08e8f338710ea02545bd8",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          0,
+          0
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          45056,
+          32768,
+          46080,
+          33792
+        ],
+        "recordedCoreGlobalBox": [
+          45056,
+          32768,
+          46080,
+          33792
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p12_v06.png",
+        "actualSha256": "c7ab4e8cb53aac0b9aee9761e11b9cdfba87c499bb3f448726ab5befa2e2357e",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          1024,
+          0
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          46080,
+          32768,
+          47104,
+          33792
+        ],
+        "recordedCoreGlobalBox": [
+          46080,
+          32768,
+          47104,
+          33792
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p13_v02.png",
+        "actualSha256": "75d76b51ce0e8e0055889fae4069a7fb8beb3e7ef014df081f62b4be62531f47",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          2048,
+          0
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          47104,
+          32768,
+          48128,
+          33792
+        ],
+        "recordedCoreGlobalBox": [
+          47104,
+          32768,
+          48128,
+          33792
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p14_v01.png",
+        "actualSha256": "7ad656fef3b2ddef7f223e7efe1392fca746b054731bded4f3ba5a58f15c55b3",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          3072,
+          0
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          48128,
+          32768,
+          49152,
+          33792
+        ],
+        "recordedCoreGlobalBox": [
+          48128,
+          32768,
+          49152,
+          33792
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p21_v01.png",
+        "actualSha256": "1470ca2d1c56695504f9f95c96eed23fdf4105dccdaf7fd25bb152f5e7e08834",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          0,
+          1024
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          45056,
+          33792,
+          46080,
+          34816
+        ],
+        "recordedCoreGlobalBox": [
+          45056,
+          33792,
+          46080,
+          34816
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p22_v01.png",
+        "actualSha256": "a769ae67adfebe2d754ef6d0c0e04932f0eb87071c6a81004900851f613f86ea",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          1024,
+          1024
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          46080,
+          33792,
+          47104,
+          34816
+        ],
+        "recordedCoreGlobalBox": [
+          46080,
+          33792,
+          47104,
+          34816
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p23_v01.png",
+        "actualSha256": "ecff45ab897a4e199992af8db095542b4f34d5a73367af0160396750c5b1573c",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          2048,
+          1024
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          47104,
+          33792,
+          48128,
+          34816
+        ],
+        "recordedCoreGlobalBox": [
+          47104,
+          33792,
+          48128,
+          34816
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p24_v01.png",
+        "actualSha256": "3cc5ab929324232283919e6024a191a7ae5f41c886ccf96e5ebe9799062b1cda",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          3072,
+          1024
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          48128,
+          33792,
+          49152,
+          34816
+        ],
+        "recordedCoreGlobalBox": [
+          48128,
+          33792,
+          49152,
+          34816
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p31_v01.png",
+        "actualSha256": "34cc33eac5bfdfad5b2ae66a3236fdc8397505c74f10ea261f981c1e111843f3",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          0,
+          2048
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          45056,
+          34816,
+          46080,
+          35840
+        ],
+        "recordedCoreGlobalBox": [
+          45056,
+          34816,
+          46080,
+          35840
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p32_v01.png",
+        "actualSha256": "c9d3198e842b65c6b9170747c60450a2436776ae1678176c66a8f7b6934714a8",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          1024,
+          2048
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          46080,
+          34816,
+          47104,
+          35840
+        ],
+        "recordedCoreGlobalBox": [
+          46080,
+          34816,
+          47104,
+          35840
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p33_v01.png",
+        "actualSha256": "f9fdab4931f205367a9ddaef3f70f976473b61e9a31269f1524b59f3deec2676",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          2048,
+          2048
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          47104,
+          34816,
+          48128,
+          35840
+        ],
+        "recordedCoreGlobalBox": [
+          47104,
+          34816,
+          48128,
+          35840
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p34_v01.png",
+        "actualSha256": "c534a1fea315186d4c0f51f3b751300709efebf4a316b82dce0317807337a2cf",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          3072,
+          2048
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          48128,
+          34816,
+          49152,
+          35840
+        ],
+        "recordedCoreGlobalBox": [
+          48128,
+          34816,
+          49152,
+          35840
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p41_v01.png",
+        "actualSha256": "674505bbad4092c2bde39b481485fbe7d55e332700ece52d2ff5dbe63fc953a4",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          0,
+          3072
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          45056,
+          35840,
+          46080,
+          36864
+        ],
+        "recordedCoreGlobalBox": [
+          45056,
+          35840,
+          46080,
+          36864
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p42_v01.png",
+        "actualSha256": "a059cb7c8922cffccb484583e84a6398f3b2b441bdbccf49a2027875c9801168",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          1024,
+          3072
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          46080,
+          35840,
+          47104,
+          36864
+        ],
+        "recordedCoreGlobalBox": [
+          46080,
+          35840,
+          47104,
+          36864
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p43_v02.png",
+        "actualSha256": "a89ab6d7ecd7346072131e7f6d84d32ffc516545469af5a3dbe65d8079dfae5e",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          2048,
+          3072
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          47104,
+          35840,
+          48128,
+          36864
+        ],
+        "recordedCoreGlobalBox": [
+          47104,
+          35840,
+          48128,
+          36864
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c12_p44_v02.png",
+        "actualSha256": "dcd22a7ce48037fd3c8394e1bd9dc0a5bc4de5a27ab603240a250349c1d73c3a",
+        "contributionHashMatches": true,
+        "generationRecordHashMatches": true,
+        "sourceDimensions": [
+          1254,
+          1254
+        ],
+        "sourceCrop": [
+          115,
+          115,
+          1139,
+          1139
+        ],
+        "destination": [
+          3072,
+          3072
+        ],
+        "destinationPixels": [
+          1024,
+          1024
+        ],
+        "exactCorePixelEquality": true,
+        "expectedCoreGlobalBox": [
+          48128,
+          35840,
+          49152,
+          36864
+        ],
+        "recordedCoreGlobalBox": [
+          48128,
+          35840,
+          49152,
+          36864
+        ],
+        "coreGlobalBoxMatches": true,
+        "nativeGlobalBoxMatches": true,
+        "recordSaysNoResize": true,
+        "hostSourceExists": true,
+        "hostSourceHashMatches": true,
+        "validGridCell": true,
+        "validCoreCrop": true,
+        "passed": true
+      }
+    ],
+    "issues": [],
+    "status": "pass"
+  }
+}

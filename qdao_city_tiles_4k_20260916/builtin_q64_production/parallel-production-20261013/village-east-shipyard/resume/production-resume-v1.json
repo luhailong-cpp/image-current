@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-13T08:42:45.513362+00:00",
+  "status": "incomplete_tool_network_permission_revoked",
+  "selectedUniqueCores": 4,
+  "requiredCores": 64,
+  "savedNativeVersions": 5,
+  "assembledCandidates": 0,
+  "formalAccepted": 0,
+  "allSelectedDimensions": [
+    1254,
+    1254
+  ],
+  "selectedSourceHashesVerified": true,
+  "failureRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\requests\\p31-v1.failure-v1.json",
+  "subagentFailure": "shipyard_top_row: Fatal error: application network permission was revoked",
+  "actualModel": null,
+  "actualModelEvidence": "Built-in results only returned image_url and output_hint; model not returned.",
+  "pendingIssues": [
+    {
+      "source": "r10_c11_p11-v3",
+      "status": "pending_concentrated_QA",
+      "blocking": false,
+      "detail": "Cap approx 30 px low and south post silhouette approx 35-45 px left vs blurred guide; major original offset corrected."
+    },
+    {
+      "source": "r10_c11_p12-v2",
+      "status": "pending_concentrated_QA",
+      "blocking": false,
+      "detail": "Minor wood-grain tone difference at west seam reported by production subagent; major plank/beam edges continuous."
+    },
+    {
+      "source": "r10_c11_p21-v2",
+      "status": "needs_local_AI_repair_before_east_continuation",
+      "blockingDirections": [
+        "east"
+      ],
+      "detail": "Horizontal discontinuity y235-236, x800..1254 cuts the rail into deck at right. South strip y1024..1254 remains usable."
+    },
+    {
+      "source": "r10_c11_p13-v2",
+      "status": "needs_local_AI_repair_before_east_continuation",
+      "blockingDirections": [
+        "east"
+      ],
+      "detail": "Production subagent observed right-exiting workbench beam 150-220 px high relative to exact layout guide. p13-v3 repair prepared, no successful output received. p14-v1 guide depends on faulty edge and must be regenerated after repair."
+    }
+  ],
+  "nextStepsAfterNetworkRestored": [
+    "Re-read AGENTS and allocated_root_reserved split. No paid API or permission modifications.",
+    "Continue r10_c11/p31 using saved p31-v1 request if input hashes still match; last attempt returned no image.",
+    "Repair p13 right-exiting beam before p14.",
+    "Repair p21 right upper strip before using it as p22 west anchor.",
+    "Finish r10_c11 left column p31,p41 then allow r11_c11 corresponding first-column continuation.",
+    "Do not duplicate saved p11-v3,p12-v2,p13-v2,p21-v2; no tile may be assembled until all16 unique cores exist."
+  ],
+  "writeScope": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard",
+  "sharedGitChanged": false,
+  "mapComplete": false
+}

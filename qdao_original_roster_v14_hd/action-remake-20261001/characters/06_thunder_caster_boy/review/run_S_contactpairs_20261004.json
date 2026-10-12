@@ -1,0 +1,470 @@
+{
+  "scope": "run/S only",
+  "reviewedAt": "2026-10-04T17:25:42.549941+00:00",
+  "latestHumanRequirement": "直脚着地两帧，再旁边点两帧，依次过渡；同一支撑脚在不同相对位置各两张独立姿态",
+  "timing": {
+    "frameMs": 75,
+    "pairMs": 150,
+    "cycleMs": 1200
+  },
+  "pairMap": [
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        14,
+        15
+      ],
+      "position": "前端初接",
+      "observation": "前伸右脚平掌初接，脚尖沿S；左脚继续摆动"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        0,
+        1
+      ],
+      "position": "前侧承重",
+      "observation": "右脚前载，膝踝自然压缩，脚位从前端收近"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        2,
+        3
+      ],
+      "position": "身体经过",
+      "observation": "右支撑靴进一步收至身体下方，另一膝前摆；脚尖无外翻"
+    },
+    {
+      "supportLeg": "右脚",
+      "frames": [
+        4,
+        5
+      ],
+      "position": "后侧蹬离",
+      "observation": "原蜷起后脚已真实伸到后方前掌支撑；左腿前摆露底为摆动脚"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        6,
+        7
+      ],
+      "position": "前端初接",
+      "observation": "左前伸鞋掌放平，原宽鞋底仰起消除"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        8,
+        9
+      ],
+      "position": "前侧承重",
+      "observation": "左支撑靴由前端收近，鞋底压平，膝踝承重"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        10,
+        11
+      ],
+      "position": "身体经过",
+      "observation": "左脚继续向髋下收近，脚尖沿S而非向侧面外撇"
+    },
+    {
+      "supportLeg": "左脚",
+      "frames": [
+        12,
+        13
+      ],
+      "position": "后侧蹬离",
+      "observation": "左后脚从蜷起改为伸踝前掌支撑，右脚前摆准备换脚"
+    }
+  ],
+  "changedFrames": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "retainedFrames": [
+    0,
+    1,
+    7,
+    15
+  ],
+  "travel": "正面S朝向镜头；前后深度靠膝踝及鞋掌姿态表达，未将整图平移或让脚尖向侧面外撇",
+  "reference": "已实际查看并传入09竹弓少女runtime/run/S/01.png；只比较同向脚轴，06自身身份及持物保留。后续局部精修附目标原生图与designs已确认画法，防止身份相机漂移。",
+  "reviewMethod": [
+    "逐张查看原生新输出与16帧联系图",
+    "本目录16个runtime及native尺寸/透明/SHA/全画布导出像素核对",
+    "生成正常1200ms及慢放4800ms预览；整圈播放观感交主窗口最终验收"
+  ],
+  "technicalIssues": [],
+  "staticIndividualFrameReviewCompleted": true,
+  "wholeCycleVisualApproved": false,
+  "clientIntegrated": false,
+  "modelNote": "目标GPT Image2.5Sunburst/max；宿主管理内置入口无model/quality选择器，实际提交及返回版本/质量未确认",
+  "frames": [
+    {
+      "frame": 0,
+      "direction": "S",
+      "file": "runtime/run/S/00.png",
+      "sha256": "5aad372360763aa6f332c42c2c5591d6e985c25dca5ca4d47823898a2787e426",
+      "generationRecord": "runtime/run/S/00.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_00_position_v2.png",
+        "sha256": "e4ac90d7101bc1a90b57f2c2582198590f6bb001fcd479a07dbff24885369963",
+        "generationRecord": "work/run_S_00_position_v2.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        0,
+        1
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "右脚前载，膝踝自然压缩，脚位从前端收近",
+      "changedByFinishS": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 1,
+      "direction": "S",
+      "file": "runtime/run/S/01.png",
+      "sha256": "cf2bca4427712340ef53836e9e568474e25d0c97233184f01103d6eafecd797b",
+      "generationRecord": "runtime/run/S/01.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_01_position_v1.png",
+        "sha256": "e6e90d1a6340d887def5d5a6d1fa5d108eac33cc3d42b5a8cf5c076201234063",
+        "generationRecord": "work/run_S_01_position_v1.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        0,
+        1
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "右脚前载，膝踝自然压缩，脚位从前端收近",
+      "changedByFinishS": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 2,
+      "direction": "S",
+      "file": "runtime/run/S/02.png",
+      "sha256": "704e29e7aa4e8642b778a873282e7315e10754c7fb694201cde6afb1f169bb7c",
+      "generationRecord": "runtime/run/S/02.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_02_contactpair_v2.png",
+        "sha256": "5cbf0abd0d965c9e9e888d82fc598e38dc357e10e92d7be677bc29b9209c4a2f",
+        "generationRecord": "work/run_S_02_contactpair_v2.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        2,
+        3
+      ],
+      "positionPhase": "身体经过",
+      "observation": "右支撑靴进一步收至身体下方，另一膝前摆；脚尖无外翻",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 3,
+      "direction": "S",
+      "file": "runtime/run/S/03.png",
+      "sha256": "11f40530ef031d842a0baee886985bafc4374332fd03984300f51a90de67a867",
+      "generationRecord": "runtime/run/S/03.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_03_contactpair_v1.png",
+        "sha256": "5f47851f1a313c9f078cb3f946598867c655f50fc1b8b8eb23e2574c819571c6",
+        "generationRecord": "work/run_S_03_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        2,
+        3
+      ],
+      "positionPhase": "身体经过",
+      "observation": "右支撑靴进一步收至身体下方，另一膝前摆；脚尖无外翻",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 4,
+      "direction": "S",
+      "file": "runtime/run/S/04.png",
+      "sha256": "556792e5e57c89e38e6b56853dfcef91041d13881b8677b87d448dfcda4ed0dd",
+      "generationRecord": "runtime/run/S/04.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_04_contactpair_v2.png",
+        "sha256": "05e5f9de88ef5f85c35ab0a7324eec7983b6905f22c38d26f684d8a837315e84",
+        "generationRecord": "work/run_S_04_contactpair_v2.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        4,
+        5
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "原蜷起后脚已真实伸到后方前掌支撑；左腿前摆露底为摆动脚",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 5,
+      "direction": "S",
+      "file": "runtime/run/S/05.png",
+      "sha256": "e75e89c0f5b1849ec21dde846b8fa8d96feca5b0278871318bfe4378b29c67dd",
+      "generationRecord": "runtime/run/S/05.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_05_contactpair_v2.png",
+        "sha256": "8ddc45b097c0a05c784bdcc403d79511f5f2059ddd90ca8fbfcf5f9fab76f992",
+        "generationRecord": "work/run_S_05_contactpair_v2.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        4,
+        5
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "原蜷起后脚已真实伸到后方前掌支撑；左腿前摆露底为摆动脚",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 6,
+      "direction": "S",
+      "file": "runtime/run/S/06.png",
+      "sha256": "a609539a62253e6a5eb14f2d319a5f4238dcd2b17d70b1b5adb988db6750b146",
+      "generationRecord": "runtime/run/S/06.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_06_contactpair_v1.png",
+        "sha256": "f665e5726e70120cc39b32541c78e2877ab5b1b3c3e6c5f04a497806a6c3b2af",
+        "generationRecord": "work/run_S_06_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        6,
+        7
+      ],
+      "positionPhase": "前端初接",
+      "observation": "左前伸鞋掌放平，原宽鞋底仰起消除",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 7,
+      "direction": "S",
+      "file": "runtime/run/S/07.png",
+      "sha256": "af3ed79758964bbe291c74078313942346fc5839d5815bba95b33e6fb65be4b5",
+      "generationRecord": "runtime/run/S/07.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_07_plant_v1.png",
+        "sha256": "4c7830d13f5c21549814546bbb5cd6f860e902668b2c2b6ac0f74d7d400e0426",
+        "generationRecord": "work/run_S_07_plant_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        6,
+        7
+      ],
+      "positionPhase": "前端初接",
+      "observation": "左前伸鞋掌放平，原宽鞋底仰起消除",
+      "changedByFinishS": false,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 8,
+      "direction": "S",
+      "file": "runtime/run/S/08.png",
+      "sha256": "0ce6ac8460655be9933383a8f8b4a7c55f12f4c5d996e66375d67f90f8d0f495",
+      "generationRecord": "runtime/run/S/08.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_08_contactpair_v1.png",
+        "sha256": "d515eb252dd83127c3f42e85b73122e703183ac2150c60a50179237869ff795e",
+        "generationRecord": "work/run_S_08_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        8,
+        9
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "左支撑靴由前端收近，鞋底压平，膝踝承重",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 9,
+      "direction": "S",
+      "file": "runtime/run/S/09.png",
+      "sha256": "901e654e095b0c004f756fa9e933a34f421345b6ca0be0ea5ac3f873b96eaff3",
+      "generationRecord": "runtime/run/S/09.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_09_contactpair_v1.png",
+        "sha256": "6b2a7d614a790cba27209c11b468830d84c59b608df378de2f44f5892aa814a4",
+        "generationRecord": "work/run_S_09_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        8,
+        9
+      ],
+      "positionPhase": "前侧承重",
+      "observation": "左支撑靴由前端收近，鞋底压平，膝踝承重",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 10,
+      "direction": "S",
+      "file": "runtime/run/S/10.png",
+      "sha256": "730e9306be3ad7a7e82f2067e1d0ea5ae4fe0ea5f62e27ec93c9169ebe22b393",
+      "generationRecord": "runtime/run/S/10.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_10_contactpair_v2.png",
+        "sha256": "8b9a3b634470985924cec25d58e86d321953c7740b1ae1b314ccd606d6dded81",
+        "generationRecord": "work/run_S_10_contactpair_v2.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        10,
+        11
+      ],
+      "positionPhase": "身体经过",
+      "observation": "左脚继续向髋下收近，脚尖沿S而非向侧面外撇",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 11,
+      "direction": "S",
+      "file": "runtime/run/S/11.png",
+      "sha256": "f5c3306a68a2926ff542f288e446052c7544b8f907907c808a27f6e886fed1a4",
+      "generationRecord": "runtime/run/S/11.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_11_contactpair_v1.png",
+        "sha256": "ed10b6b0a5054d7008f58ba1b0c2c22181a5e5c1f53a0a86fadc4da82b84e8b4",
+        "generationRecord": "work/run_S_11_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        10,
+        11
+      ],
+      "positionPhase": "身体经过",
+      "observation": "左脚继续向髋下收近，脚尖沿S而非向侧面外撇",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 12,
+      "direction": "S",
+      "file": "runtime/run/S/12.png",
+      "sha256": "568571d9a0f77c37073492476b66eac3ea7e092ca0df080e1ecbfa9729d4c85b",
+      "generationRecord": "runtime/run/S/12.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_12_contactpair_v1.png",
+        "sha256": "0223b0e49aadd0656abc1b6a7de00be470c4a7333f60bcb230af59d3639caa26",
+        "generationRecord": "work/run_S_12_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        12,
+        13
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "左后脚从蜷起改为伸踝前掌支撑，右脚前摆准备换脚",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 13,
+      "direction": "S",
+      "file": "runtime/run/S/13.png",
+      "sha256": "373b0c4177cca61e0c5a80aa62a1d57469cc7752aeef3c419685a5894b36c27d",
+      "generationRecord": "runtime/run/S/13.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_13_contactpair_v1.png",
+        "sha256": "492bbb0ea720f8d195c4bab4d55963c1d5857a466e2264ac0e6c528ca71a2166",
+        "generationRecord": "work/run_S_13_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "左脚",
+      "pairFrames": [
+        12,
+        13
+      ],
+      "positionPhase": "后侧蹬离",
+      "observation": "左后脚从蜷起改为伸踝前掌支撑，右脚前摆准备换脚",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 14,
+      "direction": "S",
+      "file": "runtime/run/S/14.png",
+      "sha256": "4979522e23c9995a7fc7cc05a8c509963a7e1c08439ea332cb2ca4079fea5df2",
+      "generationRecord": "runtime/run/S/14.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_14_contactpair_v1.png",
+        "sha256": "11672de62257a2ada8f928825426371c85211c9a63d73f275953cd67da7ead0b",
+        "generationRecord": "work/run_S_14_contactpair_v1.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        14,
+        15
+      ],
+      "positionPhase": "前端初接",
+      "observation": "前伸右脚平掌初接，脚尖沿S；左脚继续摆动",
+      "changedByFinishS": true,
+      "actualModel": null,
+      "actualQuality": null
+    },
+    {
+      "frame": 15,
+      "direction": "S",
+      "file": "runtime/run/S/15.png",
+      "sha256": "d46b0e7a5f8cfa7a5cbce4cc2c3290c56c19b091a70c480d9d4913b0e9bbd21b",
+      "generationRecord": "runtime/run/S/15.png.generation.json",
+      "nativeSource": {
+        "file": "work/run_S_15_plant_v1.png",
+        "sha256": "97590554851766cbd70a1e7a3d288df6b5c63c48ed552ce409829b4e10b0808d",
+        "generationRecord": "work/run_S_15_plant_v1.png.generation.json"
+      },
+      "supportLeg": "右脚",
+      "pairFrames": [
+        14,
+        15
+      ],
+      "positionPhase": "前端初接",
+      "observation": "前伸右脚平掌初接，脚尖沿S；左脚继续摆动",
+      "changedByFinishS": false,
+      "actualModel": null,
+      "actualQuality": null
+    }
+  ]
+}

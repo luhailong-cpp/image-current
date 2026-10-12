@@ -1,0 +1,15 @@
+# Second actual native repair: align staircase nosings across vertical seam.
+rp2=D/'stairs-v1/native.png';re2=np.asarray(Image.open(rp2).convert('RGB'));x2,y2=512,2957
+whole=render_float();old2=whole[y2:y2+P,x2:x2+P]
+lp=260+pipeline.minimum_seam(old2[:,260:460],re2[:,260:460])
+rpv=840+pipeline.minimum_seam(re2[:,840:1040],old2[:,840:1040])
+b2=((xx>=lp[:,None])&(xx<rpv[:,None])).astype(np.float32)
+s2=smooth((xx-lp[:,None]+64)/128)*smooth((rpv[:,None]-xx+64)/128)
+safe2=(~edges(old2,re2))&(np.max(abs(old2.astype(float)-re2.astype(float)),2)<100)
+al2=np.where(safe2,s2,b2)*smooth(yy/50)*smooth((P-yy)/35)
+al2=al2.astype(np.float32)
+for ss,ww in zip(sources,weights):
+ sx,sy=ss['offsetXY'];l=max(sx,x2);t=max(sy,y2);rr=min(sx+P,x2+P);bb=min(sy+P,y2+P)
+ if rr>l and bb>t:ww[t-sy:bb-sy,l-sx:rr-sx]*=1-al2[t-y2:bb-y2,l-x2:rr-x2]
+sources.append({'sourceId':18,'file':str(rp2),'sha256':sha(rp2),'generationRecord':str(rp2)+'.generation.json','offsetXY':[x2,y2],'worldBox':[16781,15130,18035,16384]});arr.append(re2);weights.append(al2)
+

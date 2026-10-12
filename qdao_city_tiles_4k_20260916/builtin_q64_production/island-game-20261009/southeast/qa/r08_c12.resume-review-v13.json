@@ -1,0 +1,108 @@
+{
+  "reviewedAt": "2026-10-10T23:08:44.894225+00:00",
+  "reviewer": "coordinate_audit",
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r08_c12.candidate-v13.png",
+  "sha256": "5df51839c15ae43c3c32427a95233365b5660130e0e7fd151198c7476b587117",
+  "scope": "native100percent internal seams, all9junctions, new repair perimeters, full4x1024 proposed shared boundary, overview; root owns final external acceptance",
+  "internalGeometry": "24 grid seams have no disconnected contours after current repairs, but architectural coping design remains rejected below",
+  "internalCandidateAccepted": false,
+  "formalAcceptedCount": 0,
+  "externalUsableAccepted": false,
+  "sharedRoofProposalReadyForRoot": true,
+  "roofFindings": [
+    "At true tile boundary the blue tile channels and transverse courses are continuous through x0..2560 because both sides use the same native images.",
+    "Gold ridge and scroll connect without the old chopped peg or blue replacement ledge.",
+    "Shared edge x2560..4096 retains existing foliage; no obvious leaf contour split found.",
+    "Bottom proposal perimeter y443 and native patch joins retain mild blue brush/value variation; root must inspect after applying; no external formal claim."
+  ],
+  "resolved": [
+    "row2/3 broad paving softness discontinuity; complete slabs repainted in six native windows",
+    "j21 residual soft slab region",
+    "j33 rectangular blurred hedge patch",
+    "right stone post 55px old contour jump",
+    "p41/p42 blue roof rectangle and shared-boundary tile-phase jump",
+    "p42/p43 interrupted gold/red ridge"
+  ],
+  "openIssues": [
+    {
+      "severity": "requires_architectural_repair",
+      "locationTileApprox": [
+        2210,
+        3050
+      ],
+      "issue": "Coping still has an artificial height step/extra foreground ledge at j32 in selected v13. Pixel continuity is not sufficient for object correctness.",
+      "evidence": [
+        "qa/r08_c12.junction_32-v13.png",
+        "guides/r08_c12_repair_coping_v04.native-context.png"
+      ],
+      "attempts": [
+        {
+          "native": "native/r08_c12_repair_coping_v03.png",
+          "status": "rejected_unselected",
+          "reason": "Whole cap becomes planar but right upper edge drops toward native y760 instead of the existing y590 anchor, moving discontinuity to right perimeter."
+        },
+        {
+          "native": "native/r08_c12_repair_coping_v04.png",
+          "status": "rejected_unselected",
+          "reason": "Explicit coordinate anchors did not prevent right cap height drift; rejected right perimeter saved."
+        }
+      ],
+      "nextRepair": "Coordinate a longer complete coping object redraw across at least middle and right native windows, keeping existing post attachment and upper edge; do not repair with another narrow L patch."
+    },
+    {
+      "severity": "material_review",
+      "location": "new paving perimeter at y1536 and wall/roof overlay boundaries",
+      "issue": "Some brush density/value changes are visible at100%; contours remain connected. Root review should judge final painted consistency."
+    }
+  ],
+  "checkedGridSeams": [
+    "h1-s1",
+    "h1-s2",
+    "h1-s3",
+    "h1-s4",
+    "h2-s1",
+    "h2-s2",
+    "h2-s3",
+    "h2-s4",
+    "h3-s1",
+    "h3-s2",
+    "h3-s3",
+    "h3-s4",
+    "v1-s1",
+    "v1-s2",
+    "v1-s3",
+    "v1-s4",
+    "v2-s1",
+    "v2-s2",
+    "v2-s3",
+    "v2-s4",
+    "v3-s1",
+    "v3-s2",
+    "v3-s3",
+    "v3-s4"
+  ],
+  "checkedJunctions": [
+    "11",
+    "12",
+    "13",
+    "21",
+    "22",
+    "23",
+    "31",
+    "32",
+    "33"
+  ],
+  "evidenceManifest": "qa/r08_c12.v13-seam-evidence.json",
+  "replay": "qa/r08_c12.replay-v13.json",
+  "sourceAudit": "qa/r08_c12.source-audit-v13.json",
+  "newResumeNativeCount": 13,
+  "totalSavedR08NativeCount": 39,
+  "selectedBaseCores": 16,
+  "selectedRepairOverlays": 12,
+  "inFlight": false,
+  "unselectedResumeImages": [
+    "r08_c12_repair_roof_v02",
+    "r08_c12_repair_coping_v03",
+    "r08_c12_repair_coping_v04"
+  ]
+}

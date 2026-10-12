@@ -1,0 +1,69 @@
+{
+  "id": "G07-v1",
+  "intent": "precise-object-edit",
+  "prompt": "Use case: precise-object-edit.\nImage 1 is the EXACT edit target, a 1254 x 1254 native game-art paving crop. Return exactly 1254 x 1254 with identical crop, camera, scale, lighting, texture and topology. Images 2, 3, 4 are approved layout/material/art-style references only; do not copy their composition or introduce objects.\n\nPerform ONE extremely small repair: the stair-step notch in the existing upward-right diagonal grout around target pixel (533,365). This is the long diagonal from the left edge to the upper Y-junction. Its two existing portions are about 15 pixels laterally misregistered. Repair only a short local transition near x=480..595, y=325..410 so that the dark grout channel and both pale bevel lips become a single uninterrupted smooth continuous joint. Accommodate the small mismatch with a subtle local bend/taper; retain both original distant segments exactly at their existing pixel positions. DO NOT translate, straighten, reangle, redraw, normalize, or shift the whole diagonal.\n\nPreserve these observed original anchors and their surroundings: (420,439), (450,418), (480,396), then the right-hand segment at (575,347), (595,334) and onward. The existing notch lies between the local left anchors (495,386),(515,372) and right anchors (535,374),(555,361). These are source groove positions, not new positions. Ease only this tiny transition from one existing side to the other. The left T-junction near (420,439), upper Y-junction near (914,112), all outer edge pixels, all other grooves and all material must remain unchanged.\n\nDo not repair either unrelated dangling seam in the lower half. Keep the lower large crossing near (837,1095), dangling tip near (533,810), short dangling branch near (718,1171), and every other paving feature exactly where it already is. No broad material repaint, no geometric grid cleanup, no additional grout, no new objects, no text or markings. Output the original scene with only the tiny upper diagonal notch smoothed.",
+  "promptPath": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\G07-worker\\G07-v1.prompt.txt",
+  "promptSha256": "5c33eb549af936948167d25fd6203db2d664eb2fbd97e5d31f1f43edfd6fc8b8",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\input\\group-a-target.native1254.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg"
+  ],
+  "inputs": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\refinement-resume20261010\\group-a-geometry\\input\\group-a-target.native1254.png",
+      "sha256": "3536462be647b11c473988cf8d77241e7ae88b1c6d889a8b0c206dec26748fac",
+      "role": "edit target",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "approved style reference",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/tianyong/tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "approved style reference",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "approved style reference",
+      "size": [
+        1932,
+        814
+      ]
+    }
+  ],
+  "expectedNativeSize": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "attemptLimit": 1,
+  "contextCropBox": [
+    512,
+    2100,
+    1766,
+    3354
+  ],
+  "coreOrigin": [
+    397,
+    1985
+  ],
+  "createdAt": "2026-10-10T16:26:32.208182+00:00"
+}

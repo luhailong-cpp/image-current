@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s01_s02_v03",
+  "reviewedAt": "2026-10-09T23:04:02.401741+00:00",
+  "decision": "reject-two-remaining-visible-joint-defects",
+  "usableForSelection": false,
+  "repairRequested": true,
+  "formalAccepted": false,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s02_v03.png",
+      "sha256": "be77d642ae2a67c81ede454c99493c6ef4072f149365668d03dfb3efc395271a"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s01_s02_v03.native-overlap-edit-target.png",
+      "sha256": "d698b646680f2868e8b3654a091d5f84c7609c09f96b02a4e511e1043a54ab1e"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\assemble_r03_c03.py",
+      "sha256": "32d65a023e4f17ee91d77e10e97fd0d931ef981baa025e9c5d93c4d4c5fbe9e8"
+    }
+  ],
+  "editTargetLeft230VerifiedExactWestCrop": true,
+  "visualViews": {
+    "originals": [
+      "v03 native",
+      "v03 actual edit target",
+      "west native already inspected"
+    ],
+    "fullHardcut": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v03.seam100pct.png",
+    "overlapComparison": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v03.west-vs-new-overlap100pct.png",
+    "scale": "100%; no resampling"
+  },
+  "hardcutDiagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v03.hardcut-diagnostic.json",
+    "sha256": "34bb29a36fd46a7e159985e06498cd5fdce3cb17bac7147559d5039f3f86df7e",
+    "method": "Unmodified append_hard/minimum_vertical_seam using true230px overlap; sum-squared RGB with adjacent step<=1; no feather/resample.",
+    "fullLengthChecked": 1254,
+    "overlapMAEForContextOnly": 9.726186348611979,
+    "pathRange": [
+      0,
+      76
+    ],
+    "decisionBasedOnVisibleGeometry": true
+  },
+  "findings": [
+    {
+      "severity": "reject",
+      "kind": "remaining-severed-diagonal-joint",
+      "incomingNativeRegionApproximate": [
+        0,
+        945,
+        45,
+        1005
+      ],
+      "globalRegionApproximate": [
+        13197,
+        9022,
+        13242,
+        9082
+      ],
+      "detail": "A stone-colored wedge covers the diagonal mortar so the two joint ends do not connect. Center near incoming(20,978).",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v03.remaining-gap100pct.png"
+    },
+    {
+      "severity": "reject",
+      "kind": "bottom-tiny-split-junction",
+      "incomingNativeRegionApproximate": [
+        5,
+        1150,
+        55,
+        1195
+      ],
+      "globalRegionApproximate": [
+        13202,
+        9227,
+        13252,
+        9272
+      ],
+      "detail": "Bottom junction forms a small duplicate edge/triangular fragment along the actual source switch.",
+      "evidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v03.bottom-junction100pct.png"
+    }
+  ],
+  "improvementFromV02": [
+    "Most upper and middle overlap joints now join visibly without the prior long sliver fragments.",
+    "Lamp placement and overall crop remain compatible."
+  ],
+  "editAdvice": [
+    "Target the two remaining lower seam defects locally; do not redraw the whole paving or move the lamp again.",
+    "Use current adaptive hardcut and exact native west overlap as geometry evidence aroundy945..1005 and1150..1195.",
+    "Keep already continuous upper/middle geometry and the lamp fixed.",
+    "Recheck the entire hardcut after repair because a local edit may still change unrequested anchor pixels."
+  ],
+  "reviewLimits": [
+    "This diagnosis does not accept internal tile or exterior tile joins.",
+    "No shared selection, plan or progress file was modified."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "createdAtUtc": "2026-10-10T22:40:31.611185+00:00",
+  "status": "passed",
+  "syntheticOnly": true,
+  "productionArtworkMutated": false,
+  "fullSize4096And1254": true,
+  "fixtureAssemblyLeafUsesDeterministicPixelOracle": true,
+  "fixtureDirectory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\qa\\cross_tile_native_validation\\synthetic_623aravq",
+  "checks": {
+    "four_way_exact_replay_and_root_provenance": {
+      "pass": true
+    },
+    "vertical_two_way_projection": {
+      "pass": true
+    },
+    "horizontal_two_way_projection": {
+      "pass": true
+    },
+    "only_mask_affected_tiles_written": {
+      "pass": true
+    },
+    "negative_crop": {
+      "pass": true,
+      "rejection": "Cluster crop must be a 1254 square inside8192."
+    },
+    "outside_cluster_crop": {
+      "pass": true,
+      "rejection": "Cluster crop must be a 1254 square inside8192."
+    },
+    "resized_crop": {
+      "pass": true,
+      "rejection": "Cluster crop must be a 1254 square inside8192."
+    },
+    "non_crossing_crop": {
+      "pass": true,
+      "rejection": "Crop must cross a tile boundary into two or four tiles."
+    },
+    "duplicate_tile_identity": {
+      "pass": true,
+      "rejection": "Manifest tiles must form one unique contiguous2x2 neighborhood."
+    },
+    "base_hash_tamper": {
+      "pass": true,
+      "rejection": "Hash mismatch: manifest current image"
+    },
+    "wrong_globalBox": {
+      "pass": true,
+      "rejection": "Cross-tile input globalBox differs from the current pinned manifest."
+    },
+    "wrong_parts": {
+      "pass": true,
+      "rejection": "Cross-tile input parts differs from the current pinned manifest."
+    },
+    "retagged_target_pixel_tamper": {
+      "pass": true,
+      "rejection": "Edit target does not exactly equal the current verified cross-tile crop; ancestor reuse is not supported."
+    },
+    "generation_reference_mismatch": {
+      "pass": true,
+      "rejection": "Generation reference order/list differs from cross-tile input."
+    },
+    "receipt_reference_mismatch": {
+      "pass": true,
+      "rejection": "Builtin receipt did not submit the exact ordered cross-tile references."
+    },
+    "receipt_prompt_mismatch": {
+      "pass": true,
+      "rejection": "Builtin receipt prompt text differs from saved prompt."
+    },
+    "nonbinary_mask": {
+      "pass": true,
+      "rejection": "Mask must contain only 0 and 255."
+    },
+    "crop_ancestry_cycle": {
+      "pass": true,
+      "rejection": "Cyclic or excessive repair provenance chain."
+    },
+    "projection_offset_tamper": {
+      "pass": true,
+      "rejection": "Projection changed the exact source/tile intersection."
+    },
+    "retagged_operation_offset_tamper": {
+      "pass": true,
+      "rejection": "Cross-tile selected counts or source offsets changed."
+    },
+    "retagged_unselected_output_pixel_change": {
+      "pass": true,
+      "rejection": "Cross-tile output changed a mask-zero pixel or copied a wrong native coordinate."
+    },
+    "overwrite_existing_output_version": {
+      "pass": true,
+      "rejection": "Output version already exists; never overwrite."
+    },
+    "projection_out_of_bounds": {
+      "pass": true,
+      "rejection": "Projection boxes leave source or tile bounds."
+    },
+    "single_tile_repair_after_cross_projection": {
+      "pass": true
+    },
+    "operation_record_cycle_guard": {
+      "pass": true
+    },
+    "new_guard_single_repair_chain_replay": {
+      "pass": true
+    }
+  },
+  "checkCount": 26,
+  "visualAcceptance": false,
+  "validatedModules": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\cross_tile_native_repair.py",
+      "sha256": "4cb8fcb130b131e37012e4933211cfb3d5e2956c538fb07a02ed143cf88ae916"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\apply_native_tile_repair.py",
+      "sha256": "fad2a14a92177e3e76b2a02cc5a0a4a89c09bcfcf96e1c66f3f1bb1cec810041"
+    }
+  ]
+}

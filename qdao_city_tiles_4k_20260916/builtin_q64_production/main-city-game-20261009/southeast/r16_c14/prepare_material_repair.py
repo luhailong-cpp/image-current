@@ -1,0 +1,24 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+from PIL import Image
+T=Path(__file__).resolve().parent
+def read(p): return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def ev(p): return {'path':str(p),'sha256':hashlib.sha256(Path(p).read_bytes()).hexdigest()}
+def save(p,d): Path(p).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+Q=T/'review/native49-56e834ccdf9f6e52a143'; idx=read(Q/'index.json')
+qa={**idx,'reviewedAt':datetime.now(timezone.utc).isoformat(),'visualQA':'complete_with_one_local_material_band_pending','inspectionBasis':'All 49 native-size region files individually viewed original, plus all 14 native north/west join quarter and intersection files.','internalGeometryQA':'pass','internalArtQA':'pending_local_material_band_repair','findings':[{'id':'R16C14-M01','coreBox':[3110,1100,4096,1180],'description':'Straight horizontal mineral texture/value change at y1139 inside a continuous limestone block, inherited from p02_04 top-anchor end. Real course and vertical mortar topology remain connected.','status':'pending_native_repair'}],'externalNeighborSeamQA':{'north':'local_pass_with_texture_watch','west':'local_pass_with_texture_watch','east':'pending_missing_r16_c15_neighbor','south':'canvas_outer_boundary_painted_edge_checked'},'textureWatch':'Fine mineral texture density varies gradually among native sources. Only M01 is a clear straight material boundary requiring repair.','actualNativeOutputCount':17,'actualModel':None,'actualQuality':None,'formalAccepted':False}
+save(Q/'visual-qa-v1.json',qa)
+p=read(T/'progress.json');p.update(updatedAt=qa['reviewedAt'],internalArtQA=qa['internalArtQA'],internalGeometryQA='pass',externalNeighborSeamQA=qa['externalNeighborSeamQA'],visualQA=ev(Q/'visual-qa-v1.json'),remainingFindings=qa['findings'],status='candidate_one_local_material_repair_pending',actualNativeOutputCount=17,formalAccepted=False);save(T/'progress.json',p)
+for name in ['production-resume-20261013.json','local-continuation-20261013.json']:
+ c=read(T/name);c.update(status=p['status'],candidate=idx['candidate'],context=idx['context'],manifest=idx['manifest'],visualQA=p['visualQA'],nextPatches=[],missingNativeCount=0,internalQA=qa['internalArtQA'],externalQA=qa['externalNeighborSeamQA'],remainingFindings=qa['findings']);save(T/name,c)
+R=T/'repairs-20261013';R.mkdir(exist_ok=True)
+target=R/'material-band-v1-target.png'; Image.open(idx['candidate']['path']).crop([2842,850,4096,2104]).save(target)
+prompt="""Precise local surface repair. Return one opaque native 1254x1254 image. First three images are approved style/layout/material references only. The LAST image is the only edit target: a native detail crop of existing pale limestone south-city wall, not a whole scene. Preserve every stone block boundary, thin horizontal course, vertical mortar, bevel, all shadows, existing scale, framing and color. No new objects or geometry, no zoom, no cropping or resizing.
+Repair ONLY the artificial straight horizontal texture/value transition running approximately y289, x270..1254 in this target (source core x3112..4096, y1139). It is NOT a stone joint, shadow or material edge. It is a flat surface within existing blocks. Make natural hand-painted pale grey/beige limestone mineral patches and their grain continue organically through y289, eliminating the ruler-straight cutoff. Match the surrounding same-block texture and warm/cool value on BOTH sides with an irregular natural connected surface, not a straight replacement stripe, no blur and no painted white line.
+Keep the genuine horizontal mortar at y199 and y~1020 intact. Keep the existing vertical mortar near x790 from y199 downwards exactly intact. The repair must NOT remove, shift, thicken, straighten or fork real joints. Preserve pixels outside y230..410 as closely as possible. No overall color grade, no globally denoised texture, no shiny/new embellishment. Output full native1254 square with same exact alignment."""
+refs=read(next((T/'records').glob('p04_04*.request.json')))['referenced_image_paths'][:3]+[str(target)]
+request={'prompt':prompt,'referenced_image_paths':refs,'transparent_background':False}
+save(R/'material-band-v1.request.json',request); (R/'material-band-v1.prompt.txt').write_text(prompt,encoding='utf-8')
+save(R/'material-band-v1.preparation.json',{'createdAt':qa['reviewedAt'],'target':ev(target),'baseCandidate':idx['candidate'],'baseContext':idx['context'],'baseManifest':idx['manifest'],'sourceCropInCore':[2842,850,4096,2104],'references':[ev(x) for x in refs],'request':ev(R/'material-band-v1.request.json'),'prompt':ev(R/'material-band-v1.prompt.txt'),'resized':False,'actualModel':None,'actualQuality':None})
+print(json.dumps({'qa':ev(Q/'visual-qa-v1.json'),'target':str(target),'request':str(R/'material-band-v1.request.json')},indent=2))

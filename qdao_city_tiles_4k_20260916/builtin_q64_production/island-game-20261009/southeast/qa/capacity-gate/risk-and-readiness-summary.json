@@ -1,0 +1,132 @@
+{
+  "time": "2026-10-10T05:55:38.576176+00:00",
+  "gate": "capacity-gate-ack.json",
+  "newImagegenCallsAfterGate": 0,
+  "inFlight": false,
+  "currentFullCandidateCount": 5,
+  "fullyClosed2x2": false,
+  "milestone": {
+    "tiles": [
+      "r09_c11",
+      "r09_c12",
+      "r10_c11",
+      "r10_c12"
+    ],
+    "missing": "r10_c11 has onlyp14, remaining15 native cores ungenerated",
+    "currentCornerQA": "qa/capacity-gate/r09c11-r09c12-r10c11-r10c12-junction.png",
+    "cornerObservation": "Native four-way stair contours are continuous, no obvious half-step or duplicate tread. This single corner is not whole2x2 acceptance."
+  },
+  "sharedEdgeQA": {
+    "r09c11_r09c12": {
+      "scope": "whole4096 edge in four512x1024 native strips",
+      "status": "major_geometry_continuous",
+      "minorObservation": "Some wood/gold/stone tonal bands remain visible; no new obvious major contour break across cut.",
+      "files": [
+        "qa/capacity-gate/r09c11-r09c12-edge-1.png",
+        "qa/capacity-gate/r09c11-r09c12-edge-2.png",
+        "qa/capacity-gate/r09c11-r09c12-edge-3.png",
+        "qa/capacity-gate/r09c11-r09c12-edge-4.png"
+      ]
+    },
+    "r09c12_r10c12": {
+      "scope": "whole4096 edge, currentv02 both",
+      "status": "root_and_independent_delta_review_pass",
+      "record": "qa/r09_c13-agent-root-delta-review.json"
+    }
+  },
+  "risks": [
+    {
+      "id": "no_world_mapping",
+      "scope": "whole southeast",
+      "status": "unvalidated",
+      "issue": "57344px map and4096px art tiles provide no world-unit conversion, character footprint or navigation mask; capacity5000 cannot be inferred from raster size.",
+      "requires": "World scale, consistent character body/footprint, conservative walkable mask, path connectivity/crowd validation."
+    },
+    {
+      "id": "courtyard_exit",
+      "scope": [
+        "r09_c11",
+        "r09_c12",
+        "r10_c11",
+        "r10_c12"
+      ],
+      "status": "incomplete_sample",
+      "issue": "House facade, entry steps, courtyard wall and instrument racks occupy much of current art. Roof pixels must be excluded from standable area. The courtyard exit lies partly outside generated coverage.",
+      "requires": "Complete connected2x2 sample and compare footprint/contact obstacles, especially rack legs and step transitions."
+    },
+    {
+      "id": "dock_approach",
+      "scope": [
+        "r11_c12"
+      ],
+      "status": "partial10_of16",
+      "issue": "Visible rail, large decorative lantern and water limit approach space; the partial crop does not prove an unobstructed route onto the deck. Water, rail/lantern footprints must not count as standable floor.",
+      "requires": "Check route around lantern and railing against approved overview and future whole-footprint collision geometry; no widening or layout changes authorized."
+    },
+    {
+      "id": "upper_house_roof_seam",
+      "scope": [
+        "r08_c12",
+        "r09_c12"
+      ],
+      "status": "unresolved_visual_geometry",
+      "issue": "r08 worker currentcandidate-v3 replay passes but gold support is hard-truncated across shared edge and roof channel phase still drifts. Treat visual geometry issue separately from capacity evidence.",
+      "requires": "After gate release, redraw sufficient native extent to include whole discontinuous object and all anchor boundaries; recheck real assembled edge."
+    },
+    {
+      "id": "right_rack_seams",
+      "scope": [
+        "r09_c13"
+      ],
+      "status": "unresolved_visual_geometry",
+      "issue": "Two post/beam seams remain unresolved; repair center improves but insertion perimeter creates post step.",
+      "requires": "After gate release, full-object/native-junction redraw rather than repeating failed small-box repairs."
+    },
+    {
+      "id": "style_reference_missing",
+      "scope": "all future generated patches",
+      "status": "observed_input_missing",
+      "issue": "D:/work/image/designs/mail-ui-v1/01-mail-event.png absent; historicalSHA3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2 must remain unchanged.",
+      "requires": "Find byte-identical original/current approved reference before new requests. Historical source evidence and existing source-pixel replay remain preserved."
+    }
+  ],
+  "supportingRecords": [
+    {
+      "file": "qa/r10_c11-gate-review.md",
+      "exists": true,
+      "sha256": "1c08a69bb21a490dc9be138a437aa98b4025f95d2c3c3792a37ddb86a02737dc"
+    },
+    {
+      "file": "qa/r10_c11-gate-source-audit.json",
+      "exists": true,
+      "sha256": "f0163633ef2ad98cd49357468eec16ad6d2b2ef3721a7a500e61da8d4e792e74"
+    },
+    {
+      "file": "qa/r08_c12.gate-review-20261010.json",
+      "exists": true,
+      "sha256": "4a78d4b6af4b2544d8e53007ac418c032713ce9eaf3ac45b9110e5bd765257b1"
+    },
+    {
+      "file": "qa/r08_c12.replay-v3.json",
+      "exists": true,
+      "sha256": "c8a47fdb4476a6fffa2b63a12e73b3dc5e95d4eb2c64f29e58ec4e851b912d83"
+    },
+    {
+      "file": "qa/r09_c13-agent-root-delta-review.json",
+      "exists": true,
+      "sha256": "0d7f2d953c63b437a90f584d0fa50f106ff84f6a23547c019089f4ff9048f3a5"
+    },
+    {
+      "file": "qa/capacity-gate/root-candidates-source-replay.json",
+      "exists": true,
+      "sha256": "d112efb8a7f16608ceaa5732dedd1e9dce01c40423a2dfc0c6c2b601f0ef893e"
+    }
+  ],
+  "formalAcceptedCount": 0,
+  "capacity5000Validated": false,
+  "worldSize": null,
+  "partialR11Review": "qa\\capacity-gate\\r11_c12-partial\\index.json",
+  "partialR11SeamsReviewed": 13,
+  "partialR11JunctionsReviewed": 4,
+  "updatedAt": "2026-10-10T06:08:08.867842+00:00"
+}

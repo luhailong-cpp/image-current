@@ -1,0 +1,29 @@
+{
+  "actuallyViewed": true,
+  "nativePixelScale": 1,
+  "reviewedMethods": [
+    {
+      "method": "Original full230px minimum-error pair",
+      "file": "minimum-error-south-boundary-native.png",
+      "seamYRange": [1159,1253],
+      "result": "failed",
+      "finding": "The seam falls south of the formal north-core boundary y1139 and creates a visible jagged brightness and groove boundary; it is not a usable north-only correction."
+    },
+    {
+      "method": "Regularized binary source selection constrained to north core",
+      "file": "south-minerror-derived-boundary-native.png",
+      "detail": "south-minerror-derived-rail-native.png",
+      "derivedNative": "s04_01_fix08_south-minerror-derived.png",
+      "derivedNativeSha256": "a9afd76b669a3f8439405b9a9e9f36d04874d337dbb62e48113e29f0a68e9ad5",
+      "seamYRange": [1074,1138],
+      "result": "failed_internal_derivative_join",
+      "formalBorderPixelsMatchExistingSouth": true,
+      "finding": "The assigned north-core boundary now uses exact real southern source pixels, but the visible brightness/groove break has moved above it, around native x670..780 and y1130. A separate small kink in the right groove around x910..925,y1024 persists from raw fix08. Moving the seam did not make the whole painted surface continuous.",
+      "integrationRecommendation": "Retain for review only. Do not substitute it as an accepted source. If parent needs a derived candidate for comparison, preserve both source hashes and binary mask; never label it one raw image_gen output."
+    }
+  ],
+  "sourcePixelIntegrity": "Derived image uses unmodified native source pixels only; exact source replay mismatch count0; no blur, feather, color adjustment, resampling, or code painting.",
+  "formalAccepted": false,
+  "moreSameStrategyImageGenerationRecommended": false,
+  "remainingNeed": "A coordinated boundary repair with an editing method that actually preserves fixed neighboring pixels, or a separately authorized art review of the remaining defect; no automatic acceptance."
+}

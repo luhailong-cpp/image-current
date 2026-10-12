@@ -1,0 +1,163 @@
+{
+  "reviewedAtUtc": "2026-10-09T23:33:10.718465+00:00",
+  "reviewer": "audit_contract",
+  "status": "pass_local_visual_review",
+  "scope": "Full1254 combined crop, original target, source selection mask and all four boundary bands; source-chain validation not repeated",
+  "integrationContext": "Root reports this exact combined repair was integrated into candidate-v3 relative to v2; this review is local visual acceptance only",
+  "evidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/combined_native_crop.png",
+      "sha256": "dfa9f004bd36065f4d8dc1caa45c38585d5603ab99c1df56a2cc873bd4bdb83b",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/source_selection_mask.png",
+      "sha256": "1dd8b8d03c0bd62ebb0a445314cef6768c86beaa1b0a61b674f212efe84158a2",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/guides/r03_c03_repair_window_wall_a01.native-crop.png",
+      "sha256": "b94e64c2eb95430df2b9fb0d31f04298a037220a25d73cd2db8f31eb527bdaf5",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "boundaryEvidence": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_top_boundary100pct.png",
+      "sha256": "fba59db86dab0304d8f092c8204ac5519efdca60e8f6bd778cdb34ba8775199c",
+      "nativeSize": [
+        710,
+        175
+      ],
+      "cropBoxHalfOpen": [
+        45,
+        285,
+        755,
+        460
+      ],
+      "resized": false
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_bottom_boundary100pct.png",
+      "sha256": "954a848f3986343d7543c98da07ee996ca0e85869e2738fe6ec457bf1845fd1d",
+      "nativeSize": [
+        715,
+        195
+      ],
+      "cropBoxHalfOpen": [
+        40,
+        545,
+        755,
+        740
+      ],
+      "resized": false
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_left_boundary100pct.png",
+      "sha256": "a1d3b523c9aca538c7404c4d84e882ac57ff7219fd105e4c1e17723dd08ac755",
+      "nativeSize": [
+        155,
+        370
+      ],
+      "cropBoxHalfOpen": [
+        15,
+        310,
+        170,
+        680
+      ],
+      "resized": false
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_right_boundary100pct.png",
+      "sha256": "baaf343dbcb367c0398729f32c6b7261c2562d844f63d8d66742b016b18d0f01",
+      "nativeSize": [
+        180,
+        410
+      ],
+      "cropBoxHalfOpen": [
+        580,
+        305,
+        760,
+        715
+      ],
+      "resized": false
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/northwest/qa/repair_window_wall_a01_mask-v1/independent_window_corner100pct.png",
+      "sha256": "681386782d3654bfa32a9b14bbf4352c08cae7d1ec07e7c8d8e0195af60e62ab",
+      "nativeSize": [
+        250,
+        225
+      ],
+      "cropBoxHalfOpen": [
+        490,
+        370,
+        740,
+        595
+      ],
+      "resized": false
+    }
+  ],
+  "maskBoundsLocal": [
+    65,
+    332,
+    714,
+    669
+  ],
+  "maskBoundsFinalTile": [
+    965,
+    1032,
+    1614,
+    1369
+  ],
+  "tileCropOrigin": [
+    900,
+    700
+  ],
+  "findings": [
+    {
+      "item": "window_top_right_brightness_rectangle",
+      "result": "pass",
+      "finding": "Former rectangular plaster brightness boundary above/right of the window top corner has disappeared. Natural diagonal eave shadow and existing painterly plaster remain."
+    },
+    {
+      "item": "window_frame_geometry",
+      "result": "pass",
+      "finding": "Top frame bevel, upper-right miter, right jamb, inner carving and cross-mask lower window details stay continuous without double edge or missing frame segment."
+    },
+    {
+      "item": "top_mask_boundary",
+      "result": "pass",
+      "finding": "Upper irregular mask edge across plaster does not create a visible replacement band."
+    },
+    {
+      "item": "bottom_mask_boundary",
+      "result": "pass",
+      "finding": "Lower irregular edge traversing plaster and window details has no new geometric break or conspicuous brightness band."
+    },
+    {
+      "item": "left_and_right_boundaries",
+      "result": "pass",
+      "finding": "Column/plaster left edge and shaded plaster/right window surround remain coherent; no obvious new hard selection edge."
+    },
+    {
+      "item": "full_crop",
+      "result": "pass",
+      "finding": "Roof trim, upper beam, post and lantern remain visually coherent with the local wall repair."
+    }
+  ],
+  "mustRepair": [],
+  "limits": [
+    "Not a full-tile acceptance or repetition of integration/source-provenance verification.",
+    "Ordinary painterly texture variation remains; no claim of photographic pixel identity across AI boundaries."
+  ]
+}

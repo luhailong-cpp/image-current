@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s01_s02_v01",
+  "reviewedAt": "2026-10-09T22:30:11.520871+00:00",
+  "decision": "reject-repair-stone-phase",
+  "usableForSelection": false,
+  "repairRequested": true,
+  "formalAccepted": false,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s02_v01.png",
+      "sha256": "875d6e52d43e3b6b97d2d7df4ac0aa1b1c6aee8738cb855dacfe9ede390b6adb"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s01_s02.layout-and-native-overlap.png",
+      "sha256": "b07129108c73fae17cb6b639c0d01e9ecbf3dfea67696262512ab21fdd4908cb"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\assemble_r03_c03.py",
+      "sha256": "32d65a023e4f17ee91d77e10e97fd0d931ef981baa025e9c5d93c4d4c5fbe9e8"
+    }
+  ],
+  "guideLeft230VerifiedExactWestCrop": true,
+  "visualViews": {
+    "originals": [
+      "actual guide",
+      "new native",
+      "west native"
+    ],
+    "fullHardCut": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v01.seam100pct.png",
+    "overlapComparison": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v01.west-vs-new-overlap100pct.png",
+    "scale": "100%; no image resampling"
+  },
+  "hardcutDiagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s01_s02_v01.hardcut-diagnostic.json",
+    "sha256": "8c688bc7be9c3ac907abb8c90659cec5eab9c8a66b786e77088cb2745deffff9",
+    "method": "unmodified append_hard/minimum_vertical_seam, actual230px overlap, sum-squared RGB; no feather or resample",
+    "fullLengthChecked": 1254,
+    "overlapMAE": 16.372463768115942,
+    "pathRange": [
+      41,
+      188
+    ],
+    "lowCostDoesNotOverrideGeometry": true
+  },
+  "findings": [
+    {
+      "severity": "reject",
+      "kind": "stone-grid-phase-offset",
+      "nativeRegion": [
+        0,
+        0,
+        230,
+        1254
+      ],
+      "evidence": "Actual guide overlap exactly equals west rightmost230px. Guide top junction is nearx115; new top junction is nearx222. The new grid is about100px right of required phase, and matches west full-image phase rather than west right-edge phase.",
+      "anchorCoordinatesApproximate": true,
+      "guideAnchors": [
+        [
+          115,
+          0
+        ],
+        [
+          105,
+          176
+        ],
+        [
+          85,
+          359
+        ],
+        [
+          69,
+          550
+        ]
+      ],
+      "newAnchors": [
+        [
+          222,
+          0
+        ],
+        [
+          200,
+          175
+        ],
+        [
+          184,
+          359
+        ],
+        [
+          161,
+          550
+        ]
+      ]
+    },
+    {
+      "severity": "reject",
+      "kind": "hardcut-invented-small-diamonds",
+      "nativeRegions": [
+        [
+          95,
+          140,
+          207,
+          208
+        ],
+        [
+          82,
+          327,
+          193,
+          390
+        ],
+        [
+          60,
+          510,
+          175,
+          580
+        ]
+      ],
+      "globalRegions": [
+        [
+          13292,
+          8217,
+          13404,
+          8285
+        ],
+        [
+          13279,
+          8404,
+          13390,
+          8467
+        ],
+        [
+          13257,
+          8587,
+          13372,
+          8657
+        ]
+      ],
+      "evidence": "Actual minimum-error seam combines mismatched mortar networks into repeated extra small diamond slabs. These features do not belong to either continuous stone grid.",
+      "locationsApproximate": true
+    },
+    {
+      "severity": "reject",
+      "kind": "hardcut-severed-mortar",
+      "nativeRegion": [
+        40,
+        690,
+        155,
+        860
+      ],
+      "globalRegion": [
+        13237,
+        8767,
+        13352,
+        8937
+      ],
+      "evidence": "The seam drops parts of diagonal joints and creates abrupt joint ends and a broken slab corner.",
+      "locationsApproximate": true
+    },
+    {
+      "severity": "reject",
+      "kind": "hardcut-bottom-step",
+      "nativeRegion": [
+        70,
+        1100,
+        145,
+        1150
+      ],
+      "globalRegion": [
+        13267,
+        9177,
+        13342,
+        9227
+      ],
+      "evidence": "Another visible diagonal mortar step occurs near nativey1115.",
+      "locationsApproximate": true
+    }
+  ],
+  "acceptableElements": [
+    "Large cropped lamp post and curved bracket remain in the correct broad layout position and approximate native scale.",
+    "Pale blue-grey stone material and painterly finish are compatible; the defect is grid phase and resulting seam topology."
+  ],
+  "editAdvice": [
+    "Use current candidate as edit target and preserve the lamp post, bracket, finial and lower lantern placement and scale.",
+    "Redraw stone floor only, anchored to the complete actual left230px guide strip. Continue both diagonal mortar families and slab bevels rightward with identical endpoints and scale.",
+    "Consider omitting the full west image reference, which can ambiguously encourage copying its left-edge phase. The guide already carries exact native west-right230px evidence.",
+    "Do not translate or resize the complete candidate, since that would move the correctly framed lamp. Do not hide the mismatch with feathering or another mincut.",
+    "Check repaired native left overlap and full-height adaptive hardcut again before selection."
+  ]
+}

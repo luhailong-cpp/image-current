@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T08:21:09.086059+00:00",
+  "script": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\scripts\\assembly-v2.py",
+    "sha256": "3fede1934809fc79ceed173bfd95aa2142f9729916795f57445d9be2ff426b42"
+  },
+  "originalScript": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\scripts\\assembly-v1.py",
+    "sha256": "57934eafec72437c3fb6a1ec01798826b389a6c6012093e024cd08bbec9ee352",
+    "modified": false
+  },
+  "plan": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\production-plan-v1.json",
+    "sha256": "ae158edd59df5293f1bb6b4551aafe84316e763da60ca2dd7db0c6d970feb6bf",
+    "changedDuringValidation": false
+  },
+  "fixes": [
+    "dry-run now validates optional pinned north halo and upstream trace",
+    "explicit dry-run c06/full rejects incomplete requested stage"
+  ],
+  "results": [
+    {
+      "name": "help",
+      "arguments": [
+        "--help"
+      ],
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "stdout": "usage: assembly-v2.py [-h] [--plan PLAN] [--validate-plan]\n                      [--selection SELECTION]\n                      [--selection-sha256 SELECTION_SHA256] [--dry-run]\n                      [--stage {auto,c06,full}] [--output-dir OUTPUT_DIR]\n                      [--north-halo]\n\nExplicit-source native assembly v2 for village-west-courtyard. No generation,\nshared-state writes, directory scans, resampling or RGB blending. --validate-\nplan and --dry-run never create output files. Production requires an explicit\npinned selection and a fresh output directory inside this batch. The c06 stage\nneeds all 32 c06 patches; only a 64-patch full run exports tiles.\n\noptions:\n  -h, --help            show this help message and exit\n  --plan PLAN\n  --validate-plan       Validate 64 planned boxes; no files written\n  --selection SELECTION\n                        Explicit versioned JSON manifest; no discovery or\n                        newest-file inference\n  --selection-sha256 SELECTION_SHA256\n                        Required SHA256 pin of the explicit selection JSON\n  --dry-run             Validate selection hashes, sources and geometry; no\n                        output/DP\n  --stage {auto,c06,full}\n  --output-dir OUTPUT_DIR\n                        Fresh output directory INSIDE this batch; existing\n                        paths are refused\n  --north-halo          Copy pinned r11_c06 pixels into top halo only",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "64-plan-boxes",
+      "arguments": [
+        "--validate-plan"
+      ],
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"valid\": true, \"patchCount\": 64, \"uniqueCoreCount\": 64, \"planSha256\": \"ae158edd59df5293f1bb6b4551aafe84316e763da60ca2dd7db0c6d970feb6bf\", \"writes\": 0}",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "empty-selection-auto-readonly",
+      "arguments": [
+        "--selection",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\empty-selection-fixture.json",
+        "--selection-sha256",
+        "a239640c7294593da4239c24857ee8087157304a2942b976c76b7947eb251daf",
+        "--dry-run"
+      ],
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"valid\": true, \"writes\": 0, \"selectedNativeSources\": 0, \"completeC06Stage\": false, \"completeFullBatch\": false, \"requestedStage\": \"auto\", \"requestedStageReady\": false, \"northHaloValidated\": false, \"recommendedStage\": null, \"missingSlots\": [\"r12_c06/p01_01\", \"r12_c06/p01_02\", \"r12_c06/p01_03\", \"r12_c06/p01_04\", \"r12_c06/p02_01\", \"r12_c06/p02_02\", \"r12_c06/p02_03\", \"r12_c06/p02_04\", \"r12_c06/p03_01\", \"r12_c06/p03_02\", \"r12_c06/p03_03\", \"r12_c06/p03_04\", \"r12_c06/p04_01\", \"r12_c06/p04_02\", \"r12_c06/p04_03\", \"r12_c06/p04_04\", \"r13_c06/p01_01\", \"r13_c06/p01_02\", \"r13_c06/p01_03\", \"r13_c06/p01_04\", \"r13_c06/p02_01\", \"r13_c06/p02_02\", \"r13_c06/p02_03\", \"r13_c06/p02_04\", \"r13_c06/p03_01\", \"r13_c06/p03_02\", \"r13_c06/p03_03\", \"r13_c06/p03_04\", \"r13_c06/p04_01\", \"r13_c06/p04_02\", \"r13_c06/p04_03\", \"r13_c06/p04_04\", \"r12_c07/p01_01\", \"r12_c07/p01_02\", \"r12_c07/p01_03\", \"r12_c07/p01_04\", \"r12_c07/p02_01\", \"r12_c07/p02_02\", \"r12_c07/p02_03\", \"r12_c07/p02_04\", \"r12_c07/p03_01\", \"r12_c07/p03_02\", \"r12_c07/p03_03\", \"r12_c07/p03_04\", \"r12_c07/p04_01\", \"r12_c07/p04_02\", \"r12_c07/p04_03\", \"r12_c07/p04_04\", \"r13_c07/p01_01\", \"r13_c07/p01_02\", \"r13_c07/p01_03\", \"r13_c07/p01_04\", \"r13_c07/p02_01\", \"r13_c07/p02_02\", \"r13_c07/p02_03\", \"r13_c07/p02_04\", \"r13_c07/p03_01\", \"r13_c07/p03_02\", \"r13_c07/p03_03\", \"r13_c07/p03_04\", \"r13_c07/p04_01\", \"r13_c07/p04_02\", \"r13_c07/p04_03\", \"r13_c07/p04_04\"]}",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "empty-selection-explicit-full-refused",
+      "arguments": [
+        "--selection",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\empty-selection-fixture.json",
+        "--selection-sha256",
+        "a239640c7294593da4239c24857ee8087157304a2942b976c76b7947eb251daf",
+        "--dry-run",
+        "--stage",
+        "full"
+      ],
+      "expectedExitCode": 2,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Requested stage is incomplete; no output or filling permitted\", \"status\": \"assembly-refused\"}",
+      "passed": true
+    },
+    {
+      "name": "selection-hash-mismatch-refused",
+      "arguments": [
+        "--selection",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\empty-selection-fixture.json",
+        "--selection-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000",
+        "--dry-run"
+      ],
+      "expectedExitCode": 2,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"SHA256 mismatch: D:\\\\work\\\\image\\\\qdao_city_tiles_4k_20260916\\\\builtin_q64_production\\\\parallel-production-20261013\\\\village-west-courtyard\\\\qa\\\\assembly-cli-validation-v1\\\\empty-selection-fixture.json\", \"status\": \"assembly-refused\"}",
+      "passed": true
+    },
+    {
+      "name": "pinned-north-halo-validated",
+      "arguments": [
+        "--selection",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\empty-selection-fixture.json",
+        "--selection-sha256",
+        "a239640c7294593da4239c24857ee8087157304a2942b976c76b7947eb251daf",
+        "--dry-run",
+        "--north-halo"
+      ],
+      "expectedExitCode": 0,
+      "exitCode": 0,
+      "stdout": "{\"valid\": true, \"writes\": 0, \"selectedNativeSources\": 0, \"completeC06Stage\": false, \"completeFullBatch\": false, \"requestedStage\": \"auto\", \"requestedStageReady\": false, \"northHaloValidated\": true, \"recommendedStage\": null, \"missingSlots\": [\"r12_c06/p01_01\", \"r12_c06/p01_02\", \"r12_c06/p01_03\", \"r12_c06/p01_04\", \"r12_c06/p02_01\", \"r12_c06/p02_02\", \"r12_c06/p02_03\", \"r12_c06/p02_04\", \"r12_c06/p03_01\", \"r12_c06/p03_02\", \"r12_c06/p03_03\", \"r12_c06/p03_04\", \"r12_c06/p04_01\", \"r12_c06/p04_02\", \"r12_c06/p04_03\", \"r12_c06/p04_04\", \"r13_c06/p01_01\", \"r13_c06/p01_02\", \"r13_c06/p01_03\", \"r13_c06/p01_04\", \"r13_c06/p02_01\", \"r13_c06/p02_02\", \"r13_c06/p02_03\", \"r13_c06/p02_04\", \"r13_c06/p03_01\", \"r13_c06/p03_02\", \"r13_c06/p03_03\", \"r13_c06/p03_04\", \"r13_c06/p04_01\", \"r13_c06/p04_02\", \"r13_c06/p04_03\", \"r13_c06/p04_04\", \"r12_c07/p01_01\", \"r12_c07/p01_02\", \"r12_c07/p01_03\", \"r12_c07/p01_04\", \"r12_c07/p02_01\", \"r12_c07/p02_02\", \"r12_c07/p02_03\", \"r12_c07/p02_04\", \"r12_c07/p03_01\", \"r12_c07/p03_02\", \"r12_c07/p03_03\", \"r12_c07/p03_04\", \"r12_c07/p04_01\", \"r12_c07/p04_02\", \"r12_c07/p04_03\", \"r12_c07/p04_04\", \"r13_c07/p01_01\", \"r13_c07/p01_02\", \"r13_c07/p01_03\", \"r13_c07/p01_04\", \"r13_c07/p02_01\", \"r13_c07/p02_02\", \"r13_c07/p02_03\", \"r13_c07/p02_04\", \"r13_c07/p03_01\", \"r13_c07/p03_02\", \"r13_c07/p03_03\", \"r13_c07/p03_04\", \"r13_c07/p04_01\", \"r13_c07/p04_02\", \"r13_c07/p04_03\", \"r13_c07/p04_04\"]}",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "north-halo-hash-mismatch-refused",
+      "arguments": [
+        "--plan",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\invalid-anchor-plan-fixture.json",
+        "--selection",
+        "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1\\invalid-anchor-selection-fixture.json",
+        "--selection-sha256",
+        "5a643843d8d006ff497b674045f97b39b20a234cf215480ed9e59281a47a0a65",
+        "--dry-run",
+        "--north-halo"
+      ],
+      "expectedExitCode": 2,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"SHA256 mismatch: D:\\\\work\\\\image\\\\qdao_city_tiles_4k_20260916\\\\builtin_q64_production\\\\fishing-village-game-20261009\\\\southwest\\\\qa\\\\pair-r10r11c06-final-v5-r11_c06-context-native.png\", \"status\": \"assembly-refused\"}",
+      "passed": true
+    },
+    {
+      "name": "numeric-DP-path-vs-bruteforce-and-uint8-overflow-check",
+      "passed": true,
+      "path": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "cost": 42,
+      "bruteforceCost": 42,
+      "maximumDifferencePathCost": 585225,
+      "imageFilesProduced": 0
+    }
+  ],
+  "passedCount": 8,
+  "failedCount": 0,
+  "productionExecuted": false,
+  "imageFilesProduced": 0,
+  "writesScope": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\assembly-cli-validation-v1",
+  "limitations": [
+    "Actual-source dry-run awaits a producer selection file with PNG and generationRecord SHA pins.",
+    "32-source c06 stage and 64-source full assembly/export have not run.",
+    "Numerical DP test uses in-memory arrays only; no placeholder image artifact was created.",
+    "Visual seam acceptance remains pending."
+  ]
+}

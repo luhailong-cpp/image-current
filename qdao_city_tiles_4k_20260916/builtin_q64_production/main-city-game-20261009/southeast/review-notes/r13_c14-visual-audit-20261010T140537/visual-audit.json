@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T16:05:14.796022+00:00",
+  "tile": "r13_c14",
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-4k-candidate-f0484a5c8621a2c8804d.png",
+    "sha256": "9f512033dd67a95461d917b22fd45180aae16e5b420cfcf9c348d3f7e7021872",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r13_c14\\candidate\\r13_c14-context-4326-f0484a5c8621a2c8804d.png",
+    "sha256": "7ecdf4b3e4552cb78ccff8245cfa076655d246beb764f55a6f0d34339ff96bf2",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "assemblyIdentitySha256": "f0484a5c8621a2c8804d8136af2372ac83a09e69689aa79ccc50e0137ce0c2c2",
+  "activeNativeMapSnapshot": {
+    "p01_01": "p01_01_v20261010T110950_a0691986",
+    "p01_02": "p01_02_v20261010T111934_f49973a2",
+    "p02_01": "p02_01_v20261010T112800_d2554bea",
+    "p01_03": "p01_03_v20261010T112759_f0b73015",
+    "p01_04": "p01_04_v20261010T113552_9be63237",
+    "p02_02": "p02_02_v20261010T113553_2bd8c227",
+    "p03_01": "p03_01_v20261010T113555_55b5becb",
+    "p02_03": "p02_03_v20261010T115245_792de302",
+    "p03_02": "p03_02_v20261010T115246_cc3034df",
+    "p04_01": "p04_01_v20261010T120730_d3b7429b",
+    "p02_04": "p02_04_v20261010T120727_472c423d",
+    "p03_03": "p03_03_v20261010T120729_8825bc2c",
+    "p03_04": "p03_04_v20261010T123058_f1b41cfa",
+    "p04_02": "p04_02_v20261010T123059_07191469",
+    "p04_03": "p04_03_v20261010T125029_07115748",
+    "p04_04": "p04_04_v20261010T131159_345b242d"
+  },
+  "method": "Visual original-size review: 24 consecutive1024-long segments cover all six512px-wide internal seam bands; nine900sq junctions; all four exterior edge strips; full west bridge to unchanged r13_c13 core. Overview only for object/layout context.",
+  "formalAccepted": false,
+  "internalVerdict": "No blocking internal geometry discontinuity identified in inspected six full seams and nine junctions; minor surface/finial watch items below.",
+  "externalVerdict": "FAIL west-neighbor continuity; north/east/south neighbor comparisons pending.",
+  "westNeighbor": {
+    "tile": "r13_c13",
+    "sha256": "db5f956694c700b16094eb532ad9097e8a54f4a19d14797325f6fbd0ca18971f",
+    "readOnly": true
+  },
+  "coordinateConvention": "Approximate issue boxes in r13_c14 formal4096 coordinates; x=0 is west boundary. World origin [53248,49152].",
+  "findings": [
+    {
+      "id": "W1",
+      "priority": "high",
+      "mustCorrect": true,
+      "box": [
+        0,
+        1340,
+        260,
+        1640
+      ],
+      "sourcePatch": "p02_01",
+      "sourceVersion": "p02_01_v20261010T112800_d2554bea",
+      "observation": "Red/cream concentric lower parasol bands abruptly meet incompatible radial locations at x=0. The red band begins about100px lower on the new east side; an old red segment ends vertically at the boundary. This is a contour/topology failure, not a texture mismatch.",
+      "evidence": "west-bridge-1024.png",
+      "repair": "Use unchanged west CORE only and current east CORE in a shared1254 context; continue concentric bands/spokes on the east side, retaining west pixels and avoiding old unreliable halo."
+    },
+    {
+      "id": "W2",
+      "priority": "medium",
+      "mustCorrect": true,
+      "box": [
+        0,
+        470,
+        220,
+        950
+      ],
+      "sourcePatch": "p01_01",
+      "sourceVersion": "p01_01_v20261010T110950_a0691986",
+      "observation": "West/east parasol fabric changes hue and luminance at the formal vertical boundary. The cream panel and red outer band both reveal the line; adjoining wall material also changes.",
+      "evidence": "west-bridge-0.png",
+      "repair": "Match new east-side fabric value and weave to adjacent immutable west core without introducing a broad blur stripe."
+    },
+    {
+      "id": "W3",
+      "priority": "medium",
+      "mustCorrect": true,
+      "box": [
+        0,
+        2070,
+        180,
+        2850
+      ],
+      "sourcePatch": "p03_01",
+      "sourceVersion": "p03_01_v20261010T113555_55b5becb",
+      "observation": "Timber rail/step faces show an abrupt vertical illumination/material-value step at x=0. Major board edges mostly align, but the tile boundary is visible through continuous wood surfaces.",
+      "evidence": "west-bridge-2048.png",
+      "repair": "Locally reconcile east-side wood shading/grain against unchanged west core while preserving existing sloping rail/step silhouettes."
+    },
+    {
+      "id": "W4",
+      "priority": "medium",
+      "mustCorrect": true,
+      "box": [
+        0,
+        3840,
+        130,
+        3970
+      ],
+      "sourcePatch": "p04_01",
+      "sourceVersion": "p04_01_v20261010T120730_d3b7429b",
+      "observation": "A diagonal ground grout/highlight reaches the west boundary with a short offset/extra pale wedge on the east side. The replacement removed the former broad blue band, but this narrow core-to-core mismatch remains.",
+      "evidence": "west-bridge-3072.png",
+      "repair": "Continue the same stone boundary through x=0 using unchanged west core; do not introduce blue paving."
+    }
+  ],
+  "watchItems": [
+    {
+      "box": [
+        1040,
+        2000,
+        1200,
+        2190
+      ],
+      "observation": "Second railing finial tip is tangent to a strong background board line and reads clipped. No definite seam-caused occlusion established; optional silhouette cleanup, not counted as a blocker.",
+      "evidence": "cap-second-100pct.png"
+    },
+    {
+      "box": [
+        0,
+        1000,
+        700,
+        1280
+      ],
+      "observation": "Parasol fabric has broad horizontal tonal facets, but the outer silhouette is continuous. Recheck after the west-band correction.",
+      "evidence": "parasol-inner-horizontal-100pct.png"
+    }
+  ],
+  "passedLocalChecks": [
+    "Gold column-base rings retain continuous shape/material across current seams.",
+    "Stone riser/wood platform interface remains connected.",
+    "Lantern outer contour, gold ribs, bottom cap and tassel remain connected across both seam directions.",
+    "Railing shafts and rails do not show a blocking material cut in the latest sources.",
+    "p04_01 former accidental broad blue band is absent.",
+    "Current object framing agrees with the giant partial-building/parasol/lantern layout crop; no full-scene recentering found."
+  ],
+  "coverage": {
+    "verticalSeams": [
+      1024,
+      2048,
+      3072
+    ],
+    "horizontalSeams": [
+      1024,
+      2048,
+      3072
+    ],
+    "fullBandHalfWidth": 256,
+    "junctions": [
+      [
+        1024,
+        1024
+      ],
+      [
+        2048,
+        1024
+      ],
+      [
+        3072,
+        1024
+      ],
+      [
+        1024,
+        2048
+      ],
+      [
+        2048,
+        2048
+      ],
+      [
+        3072,
+        2048
+      ],
+      [
+        1024,
+        3072
+      ],
+      [
+        2048,
+        3072
+      ],
+      [
+        3072,
+        3072
+      ]
+    ],
+    "junctionHalfWidth": 450,
+    "externalEdges": [
+      "north",
+      "east",
+      "south",
+      "west"
+    ],
+    "westBridgeWidthPerTile": 400
+  },
+  "scope": "No tile/native/progress changes. Review evidence only. This report applies to the exact recorded SHA; subsequent repairs require a new review."
+}

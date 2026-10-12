@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>14 唤雪少女 · 动作审阅</title>
+<style>[hidden]{display:none!important}body{margin:0;background:#eef2ef;color:#233a38;font:15px system-ui}header{padding:20px 26px;background:#234d47;color:#fff}h1{margin:0 0 7px;font-size:24px}main{max-width:1180px;margin:20px auto;padding:0 16px}.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}button,select{padding:9px 15px;border:1px solid #aebfb4;border-radius:6px;background:white;color:#233a38}button{cursor:pointer}.layout{display:grid;grid-template-columns:minmax(320px,640px) 1fr;gap:20px}.stage{position:relative;width:240px;max-width:100%;aspect-ratio:1;background:#24303e;border:1px solid #aebfb4;border-radius:8px;overflow:hidden}.stage.light{background:#f9f5e8}.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.ground{position:absolute;top:91.9921875%;width:100%;border-top:1px dashed #d4bf86aa;pointer-events:none}.root{position:absolute;left:50%;top:91.9921875%;width:10px;height:10px;border:1px solid #f4c76c;transform:translate(-50%,-50%);pointer-events:none}.missing{display:grid;place-content:center;height:100%;color:#e7c4aa;font-size:22px}aside{background:#fff;border-radius:8px;padding:18px}p{line-height:1.65}.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:15px}.thumb{padding:4px;background:#e2e9e5;min-height:68px;border:2px solid transparent}.thumb.active{border-color:#397369}.thumb img{width:100%;display:block}.thumb small{display:block;font-size:11px}#timeline{width:100%;margin-top:16px}.tag{display:inline-block;padding:4px 8px;background:#f5e8c6;border-radius:5px;margin-bottom:8px}a{color:#287160}.small{font-size:12px;overflow-wrap:anywhere}@media(max-width:760px){.layout{grid-template-columns:1fr}.strip{grid-template-columns:repeat(6,1fr)}}</style>
+<header><h1>14 唤雪少女</h1><div id="summary"></div></header><main><div class="tools"><label>动作 <select id="action"><option value="run">跑步</option><option value="hit">受击</option><option value="attack">普攻</option><option value="cast">施法</option></select></label><label>方向 <select id="direction"></select></label><button id="play">播放</button><select id="speed"><option value="1">正常速度</option><option value=".25">慢速 ¼</option></select><button id="prev">上一帧</button><button id="next">下一帧</button><button id="background">切换深浅底</button><label>显示 <select id="displaySize"><option value="240">正常 240px</option><option value="512">放大 512px</option></select></label><a href="timing-grounding.html">跑步节奏对照</a></div><div class="layout"><div><div class="stage" id="stage"><img id="sprite" alt="当前动作帧"><div class="missing" id="missing">此槽位尚未生成</div><div class="ground"></div><div class="root"></div></div><input id="timeline" type="range" min="1" value="1"><p id="frameLabel"></p></div><aside><span class="tag" id="state"></span><div id="details"></div><p>所有 PNG 独立作画。缺失槽位显示为空；预览不会复制或插值补帧。横线为虚拟地面，十字为目标根点。</p><p class="small">已导出不等于动态验收通过。当前客户端未接入。</p><div class="strip" id="strip"></div></aside></div></main>
+<script>
+const M=__MANIFEST__,el=id=>document.getElementById(id);
+const names={run:'跑步',hit:'受击',attack:'普攻',cast:'施法'};
+let group=[],decoded=[],starts=[],cycleMs=0,n=0,ready=false,playing=false,raf=0,elapsed=0,last=0,rate=1,version=0;
+el('summary').textContent='目标196帧 · 已导出 '+M.exported+' · 视觉通过 '+M.visualPassed+' · 未接入客户端';
+function controls(disabled){['play','prev','next','timeline'].forEach(id=>el(id).disabled=disabled)}
+function dirs(){
+  const a=el('action').value;
+  el('direction').innerHTML=[...new Set(M.frames.filter(f=>f.action===a).map(f=>f.direction))].map(d=>'<option>'+d+'</option>').join('');
+  if(a==='run')el('direction').value='E';
+  return select();
+}
+async function select(){
+  const v=++version;
+  stop();ready=false;controls(true);elapsed=0;n=0;decoded=[];
+  group=M.frames.filter(f=>f.action===el('action').value&&f.direction===el('direction').value).sort((a,b)=>a.frame-b.frame);
+  starts=[];cycleMs=0;
+  group.forEach(f=>{starts.push(cycleMs);cycleMs+=f.durationMs});
+  el('timeline').max=group.length;el('strip').innerHTML='';
+  el('sprite').hidden=true;el('missing').hidden=false;el('missing').textContent='正在加载本组图片……';
+  group.forEach((f,i)=>{
+    const b=document.createElement('button');b.className='thumb';b.disabled=true;
+    const s=document.createElement('small');s.textContent=String(f.frame).padStart(2,'0')+(f.path?'':' 缺');b.append(s);
+    b.onclick=()=>inspect(i);el('strip').append(b);
+  });
+  try{
+    const images=await Promise.all(group.map(async f=>{
+      if(!f.path)return null;
+      const im=new Image;im.src=f.path+'?sha='+f.sha256;im.alt=f.slot;await im.decode();return im;
+    }));
+    if(v!==version)return;
+    decoded=images;ready=group.length>0;controls(!ready);
+    Array.from(el('strip').children).forEach((b,i)=>{if(decoded[i])b.prepend(decoded[i]);b.disabled=!ready});
+    if(ready)show();
+  }catch(e){
+    if(v!==version)return;
+    el('missing').textContent='图片加载失败，请重新选择本组';el('frameLabel').textContent=e.message;
+  }
+}
+function frameAt(t){
+  const position=((t%cycleMs)+cycleMs)%cycleMs;
+  for(let i=group.length-1;i>=0;i--)if(position>=starts[i])return i;
+  return 0;
+}
+function show(){
+  const f=group[n];if(!f)return;
+  el('sprite').hidden=!f.path;el('missing').hidden=!!f.path;el('missing').textContent='此槽位尚未生成';
+  if(f.path)el('sprite').src=decoded[n].src;else el('sprite').removeAttribute('src');
+  el('timeline').value=n+1;
+  el('frameLabel').textContent=names[f.action]+' '+f.direction+' · '+f.frame+'/'+group.length+' · '+f.durationMs+'ms/帧';
+  el('state').textContent=f.status==='missing'?'尚未生成':f.status==='passed'?'视觉通过':'已导出 · 待动态审核';
+  el('details').innerHTML='<p>本组 '+group.filter(x=>x.path).length+'/'+group.length+' 帧</p>'+(f.path?'<p><a href="'+f.path+'">打开原尺寸 PNG</a></p><p><a href="'+f.generationRecord+'">逐图来源</a></p><p class="small">SHA256: '+f.sha256+'</p>':'');
+  Array.from(el('strip').children).forEach((b,i)=>b.classList.toggle('active',i===n));
+}
+function advance(t){
+  elapsed+=Math.max(0,t-last)*rate;last=t;
+  const next=frameAt(elapsed);if(next!==n){n=next;show()}
+}
+function stop(){
+  if(playing)advance(performance.now());
+  playing=false;cancelAnimationFrame(raf);el('play').textContent='播放';
+}
+function tick(t){if(!playing)return;advance(t);raf=requestAnimationFrame(tick)}
+function play(){
+  if(!ready||playing)return;
+  playing=true;last=performance.now();el('play').textContent='暂停';raf=requestAnimationFrame(tick);
+}
+function inspect(i){
+  if(!ready)return;
+  stop();n=(i+group.length)%group.length;elapsed=starts[n];show();
+}
+el('play').onclick=()=>playing?stop():play();
+el('action').onchange=dirs;el('direction').onchange=select;
+el('prev').onclick=()=>inspect(n-1);el('next').onclick=()=>inspect(n+1);
+el('timeline').oninput=()=>inspect(Number(el('timeline').value)-1);
+el('speed').onchange=()=>{if(playing)advance(performance.now());rate=Number(el('speed').value)};
+el('background').onclick=()=>el('stage').classList.toggle('light');
+el('displaySize').onchange=()=>el('stage').style.width=el('displaySize').value+'px';
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+dirs();
+</script></html>
+
+

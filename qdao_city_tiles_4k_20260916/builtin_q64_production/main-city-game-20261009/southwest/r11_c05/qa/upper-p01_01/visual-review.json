@@ -1,0 +1,39 @@
+{
+  "reviewedAtUtc": "2026-10-09T16:27:58.672079+00:00",
+  "scope": "r11_c05 p01_01 attempt3 native image and its upper r10_c05 cross-tile edge only",
+  "inputs": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r11_c05\\native\\p01_01.png",
+      "sha256": "3ef5cd798ceaef698065930d16ac70eed0bbbe1c8ac7538a2e2c1305175c837d"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\refinement\\native\\p04_01.png",
+      "sha256": "ccd8114461c8202c13dd15f084c1cf3cce6d227fcb204d72696d3774c37fe32c"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\r10_c05\\repairs\\output\\r10_c05.repaired.candidate.png",
+      "sha256": "f228d0e07c4ed329bdcce87a46abb0ddeb48c9688dab1d86b33456051797ecad"
+    }
+  ],
+  "geometry": "Stone border silhouette and right-hand tread/riser edges remain closely registered. No obvious gap, duplicated stair, rescale, or major leaf silhouette jump was seen.",
+  "appearanceRisk": {
+    "priority": "P2",
+    "region": "Cross-tile hard boundary at world-art y=40960; strongest in leaves across approximately r11 tile x=0..515",
+    "finding": "Generated top overlap was repainted: lower leaf colors become darker and cooler at the hard core boundary, with small leaf/shading changes. Stone has weaker texture/tone differences. A straight hard crop is visibly less continuous than the supplied native reference.",
+    "evidence": "Native 1254x512 hard-boundary crop and actual candidate 1024x512 crop were visually inspected without resampling."
+  },
+  "recommendation": {
+    "wholePatchRegenerationRequired": false,
+    "upperBoundaryTreatmentRequiredBeforeAcceptance": true,
+    "action": "Retain this interior. Reconcile the shared 230px overlap using original native pixel ownership/seam assembly, keep the existing r10 candidate fixed, and recheck leaves and stone at native scale. If composition cannot hide the local mismatch, restrict repair to this upper boundary. Do not use wide blur or stretch."
+  },
+  "formalEdgeAccepted": false,
+  "limits": "Single patch review; does not validate p01_02, all four tile-edge patches, or whole tile acceptance.",
+  "artifacts": [
+    "upper-source-overlap.png",
+    "new-patch-overlap.png",
+    "hard-core-boundary.png",
+    "actual-tile-hard-boundary.png",
+    "numeric-comparison.json"
+  ]
+}

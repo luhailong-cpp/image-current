@@ -1,0 +1,48 @@
+{
+  "createdAtUtc": "2026-10-11T05:42:23.461Z",
+  "status": "prepared",
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit.\nEdit image 1 only. Return the exact same 1254 x 1254 pixel extreme-close stone-paving crop, with identical camera, framing, scale, lighting and stone colours. This is a tiny geometric seam repair for a continuous Chinese Daoist chibi daylight city map. Images 2, 3 and 4 are mandatory approved layout, material and Daoist style references only; do not depict their scenes, buildings, UI or characters.\n\nMake ONLY these two small corrections in image 1:\n1. Upper defect: at about y=274, a short horizontal grout spur extends left from the existing near-vertical joint at x=874 and then stops abruptly at x=627 in the middle of a large stone slab. Remove ONLY that unsupported left spur from x=627 to x=874, filling its thin groove and bevel with matching unchanged pale stone. Keep the existing vertical joint at x=874 and keep the horizontal grout line from that junction toward the RIGHT image edge. The right-side horizontal joint must terminate naturally as a clean T at the existing vertical joint. Do not extend the spur to the left and do not subdivide the large left slab.\n2. Lower defect: the existing diagonal grout that goes down and right starts abruptly around (627,990). Continue this SAME thin diagonal line upward-left to meet the ALREADY EXISTING broad diagonal joint at approximately (505,886), making one clean natural T junction. Match the existing groove width, dark center, pale bevel and slope exactly. Preserve the long main diagonal joint from bottom-left to about (742,712), and preserve the old lower-right diagonal from (627,990) to the bottom edge. Add only the missing roughly 125-pixel connecting segment. No extra branches, parallel grooves or new stone partitions.\n\nEverything else must remain pixel-aligned and unchanged: all existing slab edges, top step, red paper fragment, textures, shadows and light. Do not address the broad material difference across the image center in this request. No global smoothing, recolouring, new veins, redesign, overview, extra objects, text, grid, annotations or borders. Keep the outer 100 pixels unchanged. Native output must be 1254 by 1254, no upscaling.",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-repair-20261011\\south-crossedge.v1.target.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg"
+  ],
+  "references": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southwest\\pipeline-tools\\crossedge-repair-20261011\\south-crossedge.v1.target.png",
+      "sha256": "acf896aedbb0b345ba23bad4777640d2ffbf7b448eaeaf4fc17f9b9fc2996bf5",
+      "role": "edit target, exact 1254 square crop of current candidates"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-spring-natural-stone-v9.png",
+      "sha256": "47485b823db7dbe4e63883f9ae6d759f3f2fbb5897c72f16fa64e921bde6ccd7",
+      "role": "layoutReference"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\tianyong\\tianyong-natural-stone-detail-v1.png",
+      "sha256": "c10e878611dc2f373159257f5fc42d26957f04e35f19dee78fe1658e364e4809",
+      "role": "detailStyleReference"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel_20261005\\daylight-only-20261009\\user-references-20261009\\mail-daoist-style.jpg",
+      "sha256": "c1ab2e50b271e5c5590a92fe68bd6cf7d2c64cbd0d369b25b4ff5c6619033b63",
+      "role": "primaryStyleReference"
+    }
+  ],
+  "sourceEvidence": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest/pipeline-tools/crossedge-repair-20261011/source-evidence.json",
+  "targetWorldBox": [
+    19853,
+    42413,
+    21107,
+    43667
+  ],
+  "expectedNativePixels": [
+    1254,
+    1254
+  ],
+  "transparent_background": false,
+  "actualModel": null,
+  "actualQuality": null
+}

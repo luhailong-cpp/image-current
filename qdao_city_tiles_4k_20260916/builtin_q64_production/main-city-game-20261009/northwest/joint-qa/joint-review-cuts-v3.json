@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "joint-8x8-zero-based",
+  "description": "V3 native binary cuts: preserve the two reviewed V2 vertical core-center cuts, add row6/left5 vertical center and a strictly local topRow6/column5 horizontal center. Local review evidence predates the unrelated s02_01 material change, which requires new whole-joint delta QA. All output pixels remain exact native source pixels.",
+  "overrides": [
+    {
+      "id": "joint-review-v2-r6-c6",
+      "axis": "vertical",
+      "row": 6,
+      "leftColumn": 6,
+      "rightColumn": 7,
+      "mode": "core-center",
+      "worldSeamX": 19456,
+      "reason": "The reviewed native minimum-error pair splits one diagonal paving junction into offset T junctions. Fixed core-center selection restores the coherent X junction. Apply only this row's full 1254px vertical cut; Other explicitly configured V3 exceptions are recorded separately.",
+      "expectedSourceSha256": {
+        "left": "605ffc3de6d14c322d0580fc73f9241966f925e1d624e5f62b5c3b1c508928f3",
+        "right": "92f863c35b80a24f3c1f103c889a7d96cff3f2e3e504dcd5bef0eabd227d8766"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-review.json",
+          "sha256": "15889ea2cd79d90976dd7a5fe0efaa13cd5448f20ef2faf5bafdc3bdaf2f2b0c"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-mechanical-evidence.json",
+          "sha256": "ca8d145f340c5a0399bb2bf77516df5fba06b295f80b67ac5b93a1101ef0fba5"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row6-left6-core-center.png",
+          "sha256": "4088870a5efad31291d5444a99921779b6766aa9b4c59f1880a40e3ec3238c22"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row6-left6-minimum-error.png",
+          "sha256": "ac55647ff40111c51b8cbfb1ca59c826c3c98eeb878606d6f1988b4b610eba7c"
+        }
+      ]
+    },
+    {
+      "id": "joint-review-v2-r7-c5",
+      "axis": "vertical",
+      "row": 7,
+      "leftColumn": 5,
+      "rightColumn": 6,
+      "mode": "core-center",
+      "worldSeamX": 18432,
+      "reason": "The reviewed native minimum-error pair exposes disconnected or duplicate diagonal slab lines. The fixed core-center pair keeps complete connected joints. Apply only this row's full 1254px vertical cut; Other explicitly configured V3 exceptions are recorded separately.",
+      "expectedSourceSha256": {
+        "left": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089",
+        "right": "83a20e2fb260dee00ab6afeb1ec5c3fb3de7ed274d41888a166e1114baee04b5"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-review.json",
+          "sha256": "15889ea2cd79d90976dd7a5fe0efaa13cd5448f20ef2faf5bafdc3bdaf2f2b0c"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/pair-mechanical-evidence.json",
+          "sha256": "ca8d145f340c5a0399bb2bf77516df5fba06b295f80b67ac5b93a1101ef0fba5"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row7-left5-core-center.png",
+          "sha256": "b393d2f4e6c0cd3e353875f2e345ea568eb5e2c5d2b1d29160e90715a7ec76a9"
+        },
+        {
+          "file": "joint-qa/joint-review-cuts-v2/row7-left5-minimum-error.png",
+          "sha256": "e99215c25b6ff11b6cb1b8395b5c05584e148fafc5a8b742266406d0082b6bc2"
+        }
+      ]
+    },
+    {
+      "id": "joint-review-v3-r6-c5",
+      "axis": "vertical",
+      "row": 6,
+      "leftColumn": 5,
+      "rightColumn": 6,
+      "mode": "core-center",
+      "worldSeamX": 18432,
+      "reason": "Previously reviewed native row6 left5 core-center cut removes the broken junction near joint (6144,6144). It is paired with the separately recorded local horizontal cut at joint Y7168.",
+      "expectedSourceSha256": {
+        "left": "58f6f03bc77d435b8bda1e907bbc846f2aa4be890352278d4b573bff9f3adb86",
+        "right": "605ffc3de6d14c322d0580fc73f9241966f925e1d624e5f62b5c3b1c508928f3"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\mechanical-evidence.json",
+          "sha256": "6ab2280e3179d5d2ac9ec84ac985bb3d86c449efe119228a237e7cebffd1d3bf"
+        },
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\row6-left5-center-junction-x6144-y6144.png",
+          "sha256": "b555c40a2743d129e0a534a168872d7f071095b2edfcb65c7a04c42320629f0f"
+        },
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\row6-left5-center-vertical-row6.png",
+          "sha256": "fe23839f05aa8497b0b85b65a973f707e086094760f72cbc154ccb64793aec1b"
+        }
+      ]
+    },
+    {
+      "id": "joint-review-v3-horizontal-r6-c5",
+      "axis": "horizontal",
+      "topRow": 6,
+      "bottomRow": 7,
+      "column": 5,
+      "mode": "core-center",
+      "worldSeamY": 23552,
+      "jointSeamY": 7168,
+      "jointXHalfOpen": [
+        5120,
+        6144
+      ],
+      "overlapCutY": 115,
+      "reason": "The reviewed fixed core-center horizontal selection removes the remaining broken paving endpoint at junction (6144,7168). It affects only joint X [5120,6144) inside the Y7168 overlap; both 320px endpoint junction views were reviewed. The independently optimized pair cut was rejected and is not used.",
+      "expectedSourceSha256": {
+        "top": "58f6f03bc77d435b8bda1e907bbc846f2aa4be890352278d4b573bff9f3adb86",
+        "bottom": "37f43d910f5266d1496f56dafbdd9b852e298506b5f08eabececdb66fd6f1089"
+      },
+      "evidence": [
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\horizontal-local\\mechanical-evidence.json",
+          "sha256": "7fbc93d22e9dc49d59dc323eb6b37ecddb03f7be2d06f72e3709aaafbdff24dc"
+        },
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\horizontal-local\\local-core-center-junction-x5120-y7168.png",
+          "sha256": "34ebc0690c9e57685151b6d6ed168fd10f1515336ee87b8415e03a174be223be"
+        },
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\horizontal-local\\local-core-center-junction-x6144-y7168.png",
+          "sha256": "9c1731defdf21b18de7d7ad8d5520a7da628f433f56cc425eab71ac4576c79fe"
+        },
+        {
+          "file": "joint-qa\\row6-left5-center-exploration\\horizontal-local\\local-core-center-strip-x4960-6304-y7168.png",
+          "sha256": "7141156a8828197ce2dbb4aae7dc460fb73bec35aae494683283b8e466b8c4f1"
+        }
+      ]
+    }
+  ],
+  "supersedesForThisAssemblyOnly": {
+    "file": "joint-qa\\joint-review-cuts-v2.json",
+    "sha256": "360025d55e6b63d3a1dde5d8f2fe145b36a0029a1fcf41fd76c9219bfb7e43d0"
+  }
+}

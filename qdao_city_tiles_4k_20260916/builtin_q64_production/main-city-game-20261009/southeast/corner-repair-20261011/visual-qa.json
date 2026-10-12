@@ -1,0 +1,21 @@
+{
+  "status": "failed_not_promoted",
+  "native": "native.png",
+  "trial": "trial-corner-composite.png",
+  "nativeSize": [1254, 1254],
+  "nativeGenerationSucceeded": true,
+  "formalAccepted": false,
+  "appliedToTileCandidates": false,
+  "immutableOldCorePreservedInTrial": true,
+  "findings": [
+    "Generated pavement removes the original cross-shaped discontinuity, but the model moved the fixed upper-left geometry and changed texture.",
+    "Rigid integer translation [-18,-6] aligns two grout entry centres to within one pixel, but does not preserve all outer edge geometry.",
+    "Compositing the immutable upper-left back creates visible texture and shadow changes at x625/y625; this fails seam QA.",
+    "A broad outer feather creates doubled grout and paper ghosts near outer boundaries, so the whole-quadrant trial must not be used."
+  ],
+  "nextStep": "Reuse only small verified native geometry crops with minimum-error seams, or generate a repair conditioned on the immutable corner and narrow editable strips. Review full native-scale boundaries before any candidate promotion.",
+  "resized": false,
+  "newArtworkMethod": "builtin image_gen.imagegen",
+  "actualModel": null,
+  "actualQuality": null
+}

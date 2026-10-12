@@ -1,0 +1,62 @@
+{
+  "scope": "r05_c04/s04_03 and s04_04 surface-material native editing only",
+  "status": "native_material_candidates_ready_for_assembly_review",
+  "formalAccepted": false,
+  "selectionModified": false,
+  "progressModified": false,
+  "outputs": [
+    {
+      "logicalPatch": "s04_03",
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/native/s04_03_material01.png",
+      "sha256": "a8fa59256e1f1737386643a7034df897db85bdb7f5906cc1d9e1182362ba17b7",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "recommendation": "Prefer this version for trial assembly: visible cold coarse mottling is reduced, northern overlap MAE decreased. Not formal acceptance."
+    },
+    {
+      "logicalPatch": "s04_04",
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/native/s04_04_material01.png",
+      "sha256": "f42a39b6ad10f187eef45f96cb6d3d9716a38587a4790283e71a67233affb505",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "recommendation": "Trial with s04_03_material01, then inspect actual minimum-error seam. Material improved, but north/west mean color mismatch increased slightly; not unconditionally accepted."
+    }
+  ],
+  "actuallyViewed": [
+    "s03_03 full native",
+    "s03_04 full native",
+    "s04_03_fix01 full native",
+    "s04_04_fix01 full native",
+    "existing 4096 candidate reduced overview",
+    "all three canonical references",
+    "both registered guide images",
+    "both generated output images",
+    "both native north before-after comparisons",
+    "native west before-after comparison"
+  ],
+  "findings": [
+    "Dense scalloped cold-grey dabs visibly reduced on both new patches; finer diagonal painted surface now closer to northern native patches.",
+    "No newly observed dangling grout, subdivided small slab grid, obvious blossom additions, broken branches or changed canopy outline.",
+    "Sampled dark cores of all three horizontal grout joints retained identical y coordinates in both generated patches.",
+    "Flowers are visually preserved in shape and position but not pixel-identical: red/pink pixel mean absolute RGB changes approximately5.42 and7.98/255; these may matter at flowering overlaps.",
+    "s04_03 northern overlap MAE improved3.490->2.348; mean hard-seam jump3.686->2.525.",
+    "s04_04 northern overlap MAE1.966->2.671; west overlap MAE2.213->3.542. New stone is slightly brighter/cooler than its west neighbor; visible hard-cut strip remains subtle."
+  ],
+  "reviewImages": [
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/layout-only/s04_03_material01.north-compare.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/layout-only/s04_04_material01.north-compare.png",
+    "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/layout-only/s04_04_material01.west-compare.png"
+  ],
+  "metrics": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/receipts/s04_03_material01.metrics.json",
+  "invariants": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/receipts/s04_04_material01.invariants.json",
+  "limitations": [
+    "Review comparisons are unscaled native hard-cut diagnostic strips, not the final minimum-error seam path.",
+    "No final candidate assembled by this worker; whole candidate, external edges and acceptance are parent-owned.",
+    "No blur, resampling, retouch or color grading was applied to generated native pixels. All new game pixels are built-in image generation outputs.",
+    "Actual model and quality are null; tool exposes neither selectors nor return evidence. Configuration target snapshot and exact submitted arguments preserved per image."
+  ]
+}

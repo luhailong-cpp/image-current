@@ -1,0 +1,3 @@
+const { chromium } = require('C:/Users/luyua/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const browser=await chromium.launch({headless:true,channel:"msedge"}); const page=await browser.newPage({viewport:{width:2560,height:1080}}); await page.goto('http://127.0.0.1:4311/team-ui-v2/team-ui-v2.png'); console.log(JSON.stringify({browser:await browser.version(),url:page.url(),images:await page.locator('img').evaluateAll(imgs=>imgs.map(i=>({width:i.naturalWidth,height:i.naturalHeight,complete:i.complete})))})); await browser.close();})().catch(e=>{console.error(e);process.exit(1)});
+

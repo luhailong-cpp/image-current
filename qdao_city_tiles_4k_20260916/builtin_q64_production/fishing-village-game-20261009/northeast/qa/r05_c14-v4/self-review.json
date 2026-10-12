@@ -1,0 +1,75 @@
+{
+  "tile": "r05_c14",
+  "candidateVersion": "v4",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/tiles/r05_c14.candidate-v4.png",
+    "sha256": "0eecd38a632771019e2bda2197a46b3310dac7e78f0134dc35ca782a76ff1c02",
+    "role": "bridge repaired candidate"
+  },
+  "reviewer": "/root/east_sol",
+  "reviewedAtUtc": "2026-10-12 22:55:32 UTC",
+  "status": "provisional_native_self_review_passed_pending_root",
+  "formalAccepted": false,
+  "reviewedNativeQA": {
+    "internalCoreSeams": 24,
+    "existingWestAndSouthSeams": 8,
+    "internalFourCoreJunctions": 9,
+    "existingExternalFourCoreJunctions": 7,
+    "bridgeContributionCutBoundaries": 4
+  },
+  "qaInheritance": {
+    "unchangedFromCandidateV1AndHashVerified": 36,
+    "changedAndReviewedAgain": 5,
+    "explanation": "20 internal seams,8 existing west/south seams and8 internaljunctions are pixel-identical to v1;4 affected internal seams and1junction were regenerated and visually reviewed."
+  },
+  "findings": [
+    {
+      "status": "repaired",
+      "detail": "Original p34 native(230,1024) L-shaped color-block corner removed with returned native1254 bridge centered at627,627. Limited512 square contribution; all4crop boundaries viewed and no new obvious boundary discontinuity found."
+    },
+    {
+      "status": "repaired",
+      "detail": "p14-v2 boat hull/gunwale joins p13-v4 without the v1 approximately40px leftcut step. p13-v4 retains single boat and corrected rock top. p43-v2 retains post cap height and contiguous lower rock group."
+    },
+    {
+      "status": "independent_review_watch",
+      "paths": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r05_c14-v4/internal-p13-p23.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r05_c14-v4/external-south-p44-r06-c14-p14.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r05_c14-v4/external-junction-south-c4.png"
+      ],
+      "detail": "Minor internal rock facets/highlight variation remains; exterior rock/foam contours connect without a visible topological step."
+    },
+    {
+      "status": "independent_review_watch",
+      "paths": [
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r05_c14-v4/repair-cut-bottom-baseline-v1.png",
+        "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast/qa/r05_c14-v4/repair-cut-bottom.png"
+      ],
+      "detail": "Weak original low-contrast vertical water tone variation in the baseline below the bridge contribution is retained; compare baseline to avoid attributing it to a new crop boundary."
+    },
+    {
+      "status": "independent_review_watch",
+      "detail": "Lower-roof background sea inherits varying caustic softness from existing sources; all geometry remains continuous."
+    }
+  ],
+  "missingBoundary": {
+    "northNeighbor": "r04_c14",
+    "reason": "native sources absent; cannot be reviewed or formally accepted yet"
+  },
+  "eastBoundary": "full-map outer edge x57344; no east neighbor required",
+  "exactFinalArtChecks": {
+    "nativeSourceDimensions": [
+      1254,
+      1254
+    ],
+    "candidateDimensions": [
+      4096,
+      4096
+    ],
+    "outside512ContributionPixelsExactlyUnchanged": true,
+    "noResizePaintFeatherFinal": true,
+    "modelClaim": null,
+    "qualityClaim": null
+  }
+}

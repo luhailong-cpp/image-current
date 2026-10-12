@@ -1,0 +1,32 @@
+{
+  "reviewer": "finish_court",
+  "scope": "Two adjacent court paving repairs across r09_c04/r10_c04; native trial composite only",
+  "status": "passed_local_composite_visual_qa",
+  "formalAccepted": false,
+  "previousOutputRecovered": "court-trial-join1-v01 was complete and reused without repeating generation or composition.",
+  "sourceOrder": ["r09_r10_c04_court_join1_v01", "r09_r10_c04_court_join2_v01"],
+  "basePrefixes": ["c04-cylinder-join-v01-r09_c04", "c04-hardseam-r10c04-v01"],
+  "finalTrialPrefixes": ["court-trial-join2-resume-v01-r09_c04", "court-trial-join2-resume-v01-r10_c04"],
+  "parameterAndHashEvidence": "court-replay-resume-v01-evidence.json",
+  "reviewedViews": [
+    "court-trial-join1-v01-roi1-top-base-first-candidate-second-100pct.png",
+    "court-trial-join1-v01-roi1-bottom-base-first-candidate-second-100pct.png",
+    "court-trial-join1-v01-roi1-left-base-first-candidate-second-100pct.png",
+    "court-trial-join1-v01-roi1-right-base-first-candidate-second-100pct.png",
+    "court-trial-join2-resume-v01-roi1-top-base-first-candidate-second-100pct.png",
+    "court-trial-join2-resume-v01-roi1-bottom-base-first-candidate-second-100pct.png",
+    "court-trial-join2-resume-v01-roi1-left-base-first-candidate-second-100pct.png",
+    "court-trial-join2-resume-v01-roi1-right-base-first-candidate-second-100pct.png",
+    "court-final-trial-left-native100.png",
+    "court-final-trial-right-native100.png",
+    "court-final-trial-overlap-native100.png"
+  ],
+  "observations": [
+    "The original straight horizontal pale/warm patch boundary at global y36864 is removed throughout both requested paving targets.",
+    "Stone slab joints and bevels remain continuous through all eight selection perimeter views and through the repair-source overlap.",
+    "Both red-paper groups, stone-support base, wood scroll, beam silhouette and rounded foot preserve their geometry; no new detached contours or objects found.",
+    "Native texture remains crisp. The composite uses only same-coordinate binary source selection; both steps verify all 16777216 pixels of each affected tile with zero mismatch.",
+    "Right-hand wood retains the previously accepted mild material variation outside the requested paving correction."
+  ],
+  "replayInstructions": "Replay join1 then join2 on the final c04 internal base, keeping listed band=70, ROIs and targets. Compare per-step selection mask SHA256 and raw RGB repair-area hash from evidence JSON. If final bases are changed only outside both native repair footprints, all comparisons must match exactly. The raw lower trial base is incomplete elsewhere and must not be exported as the final lower tile."
+}

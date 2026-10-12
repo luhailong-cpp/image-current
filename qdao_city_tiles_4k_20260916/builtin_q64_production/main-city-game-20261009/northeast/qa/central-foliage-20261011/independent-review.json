@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-11",
+  "reviewer": "/root/east_tile_resume/qa_r07",
+  "status": "pass-local-central-shared-intersection",
+  "scope": "Read-only comparison of one 1254x1254 central shared intersection before/after native foliage repair, including all mask boundaries. No repeated 33-window internal review, no artwork or progress edits.",
+  "viewedFiles": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\connected-group-r07_c13-r08_c14\\d257b1479221428912e7\\central-intersection-100pct.png",
+      "sha256": "3f65c499c58ad1f413b18958fa6d6831338e5f2075aca098fa3a7c921dfd8ced",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewedWith": "view_image(detail=original)"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\integrated-central-100pct.png",
+      "sha256": "6a21360078eda5f7fb6a465f9fb87ae70e2decb82ab3bc60b6f282a202db41b9",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewedWith": "view_image(detail=original)"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\mask.png",
+      "sha256": "152a1aa7fa5d8117163cd1a86cecba9ce76c4444fd6047b054334dbe8a508be7",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "viewedWith": "view_image(detail=original)"
+    }
+  ],
+  "additionalNativeInspection": {
+    "sourceFiles": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\connected-group-r07_c13-r08_c14\\d257b1479221428912e7\\central-intersection-100pct.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\integrated-central-100pct.png"
+    ],
+    "crop": [
+      570,
+      580,
+      850,
+      760
+    ],
+    "resized": false,
+    "method": "In-memory integer crop displayed at native size; no derived image written."
+  },
+  "oldIssue": {
+    "priority": "P2",
+    "windowCoordinates": {
+      "xRange": [
+        590,
+        700
+      ],
+      "yApprox": 627
+    },
+    "description": "Original foliage has a horizontal cut at the shared north/south boundary and a rectangular vertical slice near the central tile crossing."
+  },
+  "repairResult": {
+    "oldP2Resolved": true,
+    "description": "The revised lower foliage connects to the unchanged upper foliage with complete curved leaf silhouettes. The prior rectangular slice and chopped leaf outline are gone.",
+    "maskBoundaryReview": "Seven-sided binary-mask perimeter checked against the full native integrated window. No new geometric break, clipped silhouette, pasted rectangular edge or other P2 observed.",
+    "newP2Findings": [],
+    "minorObservations": [
+      {
+        "priority": "P3",
+        "windowApprox": [
+          790,
+          627
+        ],
+        "description": "Slight leaf highlight/tone change remains along a short portion of the shared boundary; leaf outline remains continuous. No further regeneration recommended for this cosmetic difference."
+      }
+    ]
+  },
+  "readOnlyVerification": {
+    "files": [
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\connected-group-r07_c13-r08_c14\\d257b1479221428912e7\\central-intersection-100pct.png",
+        "sha256": "3f65c499c58ad1f413b18958fa6d6831338e5f2075aca098fa3a7c921dfd8ced",
+        "pixels": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\integrated-central-100pct.png",
+        "sha256": "6a21360078eda5f7fb6a465f9fb87ae70e2decb82ab3bc60b6f282a202db41b9",
+        "pixels": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\mask.png",
+        "sha256": "152a1aa7fa5d8117163cd1a86cecba9ce76c4444fd6047b054334dbe8a508be7",
+        "pixels": [
+          1254,
+          1254
+        ]
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\staged.json",
+        "sha256": "4d636f889ad8e598f1ab586a64184ddc459991ef9af1f972fa946e74ff68ae15",
+        "pixels": null
+      },
+      {
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\source\\m01.png",
+        "sha256": "5c41041d525d643192e9b6f2d28e4d597c9329e41885bd487947b57d5165e6bd",
+        "pixels": [
+          1254,
+          1254
+        ]
+      }
+    ],
+    "stagedTiles": [
+      {
+        "tile": "r08_c13",
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\staged\\r08_c13.png",
+        "sha256": "dd20b4e0d2b73b7ff90ef24be9a8337f8e436a17f46ca0430a6240b75532333a",
+        "recordedShaMatches": true,
+        "integratedQuadrantPixelExact": true,
+        "changedPixelBoxRecorded": [
+          3999,
+          0,
+          4096,
+          222
+        ]
+      },
+      {
+        "tile": "r08_c14",
+        "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\qa\\central-foliage-20261011\\staged\\r08_c14.png",
+        "sha256": "f07aaa048c29eb8e8a4dfdf4c0bfce1dd7bd20592cc5ca2cd5173a93fd65abab",
+        "recordedShaMatches": true,
+        "integratedQuadrantPixelExact": true,
+        "changedPixelBoxRecorded": [
+          0,
+          0,
+          564,
+          264
+        ]
+      }
+    ],
+    "replayPixelExact": true,
+    "northernHalfPixelIdentical": true,
+    "outsideMaskPixelIdentical": true,
+    "changedPixelBox": [
+      530,
+      627,
+      1191,
+      891
+    ],
+    "maskValues": [
+      0,
+      255
+    ],
+    "polygon": [
+      [
+        530,
+        627
+      ],
+      [
+        1190,
+        627
+      ],
+      [
+        1190,
+        795
+      ],
+      [
+        1130,
+        865
+      ],
+      [
+        720,
+        890
+      ],
+      [
+        585,
+        830
+      ],
+      [
+        530,
+        740
+      ]
+    ]
+  },
+  "recommendation": "Accept this local central foliage repair. Preserve existing native source and pixel-exact mask recipe; do not expand work for P3 tone variation.",
+  "limits": "This report accepts only the central local window and staged tile quadrants identified by hashes. It does not independently assert acceptance of all outer boundaries or later candidate versions."
+}

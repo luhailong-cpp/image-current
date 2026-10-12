@@ -1,0 +1,79 @@
+{
+  "reviewedAtUtc": "2026-10-11T02:40:19.156Z",
+  "scope": "Available selected c03 col4 vs c04 col1 rows1/2; all four c04 firstrow cores vs actual output r09_c04-native-candidate-v01.png. Snapshot only; no missing-row polling.",
+  "snapshot": "qa/r10-independent-shared-snapshot20261011.json",
+  "method": "Native100 mechanical crop/paste only; per-image provenance records accompany six PNGs. Source images unmodified.",
+  "findings": [
+    {
+      "id": "shared-gold-known",
+      "severity": "visible_material_seam",
+      "globalBox": [
+        12248,
+        37420,
+        12328,
+        38912
+      ],
+      "geometry": "Existing bulb, collar and gold contour continuous in available rows; no newly found geometry break.",
+      "owner": "root already repairing shared whole gold gourd",
+      "evidence": [
+        "qa/r10-independent-c03c04-shared-row1-snapshot20261011-native100.png",
+        "qa/r10-independent-c03c04-shared-row2-snapshot20261011-native100.png"
+      ]
+    },
+    {
+      "id": "topsteps-known",
+      "severity": "visible_material_seam",
+      "globalBox": [
+        12288,
+        36824,
+        13312,
+        36904
+      ],
+      "geometry": "Slab and stair geometry continuous; straight light-value stripe obvious on riser.",
+      "owner": "root already owns topsteps",
+      "evidence": "qa/r10-independent-c04-actual-top-col1-snapshot20261011-native100.png"
+    },
+    {
+      "id": "top-court-col2",
+      "severity": "moderate_material_seam",
+      "globalBox": [
+        13860,
+        36820,
+        14336,
+        36920
+      ],
+      "geometry": "Paving joints and post corner continuous. Horizontal warm/cool and light-value join remains, especially right half; outside most of current topsteps canvas.",
+      "suggestion": "After current whole-tile assembly, review binary TOP join at native scale. If still visible, use wide pavement same-coordinate AI repair without adding objects.",
+      "evidence": "qa/r10-independent-c04-actual-top-col2-snapshot20261011-native100.png"
+    },
+    {
+      "id": "top-court-col3",
+      "severity": "moderate_material_seam",
+      "globalBox": [
+        14336,
+        36820,
+        15280,
+        36920
+      ],
+      "geometry": "Paving grout continuous; straight horizontal value/brush-texture join crosses multiple leaf-shadow areas.",
+      "suggestion": "May combine with neighboring pavement repair; must preserve geometry and any previously repaired r09 cylinder lower region.",
+      "evidence": "qa/r10-independent-c04-actual-top-col3-snapshot20261011-native100.png"
+    },
+    {
+      "id": "top-beam-col4",
+      "severity": "mild_material_seam",
+      "globalBox": [
+        15550,
+        36824,
+        16384,
+        36914
+      ],
+      "geometry": "Gold/wood beam and support contour continuous; mild straight change in brush texture at actual boundary.",
+      "suggestion": "Final native composite review; local same-coordinate repair only if materially visible in full candidate.",
+      "evidence": "qa/r10-independent-c04-actual-top-col4-snapshot20261011-native100.png"
+    }
+  ],
+  "formalAccepted": false,
+  "generatedNewArt": false,
+  "mainStateModified": false
+}

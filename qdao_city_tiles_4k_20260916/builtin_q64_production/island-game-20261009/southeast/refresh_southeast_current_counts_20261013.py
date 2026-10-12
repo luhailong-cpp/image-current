@@ -1,0 +1,17 @@
+from workflow import *
+resume=read(ROOT/'production-resume-20261012.json')
+pending=[{'tile':'r08_c11','candidate':str(ROOT/'tiles/r08_c11.candidate-v01.png'),'sha256':sha(ROOT/'tiles/r08_c11.candidate-v01.png'),'fullyCovered':True,'internalPassed':False,'status':'owner actual overlay/core boundary inspection underway'}, {'tile':'r12_c13','candidate':str(ROOT/'tiles/r12_c13.candidate-sol-20261012-v02.png'),'sha256':sha(ROOT/'tiles/r12_c13.candidate-sol-20261012-v02.png'),'fullyCovered':True,'internalPassed':False,'status':'native floor groove mismatch located at actual x1024 y2167; whole object repair pending'}, {'tile':'r13_c12','candidate':str(ROOT/'tiles/r13_c12.candidate-sol-20261013-v01.png'),'sha256':sha(ROOT/'tiles/r13_c12.candidate-sol-20261013-v01.png'),'fullyCovered':True,'internalPassed':False,'status':'16 native coordinates plus complete stair source saved;24 actual internal seams and9 junctions under review'}]
+adopted=resume['currentAdoptedCandidates'];accepted={x['tile'] for x in adopted if x['internalPassed']};pending=[x for x in pending if x['tile'] not in accepted];full={x['tile'] for x in adopted if x['fullyCovered']}|{x['tile'] for x in pending}
+targets={f'r{r:02}_c{c:02}' for r in range(8,15) for c in range(8,15)};assert len(targets)==49 and full<=targets
+counts={'target4kCount':49,'generatedNativeCount':len(list((ROOT/'native').glob('*.png'))),'fullyCovered4kCount':len(full),'complete4kCount':len(full),'internalPassed4kCount':len(accepted),'externalPassed4kCount':sum(x.get('externalPassed',False) for x in adopted),'localArtworkAcceptanceReadyCount':sum(x.get('localArtworkAcceptanceReady',False) for x in adopted),'formalAcceptedCount':0,'missingNative4kCount':49-len(full),'fullCandidatePendingRepairOrReviewCount':len(full-accepted)}
+resume.update(updatedAtUtc=now(),counts=counts,pendingCandidates=pending,remainingWithoutFullCandidate=sorted(targets-full),activeCoordinates=['r08_c11','r12_c13','r13_c11','r13_c12','r13_c13','r14_c12'],currentTile='r13_c12',inFlightRequests=[],generationStopped=False,nextStep='Finish actual r13 internal QA and continue r14 sea natives; peers continue missing native cores and genuine object repairs.')
+for item in resume.get('pendingRepairs',[]):
+ if item.get('id')=='r12-r13-c11-c12-shared-long-column':item.update(status='upper_column_adopted_and_lower_source_complete_left_r13_full_candidate_pending',lowerNative=str(ROOT/'native/r13_c11_c12_shared_column_lower_v01.png'),lowerNativeSha256=sha(ROOT/'native/r13_c11_c12_shared_column_lower_v01.png'))
+write(ROOT/'production-resume-20261012.json',resume)
+for fname in ['progress.json','production-state.json']:
+ p=read(ROOT/fname);p.update(updatedAt=now(),status='active_builtin_native_continuation',currentAdoptedCandidates=adopted,pendingCandidates=pending,currentTile='r13_c12',nextStep=resume['nextStep'],generationStopped=False,inFlight=False)
+ if fname=='progress.json':p.update(**counts)
+ else:p['counts']=counts
+ write(ROOT/fname,p)
+write(ROOT/'current-zone-counts-20261013.json',{'updatedAtUtc':now(),'zone':'southeast','coordinateScope':'r08-r14/c08-c14,49 distinct whole4K tiles only','counts':counts,'meaning':'Full candidate means all16 native coordinates and unchanged source-pixel assembly saved; internal acceptance separately requires actual seams and junctions. Missing outside-zone neighbors do not count as missing native art in this zone.','pendingCandidates':pending,'missingNativeTiles':sorted(targets-full),'gitActions':False,'formalAccepted':False})
+print(json.dumps(counts))

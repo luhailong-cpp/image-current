@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "roof_sol",
+  "verdict": "generator_local_seam_review_passed_pending_root_independent_review",
+  "formalAccepted": false,
+  "generatedNativeSize": [1254, 1254],
+  "actualModel": null,
+  "actualQuality": null,
+  "contributionLocalBox": [0, 627, 900, 1100],
+  "contributionWorldBox": [44941, 17408, 45841, 17881],
+  "viewedNative1to1": ["context.native-1to1.png", "top.native-1to1.png", "bottom.native-1to1.png", "right.native-1to1.png", "left-halo.native-1to1.png", "interior-blue-tiles.native-1to1.png", "../../native/r05_c12_p11-roofbridge-v3-plane.png", "../../native/r05_c12_p21-roofbridge-v3-plane.png"],
+  "findings": {
+    "originalBlockingSeam": "Blue-tile overlap arcs in both reported x80..125 and x270..340 areas are now continuous across original contextY740/worldY17521. The entire lower blue roof plane has one consistent tile rhythm.",
+    "top": "New contribution begins at contextY627/worldY17408. Blue tile rows and dark wall corbels meet the existing upper context with connected contours.",
+    "bottom": "At contextY1100/worldY17881 the gold fascia, red wall trim, wood and lantern remain connected. Minor painterly facet differences do not independently block.",
+    "right": "At contextX900/worldX45841 the gold scroll, post and lantern remain connected. Painterly facets vary by a few pixels; request root independent verification of this vertical edge.",
+    "left": "Contribution reaches original frame left edge. Native halo x0..115 is included; no new internal left crop seam is introduced. Native left-halo appearance reviewed, but external c11 native neighbor is missing, so no external seam acceptance is claimed.",
+    "derivedFullImages": "Both p11 and p21 full 1254-square derived patches were viewed. p11 core remains unchanged because new contribution begins exactly at its south core boundary; its south halo matches the proposed p21 source contribution. p21 lower roof, gold fascia, lantern and ivory/red architecture remain intact."
+  },
+  "provenanceNote": "The actual v3 prompt requested two tiny windows. The tool returned a coherent entire lower plane with changes beyond those windows. Tight window crops were rejected. The plane proposal reuses one unchanged integer rectangle of that same already-returned native output after boundary inspection; it is not a further generated output or a painted composite.",
+  "mechanicalProof": "native-contribution-proof.json verifies exact source-crop equality and unchanged base pixels outside each contribution.",
+  "workingSelectionChangedByChild": false,
+  "completeTileAccepted": false
+}

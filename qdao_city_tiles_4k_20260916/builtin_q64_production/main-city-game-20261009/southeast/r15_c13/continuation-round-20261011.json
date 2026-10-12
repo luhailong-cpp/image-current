@@ -1,0 +1,94 @@
+{
+  "tile": "r15_c13",
+  "resumedAt": "2026-10-11T09:54:16.011Z",
+  "currentCoordinate": "r15_c13",
+  "status": "candidate_completed_pending_boundary_and_minor_finish_repair",
+  "firstNewOutputThisRound": {
+    "patch": "p01_03",
+    "version": "p01_03_v20261011T092549_d87ee42c",
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\native\\p01_03_v20261011T092549_d87ee42c.png",
+    "sha256": "61218dfe5f7dd232147200a168c5ab3e10cb5b69cf16d47579bfe8e46dabecde",
+    "actualDimensions": [
+      1254,
+      1254
+    ],
+    "generatedAt": "2026-10-11T09:55:15.990Z"
+  },
+  "activeNativeCount": 16,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-4k-candidate-e8d644ce11db9d4b4b84.png",
+    "sha256": "8e2d4e6779c553993edd6f4523baceae2f0fbf4d0bbdf00436301d7988896223",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "QA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\review\\native-qa-20261011\\visual-qa.json",
+    "sha256": "77eee309c1f1bcf58fe9b4f44b0f41a5a7ccbf2c9976ad17beffd36936d1409c"
+  },
+  "previousErrors": [
+    {
+      "patch": "p01_03",
+      "version": "p01_03_v20261011T092549_d87ee42c",
+      "error": "image generation failed: application network permission was revoked"
+    },
+    {
+      "patch": "p02_02",
+      "version": "p02_02_v20261011T092634_1498e78d",
+      "error": "image generation failed: http 401 Unauthorized: Missing bearer or basic authentication in header"
+    }
+  ],
+  "nextStep": "Repair north texture band only on new tile side; complete small railing relief line; neighbor joint reviews pending.",
+  "updatedAt": "2026-10-11T13:11:53.753140+00:00",
+  "nativeActualOutputCount": 17,
+  "context": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-context-4326-e8d644ce11db9d4b4b84.png",
+    "sha256": "c018c794537248854394024c67e1fe56683eca1f2cf979f886c7b1a7bd8d784e",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "manifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r15_c13\\candidate\\r15_c13-assembly-e8d644ce11db9d4b4b84.json",
+    "sha256": "f30bba13a06e9a82d5fd5e7d91a0c79419650e396a6d5a0e1b0d2cd6de1552c0"
+  },
+  "remainingQA": [
+    {
+      "id": "north-material-band",
+      "status": "pending_not_passed",
+      "severity": "visible_material_discontinuity",
+      "tileBox": [
+        0,
+        0,
+        3072,
+        160
+      ],
+      "description": "Full north joint inspected in four native 1024x800 segments. Wood and cream-gold roof contours largely align, but a straight horizontal texture/value change is visible at tile y=0, particularly x0..70 and roof x1100..3000. Keep immutable r14_c13 v6 unchanged; repair new side only."
+    },
+    {
+      "id": "internal-stone-relief-termination",
+      "status": "minor_local_repair_pending",
+      "severity": "small_decorative_line_discontinuity",
+      "tileBox": [
+        1840,
+        3150,
+        2080,
+        3230
+      ],
+      "description": "At junction x2048/y3072, the shallow upper inset border on the stone railing panel fades/terminates near tile x1955,y3175. Major cap, post, walkway and structural contours remain continuous. Do not mark all internal finish passed."
+    },
+    {
+      "id": "other-neighbor-joints",
+      "status": "not_joint_reviewed",
+      "edges": [
+        "east",
+        "south",
+        "west"
+      ],
+      "description": "All four standalone outer edges inspected at native pixels; east/south/west require neighboring current candidates for full joint acceptance."
+    }
+  ],
+  "currentBlockingServiceError": null
+}

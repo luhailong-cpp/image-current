@@ -1,0 +1,307 @@
+{
+  "reviewedAt": "2026-10-11T20:34:12.090017+00:00",
+  "scope": "Final independent full west-edge review only. Four640x1024 native unscaled bands viewed at100percent, followed by seven central192px-wide unscaled detail strips. No edits to tiles, candidates, progress or other tasks.",
+  "sourceManifest": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\review\\west-completed-local-20261011\\source-manifest.json",
+    "sha256": "a9d9b86d88bb1e9a9974fee40eb57a50fcaf235261f6f28bfb0d8e0ce999cdf0"
+  },
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c14\\candidate\\r14_c14-4k-west-lower-complete-joint-v2-20261011.png",
+    "sha256": "bfcb81040f0fb9bbf441fd276a28eadf26fc2bddcc1e9d1ea033914c24f961eb",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "west": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c13\\candidate\\r14_c13-4k-north-v6.png",
+    "sha256": "f1d683133fa23f466621f492375b55848d2a8c5775e039f10c2c86bc3860fda5",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "sourceHashVerification": {
+    "candidateMatches": true,
+    "westMatches": true
+  },
+  "coordinateSpace": {
+    "seamXInReview": 320,
+    "y": "core4096 absolute y",
+    "frozenY": [
+      0,
+      630
+    ],
+    "activeReviewY": [
+      630,
+      4096
+    ]
+  },
+  "frozenCornerLegacy": {
+    "includedInActiveVerdict": false,
+    "status": "Existing failures remain within reserved frozen corner.",
+    "findings": [
+      {
+        "approxYRange": [
+          375,
+          430
+        ],
+        "type": "grout discontinuity",
+        "severity": "major legacy",
+        "finding": "A thin incoming left joint and the wide right joint are offset and do not form a consistent joined crossing at the vertical seam."
+      },
+      {
+        "approxYRange": [
+          0,
+          630
+        ],
+        "type": "material and texture transition",
+        "severity": "visible legacy",
+        "finding": "Abrupt material/texture difference remains along portions of the frozen vertical boundary, especially the shadowed central part. This was excluded from the active repair verdict."
+      }
+    ],
+    "pixelSamples": {
+      "319": {
+        "darkestY350to435": 410,
+        "meanRGB": 142.3
+      },
+      "320": {
+        "darkestY350to435": 386,
+        "meanRGB": 73.0
+      }
+    }
+  },
+  "unfrozenGroutContinuity": {
+    "status": "pass",
+    "finding": "No new hard grout opening, floating endpoint or truncated wide joint found at y630..4096 in the four full bands. Small bevel/profile steps and the known upper bent edge remain cosmetic geometry observations."
+  },
+  "unfrozenMaterialSeam": {
+    "status": "fail",
+    "significantFindings": [
+      {
+        "approxYRange": [
+          2540,
+          2880
+        ],
+        "severity": "major",
+        "type": "hard vertical color division",
+        "finding": "Right side is conspicuously brighter and warmer than the adjacent left stone/shadow. The boundary stays on the tile seam for a sustained length and is not merely a broad natural shadow gradient.",
+        "evidenceStrip": "seam-2560-3072.png",
+        "quantitativeRange": [
+          2560,
+          2816
+        ],
+        "meanRGBRightMinusLeft4px": [
+          28.4,
+          21.41,
+          12.93
+        ]
+      },
+      {
+        "approxYRange": [
+          1660,
+          1820
+        ],
+        "severity": "moderate",
+        "type": "vertical brightness change",
+        "finding": "Right stone is visibly darker along the seam; geometry is connected but the brightness/texture join remains apparent.",
+        "evidenceStrip": "seam-1536-2048.png",
+        "quantitativeRange": [
+          1664,
+          1792
+        ],
+        "meanRGBRightMinusLeft4px": [
+          -10.22,
+          -10.35,
+          -8.89
+        ]
+      },
+      {
+        "approxYRange": [
+          3480,
+          3760
+        ],
+        "severity": "moderate",
+        "type": "vertical warmth and brightness change",
+        "finding": "A right-side brighter/warmer strip is visible against the left cooler blue-gray stone/shadow around the already connected lower joints.",
+        "evidenceStrip": "seam-3584-4096.png",
+        "quantitativeRange": [
+          3488,
+          3712
+        ],
+        "meanRGBRightMinusLeft4px": [
+          11.9,
+          9.33,
+          6.7
+        ]
+      }
+    ],
+    "minorResiduals": [
+      {
+        "approxYRange": [
+          630,
+          740
+        ],
+        "finding": "Short darker-right profile/material step just below the frozen region."
+      },
+      {
+        "approxYRange": [
+          3080,
+          3290
+        ],
+        "finding": "Low-amplitude texture/brightness border visible at native scale; less severe than the sustained2540..2880 split."
+      }
+    ],
+    "metricCaveat": "Metrics are descriptive adjacent4-column RGB means, not a universal visual acceptance threshold; findings were also confirmed in native-scale full bands and detail crops.",
+    "fineStrongColorRegion": [
+      {
+        "y": [
+          2496,
+          2528
+        ],
+        "meanRGBRightMinusLeft4px": [
+          -2.14,
+          -2.19,
+          -2.03
+        ]
+      },
+      {
+        "y": [
+          2528,
+          2560
+        ],
+        "meanRGBRightMinusLeft4px": [
+          2.73,
+          2.02,
+          1.36
+        ]
+      },
+      {
+        "y": [
+          2560,
+          2592
+        ],
+        "meanRGBRightMinusLeft4px": [
+          28.16,
+          21.65,
+          14.14
+        ]
+      },
+      {
+        "y": [
+          2592,
+          2624
+        ],
+        "meanRGBRightMinusLeft4px": [
+          27.01,
+          20.27,
+          11.45
+        ]
+      },
+      {
+        "y": [
+          2624,
+          2656
+        ],
+        "meanRGBRightMinusLeft4px": [
+          28.03,
+          20.89,
+          12.12
+        ]
+      },
+      {
+        "y": [
+          2656,
+          2688
+        ],
+        "meanRGBRightMinusLeft4px": [
+          31.83,
+          24.34,
+          14.77
+        ]
+      },
+      {
+        "y": [
+          2688,
+          2720
+        ],
+        "meanRGBRightMinusLeft4px": [
+          30.25,
+          22.1,
+          11.74
+        ]
+      },
+      {
+        "y": [
+          2720,
+          2752
+        ],
+        "meanRGBRightMinusLeft4px": [
+          22.17,
+          15.39,
+          7.36
+        ]
+      },
+      {
+        "y": [
+          2752,
+          2784
+        ],
+        "meanRGBRightMinusLeft4px": [
+          31.88,
+          24.77,
+          16.55
+        ]
+      },
+      {
+        "y": [
+          2784,
+          2816
+        ],
+        "meanRGBRightMinusLeft4px": [
+          27.85,
+          21.87,
+          15.31
+        ]
+      },
+      {
+        "y": [
+          2816,
+          2848
+        ],
+        "meanRGBRightMinusLeft4px": [
+          20.98,
+          16.02,
+          10.6
+        ]
+      },
+      {
+        "y": [
+          2848,
+          2880
+        ],
+        "meanRGBRightMinusLeft4px": [
+          11.53,
+          8.73,
+          6.36
+        ]
+      },
+      {
+        "y": [
+          2880,
+          2912
+        ],
+        "meanRGBRightMinusLeft4px": [
+          2.32,
+          1.8,
+          2.22
+        ]
+      }
+    ]
+  },
+  "overallWestEdgeAccepted": false,
+  "localGroutRepairsRemainValid": true,
+  "formalTileAccepted": false,
+  "conclusion": "Unfrozen grout continuity passes, but the unfrozen full west edge still fails material/color continuity because of the sustained major2540..2880 vertical split and two moderate residual segments. Frozen-corner issues are separate.",
+  "mutations": "Only native QA crops and final review JSON under review/independent-internal-20261011/west-full-edge."
+}

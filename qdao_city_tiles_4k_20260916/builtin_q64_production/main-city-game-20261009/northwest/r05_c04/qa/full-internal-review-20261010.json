@@ -1,0 +1,697 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-10T04:46:55.347Z",
+  "candidate": {
+    "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/candidate/r05_c04-candidate-minimum-error-fc35358c1e27.png",
+    "sha256": "29cfa909fcd030e9e5775496604221850803657f646a08adfab67ce34a00ba6a",
+    "nativeSize": [
+      4096,
+      4096
+    ],
+    "assemblyManifest": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/candidate/r05_c04-candidate-minimum-error-fc35358c1e27.assembly.json"
+  },
+  "status": "full_internal_visual_review_complete_one_existing_geometry_seam_blocker",
+  "internalQaPassed": false,
+  "formalAccepted": false,
+  "scope": {
+    "nativeSeamSegmentsViewed": 24,
+    "nativeJunctionsViewed": 9,
+    "newlyViewedFiles": 28,
+    "previouslyViewedAndCountedFiles": 5,
+    "all33RequestedNativeQaFilesViewed": true,
+    "wholeCandidateOverviewViewed": true,
+    "overviewDisplayedSize": [
+      1600,
+      1600
+    ],
+    "wholeCandidateOverviewIsNotNativePixelFullImageInspection": true,
+    "extraSourceImagesViewed": [
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/native/s03_02.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/native/s04_02.png"
+    ],
+    "previousLocalReview": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/material-assembly-review-20261010.json"
+  },
+  "blockers": [
+    {
+      "id": "internal-paving-joint-width-step",
+      "priority": 2,
+      "tileXY": [
+        1543,
+        2995
+      ],
+      "worldXY": [
+        13831,
+        19379
+      ],
+      "localDetailBox": [
+        1530,
+        2970,
+        1560,
+        3040
+      ],
+      "contextQa": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y3072-segment02.png",
+      "patches": [
+        "s03_02",
+        "s04_02"
+      ],
+      "finding": "At the existing north/south source join, a broad dark vertical grout suddenly becomes a thin groove with a small lateral kink/notch. A visible pale-tone/material boundary continues beside the transition. This is clearly attributable to the join rather than a natural stone corner.",
+      "isNewFromMaterial01": false,
+      "reasonBlocksInternalQa": "The paving line changes structure abruptly in the uninterrupted face of the same slab boundary. This remains directly visible at native scale and prevents marking all internal seams passed.",
+      "measurement": {
+        "method": "Read-only arithmetic RGB luminance profile in tilex1530..1559; dark pixels are more than25 below local edge-background median. Threshold measures dark core, not complete highlighted grout width.",
+        "samples": [
+          {
+            "tileY": 2990,
+            "darkPixelXRange": [
+              1542,
+              1549
+            ],
+            "darkPixelCount": 8,
+            "darkestX": 1545
+          },
+          {
+            "tileY": 2995,
+            "darkPixelXRange": [
+              1543,
+              1545
+            ],
+            "darkPixelCount": 3,
+            "darkestX": 1544
+          },
+          {
+            "tileY": 3000,
+            "darkPixelXRange": [
+              1543,
+              1545
+            ],
+            "darkPixelCount": 3,
+            "darkestX": 1543
+          },
+          {
+            "tileY": 3020,
+            "darkPixelXRange": [
+              1543,
+              1546
+            ],
+            "darkPixelCount": 4,
+            "darkestX": 1543
+          }
+        ]
+      },
+      "action": "Record for future coordinated native correction only after the global gate permits work; no new generation or image modification performed in this review."
+    }
+  ],
+  "nonBlockingObservations": [
+    {
+      "area": "Repaired lower-right material01 region",
+      "tileBox": [
+        2400,
+        2990,
+        4096,
+        3240
+      ],
+      "finding": "Residual fine brush-density and pale warm/cool/lightness differences remain lower contrast than the previous cold coarse mottling. Actual minimum-error joins in the reviewed region do not show a new blocking band.",
+      "recommendation": "Keep both s04_03_material01 and s04_04_material01 selections."
+    },
+    {
+      "area": "Other paving and stair edges",
+      "finding": "Minor painterly highlight width and local edge/tone variations occur, but no other clearly disconnected, dangling or abrupt structural seam was observed in the33nativeQAimages."
+    },
+    {
+      "area": "Flowering canopy",
+      "finding": "Bloom size/color varies organically. No obvious main-branch discontinuity, cut half blossom or hard flower-color split was observed along the reviewed seams and junctions."
+    }
+  ],
+  "selectionRecommendation": {
+    "s04_03_material01": "retain",
+    "s04_04_material01": "retain",
+    "selectionModified": false
+  },
+  "allActuallyViewedNativeFiles": [
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x1024-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        864,
+        0,
+        1184,
+        1024
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x1024-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        864,
+        1024,
+        1184,
+        2048
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x1024-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        864,
+        2048,
+        1184,
+        3072
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x1024-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        864,
+        3072,
+        1184,
+        4096
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: canopy variation is organic; no clearly broken main branch or split flower along the seam."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x2048-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        1888,
+        0,
+        2208,
+        1024
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x2048-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        1888,
+        1024,
+        2208,
+        2048
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x2048-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        1888,
+        2048,
+        2208,
+        3072
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x2048-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        1888,
+        3072,
+        2208,
+        4096
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: dense canopy branches and blossoms remain connected across the source join."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x3072-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        2912,
+        0,
+        3232,
+        1024
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x3072-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        2912,
+        1024,
+        3232,
+        2048
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x3072-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        2912,
+        2048,
+        3232,
+        3072
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass with minor observations: a very small local grout-edge thickness variation is visible; no disconnected or dangling joint."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-x3072-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": true,
+      "cropLTRB": [
+        2912,
+        3072,
+        3232,
+        4096
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": false,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass with minor observations: actual minimum-error path has no blocking stripe; grout boundaries and bottom flowers continuous."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y1024-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        0,
+        864,
+        1024,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: plinth, balustrade and stair contours join without an obvious broken edge; soft painted tone variation remains."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y1024-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1024,
+        864,
+        2048,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y1024-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2048,
+        864,
+        3072,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y1024-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        3072,
+        864,
+        4096,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y2048-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        0,
+        1888,
+        1024,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y2048-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1024,
+        1888,
+        2048,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y2048-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2048,
+        1888,
+        3072,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y2048-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        3072,
+        1888,
+        4096,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed entire native-pixel crop; no visibly broken geometry, hard source-color band or other blocking seam defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y3072-segment01.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        0,
+        2912,
+        1024,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: dense flowers and branches cross the join without a newly obvious cut bloom or disconnected main branch."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y3072-segment02.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1024,
+        2912,
+        2048,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "needs_repair",
+      "finding": "BLOCKER: existing s03_02 -> s04_02 vertical grout abruptly narrows and shifts at tile near[1543,2995]; a visible pale-tone/texture join continues beside it."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y3072-segment03.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2048,
+        2912,
+        3072,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": false,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass with minor observations: material01 reduces cold mottling; fine brush-density/lightness variation remains; branch silhouettes continuous."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/internal-y3072-segment04.png",
+      "kind": "seam segment",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        3072,
+        2912,
+        4096,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": false,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass with minor observations: material01 reduces coarse surface dabs; connected slab joint; weak warm/cool variation remains."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x1024-y1024.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        864,
+        864,
+        1184,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x2048-y1024.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1888,
+        864,
+        2208,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x3072-y1024.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2912,
+        864,
+        3232,
+        1184
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x1024-y2048.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        864,
+        1888,
+        1184,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x2048-y2048.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1888,
+        1888,
+        2208,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x3072-y2048.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2912,
+        1888,
+        3232,
+        2208
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Viewed native-pixel junction; adjoining paving or stair edges remain visually continuous with no blocking defect observed."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x1024-y3072.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        864,
+        2912,
+        1184,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": true,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: dense canopy has no clearly cut half blossom, duplicated outline or disconnected main branch."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x2048-y3072.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        1888,
+        2912,
+        2208,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": false,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass: reviewed branch and blossom outlines remain visually continuous."
+    },
+    {
+      "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/r05_c04-candidate-minimum-error-fc35358c1e27/junction-x3072-y3072.png",
+      "kind": "junction",
+      "nativePixelScale": 1,
+      "rotationCCW90": false,
+      "cropLTRB": [
+        2912,
+        2912,
+        3232,
+        3232
+      ],
+      "actuallyViewed": true,
+      "viewedInThisContinuation": false,
+      "verdict": "no_blocking_defect_observed",
+      "finding": "Pass with minor observations: much weaker cold mottling; remaining low-contrast texture change."
+    }
+  ],
+  "separateUnresolvedScopes": {
+    "externalTileEdges": "Not assessed: real neighboring tiles are missing; this is an external review dependency, not the reported internal blocker.",
+    "stairLayoutPosition": "Known earlier layout-target mismatch is not cleared by this internal seam review.",
+    "wholeBlockFormalAcceptance": false,
+    "worldScale": "Not assessed; global gate unchanged.",
+    "clientMappingValidated": false,
+    "capacity5000Validated": false
+  },
+  "sharedStyleHistoricalEvidence": {
+    "file": "D:/work/image/designs/mail-ui-v1/01-mail-event.png",
+    "currentExistsAtReadOnlyCheck": false,
+    "actuallyViewedBeforeGeneration": true,
+    "localReadAtIngest": "Each generated image's helper loop called Path(reference.file).read_bytes() and SHA256 for every actual request reference. Both ingest processes completed with exit0 and created generation records. No fallback or reused hash path exists in that helper.",
+    "capturedHash": "3cf0b7d7b3bae337d51e947719588419a01ae21bdce9bccedd6258ce1feef0a2",
+    "successfulRecordTimesUtc": [
+      {
+        "image": "s04_03_material01",
+        "generatedAt": "2026-10-10T04:22:46.092232+00:00"
+      },
+      {
+        "image": "s04_04_material01",
+        "generatedAt": "2026-10-10T04:25:46.173831+00:00"
+      }
+    ],
+    "actualToolRequest": "The locally readable style path was submitted as referenced_image_paths[4] in both calls.",
+    "limitation": "Tool did not expose server-side per-reference loading logs. This confirms successful local viewing/reading and submitted parameters, not undocumented server processing.",
+    "historicalRecordsModified": false,
+    "alternateReferenceGenerated": false
+  },
+  "gateCompliance": {
+    "newImageGenerationCalls": 0,
+    "inFlightImageGenerationCalls": 0,
+    "sourceImageEdits": 0,
+    "selectionModified": false,
+    "progressModified": false,
+    "onlyWrittenFile": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/northwest/r05_c04/qa/full-internal-review-20261010.json"
+  }
+}

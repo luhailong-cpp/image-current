@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "file": "generation/E/11-anatomy-v1.png",
+  "sourceSha256": "a7dbb34574bdaffde4f83ebcdf8da2907af4e0919ceab4221ddc1a23603e4028",
+  "reviewedAt": "2026-10-05",
+  "method": "Actual native PNG view after byte-for-byte persistence; adjacent E10/E12 viewed. Alpha>8 bounds measured with Pillow, no image transformation.",
+  "status": "improved_candidate_for_root_selection",
+  "visualAccepted": false,
+  "clientAccepted": false,
+  "findings": [
+    {
+      "severity": "fixed",
+      "note": "Near anatomical RIGHT shoulder now leads through foreground bent elbow and sleeve to right lamp grip. Far LEFT arm is behind and leads to rear jade flask. Original E11 shoulder-to-prop ownership swap is visibly corrected."
+    },
+    {
+      "severity": "improved",
+      "note": "Lamp grip lowered/retracted from E10 forward high extreme toward E12 hip-side position; continuous visible wrist-to-gold-handle grip. Lamp full size and uncropped."
+    },
+    {
+      "severity": "preserved_with_drift",
+      "note": "Same support-leg and airborne-leg phase retained, both toes remain eastward; no support-leg swap. Head, shoes and cloth are AI redrawn with small registration drift, not pixel locked."
+    }
+  ],
+  "measured": {
+    "native": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaGt8Bounds": [
+      160,
+      82,
+      1230,
+      1181
+    ],
+    "previousAlphaGt8Bounds": [
+      169,
+      72,
+      1244,
+      1165
+    ],
+    "headTop": {
+      "old": 72,
+      "new": 82,
+      "delta": 10
+    },
+    "supportShoeLowestY": {
+      "old": 1164,
+      "new": 1180,
+      "delta": 16
+    },
+    "rightTransparentMarginPx": 24,
+    "measurementLimit": "Head top and support shoe lowest alpha are exact occupied-pixel measurements; anatomical joint/grip positions are visual estimates."
+  },
+  "issues": [
+    "Head top +10px and support shoe lowest +16px versus source; no claim of exact registration or client acceptance.",
+    "Original requested target legs are retained in phase and broad geometry, but AI did not preserve their pixels exactly."
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "inputModified": false,
+  "rootFeedback": "Root independently viewed new shoulder/arm ownership and confirmed improvement; selection remains root responsibility."
+}

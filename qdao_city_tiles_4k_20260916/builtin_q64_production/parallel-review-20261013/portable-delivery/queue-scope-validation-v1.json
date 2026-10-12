@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T04:59:53.814742+00:00",
+  "scope": "Independent mechanical queue size/four-neighbor-connectivity/original-zone-owner-range/acceleration-exclusion validation only. Read three delivered queue JSONs, three production-contract JSONs and assignments.json. No source images, progress, underlying inventories, Git or visual review. Metadata tasks excluded from missing groups.",
+  "limitations": [
+    "Original owner scope is checked against production-contract zone ranges minus acceleration assignments. Referenced sub-owner work-queue evidence was not opened under this restricted task; this is not a new coordinate allocation.",
+    "Missing source claims are inherited from the audited queues and were not rechecked against files. Unindexed context and unknown exact patches remain pending owner confirmation and are never inferred as physically missing.",
+    "Report/reference SHA links in island/city queue files are not validated here; root performs their final version alignment."
+  ],
+  "inputs": [
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/production-contract.json",
+      "role": "zone-range-contract",
+      "sha256": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac",
+      "bytes": 4290,
+      "readAtUtc": "2026-10-13T04:59:53.783290+00:00",
+      "mtimeNs": 1791622336092045200,
+      "sha256AtEnd": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/production-contract.json",
+      "role": "zone-range-contract",
+      "sha256": "6f22d6bc766af216a8b2b00a5b5c834224ad69748c42beed3be61741ee13c99a",
+      "bytes": 6750,
+      "readAtUtc": "2026-10-13T04:59:53.788101+00:00",
+      "mtimeNs": 1791622336093078000,
+      "sha256AtEnd": "6f22d6bc766af216a8b2b00a5b5c834224ad69748c42beed3be61741ee13c99a",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/island-game-20261009/production-contract.json",
+      "role": "zone-range-contract",
+      "sha256": "8c7d0558a34ea58195be0b8f4164368cad28e8c8e638746083a8bd8ce67bc416",
+      "bytes": 6862,
+      "readAtUtc": "2026-10-13T04:59:53.791258+00:00",
+      "mtimeNs": 1791622336095143500,
+      "sha256AtEnd": "8c7d0558a34ea58195be0b8f4164368cad28e8c8e638746083a8bd8ce67bc416",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/acceleration-20261010/assignments.json",
+      "role": "acceleration-owner-exclusion-authority",
+      "sha256": "122d9ec07325246df616691c6e4cdcee663e0893b60c9816157ed2950074031d",
+      "bytes": 3885,
+      "readAtUtc": "2026-10-13T04:59:53.799279+00:00",
+      "mtimeNs": 1791704063350325900,
+      "sha256AtEnd": "122d9ec07325246df616691c6e4cdcee663e0893b60c9816157ed2950074031d",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/village-queue-v3.json",
+      "role": "queue-to-validate",
+      "sha256": "1f4b4c86b4d86db4abc0ffd854214afd27797203361190f8d3f3aa02186c171b",
+      "bytes": 16336,
+      "readAtUtc": "2026-10-13T04:59:53.801909+00:00",
+      "mtimeNs": 1791867334115324800,
+      "sha256AtEnd": "1f4b4c86b4d86db4abc0ffd854214afd27797203361190f8d3f3aa02186c171b",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/island-queue-v1.json",
+      "role": "queue-to-validate",
+      "sha256": "72c5107beb5a50d67fd2f980f10d11dab8e88667777042572f3e96aaf61d078b",
+      "bytes": 46447,
+      "readAtUtc": "2026-10-13T04:59:53.805092+00:00",
+      "mtimeNs": 1791867324134679700,
+      "sha256AtEnd": "72c5107beb5a50d67fd2f980f10d11dab8e88667777042572f3e96aaf61d078b",
+      "unchangedDuringValidation": true
+    },
+    {
+      "path": "qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-review-20261013/portable-delivery/city-queue-v1.json",
+      "role": "queue-to-validate",
+      "sha256": "b6d70d7e991ee5171dd85c4e10c248f5803b2f76ccd215f511c2de20756b79a2",
+      "bytes": 303003,
+      "readAtUtc": "2026-10-13T04:59:53.809382+00:00",
+      "mtimeNs": 1791867444179951000,
+      "sha256AtEnd": "b6d70d7e991ee5171dd85c4e10c248f5803b2f76ccd215f511c2de20756b79a2",
+      "unchangedDuringValidation": true
+    }
+  ],
+  "summary": {
+    "queueFilesChecked": 3,
+    "contractFilesChecked": 3,
+    "assignmentFilesChecked": 1,
+    "nonemptyOriginalOwnerGroupsChecked": 16,
+    "groupsPassingSizeConnectivityScopeExclusions": 16,
+    "suggestedCoordinateOccurrences": 75,
+    "unindexedContextItemsExplicitlyPendingOwnerConfirmation": 2,
+    "otherUnknownExactPatchItemsExplicitlyPendingOwnerConfirmation": 2,
+    "metadataRecordsExcludedFromGroupChecks": 653,
+    "accelerationChecks": 5,
+    "accelerationChecksPassed": 5,
+    "failures": 0,
+    "inputsChangedDuringValidation": 0
+  },
+  "metadataRecordCountsExcluded": {
+    "village-queue-v3.json": 5,
+    "island-queue-v1.json": 5,
+    "city-queue-v1.json": 643
+  },
+  "groupChecks": [
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "jsonPointer": "/missingSourceCoordinateQueue/0",
+      "groupId": "northwest-0",
+      "owner": "northwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r06_c02",
+        "r06_c03",
+        "r07_c02",
+        "r07_c03",
+        "r07_c04"
+      ],
+      "coordinateCount": 5,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        7
+      ],
+      "originalOwnerColumns": [
+        1,
+        7
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "jsonPointer": "/missingSourceCoordinateQueue/1",
+      "groupId": "southwest-1",
+      "owner": "southwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r11_c04",
+        "r11_c05",
+        "r12_c04",
+        "r12_c05",
+        "r12_c06"
+      ],
+      "coordinateCount": 5,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        8,
+        14
+      ],
+      "originalOwnerColumns": [
+        1,
+        7
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "jsonPointer": "/missingSourceCoordinateQueue/2",
+      "groupId": "southeast-2",
+      "owner": "southeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r08_c08",
+        "r08_c09",
+        "r08_c10",
+        "r09_c08",
+        "r09_c10"
+      ],
+      "coordinateCount": 5,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        8,
+        14
+      ],
+      "originalOwnerColumns": [
+        8,
+        14
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "jsonPointer": "/missingSourceCoordinateQueue/3",
+      "groupId": "northeast-3",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r03_c12",
+        "r03_c13",
+        "r03_c14",
+        "r04_c12",
+        "r04_c13",
+        "r04_c14"
+      ],
+      "coordinateCount": 6,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        7
+      ],
+      "originalOwnerColumns": [
+        8,
+        14
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/0",
+      "groupId": "island-nw-original-owner-preflight-four",
+      "owner": "northwest",
+      "category": "mixed_missing_selection_and_unindexed_preflight",
+      "coordinates": [
+        "r05_c01",
+        "r05_c02",
+        "r06_c01",
+        "r06_c02"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        7
+      ],
+      "originalOwnerColumns": [
+        1,
+        7
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 2,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/1",
+      "groupId": "island-ne-original-owner-six",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r04_c10",
+        "r05_c10",
+        "r05_c11",
+        "r06_c10",
+        "r06_c11",
+        "r06_c12"
+      ],
+      "coordinateCount": 6,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        7
+      ],
+      "originalOwnerColumns": [
+        8,
+        14
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/2",
+      "groupId": "island-sw-original-owner-six",
+      "owner": "southwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r11_c01",
+        "r11_c02",
+        "r12_c01",
+        "r12_c02",
+        "r13_c01",
+        "r13_c02"
+      ],
+      "coordinateCount": 6,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        8,
+        14
+      ],
+      "originalOwnerColumns": [
+        1,
+        7
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/3",
+      "groupId": "island-se-original-owner-six",
+      "owner": "southeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r13_c11",
+        "r14_c11",
+        "r14_c12",
+        "r14_c13",
+        "r13_c13",
+        "r13_c14"
+      ],
+      "coordinateCount": 6,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        8,
+        14
+      ],
+      "originalOwnerColumns": [
+        8,
+        14
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 2,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/0",
+      "groupId": "northwest-0",
+      "owner": "northwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r03_c02",
+        "r03_c03",
+        "r04_c02",
+        "r04_c03"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        8
+      ],
+      "originalOwnerColumns": [
+        1,
+        8
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/1",
+      "groupId": "northeast-1",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r05_c09",
+        "r05_c10",
+        "r06_c09",
+        "r06_c10"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        8
+      ],
+      "originalOwnerColumns": [
+        9,
+        16
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/2",
+      "groupId": "northeast-2",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r05_c11",
+        "r05_c12",
+        "r06_c11",
+        "r06_c12"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        8
+      ],
+      "originalOwnerColumns": [
+        9,
+        16
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/3",
+      "groupId": "northeast-3",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r03_c13",
+        "r03_c14",
+        "r04_c13",
+        "r04_c14"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        8
+      ],
+      "originalOwnerColumns": [
+        9,
+        16
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/4",
+      "groupId": "northeast-4",
+      "owner": "northeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r07_c15",
+        "r07_c16",
+        "r08_c15",
+        "r08_c16"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        1,
+        8
+      ],
+      "originalOwnerColumns": [
+        9,
+        16
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/5",
+      "groupId": "southwest-5",
+      "owner": "southwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r09_c03",
+        "r09_c04",
+        "r10_c03",
+        "r10_c04"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        9,
+        16
+      ],
+      "originalOwnerColumns": [
+        1,
+        8
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/6",
+      "groupId": "southwest-6",
+      "owner": "southwest",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r13_c06",
+        "r13_c07",
+        "r14_c06",
+        "r14_c07"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        9,
+        16
+      ],
+      "originalOwnerColumns": [
+        1,
+        8
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "jsonPointer": "/adjacentMissingGroups/7",
+      "groupId": "southeast-7",
+      "owner": "southeast",
+      "category": "original_owner_missing_source_suggestion",
+      "coordinates": [
+        "r15_c15",
+        "r15_c16",
+        "r16_c15",
+        "r16_c16"
+      ],
+      "coordinateCount": 4,
+      "size4Through8": true,
+      "fourNeighborConnected": true,
+      "originalOwnerRows": [
+        9,
+        16
+      ],
+      "originalOwnerColumns": [
+        9,
+        16
+      ],
+      "outOfOwnerRange": [],
+      "hasDuplicateWithinGroup": false,
+      "repeatedAcrossGroupsSameMap": [],
+      "otherOwnerAccelerationCoordinates": [],
+      "newCoordinatesClaimed": false,
+      "unknownItemsRequiringOwnerPreflight": 0,
+      "physicalAbsenceValidated": false,
+      "passed": true
+    }
+  ],
+  "accelerationChecks": [
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "check": "declaredAccelerationExclusionsMatchAssignments",
+      "passed": true,
+      "assignmentCoordinates": [
+        "r03_c10",
+        "r03_c11",
+        "r04_c10",
+        "r04_c11",
+        "r05_c10",
+        "r05_c11"
+      ],
+      "declaredCoordinates": [
+        "r03_c10",
+        "r03_c11",
+        "r04_c10",
+        "r04_c11",
+        "r05_c10",
+        "r05_c11"
+      ]
+    },
+    {
+      "map": "fishing-village-game-20261009",
+      "queue": "village-queue-v3.json",
+      "jsonPointer": "/missingSourceCoordinateQueue/4",
+      "owner": "accelerated-jewelry-approach",
+      "category": "acceleration_retention_no_new_missing_group",
+      "coordinates": [],
+      "assignmentCoordinates": [
+        "r03_c10",
+        "r03_c11",
+        "r04_c10",
+        "r04_c11",
+        "r05_c10",
+        "r05_c11"
+      ],
+      "allCoordinatesWithinExactAssignment": true,
+      "newCoordinatesClaimed": false,
+      "sizeRuleApplicable": false,
+      "passed": true
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/4",
+      "owner": "accelerated-northeast-coast",
+      "category": "acceleration_retention_no_new_missing_group",
+      "coordinates": [
+        "r01_c13",
+        "r01_c14",
+        "r02_c13",
+        "r02_c14"
+      ],
+      "assignmentCoordinates": [
+        "r01_c13",
+        "r01_c14",
+        "r02_c13",
+        "r02_c14"
+      ],
+      "allCoordinatesWithinExactAssignment": true,
+      "newCoordinatesClaimed": false,
+      "sizeRuleApplicable": false,
+      "passed": true
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "check": "declaredAccelerationExclusionsMatchAssignments",
+      "passed": true,
+      "assignmentCoordinates": [
+        "r03_c04",
+        "r03_c05",
+        "r04_c04",
+        "r04_c05"
+      ],
+      "declaredCoordinates": [
+        "r03_c04",
+        "r03_c05",
+        "r04_c04",
+        "r04_c05"
+      ]
+    },
+    {
+      "map": "main-city-game-20261009",
+      "queue": "city-queue-v1.json",
+      "check": "noAcceleratedOwnerExpansionGroupProposed",
+      "assignmentCoordinates": [
+        "r03_c04",
+        "r03_c05",
+        "r04_c04",
+        "r04_c05"
+      ],
+      "passed": true
+    }
+  ],
+  "unindexedAndUnknownContextChecks": [
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/0/items/0",
+      "tile": "r05_c01",
+      "kind": "unindexed_context",
+      "ownerPreflightExplicit": true,
+      "physicalMissingNotConfirmed": true,
+      "passed": true,
+      "physicalMissingInferredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/0/items/2",
+      "tile": "r06_c01",
+      "kind": "unindexed_context",
+      "ownerPreflightExplicit": true,
+      "physicalMissingNotConfirmed": true,
+      "passed": true,
+      "physicalMissingInferredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/3/items/3",
+      "tile": "r14_c13",
+      "kind": "exact_remaining_patches_unknown",
+      "ownerPreflightExplicit": true,
+      "physicalMissingNotConfirmed": true,
+      "passed": true,
+      "physicalMissingInferredByThisAudit": false
+    },
+    {
+      "map": "island-game-20261009",
+      "queue": "island-queue-v1.json",
+      "jsonPointer": "/suggestedOriginalOwnerQueues/3/items/5",
+      "tile": "r13_c14",
+      "kind": "exact_remaining_patches_unknown",
+      "ownerPreflightExplicit": true,
+      "physicalMissingNotConfirmed": true,
+      "passed": true,
+      "physicalMissingInferredByThisAudit": false
+    }
+  ],
+  "failures": [],
+  "inputChanges": [],
+  "optionalQueueFilesNotPresent": [],
+  "newCoordinateClaimsMadeByThisValidation": false,
+  "notMapCompletion": true,
+  "noImagesGenerated": true,
+  "noOriginalRecordsModified": true
+}

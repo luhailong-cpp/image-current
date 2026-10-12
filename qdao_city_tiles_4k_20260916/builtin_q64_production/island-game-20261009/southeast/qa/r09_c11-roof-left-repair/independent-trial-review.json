@@ -1,0 +1,277 @@
+{
+  "timestamp": "2026-10-11T11:37:56.317407+00:00",
+  "status": "rejected_do_not_promote",
+  "scope": "r09_c11 v05 / r09_c12 v09 proposals only; no main tiles or progress changed",
+  "decision": "Original x3814 blue material bar is removed within both new sources, but replacement sources drift in left gutter/terminal-medallion geometry. Both prepared exact-pixel ownership trials introduce unacceptable new discontinuities. Neither is an acceptable candidate.",
+  "coordinateSystem": "All x/y below are two-tile canvas coordinates, with r09_c11 at [0,0] and r09_c12 at [4096,0]. World offset is [40960,32768].",
+  "findings": [
+    {
+      "severity": "reject",
+      "area": "rectangular left ownership boundary x3368",
+      "rangeForInspection": [
+        3200,
+        750,
+        3600,
+        1550
+      ],
+      "detail": "The bright curved tile lip and black trough change phase at the straight cut. The white lip has a visible vertical step and a partial displaced terminal medallion. This is new geometry damage, not acceptable paint texture.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\left-lower-rect-v01.png",
+          "sha256": "954ab0249cb61898e99f393d67720367ca89853d22899b2e09ec3f310acaa68a",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\fixed-v14-rect-v01.png",
+          "sha256": "2e9abcc92b5b0014811e3a6c799f47bc600c3f991b7e351aac4958e5e152c640",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "reject",
+      "area": "roof bottom object ownership",
+      "rangeForInspection": [
+        3300,
+        1150,
+        4554,
+        1854
+      ],
+      "detail": "Blue-only bottom ownership cuts into old/new gold terminal discs. The first two terminals differ materially in location; the mask exposes double outlines and gold crescents. A lowest-blue-pixel silhouette is not a complete roof-plus-medallion object mask. Source geometry drift remains even if the discs are included.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\bottom-left-rect-v01.png",
+          "sha256": "8c2fadcccc151b0ef4124c1c71053cbfe41bfc00b01c3122521053ce575e76ec",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\bottom-right-rect-v01.png",
+          "sha256": "1e198fc756e7d8b20b73e35a0c9f737655da627920d3d3327f81d2abf614e9f1",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\shared-lower-rect-v01.png",
+          "sha256": "2f7f74fcfb898cdab8411f21e0cc200e44674a20be8e20dfd762c0d33571241a",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "reject",
+      "area": "minimum-cost coordinate-path ownership trial",
+      "detail": "The trial called natural follows per-row image differences but does not establish a valid shared gutter. It produces a diagonal clipped/doubled trough and a hard tonal corner on the upper tile. It also duplicates the left terminal geometry. Low pixel error cannot override this visual failure.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\left-upper-natural-v01.png",
+          "sha256": "6d5f9d2f4ee840eed1957ea20be7beea777965c64fcf5a0220900f1fdeac047d",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\left-lower-natural-v01.png",
+          "sha256": "0692db2547c4203bce1855ba1c01ff93f29df5404c931299b27f49be7529b353",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\complete-top-natural-v01.png",
+          "sha256": "8c856959629bf313645f6b4b73193d2850291be257d13248aef36eccc99da786",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "minor_new_transition",
+      "area": "rectangular right boundary x4530",
+      "detail": "Upper geometry is close. A visible narrow vertical material transition remains through lower blue tile texture; no principal gutter severing was seen there. This is secondary to the left and bottom rejection.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\right-upper-rect-v01.png",
+          "sha256": "23dc19e33cef8197565ff87b0846f1d3476ddc2af2a6b2c439144dd4ea70066e",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\right-lower-rect-v01.png",
+          "sha256": "c157df3e05ef54757ad115d123f093370a50e27c1bf478059335a89fcdaf55fc",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "localized_continuity_observed",
+      "area": "upper/lower native join y737",
+      "detail": "Away from the separate left-edge defect, the true world-aligned 654-pixel overlap supports a continuous internal join at y737. No broad horizontal rectangular material step was observed in this crop.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\upper-lower-rect-v01.png",
+          "sha256": "ed9ae54de18f3ce589def1f22021042aed58ab9753e1df9f64af269aacc0a0f1",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "localized_continuity_observed",
+      "area": "r09c11/r09c12 shared edge x4096",
+      "detail": "The shared vertical boundary inherits the same native sources on both sides and no seam at x4096 was observed. The lower evidence still contains the nearby invalid medallion ownership described above. This observation does not make either tile acceptable.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\shared-upper-rect-v01.png",
+          "sha256": "edf85fba43e5e4c8bed1bd9d5ab0e23ea1aeb0e5286176d9186895617a59b004",
+          "nativeScale": true
+        },
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\shared-lower-rect-v01.png",
+          "sha256": "2f7f74fcfb898cdab8411f21e0cc200e44674a20be8e20dfd762c0d33571241a",
+          "nativeScale": true
+        }
+      ]
+    },
+    {
+      "severity": "not_reaccepted",
+      "area": "r09c12 north against r08c12v15",
+      "detail": "The rectangular trial changes 110714 pixels in r09c12 north256; path trial changes 91802. The earlier exact-unchanged v08/v06 north proof does not apply to these trials. The 458-pixel affected cross-boundary crop has no obvious principal contour gap, but both full candidates are rejected and no new external acceptance is issued.",
+      "evidence": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\north-r08-rect-v01.png",
+          "sha256": "54999b1ee884679f58cb88dc0bd5a4826f49cbc4a82f159b4e409e52df2972ff",
+          "nativeScale": true
+        }
+      ]
+    }
+  ],
+  "visualCoverage": {
+    "rectTrialAffectedPerimeterComplete": true,
+    "directlyViewed": [
+      "left-upper-rect-v01.png",
+      "left-lower-rect-v01.png",
+      "right-upper-rect-v01.png",
+      "right-lower-rect-v01.png",
+      "bottom-left-rect-v01.png",
+      "bottom-right-rect-v01.png",
+      "upper-lower-rect-v01.png",
+      "shared-upper-rect-v01.png",
+      "shared-lower-rect-v01.png",
+      "fixed-v14-rect-v01.png",
+      "complete-top-rect-v01.png",
+      "north-r08-rect-v01.png",
+      "left-upper-natural-v01.png",
+      "left-lower-natural-v01.png",
+      "complete-top-natural-v01.png"
+    ],
+    "naturalTrialFullPerimeterAccepted": false,
+    "naturalTrialEarlyRejection": "Independent left/top inspections already establish unacceptable geometry.",
+    "unaffectedOuterBoundaryProof": "See edgeBandsExactVsBase in trial-source-replay.json: old outer west of r09c11, outer east of r09c12, and both south bands stay exact."
+  },
+  "sourceReplay": {
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r09_c11-roof-left-repair\\trial-source-replay.json",
+    "sha256": "410fa57bf182c596a44540df7360505ba00ab15a6df15ab6f92f7aa0078f1e4c",
+    "allFourTileOutputsZeroMismatchedPixels": true,
+    "RGBModified": false,
+    "resampled": false,
+    "feathered": false
+  },
+  "newNative": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_color_upper_v01.png",
+      "sha256": "c8acca4ebdb37ab685cc976cd21dd666ce486c34b07f6b31b5c3e80e6cee9872",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pngShaMatchesRecord": true,
+      "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_color_upper_v01.png.generation.json",
+      "generationRecordSha256": "f40754ab708af2d0700fd2001ca9a184b3b57df8caf468db80b06f6b37550fdf",
+      "promptExists": true,
+      "promptNonempty": true,
+      "promptShaMatches": true,
+      "references": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\guides\\r09_c11_roof_color_upper_v01.native-context.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-detail-v1.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+          "exists": true,
+          "shaMatches": true
+        }
+      ],
+      "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\receipts\\r09_c11_roof_color_upper_v01.json",
+      "receiptExists": true,
+      "receiptSha256": "9308c56752cd97a187b11b9d7df08b6e54cdc3dd62637371dadfaa283a50d53b",
+      "actualModel": null,
+      "actualQuality": null,
+      "configurationIsTargetOnly": false,
+      "submittedParameters": {
+        "model": null,
+        "quality": null
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_color_lower_v01.png",
+      "sha256": "69225ae222b81299cc78ebe66d93f36089787311a6637e204edb6a27517a76c2",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pngShaMatchesRecord": true,
+      "generationRecord": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\native\\r09_c11_roof_color_lower_v01.png.generation.json",
+      "generationRecordSha256": "5164d91f4843053b84aba6e2c9c7bbdbdd868b97481458fa7952bc48a8a12b08",
+      "promptExists": true,
+      "promptNonempty": true,
+      "promptShaMatches": true,
+      "references": [
+        {
+          "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\guides\\r09_c11_roof_color_lower_v01.native-context.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-wall-trees-v6.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/penglai/penglai-natural-stone-detail-v1.png",
+          "exists": true,
+          "shaMatches": true
+        },
+        {
+          "file": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel_20261005/daylight-only-20261009/user-references-20261009/mail-daoist-style.jpg",
+          "exists": true,
+          "shaMatches": true
+        }
+      ],
+      "receipt": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\receipts\\r09_c11_roof_color_lower_v01.json",
+      "receiptExists": true,
+      "receiptSha256": "2a731b4b21b78a428fbea21d955cb0883b3c86270ecce92a3e32dab54009bc15",
+      "actualModel": null,
+      "actualQuality": null,
+      "configurationIsTargetOnly": true,
+      "submittedParameters": {
+        "model": null,
+        "quality": null
+      }
+    }
+  ],
+  "roundLimit": {
+    "successfulNativeCount": 2,
+    "maximum": 2,
+    "pendingRequest": false,
+    "furtherImageGenerationIssued": false,
+    "networkBlockObserved": false
+  },
+  "nextRecommendation": "Keep existing main candidates. Before any further generation, agree a geometry-preserving complete-object repair whose source support includes the entire left affected tile gutter and its terminal disc. Neither hard-cut optimization nor RGB blending can recover coincident geometry that these two sources did not preserve. Further original generation requires the parent to authorize a new round; this authorized two-image round is exhausted.",
+  "recordClarification": "The lower request/reference role described upper as accepted. That described an available saved source, not visual acceptance; both upper and lower are source-valid and trial-rejected pending geometry repair.",
+  "formalAccepted": false,
+  "usableExternalAccepted": false,
+  "r08c11GuidesRemainPaused": true
+}

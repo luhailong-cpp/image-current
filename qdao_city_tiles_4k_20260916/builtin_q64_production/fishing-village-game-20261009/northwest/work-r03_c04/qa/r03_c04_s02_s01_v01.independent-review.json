@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "patch": "r03_c04_s02_s01_v01",
+  "reviewedAt": "2026-10-09T23:01:02.488334+00:00",
+  "decision": "reject-west-stone-sand-boundary-discontinuity",
+  "usableForSelection": false,
+  "formalAccepted": false,
+  "repairRequested": true,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "sourceEvidence": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s02_s01_v01.png",
+      "sha256": "6571b01455f8bba93f416a2d91622b280622e6b0c47a6bf265186279d63cb24c"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\guides\\r03_c04_s02_s01.layout-and-native-overlap.png",
+      "sha256": "1ef8f69918e36d3b3f3408ff5377c4eeb59fa342c2247c814889588e6cd4d5f5"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c04_s01_s01_v01.png",
+      "sha256": "515360f4ab549ca6d018ad37b8632d09bb825764a549cb3aed5a422f712446aa"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s01_s04_v01.png",
+      "sha256": "7a974e31af00445b7376dc5415fd7538b4d6ba341f9e2b106dfa1c31cc782d89"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s02_s04_v01.png",
+      "sha256": "38018a9c8a12e83d66e20ecd69486234141a0944b8541c719feff16022314609"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r03_c03_s03_s04_v01.png",
+      "sha256": "a23ac08fef9e3578a2d638bb610784120bf9a3ed4c155e05774d0e2eb002f50f"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.seams.json",
+      "sha256": "2d127cd356e4ccfaba5f3024060d28448656e4c28fe9aad03501f3c2bc8e11ff"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\tiles\\r03_c03.candidate-repair-v5.png",
+      "sha256": "01cc33b6fac4a1a233ef908c709b307cd3597d42aee521f355d3d935b52adea1"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\assemble_r03_c03.py",
+      "sha256": "32d65a023e4f17ee91d77e10e97fd0d931ef981baa025e9c5d93c4d4c5fbe9e8"
+    }
+  ],
+  "incomingGlobalNativeOrigin": [
+    12173,
+    9101
+  ],
+  "diagnostic": {
+    "record": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v01.hardcut-diagnostic.json",
+    "sha256": "f9631589782341ed8c13c170dde41838834aa465d5f65d76265d0daf5ff8658b",
+    "method": "Unmodified append_hard/minimum_vertical_seam; true230px overlap with one native RGB owner per pixel; no feather/resample.",
+    "westContext": "Replayed r03c03 row1-to2 and row2-to3 saved horizontal cuts across fourth column. Reconstructed eastmost115px matches v5 at tile[3981,909,4096,2163] exactly.",
+    "cornerOrder": "North incoming joined first, then actual west; independent north and west joins also inspected."
+  },
+  "visualViewsAt100Percent": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v01.north.seam100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v01.west.seam100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v01.northwest-intersection100pct.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\work-r03_c04\\qa\\r03_c04_s02_s01_v01.west-stone-sand-boundary100pct.png"
+  ],
+  "findings": [
+    {
+      "scope": "north230 overlap, full1254px",
+      "result": "pass",
+      "detail": "Adaptive hardcut retains continuous stone joints and bevels at native scale; no conspicuous broken or doubled joints."
+    },
+    {
+      "scope": "northwest intersection after actual west context and north join",
+      "result": "pass",
+      "detail": "Visible upper crossing stone geometry remains coherent."
+    },
+    {
+      "scope": "west stone-to-sand edge",
+      "result": "reject",
+      "incomingNativeRegionApproximate": [
+        40,
+        635,
+        150,
+        755
+      ],
+      "globalRegionApproximate": [
+        12213,
+        9736,
+        12323,
+        9856
+      ],
+      "detail": "Old thick slab border and new shifted thin curb disagree. Adaptive hardcut produces a large triangular cutout/overhang and abrupt direction change instead of a continuous edge."
+    },
+    {
+      "scope": "new native border geometry",
+      "result": "reject",
+      "detail": "A separate row of long narrow curb stones is invented where the actual left anchor has only thick paving slabs. Outer stone-sand border moves upward by about80px throughout the west overlap."
+    }
+  ],
+  "boundaryMeasurements": {
+    "method": "After visual inspection, approximate sand onset from5px-wide RGB sample:r-b>80,g>150 withiny400..1000. Values corroborate visible offset only.",
+    "samples": [
+      {
+        "nativeX": 20,
+        "guideSandStartY": 724,
+        "newSandStartY": 643,
+        "upwardShift": 81
+      },
+      {
+        "nativeX": 115,
+        "guideSandStartY": 784,
+        "newSandStartY": 703,
+        "upwardShift": 81
+      },
+      {
+        "nativeX": 210,
+        "guideSandStartY": 843,
+        "newSandStartY": 763,
+        "upwardShift": 80
+      }
+    ]
+  },
+  "metricsForContextOnly": [
+    {
+      "label": "north230",
+      "overlapMAE": 4.732563622494973,
+      "pathRange": [
+        99,
+        216
+      ]
+    },
+    {
+      "label": "actual-west230",
+      "overlapMAE": 9.690672167903289,
+      "pathRange": [
+        44,
+        195
+      ]
+    },
+    {
+      "label": "north-then-actual-west230",
+      "overlapMAE": 9.534602316066847,
+      "pathRange": [
+        44,
+        195
+      ]
+    }
+  ],
+  "editAdvice": [
+    "Preserve the already compatible north230px anchor and upper stone joints.",
+    "Remove the invented independent narrow curb strip.",
+    "Restore the existing thick slab border to exact west anchor endpoints and continue the edge toward lower-right; atnativex115 sand begins near784 rather than703.",
+    "Redraw the affected lower stone/sand boundary locally; do not shift the entire patch and disrupt the north join.",
+    "Recheck both joins and northwest crossing after repair."
+  ],
+  "reviewLimits": [
+    "No navigation or collision blocking is inferred; this is a visible-art geometry rejection.",
+    "East/south and complete4K tile acceptance remain pending."
+  ]
+}

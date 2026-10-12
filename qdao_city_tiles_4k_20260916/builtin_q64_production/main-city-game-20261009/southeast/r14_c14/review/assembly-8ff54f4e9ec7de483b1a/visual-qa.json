@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "tile": "r14_c14",
+  "reviewedAtUtc": "2026-10-10 20:06:26 UTC",
+  "status": "candidate_failed_internal_and_external_visual_review",
+  "candidate": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r14_c14/candidate/r14_c14-4k-candidate-8ff54f4e9ec7de483b1a.png",
+    "sha256": "afb8859139b8321fbf3f6f96e2fd463de445b40ab2b1489e3226452893df1aed",
+    "size": [
+      4096,
+      4096
+    ]
+  },
+  "context": {
+    "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r14_c14/candidate/r14_c14-context-4326-8ff54f4e9ec7de483b1a.png",
+    "sha256": "d2fc547c04e93cea90d70a8cb1cf9018257207f68d75ee9a9c69c7ac7d34e238",
+    "size": [
+      4326,
+      4326
+    ]
+  },
+  "nativeEvidence": {
+    "activeNativeCount": 16,
+    "generatedNativeRecordCount": 18,
+    "nativeSize": [
+      1254,
+      1254
+    ],
+    "coreSize": [
+      1024,
+      1024
+    ],
+    "haloEachSide": 115,
+    "builtinImagegenOnly": true,
+    "actualModel": null,
+    "actualQuality": null,
+    "finalArtResized": false,
+    "finalArtUpscaled": false,
+    "receiptAndTargetReplay": "passed_by_assemble",
+    "generatedRepairs": [
+      "p04_01: native grout rotated at y230; second version restores incoming direction",
+      "p04_03: extra narrow slab line entered top anchor; second version removes it"
+    ],
+    "originalGeneratedFilesPreserved": true
+  },
+  "coverage": {
+    "overview": "overview-preview-only.png",
+    "fullInternalSeamBands": 6,
+    "junctions900px": 9,
+    "outerEdges": 4,
+    "nativeViewSegments20": "native-view-segments/manifest.json",
+    "inspectionMethod": "All 9 junctions viewed at original 900x900. All 6 internal seam bands and 4 edges viewed in two unscaled segments <=2048 long after initial full-band tool display was downsampled. Final artwork never resized.",
+    "externalCoreComposites": "core-only-external/source-manifest.json"
+  },
+  "internalArtQA": {
+    "passed": false,
+    "findings": [
+      {
+        "id": "I01",
+        "approxCandidateXY": [
+          1083,
+          244
+        ],
+        "affected": [
+          "p01_01",
+          "p01_02"
+        ],
+        "issue": "Opposing diagonal grout centerlines have a short visible gap/offset near first vertical seam.",
+        "evidence": "native-view-segments/vertical-x1024-full-height-100pct-part0000-2048.png"
+      },
+      {
+        "id": "I02",
+        "approxCandidateXY": [
+          1067,
+          1024
+        ],
+        "affected": [
+          "p01_01",
+          "p01_02",
+          "p02_01",
+          "p02_02"
+        ],
+        "issue": "Diagonal grout breaks into two offset ends close to the first four-patch junction.",
+        "evidence": "junction-x1024-y1024-100pct.png"
+      },
+      {
+        "id": "I03",
+        "approxCandidateXY": [
+          997,
+          1968
+        ],
+        "affected": [
+          "p02_01",
+          "p02_02"
+        ],
+        "issue": "Clear short missing/offset section in the diagonal grout near x1024.",
+        "evidence": "junction-x1024-y2048-100pct.png"
+      },
+      {
+        "id": "I04",
+        "approxCandidateBox": [
+          950,
+          2720,
+          1200,
+          3090
+        ],
+        "affected": [
+          "p03_01",
+          "p03_02",
+          "p04_01",
+          "p04_02"
+        ],
+        "issue": "Incoming cross-joint fades out, leaving a long unjoined section across the first vertical band near the lower junction.",
+        "evidence": "junction-x1024-y3072-100pct.png"
+      },
+      {
+        "id": "I05",
+        "approxCandidateBox": [
+          1020,
+          3500,
+          1220,
+          3650
+        ],
+        "affected": [
+          "p04_01",
+          "p04_02"
+        ],
+        "issue": "Cross-joint entering from right terminates inside a continuous slab near the first vertical band; requires topology review and native correction.",
+        "evidence": "native-view-segments/vertical-x1024-full-height-100pct-part2048-4096.png"
+      },
+      {
+        "id": "I06",
+        "approxCandidateXY": [
+          3006,
+          2705
+        ],
+        "affected": [
+          "p03_03",
+          "p03_04"
+        ],
+        "issue": "Grout from the right ends inside the slab before reaching the adjoining grid.",
+        "evidence": "junction-x3072-y3072-100pct.png"
+      },
+      {
+        "id": "I07",
+        "approxCandidateXY": [
+          2997,
+          3382
+        ],
+        "affected": [
+          "p04_03",
+          "p04_04"
+        ],
+        "issue": "A newly introduced slab corner turns in the middle of the neighboring slab near x3072; it is not joined to the left pavement lattice.",
+        "evidence": "junction-x3072-y3072-100pct.png"
+      }
+    ],
+    "observations": "Large partial wooden supports, leaf fragments and festive paper groups remain within the existing crop layout; no new freestanding architecture or blue inset road band was introduced. Second vertical band and most horizontal seams are visually continuous. These observations do not override the blocking grout discontinuities."
+  },
+  "externalNeighborSeamQA": {
+    "passed": false,
+    "method": "Unblended actual4096 core-to-core composites, no external halo used as authority.",
+    "sourceManifest": "core-only-external/source-manifest.json",
+    "north": {
+      "neighbor": "r13_c14",
+      "candidateSha256": "9f512033dd67a95461d917b22fd45180aae16e5b420cfcf9c348d3f7e7021872",
+      "status": "not_passed",
+      "findings": "Most large stone and wood edges align, but the dark wood-seat shadow around tile x3450..3710 visibly changes at the horizontal tile boundary. Tone/texture also needs unified native continuation."
+    },
+    "west": {
+      "neighbor": "r14_c13",
+      "candidateSha256": "739ed677362e065b6c5d11fa1c88276195d1afa70fdfca30cb7696e72cf6ad5f",
+      "status": "not_passed",
+      "findings": "Core seam remains visible in material/shadow continuation, with missing incoming shallow joints especially in lower half around tile y2400..2750 and near y3200. Upper half has a visible tone split in several stretches."
+    },
+    "fourCoreCorner": {
+      "status": "not_passed",
+      "evidence": "core-only-external/four-core-corner-900.png",
+      "findings": "Existing r13_c13/r13_c14 and r13_c13/r14_c13 boundaries retain a conspicuous four-way discontinuity, including grout offsets and a horizontal/vertical material block. The immutable historical r13_c13 core was not changed or masked.",
+      "recheckRequired": "seam_audit reported active r13_c14 southwest repair; recheck with new candidate hash after it is published."
+    },
+    "eastSouth": "No neighboring generated core reviewed; remain unaccepted."
+  },
+  "formalAccepted": false,
+  "internallyAccepted": false,
+  "externallyAccepted": false,
+  "worldSize": null,
+  "clientMappingValidated": false,
+  "capacity5000Validated": false,
+  "nextStep": "Repair native grout topology using actual neighboring core and all relevant local incoming edges, then reassemble a new version and repeat native-scale internal and external QA. Preserve this failed candidate and all 18 source records."
+}

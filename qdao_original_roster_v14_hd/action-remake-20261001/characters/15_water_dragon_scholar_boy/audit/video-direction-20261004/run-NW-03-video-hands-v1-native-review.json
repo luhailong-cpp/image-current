@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "key": "run-NW-03-video-hands-v1",
+  "reviewer": "final_hands_ns_nwsw",
+  "reviewedAt": "2026-10-05T04:50:07.4402076-04:00",
+  "candidate": "sources/new/run-NW-03-video-hands-v1.png",
+  "candidateSha256": "77e0ef2079d980db750621e246c0575ab05a7e06635cae4df533ec46710d2f92",
+  "nativeGeometry": {
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "format": "PNG",
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  "editTarget": {
+    "file": "sources/new/run-NW-03-grounding-v1.png",
+    "sha256": "bec49105715c13a89a0c5996eaab58ee8a9cc7281608347c04733ed16f63b93c",
+    "generationRecord": "provenance/generation/run-NW-03-grounding-v1.json"
+  },
+  "reviewMethod": "五个真实参考均先经view_image查看；返回候选在落盘后用view_image original实际查看1254原生全身；另用Pillow只读比较双鞋可见alpha轮廓，无像素加工。",
+  "staticDecision": "recommend_parent_review_for_selection",
+  "improvement": "当前完整外露的背肩扇面改为远侧肩与头身后局部外露；右腕靠近远侧躯干，握点主要被遮挡，近侧左臂和空拳仍保持。已补入前侧可见到后摆完整外露之间的遮挡相位。",
+  "anatomy": "解剖右臂仍为持扇臂；袖口与藏于远侧的右腕关系可解释，没有把扇换到近侧左空手。遮挡处不能直接看见完整手指和扇轴，未冒称其全部可见。",
+  "invariants": {
+    "canvasPreserved": true,
+    "cameraAndFigureScale": "视觉保持原相机、全身尺度和位置，未人工平移/缩放/重锚",
+    "legPose": "原支撑左腿与后收右腿的姿势、屈膝和鞋向视觉保持",
+    "leftHand": "原近侧左手空拳保留",
+    "pixelIdentical": false,
+    "caveat": "生成器对未改区仍有轻微重绘，不能声称腿脚逐像素一致。以alpha>=128比较，支撑鞋可见底缘约下移2原生像素，后收鞋可见外缘约1像素变化；原根锚应继续使用固定变换，不能用新最低alpha像素重新贴地。",
+    "supportBootComparison": {
+      "roi": [
+        450,
+        1040,
+        700,
+        1210
+      ],
+      "threshold": 128,
+      "originalLocalBBox": [
+        29,
+        0,
+        213,
+        147
+      ],
+      "candidateLocalBBox": [
+        29,
+        0,
+        213,
+        149
+      ],
+      "silhouetteDifferencePixels": 302,
+      "unionPixels": 20070
+    },
+    "liftedBootComparison": {
+      "roi": [
+        725,
+        960,
+        890,
+        1145
+      ],
+      "threshold": 128,
+      "originalLocalBBox": [
+        0,
+        0,
+        132,
+        169
+      ],
+      "candidateLocalBBox": [
+        0,
+        0,
+        133,
+        170
+      ],
+      "silhouetteDifferencePixels": 256,
+      "unionPixels": 15534
+    }
+  },
+  "modelEvidence": {
+    "targetModel": "gpt-image-2.5-sunburst",
+    "targetQuality": "max",
+    "submittedModel": null,
+    "submittedQuality": null,
+    "actualModel": null,
+    "actualQuality": null,
+    "reason": "宿主管理；工具无型号或质量选择器，回执未披露实际型号/质量。",
+    "receipt": "provenance/receipts/run-NW-03-video-hands-v1.tool.json",
+    "hostOutput": "C:\\Users\\luyua\\.codex\\generated_images\\01a10aba-4ddc-7503-a123-d0cd313bbdd1\\exec-ec54431e-13cf-487a-91d6-0163c8351376.png"
+  },
+  "sequenceReferenceFiles": [
+    "sources/new/run-NW-02-archer-v2.png",
+    "sources/new/run-NW-04-grounding-v1.png"
+  ],
+  "dynamicReview": {
+    "performed": false,
+    "status": "pending",
+    "limitation": "未实时连播，未绕过浏览器本地文件策略；当前静态候选不能视为最终动态验收。"
+  },
+  "timing": "本候选不改时序；用户最新为60ms一帧，主清单与预览由root维护。",
+  "outputScope": "仅新增候选源、真实prompt/request/receipt/generation及本私有审核；未改主manifest/runtime/preview/Git。"
+}
