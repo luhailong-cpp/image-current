@@ -1,0 +1,14 @@
+from workflow import ROOT,read,write,sha,now
+tile='r14_c11';folder=ROOT/'qa/r14_c11-resume-20261013-v01';m=read(folder/'seams-junctions-external.json')
+issues=[
+ {'id':'north-guide-material','sources':['11v02','12v01','13v01','14v02'],'location':'native y230, approximately tile y115','issue':'Straight horizontal changes in water brightness/brush texture remain below the north overlap; actual northern join geometry continues.','status':'not_passed'},
+ {'id':'middle-water-guide-material','sources':['23v01','24v01','32v01','33v01','34v02'],'location':'native x230/x1024 and y230/y1024 where visible','issue':'Several rectangular changes in water texture remain in the final core; most visible in p24 east strip, p32 lower band, p33 left/right and lower edges.','status':'not_passed'},
+ {'id':'rock-guide-material','sources':['22v01'],'location':'native x230/y230; junction j11 lower-right region','issue':'Stone facets and highlights retain a straight guide-boundary step inside the core. Rock silhouette and foot positions connect.','status':'not_passed'},
+ {'id':'independent-middle-join','sources':['32v01','33v01'],'location':'h32 and j32 around tile x2048','issue':'The independently generated water texture changes phase at portions of the actual join; coordinate positions are correct but the material needs coherent repaint.','status':'not_passed'}
+]
+record={'createdAt':now(),'reviewer':'left_resume','candidate':m['candidate'],'candidateSha256':m['candidateSha256'],'sourceReplayMismatchedPixels':0,'reviewedInternalSeams':24,'reviewedJunctions':9,'reviewedNorthExternalSegments':4,'reviewedEastExternalSegments':4,'overall':'fully_covered_not_internal_passed','internalPassed':False,'externalPassed':False,'formalAccepted':False,'issues':issues,'note':'Reviewed actual unscaled seam/junction contacts and downscaled full layout. Preserve selected working originals and record material defects; coverage does not imply acceptance.','entries':[{'id':e['id'],'file':e['file'],'sha256':e['sha256'],'status':'reviewed_not_accepted_pending_material_repairs'} for e in m['entries']]}
+write(folder/'left-visual-review.json',record)
+for f in [ROOT/f'progress-{tile}.json',ROOT/f'production-resume-left-sol-{tile}-20261012.json']:
+ p=read(f);p.update(updatedAt=now(),status=record['overall'],actualNativeCount=19,generatedNativeCount=19,selectedCoordinateCount=16,fullyCovered4kCount=1,internalPassed4kCount=0,externalPassed4kCount=0,formalAcceptedCount=0,workingVersions=read(ROOT/f'selection-{tile}.json')['patchVersions'],visualReview=str(folder/'left-visual-review.json'),pendingFindings=issues,currentPatch=None,currentVersion=None,inFlight=False,inFlightRequests=[],activeImageGenCalls=0,inFlightRequestCount=0,nextStep='Continue independent c10 gaps per coordinator while retaining these material repairs unpassed; later native repair with fixed actual outer border.')
+ write(f,p)
+print(record['candidateSha256'])

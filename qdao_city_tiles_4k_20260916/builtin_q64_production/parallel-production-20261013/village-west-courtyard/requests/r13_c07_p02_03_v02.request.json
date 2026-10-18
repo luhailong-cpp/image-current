@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "patch": "r13_c07_p02_03",
+  "version": "v02",
+  "tool": "image_gen.imagegen",
+  "preparedAtUtc": "2026-10-13T22:02:57.612947+00:00",
+  "submittedArguments": {
+    "prompt": "Use case: precise-object-edit. Correct ONLY the top rock geometry in image1 to exactly match image2, retaining native1254x1254. Image2 is the true TOP230 pixels required in the output. The correct image2 rock has only a cropped main central foot fromx270 to930 which ends at abouty160, and a far-left thin cropped rock sliver. The upper-right area x980..1254 is entirely water and foam. Image1 incorrectly added a separate grey rock at upper-right and extended the central foot down toy300. Remove the entire upper-right extra rock and retract central rock foot to its exact curve in image2 ending near y160. Fill those removed regions with matching blue-turquoise water and white surf. Do not introduce a new rock. Top230 must visually reproduce native image2 in geometry, scale and color. Smoothly connect to the existing lower foam in image1. Image3 anchors left230. Preserve every area belowy450 and other water, lighting, brushwork and scene framing. Hand-painted Daoist Q map style, native detailed material; no text/UI/objects/borders. Return only the corrected1254square crop.",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c07_p02_03_v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c07_p02_03.north-overlap-v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c07_p02_03.west-overlap-v01.png"
+    ],
+    "transparent_background": false
+  },
+  "globalCoreBox": [
+    26624,
+    50176,
+    27648,
+    51200
+  ],
+  "globalNativeBox": [
+    26509,
+    50061,
+    27763,
+    51315
+  ],
+  "requestedNativeDimensions": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "actualModelEvidence": "not returned",
+  "allocation": "allocated_root_reserved",
+  "ownerAcknowledgementClaimed": false,
+  "references": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c07_p02_03_v01.png",
+      "sha256": "776c7632f581bdc171e1e36c98c7792262185d20be2c7ac2549fdf44282adc66",
+      "role": "edit target"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c07_p02_03.north-overlap-v01.png",
+      "sha256": "98974616dde2fdbb2de8984956b8bab189fa54fcc7006c3386ac40362a434be2",
+      "role": "EXACT native content of output top230 pixels, priority"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c07_p02_03.west-overlap-v01.png",
+      "sha256": "a084b2e38b59046d2d933d2c6d01ef45b16c07ed7cc474388bf1dab18bdbc136",
+      "role": "native output left230 foam/water/rock continuation"
+    }
+  ],
+  "authorities": [
+    {
+      "path": "D:\\work\\image\\AGENTS.md",
+      "sha256": "57f1ad4f81fdb2256b843923d862308be228130917b99cfced375db256aff01a"
+    },
+    {
+      "path": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+      "sha256": "a7cab49b89974586a1a0375baeadc5d4a7aa12dce6e782bcc8f9b52b777b3c8f"
+    },
+    {
+      "path": "C:\\Users\\luyua\\.codex\\skills\\.system\\imagegen\\SKILL.md",
+      "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+    }
+  ],
+  "edgeSources": [
+    {
+      "direction": "north",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c07_p01_03_v01.png",
+      "sha256": "1709a5c35bd747b932ce17a41680edfda10c499760352ed2934de16fc00f54b0",
+      "crop": [
+        0,
+        1024,
+        1254,
+        1254
+      ],
+      "target": [
+        0,
+        0,
+        1254,
+        230
+      ]
+    },
+    {
+      "direction": "west",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c07_p02_02_v01.png",
+      "sha256": "ef8993b3f99964092ac4e361679f23f513aad4e77cb96bbbab72fb6904f4f109",
+      "crop": [
+        1024,
+        0,
+        1254,
+        1254
+      ],
+      "target": [
+        0,
+        0,
+        230,
+        1254
+      ]
+    }
+  ],
+  "repairOf": "r13_c07_p02_03_v01",
+  "repairReason": "extra upper-right rock and overlong central foot mismatch native north strip"
+}

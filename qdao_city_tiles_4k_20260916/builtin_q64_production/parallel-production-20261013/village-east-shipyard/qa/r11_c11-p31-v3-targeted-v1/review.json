@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T18:56:32.011830+00:00",
+  "reviewType": "minimal_east_anchor_and_known_lower_support_residual",
+  "tile": "r11_c11",
+  "patch": "p31",
+  "version": 3,
+  "status": "east_anchor_ready_south_support_length_pending",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p31-v3.png",
+    "sha256": "379c501af57dca0367cab58b618179c0d9d497b5b4a5099f17927000d9c91da8",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "previousVersion": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p31-v2.png",
+    "sha256": "5dc7ee1a6b61b0d7cf4fefda161f20790a4c697d739e6b32955b04e262a8fa07"
+  },
+  "canAnchor": {
+    "p32_east": true,
+    "p41_south": false
+  },
+  "decision": "Retain v3 as the improved candidate and continue independent/east work. East shoreline geometry remains in the corrected down-right course. Do not restart the same local repair loop now; the south pile length remains pending and unpassed.",
+  "resolved": [
+    "A lower support now emerges beneath the correct dock corner.",
+    "The prior v1 reversed shoreline and missing west water remain corrected."
+  ],
+  "pendingBlockingSouth": [
+    {
+      "id": "P1_support_ends_before_bottom",
+      "regionApprox": [
+        350,
+        790,
+        680,
+        1254
+      ],
+      "observed": "The added lower pile ends with a visible foot aroundy1155, inside this patch. The approved same-pile guide continues below the native bottom into p41. The p41 generator must not add a new separate full post belowy230 to compensate.",
+      "status": "pending_later_consolidated_repair",
+      "bestAvailableVersion": "p31-v3",
+      "samePointImmediateRetry": "deferred by root; not a pass"
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P2_y230_plank_direction",
+      "status": "pending_consolidated_QA",
+      "observed": "Known plank-direction transition remains separate from east shoreline anchor viability."
+    }
+  ],
+  "edgePreservationEvidence": {
+    "east230PixelExactToV2": false,
+    "west230PixelExactToV2": false,
+    "meaning": "Model output is not pixel-identical to prior version at these strips. Visual geometry is coherent; do not claim unchanged pixels."
+  },
+  "evidence": [
+    {
+      "file": "east-shoreline-anchor-100pct.png",
+      "sha256": "5d69771f5e00788799bb68e8bf9a8ea772542787be6a3f2273bddc4a1caf1bc8",
+      "crop": [
+        1024,
+        650,
+        1254,
+        1254
+      ],
+      "dimensions": [
+        230,
+        604
+      ],
+      "operation": "exact unscaled crop"
+    }
+  ],
+  "evidenceViewedAt100Percent": true,
+  "candidateViewedAt100Percent": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSourcesChanged": false,
+    "gitTouched": false,
+    "historicalFullScan": false,
+    "overviewRebuilt": false
+  }
+}

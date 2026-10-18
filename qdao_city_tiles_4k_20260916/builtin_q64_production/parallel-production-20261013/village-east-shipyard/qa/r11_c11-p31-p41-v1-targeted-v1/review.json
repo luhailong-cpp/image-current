@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T17:40:32.216172+00:00",
+  "reviewType": "targeted_p41_support_and_p31_outgoing_shoreline",
+  "status": "v1_geometry_blocked",
+  "formalAccepted": false,
+  "inputs": {
+    "p41": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p41-v1.png",
+      "sha256": "ce7ce69e4a7fa79ea87341b2b88f9f5504ec9cd5a47bf5a75972b28730e60053",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41_guide": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\layout-only\\p41-v1-conditioned-target.png",
+      "sha256": "1dbbc9e9c51933ab9ac8631e4afee6c04e89613c4c495e09696b0fe4d22acbe6",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p31-v1.png",
+      "sha256": "0d661e6099d8b328131bb2f984e645f3727d236fc2f37e70b51fba26b04d3ade",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31_guide": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\layout-only\\p31-v1-conditioned-target.png",
+      "sha256": "f6d9dc2b7ec75fb1d5cf1ed657a939f9d824f68bdf48bdcb5c7b89782986c1ca",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p31_west": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p34-colorpass.png",
+      "sha256": "0eb99b67ac583dfee2028ddbd27bd46a2701c9be6a8b7717326968c4da7ffcba",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    },
+    "p41_west": {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r11_c10\\processed\\colorpass\\p44-colorpass.png",
+      "sha256": "264635eed08e8903a957dbc39b742c6e9944e57484aa1b3c29f34964528a72f0",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "canAnchor": {
+    "p31_v1_east": false,
+    "p31_v1_south": false,
+    "p41_v1_east_full_strip": false,
+    "p41_v1_south_water_only": "No defect identified in lower water; not a full-patch acceptance or new coordinate authorization."
+  },
+  "blockers": [
+    {
+      "id": "B1_p31_shoreline_course_and_lost_west_water",
+      "observed": "The generated p31 v1 reverses the approved right-hand dock-lip course and also overwrites the finished west strip: original west shore/sea becomes deck. This is distinct from the y230 plank-direction seam. Both south and east use would propagate the changed shoreline.",
+      "regionApprox": [
+        0,
+        700,
+        1254,
+        1254
+      ],
+      "guideLipApproxByX": {
+        "230": {
+          "brightLipY": [
+            780,
+            870
+          ],
+          "note": "Original guide partly occluded by pillar; finished west x229 instead has lip around730..780 and side down to970. Smooth native transition is necessary."
+        },
+        "600": {
+          "brightLipY": [
+            750,
+            840
+          ],
+          "note": "Adjacent to pillar foot, soft guide contour."
+        },
+        "1000": {
+          "brightLipY": [
+            950,
+            1040
+          ],
+          "darkSideY": [
+            1040,
+            1220
+          ]
+        },
+        "1139": {
+          "brightLipY": [
+            1030,
+            1130
+          ],
+          "darkSideY": [
+            1130,
+            1254
+          ]
+        }
+      },
+      "toleranceNote": "Approximate visual guide ranges; blurred guide uncertainty about30-40px. Never copy guide pixels as final art.",
+      "candidateAtX1139": "Lip around y750..840 with water below, substantially above approved outgoing course.",
+      "repairContextSuggested": [
+        230,
+        700,
+        1254,
+        1254
+      ],
+      "preservationRule": "Restore and fix original west native230 from conditioned-target/source, not the already altered p31-v1 west pixels. Preserve north230 from north source; north wins at the corner. Keep existing upper post footprint.",
+      "evidence": [
+        "p31-west-core-native-guide-100pct.png",
+        "p31-east-native-guide-100pct.png"
+      ]
+    },
+    {
+      "id": "B2_p41_displaced_and_extra_support",
+      "observed": "Main support is aroundx120..370 rather than guidex230..750, with an extra partial post at far leftx0..55/y300..730. Original west water is replaced by wood/support and has a hard mismatch at actual core seamx115. Current north source also inherits the p31 wrong shoreline, so a stand-alone p41 post translation is insufficient.",
+      "regionApprox": [
+        0,
+        230,
+        850,
+        920
+      ],
+      "repairSequence": "First correct p31 shoreline and create new p41 top conditioning; restore original west water, remove extra left post, then reconstruct one support in approved footprint from corrected overhead pier.",
+      "evidence": [
+        "p41-post-native-guide-100pct.png",
+        "p41-west-actual-core-seam-100pct.png"
+      ]
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_p31_y230_plank_direction",
+      "status": "pending_consolidated_QA",
+      "observed": "Top/source plank direction change near y230 remains a separate material/joint review item. It is not the basis of the shoreline blocking decision."
+    }
+  ],
+  "evidenceManifest": "evidence-manifest.json",
+  "evidenceViewedAt100Percent": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSourcesChanged": false,
+    "gitTouched": false,
+    "r10ChecksRepeated": false,
+    "overviewRebuilt": false
+  },
+  "supersessionNote": "Root reports p31-v2 subsequently generated; retain these v1 failures as candidate-specific. Review v2 separately and do not carry v1 as an anchor."
+}

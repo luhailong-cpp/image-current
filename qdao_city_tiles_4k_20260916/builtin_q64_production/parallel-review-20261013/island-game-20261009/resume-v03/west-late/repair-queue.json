@@ -1,0 +1,93 @@
+[
+  {
+    "id": "r07c04-north-flower-cut",
+    "tiles": [
+      "r06_c04",
+      "r07_c04"
+    ],
+    "status": "geometry_and_material_repair_required",
+    "worldApproxBox": [
+      13312,
+      24550,
+      14336,
+      24610
+    ],
+    "finding": "At the actual north/south tile join, yellow flowers/leaves still change abruptly across the horizontal cut. v10 does not repair that shared-edge line; the last 16 rows of r06_c04 are exactly unchanged from v8.",
+    "evidence": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r06_c04-neighbor-south-r07_c04-seg2.png"
+    ],
+    "relationshipToPrior": "same issue retained, new current-v10 context visually checked"
+  },
+  {
+    "id": "r07c04-north-paving-material",
+    "tiles": [
+      "r06_c04",
+      "r07_c04"
+    ],
+    "status": "material_review_required",
+    "worldApproxBox": [
+      14336,
+      24520,
+      15360,
+      24680
+    ],
+    "finding": "Paving contours remain connected, while the pattern and texture transition remains pending paired material acceptance. The nearby v10 edit is inside r06_c04; it does not establish an accepted border.",
+    "evidence": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r06_c04-neighbor-south-r07_c04-seg3.png"
+    ],
+    "relationshipToPrior": "same issue retained, current-v10 context checked"
+  },
+  {
+    "id": "r05c02-north-blossom-cut",
+    "tiles": [
+      "r04_c02",
+      "r05_c02"
+    ],
+    "status": "prior_issue_not_closed",
+    "worldApproxBox": [
+      4096,
+      16360,
+      5120,
+      16420
+    ],
+    "finding": "Prior blossom-edge issue is retained as open. Current adopted v4 differs from the old diagnostic assembly, so the old border result is not automatically transferred. New original-scale crops were examined; that limited review does not establish whole-object/material acceptance or authorize closing the prior issue.",
+    "evidence": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r05_c02-neighbor-north-r04_c02-seg1.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r05_c02-north-blossom-focus.png"
+    ],
+    "relationshipToPrior": "prior unresolved issue retained; not asserted to be a newly introduced failure"
+  },
+  {
+    "id": "west-late-r06c03-roof-patch-vertical-line",
+    "tiles": [
+      "r06_c03",
+      "r07_c03"
+    ],
+    "status": "localized_material_and_geometry_review_required",
+    "worldApproxBox": [
+      10928,
+      24320,
+      10968,
+      24510
+    ],
+    "finding": "A straight vertical repair boundary remains visible through the blue roof/red diagonal trim in the northern half of the paired native crop, about world x10946. It lies in unchanged r06_c03, not in the new r07_c03 pixels; the r06/r07 pair must remain open until its roofline context is accepted.",
+    "evidence": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r07_c03-north-roof-focus.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-review-20261013\\island-game-20261009\\resume-v03\\west-late\\crops\\r07_c03-neighbor-north-r06_c03-seg3.png"
+    ],
+    "relationshipToPrior": "observed in unchanged neighboring candidate; does not attribute regression to v7"
+  },
+  {
+    "id": "r06c04-west-railing-pending",
+    "tiles": [
+      "r06_c03",
+      "r06_c04"
+    ],
+    "status": "prior_geometry_issue_retained",
+    "finding": "Production selection still records stepped/blind western stone-railing courses and a pending upper-left repair after two masks. West 256-pixel strip of v10 equals v8 exactly. This delta review does not reopen unchanged historic pixels or declare the railing accepted.",
+    "evidence": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northwest\\right-current-selection-20261012.json"
+    ],
+    "relationshipToPrior": "preserved production finding, unchanged western strip reused"
+  }
+]

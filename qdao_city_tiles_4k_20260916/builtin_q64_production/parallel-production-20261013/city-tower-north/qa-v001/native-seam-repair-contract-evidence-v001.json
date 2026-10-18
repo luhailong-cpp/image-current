@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "decision": "compatible-with-contract; explicit1024repair-core clause absent",
+  "basis": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\production-contract.json",
+      "sha256": "28443ade4c03c70dc7519e4e22601454521cbe05d43e8100f63724c4d96c99ac"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\candidates\\r05_c14.candidate.png.generation.json",
+      "sha256": "171a3608ff6f8fd9ad6aa31beaa51099bbb8c4d7ba075bd5ecaa62288ab62aa3"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c14\\qa\\native-repairs\\m01-integration.json",
+      "sha256": "0c75036b5845668d8bf48a16f36e0e8a4e9457aa6e729fc67d2ed3b59e1e7262"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northeast\\r05_c13\\candidates\\r05_c13.candidate.png.generation.json",
+      "sha256": "80daca63e17bc77d0d2985bc87b6b2caa35fcff746bf0e84a9029302c7359926"
+    }
+  ],
+  "contractConstraints": [
+    "expectedNative1254/core1024/halo115",
+    "resizeFinalArtAllowed=false",
+    "All internal and external seams reviewed before final acceptance; exact source hashes and model evidence."
+  ],
+  "existingCandidateEvidence": [
+    "r05c14 operations integer core crops plus native source overlays, no resizing/blur/warp; m01..m05 repairChain.",
+    "m01 integer1254 input crop and native overlay recorded, historical16pxalpha perimeter.",
+    "r05c13 sourceCrop/destinationTileXY cross-tile repair recipes without resampling."
+  ],
+  "recommendedNewRecipe": [
+    "Keep16-core baseline immutable.",
+    "Generate true1254 repair in fixed native context coordinates.",
+    "Crop[115,115,1139,1139) and integer paste1024 opaque core into fresh candidate; no resize,warp,blur.",
+    "Record source/input/prompt/receipt and candidate hashes, world/context/edit/tile coordinates, all outside pixels identical.",
+    "Review defect and all four new repair boundaries100pct; partial/world-border crops restricted to authorized batch."
+  ],
+  "acceptanceImplication": "Repair presence does not imply passed original cores or accepted complete tile.",
+  "originalZoneModified": false
+}

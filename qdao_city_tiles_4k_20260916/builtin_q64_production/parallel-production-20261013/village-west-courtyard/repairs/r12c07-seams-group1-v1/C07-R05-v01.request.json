@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-14T03:04:49.836608+00:00",
+  "batch": "village-west-courtyard",
+  "tile": "r12_c07",
+  "repairId": "C07-R05",
+  "attempt": 1,
+  "source": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12c07-repair-r04-v1\\context-native.png",
+    "sha256": "733d0c1ec49d3b15641b7a3db063fb71dc9383b745161649a2893aa64452bbe4",
+    "contextCropBox": [
+      0,
+      2048,
+      1254,
+      3302
+    ]
+  },
+  "baseAssembly": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12c07-repair-r04-v1\\assembly.json",
+    "sha256": "cd4b8a68a6f7df1bedb112afa82e9b43d3122a30de8b6300e34e1b278e2c975a"
+  },
+  "references": [
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/repairs/r12c07-seams-group1-v1/C07-R05.anchored-source-native.png",
+      "sha256": "6cec0090383b77b3ef0f6eee15bcc966b4fb09cbdf0a87314b36031f81ef73f5",
+      "role": "1254 target; original C07 crop except first115 columns from actual west core"
+    },
+    {
+      "path": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/repairs/r12c07-seams-group1-v1/C07-R05.actual-west-join-native.png",
+      "sha256": "72602a24ae952593427391f90a52f66dec2032b48b7709c9a8e26ac197863018",
+      "role": "1254 native actual west core join; 627 columns each side"
+    }
+  ],
+  "globalNativeBox": [
+    24461,
+    46989,
+    25715,
+    48243
+  ],
+  "globalCoreBox": [
+    24576,
+    47104,
+    25600,
+    48128
+  ],
+  "coreInNative": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "arguments": {
+    "prompt": "Edit ONLY image 1, the 1254 x 1254 target crop, returning exactly 1254 x 1254 opaque pixels. Image 2 is a read-only wider actual western neighbor join at native scale; its join is x627. In image 1, columns x0..114 are exact fixed western-neighbor pixels. Preserve those columns precisely and repair only the right side, especially x115..580: eliminate the rock-foot height jump at x115 (left rock foot is around y300 while the right continuation drops abruptly to y500). Continue the left contour into the right as one natural curved coastal rock formation, gradually joining existing right-side rock shapes, keeping the detached small rock near x280,y550, and retaining all established outer silhouettes on top/right/bottom. The stone material/lighting and water caustic size must transition coherently across x115; match the actual left foam endpoints then gradually resume the finer existing right texture. Do not blur the image or erase native details. Keep rightmost 230px and top/bottom 230px as close to original as possible for native hard-source closure. No new objects, rocks, land, buildings, text, repositioning, camera change or resizing. The reference 2 itself must not be output or edited. Keep existing sharp hand-painted Taoist Q-map style, daytime grey stone and cyan sea.",
+    "referenced_image_paths": [
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/repairs/r12c07-seams-group1-v1/C07-R05.anchored-source-native.png",
+      "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/parallel-production-20261013/village-west-courtyard/repairs/r12c07-seams-group1-v1/C07-R05.actual-west-join-native.png"
+    ],
+    "transparent_background": false
+  },
+  "route": "builtin",
+  "actualModel": null,
+  "actualQuality": null,
+  "status": "prepared",
+  "formalAccepted": false,
+  "instructionsSha256": "57f1ad4f81fdb2256b843923d862308be228130917b99cfced375db256aff01a",
+  "splitSha256": "a7cab49b89974586a1a0375baeadc5d4a7aa12dce6e782bcc8f9b52b777b3c8f",
+  "externalAnchor": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\repairs\\r12c06-top-seams-v1\\context-repair-candidate-v2.png",
+    "sha256": "c79df29adcad3afa25e8f66eb951db34315df3e59a6023e36bcb9bab02b3684c",
+    "globalContextBox": [
+      20365,
+      44941,
+      24691,
+      49267
+    ],
+    "anchorCrop": [
+      4096,
+      2048,
+      4211,
+      3302
+    ],
+    "targetPaste": [
+      0,
+      0
+    ],
+    "reference2WestCrop": [
+      3584,
+      2048,
+      4211,
+      3302
+    ],
+    "reference2CurrentCrop": [
+      115,
+      2048,
+      742,
+      3302
+    ],
+    "ownerFilesReadOnly": true
+  }
+}

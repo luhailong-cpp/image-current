@@ -1,15 +1,15 @@
 {
   "zone": "northwest",
-  "status": "native-production-saved-external-runtime-block",
-  "updatedAt": "2026-10-13T08:45:07.016137+00:00",
+  "status": "native-production-candidate-pending-repair",
+  "updatedAt": "2026-10-14T00:55:46.475095+00:00",
   "target4kCount": 49,
   "generatedNativeCount": 385,
   "usableNativeCount": 248,
   "complete4kCount": 12,
   "formalAcceptedCount": 0,
   "currentTile": "r06_c02",
-  "currentPatch": "s01_s03_v01-east-join-pending-repair",
-  "nextStep": "Resume existing work from saved outputs after runtime/network access is restored; no repeated generation of returned images.",
+  "currentPatch": "16-of-16-core-candidate-base-v2",
+  "nextStep": "Resolve remaining roof/ground junctions or advance independent missing cores per two-attempt defer rule; retain pending status.",
   "errors": [
     {
       "type": "center-post-ground-material-transition",
@@ -174,12 +174,20 @@
       "assembly": "work-r06_c04/final-v2/assembly.json",
       "assemblySha256": "e169975617c6596701020ecb67620096ab1094942393c7d31dd98ca48095d834",
       "formalAccepted": false
+    },
+    "r06_c02": {
+      "candidate": "work-r06_c02/base-v2/r06_c02.candidate.png",
+      "candidateSha256": "46c98f82fd34b66eab702004c7e42262270d3baddb23a2e337ec5c156cf5fd66",
+      "assembly": "work-r06_c02/base-v2/r06_c02.candidate.assembly.json",
+      "qa": "work-r06_c02/base-v2/root-qa.pending.json",
+      "internalAccepted": false,
+      "formalAccepted": false
     }
   },
-  "fullyCovered4kCount": 13,
+  "fullyCovered4kCount": 14,
   "internalPassed4kCount": 12,
   "externalPassed4kCount": 0,
-  "missingFullyCovered4kCount": 36,
+  "missingFullyCovered4kCount": 35,
   "missingInternalPassed4kCount": 37,
   "missingFormalAccepted4kCount": 49,
   "capacityGate": "capacity-gate-ack.json",
@@ -189,15 +197,16 @@
     "newArtworkGenerationAllowed": true,
     "runtimePendingIsNotGlobalArtHold": false
   },
-  "completeCandidateCoordinatesOnDisk": 13,
+  "completeCandidateCoordinatesOnDisk": 14,
   "newArtworkGenerationAllowed": true,
   "productionResume": "production-resume-20261012.json",
-  "lastNewOutput": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r06_c02_s01_s03_v01.png",
+  "lastNewOutput": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\northwest\\native\\r06_c02_s03_s04_v02.png",
   "r05c02SelectedNativeCount": 16,
-  "fullyCoveredPendingRepairOrQaCount": 1,
+  "fullyCoveredPendingRepairOrQaCount": 2,
   "coordinateInventory": "coordinate-inventory-current.json",
-  "currentCheckpoint": "production-checkpoints\\20261013T084507Z.json",
-  "runtimeBlocks": [
+  "currentCheckpoint": "production-checkpoints/20261014T005546Z-r06c02-16cores.json",
+  "nativeCountsStatus": "Retained historical census; not refreshed by this minimal checkpoint. See newOutputs in checkpoint for this batch.",
+  "historicalRuntimeBlocks": [
     {
       "agent": "sol_north",
       "error": "Fatal error: application network permission was revoked"
@@ -211,5 +220,10 @@
       "error": "Selected model is at capacity. Please try a different model."
     }
   ],
-  "nativeCountsStatus": "Retained historical census; not refreshed by this minimal checkpoint. See newOutputs in checkpoint for this batch."
+  "runtimeStatus": {
+    "rootBuiltinImagegen": "successful",
+    "previousGlobalBlockCleared": true,
+    "workerState": "Last resumed agents returned HTTP408; no permission revocation inferred."
+  },
+  "r06c02SelectedNativeCount": 16
 }

@@ -1,0 +1,75 @@
+{
+  "tile": "r15_c15",
+  "candidateSha256": "505bdcda55cd68ae1e3c55a4027f803ea92d491e964abecf3c25b25d71bb923b",
+  "method": "Visual review of 24 native-size seam segments, all9 900px junctions, 4 east and4 south edge segments, north/west core-only neighbor composites. No visual judgement inferred from metrics.",
+  "internalSeamQA": "main_structure_pass",
+  "internalArtQA": "failed_S01",
+  "externalNeighborSeamQA": {
+    "east": "own_core_edge_structure_pass_joint_pending",
+    "south": "failed_S01_before_neighbor_review",
+    "north": "structure_pass_finish_pending",
+    "west": "failed_W01_finish_pending"
+  },
+  "formalAccepted": false,
+  "findings": [
+    {
+      "id": "S01",
+      "box": [
+        2120,
+        3840,
+        2320,
+        4096
+      ],
+      "source": "p04_03",
+      "severity": "repair_required_before_south_propagation",
+      "description": "An extra narrow column attached to the right side of the existing wide front-wall post creates a doubled cap and unjustified height step. Remove only extra narrow extension, preserve original wide post and reconnect normal wall cap to its right."
+    },
+    {
+      "id": "W01",
+      "box": [
+        0,
+        2375,
+        95,
+        2430
+      ],
+      "source": "p03_01",
+      "severity": "repair_required",
+      "description": "Short horizontal grout begins abruptly at west core boundary around y2404 and ends at new vertical line x~85; old neighbor has no matching groove. Continue the same broad slab through boundary or resolve joint on child side, never modify west core."
+    },
+    {
+      "id": "N02",
+      "box": [
+        950,
+        0,
+        2300,
+        150
+      ],
+      "severity": "finish_pending",
+      "description": "Hard material brightness/texture line across north boundary most apparent on red/gold cylinder and grey paving; geometry follows anchors."
+    },
+    {
+      "id": "N03",
+      "box": [
+        3450,
+        0,
+        3910,
+        120
+      ],
+      "severity": "finish_pending",
+      "description": "Pink lotus petal shading changes at north core cut despite continuous silhouette."
+    },
+    {
+      "id": "W02",
+      "box": [
+        0,
+        1500,
+        170,
+        2750
+      ],
+      "severity": "finish_pending",
+      "description": "Fine stone texture and blue inset material change visibly at west boundary; repair with W01 where possible, no RGB correction."
+    }
+  ],
+  "sourcePolicy": "All16 active native PNG sources retained, actualModel/actualQuality null; one rejected blur variant preserved; only core4096 external authority.",
+  "reviewEvidenceDirectory": "D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southeast/r15_c15/review/assembly-008f4b817c43676ebb32"
+}

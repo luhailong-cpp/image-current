@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T18:10:23.941297+00:00",
+  "reviewType": "targeted_shoreline_fix_and_lower_support_continuity",
+  "tile": "r11_c11",
+  "patch": "p31",
+  "version": 2,
+  "status": "east_anchor_ready_south_lower_support_blocked",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p31-v2.png",
+    "sha256": "5dc7ee1a6b61b0d7cf4fefda161f20790a4c697d739e6b32955b04e262a8fa07",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\layout-only\\p31-v1-layout-only.png",
+    "sha256": "d0c2962d46e206fb9ac1a4e0fa1e7cb7169889e2fac684f0715476dc51c53b41",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "canAnchor": {
+    "p32_east": true,
+    "p41_south": false
+  },
+  "resolved": [
+    "The left shoreline/water and dock corner have returned.",
+    "The right-running dock lip now descends to the right in the approved course, removing the v1 reversed shore geometry."
+  ],
+  "blockers": [
+    {
+      "id": "B1_missing_same_post_lower_segment",
+      "observed": "Upper post ends aroundy650. Below the corner, the guide existing support should continue across approximatelyx230..750/y850..1254. Candidate instead contains only short pier skirting and water, with no same-pile continuation at its south edge. Its p41 north overlap therefore supplies water where the next support must attach.",
+      "repairWindowSuggested": [
+        230,
+        700,
+        750,
+        1254
+      ],
+      "repairIntent": "Restore only the existing post lower portion emerging behind/below the correct dock rim and continuing through the bottom edge. Maintain correct corner and shore geometry; do not introduce another cap/post or a floating pole starting in p41 aftery230.",
+      "preserve": [
+        "north230",
+        "west230 original neighbor",
+        "correct east shoreline / east230",
+        "all regions outside bounded support repair"
+      ],
+      "blocksOnly": "south continuation to p41; east p32 can continue from unchanged east strip",
+      "evidence": "missing-lower-support-native-guide-100pct.png"
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_y230_plank_direction",
+      "status": "pending_consolidated_QA",
+      "observed": "Known top-strip plank-direction change remains separate from the missing-support blocker."
+    }
+  ],
+  "evidence": [
+    {
+      "file": "missing-lower-support-native-guide-100pct.png",
+      "sha256": "76d8f8846c200e0fe9181af97bf309182897700c4dd288743253fcac930d6c29",
+      "dimensions": [
+        1040,
+        554
+      ],
+      "segments": [
+        {
+          "input": "candidate",
+          "crop": [
+            230,
+            700,
+            750,
+            1254
+          ],
+          "paste": [
+            0,
+            0
+          ]
+        },
+        {
+          "input": "layoutGuide",
+          "crop": [
+            230,
+            700,
+            750,
+            1254
+          ],
+          "paste": [
+            520,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "evidenceViewedAt100Percent": true,
+  "fullCandidateViewedAt100Percent": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSourcesChanged": false,
+    "gitTouched": false,
+    "historicalFullScan": false,
+    "overviewRebuilt": false
+  }
+}

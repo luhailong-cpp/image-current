@@ -1,0 +1,10 @@
+import json,hashlib
+from pathlib import Path
+from PIL import Image
+b=Path("D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/main-city-game-20261009/southwest");rp=b/"r10_c01/pipeline/prompts/p01_04.continue20261013c-v01.request.json";q=json.loads(rp.read_text(encoding="utf-8-sig"));assert len(q["references"])==4
+src=b/"r10_c02/native/p01_01.png";record=src.with_name(src.name+".generation.json");g=json.loads(record.read_text(encoding="utf-8-sig"));hs=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert hs(src)==g["sha256"]
+seed=Path(q["referenced_image_paths"][0]);out=seed.with_name("p01_04.continue20261013c-v01.right-native-seed.png");assert not out.exists();im=Image.open(seed).convert("RGB");n=Image.open(src).convert("RGB");assert im.size==n.size==(1254,1254);im.paste(n.crop((0,230,230,1254)),(1024,230));im.save(out)
+ent={"file":str(src),"sha256":hs(src),"role":"exact selected right native strip; upper native source owns corner","generationRecord":str(record),"generationRecordSha256":hs(record),"sourceTile":"r10_c02","sourcePatch":"p01_01","selectionEvidence":None,"sourceCrop":[0,0,230,1254],"sourceWorldBox":[3981,36749,4211,38003],"sourceResampling":False,"targetBox":[1024,0,1254,1254],"effectiveTargetBox":[1024,230,1254,1254]}
+q["neighborSources"].append(ent);q["referenced_image_paths"][0]=str(out);q["references"][0]={"file":str(out),"sha256":hs(out),"role":"nonfinal coarse layout with exact native top/left/right strips; upper owns corners"}
+d={"type":"nonfinal mechanical exact-native guidance","final":False,"resampling":False,"derivedFrom":[{"file":str(seed),"sha256":hs(seed),"role":"prepared layout plus exact top and left anchors"},ent],"output":str(out),"outputSha256":hs(out),"pixels":[1254,1254],"operation":"exact crop/paste rightnative, no resampling/blending; preserve upper230 rows"};Path(str(out)+".derivation.json").write_text(json.dumps(d,indent=2),encoding="utf8");rp.write_text(json.dumps(q,ensure_ascii=False,indent=2),encoding="utf8");print(json.dumps({"request":str(rp),"guide":str(out),"sha256":hs(out),"rightNativeSha256":hs(src)}))
+

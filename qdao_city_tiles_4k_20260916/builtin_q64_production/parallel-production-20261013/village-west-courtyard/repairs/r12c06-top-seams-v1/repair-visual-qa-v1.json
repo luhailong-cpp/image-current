@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-13T21:30:43.173239+00:00",
+  "status": "partial-local-repair-passed",
+  "formalTileAccepted": false,
+  "adoptableCandidate": {
+    "path": "context-repair-candidate-v2.png",
+    "sha256": "c79df29adcad3afa25e8f66eb951db34315df3e59a6023e36bcb9bab02b3684c",
+    "tracePath": "repair-assembly-trace-v2.json",
+    "traceSha256": "5c51e9960b2d22862f9fdcb416546e9f3f6aac9a1c10b3337c5911e8e221b7d1"
+  },
+  "scopePassed": [
+    "I01",
+    "I02",
+    "I03"
+  ],
+  "scopePending": [
+    "I04"
+  ],
+  "remainingTileIssues": [
+    "I04",
+    "I05",
+    "I06",
+    "I07",
+    "I08",
+    "I09",
+    "I10",
+    "I11",
+    "I12",
+    "I13",
+    "I14",
+    "north external seam",
+    "other external joins"
+  ],
+  "checks": [
+    {
+      "window": "w01-I01-I03",
+      "generation": "generated-v1",
+      "assembly": "v1 and v2",
+      "status": "passed",
+      "viewedAt100Percent": [
+        "w01-I01-I03.composite-native-v1.png",
+        "w01-I01-I03.border-top-native-v1.png",
+        "w01-I01-I03.border-bottom-native-v1.png",
+        "w01-I01-I03.border-left-native-v1.png",
+        "w01-I01-I03.border-right-native-v1.png"
+      ],
+      "note": "Rounded small rock silhouette and continuous gray rock face restored; no new conspicuous geometric or tonal cut found on four native borders. V2 mask and composite hashes unchanged; reuse this result.",
+      "unchangedComposite": true
+    },
+    {
+      "window": "w02-I02-I04",
+      "generation": "generated-v1",
+      "assembly": "v1",
+      "status": "failed",
+      "note": "Centers improved but broad selection produced new geometric notch at lower/right border; retain without adoption."
+    },
+    {
+      "window": "w02-I02-I04",
+      "generation": "generated-v1",
+      "assembly": "v2 small I02-only selection",
+      "status": "passed",
+      "scope": [
+        "I02"
+      ],
+      "viewedAt100Percent": [
+        "w02-I02-I04.border-top-native-v2.png",
+        "w02-I02-I04.border-bottom-native-v2.png",
+        "w02-I02-I04.border-left-native-v2.png",
+        "w02-I02-I04.border-right-native-v2.png"
+      ],
+      "note": "Restricting the native source selection to upper ridge fixes I02 and avoids the failing lower I04 border. The small upper crest reads as continuous rounded/sloped rock; no new conspicuous cut found in reviewed four borders. I04 stays old and pending."
+    }
+  ],
+  "proof": {
+    "mismatchedReplayPixels": 0,
+    "uncoveredPixels": 0,
+    "changedPixelsOutsideSelection": 0,
+    "northHaloChangedPixels": 0,
+    "northCoreFirstRowChangedPixels": 0,
+    "selectedNewPixels": 589284,
+    "sourcePixelCounts": {
+      "0": 18124992,
+      "1": 427456,
+      "2": 161828
+    }
+  },
+  "adoptionOrder": "Use v2 as a new derived base for subsequent local repairs; never overwrite original context or selection. V1 is retained failed candidate only.",
+  "generationCalls": 2,
+  "nativeOutputs": 2,
+  "actualModel": null,
+  "route": "builtin-image_gen",
+  "sourceImagesPreserved": true
+}

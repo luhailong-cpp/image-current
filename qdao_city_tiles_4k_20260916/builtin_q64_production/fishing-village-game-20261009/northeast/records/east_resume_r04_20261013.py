@@ -7,10 +7,13 @@ def write(p,d):
  assert not p.exists(),p
  p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def prepare(p):
- co=b.coords(p);r,c=int(p[-2]),int(p[-1]);assert p.startswith('r04_c14_') and c>1
+ co=b.coords(p);r,c=int(p[-2]),int(p[-1]);assert p.startswith('r04_c14_')
  current=json.loads((Z/'records/r04_c14.working-selection.json').read_text(encoding='utf-8-sig'))
- south=Z/'native'/(b.SOUTH[c-1] if r==4 else current[f'r04_c14_p{r+1}{c}'])
- right=Z/'native'/current[f'r04_c14_p{r}{c+1}'] if c<4 else None
+ south_name=b.SOUTH[c-1] if r==4 else current.get(f'r04_c14_p{r+1}{c}')
+ right_name=current.get(f'r04_c14_p{r}{c+1}') if c<4 else None
+ south=Z/'native'/south_name if south_name else None
+ right=Z/'native'/right_name if right_name else None
+ assert south or right,'At least one selected stable edge is required'
  layout=Image.open(b.C['layoutReference']).convert('RGB');pad=Image.new('RGB',(layout.width+8,layout.height));pad.paste(layout,(0,0));pad.paste(layout.crop((layout.width-1,0,layout.width,layout.height)).resize((8,layout.height)),(layout.width,0))
  a=pad.transform((1254,1254),Image.Transform.EXTENT,co['overviewBox'],Image.Resampling.BICUBIC)
  pure=Z/'guides'/f'{p}.layout-only.png';assert not pure.exists();a.save(pure)

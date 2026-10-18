@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "kind": "centered_native_seam_repair_request",
+  "tile": "r02_c04",
+  "patch": "s04_01",
+  "createdAtUTC": "2026-10-14T01:30:34.927942+00:00",
+  "base": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_01-v004.png",
+  "baseSHA256": "be6133e7c49c87bfac37d731449af7f6ec6256b75699f88fdc145c72542cbc68",
+  "repairWorldBox": [
+    12173,
+    7565,
+    13427,
+    8819
+  ],
+  "nativePixels": [
+    1254,
+    1254
+  ],
+  "guide": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\centered-seam-repair\\s04_01-south-centered-target-v001.png",
+  "guideSHA256": "0904d4dbc86f2872378c0ee149f65c9d30139e2d72aed0becfbf4d384634bb0b",
+  "guideIsNativeCoordinateComposite": true,
+  "guideIsModelOutput": false,
+  "resampled": false,
+  "sources": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\native\\s04_01-v004.png",
+      "sha256": "be6133e7c49c87bfac37d731449af7f6ec6256b75699f88fdc145c72542cbc68",
+      "sourceCrop": [
+        0,
+        512,
+        1254,
+        1139
+      ],
+      "paste": [
+        0,
+        0
+      ]
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\r03_c04\\finish-20261012-integrated\\s01_01-derived.png",
+      "sha256": "6e0fe16a6748864c2c2b62446812a37537147266d3b3a865efcf4ed4e417d715",
+      "sourceCrop": [
+        0,
+        115,
+        1254,
+        742
+      ],
+      "paste": [
+        0,
+        627
+      ],
+      "role": "left115 halo only; canonical overwrites rest"
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\accelerated-yamen-north\\delivery-20261012-v1\\r03_c04.png",
+      "sha256": "d9f811b3adb4f35b3950d4129c8c6c2f9c315bc7cc170d2a405453ef47210ad5",
+      "sourceCrop": [
+        0,
+        0,
+        1139,
+        627
+      ],
+      "paste": [
+        115,
+        627
+      ],
+      "role": "fixed neighbor actual delivery"
+    }
+  ],
+  "editPermittedWorldBox": [
+    12173,
+    7965,
+    13427,
+    8192
+  ],
+  "applyRepairCrop": [
+    0,
+    400,
+    1254,
+    627
+  ],
+  "applyToBaseXY": [
+    0,
+    912
+  ],
+  "neighborFileWritesAllowed": false,
+  "prompt": "Use case: precise-object-edit. Repair the obvious horizontal stitch at y627 in this exact1254x1254 roof crop. The entire lower half y627..1253 is fixed neighboring artwork. Repaint ONLY the upper band y400..626 to meet that fixed lower artwork smoothly: remove the unnaturally short doubled tile row immediately above the stitch and reconcile each blue ceramic tile collar into ordinary overlapping rows. Each column's groove and white glaze highlight must flow into the same lower column with no cut or shifted line. Adjust only the upper gold strip contours/texture near the stitch so its two edges meet the lower gold strip exactly and continuously; keep its simple straight form, no new ornament. The decorative gold curl at bottom belongs to the fixed neighboring artwork and remains unchanged. Preserve ALL lower-half pixels and ALL rows0..399 exactly. No straight line, shortened sliver, crop edge or abrupt color patch at y627. No blur, resizing, zoom or new design. Return the same1254 square.",
+  "referenced_image_paths": [
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-yamen-north\\r02_c04\\centered-seam-repair\\s04_01-south-centered-target-v001.png"
+  ],
+  "transparent_background": false,
+  "actualModel": null,
+  "route": "builtin_image_gen",
+  "plannedDerivation": "Only generated upper repair band will be copied at identical world pixels into a NEW derived1254 core source. The generated image remains separate and unmodified. No source scaling/warp/blur or neighboring file edits."
+}
