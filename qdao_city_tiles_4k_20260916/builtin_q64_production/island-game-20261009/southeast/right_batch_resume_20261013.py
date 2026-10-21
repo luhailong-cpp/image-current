@@ -12,6 +12,7 @@ if mode=='select':
  rc,ver,note=sys.argv[3:6];np=ROOT/'native'/f'{tid}_p{rc}_{ver}.png';recp=Path(str(np)+'.generation.json');rec=read(recp)
  assert [rec['width'],rec['height']]==[1254,1254]
  d['selectedVersions'][rc]=ver
+ if rc in d.get('deferredIssues',{}):d['deferredIssues'][rc].update({'status':'resolved_by_new_version','resolvedVersion':ver,'resolvedAtUtc':now()})
  rec.update({'status':'selected_local_visual_seams_passed','visualReviewNote':note,'reviewedAtUtc':now()});write(recp,rec)
 elif mode=='pending':
  rc,ver,note=sys.argv[3:6];d.setdefault('deferredIssues',{})[rc]={'version':ver,'note':note,'status':'not_passed','atUtc':now()};d['selectedVersions'].pop(rc,None)

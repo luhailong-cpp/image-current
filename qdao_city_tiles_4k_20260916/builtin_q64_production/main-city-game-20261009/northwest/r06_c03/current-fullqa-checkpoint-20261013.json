@@ -1,40 +1,60 @@
 {
-  "updatedAtUtc": "2026-10-13T16:40:24.810089+00:00",
+  "updatedAtUtc": "2026-10-14T03:33:50.179496+00:00",
   "tile": "r06_c03",
   "uniqueSelectedCores": 16,
   "requiredCores": 16,
   "candidate": {
-    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\candidate\\native-repairs-20261013-v01\\candidate.png",
-    "sha256": "146a76adb8ab8fd4ce83d2788c09c66b1910f90a1d9dd908aebb0022f3a62362",
+    "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\candidate\\native-repairs-20261013-v05\\candidate.png",
+    "sha256": "43bf64fcee7b857cf43065f5873c87888ab86d2adb98ee3d40154102ed094027",
     "pixels": [
       4096,
       4096
     ]
   },
-  "assembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\candidate\\native-repairs-20261013-v01\\assembly.json",
-  "nativeSourceCount": 19,
+  "assembly": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\candidate\\native-repairs-20261013-v05\\assembly.json",
+  "nativeSourceCount": 24,
   "coreVersionCount": 19,
-  "nativeRepairVersionCount": 5,
-  "selectedRepairSourceCount": 3,
-  "fullQA": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\qa\\native-repairs-20261013-v01\\review.json",
+  "nativeRepairVersionCount": 17,
+  "selectedRepairSourceCount": 8,
+  "fullQA": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\qa\\native-repairs-20261013-v05\\review.json",
   "fullQACrops": 47,
   "qaPassed": 35,
   "qaNeedsRepair": 12,
   "localCompleted": [
     "circular sign geometry and material",
     "roof x1933 termination geometry",
-    "fascia small timber joint geometry"
+    "fascia small timber joint geometry",
+    "extra small gold curl removed with plain attachment",
+    "s04_03 eastern lower gold ridge geometry and fascia step repaired",
+    "internal y1024 horizontal glaze line removed with two same-world native patches",
+    "x2048 three diagonal timber faces material splice repaired"
   ],
   "unpassed": [
     "roof x895 remaining cut deferred after two attempts",
-    "x2048/y1024 local material transitions",
+    "x2048 vertical material/geometry transition",
     "s03_01 beam face step near x909/y2048",
     "east gold beam material seam",
     "east row4 tile contour offsets",
-    "s04_03 eastern ridge step and curl",
-    "north glaze transition"
+    "north glaze transition",
+    "actual north r05_c03 and own row1 x2048 geometry splice; north-dependent generation paused"
   ],
   "formalAccepted": false,
   "productionComplete": false,
-  "noGitOperations": true
+  "noGitOperations": true,
+  "deferredAfterTwoAttempts": [
+    "roof x895 residual adjoining tile cut",
+    "beam face step x909/y2048",
+    "east row4 upper tile contour",
+    "east row4 middle and lower contours"
+  ],
+  "continuation": "Continue from v05 after coordinator resolves north/east dependencies. All eight selected local repair sources have producer native review; six have independent pass. internal-glaze-west-01 and internal-wall-strip-02 still require independent review. Own 16 cores complete; no independent missing core remains. Do not regenerate along x2048 upstream geometry splice. Deferred points remain unpassed.",
+  "upstreamBoundaryStatus": "reopened_actual_r05_c03_x2048_geometry",
+  "upstreamEvidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\northwest\\r06_c03\\repair-batches\\north-glaze-material-01\\reopened-upstream-evidence.json",
+  "lastBatchStatus": "local_batch_saved_not_tile_complete",
+  "independentReviewForLastTwoGlazePatches": "internal-glaze-01 passed; internal-glaze-west-01 pending",
+  "independentReviewPending": [
+    "internal-glaze-west-01",
+    "internal-wall-strip-02"
+  ],
+  "generationInFlight": false
 }

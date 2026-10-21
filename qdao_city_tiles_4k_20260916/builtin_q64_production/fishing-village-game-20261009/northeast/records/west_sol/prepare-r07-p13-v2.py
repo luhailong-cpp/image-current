@@ -1,0 +1,11 @@
+import sys
+sys.path.insert(0,r'D:/work/image/qdao_city_tiles_4k_20260916/builtin_q64_production/fishing-village-game-20261009/northeast')
+import west_sol as w
+p='r07_c11_p13';v='v2';src=w.Z/f'native/{p}-v1-west_sol.png';d=w.read(w.R/f'{p}-v1.plan.json')
+refs=[w.ref(src,'PRIMARY EDIT TARGET: sharpen existing cropped lantern and repair rim only')]+w.mandatory()
+prompt="""Edit IMAGE1 only in exact1254x1254 frame. This is a game map and EVERYTHING must be crisp, in equal focus with NO depth-of-field blur. Repaint only the existing large red-and-gold lantern cropped through the LEFT and BOTTOM edges (x0..390,y230..1254), replacing its blurry pixels with fresh native fine painted red paper ribs, delicate silk texture, clean warm gold trim and sharp rounded outlines. Keep exactly the current lantern position, scale, partial silhouette and cropping; do not move it inward or make a complete object. Its warm panel must be painted softly luminous but sharply defined, without any lettering. Leave the stone path, wooden barrel, ice, crates, post, ceramic jar and their shadows unchanged. Also repair the small internal horizontal cut at y230,x1040..1175 in the timber fish display rim so the same slanted rim continues without a rectangular step; preserve the original top115 and right115 pixels. Do not invent, remove, duplicate or shift any object. Image2 placement, image3 daylight material and image4 Daoist Q painterly style are only references; do not borrow their scenes. No new text, UI, people, borders, blur or bokeh. Output opaque native1254 square, coordinate r07_c11_p13, world[42893,24461,44147,25715], core[115,115,1139,1139]."""
+d.update(version=v,preparedAtUtc=w.now(),references=refs,guide=w.ref(src),guidePurpose='Native edit target; sharpen lantern and heal internal timber rim cut',previousCandidate=w.ref(src),formalAccepted=False)
+w.write(w.R/f'{p}-{v}.plan.json',d);(w.R/f'{p}-{v}.prompt.txt').write_text(prompt,encoding='utf-8')
+w.write(w.R/f'{p}-{v}.actual-arguments.json',dict(prompt=prompt,referenced_image_paths=[e['path'] for e in refs],transparent_background=False))
+w.write(w.R/f'{p}-v1.review.json',dict(native=w.ref(src),reviewedAtUtc=w.now(),status='not_selected_pending_repair',issues=['Blurry foreground lantern not acceptable native game-map detail','Internal y230 timber rim rectangular cut'],formalAccepted=False))
+

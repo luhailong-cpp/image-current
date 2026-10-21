@@ -1,13 +1,13 @@
 {
   "zone": "northeast",
   "status": "art_production_resumed_during_fixed_snapshot_upload",
-  "updatedAtUtc": "2026-10-13T16:01:26.282482+00:00",
-  "generatedNativeCount": 357,
+  "updatedAtUtc": "2026-10-14T02:16:13.574143+00:00",
+  "generatedNativeCount": 390,
   "usableNativeCount": 73,
-  "complete4kCount": 8,
+  "complete4kCount": 13,
   "formalAcceptedCount": 0,
   "target4kCount": 49,
-  "currentTile": "r03_c10",
+  "currentTile": "r03_c09",
   "currentPatch": "current selection and generation records are authoritative",
   "nextStep": "Continue latest saved candidates and exact native neighboring coordinates; retain historical migration evidence.",
   "errors": [
@@ -70,18 +70,16 @@
   "usableCorePatchCount": 62,
   "usableRepairOverlayCount": 11,
   "activeTiles": [
-    "r03_c10",
-    "r04_c11",
-    "r04_c10",
-    "r05_c11",
-    "r05_c14",
+    "r03_c09",
+    "r04_c09",
+    "r06_c12",
     "r06_c14"
   ],
-  "fullyCovered4kCount": 13,
-  "internalPassed4kCount": 12,
+  "fullyCovered4kCount": 15,
+  "internalPassed4kCount": 13,
   "externalPassed4kCount": 0,
-  "selectedCoreCoordinateCount": 235,
-  "complete4kCountDefinition": "legacy field: internally passed candidate count; see fullyCovered4kCount for pixel coverage",
+  "selectedCoreCoordinateCount": 261,
+  "complete4kCountDefinition": "internally passed candidates only; not formal full-map acceptance",
   "inFlightStatus": "production active; per-worker generation requests reported separately",
   "worldSize": [
     57344,
@@ -119,10 +117,12 @@
       "pendingIssues": []
     },
     "r03_c09": {
-      "coreCoverage": 3,
-      "missingCores": 13,
+      "coreCoverage": 9,
+      "missingCores": 7,
       "internalPassed": false,
-      "pendingIssues": []
+      "pendingIssues": [
+        "p01_02_v2 to p01_03 right grout contour offsets. Two repair attempts unsuccessful; centered overlay is unselected. Best native candidate retained, issue not passed."
+      ]
     },
     "r03_c10": {
       "coreCoverage": 16,
@@ -167,9 +167,9 @@
       "pendingIssues": []
     },
     "r04_c10": {
-      "coreCoverage": 14,
-      "missingCores": 2,
-      "internalPassed": false,
+      "coreCoverage": 16,
+      "missingCores": 0,
+      "internalPassed": true,
       "pendingIssues": []
     },
     "r04_c11": {
@@ -276,8 +276,8 @@
       "pendingIssues": []
     },
     "r06_c12": {
-      "coreCoverage": 0,
-      "missingCores": 16,
+      "coreCoverage": 12,
+      "missingCores": 4,
       "internalPassed": false,
       "pendingIssues": []
     },
@@ -288,8 +288,8 @@
       "pendingIssues": []
     },
     "r06_c14": {
-      "coreCoverage": 10,
-      "missingCores": 6,
+      "coreCoverage": 16,
+      "missingCores": 0,
       "internalPassed": false,
       "pendingIssues": []
     },
@@ -434,10 +434,10 @@
     "r02_c14"
   ],
   "ownedRemainingTarget4kCount": 39,
-  "generatedCoreCoordinateCount": 235,
+  "generatedCoreCoordinateCount": 263,
   "ownedTarget4kCount": 39,
   "ownedRemainingTarget4kCountDefinition": "Legacy field: total owned target, not number still lacking coverage.",
-  "missingFullCoverage4kCount": 26,
+  "missingFullCoverage4kCount": 24,
   "continuationInventory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\qa\\production-inventory-20261012.json",
   "deliveryIndex": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\exports\\20261011-local-v2\\delivery-index.json",
   "actualModel": null,
@@ -460,37 +460,38 @@
   },
   "generationStopped": false,
   "migrationCheckpoint": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\migration-freeze-20261011.json",
-  "pausedIncompleteTiles": [
-    "r03_c10",
-    "r04_c11",
-    "r05_c12",
-    "r05_c14"
-  ],
+  "pausedIncompleteTiles": [],
   "nextAction": "Continue artwork while the independent upload snapshot transfers.",
-  "generatedNativeFiles": 257,
-  "generatedCoreCoordinates": 156,
-  "selectedCoreCoordinates": 153,
-  "completeNativeCoverageTiles": 8,
+  "generatedNativeFiles": 390,
+  "generatedCoreCoordinates": 263,
+  "selectedCoreCoordinates": 261,
+  "completeNativeCoverageTiles": 15,
   "internalPassedTiles": [
+    "r03_c10",
     "r03_c11",
     "r03_c12",
     "r03_c13",
     "r03_c14",
+    "r04_c10",
+    "r04_c11",
     "r04_c12",
     "r04_c13",
     "r04_c14",
-    "r05_c13"
+    "r05_c12",
+    "r05_c13",
+    "r05_c14"
   ],
   "formalAcceptedTiles": 0,
-  "missingFullCoverageTiles": 37,
-  "currentCoordinate": null,
-  "inventory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\qa\\migration-inventory-20261011.json",
+  "missingFullCoverageTiles": 24,
+  "currentCoordinate": "see selected cores and per-worker checkpoint",
+  "inventory": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\qa\\production-inventory-20261012.json",
   "finishedInternalCandidates": [
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c10-native-v2-20261013.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c11.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c12.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c13.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c14.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c10-native-v1-20261013.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c11.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c12.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c13.png",
@@ -505,6 +506,7 @@
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c12.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c13.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r03_c14.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c10-native-v1-20261013.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c11.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c12.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r04_c13.png",
@@ -512,17 +514,19 @@
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r05_c11-continued-v2-20261013.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r05_c12-sol-v1.png",
     "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r05_c13.png",
-    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r05_c14-v2-20261012.png"
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r05_c14-v2-20261012.png",
+    "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\tiles\\r06_c14-native-v1-20261013.png"
   ],
   "ownedTileCount": 39,
   "targetCoreCoordinates": 624,
-  "missingGeneratedCoreCoordinates": 389,
-  "missingSelectedCoreCoordinates": 389,
+  "missingGeneratedCoreCoordinates": 361,
+  "missingSelectedCoreCoordinates": 363,
   "productionResume": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\northeast\\production-resume-20261012.json",
-  "nativeIncompleteOwnedTileCount": 26,
-  "fullCandidatePendingRepairOrQACount": 1,
+  "nativeIncompleteOwnedTileCount": 24,
+  "fullCandidatePendingRepairOrQACount": 2,
   "fullCandidatePendingRepairOrQAIds": [
-    "r05_c11"
+    "r05_c11",
+    "r06_c14"
   ],
   "allOwnedTilesPainted": false,
   "countScope": "39 currently owned northeast tiles; transferred coordinates excluded, not counted as completion",
@@ -535,5 +539,23 @@
     "r02_c11",
     "r02_c12"
   ],
-  "allocationManifest": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json"
+  "allocationManifest": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+  "legacyPreReconciliationCounts20261013": {
+    "generatedNativeFiles": 257,
+    "generatedCoreCoordinates": 156,
+    "selectedCoreCoordinates": 153,
+    "completeNativeCoverageTiles": 8,
+    "internalPassedTiles": [
+      "r03_c11",
+      "r03_c12",
+      "r03_c13",
+      "r03_c14",
+      "r04_c12",
+      "r04_c13",
+      "r04_c14",
+      "r05_c13"
+    ],
+    "missingFullCoverageTiles": 37,
+    "complete4kCount": 8
+  }
 }

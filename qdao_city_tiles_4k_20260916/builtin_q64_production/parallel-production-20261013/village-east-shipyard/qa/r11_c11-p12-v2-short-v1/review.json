@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T22:51:35.409190+00:00",
+  "reviewType": "minimal_foreground_rim_and_south_leg_recheck",
+  "tile": "r11_c11",
+  "patch": "p12",
+  "version": 2,
+  "status": "east_anchor_ready_south_left_leg_pending",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p12-v2.png",
+    "sha256": "e492027bbb22568a30b64f4804eb18aa46eeee74a9c691c1a881689f30388a23",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\layout-only\\p12-v1-layout-only.png",
+    "sha256": "a5bb5c102dae1c4b5371fa1525a43e3c35d3d92b6ee41e16adef0cb72e72b06d",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "canAnchor": {
+    "p13_east": true,
+    "p22_south": false
+  },
+  "decision": "Proceed east with the repaired turning rim. Retain v2 as improved; avoid another immediate same-point repair loop. The southern left-leg continuation remains unpassed and should be repaired later before p22 uses the full bottom strip.",
+  "resolved": [
+    "Foreground front rim now turns upward/right nearx950..1000/y900..960.",
+    "Pale adjacent tray region is present to the lower-right, restoring the intended outgoing object arrangement."
+  ],
+  "pendingBlockingSouth": [
+    {
+      "id": "B1_left_leg_ends_too_early",
+      "candidateApprox": {
+        "leftCorner": [
+          470,
+          560
+        ],
+        "leftLegX": [
+          440,
+          555
+        ],
+        "leftLegFootY": 865
+      },
+      "guideApprox": {
+        "leftCorner": [
+          330,
+          720
+        ],
+        "leftLegX": [
+          330,
+          500
+        ],
+        "leftLegExtendsToNativeBottom": true
+      },
+      "observed": "Candidate south overlap y1024..1254 contains deck instead of the guide left support. Directly fixing it into p22 would remove the intended ongoing leg; a new leg starting after the next top strip would be disconnected.",
+      "laterRepairContextApprox": [
+        230,
+        500,
+        650,
+        1254
+      ],
+      "repairConstraints": "Reconcile the left corner/leg while preserving corrected front/right turn and east230. Exact repair bounds may expand slightly for the joined rail; do not blindly extend an already moved tall leg or alter east topology."
+    }
+  ],
+  "pendingNonblocking": [
+    {
+      "id": "P1_left_corner_internal_drift",
+      "status": "pending_consolidated_QA",
+      "observed": "Left corner remains about140px right and150px above its nominal guide location. It is interior to the patch and need not block east continuation by itself; its leg consequence is separately recorded above."
+    },
+    {
+      "id": "P2_east_rim_small_height_residual",
+      "status": "pending_consolidated_QA",
+      "observed": "Remaining roughly50-80px rim-height differences are smaller than the previous incorrect course and fall against a blurred guide; east is usable as a production anchor, not formally accepted."
+    },
+    {
+      "id": "P3_front_corner_leg",
+      "status": "pending_south_context_QA",
+      "nativeRegionApprox": [
+        850,
+        1024,
+        1080,
+        1254
+      ],
+      "observed": "Front corner leg closes near y1230; verify its lower extent with p22 layout during the later south correction. This review does not infer an exact hidden-foot length from the blurry guide."
+    }
+  ],
+  "evidence": {
+    "file": "rim-and-legs-guide-native-100pct.png",
+    "sha256": "c64fe0d943e946146934950a0e704aafcdf0ceec9d08205d58f02daa4b82b466",
+    "dimensions": [
+      2048,
+      754
+    ],
+    "segments": [
+      {
+        "input": "guide",
+        "crop": [
+          230,
+          500,
+          1254,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      {
+        "input": "candidate",
+        "crop": [
+          230,
+          500,
+          1254,
+          1254
+        ],
+        "paste": [
+          1024,
+          0
+        ]
+      }
+    ],
+    "resized": false
+  },
+  "evidenceManifest": "evidence-manifest.json",
+  "candidateViewedAt100Percent": true,
+  "evidenceViewedAt100Percent": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSourceChanged": false,
+    "gitTouched": false,
+    "historicalFullScan": false,
+    "overviewRebuilt": false
+  },
+  "recommendedNextStep": "Continue east/independent missing pieces now. Keep south leg pending, do not mark p22 anchor passed, and retain candidate/source versions."
+}
