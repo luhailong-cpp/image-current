@@ -1,7 +1,7 @@
 """Private west_sol production helper. Authorized c11 then c10 rows6/7; no shared state writes."""
 from pathlib import Path
 from PIL import Image, ImageChops, ImageStat
-import argparse,datetime,json,hashlib,re,shutil
+import argparse,datetime,json,hashlib,re,shutil,uuid
 Z=Path(__file__).resolve().parent
 R=Z/'records/west_sol';R.mkdir(exist_ok=True)
 C=json.loads((Z.parent/'production-contract.json').read_text(encoding='utf-8-sig'))
@@ -16,7 +16,8 @@ def ref(p,role=None):
  return d
 def write(p,d,replace=False):
  p=Path(p);assert replace or not p.exists(),('Refuse overwrite',str(p))
- p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ temp=p.with_name(p.name+'.'+uuid.uuid4().hex+'.tmp')
+ temp.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(p)
 def coords(p):
  m=re.fullmatch(r'(r(\d{2})_c(\d{2}))_p([1-4])([1-4])',p);assert m and m[1] in ALLOWED,p
  tr,tc,sr,sc=map(int,[m[2],m[3],m[4],m[5]])
@@ -57,7 +58,7 @@ def get_neighbor(p,side):
  if not item:return None
  path=Path(item['path']);assert path.exists() and sha(path)==item['sha256'],('Neighbor hash mismatch',path)
  ev=evidence(path);assert ev,('Missing native coordinate evidence',path)
- data=read(ev['path']);ngb=data.get('nativeGlobalBox',data.get('globalNativeBox',data.get('coordinates',{}).get('nativeGlobalBox')))
+ data=read(ev['path']);ngb=data.get('nativeGlobalBox',data.get('globalNativeBox',data.get('coordinates',data.get('coordinate',{})).get('nativeGlobalBox')))
  assert ngb and ngb[:2]==[co['nativeGlobalBox'][0]+(1024 if side=='right' else 0),co['nativeGlobalBox'][1]+(-1024 if side=='top' else 0)],('Wrong native neighbor geometry',path,ngb,co)
  return dict(**ref(path,f'sharp native {side}230 edge anchor'),patchId=key,selection=ref(selection),provenance=ev,nativeGlobalBox=ngb,side=side,
  sourceCropBox=[0,0,230,1254] if side=='right' else [0,1024,1254,1254],targetPasteAt=[1024,0] if side=='right' else [0,0])

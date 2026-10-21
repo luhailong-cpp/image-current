@@ -1,0 +1,1570 @@
+{
+  "schemaVersion": 1,
+  "tile": "r12_c07",
+  "recordedAtUtc": "2026-10-13T20:55:03.735410+00:00",
+  "selection": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\records\\selection-r12c07-v1.json",
+    "sha256": "d0ba4bc0afab84a948db9b70a52ecf23472910412608bd6fe0952c8420142ee6"
+  },
+  "assembly": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\assembly.json",
+    "sha256": "c300cc39f9126452983a56cdd9b4a679bc84d3967e2edfd784412502446713c7",
+    "scriptSha256": "69c8c5d4db8a6ebcacb8d0e2240cd06d2c0c66094b7f125342b373359551bbb8",
+    "globalContextBox": [
+      24461,
+      44941,
+      28787,
+      49267
+    ],
+    "contextDimensions": [
+      4326,
+      4326
+    ],
+    "candidateDimensions": [
+      4096,
+      4096
+    ]
+  },
+  "provenanceProof": {
+    "contextPixels": 18714276,
+    "mismatches": 0,
+    "uncovered": 0,
+    "sourcePixelCounts": {
+      "33": 1294674,
+      "34": 1098768,
+      "35": 1165895,
+      "36": 1314249,
+      "37": 1151495,
+      "38": 1095307,
+      "39": 1101330,
+      "40": 1287077,
+      "41": 1173533,
+      "42": 1104090,
+      "43": 1005511,
+      "44": 1229015,
+      "45": 1243483,
+      "46": 1238380,
+      "47": 990637,
+      "48": 1220832
+    },
+    "newCoreContainsOnlySelectedGeneratedNativePatches": true,
+    "upstreamAnchorCoreAffectedPixels": 0
+  },
+  "visualAcceptance": false,
+  "formalAccepted": false,
+  "internalQa": "failed-needs-native-seam-repair",
+  "externalQa": "failed-north-and-west-core-boundary-check",
+  "internalNativeCropsReviewed": 33,
+  "externalNativeCropsReviewed": 8,
+  "internalVisualCounts": {
+    "pass-local": 2,
+    "needs-repair": 18,
+    "fail": 13
+  },
+  "externalVisualCounts": {
+    "needs-repair": 3,
+    "fail": 5
+  },
+  "method": "Individually viewed all33 exported seam/junction integer crops at native scale, plus8 unchanged core-boundary juxtaposition crops from current north and west neighbors.4096 preview used only as navigation, not native proof.",
+  "overviewLimit": "Overview is insufficient for acceptance. Source replay0mismatch proves provenance only and does not prove seam quality.",
+  "externalLimit": "External images are direct true core-boundary comparisons; no external seam blend/DP adoption was performed. West neighbor itself is an unaccepted candidate, not a stable anchor.",
+  "targetedRepair": {
+    "patch": "p02_02",
+    "version": "v02",
+    "result": "lower-left dry-sand protrusion successfully removed, but the patch still participates in rejected vertical shoreline and water seams"
+  },
+  "priorityFindings": [
+    {
+      "priority": 1,
+      "crops": [
+        "vertical-r02-c01",
+        "vertical-r02-c02",
+        "vertical-r02-c03"
+      ],
+      "reason": "True shoreline geometry cuts and long jagged cyan/pale-water breaks; must repair before acceptance or anchor reuse."
+    },
+    {
+      "priority": 1,
+      "crops": [
+        "horizontal-r02-c01",
+        "west-segment-02",
+        "west-segment-03"
+      ],
+      "reason": "Boulder contours and planes change abruptly; west row3 rock foot drops about200native pixels."
+    },
+    {
+      "priority": 1,
+      "crops": [
+        "north-segment-04"
+      ],
+      "reason": "Northern sand texture scale and vegetation/shadow cutoff mismatch."
+    },
+    {
+      "priority": 2,
+      "crops": [
+        "remaining water seams and junctions"
+      ],
+      "reason": "Ripple/foam scale,color and strand continuity do not survive hard source assembly;32-bit provenance cannot waive visual repair."
+    }
+  ],
+  "internalCrops": [
+    {
+      "crop": "qa-native/vertical-r01-c01.png",
+      "sha256": "e98130f6d2e5ce8a229f44fa6808e6fdcfe9754a91ceffce81ad21f4c88a8ab4",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "pass-local",
+      "observation": "Sand/pebbles remain visually continuous; no salient cut in this native crop.",
+      "issueBounds": null
+    },
+    {
+      "crop": "qa-native/vertical-r01-c02.png",
+      "sha256": "0f5ae8dac54645cb93f16b2382d5d52e027572406a6665e4ad6110376cd671d9",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Visible vertical shift in sand grain size/contrast across source transition.",
+      "issueBounds": {
+        "cropBox": [
+          220,
+          0,
+          430,
+          1024
+        ],
+        "contextBox": [
+          2038,
+          115,
+          2248,
+          1139
+        ],
+        "tileCoreBox": [
+          1923,
+          0,
+          2133,
+          1024
+        ],
+        "globalBox": [
+          26499,
+          45056,
+          26709,
+          46080
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r01-c03.png",
+      "sha256": "d0e08c3d9a5523415247d50d303718dec3f54b21c15fa7c7b60a8e47b8927df9",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Sand texture strength/scale changes across a vertical strip; shoreline foam lower edge also changes character.",
+      "issueBounds": {
+        "cropBox": [
+          220,
+          0,
+          420,
+          1024
+        ],
+        "contextBox": [
+          3062,
+          115,
+          3262,
+          1139
+        ],
+        "tileCoreBox": [
+          2947,
+          0,
+          3147,
+          1024
+        ],
+        "globalBox": [
+          27523,
+          45056,
+          27723,
+          46080
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r02-c01.png",
+      "sha256": "07e51dd739a47bc4fa2095d813f2f119ef2d89f9677bad557e6196573874c7a4",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Shoreline is abruptly severed: left water meets dry sand, then cyan water meets pale surf along a jagged vertical cut.",
+      "issueBounds": {
+        "cropBox": [
+          210,
+          230,
+          390,
+          1024
+        ],
+        "contextBox": [
+          1004,
+          1369,
+          1184,
+          2163
+        ],
+        "tileCoreBox": [
+          889,
+          1254,
+          1069,
+          2048
+        ],
+        "globalBox": [
+          25465,
+          46310,
+          25645,
+          47104
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r02-c02.png",
+      "sha256": "6eeec6a4e61e8570b5bef7a8af53dec0dfc71af770b5d3fea3ee875b046feff1",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Jagged vertical cyan/pale-shallow color boundary with disconnected foam strands.",
+      "issueBounds": {
+        "cropBox": [
+          250,
+          220,
+          470,
+          1024
+        ],
+        "contextBox": [
+          2068,
+          1359,
+          2288,
+          2163
+        ],
+        "tileCoreBox": [
+          1953,
+          1244,
+          2173,
+          2048
+        ],
+        "globalBox": [
+          26529,
+          46300,
+          26749,
+          47104
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r02-c03.png",
+      "sha256": "488c6d55759445b60de717ce7e5817641b3f6e7f9636f1a3c82010a402a40bf0",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Long jagged contrast seam cuts water and foam throughout the crop.",
+      "issueBounds": {
+        "cropBox": [
+          190,
+          20,
+          410,
+          1024
+        ],
+        "contextBox": [
+          3032,
+          1159,
+          3252,
+          2163
+        ],
+        "tileCoreBox": [
+          2917,
+          1044,
+          3137,
+          2048
+        ],
+        "globalBox": [
+          27493,
+          46100,
+          27713,
+          47104
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r03-c01.png",
+      "sha256": "e60b897569857a7ae45c30e98a6125d8e7e36b8ff09bfc55f176a3255a526dce",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Jagged source boundary disconnects pale shallow-water band and white foam.",
+      "issueBounds": {
+        "cropBox": [
+          230,
+          0,
+          380,
+          1024
+        ],
+        "contextBox": [
+          1024,
+          2163,
+          1174,
+          3187
+        ],
+        "tileCoreBox": [
+          909,
+          2048,
+          1059,
+          3072
+        ],
+        "globalBox": [
+          25485,
+          47104,
+          25635,
+          48128
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r03-c02.png",
+      "sha256": "1caea79ae25485f0af456b93be7e1c73ba318e2c3f32e4646ce5f9aa460b1f95",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "White foam strand terminates at source cut; water facets and color change vertically.",
+      "issueBounds": {
+        "cropBox": [
+          290,
+          200,
+          450,
+          1024
+        ],
+        "contextBox": [
+          2108,
+          2363,
+          2268,
+          3187
+        ],
+        "tileCoreBox": [
+          1993,
+          2248,
+          2153,
+          3072
+        ],
+        "globalBox": [
+          26569,
+          47304,
+          26729,
+          48128
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r03-c03.png",
+      "sha256": "8e732d5a07b05027749fcd301650a576d3b157cc9c0e3cc2b3543ca9de806d9b",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Obvious blue-to-pale-aqua vertical discontinuity; caustic lines break.",
+      "issueBounds": {
+        "cropBox": [
+          260,
+          0,
+          450,
+          1024
+        ],
+        "contextBox": [
+          3102,
+          2163,
+          3292,
+          3187
+        ],
+        "tileCoreBox": [
+          2987,
+          2048,
+          3177,
+          3072
+        ],
+        "globalBox": [
+          27563,
+          47104,
+          27753,
+          48128
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r04-c01.png",
+      "sha256": "d60da93441f8ace95b4801189ef5e15150045d6264292874242938a8ceb88092",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Central water ripple scale/brightness changes with clipped bright strands.",
+      "issueBounds": {
+        "cropBox": [
+          270,
+          0,
+          460,
+          1024
+        ],
+        "contextBox": [
+          1064,
+          3187,
+          1254,
+          4211
+        ],
+        "tileCoreBox": [
+          949,
+          3072,
+          1139,
+          4096
+        ],
+        "globalBox": [
+          25525,
+          48128,
+          25715,
+          49152
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r04-c02.png",
+      "sha256": "3502dfed6d081baa5619016713b612d22c04a956289d73e19bb66d80b3f81574",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Jagged water tonal seam down to rock cap; rock surface join also changes texture.",
+      "issueBounds": {
+        "cropBox": [
+          330,
+          0,
+          490,
+          1024
+        ],
+        "contextBox": [
+          2148,
+          3187,
+          2308,
+          4211
+        ],
+        "tileCoreBox": [
+          2033,
+          3072,
+          2193,
+          4096
+        ],
+        "globalBox": [
+          26609,
+          48128,
+          26769,
+          49152
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/vertical-r04-c03.png",
+      "sha256": "2f1ee9d8683940bd6ecb2aa7075314d02fcc0374c2657b972e19e266fa851c54",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Subtle but visible zigzag water tone and caustic discontinuity.",
+      "issueBounds": {
+        "cropBox": [
+          260,
+          0,
+          450,
+          1024
+        ],
+        "contextBox": [
+          3102,
+          3187,
+          3292,
+          4211
+        ],
+        "tileCoreBox": [
+          2987,
+          3072,
+          3177,
+          4096
+        ],
+        "globalBox": [
+          27563,
+          48128,
+          27753,
+          49152
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r01-c01.png",
+      "sha256": "1b5d305a9b4591bc2fb361e8c3baf107aaa4f78c90a7936c259f0f1d2b3978e9",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "pass-local",
+      "observation": "Sand remains continuous across horizontal source transition; rightmost vertical seam is tracked separately.",
+      "issueBounds": null
+    },
+    {
+      "crop": "qa-native/horizontal-r01-c02.png",
+      "sha256": "34d3ec443e3632f7198d619250b213a4ab03d1a883b8586af62b011e57e756b1",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Sand grain contrast/scale changes across horizontal boundary near shoreline notch.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          230,
+          1024,
+          420
+        ],
+        "contextBox": [
+          1139,
+          1024,
+          2163,
+          1214
+        ],
+        "tileCoreBox": [
+          1024,
+          909,
+          2048,
+          1099
+        ],
+        "globalBox": [
+          25600,
+          45965,
+          26624,
+          46155
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r01-c03.png",
+      "sha256": "8945cf472755256c57eefa8ac535d4ffabd4c7cb85442643365a389b0a7242ed",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Horizontal sand texture transition and right-edge vertical water cut remain visible.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          220,
+          1024,
+          450
+        ],
+        "contextBox": [
+          2163,
+          1014,
+          3187,
+          1244
+        ],
+        "tileCoreBox": [
+          2048,
+          899,
+          3072,
+          1129
+        ],
+        "globalBox": [
+          26624,
+          45955,
+          27648,
+          46185
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r01-c04.png",
+      "sha256": "856e22a4027de05e0cd26b107d6b47b930f251589e70031eb014e7dc951e8684",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Diagonal hard cyan/pale-surf cut across water below shoreline.",
+      "issueBounds": {
+        "cropBox": [
+          390,
+          240,
+          1024,
+          530
+        ],
+        "contextBox": [
+          3577,
+          1034,
+          4211,
+          1324
+        ],
+        "tileCoreBox": [
+          3462,
+          919,
+          4096,
+          1209
+        ],
+        "globalBox": [
+          28038,
+          45975,
+          28672,
+          46265
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r02-c01.png",
+      "sha256": "d15088d7f34705de1d10d211831a08c526bf60ef99796360ee2386a025a9941d",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Horizontal cut abruptly changes rock silhouette/surface planes, with duplicated-looking rounded foot.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          290,
+          540,
+          460
+        ],
+        "contextBox": [
+          115,
+          2108,
+          655,
+          2278
+        ],
+        "tileCoreBox": [
+          0,
+          1993,
+          540,
+          2163
+        ],
+        "globalBox": [
+          24576,
+          47049,
+          25116,
+          47219
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r02-c02.png",
+      "sha256": "5d58e4cee054f9eadf7a824908091e3019d3e3cb4294e70169c22d819ee8f5f5",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water and white foam mesh change across horizontal join; dry peninsula correction itself is retained.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          200,
+          1024,
+          430
+        ],
+        "contextBox": [
+          1139,
+          2018,
+          2163,
+          2248
+        ],
+        "tileCoreBox": [
+          1024,
+          1903,
+          2048,
+          2133
+        ],
+        "globalBox": [
+          25600,
+          46959,
+          26624,
+          47189
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r02-c03.png",
+      "sha256": "694e2ed241db511f7aee7a70adcc47aa926cef082571c13716789e2163bfb3f2",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Broad horizontal caustic scale and cyan tone shift; strands truncate.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          190,
+          1024,
+          440
+        ],
+        "contextBox": [
+          2163,
+          2008,
+          3187,
+          2258
+        ],
+        "tileCoreBox": [
+          2048,
+          1893,
+          3072,
+          2143
+        ],
+        "globalBox": [
+          26624,
+          46949,
+          27648,
+          47199
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r02-c04.png",
+      "sha256": "92baed0bb5c822616206159649a794611e29f3f845fcaab611b098c3bfe07fb7",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water pattern/blue tone jump at horizontal source transition; left vertical discontinuity also visible.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          240,
+          1024,
+          440
+        ],
+        "contextBox": [
+          3187,
+          2058,
+          4211,
+          2258
+        ],
+        "tileCoreBox": [
+          3072,
+          1943,
+          4096,
+          2143
+        ],
+        "globalBox": [
+          27648,
+          46999,
+          28672,
+          47199
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r03-c01.png",
+      "sha256": "f94cd5397349a4d24cee9787d1a37ab80f7720aabbe8c9b67981ceaaadac1a3d",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Ripple density and highlight strength change across horizontal wave field.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          220,
+          1024,
+          450
+        ],
+        "contextBox": [
+          115,
+          3062,
+          1139,
+          3292
+        ],
+        "tileCoreBox": [
+          0,
+          2947,
+          1024,
+          3177
+        ],
+        "globalBox": [
+          24576,
+          48003,
+          25600,
+          48233
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r03-c02.png",
+      "sha256": "f113943b81ac99187f6033fde37d1e6bbfb00bf23e32b6f6abd671c0da81a9cb",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Caustic scale/tonal join visible beneath central foam branch.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          230,
+          1024,
+          450
+        ],
+        "contextBox": [
+          1139,
+          3072,
+          2163,
+          3292
+        ],
+        "tileCoreBox": [
+          1024,
+          2957,
+          2048,
+          3177
+        ],
+        "globalBox": [
+          25600,
+          48013,
+          26624,
+          48233
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r03-c03.png",
+      "sha256": "019fb954fca14a25c0d1bc7feaa5b45eeb554a821379b475454f05ff0f5ee7af",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water tones and caustic loops clip across horizontal source path.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          230,
+          1024,
+          450
+        ],
+        "contextBox": [
+          2163,
+          3072,
+          3187,
+          3292
+        ],
+        "tileCoreBox": [
+          2048,
+          2957,
+          3072,
+          3177
+        ],
+        "globalBox": [
+          26624,
+          48013,
+          27648,
+          48233
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/horizontal-r03-c04.png",
+      "sha256": "b0dafe1ca8f1aaeaf2b6c2803e6f6a8ae04335be4aef9ef5b7446eef3eed3abc",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water ripple loops and tones change at horizontal join.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          240,
+          1024,
+          480
+        ],
+        "contextBox": [
+          3187,
+          3082,
+          4211,
+          3322
+        ],
+        "tileCoreBox": [
+          3072,
+          2967,
+          4096,
+          3207
+        ],
+        "globalBox": [
+          27648,
+          48023,
+          28672,
+          48263
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r01-c01.png",
+      "sha256": "66a4befaa6ddfa84dbe3fc059a1129bb7bbb01e5e0dd7b4a9f4c845c4469b9c9",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Four-way sand grain scale shifts; lower-left shoreline is vertically cut at lower junction edge.",
+      "issueBounds": {
+        "cropBox": [
+          210,
+          320,
+          690,
+          690
+        ],
+        "contextBox": [
+          1004,
+          1114,
+          1484,
+          1484
+        ],
+        "tileCoreBox": [
+          889,
+          999,
+          1369,
+          1369
+        ],
+        "globalBox": [
+          25465,
+          46055,
+          25945,
+          46425
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r01-c02.png",
+      "sha256": "356804aade8f2fdcf3c932671886cde2dda8eb69ee02606af926b4d077847e20",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Four-way sand pattern mismatch and lower cyan/pale-water cut distort shoreline neighborhood.",
+      "issueBounds": {
+        "cropBox": [
+          160,
+          220,
+          480,
+          690
+        ],
+        "contextBox": [
+          1978,
+          1014,
+          2298,
+          1484
+        ],
+        "tileCoreBox": [
+          1863,
+          899,
+          2183,
+          1369
+        ],
+        "globalBox": [
+          26439,
+          45955,
+          26759,
+          46425
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r01-c03.png",
+      "sha256": "6b55c90740318081f5ef9d47438d8d7f051545cd2cd058915f5a5be0177582df",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Shoreline/foam geometry and shallow-water tones break vertically and across junction.",
+      "issueBounds": {
+        "cropBox": [
+          180,
+          180,
+          450,
+          690
+        ],
+        "contextBox": [
+          3022,
+          974,
+          3292,
+          1484
+        ],
+        "tileCoreBox": [
+          2907,
+          859,
+          3177,
+          1369
+        ],
+        "globalBox": [
+          27483,
+          45915,
+          27753,
+          46425
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r02-c01.png",
+      "sha256": "b3ee145ec2db325195eda2cd28d2ddf4211c8c05e3860d6077dc7763ec496b19",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Four-source shallow-water colors and foam disconnect into a jagged cross.",
+      "issueBounds": {
+        "cropBox": [
+          190,
+          0,
+          400,
+          690
+        ],
+        "contextBox": [
+          984,
+          1818,
+          1194,
+          2508
+        ],
+        "tileCoreBox": [
+          869,
+          1703,
+          1079,
+          2393
+        ],
+        "globalBox": [
+          25445,
+          46759,
+          25655,
+          47449
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r02-c02.png",
+      "sha256": "d2da86e146821cd71e77ad0ed5f3160c1173025f51d6be6900e0035add5e05a2",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Multiple cyan tone and caustic discontinuities meet at central junction.",
+      "issueBounds": {
+        "cropBox": [
+          220,
+          0,
+          460,
+          690
+        ],
+        "contextBox": [
+          2038,
+          1818,
+          2278,
+          2508
+        ],
+        "tileCoreBox": [
+          1923,
+          1703,
+          2163,
+          2393
+        ],
+        "globalBox": [
+          26499,
+          46759,
+          26739,
+          47449
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r02-c03.png",
+      "sha256": "b3124ddc8aeadc5c7c85929590e8413f072572684a99c9aaf488443273136dbc",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Strong blue-to-aqua jagged seam persists through four-way junction.",
+      "issueBounds": {
+        "cropBox": [
+          220,
+          0,
+          450,
+          690
+        ],
+        "contextBox": [
+          3062,
+          1818,
+          3292,
+          2508
+        ],
+        "tileCoreBox": [
+          2947,
+          1703,
+          3177,
+          2393
+        ],
+        "globalBox": [
+          27523,
+          46759,
+          27753,
+          47449
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r03-c01.png",
+      "sha256": "cf55cb692cd2530e6d136eb92b50468e8deaa285bf08242921dd5f57149ec05d",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water highlight scale and cyan value shift at four-way transition; foam clips.",
+      "issueBounds": {
+        "cropBox": [
+          200,
+          120,
+          470,
+          690
+        ],
+        "contextBox": [
+          994,
+          2962,
+          1264,
+          3532
+        ],
+        "tileCoreBox": [
+          879,
+          2847,
+          1149,
+          3417
+        ],
+        "globalBox": [
+          25455,
+          47903,
+          25725,
+          48473
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r03-c02.png",
+      "sha256": "74c5e59271f41aa32908a13e394bfd70f17c38fe6df4aeef65c1add30f31b677",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Zigzag central water color/caustic cut visible through junction.",
+      "issueBounds": {
+        "cropBox": [
+          220,
+          0,
+          480,
+          690
+        ],
+        "contextBox": [
+          2038,
+          2842,
+          2298,
+          3532
+        ],
+        "tileCoreBox": [
+          1923,
+          2727,
+          2183,
+          3417
+        ],
+        "globalBox": [
+          26499,
+          47783,
+          26759,
+          48473
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    },
+    {
+      "crop": "qa-native/junction-r03-c03.png",
+      "sha256": "04ba7229b4f42f8c41266f8f14467ca5aea15da66121a2c447a626718904479e",
+      "nativeScale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Water facets/caustic loops change abruptly across four-source join.",
+      "issueBounds": {
+        "cropBox": [
+          190,
+          100,
+          490,
+          690
+        ],
+        "contextBox": [
+          3032,
+          2942,
+          3332,
+          3532
+        ],
+        "tileCoreBox": [
+          2917,
+          2827,
+          3217,
+          3417
+        ],
+        "globalBox": [
+          27493,
+          47883,
+          27793,
+          48473
+        ],
+        "coordinates": "xyxy; zero-based; exclusive upper bounds; bounding observed issue strip"
+      }
+    }
+  ],
+  "externalCrops": [
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\north-segment-01.png",
+      "sha256": "8386981b43516e061275333cab07c2cb5a8e19463d4528615e5b117a683a7646",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\qa\\block2x2-r10r11c06c07-v3-r11_c07-context-native.png",
+      "externalSourceSha256": "2145b89fd06d761e00b6e3cdc0ded93caa18f917f81801b47cc72f7a3322cc5a",
+      "externalCrop": [
+        115,
+        3866,
+        1139,
+        4211
+      ],
+      "currentCrop": [
+        115,
+        115,
+        1139,
+        460
+      ],
+      "globalBox": [
+        24576,
+        44711,
+        25600,
+        45401
+      ],
+      "direction": "north",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Horizontal sand tone/texture cut, strongest near central dark sand patch.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          315,
+          1024,
+          380
+        ],
+        "globalBox": [
+          24576,
+          45026,
+          25600,
+          45091
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\north-segment-02.png",
+      "sha256": "a9777c0f6f345c1294bfc331fded5e5b6b5c9fc6fd3ed7340825bd9baad9bb44",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\qa\\block2x2-r10r11c06c07-v3-r11_c07-context-native.png",
+      "externalSourceSha256": "2145b89fd06d761e00b6e3cdc0ded93caa18f917f81801b47cc72f7a3322cc5a",
+      "externalCrop": [
+        1139,
+        3866,
+        2163,
+        4211
+      ],
+      "currentCrop": [
+        1139,
+        115,
+        2163,
+        460
+      ],
+      "globalBox": [
+        25600,
+        44711,
+        26624,
+        45401
+      ],
+      "direction": "north",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Fine-to-coarser sand texture changes at exact core boundary.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          315,
+          1024,
+          390
+        ],
+        "globalBox": [
+          25600,
+          45026,
+          26624,
+          45101
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\north-segment-03.png",
+      "sha256": "0441c3fb2f49412c402c34cbb1bb30547fdfde088b1f0bafe7d90ea3b48646c8",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\qa\\block2x2-r10r11c06c07-v3-r11_c07-context-native.png",
+      "externalSourceSha256": "2145b89fd06d761e00b6e3cdc0ded93caa18f917f81801b47cc72f7a3322cc5a",
+      "externalCrop": [
+        2163,
+        3866,
+        3187,
+        4211
+      ],
+      "currentCrop": [
+        2163,
+        115,
+        3187,
+        460
+      ],
+      "globalBox": [
+        26624,
+        44711,
+        27648,
+        45401
+      ],
+      "direction": "north",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Broad sand grain scale/contrast mismatch at boundary; patterns truncate.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          315,
+          1024,
+          410
+        ],
+        "globalBox": [
+          26624,
+          45026,
+          27648,
+          45121
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\north-segment-04.png",
+      "sha256": "d99c7c932572c450fec0adad93e1052937170034917574267e7cda0cb1686441",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southwest\\qa\\block2x2-r10r11c06c07-v3-r11_c07-context-native.png",
+      "externalSourceSha256": "2145b89fd06d761e00b6e3cdc0ded93caa18f917f81801b47cc72f7a3322cc5a",
+      "externalCrop": [
+        3187,
+        3866,
+        4211,
+        4211
+      ],
+      "currentCrop": [
+        3187,
+        115,
+        4211,
+        460
+      ],
+      "globalBox": [
+        27648,
+        44711,
+        28672,
+        45401
+      ],
+      "direction": "north",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Strong sand texture/color discontinuity; top-right vegetation/shadow terminates at straight join.",
+      "issueBounds": {
+        "cropBox": [
+          0,
+          300,
+          1024,
+          430
+        ],
+        "globalBox": [
+          27648,
+          45011,
+          28672,
+          45141
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\west-segment-01.png",
+      "sha256": "4b53b8b85e466fb0c4db10f1bc3294c2c341d01e3c87628c38c778d5c473b1cc",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c06-complete-native-v1\\context-native.png",
+      "externalSourceSha256": "cd7b6813e8e96ae1c6e762b3a84c6e53cb11479adede89458327a79aee7e973d",
+      "externalCrop": [
+        3866,
+        115,
+        4211,
+        1139
+      ],
+      "currentCrop": [
+        115,
+        115,
+        460,
+        1139
+      ],
+      "globalBox": [
+        24231,
+        45056,
+        24921,
+        46080
+      ],
+      "direction": "west",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "needs-repair",
+      "observation": "Straight vertical sand texture/feature cutoff at core boundary.",
+      "issueBounds": {
+        "cropBox": [
+          305,
+          0,
+          390,
+          1024
+        ],
+        "globalBox": [
+          24536,
+          45056,
+          24621,
+          46080
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\west-segment-02.png",
+      "sha256": "77c8762901615aea6255b33256becdf3fc6c32fc2c86998e3ab567baf50d3544",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c06-complete-native-v1\\context-native.png",
+      "externalSourceSha256": "cd7b6813e8e96ae1c6e762b3a84c6e53cb11479adede89458327a79aee7e973d",
+      "externalCrop": [
+        3866,
+        1139,
+        4211,
+        2163
+      ],
+      "currentCrop": [
+        115,
+        1139,
+        460,
+        2163
+      ],
+      "globalBox": [
+        24231,
+        46080,
+        24921,
+        47104
+      ],
+      "direction": "west",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Large boulder planes and contours do not align across vertical boundary; sand texture also changes.",
+      "issueBounds": {
+        "cropBox": [
+          285,
+          170,
+          440,
+          1024
+        ],
+        "globalBox": [
+          24516,
+          46250,
+          24671,
+          47104
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\west-segment-03.png",
+      "sha256": "11264fffddf95efa42a5e99d8a26bf39c2e4df8e44eff2afa0e04cf4a485fdaa",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c06-complete-native-v1\\context-native.png",
+      "externalSourceSha256": "cd7b6813e8e96ae1c6e762b3a84c6e53cb11479adede89458327a79aee7e973d",
+      "externalCrop": [
+        3866,
+        2163,
+        4211,
+        3187
+      ],
+      "currentCrop": [
+        115,
+        2163,
+        460,
+        3187
+      ],
+      "globalBox": [
+        24231,
+        47104,
+        24921,
+        48128
+      ],
+      "direction": "west",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Rock foot jumps about 200 pixels lower on right; caustic scale, sharpness and sea color also differ strongly.",
+      "issueBounds": {
+        "cropBox": [
+          240,
+          110,
+          510,
+          1024
+        ],
+        "globalBox": [
+          24471,
+          47214,
+          24741,
+          48128
+        ]
+      }
+    },
+    {
+      "file": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c07-complete-native-v1\\external-native\\west-segment-04.png",
+      "sha256": "67b57e917fcbd1fedbf6ae11fa0bd8eaf2ea0d28ab284254fcfcb554216f2e70",
+      "externalSource": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\qa\\r12-c06-complete-native-v1\\context-native.png",
+      "externalSourceSha256": "cd7b6813e8e96ae1c6e762b3a84c6e53cb11479adede89458327a79aee7e973d",
+      "externalCrop": [
+        3866,
+        3187,
+        4211,
+        4211
+      ],
+      "currentCrop": [
+        115,
+        3187,
+        460,
+        4211
+      ],
+      "globalBox": [
+        24231,
+        48128,
+        24921,
+        49152
+      ],
+      "direction": "west",
+      "method": "core-boundary juxtaposition; two unchanged integer crops; no blending or resampling; not an accepted external seam",
+      "scale": 1,
+      "reviewed": true,
+      "visualStatus": "fail",
+      "observation": "Rock contour/material and water highlight density break at vertical boundary.",
+      "issueBounds": {
+        "cropBox": [
+          285,
+          0,
+          430,
+          1024
+        ],
+        "globalBox": [
+          24516,
+          48128,
+          24661,
+          49152
+        ]
+      }
+    }
+  ],
+  "nextAction": "Parent to coordinate native seam repairs with exact issue bounds; retain all images. No r13_c07 generation started and no shared plan/checkpoint edited."
+}

@@ -3,11 +3,11 @@
   "zone": "southeast",
   "owner": "right_resume",
   "status": "continuing",
-  "updatedAt": "2026-10-13T13:25:02.937083+00:00",
+  "updatedAt": "2026-10-13T23:50:21.646934+00:00",
   "assigned4kCount": 1,
-  "generatedNativeCount": 7,
-  "usableNativeCount": 2,
-  "complete4kCount": 0,
+  "generatedNativeCount": 23,
+  "usableNativeCount": 10,
+  "complete4kCount": 1,
   "fullyCovered4kCount": 0,
   "internalPassed4kCount": 0,
   "externalPassed4kCount": 0,
@@ -16,23 +16,23 @@
   "currentPatch": "r13_c13_p34",
   "selectedVersions": {
     "14": "v01",
-    "24": "v02"
+    "24": "v02",
+    "31": "v01",
+    "34": "v02",
+    "33": "v01",
+    "44": "v01",
+    "12": "v01",
+    "32": "v01",
+    "22": "v01",
+    "42": "v01"
   },
   "missingPatchCoordinates": [
     "11",
-    "12",
     "13",
     "21",
-    "22",
     "23",
-    "31",
-    "32",
-    "33",
-    "34",
     "41",
-    "42",
-    "43",
-    "44"
+    "43"
   ],
   "configSnapshot": {
     "schema_version": 1,
@@ -62,7 +62,7 @@
   "resumeRecord": "production-resume-right-sol-20261012.json",
   "nextStep": "Continue assigned native patches from accepted adjacent source pixels; concentrated actual seam QA on full tile.",
   "currentPatchDispatchStatus": "prepared_not_submitted",
-  "uniqueGeneratedPatchCoordinates": 1,
+  "uniqueGeneratedPatchCoordinates": 16,
   "rejectedOutputCount": 15,
   "generationModelRequirement": {
     "freeIncluded25Preferred": true,
@@ -79,10 +79,10 @@
   "generationStopped": false,
   "deferredIssues": {
     "11": {
-      "version": "v01",
-      "note": "Rejected: model copied miniature island/dock, violating exact close-up crop.",
+      "version": "v03",
+      "note": "Two native repairs retain rectangular sharpness/material transition near native x230 and y230. Actual core seams connect geometrically but internal guide band remains. NOT passed; defer full boundary ownership repair; do independent gaps.",
       "status": "not_passed",
-      "atUtc": "2026-10-13T08:30:39.970120+00:00"
+      "atUtc": "2026-10-13T22:06:26.248583+00:00"
     },
     "24": {
       "version": "v01",
@@ -91,10 +91,38 @@
       "atUtc": "2026-10-13T08:30:40.122007+00:00"
     },
     "13": {
-      "version": "v02",
-      "note": "Spar improved but physical diagonal changes angle across east core seam; second localized repair required.",
+      "version": "v03",
+      "note": "Second local spar repair still fails actual east core: physical upper spar contour stepped; preserve best v02 for later whole-object repair, do not propagate this spar.",
       "status": "not_passed",
-      "atUtc": "2026-10-13T08:30:40.248347+00:00"
+      "atUtc": "2026-10-13T18:34:30.076109+00:00"
+    },
+    "41": {
+      "version": "v03",
+      "note": "Second local water repair preserves guide-boundary material band near native x230. Actual N/W wave shapes connect but visible internal band remains. NOT passed; defer and fill independent gaps.",
+      "status": "not_passed",
+      "atUtc": "2026-10-13T22:06:26.781439+00:00"
+    },
+    "23": {
+      "version": "v01",
+      "note": "Actual N/E/S physical rails connect, but upper-right native x1024,y0..230 rectangular water/bench guide boundary remains. NOT passed.",
+      "status": "not_passed",
+      "atUtc": "2026-10-13T22:06:27.290571+00:00"
+    },
+    "43": {
+      "version": "v01",
+      "note": "Actual N/E water connection mostly continuous but upper-right native x1024,y0..230 rectangular guide leftover breaks water. NOT passed.",
+      "status": "not_passed",
+      "atUtc": "2026-10-13T22:06:27.814280+00:00"
+    },
+    "21": {
+      "version": "v01",
+      "note": "Rejected: generation copied miniature dock/boat composition rather than water-only patch. Preserved original. v02 single-guide water-only correction in flight.",
+      "status": "not_passed",
+      "atUtc": "2026-10-13T22:47:48.424214+00:00"
     }
-  }
+  },
+  "fullCoverageCandidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\tiles\\r13_c13.candidate-right-full-20261013-v01.png",
+  "candidateSha256": "6713e8e0c183653bc14710db8084c6f67f7c41a82be6b6695b47ff1462bf42bd",
+  "candidateStatus": "complete_16_native_core_coverage_NOT_PASSED",
+  "internalQA": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\island-game-20261009\\southeast\\qa\\r13_c13-right-full-20261013-v01\\actual-review.json"
 }

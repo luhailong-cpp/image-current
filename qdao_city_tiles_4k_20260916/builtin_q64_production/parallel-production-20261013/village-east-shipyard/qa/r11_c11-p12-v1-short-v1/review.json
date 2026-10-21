@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-13T21:25:50.299803+00:00",
+  "reviewType": "short_foreground_tray_outgoing_geometry",
+  "tile": "r11_c11",
+  "patch": "p12",
+  "version": 1,
+  "status": "blocked_foreground_tray_footprint",
+  "formalAccepted": false,
+  "candidate": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p12-v1.png",
+    "sha256": "0afac756c412d67031c71d119dcc4c245818365361777629919a93a31741e246",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "layoutGuide": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\layout-only\\p12-v1-layout-only.png",
+    "sha256": "a5bb5c102dae1c4b5371fa1525a43e3c35d3d92b6ee41e16adef0cb72e72b06d",
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "canAnchor": {
+    "p22_south": false,
+    "p13_east": false
+  },
+  "decision": "Do not fix this foreground tray into either dependent edge. The mismatch is larger than the small left-corner drift: the intended front/right turn is displaced or absent within the same coordinate region, extending the blue tray across the next patch anchors.",
+  "blockers": [
+    {
+      "id": "B1_front_rim_turn_and_extent",
+      "guideApprox": "Left corner aroundx300..400/y700..760; front/right turn aroundx850..950/y970..1040, then rim turns upward to the right and exposes the adjacent pale region below/right.",
+      "candidateApprox": "Left corner aroundx430..540/y675..750. Front rim continues diagonally down-right, with its next bracket aroundx1100..1200/y1130..1254; the guide turn nearx900/y1020 is missing there.",
+      "propagation": "East x1024..1254 exports enlarged blue tray and a different rim course. South y1024..1254 exports shifted supports/front apron and omits the intended pale adjacent region. Continuing from either fixed strip would propagate the changed footprint.",
+      "coordinateNote": "Bounds are approximate hand readings because the guide is blurred. The large difference in rim course is clear; exact subpixel guide contours are not asserted.",
+      "evidence": "front-rim-guide-native-100pct.png"
+    }
+  ],
+  "nonblockingObservations": [
+    "The foreground blue tray and top grey rear fragment remain distinct objects; no merge between them is the blocking issue.",
+    "The left corner has a smaller rightward residual; it is not the sole reason for blocking. Fine wood grain was not rescanned."
+  ],
+  "evidence": {
+    "file": "front-rim-guide-native-100pct.png",
+    "sha256": "275269960a18428110f79b771b7c39d553f84a7cbb513b0c8870613d8c1430b1",
+    "dimensions": [
+      1948,
+      604
+    ],
+    "segments": [
+      {
+        "input": "guide",
+        "crop": [
+          280,
+          650,
+          1254,
+          1254
+        ],
+        "paste": [
+          0,
+          0
+        ]
+      },
+      {
+        "input": "candidate",
+        "crop": [
+          280,
+          650,
+          1254,
+          1254
+        ],
+        "paste": [
+          974,
+          0
+        ]
+      }
+    ],
+    "resized": false,
+    "operation": "exact unscaled crops placed side by side"
+  },
+  "evidenceManifest": "evidence-manifest.json",
+  "candidateAndGuidesViewedAt100Percent": true,
+  "evidenceViewedAt100Percent": true,
+  "resized": false,
+  "actualModel": null,
+  "actualModelStatus": "not returned / unknown",
+  "scopeLimits": {
+    "generationPerformed": false,
+    "stateOrSourceChanged": false,
+    "gitTouched": false,
+    "historicalFullScan": false,
+    "overviewRebuilt": false
+  },
+  "recommendedNextStep": "Reconcile only the foreground tray footprint to the guide before p22/p13 use. Preserve the separate grey rear fragment and native north/west references; keep this candidate and unpassed status."
+}
