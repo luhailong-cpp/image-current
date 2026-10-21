@@ -5,6 +5,10 @@ R=Path(__file__).resolve().parent
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def write(p,x): Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 coords=json.loads((R/'coordinates.json').read_text())
+selected=json.loads((R/'selected-revisions.json').read_text()) if (R/'selected-revisions.json').exists() else {}
+def chosen(p):
+ stem=p.stem[:-4]
+ return p.with_name(stem+'_'+selected.get(stem,'a01')+'.png')
 cmd=sys.argv[1]
 if cmd=='save':
  stem,src=sys.argv[2:4]; dst=R/'native'/f'{stem}_a01.png'
@@ -19,9 +23,11 @@ elif cmd=='context':
  stem=sys.argv[2]; c=next(x for x in coords if x['id']==stem);im=Image.open(c.get('westBoundaryContext',c['guide'])).convert('RGB');r=c['subrow'];col=c['subcolumn'];tile=c['tile'];neighbors=[]
  if col>1:
   p=R/'native'/f'{tile}_s{r:02d}_{col-1:02d}_a01.png'
+  p=chosen(p)
   if p.exists(): im.paste(Image.open(p).crop((1024,0,1254,1254)),(0,0));neighbors.append({'role':'left 230px native overlap','path':str(p),'sha256':sha(p)})
  if r>1:
   p=R/'native'/f'{tile}_s{r-1:02d}_{col:02d}_a01.png'
+  p=chosen(p)
   if p.exists(): im.paste(Image.open(p).crop((0,1024,1254,1254)),(0,0));neighbors.append({'role':'top 230px native overlap','path':str(p),'sha256':sha(p)})
  elif tile=='r04_c05':
   p=R/'native'/f'r03_c05_s04_{col:02d}_a01.png'

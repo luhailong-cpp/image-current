@@ -297,10 +297,25 @@ def prepare(tile, patch, description, retry=False):
                        'operation': 'unscaled adjacent native overlap pasted onto layout-only guide'})
     conditioned_path = folder / f'layout-only/{patch}-v{version}-conditioned-target.png'
     conditioned.save(conditioned_path)
+    # Narrow unscaled overlaps avoid copying a whole neighbor's object into the new core.
+    # Full neighbor provenance remains in pastedNativeReferences above.
+    adjacent_refs = {}
+    for direction, item, crop in [
+            ('left', left, [1024, 0, 1254, 1254]),
+            ('top', top, [0, 1024, 1254, 1254])]:
+        if item:
+            overlap_path = folder / f'layout-only/{patch}-v{version}-{direction}-native-overlap.png'
+            with Image.open(item['path']) as im:
+                im.crop(tuple(crop)).save(overlap_path)
+            overlap_ref = info(overlap_path, f'{direction} native overlap only; unscaled reference crop')
+            overlap_ref['originalNativeSource'] = item
+            overlap_ref['sourceCrop'] = crop
+            overlap_ref['classification'] = 'reference conditioning only; not a new model output'
+            adjacent_refs[direction] = overlap_ref
     refs = [info(conditioned_path, 'edit target; blurry region is layout guidance only')]
-    refs += [left] if left else [top]
+    refs += [adjacent_refs['left']] if left else [adjacent_refs['top']]
     if left and top:
-        refs += [top, info(layout, 'authoritative full-map layout only')]
+        refs += [adjacent_refs['top'], info(layout, 'authoritative full-map layout only')]
     else:
         refs += [info(layout, 'authoritative full-map layout only'), info(detail, 'independent daylight material/style, not coordinate crop')]
     refs += [info(style, 'primary approved Q Daoist hand-painted style; never copy UI, people or night')]
@@ -311,8 +326,8 @@ def prepare(tile, patch, description, retry=False):
     prompt = f'''Use case: precise-object-edit / native game-map continuation.
 Asset: one opaque 1254x1254 native map patch, {tile}/{patch}; 1024x1024 final core at [115,115,1139,1139].
 Image1 is the edit target: {anchors} contain existing native art. The blurry remainder is ONLY the approved layout guide, never final pixels. Preserve the finished native strips and reconstruct the remainder as sharp original detail. Continue every plank, rope, contour, shadow and waterline seamlessly across the strip boundaries without a pasted band, duplicate object or change of scale. At a top/left overlap corner, the top native strip was pasted last.
-Image2 is the immediate adjacent native anchor controlling actual scale, painterly material and exact continuation. '''
-    prompt += ('Image3 is the immediate TOP native anchor. Image4 is the authoritative whole-village layout only. ' if left and top else 'Image3 is the authoritative whole-village layout only. Image4 is independent daytime material/detail style, NOT a coordinate crop. ')
+Image2 is a NARROW unscaled native overlap from the immediate adjacent anchor, controlling exact continuation. It is a cropped edge, never a complete new object. '''
+    prompt += ('Image3 is the NARROW unscaled TOP native overlap. Image4 is the authoritative whole-village layout only. ' if left and top else 'Image3 is the authoritative whole-village layout only. Image4 is independent daytime material/detail style, NOT a coordinate crop. ')
     prompt += f'''Image5 is the primary approved rounded Q Daoist hand-painted style; do not copy its UI, night, people or text.
 Target native world box: {geom['nativeGlobalBox']}; final core world box: {geom['coreGlobalBox']}. Keep the tight cropped view and the approved object's exact footprint, perspective and placement. No zoom-out, rotation or reframing.
 Scene: {description}
