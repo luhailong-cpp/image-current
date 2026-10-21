@@ -1,0 +1,11 @@
+from pathlib import Path
+import json
+T=Path(__file__).resolve().parent
+p=T/'local-content.json'
+d=json.loads(p.read_text(encoding='utf-8-sig'))
+d.update({
+'p02_04':'Existing bright ivory stone tower wall and ONE vertical gold inset plaque, a plain empty gold-bordered panel at x360..670,y270..970, with its long sides sloping slightly in perspective. Continue TOP actual red lantern tassel at upper-right x850..1139, ending around y550, with same silk and gold fitting. Only the EXISTING small muted green wall-side foliage enters lower far-right from x900,y600 and continues off crop. Follow LEFT native stone corner and slab joints near x115. No new lamp, window, additional plaque, text, post or ornament. Far-right black115 is outside original guide, continue natural material with no black frame.',
+'p03_03':'The SAME existing single red vertical banner fills left x80..650 and continues through top and bottom. Preserve TOP native banner, border and cut-off first coin arc precisely, and LEFT narrow banner edge. Exactly THREE plain GOLD COIN RINGS with SQUARE HOLES vertically aligned around x350, centered y330,y680,y1010, following the guide; no lettering or calligraphy. Continue the first partially entering coin from TOP into one complete ring, do not add another coin above or below. Warm pale stone tower wall fills x700 onward, broad clean connected slabs. Keep straight gold banner border and same crop scale. No extra flag, rope, post, lantern, cloth triangle, knot, medallion or object.',
+'p04_02':'Quiet cream stone tower wall. Existing dark stone parapet side and contact shadow intrude at far-left x0..200 through height, continuing actual LEFT/TOP. At far-right x1080 onward is ONLY the left margin of the SAME red banner from TOP; it ends around y750 with the visible small angled/V-notched hem, and its main body remains off crop to right. Keep exact guide hem position and gold border continuation. Do not put a complete banner or coin in this crop. Preserve large calm slab scale, continuous joints and straight tower-wall geometry. No extra plaque, window, door, post, foliage, ornament, letters or invented horizontal structural ledge.'
+})
+p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')

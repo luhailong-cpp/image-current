@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "patch": "r13_c06_p04_03",
+  "version": "v02",
+  "tool": "image_gen.imagegen",
+  "preparedAtUtc": "2026-10-13T17:09:25.856981+00:00",
+  "submittedArguments": {
+    "prompt": "Use case: precise-object-edit. Fix the southwestern rock contour of image1 while preserving native1254x1254 size and the rest of the ocean. Image2 is the exact native left230-pixel overlap strip: the rock starts at y approximately690 on the LEFT edge and meets x230 at y approximately960. Copy that exact contour placement into output left230. In image1 the rock mistakenly begins around y590 and is too tall. Lower that upper-left boundary by about100 pixels to match image2 and image3. Continue it as one smooth descending convex contour through near x230,y960, reaching bottom edge near x650. Preserve the single continuous warm-grey rounded stone surface with fine matte mineral brushwork and sunlight; eliminate the extra small bulge around x300,y900 and the deep dividing cleft so it is one continuous outer slope. Replace only the removed thin rock sliver with seamlessly matching cyan water. Preserve all remaining sea and the bottom-right tiny glint, and keep north230 matching image4. No added foam along this high rock contour. No new objects, rocks, text, UI, frame, sky or horizon. Return just the corrected1254square terrain crop.",
+    "referenced_image_paths": [
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p04_03_v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.west-overlap-v01.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.layout-only.png",
+      "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.north-overlap-v01.png"
+    ],
+    "transparent_background": false
+  },
+  "globalCoreBox": [
+    22528,
+    52224,
+    23552,
+    53248
+  ],
+  "globalNativeBox": [
+    22413,
+    52109,
+    23667,
+    53363
+  ],
+  "requestedNativeDimensions": [
+    1254,
+    1254
+  ],
+  "actualModel": null,
+  "actualQuality": null,
+  "actualModelEvidence": "not returned",
+  "allocation": "allocated_root_reserved",
+  "ownerAcknowledgementClaimed": false,
+  "references": [
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p04_03_v01.png",
+      "sha256": "c338625ce8b135d26a5287863b0a2473fad9996caf1a44724b7d3c853e79e0c3",
+      "role": "edit target"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.west-overlap-v01.png",
+      "sha256": "44e75ad693b31a553f7662f975e1d4e7e85bf0ef5f6f798fbd82a3ed43cdd4ad",
+      "role": "exact native left230 rock-water boundary; strongest contour authority"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.layout-only.png",
+      "sha256": "246ee630be4832962794ae7a5b2c22f8e32f7f315682f3713c9ddbd37fa7f9ca",
+      "role": "original local composition"
+    },
+    {
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\guides\\r13_c06_p04_03.north-overlap-v01.png",
+      "sha256": "9c6cb36fd5b39eb2692f736f9d6ac8fa9af7440bd144a08b03fcdfd35e40f019",
+      "role": "native top230 water"
+    }
+  ],
+  "authorities": [
+    {
+      "path": "D:\\work\\image\\AGENTS.md",
+      "sha256": "57f1ad4f81fdb2256b843923d862308be228130917b99cfced375db256aff01a"
+    },
+    {
+      "path": "D:\\work\\image\\docs\\MAP_PARALLEL_SPLIT_20261013.json",
+      "sha256": "a7cab49b89974586a1a0375baeadc5d4a7aa12dce6e782bcc8f9b52b777b3c8f"
+    },
+    {
+      "path": "C:\\Users\\luyua\\.codex\\skills\\.system\\imagegen\\SKILL.md",
+      "sha256": "706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4"
+    }
+  ],
+  "edgeSources": [
+    {
+      "direction": "north",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p03_03_v01.png",
+      "sha256": "bfc02db78f75ff3879f2e2aca177b14ae900c24d68d700ba2ff703e56533bf9b",
+      "crop": [
+        0,
+        1024,
+        1254,
+        1254
+      ],
+      "target": [
+        0,
+        0,
+        1254,
+        230
+      ]
+    },
+    {
+      "direction": "west",
+      "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-west-courtyard\\native\\r13_c06_p04_02_v02.png",
+      "sha256": "ebad34fd4528003942ee056a555c72935921bfa3043674b67fb39b7c4aecd4b9",
+      "crop": [
+        1024,
+        0,
+        1254,
+        1254
+      ],
+      "target": [
+        0,
+        0,
+        230,
+        1254
+      ]
+    }
+  ],
+  "repairOf": "r13_c06_p04_03_v01",
+  "repairReason": "rock contour begins100px too high at west edge"
+}

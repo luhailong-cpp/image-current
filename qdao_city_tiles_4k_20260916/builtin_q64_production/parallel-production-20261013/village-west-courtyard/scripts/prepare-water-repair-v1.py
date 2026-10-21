@@ -1,0 +1,17 @@
+"""Prepare one versioned native crop and request. Never generates or edits pixels."""
+from pathlib import Path
+from PIL import Image
+import argparse,json,hashlib,datetime
+B=Path(__file__).resolve().parent.parent
+p=argparse.ArgumentParser(__doc__);p.add_argument('--base',required=True);p.add_argument('--id',required=True);p.add_argument('--x',type=int,required=True);p.add_argument('--y',type=int,required=True);p.add_argument('--axis',choices=['vertical','horizontal','cross'],default='cross');a=p.parse_args()
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+base=B/a.base;meta=json.loads((base/'assembly.json').read_text());source=base/meta['context']['path'];assert sha(source)==meta['context']['sha256']
+R=B/'repairs/r13c06-water-seams-v1';out=R/(a.id+'.source-native-crop.png');qpath=R/(a.id+'-v01.request.json');assert not out.exists() and not qpath.exists()
+im=Image.open(source);box=[a.x,a.y,a.x+1254,a.y+1254];assert a.x>=0 and a.y>=0 and box[2]<=im.width and box[3]<=im.height
+with out.open('xb') as f:im.crop(box).save(f,format='PNG')
+region={'vertical':'the jagged vertical pasted seam near the center x=500..760','horizontal':'the jagged horizontal pasted seam near the center y=500..760','cross':'the intersecting jagged vertical and horizontal pasted seams through the center, around x=500..760 and y=500..760'}[a.axis]
+prompt=f'''Precisely edit this actual 1254 by 1254 native-resolution hand-painted game ocean map crop. Return an opaque 1254 by 1254 image with exactly the same frame, scale, composition and lighting. Remove {region}. Reconnect the truncated pale ripple curves and angular cyan color discontinuities into naturally continuous water shapes. Repair every visible pasted cut within this crop, retaining as much of the original drawing as possible. Preserve the existing clear turquoise color variations, original sparse bright reflections, precise ripple scale and sharp soft-edged painterly brush texture. Do not globally repaint or recolor. Keep the existing outer 115-pixel bands and the actual pattern positions on them extremely close to the input, while continuing the ripple curves naturally into the repaired center. Preserve any visible rock or shoreline position exactly if present. Do not add objects, people, land, rocks, labels, grid, border or UI. No resizing, zoom, blur, smoothing filter or flat color wash. This is a local native image continuity repair, not a new composition.'''
+origin=meta['globalContextBox'][:2];gb=[origin[0]+box[0],origin[1]+box[1],origin[0]+box[2],origin[1]+box[3]]
+q={'schemaVersion':1,'createdAtUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'batch':'village-west-courtyard','tile':'r13_c06','repairId':a.id,'attempt':1,'axis':a.axis,'source':{'path':str(source),'sha256':sha(source),'contextCropBox':box},'baseAssembly':{'path':str(base/'assembly.json'),'sha256':sha(base/'assembly.json')},'references':[{'path':str(out),'sha256':sha(out),'role':'actual native1254 integer crop; no resizing'}],'globalNativeBox':gb,'globalCoreBox':[gb[0]+115,gb[1]+115,gb[2]-115,gb[3]-115],'coreInNative':[115,115,1139,1139],'prompt':prompt,'arguments':{'prompt':prompt,'referenced_image_paths':[str(out)],'transparent_background':False},'route':'builtin','actualModel':None,'actualQuality':None,'formalAccepted':False}
+with qpath.open('x',encoding='utf-8') as f:json.dump(q,f,ensure_ascii=False,indent=2);f.write('\n')
+print(json.dumps({'request':str(qpath),'sha256':sha(qpath),'reference':str(out),'globalNativeBox':gb}))

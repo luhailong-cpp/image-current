@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "tile": "r03_c14",
+  "worker": "west",
+  "selectedCoreCount": 8,
+  "selectedPatches": [
+    "p13",
+    "p14",
+    "p23",
+    "p24",
+    "p33",
+    "p34",
+    "p43",
+    "p44"
+  ],
+  "formalAcceptedCount": 0,
+  "selection": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\city-tower-north\\selections\\west-selection-r03c14-eight-v001.json",
+  "status": "native-candidates-ready-for-root-full-tile-assembly-and-qa",
+  "entryPoint": "builtin image_gen.imagegen",
+  "actualModel": null,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "coreCrop": [
+    115,
+    115,
+    1139,
+    1139
+  ],
+  "allEventsRegisteredWithByteIdentity": true,
+  "knownIssues": [
+    {
+      "patch": "p23",
+      "status": "pending-not-passed",
+      "selectedVersion": "west-r03c14-p23-repair2-native",
+      "repairs": 2,
+      "issue": "Gold eave tip and left beam phase still differ from layout guide; repair2 substantially improves east greenery and south lantern-body continuation. Best retained, no further repetitive local repair."
+    },
+    {
+      "patch": "p43",
+      "status": "blocking-geometric-seam-not-passed",
+      "selectedVersion": "west-r03c14-p43-native-v001",
+      "repairs": 0,
+      "issue": "At native y1139 bottom115px context remains visibly pasted. New core invents full red column foot and pavement while south reference requires lower teal roof/gold rim rising into core. Redecorated tile end and paving motifs also differ. Do not propagate south using this source; root should repair lower half jointly with r04c14:p13."
+    },
+    {
+      "patch": "p44",
+      "status": "working-macro-only",
+      "issue": "Top raised-stone ledge and bottom tree crown continue at macro level; native 100% joint and material review pending."
+    }
+  ],
+  "reviewPolicy": "Root assembles full16 directly; no redundant half assembly performed. Other local seams await concentrated QA."
+}

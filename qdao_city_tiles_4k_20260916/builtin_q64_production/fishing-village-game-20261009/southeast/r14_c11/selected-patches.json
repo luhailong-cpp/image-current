@@ -1,0 +1,58 @@
+{
+  "tile": "r14_c11",
+  "patches": {
+    "p11": "native/p11-v1.png",
+    "p12": "native/p12-v1.png",
+    "p13": "native/p13-v1.png",
+    "p14": "native/p14-v1.png",
+    "p21": "native/p21-v1.png",
+    "p22": "native/p22-v1.png",
+    "p23": "native/p23-v1.png",
+    "p31": "native/p31-v1.png",
+    "p24": "native/p24-v1.png",
+    "p32": "native/p32-v1.png",
+    "p41": "native/p41-v1.png",
+    "p33": "native/p33-v1.png",
+    "p42": "native/p42-v1.png",
+    "p34": "native/p34-v1.png",
+    "p43": "native/p43-v1.png",
+    "p44": "native/p44-v1.png"
+  },
+  "status": "complete_native_candidate_internal_material_pending",
+  "internalReady": false,
+  "formalAccepted": false,
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r14_c11\\qa\\complete-20261013-v1\\candidate-4096.png",
+  "candidateSha256": "80cb7dbe66f343f5a810bee4a12b168bdf1e4413c341d424f121b7afb0401df6",
+  "materialPending": true,
+  "internalReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\fishing-village-game-20261009\\southeast\\r14_c11\\qa\\complete-20261013-v1\\visual-review.json",
+  "pendingIssues": [
+    {
+      "id": "water-density-horizontal",
+      "status": "pending",
+      "severity": "material_nonblocking_layout",
+      "location": "internal horizontal joins y54272, y55296, y56320; strongest p31/p41, p32/p42, p33/p43",
+      "description": "Small caustic loops and bright glints change density across some horizontal core joins. Geometry and water continuity remain valid, but uniform final water surface is not yet accepted."
+    },
+    {
+      "id": "water-density-vertical",
+      "status": "pending",
+      "severity": "material_nonblocking_layout",
+      "location": "p12/p13 and some lower-row vertical joins",
+      "description": "Local caustic scale and saturation transitions remain visible at native scale; preserve all current sources for later bounded polish."
+    },
+    {
+      "id": "external-west-material",
+      "status": "pending",
+      "severity": "material_nonblocking_layout",
+      "location": "r14_c10/r14_c11 four segments plus y54272,y55296,y56320 crossings",
+      "description": "No shoreline or object discontinuity; small water pattern/density differences remain. West material acceptance is pending."
+    },
+    {
+      "id": "external-north-east",
+      "status": "pending_missing_sources",
+      "description": "North r13_c11 and east r14_c12 lack selected neighboring cores in this snapshot; south is canvas boundary and needs no r15."
+    }
+  ],
+  "updatedAt": "2026-10-13T23:36:34.119273+00:00",
+  "nativeCoreCount": 16
+}
