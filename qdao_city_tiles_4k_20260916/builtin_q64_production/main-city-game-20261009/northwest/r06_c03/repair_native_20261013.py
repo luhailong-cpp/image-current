@@ -9,8 +9,9 @@ def write(p,v):
 def prepare(name,box):
  d=T/'repair-batches'/name;d.mkdir(parents=True,exist_ok=False)
  assert box[2]-box[0]==1254 and box[3]-box[1]==1254
- out=d/'edit-target.png';Image.open(B).crop(box).save(out)
- write(d/'derivation.json',dict(source=str(B),sourceSha256=sha(B),tileCropLTRB=box,worldBox=[8192+box[0],20480+box[1],8192+box[2],20480+box[3]],output=str(out),sha256=sha(out),nativePixelScale=1,sourceResampled=False,sourceRecolored=False))
+ cp=T/'current-fullqa-checkpoint-20261013.json';source=Path(json.loads(cp.read_text())['candidate']['file']) if cp.exists() else B
+ out=d/'edit-target.png';Image.open(source).crop(box).save(out)
+ write(d/'derivation.json',dict(source=str(source),sourceSha256=sha(source),tileCropLTRB=box,worldBox=[8192+box[0],20480+box[1],8192+box[2],20480+box[3]],output=str(out),sha256=sha(out),nativePixelScale=1,sourceResampled=False,sourceRecolored=False))
  print(str(out))
 def ingest(name,host,hint):
  d=T/'repair-batches'/name;out=d/'native.png';assert not out.exists();assert Image.open(host).size==(1254,1254)

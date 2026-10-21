@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewedAtUtc": "2026-10-14T02:42:59.428027+00:00",
+  "scope": "Fast outgoing geometry only. No historical rescan, state mutation or formal tile acceptance.",
+  "actualImageModel": null,
+  "actualImageModelEvidence": "Not returned by image tool",
+  "evidenceManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r11_c11-p32-p33-v1-short-v1\\evidence-manifest.json",
+  "evidenceScale": "All new evidence uses exact integer crops at 1:1. Approved overview crop is original layout pixels, not final native art.",
+  "candidates": [
+    {
+      "candidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p32-v1.png",
+        "sha256": "c028eed34cbf04ab819617e25b71622631c489a67b6e129d8377cc9cc4c04b9f",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "canAnchor": {
+        "east": true,
+        "south": true
+      },
+      "formalAccepted": false,
+      "status": "usable_for_continuation_pending_consolidated_QA",
+      "findings": [
+        "East outgoing strip is continuous open deck. Existing lower bollard exits bottom without a new foot; south continuation is geometrically usable.",
+        "Cap occupies approximately x510..930, y910..1170, within the intended lower-bollard area. Small footprint/vertical differences from blurred guide are pending, not a propagation blocker."
+      ],
+      "pending": [
+        "Plank direction transition inherited from upper-left boundary needs consolidated seam QA; not a pole-layout blocker."
+      ],
+      "viewsActuallyInspected": [
+        "full native",
+        "conditioned layout target",
+        "south guide/native exact crop"
+      ]
+    },
+    {
+      "candidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r11_c11\\native\\p33-v1.png",
+        "sha256": "6f478a906a26edacf4c86a9d30fe3fd68753493ff4e32194497a380a991ca3ea",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "canAnchor": {
+        "east": false,
+        "south": true
+      },
+      "formalAccepted": false,
+      "status": "south_only_upper_right_layout_pending",
+      "findings": [
+        {
+          "location": [
+            350,
+            0,
+            1254,
+            460
+          ],
+          "severity": "east propagation blocker",
+          "description": "Native adds net/lattice ropes around a curved brown object at approximately x890..1200,y0..130 and a separate iron-banded upright at x1180..1254,y0..260. Approved layout contains a broad curved dark lower edge approximately x350..1000,y180..360; native object footprint and position do not follow it. Do not propagate the new upright into p34.",
+          "interpretation": "The authoritative overview indicates round bucket/basket-like objects beside the fish displays. This dark area cannot safely be treated as only cast shadow; exact object identity is somewhat limited by overview resolution. No evidence supports this specific net-covered object plus iron post arrangement.",
+          "suggestedRepairWindow": [
+            230,
+            0,
+            1254,
+            460
+          ],
+          "preserve": "West230 and south230. Restore approved existing object footprint and shadow rather than clearing all dark regions to bare deck."
+        },
+        {
+          "location": [
+            650,
+            1139,
+            1050,
+            1254
+          ],
+          "severity": "nonblocking",
+          "description": "Tiny ivory cap arc crosses lower halo around x750..1030,y1210..1254. Actual blurred guide ivory region is approximately x700..1030 near bottom, so candidate is sufficiently aligned for south continuation; prompt x450..750 was not a reliable coordinate description."
+        }
+      ],
+      "viewsActuallyInspected": [
+        "full native",
+        "conditioned target",
+        "layout-only target",
+        "authoritative full overview and exact local overview crop",
+        "upper-right guide/native exact crop",
+        "south guide/native exact crop"
+      ]
+    },
+    {
+      "candidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p43-v1.png",
+        "sha256": "838ff7c6610496c4f4a82e091c5485b9fae45a4d763ca8603e3c0153a8ea87e9",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "canAnchor": {
+        "south": true,
+        "east": false
+      },
+      "formalAccepted": false,
+      "status": "reused_verified_worker_QA",
+      "reusedReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r10_c11-p43-v1-worker-fast-v1\\review.json",
+      "reusedEvidence": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r10_c11-p43-v1-worker-fast-v1\\south-outgoing-100pct.png",
+      "reason": "Existing producer review explicitly marks south outgoing grey rack and open deck usable for r11_c11/p13; current native hash matches reviewed hash. No duplicate image scan.",
+      "newerCandidate": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\r10_c11\\native\\p43-v2-local-native.png",
+        "sha256": "02eacc24eb77271a24d4517120a46271a445c90348e06ec50925b73d1cdf75ca",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "newerReview": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\parallel-production-20261013\\village-east-shipyard\\qa\\r10_c11-p43-v2-local-fast-v1\\review.json",
+      "newerReviewCanAnchor": {
+        "south": true,
+        "east": true
+      },
+      "south230ExactlyEqualBetweenCandidates": true,
+      "selectionChangedByQA": false
+    }
+  ]
+}
