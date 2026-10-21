@@ -1,11 +1,11 @@
 {
   "tile": "r14_c16",
-  "status": "candidate_pending_internal_and_external_visual_review",
-  "updatedAt": "2026-10-13T16:24:38.200940+00:00",
+  "status": "internal_north_west_visual_pass_material_watch_south_pending",
+  "updatedAt": "2026-10-14T00:07:35.006144+00:00",
   "activeNativeCount": 16,
   "formalAccepted": false,
-  "internalArtQA": "pending",
-  "externalNeighborSeamQA": "pending",
+  "internalArtQA": "passed_with_nonblocking_material_watch",
+  "externalNeighborSeamQA": "north_pass_west_pass_east_canvas_boundary_south_pending",
   "worldSize": null,
   "clientMappingValidated": false,
   "capacity5000Validated": false,
@@ -13,10 +13,35 @@
   "currentVersion": "p04_04_v20261013T160950_75e899ff",
   "lastIngestedVersion": "p04_04_v20261013T160950_75e899ff",
   "previousActiveVersion": null,
-  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-4k-candidate-d95f8c7996649c39abcf.png",
-  "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-context-4326-d95f8c7996649c39abcf.png",
-  "assemblyManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-assembly-d95f8c7996649c39abcf.json",
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-4k-roof-local-repairs-v1-20261013.png",
+  "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-context-roof-local-repairs-v1-20261013.png",
+  "assemblyManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\candidate\\r14_c16-roof-local-repairs-v1-selected-manifest.json",
   "complete4kCandidateCount": 1,
   "missingNativeCount": 0,
-  "nextStep": "Inspect all six full seam bands, nine junctions and four edges at 100%; verify neighboring tile seams before acceptance"
+  "nextStep": "Continue r15_c16; preserve nonblocking gold-trim material watch. South neighboring join needs separate current-core check.",
+  "repairManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c16\\repairs\\roof-local-details-20261013-v1\\composed-D\\composition.json",
+  "actualNativeOutputCount": 23,
+  "internalSeamQA": "passed",
+  "independentVisualQA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\review\\independent-r14_c16-b0fe86100a9c6347\\visual-qa.json",
+    "sha256": "084b74cef658d94a543decf1f8327c4e76f6ec29f0710ab424c45766e7b92303"
+  },
+  "nonblockingArtFindings": [
+    {
+      "id": "M01",
+      "kind": "nonblocking_material_watch",
+      "severity": "nonblocking",
+      "boxInChildCore": [
+        940,
+        2410,
+        1055,
+        2510
+      ],
+      "evidence": [
+        "v1024-q2",
+        "j1024-2048"
+      ],
+      "description": "Localized golden roof trim shading shoulder/small facet transition near original x1024 assembly area. Main contour remains connected with no open gap or doubled trim. Present in original d82e candidate, unchanged by A/B/C/D repairs. No new native repair requested."
+    }
+  ]
 }

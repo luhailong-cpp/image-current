@@ -1,24 +1,24 @@
 {
   "tile": "r14_c15",
-  "status": "internal_visual_pass_north_joint_repaired_remaining_external_pending",
-  "updatedAt": "2026-10-13T04:18:28.735455+00:00",
+  "status": "internal_pass_west_W01_W03_repaired_W02_failed_pending",
+  "updatedAt": "2026-10-14T00:07:34.829093+00:00",
   "activeNativeCount": 16,
   "formalAccepted": false,
-  "internalArtQA": "internal_visual_pass",
-  "externalNeighborSeamQA": "north_N01_local_repaired_full_review_pending_west_failed_east_south_pending",
+  "internalArtQA": "passed",
+  "externalNeighborSeamQA": "north_local_repair_full_pending_west_W02_failed_W04_pending_east_pass_south_pending",
   "worldSize": null,
   "clientMappingValidated": false,
   "capacity5000Validated": false,
   "currentPatch": null,
-  "currentVersion": "north-board-joint-20261012-v1",
+  "currentVersion": "west-W01-alpha-v2-W03-20261013",
   "lastIngestedVersion": "p04_04_v20261012T161012_55806f72",
   "previousActiveVersion": null,
-  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-4k-north-board-joint-20261012-v1-root-reviewed.png",
-  "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-context-4326-north-board-joint-20261012-v1-root-reviewed.png",
-  "assemblyManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-north-board-joint-20261012-v1-selected-manifest.json",
+  "candidate": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-4k-west-W01-alpha-v2-W03-20261013-reviewed.png",
+  "context": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-context-4326-west-W01-alpha-v2-W03-20261013-reviewed.png",
+  "assemblyManifest": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-west-W01-alpha-v2-W03-20261013-selected-manifest.json",
   "complete4kCandidateCount": 1,
   "missingNativeCount": 0,
-  "nextStep": "Review full current north core join; repair west W01/W02/W03/material only through a verified GPT Image 2.5 route.",
+  "nextStep": "Keep W02 failed after two unsuccessful native repairs; revisit with independent later batch. W04 material remains pending; continue stable independent tiles.",
   "rootLocalQA": {
     "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\review\\single-railing-v3-20261012-root\\local-root-review.json",
     "sha256": "9d596fcd50eac6b2fb85832a4d00151bafb122ebcd9eeb9c0b0184ee29963ff3"
@@ -78,7 +78,12 @@
           4096
         ]
       },
-      "evidence": "ext-west-q1"
+      "evidence": "ext-west-q1",
+      "currentStatus": "locally_repaired_passed",
+      "resolvedBy": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-west-W01-alpha-v2-W03-20261013-selected-manifest.json",
+        "sha256": "6977ef1ac540db70404b3c4bf75212381472a3f420e899f869d83b7f158a57b3"
+      }
     },
     {
       "id": "W02",
@@ -99,7 +104,14 @@
           4096
         ]
       },
-      "evidence": "ext-west-q2"
+      "evidence": "ext-west-q2",
+      "currentStatus": "failed_pending",
+      "attemptCountThisBatch": 2,
+      "retryDeferred": true,
+      "latestFailedNative": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\repairs\\west-stone-joints-20261013-v1\\W02-last-v2\\actual-native-235474785ebedb0e.png",
+        "sha256": "235474785ebedb0e158649fac84fe4903b77d440e3b09a877a11b40d88e282d6"
+      }
     },
     {
       "id": "W03",
@@ -120,7 +132,12 @@
           4096
         ]
       },
-      "evidence": "ext-west-q3"
+      "evidence": "ext-west-q3",
+      "currentStatus": "locally_repaired_passed",
+      "resolvedBy": {
+        "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\candidate\\r14_c15-west-W01-alpha-v2-W03-20261013-selected-manifest.json",
+        "sha256": "6977ef1ac540db70404b3c4bf75212381472a3f420e899f869d83b7f158a57b3"
+      }
     },
     {
       "id": "W04",
@@ -145,11 +162,22 @@
         "ext-west-q1",
         "ext-west-q2",
         "ext-west-q3"
-      ]
+      ],
+      "currentStatus": "material_pending"
     }
   ],
   "rootLatestRepairQA": {
-    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\repairs\\north-board-joint-20261012-v1\\root-visual-qa-20261013.json",
-    "sha256": "4693f18aeef6b07afe12f3e0751e9c236b4878bdd6749423d6b7d3f97065cd87"
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\repairs\\west-stone-joints-20261013-v1\\trial-20261013T164845-W01-alpha-v2-W03\\root-independent-local-qa-20261013.json",
+    "sha256": "7b5e71871916943f11b968e082d92d273ace117001eeec4ee12a9c8f4b27a4bf"
+  },
+  "workerLatestRepairQA": {
+    "path": "D:\\work\\image\\qdao_city_tiles_4k_20260916\\builtin_q64_production\\main-city-game-20261009\\southeast\\r14_c15\\repairs\\west-stone-joints-20261013-v1\\production-checkpoint-20261013-W02-last-W01-alpha-v2.json",
+    "sha256": "6ae2941291fbb80e4d85979d8eb6c10b0b1ccd4290f22fc53ce80f5eda01f1ec"
+  },
+  "newWestRepairBatch": {
+    "actualNativeOutputCount": 4,
+    "selectedNativeOutputCount": 2,
+    "W02Attempts": 2,
+    "W02Status": "failed_pending_no_more_retry_this_round"
   }
 }

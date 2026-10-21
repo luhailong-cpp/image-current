@@ -3,10 +3,11 @@ from PIL import Image
 import json,hashlib,sys
 R=Path(__file__).resolve().parent
 tile=sys.argv[1]; out=R/'tiles'/f'{tile}_candidate-v1_4096.png'
+selected=json.loads((R/'selected-revisions.json').read_text()) if (R/'selected-revisions.json').exists() else {}
 im=Image.new('RGB',(4096,4096));records=[]
 for r in range(1,5):
  for c in range(1,5):
-  p=R/'native'/f'{tile}_s{r:02d}_{c:02d}_a01.png'; a=Image.open(p);assert a.size==(1254,1254)
+  stem=f'{tile}_s{r:02d}_{c:02d}';p=R/'native'/f'{stem}_{selected.get(stem,"a01")}.png'; a=Image.open(p);assert a.size==(1254,1254)
   im.paste(a.crop((115,115,1139,1139)),((c-1)*1024,(r-1)*1024))
   records.append({'source':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'crop':[115,115,1139,1139],'destination':[(c-1)*1024,(r-1)*1024]})
 if out.exists(): raise RuntimeError('No overwrite')
