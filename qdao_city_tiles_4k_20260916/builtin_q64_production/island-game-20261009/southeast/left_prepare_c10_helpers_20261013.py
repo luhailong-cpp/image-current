@@ -1,0 +1,13 @@
+from workflow import ROOT
+src=(ROOT/'left_column_sol_workflow.py').read_text(encoding='utf-8')
+src=src.replace("assert TILE in ['r13_c11','r14_c11']", "assert TILE in ['r13_c10','r14_c10']")
+src=src.replace("NORTH='r12_c11' if TILE=='r13_c11' else 'r13_c11'", "NORTH='r12_c10' if TILE=='r13_c10' else 'r13_c10'")
+src=src.replace("if r==1:\n        sel=", "if r==1 and (ROOT/f'selection-{NORTH}.json').exists():\n        sel=")
+src=src.replace("etile=TILE.replace('c11','c12')", "etile=TILE.replace('c10','c11')")
+src=src.replace("'root current selected real east native halo'", "'current selected real east native halo; working source subject to final tile QA'")
+src=src.replace("Render only the unfinished soft interior of image 1 into crisp matching game art. Keep the existing sharp overlap geometry fixed, smoothly continuing it at the same scale.", "Render the unfinished soft interior of image 1 into crisp matching game art. Preserve existing physical rock and shoreline geometry, smoothly continuing it at the same scale. Reference collage boundaries at x230/x1024/y230/y1024 are not scene lines: resolve their brightness and brush-texture transitions organically without any visible rectangular outline.")
+src=src.replace("Keep the sharp neighboring bands fixed.", "Keep outer 150 pixel neighboring geometry and wave flow fixed; blend painted texture naturally through the former guide boundaries, without procedural blur or a rectangular material edge.")
+out=ROOT/'left_c10_workflow_20261013.py';assert not out.exists();out.write_text(src,encoding='utf-8')
+src=(ROOT/'left_column_sol_candidate.py').read_text(encoding='utf-8').replace("assert tile in ['r13_c11','r14_c11']", "assert tile in ['r13_c10','r14_c10']").replace("east=tile.replace('c11','c12')", "east=tile.replace('c10','c11')")
+out=ROOT/'left_c10_candidate_20261013.py';assert not out.exists();out.write_text(src,encoding='utf-8')
+print('New exclusive c10 helpers saved; prior workflow untouched')
